@@ -3,16 +3,19 @@
 SoC和后端团队的report返回后，前端的同学需要按照以下步骤确认报告内容及对代码做出相应的修改。
 
 ## 一、确认功能正确性
-* 阅读VCS报告report/ysyx_xxxxxx/vcs_report，确认是否寸在 **Error** ，如果VCS程序未通过，则首先需要修改代码以确保功能正确。
+* 阅读VCS报告report/ysyx_xxxxxx/vcs_report，确认compile有无错误，确认VCS流程是否存在 **fail** ，如：如果VCS程序未通过，则首先需要修改代码以确保功能正确，确认控制信号寄存器是否已做初始化。
 
-## 二、消除DC综合报告Warning
-* 阅读DC综合报告report/ysyx_xxxxxx/dc_report的 **SYNTHESIS REPORT** 部分。
+## 二、消除DC综合报告Warning/Error
+* 阅读DC综合报告report/ysyx_xxxxxx/dc_report的 **SYNTHESIS REPORT** 部分，。
 
 ## 三、清楚不带复位端的cell
 * 阅读DC综合报告report/ysyx_xxxxxx/dc_report的 **SYNTHESIS REPORT** 部分。
 
 ## 四、确认综合后面积是否在约束范围内
-* 阅读DC综合报告report/ysyx_xxxxxx/dc_report的 **AREA REPORT** 部分。
+前端设计的同学需要确保设计综合后的 **Total cell area** 在约束范围内， **不带cache** 的核面积需小于 **0.9** 平方厘米， **带cache** 的核面积需小于 **1.4** 平方厘米。
+* 阅读DC综合报告report/ysyx_xxxxxx/dc_report的 **AREA REPORT** 部分，确认Total cell area是否满足约束范围内。
+  * 如果只做了五级流水线的设计Total cell area超过了约束范围，请对设计进行优化，将面积优化到约束范围内；
+  * 如果做了乱序多发射的设计Total cell area超过了约束范围，请分析报告，找出面积较大的模块，说明面积过大的原因，编写说明文档，反馈给支撑团队进一步评估。
 
 ## 五、确认频率
 支撑团队提供**100M频率**约束基准的DC综合流程。
