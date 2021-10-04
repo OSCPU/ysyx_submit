@@ -33,16 +33,13 @@ SoC和后端团队的report返回后，前端的同学需要按照以下步骤�
 ### 二、消除DC综合报告Warning/Error
 * 阅读DC综合报告report/ysyx_xxxxxx/<pull time>/dc_report的 **SYNTHESIS REPORT** 部分，关注报告中的Warning和Error。清除所有的Warning和Error，根据Warning的提示相应地去修改代码，对于无法清除的Warning，需要填写 **Warning无法清理说明.xlsx** ，并反馈给支撑团队。
 
-### 三、清除不带复位端的FF cell
-* 阅读DC综合报告report/ysyx_xxxxxx/<pull time>/dc_report的 **NETLIST** 部分，这个网表是支撑团队经过处理后的结果，列出了各个module中存在的不带复位端的寄存器。查看是否存在不带复位端的寄存器，如果存在不带复位端的寄存器，说明代码中存在未复位的控制信号，会导致VCS仿真无法通过，需修改代码以清除不带复位端的寄存器，确保每个module中不带复位端的寄存器的数目为 **0** 。
-
-### 四、确认综合后面积是否在约束范围内
+### 三、确认综合后面积是否在约束范围内
 前端设计的同学需要确保设计综合后的 **Total cell area** 在约束范围内， **不带cache** 的核面积需小于 **0.9** 平方毫米， **带cache** 的核面积需小于 **1.4** 平方毫米。
 * 阅读DC综合报告report/ysyx_xxxxxx/<pull time>/dc_report的 **AREA REPORT** 部分，确认Total cell area是否满足约束范围内。
   * 如做了五级流水线的设计Total cell area超过了约束范围，请对设计进行优化，将面积优化到约束范围内；
   * 如果做了乱序多发射的设计Total cell area超过了约束范围，请分析报告，找出面积较大的模块，说明面积过大的原因，编写说明文档，反馈给支撑团队进一步评估，如果支撑团队评估后觉得不合适，则需要请设计人员进一步简化设计。
 
-### 五、确认频率
+### 四、确认频率
 支撑团队提供 **100M频率** 约束基准的DC综合流程。这里采用100M频率综合时，为了给后端设计修时序留余量，设了0.35的过约比，实际的频率会比100M高，时序约束条件更为严格。
   例如：
   ![1633343064(1)](https://user-images.githubusercontent.com/82496491/135835292-fad710f7-aa2f-46a8-aacb-c981f21f43ac.png)
