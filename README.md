@@ -45,7 +45,9 @@ SoC和后端团队的report返回后，前端的同学需要按照以下步骤�
 ### 五、确认频率
 支撑团队提供 **100M频率** 约束基准的DC综合流程。这里采用100M频率综合时，为了给后端设计修时序留余量，设了0.35的过约比，实际的频率会比100M高，时序约束条件更为严格。
   例如：
-  ![1633342396(1)](https://user-images.githubusercontent.com/82496491/135833714-e1082023-5989-4948-b576-8ecf80441427.png)
+  ![1633343064(1)](https://user-images.githubusercontent.com/82496491/135835292-fad710f7-aa2f-46a8-aacb-c981f21f43ac.png)
+
+  在100M频率下，图中标记的data required time应该接近10ns，可以看到实际的data required time只有6.2189，约束更为严格。
 
 * 阅读DC综合报告report/ysyx_xxxxxx/<pull time>/dc_report的 **SYNTHESIS REPORT** 部分，查看DC综合流程在100M频率下是否 **pass** ，如果未通过，我们会进行降频直至流程跑通为止。
 
