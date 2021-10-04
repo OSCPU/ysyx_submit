@@ -22,8 +22,6 @@ ysyx_submit中仓库存在submit和report两个目录，submit目录用于存放
       ├─ vcs_report                                #VCS仿真报告
 ```
 
-## submit 
-
 
 ## report
 
