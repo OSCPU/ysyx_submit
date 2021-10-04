@@ -1,7 +1,7 @@
 # ysyx_submit
 This is a repository for recording ysyx submissions.
 ysyx_submit中仓库存在submit和report两个目录，submit目录用于存放前端设计同学提交的处理器核代码，report目录存放Soc和后端团队对前端代码进行功能仿真和综合后返回的报告。
-* submit
+* submit 目录结构
 * report 目录结构
 ```
 ├─ ysyx_XXXXXX(学号)                               #每位同学的报告存放在自己学号的顶层目录下
