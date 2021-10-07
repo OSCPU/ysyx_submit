@@ -34,7 +34,7 @@ SoC和后端团队的report返回后，前端的同学需要按照以下步骤�
 * 阅读DC综合报告report/ysyx_xxxxxx/<pull time>/dc_report的 **SYNTHESIS REPORT** 部分，关注报告中的Warning和Error。清除所有的Warning和Error，根据Warning的提示相应地去修改代码，对于无法清除的Warning，需要填写ysyx_submit目录下的“ **DC_Warning无法清理说明.xlsx** ”，发给各自的组长，由组长反馈给支撑团队。
 
 ### 三、确认综合后面积是否在约束范围内
-前端设计的同学需要确保设计综合后的 **Total cell area** 在约束范围内， **不带cache** 的核面积需小于 **0.9** 平方毫米， **带cache** 的核面积需小于 **1.4** 平方毫米。
+前端设计的同学需要确保设计综合后的 **Total cell area** 在约束范围内， **不带cache** 的核面积需小于 **0.5** 平方毫米， **带cache** 的核面积需小于 **2.0** 平方毫米。
 * 阅读DC综合报告report/ysyx_xxxxxx/<pull time>/dc_report的 **AREA REPORT** 部分，确认Total cell area是否满足约束范围内。
   * 如做了五级流水线的设计Total cell area超过了约束范围，请对设计进行优化，将面积优化到约束范围内；
   * 如果做了乱序多发射的设计Total cell area超过了约束范围，请分析报告，找出面积较大的模块，说明面积过大的原因，编写说明文档“  **ysyx_XXXXXX面积过大原因说明.doc** ”，没有格式要求，按要求说明原因即可，编写完成后发给各自的组长，再由组长反馈给支撑团队进一步评估，如果支撑团队评估后觉得不合适，则需要请设计人员进一步简化设计。
