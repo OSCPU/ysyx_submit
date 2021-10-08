@@ -1,0 +1,782 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Thu_Oct_7_23:51:45_2021_+0800
+top_name: ysyx_210153
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total      std        mem  ipio  sub_harden
+1538396.9  1538396.9  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+99026  99026  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210153
+Date   : Fri Oct  8 12:08:52 2021
+****************************************
+    
+    
+Number of ports:                        22003
+Number of nets:                        120059
+Number of cells:                        99239
+Number of combinational cells:          80103
+Number of sequential cells:             18915
+Number of macros/black boxes:               8
+Number of buf/inv:                      11277
+Number of references:                      17
+Combinational area:             646438.635255
+Buf/Inv area:                    49740.117439
+Noncombinational area:          483417.961918
+Macro/Black Box area:           408540.343750
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:               1538396.940923
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area                  Local cell area
+                                  ---------------------  ------------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes        Design
+--------------------------------  ------------  -------  -----------  -----------  -----------  -------------------------------------
+ysyx_210153                       1538396.9409    100.0     746.3640       0.0000       0.0000  ysyx_210153
+moduleAXIRMux                        1686.3792      0.1    1608.3808      77.9984       0.0000  ysyx_210153_AXIRMux_0
+moduleBypass                         4476.8392      0.3    4476.8392       0.0000       0.0000  ysyx_210153_Bypass_0
+moduleBypassCsr                        61.8608      0.0      61.8608       0.0000       0.0000  ysyx_210153_BypassCsr_0
+moduleCSRs                          42687.9869      2.8   24163.3663   18524.6206       0.0000  ysyx_210153_CSRs_0
+moduleClint                          8859.5425      0.6    5587.6440    3271.8985       0.0000  ysyx_210153_Clint_0
+moduleDCache                       524683.5700     34.1   29242.6759   10580.8868  204270.1719  ysyx_210153_DCache_0
+moduleDCache/rand_prng                 73.9640      0.0      22.8616      51.1024       0.0000  ysyx_210153_MaximalPeriodGaloisLFSR_3
+moduleDCache/sregs                   3464.2049      0.2    1803.3768    1660.8281       0.0000  ysyx_210153_SyncReadReg_21
+moduleDCache/sregs_1                 3468.2393      0.2    1807.4112    1660.8281       0.0000  ysyx_210153_SyncReadReg_17
+moduleDCache/sregs_10               62769.8860      4.1   26231.6687   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_13
+moduleDCache/sregs_11               62775.2652      4.1   26237.0479   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_9
+moduleDCache/sregs_2                 3466.8945      0.2    1806.0664    1660.8281       0.0000  ysyx_210153_SyncReadReg_14
+moduleDCache/sregs_3                 3491.1009      0.2    1830.2728    1660.8281       0.0000  ysyx_210153_SyncReadReg_24
+moduleDCache/sregs_4                 3893.1961      0.3    2232.3680    1660.8281       0.0000  ysyx_210153_SyncReadReg_20
+moduleDCache/sregs_5                 3878.4033      0.3    2217.5752    1660.8281       0.0000  ysyx_210153_SyncReadReg_22
+moduleDCache/sregs_6                 3886.4721      0.3    2225.6440    1660.8281       0.0000  ysyx_210153_SyncReadReg_18
+moduleDCache/sregs_7                 3891.8513      0.3    2231.0232    1660.8281       0.0000  ysyx_210153_SyncReadReg_15
+moduleDCache/sregs_8                62776.6100      4.1   26238.3927   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_12
+moduleDCache/sregs_9                62753.7484      4.1   26215.5311   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_10
+moduleEX                           226610.9050     14.7   14295.2240   14418.9461       0.0000  ysyx_210153_EX_0
+moduleEX/alu                       197896.7350     12.9   28504.3807       0.0000       0.0000  ysyx_210153_ALU_0
+moduleEX/alu/divTop                 33563.5185      2.2   28376.6247    5186.8938       0.0000  ysyx_210153_DivTop_0
+moduleEX/alu/multiTop              135828.8358      8.8   32825.2231   12421.9180       0.0000  ysyx_210153_MultiTop_0
+moduleEX/alu/multiTop/boothSext     28763.9271      1.9   28763.9271       0.0000       0.0000  ysyx_210153_BoothSext_0
+moduleEX/alu/multiTop/wallaceTree   61817.7676      4.0       0.0000       0.0000       0.0000  ysyx_210153_Wallace_Improved_0
+moduleEX/alu/multiTop/wallaceTree/CSAs_0
+                                     3684.7521      0.2    3684.7521       0.0000       0.0000  ysyx_210153_CSA_11
+moduleEX/alu/multiTop/wallaceTree/CSAs_1
+                                     3649.7873      0.2    3649.7873       0.0000       0.0000  ysyx_210153_CSA_15
+moduleEX/alu/multiTop/wallaceTree/CSAs_2
+                                     3593.3058      0.2    3593.3058       0.0000       0.0000  ysyx_210153_CSA_12
+moduleEX/alu/multiTop/wallaceTree/CSAs_3
+                                     3552.9618      0.2    3552.9618       0.0000       0.0000  ysyx_210153_CSA_14
+moduleEX/alu/multiTop/wallaceTree/CSAs_4
+                                     3507.2386      0.2    3507.2386       0.0000       0.0000  ysyx_210153_CSA_13
+moduleEX/alu/multiTop/wallaceTree/CSAs_5
+                                     3952.3674      0.3    3952.3674       0.0000       0.0000  ysyx_210153_CSA_9
+moduleEX/alu/multiTop/wallaceTree/CSAs_6
+                                     3760.0610      0.2    3760.0610       0.0000       0.0000  ysyx_210153_CSA_10
+moduleEX/alu/multiTop/wallaceTree/CSAs_7
+                                     4269.7402      0.3    4269.7402       0.0000       0.0000  ysyx_210153_CSA_8
+moduleEX/alu/multiTop/wallaceTree/u_42s_0
+                                     7572.5688      0.5    7572.5688       0.0000       0.0000  ysyx_210153__42_Compressor_4
+moduleEX/alu/multiTop/wallaceTree/u_42s_1
+                                     7448.8472      0.5    7448.8472       0.0000       0.0000  ysyx_210153__42_Compressor_5
+moduleEX/alu/multiTop/wallaceTree/u_42s_2
+                                     7927.5960      0.5    7927.5960       0.0000       0.0000  ysyx_210153__42_Compressor_7
+moduleEX/alu/multiTop/wallaceTree/u_42s_3
+                                     8898.5416      0.6    8898.5416       0.0000       0.0000  ysyx_210153__42_Compressor_6
+moduleGPRs                         112933.6159      7.3   62240.0334   50693.5825       0.0000  ysyx_210153_GPRs_0
+moduleICache                       482576.5368     31.4    8626.8920    4369.2553  204270.1719  ysyx_210153_ICache_0
+moduleICache/rand_prng                 73.9640      0.0      22.8616      51.1024       0.0000  ysyx_210153_MaximalPeriodGaloisLFSR_2
+moduleICache/sregs                   3481.6873      0.2    1819.5144    1662.1729       0.0000  ysyx_210153_SyncReadReg_16
+moduleICache/sregs_1                 3478.9977      0.2    1816.8248    1662.1729       0.0000  ysyx_210153_SyncReadReg_13
+moduleICache/sregs_2                 3480.3425      0.2    1819.5144    1660.8281       0.0000  ysyx_210153_SyncReadReg_23
+moduleICache/sregs_3                 3485.7217      0.2    1823.5488    1662.1729       0.0000  ysyx_210153_SyncReadReg_19
+moduleICache/sregs_4                62830.4019      4.1   26292.1847   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_8
+moduleICache/sregs_5                62814.2643      4.1   26276.0471   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_11
+moduleICache/sregs_6                62834.4363      4.1   26296.2191   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_14
+moduleICache/sregs_7                62830.4019      4.1   26292.1847   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_15
+moduleID                            41789.6602      2.7   30212.2767   11577.3835       0.0000  ysyx_210153_ID_0
+moduleIF                            11835.5849      0.8    7042.7176    4792.8674       0.0000  ysyx_210153_IF_0
+moduleMEM                           26219.5660      1.7   13595.9280   12623.6380       0.0000  ysyx_210153_MEM_0
+moduleMMU                           51203.2607      3.3   28692.6527   22510.6080       0.0000  ysyx_210153_MMU_0
+moduleWB                             2025.2688      0.1    1999.7176      25.5512       0.0000  ysyx_210153_WB_0
+--------------------------------  ------------  -------  -----------  -----------  -----------  -------------------------------------
+Total                                                    646438.6353  483417.9619  408540.3438
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210153
+Date   : Fri Oct  8 12:08:43 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: moduleEX/alu/multiTop/stage_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: moduleEX/alu/multiTop/lo_34_in_reg
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  moduleEX/alu/multiTop/stage_reg_0_/CK (LVT_DQHDV2)    0.0000    0.0000 #   0.0000 r
+  moduleEX/alu/multiTop/stage_reg_0_/Q (LVT_DQHDV2)     0.1040    0.2585     0.2585 r
+  moduleEX/alu/multiTop/stage[0] (net)          3                 0.0000     0.2585 r
+  moduleEX/alu/multiTop/U361/I (LVT_INHDV2)             0.1040    0.0000     0.2585 r
+  moduleEX/alu/multiTop/U361/ZN (LVT_INHDV2)            0.0602    0.0537     0.3122 f
+  moduleEX/alu/multiTop/n374 (net)              2                 0.0000     0.3122 f
+  moduleEX/alu/multiTop/U55/A1 (LVT_NOR2HDV4)           0.0602    0.0000     0.3122 f
+  moduleEX/alu/multiTop/U55/ZN (LVT_NOR2HDV4)           0.0952    0.0658     0.3780 r
+  moduleEX/alu/multiTop/n371 (net)              1                 0.0000     0.3780 r
+  moduleEX/alu/multiTop/U362/I (LVT_INHDV4)             0.0952    0.0000     0.3780 r
+  moduleEX/alu/multiTop/U362/ZN (LVT_INHDV4)            0.0612    0.0543     0.4323 f
+  moduleEX/alu/multiTop/n1851 (net)             6                 0.0000     0.4323 f
+  moduleEX/alu/multiTop/U328/I (LVT_BUFHDV2)            0.0612    0.0000     0.4323 f
+  moduleEX/alu/multiTop/U328/Z (LVT_BUFHDV2)            0.0736    0.1255     0.5579 f
+  moduleEX/alu/multiTop/n99 (net)               2                 0.0000     0.5579 f
+  moduleEX/alu/multiTop/U10/I (LVT_INHDV6)              0.0736    0.0000     0.5579 f
+  moduleEX/alu/multiTop/U10/ZN (LVT_INHDV6)             0.2910    0.1778     0.7357 r
+  moduleEX/alu/multiTop/n1865 (net)            47                 0.0000     0.7357 r
+  moduleEX/alu/multiTop/U125/B1 (LVT_INOR2HDV1)         0.2910    0.0000     0.7357 r
+  moduleEX/alu/multiTop/U125/ZN (LVT_INOR2HDV1)         0.1069    0.0837     0.8194 f
+  moduleEX/alu/multiTop/n_GEN_33[16] (net)      2                 0.0000     0.8194 f
+  moduleEX/alu/multiTop/U327/B (LVT_AO21HDV4)           0.1069    0.0000     0.8194 f
+  moduleEX/alu/multiTop/U327/Z (LVT_AO21HDV4)           0.1959    0.2656     1.0850 f
+  moduleEX/alu/multiTop/n98 (net)              33                 0.0000     1.0850 f
+  moduleEX/alu/multiTop/boothSext/io_input_8[2] (ysyx_210153_BoothSext_0)
+                                                                  0.0000     1.0850 f
+  moduleEX/alu/multiTop/boothSext/io_input_8[2] (net)             0.0000     1.0850 f
+  moduleEX/alu/multiTop/boothSext/U111/I (LVT_INHDV2)   0.1959    0.0000     1.0850 f
+  moduleEX/alu/multiTop/boothSext/U111/ZN (LVT_INHDV2)
+                                                        0.4672    0.3065     1.3915 r
+  moduleEX/alu/multiTop/boothSext/n2037 (net)
+                                               27                 0.0000     1.3915 r
+  moduleEX/alu/multiTop/boothSext/U519/A1 (LVT_NAND2HDV1)
+                                                        0.4672    0.0000     1.3915 r
+  moduleEX/alu/multiTop/boothSext/U519/ZN (LVT_NAND2HDV1)
+                                                        0.2229    0.1804     1.5719 f
+  moduleEX/alu/multiTop/boothSext/n1518 (net)
+                                                5                 0.0000     1.5719 f
+  moduleEX/alu/multiTop/boothSext/U296/A1 (LVT_OR2HDV2)
+                                                        0.2229    0.0000     1.5719 f
+  moduleEX/alu/multiTop/boothSext/U296/Z (LVT_OR2HDV2)
+                                                        0.2509    0.3283     1.9002 f
+  moduleEX/alu/multiTop/boothSext/n46 (net)    22                 0.0000     1.9002 f
+  moduleEX/alu/multiTop/boothSext/U44/I (LVT_INHDV2)    0.2509    0.0000     1.9002 f
+  moduleEX/alu/multiTop/boothSext/U44/ZN (LVT_INHDV2)   0.4535    0.3141     2.2144 r
+  moduleEX/alu/multiTop/boothSext/n2492 (net)
+                                               26                 0.0000     2.2144 r
+  moduleEX/alu/multiTop/boothSext/U3048/A2 (LVT_AOI22HDV1)
+                                                        0.4535    0.0000     2.2144 r
+  moduleEX/alu/multiTop/boothSext/U3048/ZN (LVT_AOI22HDV1)
+                                                        0.1929    0.1263     2.3407 f
+  moduleEX/alu/multiTop/boothSext/n1958 (net)
+                                                1                 0.0000     2.3407 f
+  moduleEX/alu/multiTop/boothSext/U3049/A2 (LVT_NAND2HDV1)
+                                                        0.1929    0.0000     2.3407 f
+  moduleEX/alu/multiTop/boothSext/U3049/ZN (LVT_NAND2HDV1)
+                                                        0.0987    0.0872     2.4280 r
+  moduleEX/alu/multiTop/boothSext/io_output_8[4] (net)
+                                                2                 0.0000     2.4280 r
+  moduleEX/alu/multiTop/boothSext/io_output_8[4] (ysyx_210153_BoothSext_0)
+                                                                  0.0000     2.4280 r
+  moduleEX/alu/multiTop/n_wallaceTree_io_input_8_T[18] (net)      0.0000     2.4280 r
+  moduleEX/alu/multiTop/U3113/A1 (LVT_AND2HDV1)         0.0987    0.0000     2.4280 r
+  moduleEX/alu/multiTop/U3113/Z (LVT_AND2HDV1)          0.1151    0.1525     2.5805 r
+  moduleEX/alu/multiTop/n_GEN_31[18] (net)      2                 0.0000     2.5805 r
+  moduleEX/alu/multiTop/wallaceTree/io_input_8[18] (ysyx_210153_Wallace_Improved_0)
+                                                                  0.0000     2.5805 r
+  moduleEX/alu/multiTop/wallaceTree/io_input_8[18] (net)          0.0000     2.5805 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/io_input_2[18] (ysyx_210153_CSA_12)
+                                                                  0.0000     2.5805 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/io_input_2[18] (net)   0.0000     2.5805 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/U22/B (LVT_OAI21HDV1)
+                                                        0.1151    0.0000     2.5805 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/U22/ZN (LVT_OAI21HDV1)
+                                                        0.0780    0.0707     2.6512 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/n12 (net)
+                                                1                 0.0000     2.6512 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/U23/B (LVT_IOA21HDV1)
+                                                        0.0780    0.0000     2.6512 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/U23/ZN (LVT_IOA21HDV1)
+                                                        0.1134    0.0851     2.7363 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/io_output_1[19] (net)
+                                                3                 0.0000     2.7363 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2/io_output_1[19] (ysyx_210153_CSA_12)
+                                                                  0.0000     2.7363 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_2_io_output_1[19] (net)
+                                                                  0.0000     2.7363 r
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/io_input_1[19] (ysyx_210153__42_Compressor_5)
+                                                                  0.0000     2.7363 r
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/io_input_1[19] (net)
+                                                                  0.0000     2.7363 r
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/U16/A1 (LVT_XOR3HDV1)
+                                                        0.1134    0.0000     2.7363 r
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/U16/Z (LVT_XOR3HDV1)
+                                                        0.1566    0.4003     3.1367 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/n727 (net)
+                                                2                 0.0000     3.1367 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/U18/A1 (LVT_XOR2HDV1)
+                                                        0.1566    0.0000     3.1367 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/U18/Z (LVT_XOR2HDV1)
+                                                        0.1074    0.2065     3.3432 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/io_output_1[19] (net)
+                                                3                 0.0000     3.3432 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_1/io_output_1[19] (ysyx_210153__42_Compressor_5)
+                                                                  0.0000     3.3432 f
+  moduleEX/alu/multiTop/wallaceTree/n_42s_1_io_output_1[19] (net)
+                                                                  0.0000     3.3432 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/io_input_0[19] (ysyx_210153_CSA_8)
+                                                                  0.0000     3.3432 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/io_input_0[19] (net)   0.0000     3.3432 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/U40/A1 (LVT_OAI21HDV1)
+                                                        0.1074    0.0000     3.3432 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/U40/ZN (LVT_OAI21HDV1)
+                                                        0.1492    0.1127     3.4559 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/n22 (net)
+                                                1                 0.0000     3.4559 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/U41/B (LVT_IOA21HDV1)
+                                                        0.1492    0.0000     3.4559 r
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/U41/ZN (LVT_IOA21HDV1)
+                                                        0.1137    0.0932     3.5490 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/io_output_1[20] (net)
+                                                3                 0.0000     3.5490 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7/io_output_1[20] (ysyx_210153_CSA_8)
+                                                                  0.0000     3.5490 f
+  moduleEX/alu/multiTop/wallaceTree/CSAs_7_io_output_1[20] (net)
+                                                                  0.0000     3.5490 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/io_input_3[20] (ysyx_210153__42_Compressor_6)
+                                                                  0.0000     3.5490 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/io_input_3[20] (net)
+                                                                  0.0000     3.5490 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/U997/A2 (LVT_XOR2HDV1)
+                                                        0.1137    0.0000     3.5490 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/U997/Z (LVT_XOR2HDV1)
+                                                        0.0839    0.2193     3.7683 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/n769 (net)
+                                                1                 0.0000     3.7683 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/U998/A3 (LVT_XOR3HDV1)
+                                                        0.0839    0.0000     3.7683 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/U998/Z (LVT_XOR3HDV1)
+                                                        0.1482    0.2180     3.9863 r
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/n855 (net)
+                                                2                 0.0000     3.9863 r
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/U10/A1 (LVT_XNOR2HDV1)
+                                                        0.1482    0.0000     3.9863 r
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/U10/ZN (LVT_XNOR2HDV1)
+                                                        0.0964    0.1940     4.1803 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/io_output_1[20] (net)
+                                                3                 0.0000     4.1803 f
+  moduleEX/alu/multiTop/wallaceTree/u_42s_3/io_output_1[20] (ysyx_210153__42_Compressor_6)
+                                                                  0.0000     4.1803 f
+  moduleEX/alu/multiTop/wallaceTree/io_output_1[20] (net)         0.0000     4.1803 f
+  moduleEX/alu/multiTop/wallaceTree/io_output_1[20] (ysyx_210153_Wallace_Improved_0)
+                                                                  0.0000     4.1803 f
+  moduleEX/alu/multiTop/wallaceTree_io_output_1[20] (net)         0.0000     4.1803 f
+  moduleEX/alu/multiTop/U335/A1 (LVT_OR2HDV1)           0.0964    0.0000     4.1803 f
+  moduleEX/alu/multiTop/U335/Z (LVT_OR2HDV1)            0.1003    0.2008     4.3811 f
+  moduleEX/alu/multiTop/n75 (net)               3                 0.0000     4.3811 f
+  moduleEX/alu/multiTop/U36/A2 (LVT_AOI21HDV2)          0.1003    0.0000     4.3811 f
+  moduleEX/alu/multiTop/U36/ZN (LVT_AOI21HDV2)          0.1458    0.1206     4.5017 r
+  moduleEX/alu/multiTop/n1599 (net)             2                 0.0000     4.5017 r
+  moduleEX/alu/multiTop/U438/A1 (LVT_OAI21HDV1)         0.1458    0.0000     4.5017 r
+  moduleEX/alu/multiTop/U438/ZN (LVT_OAI21HDV1)         0.0947    0.0755     4.5772 f
+  moduleEX/alu/multiTop/n123 (net)              1                 0.0000     4.5772 f
+  moduleEX/alu/multiTop/U439/B (LVT_AOI21HDV2)          0.0947    0.0000     4.5772 f
+  moduleEX/alu/multiTop/U439/ZN (LVT_AOI21HDV2)         0.2125    0.1391     4.7163 r
+  moduleEX/alu/multiTop/n1612 (net)             2                 0.0000     4.7163 r
+  moduleEX/alu/multiTop/U442/A1 (LVT_OAI21HDV4)         0.2125    0.0000     4.7163 r
+  moduleEX/alu/multiTop/U442/ZN (LVT_OAI21HDV4)         0.0967    0.0799     4.7962 f
+  moduleEX/alu/multiTop/n1617 (net)             2                 0.0000     4.7962 f
+  moduleEX/alu/multiTop/U446/A1 (LVT_AOI21HDV4)         0.0967    0.0000     4.7962 f
+  moduleEX/alu/multiTop/U446/ZN (LVT_AOI21HDV4)         0.1396    0.1041     4.9003 r
+  moduleEX/alu/multiTop/n1623 (net)             2                 0.0000     4.9003 r
+  moduleEX/alu/multiTop/U449/A1 (LVT_OAI21HDV4)         0.1396    0.0000     4.9003 r
+  moduleEX/alu/multiTop/U449/ZN (LVT_OAI21HDV4)         0.0870    0.0658     4.9661 f
+  moduleEX/alu/multiTop/n1627 (net)             2                 0.0000     4.9661 f
+  moduleEX/alu/multiTop/U452/A1 (LVT_AOI21HDV2)         0.0870    0.0000     4.9661 f
+  moduleEX/alu/multiTop/U452/ZN (LVT_AOI21HDV2)         0.2123    0.1433     5.1094 r
+  moduleEX/alu/multiTop/n1633 (net)             2                 0.0000     5.1094 r
+  moduleEX/alu/multiTop/U455/A1 (LVT_OAI21HDV4)         0.2123    0.0000     5.1094 r
+  moduleEX/alu/multiTop/U455/ZN (LVT_OAI21HDV4)         0.0968    0.0799     5.1893 f
+  moduleEX/alu/multiTop/n1638 (net)             2                 0.0000     5.1893 f
+  moduleEX/alu/multiTop/U459/A1 (LVT_AOI21HDV4)         0.0968    0.0000     5.1893 f
+  moduleEX/alu/multiTop/U459/ZN (LVT_AOI21HDV4)         0.1396    0.1041     5.2933 r
+  moduleEX/alu/multiTop/n1644 (net)             2                 0.0000     5.2933 r
+  moduleEX/alu/multiTop/U56/A1 (LVT_OAI21HDV4)          0.1396    0.0000     5.2933 r
+  moduleEX/alu/multiTop/U56/ZN (LVT_OAI21HDV4)          0.0968    0.0730     5.3664 f
+  moduleEX/alu/multiTop/n1649 (net)             2                 0.0000     5.3664 f
+  moduleEX/alu/multiTop/U90/A1 (LVT_AOI21HDV4)          0.0968    0.0000     5.3664 f
+  moduleEX/alu/multiTop/U90/ZN (LVT_AOI21HDV4)          0.1396    0.1041     5.4704 r
+  moduleEX/alu/multiTop/n1655 (net)             2                 0.0000     5.4704 r
+  moduleEX/alu/multiTop/U91/A1 (LVT_OAI21HDV4)          0.1396    0.0000     5.4704 r
+  moduleEX/alu/multiTop/U91/ZN (LVT_OAI21HDV4)          0.0873    0.0660     5.5364 f
+  moduleEX/alu/multiTop/n1660 (net)             2                 0.0000     5.5364 f
+  moduleEX/alu/multiTop/U470/A1 (LVT_AO21HDV4)          0.0873    0.0000     5.5364 f
+  moduleEX/alu/multiTop/U470/Z (LVT_AO21HDV4)           0.0472    0.1462     5.6826 f
+  moduleEX/alu/multiTop/n143 (net)              1                 0.0000     5.6826 f
+  moduleEX/alu/multiTop/U477/CI (LVT_AD1HDV1)           0.0472    0.0000     5.6826 f
+  moduleEX/alu/multiTop/U477/CO (LVT_AD1HDV1)           0.1200    0.1923     5.8749 f
+  moduleEX/alu/multiTop/n369 (net)              1                 0.0000     5.8749 f
+  moduleEX/alu/multiTop/U499/CI (LVT_AD1HDV2)           0.1200    0.0000     5.8749 f
+  moduleEX/alu/multiTop/U499/CO (LVT_AD1HDV2)           0.0918    0.1849     6.0599 f
+  moduleEX/alu/multiTop/n278 (net)              1                 0.0000     6.0599 f
+  moduleEX/alu/multiTop/U478/B1 (LVT_AO22HDV4)          0.0918    0.0000     6.0599 f
+  moduleEX/alu/multiTop/U478/Z (LVT_AO22HDV4)           0.0489    0.1464     6.2063 f
+  moduleEX/alu/multiTop/n273 (net)              1                 0.0000     6.2063 f
+  moduleEX/alu/multiTop/lo_34_in_reg/D (LVT_DQHDV1)     0.0489    0.0000     6.2063 f
+  data arrival time                                                          6.2063
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  moduleEX/alu/multiTop/lo_34_in_reg/CK (LVT_DQHDV1)              0.0000     6.3500 r
+  library setup time                                             -0.1436     6.2064
+  data required time                                                         6.2064
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2064
+  data arrival time                                                         -6.2063
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
+  Startpoint: moduleIF/instr_reg_14_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: moduleID/jbAddr_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  moduleIF/instr_reg_14_/CK (LVT_DQHDV4)                0.0000    0.0000 #   0.0000 r
+  moduleIF/instr_reg_14_/Q (LVT_DQHDV4)                 0.1189    0.2898     0.2898 f
+  moduleIF/io_output_instr[14] (net)            7                 0.0000     0.2898 f
+  moduleIF/io_output_instr[14] (ysyx_210153_IF_0)                 0.0000     0.2898 f
+  moduleIF_io_output_instr[14] (net)                              0.0000     0.2898 f
+  moduleID/io_input_instr[14] (ysyx_210153_ID_0)                  0.0000     0.2898 f
+  moduleID/io_input_instr[14] (net)                               0.0000     0.2898 f
+  moduleID/U722/A2 (LVT_NOR2HDV2)                       0.1189    0.0000     0.2898 f
+  moduleID/U722/ZN (LVT_NOR2HDV2)                       0.1662    0.1216     0.4114 r
+  moduleID/n3542 (net)                          3                 0.0000     0.4114 r
+  moduleID/U458/A1 (LVT_NAND3HDV1)                      0.1662    0.0000     0.4114 r
+  moduleID/U458/ZN (LVT_NAND3HDV1)                      0.1206    0.0999     0.5112 f
+  moduleID/n334 (net)                           1                 0.0000     0.5112 f
+  moduleID/U135/A2 (LVT_NOR2HDV2)                       0.1206    0.0000     0.5112 f
+  moduleID/U135/ZN (LVT_NOR2HDV2)                       0.1601    0.1165     0.6277 r
+  moduleID/n377 (net)                           3                 0.0000     0.6277 r
+  moduleID/U786/I (LVT_INHDV1)                          0.1601    0.0000     0.6277 r
+  moduleID/U786/ZN (LVT_INHDV1)                         0.0787    0.0674     0.6951 f
+  moduleID/n378 (net)                           1                 0.0000     0.6951 f
+  moduleID/U38/A2 (LVT_NOR2HDV4)                        0.0787    0.0000     0.6951 f
+  moduleID/U38/ZN (LVT_NOR2HDV4)                        0.0888    0.0731     0.7682 r
+  moduleID/n404 (net)                           2                 0.0000     0.7682 r
+  moduleID/U813/A1 (LVT_NAND3HDV2)                      0.0888    0.0000     0.7682 r
+  moduleID/U813/ZN (LVT_NAND3HDV2)                      0.1159    0.0860     0.8542 f
+  moduleID/n460 (net)                           2                 0.0000     0.8542 f
+  moduleID/U62/B (LVT_OAI21HDV2)                        0.1159    0.0000     0.8542 f
+  moduleID/U62/ZN (LVT_OAI21HDV2)                       0.2201    0.0846     0.9388 r
+  moduleID/n452 (net)                           2                 0.0000     0.9388 r
+  moduleID/U562/A3 (LVT_NOR3HDV4)                       0.2201    0.0000     0.9388 r
+  moduleID/U562/ZN (LVT_NOR3HDV4)                       0.1045    0.0776     1.0164 f
+  moduleID/n2086 (net)                          3                 0.0000     1.0164 f
+  moduleID/U253/I (LVT_INHDV2)                          0.1045    0.0000     1.0164 f
+  moduleID/U253/ZN (LVT_INHDV2)                         0.0862    0.0704     1.0868 r
+  moduleID/n3566 (net)                          3                 0.0000     1.0868 r
+  moduleID/U876/A1 (LVT_INOR2HDV4)                      0.0862    0.0000     1.0868 r
+  moduleID/U876/ZN (LVT_INOR2HDV4)                      0.0773    0.0908     1.1776 r
+  moduleID/n469 (net)                           1                 0.0000     1.1776 r
+  moduleID/U879/A2 (LVT_AOI31HDV2)                      0.0773    0.0000     1.1776 r
+  moduleID/U879/ZN (LVT_AOI31HDV2)                      0.1093    0.0885     1.2661 f
+  moduleID/n472 (net)                           1                 0.0000     1.2661 f
+  moduleID/U882/A2 (LVT_NAND3HDV2)                      0.1093    0.0000     1.2661 f
+  moduleID/U882/ZN (LVT_NAND3HDV2)                      0.0955    0.0802     1.3463 r
+  moduleID/n474 (net)                           1                 0.0000     1.3463 r
+  moduleID/U883/I (LVT_INHDV4)                          0.0955    0.0000     1.3463 r
+  moduleID/U883/ZN (LVT_INHDV4)                         0.0546    0.0491     1.3954 f
+  moduleID/n540 (net)                           4                 0.0000     1.3954 f
+  moduleID/U913/A1 (LVT_OAI211HDV2)                     0.0546    0.0000     1.3954 f
+  moduleID/U913/ZN (LVT_OAI211HDV2)                     0.2043    0.1313     1.5267 r
+  moduleID/n522 (net)                           1                 0.0000     1.5267 r
+  moduleID/U329/A1 (LVT_NAND2HDV4)                      0.2043    0.0000     1.5267 r
+  moduleID/U329/ZN (LVT_NAND2HDV4)                      0.1269    0.1082     1.6349 f
+  moduleID/n549 (net)                           5                 0.0000     1.6349 f
+  moduleID/U926/I (LVT_INHDV2)                          0.1269    0.0000     1.6349 f
+  moduleID/U926/ZN (LVT_INHDV2)                         0.0908    0.0749     1.7098 r
+  moduleID/n530 (net)                           2                 0.0000     1.7098 r
+  moduleID/U928/B1 (LVT_INAND3HDV1)                     0.0908    0.0000     1.7098 r
+  moduleID/U928/ZN (LVT_INAND3HDV1)                     0.0984    0.0794     1.7892 f
+  moduleID/n544 (net)                           1                 0.0000     1.7892 f
+  moduleID/U555/A2 (LVT_AND3HDV2)                       0.0984    0.0000     1.7892 f
+  moduleID/U555/Z (LVT_AND3HDV2)                        0.0499    0.1352     1.9244 f
+  moduleID/n275 (net)                           1                 0.0000     1.9244 f
+  moduleID/U938/C (LVT_OAI211HDV2)                      0.0499    0.0000     1.9244 f
+  moduleID/U938/ZN (LVT_OAI211HDV2)                     0.1902    0.0612     1.9856 r
+  moduleID/n3481 (net)                          2                 0.0000     1.9856 r
+  moduleID/U939/I (LVT_INHDV1)                          0.1902    0.0000     1.9856 r
+  moduleID/U939/ZN (LVT_INHDV1)                         0.0797    0.0665     2.0521 f
+  moduleID/n557 (net)                           1                 0.0000     2.0521 f
+  moduleID/U946/A1 (LVT_NOR2HDV4)                       0.0797    0.0000     2.0521 f
+  moduleID/U946/ZN (LVT_NOR2HDV4)                       0.1058    0.0779     2.1301 r
+  moduleID/n3594 (net)                          2                 0.0000     2.1301 r
+  moduleID/U962/A1 (LVT_NAND2HDV4)                      0.1058    0.0000     2.1301 r
+  moduleID/U962/ZN (LVT_NAND2HDV4)                      0.0784    0.0680     2.1980 f
+  moduleID/n597 (net)                           1                 0.0000     2.1980 f
+  moduleID/U976/A1 (LVT_NAND2HDV8)                      0.0784    0.0000     2.1980 f
+  moduleID/U976/ZN (LVT_NAND2HDV8)                      0.0867    0.0604     2.2585 r
+  moduleID/io_csrsR_rcsr_0[9] (net)             3                 0.0000     2.2585 r
+  moduleID/io_csrsR_rcsr_0[9] (ysyx_210153_ID_0)                  0.0000     2.2585 r
+  moduleID_io_csrsR_rcsr_0[9] (net)                               0.0000     2.2585 r
+  moduleCSRs/io_csrsR_rcsr_0[9] (ysyx_210153_CSRs_0)              0.0000     2.2585 r
+  moduleCSRs/io_csrsR_rcsr_0[9] (net)                             0.0000     2.2585 r
+  moduleCSRs/U1169/A1 (LVT_NOR2HDV4)                    0.0867    0.0000     2.2585 r
+  moduleCSRs/U1169/ZN (LVT_NOR2HDV4)                    0.0493    0.0372     2.2956 f
+  moduleCSRs/n4581 (net)                        1                 0.0000     2.2956 f
+  moduleCSRs/U1171/A1 (LVT_NAND2HDV4)                   0.0493    0.0000     2.2956 f
+  moduleCSRs/U1171/ZN (LVT_NAND2HDV4)                   0.0743    0.0501     2.3458 r
+  moduleCSRs/n4656 (net)                        3                 0.0000     2.3458 r
+  moduleCSRs/U1172/A2 (LVT_NAND2HDV3)                   0.0743    0.0000     2.3458 r
+  moduleCSRs/U1172/ZN (LVT_NAND2HDV3)                   0.0985    0.0753     2.4211 f
+  moduleCSRs/n4597 (net)                        3                 0.0000     2.4211 f
+  moduleCSRs/U129/A1 (LVT_AND2HDV8)                     0.0985    0.0000     2.4211 f
+  moduleCSRs/U129/Z (LVT_AND2HDV8)                      0.0664    0.1255     2.5466 f
+  moduleCSRs/n6941 (net)                       15                 0.0000     2.5466 f
+  moduleCSRs/U1240/I (LVT_BUFHDV8)                      0.0664    0.0000     2.5466 f
+  moduleCSRs/U1240/Z (LVT_BUFHDV8)                      0.0624    0.1088     2.6554 f
+  moduleCSRs/n7034 (net)                       16                 0.0000     2.6554 f
+  moduleCSRs/U1401/I (LVT_INHDV2)                       0.0624    0.0000     2.6554 f
+  moduleCSRs/U1401/ZN (LVT_INHDV2)                      0.0576    0.0497     2.7051 r
+  moduleCSRs/n4789 (net)                        2                 0.0000     2.7051 r
+  moduleCSRs/U78/A1 (LVT_OAI211HDV1)                    0.0576    0.0000     2.7051 r
+  moduleCSRs/U78/ZN (LVT_OAI211HDV1)                    0.1311    0.0948     2.7998 f
+  moduleCSRs/n4703 (net)                        1                 0.0000     2.7998 f
+  moduleCSRs/U34/C (LVT_AOI211HDV2)                     0.1311    0.0000     2.7998 f
+  moduleCSRs/U34/ZN (LVT_AOI211HDV2)                    0.2035    0.1375     2.9373 r
+  moduleCSRs/n4708 (net)                        1                 0.0000     2.9373 r
+  moduleCSRs/U19/A1 (LVT_NAND4HDV2)                     0.2035    0.0000     2.9373 r
+  moduleCSRs/U19/ZN (LVT_NAND4HDV2)                     0.1560    0.1252     3.0625 f
+  moduleCSRs/io_csrsR_rdata_0[22] (net)         2                 0.0000     3.0625 f
+  moduleCSRs/io_csrsR_rdata_0[22] (ysyx_210153_CSRs_0)            0.0000     3.0625 f
+  moduleCSRs_io_csrsR_rdata_0[22] (net)                           0.0000     3.0625 f
+  moduleID/io_csrsR_rdata_0[22] (ysyx_210153_ID_0)                0.0000     3.0625 f
+  moduleID/io_csrsR_rdata_0[22] (net)                             0.0000     3.0625 f
+  moduleID/U1902/A1 (LVT_NAND2HDV1)                     0.1560    0.0000     3.0625 f
+  moduleID/U1902/ZN (LVT_NAND2HDV1)                     0.0898    0.0723     3.1348 r
+  moduleID/n922 (net)                           1                 0.0000     3.1348 r
+  moduleID/U1393/A2 (LVT_NAND2HDV2)                     0.0898    0.0000     3.1348 r
+  moduleID/U1393/ZN (LVT_NAND2HDV2)                     0.1125    0.0900     3.2248 f
+  moduleID/n1973 (net)                          3                 0.0000     3.2248 f
+  moduleID/U70/I (LVT_INHDV4)                           0.1125    0.0000     3.2248 f
+  moduleID/U70/ZN (LVT_INHDV4)                          0.0622    0.0542     3.2790 r
+  moduleID/n199 (net)                           4                 0.0000     3.2790 r
+  moduleID/U1873/A1 (LVT_NAND2HDV2)                     0.0622    0.0000     3.2790 r
+  moduleID/U1873/ZN (LVT_NAND2HDV2)                     0.0702    0.0545     3.3335 f
+  moduleID/n1383 (net)                          2                 0.0000     3.3335 f
+  moduleID/U36/I (LVT_INHDV1)                           0.0702    0.0000     3.3335 f
+  moduleID/U36/ZN (LVT_INHDV1)                          0.0544    0.0489     3.3824 r
+  moduleID/n1385 (net)                          1                 0.0000     3.3824 r
+  moduleID/U1876/A1 (LVT_AOI22HDV2)                     0.0544    0.0000     3.3824 r
+  moduleID/U1876/ZN (LVT_AOI22HDV2)                     0.1077    0.0700     3.4524 f
+  moduleID/n1386 (net)                          1                 0.0000     3.4524 f
+  moduleID/U1878/A1 (LVT_OAI22HDV2)                     0.1077    0.0000     3.4524 f
+  moduleID/U1878/ZN (LVT_OAI22HDV2)                     0.2034    0.0880     3.5404 r
+  moduleID/n1387 (net)                          1                 0.0000     3.5404 r
+  moduleID/U142/B1 (LVT_AOI22HDV2)                      0.2034    0.0000     3.5404 r
+  moduleID/U142/ZN (LVT_AOI22HDV2)                      0.1328    0.0927     3.6331 f
+  moduleID/n1399 (net)                          2                 0.0000     3.6331 f
+  moduleID/U141/A1 (LVT_AOI21HDV2)                      0.1328    0.0000     3.6331 f
+  moduleID/U141/ZN (LVT_AOI21HDV2)                      0.1284    0.0976     3.7307 r
+  moduleID/n1401 (net)                          1                 0.0000     3.7307 r
+  moduleID/U650/A1 (LVT_AND2HDV4)                       0.1284    0.0000     3.7307 r
+  moduleID/U650/Z (LVT_AND2HDV4)                        0.0397    0.1013     3.8320 r
+  moduleID/n293 (net)                           1                 0.0000     3.8320 r
+  moduleID/U1889/B (LVT_OAI21HDV2)                      0.0397    0.0000     3.8320 r
+  moduleID/U1889/ZN (LVT_OAI21HDV2)                     0.0770    0.0504     3.8824 f
+  moduleID/n1404 (net)                          1                 0.0000     3.8824 f
+  moduleID/U1890/B (LVT_AOI21HDV2)                      0.0770    0.0000     3.8824 f
+  moduleID/U1890/ZN (LVT_AOI21HDV2)                     0.1442    0.0851     3.9675 r
+  moduleID/n1429 (net)                          1                 0.0000     3.9675 r
+  moduleID/U1906/A1 (LVT_OAI21HDV2)                     0.1442    0.0000     3.9675 r
+  moduleID/U1906/ZN (LVT_OAI21HDV2)                     0.0818    0.0678     4.0353 f
+  moduleID/n1444 (net)                          1                 0.0000     4.0353 f
+  moduleID/U1916/A1 (LVT_NAND3HDV2)                     0.0818    0.0000     4.0353 f
+  moduleID/U1916/ZN (LVT_NAND3HDV2)                     0.0786    0.0553     4.0906 r
+  moduleID/n1452 (net)                          1                 0.0000     4.0906 r
+  moduleID/U1925/A1 (LVT_NAND2HDV2)                     0.0786    0.0000     4.0906 r
+  moduleID/U1925/ZN (LVT_NAND2HDV2)                     0.0537    0.0498     4.1405 f
+  moduleID/n1466 (net)                          1                 0.0000     4.1405 f
+  moduleID/U1934/A1 (LVT_NAND2HDV2)                     0.0537    0.0000     4.1405 f
+  moduleID/U1934/ZN (LVT_NAND2HDV2)                     0.0557    0.0420     4.1825 r
+  moduleID/n1471 (net)                          1                 0.0000     4.1825 r
+  moduleID/U144/A1 (LVT_NAND2HDV2)                      0.0557    0.0000     4.1825 r
+  moduleID/U144/ZN (LVT_NAND2HDV2)                      0.0736    0.0452     4.2277 f
+  moduleID/n1491 (net)                          1                 0.0000     4.2277 f
+  moduleID/U572/A1 (LVT_AOI21HDV2)                      0.0736    0.0000     4.2277 f
+  moduleID/U572/ZN (LVT_AOI21HDV2)                      0.1177    0.0890     4.3166 r
+  moduleID/n1786 (net)                          1                 0.0000     4.3166 r
+  moduleID/U1959/A1 (LVT_OAI22HDV2)                     0.1177    0.0000     4.3166 r
+  moduleID/U1959/ZN (LVT_OAI22HDV2)                     0.1068    0.0694     4.3860 f
+  moduleID/n1788 (net)                          1                 0.0000     4.3860 f
+  moduleID/U1961/B1 (LVT_AOI22HDV2)                     0.1068    0.0000     4.3860 f
+  moduleID/U1961/ZN (LVT_AOI22HDV2)                     0.1576    0.0953     4.4813 r
+  moduleID/n1790 (net)                          1                 0.0000     4.4813 r
+  moduleID/U1962/A1 (LVT_OAI22HDV2)                     0.1576    0.0000     4.4813 r
+  moduleID/U1962/ZN (LVT_OAI22HDV2)                     0.0860    0.0778     4.5591 f
+  moduleID/n1792 (net)                          1                 0.0000     4.5591 f
+  moduleID/U1963/A1 (LVT_NAND2HDV2)                     0.0860    0.0000     4.5591 f
+  moduleID/U1963/ZN (LVT_NAND2HDV2)                     0.0781    0.0612     4.6203 r
+  moduleID/n1794 (net)                          1                 0.0000     4.6203 r
+  moduleID/U1965/B1 (LVT_AOI22HDV4)                     0.0781    0.0000     4.6203 r
+  moduleID/U1965/ZN (LVT_AOI22HDV4)                     0.1165    0.0625     4.6828 f
+  moduleID/n2461 (net)                          2                 0.0000     4.6828 f
+  moduleID/U1966/I (LVT_INHDV4)                         0.1165    0.0000     4.6828 f
+  moduleID/U1966/ZN (LVT_INHDV4)                        0.0581    0.0506     4.7334 r
+  moduleID/n2481 (net)                          2                 0.0000     4.7334 r
+  moduleID/U2646/A1 (LVT_NAND3HDV4)                     0.0581    0.0000     4.7334 r
+  moduleID/U2646/ZN (LVT_NAND3HDV4)                     0.0938    0.0603     4.7937 f
+  moduleID/n2482 (net)                          1                 0.0000     4.7937 f
+  moduleID/U558/A4 (LVT_AND4HDV8)                       0.0938    0.0000     4.7937 f
+  moduleID/U558/Z (LVT_AND4HDV8)                        0.0944    0.1803     4.9740 f
+  moduleID/n2602 (net)                          9                 0.0000     4.9740 f
+  moduleID/U13/I (LVT_INHDV8)                           0.0944    0.0000     4.9740 f
+  moduleID/U13/ZN (LVT_INHDV8)                          0.0777    0.0640     5.0380 r
+  moduleID/n3078 (net)                          9                 0.0000     5.0380 r
+  moduleID/U559/A1 (LVT_OAI21HDV4)                      0.0777    0.0000     5.0380 r
+  moduleID/U559/ZN (LVT_OAI21HDV4)                      0.0921    0.0562     5.0942 f
+  moduleID/n4225 (net)                          2                 0.0000     5.0942 f
+  moduleID/U2694/A1 (LVT_XNOR2HDV1)                     0.0921    0.0000     5.0942 f
+  moduleID/U2694/ZN (LVT_XNOR2HDV1)                     0.0736    0.1626     5.2568 r
+  moduleID/n2544 (net)                          1                 0.0000     5.2568 r
+  moduleID/U2695/A3 (LVT_NAND3HDV2)                     0.0736    0.0000     5.2568 r
+  moduleID/U2695/ZN (LVT_NAND3HDV2)                     0.0819    0.0773     5.3341 f
+  moduleID/n2562 (net)                          1                 0.0000     5.3341 f
+  moduleID/U2707/A1 (LVT_NOR2HDV2)                      0.0819    0.0000     5.3341 f
+  moduleID/U2707/ZN (LVT_NOR2HDV2)                      0.1298    0.0916     5.4257 r
+  moduleID/n2642 (net)                          1                 0.0000     5.4257 r
+  moduleID/U568/A1 (LVT_NAND4HDV4)                      0.1298    0.0000     5.4257 r
+  moduleID/U568/ZN (LVT_NAND4HDV4)                      0.1335    0.0905     5.5162 f
+  moduleID/n2732 (net)                          1                 0.0000     5.5162 f
+  moduleID/U575/A1 (LVT_NOR3HDV4)                       0.1335    0.0000     5.5162 f
+  moduleID/U575/ZN (LVT_NOR3HDV4)                       0.1807    0.1147     5.6309 r
+  moduleID/n2746 (net)                          1                 0.0000     5.6309 r
+  moduleID/U574/A3 (LVT_NAND4HDV4)                      0.1807    0.0000     5.6309 r
+  moduleID/U574/ZN (LVT_NAND4HDV4)                      0.1539    0.1339     5.7648 f
+  moduleID/n3466 (net)                          2                 0.0000     5.7648 f
+  moduleID/U3319/A2 (LVT_NOR2HDV4)                      0.1539    0.0000     5.7648 f
+  moduleID/U3319/ZN (LVT_NOR2HDV4)                      0.1254    0.0995     5.8643 r
+  moduleID/n4177 (net)                          3                 0.0000     5.8643 r
+  moduleID/U1818/A1 (LVT_INAND2HDV2)                    0.1254    0.0000     5.8643 r
+  moduleID/U1818/ZN (LVT_INAND2HDV2)                    0.1053    0.1245     5.9888 r
+  moduleID/n3476 (net)                          3                 0.0000     5.9888 r
+  moduleID/U3322/C (LVT_AOI211HDV1)                     0.1053    0.0000     5.9888 r
+  moduleID/U3322/ZN (LVT_AOI211HDV1)                    0.1048    0.0458     6.0346 f
+  moduleID/n3471 (net)                          1                 0.0000     6.0346 f
+  moduleID/U534/B (LVT_AO21HDV2)                        0.1048    0.0000     6.0346 f
+  moduleID/U534/Z (LVT_AO21HDV2)                        0.0564    0.1701     6.2047 f
+  moduleID/n1675 (net)                          1                 0.0000     6.2047 f
+  moduleID/jbAddr_reg_0_/D (LVT_DQHDV1)                 0.0564    0.0000     6.2047 f
+  data arrival time                                                          6.2047
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  moduleID/jbAddr_reg_0_/CK (LVT_DQHDV1)                          0.0000     6.3500 r
+  library setup time                                             -0.1451     6.2049
+  data required time                                                         6.2049
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2049
+  data arrival time                                                         -6.2047
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0002
+  Startpoint: moduleIF/regPC_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: moduleMMU/vaddr_vpn_0_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  moduleIF/regPC_reg_2_/CK (LVT_DQHDV1)                 0.0000    0.0000 #   0.0000 r
+  moduleIF/regPC_reg_2_/Q (LVT_DQHDV1)                  0.2220    0.3316     0.3316 r
+  moduleIF/regPC[2] (net)                       8                 0.0000     0.3316 r
+  moduleIF/U123/A2 (LVT_NAND2HDV1)                      0.2220    0.0000     0.3316 r
+  moduleIF/U123/ZN (LVT_NAND2HDV1)                      0.1104    0.0937     0.4253 f
+  moduleIF/n107 (net)                           2                 0.0000     0.4253 f
+  moduleIF/U20/A2 (LVT_NOR2HDV2)                        0.1104    0.0000     0.4253 f
+  moduleIF/U20/ZN (LVT_NOR2HDV2)                        0.1356    0.1029     0.5282 r
+  moduleIF/n124 (net)                           2                 0.0000     0.5282 r
+  moduleIF/U268/A2 (LVT_NAND2HDV2)                      0.1356    0.0000     0.5282 r
+  moduleIF/U268/ZN (LVT_NAND2HDV2)                      0.0787    0.0696     0.5977 f
+  moduleIF/n199 (net)                           2                 0.0000     0.5977 f
+  moduleIF/U19/A2 (LVT_NOR2HDV2)                        0.0787    0.0000     0.5977 f
+  moduleIF/U19/ZN (LVT_NOR2HDV2)                        0.1804    0.1251     0.7229 r
+  moduleIF/n653 (net)                           4                 0.0000     0.7229 r
+  moduleIF/U148/A2 (LVT_AND2HDV2)                       0.1804    0.0000     0.7229 r
+  moduleIF/U148/Z (LVT_AND2HDV2)                        0.0729    0.1364     0.8593 r
+  moduleIF/n142 (net)                           1                 0.0000     0.8593 r
+  moduleIF/U278/B (LVT_ADH1HDV1)                        0.0729    0.0000     0.8593 r
+  moduleIF/U278/CO (LVT_ADH1HDV1)                       0.0917    0.1354     0.9947 r
+  moduleIF/n139 (net)                           1                 0.0000     0.9947 r
+  moduleIF/U276/B (LVT_ADH1HDV1)                        0.0917    0.0000     0.9947 r
+  moduleIF/U276/CO (LVT_ADH1HDV1)                       0.0917    0.1392     1.1339 r
+  moduleIF/n130 (net)                           1                 0.0000     1.1339 r
+  moduleIF/U270/B (LVT_ADH1HDV1)                        0.0917    0.0000     1.1339 r
+  moduleIF/U270/CO (LVT_ADH1HDV1)                       0.0917    0.1392     1.2732 r
+  moduleIF/n145 (net)                           1                 0.0000     1.2732 r
+  moduleIF/U147/B (LVT_ADH1HDV1)                        0.0917    0.0000     1.2732 r
+  moduleIF/U147/CO (LVT_ADH1HDV1)                       0.0917    0.1392     1.4124 r
+  moduleIF/n148 (net)                           1                 0.0000     1.4124 r
+  moduleIF/U217/B (LVT_ADH1HDV1)                        0.0917    0.0000     1.4124 r
+  moduleIF/U217/CO (LVT_ADH1HDV1)                       0.0917    0.1392     1.5516 r
+  moduleIF/n677 (net)                           1                 0.0000     1.5516 r
+  moduleIF/U793/B (LVT_ADH1HDV1)                        0.0917    0.0000     1.5516 r
+  moduleIF/U793/CO (LVT_ADH1HDV1)                       0.0917    0.1392     1.6908 r
+  moduleIF/n680 (net)                           1                 0.0000     1.6908 r
+  moduleIF/U216/B (LVT_ADH1HDV1)                        0.0917    0.0000     1.6908 r
+  moduleIF/U216/CO (LVT_ADH1HDV1)                       0.0917    0.1392     1.8300 r
+  moduleIF/n646 (net)                           1                 0.0000     1.8300 r
+  moduleIF/U759/B (LVT_ADH1HDV1)                        0.0917    0.0000     1.8300 r
+  moduleIF/U759/CO (LVT_ADH1HDV1)                       0.0917    0.1392     1.9692 r
+  moduleIF/n660 (net)                           1                 0.0000     1.9692 r
+  moduleIF/U775/B (LVT_ADH1HDV1)                        0.0917    0.0000     1.9692 r
+  moduleIF/U775/CO (LVT_ADH1HDV1)                       0.0917    0.1392     2.1084 r
+  moduleIF/n542 (net)                           1                 0.0000     2.1084 r
+  moduleIF/U640/B (LVT_ADH1HDV1)                        0.0917    0.0000     2.1084 r
+  moduleIF/U640/CO (LVT_ADH1HDV1)                       0.0917    0.1392     2.2476 r
+  moduleIF/n584 (net)                           1                 0.0000     2.2476 r
+  moduleIF/U686/B (LVT_ADH1HDV1)                        0.0917    0.0000     2.2476 r
+  moduleIF/U686/CO (LVT_ADH1HDV1)                       0.0917    0.1392     2.3868 r
+  moduleIF/n568 (net)                           1                 0.0000     2.3868 r
+  moduleIF/U664/B (LVT_ADH1HDV1)                        0.0917    0.0000     2.3868 r
+  moduleIF/U664/CO (LVT_ADH1HDV1)                       0.0917    0.1392     2.5260 r
+  moduleIF/n575 (net)                           1                 0.0000     2.5260 r
+  moduleIF/U674/B (LVT_ADH1HDV1)                        0.0917    0.0000     2.5260 r
+  moduleIF/U674/CO (LVT_ADH1HDV1)                       0.0917    0.1392     2.6653 r
+  moduleIF/n581 (net)                           1                 0.0000     2.6653 r
+  moduleIF/U682/B (LVT_ADH1HDV1)                        0.0917    0.0000     2.6653 r
+  moduleIF/U682/CO (LVT_ADH1HDV1)                       0.0917    0.1392     2.8045 r
+  moduleIF/n578 (net)                           1                 0.0000     2.8045 r
+  moduleIF/U678/B (LVT_ADH1HDV1)                        0.0917    0.0000     2.8045 r
+  moduleIF/U678/CO (LVT_ADH1HDV1)                       0.0917    0.1392     2.9437 r
+  moduleIF/n565 (net)                           1                 0.0000     2.9437 r
+  moduleIF/U660/B (LVT_ADH1HDV1)                        0.0917    0.0000     2.9437 r
+  moduleIF/U660/CO (LVT_ADH1HDV1)                       0.0917    0.1392     3.0829 r
+  moduleIF/n572 (net)                           1                 0.0000     3.0829 r
+  moduleIF/U670/B (LVT_ADH1HDV1)                        0.0917    0.0000     3.0829 r
+  moduleIF/U670/CO (LVT_ADH1HDV1)                       0.0917    0.1392     3.2221 r
+  moduleIF/n533 (net)                           1                 0.0000     3.2221 r
+  moduleIF/U628/B (LVT_ADH1HDV1)                        0.0917    0.0000     3.2221 r
+  moduleIF/U628/CO (LVT_ADH1HDV1)                       0.0917    0.1392     3.3613 r
+  moduleIF/n559 (net)                           1                 0.0000     3.3613 r
+  moduleIF/U652/B (LVT_ADH1HDV1)                        0.0917    0.0000     3.3613 r
+  moduleIF/U652/CO (LVT_ADH1HDV1)                       0.0917    0.1392     3.5005 r
+  moduleIF/n562 (net)                           1                 0.0000     3.5005 r
+  moduleIF/U656/B (LVT_ADH1HDV1)                        0.0917    0.0000     3.5005 r
+  moduleIF/U656/CO (LVT_ADH1HDV1)                       0.0917    0.1392     3.6397 r
+  moduleIF/n695 (net)                           1                 0.0000     3.6397 r
+  moduleIF/U808/B (LVT_ADH1HDV1)                        0.0917    0.0000     3.6397 r
+  moduleIF/U808/CO (LVT_ADH1HDV1)                       0.0917    0.1392     3.7789 r
+  moduleIF/n698 (net)                           1                 0.0000     3.7789 r
+  moduleIF/U812/B (LVT_ADH1HDV1)                        0.0917    0.0000     3.7789 r
+  moduleIF/U812/CO (LVT_ADH1HDV1)                       0.0917    0.1392     3.9182 r
+  moduleIF/n701 (net)                           1                 0.0000     3.9182 r
+  moduleIF/U816/B (LVT_ADH1HDV1)                        0.0917    0.0000     3.9182 r
+  moduleIF/U816/CO (LVT_ADH1HDV1)                       0.0917    0.1392     4.0574 r
+  moduleIF/n704 (net)                           1                 0.0000     4.0574 r
+  moduleIF/U820/B (LVT_ADH1HDV1)                        0.0917    0.0000     4.0574 r
+  moduleIF/U820/CO (LVT_ADH1HDV1)                       0.0917    0.1392     4.1966 r
+  moduleIF/n707 (net)                           1                 0.0000     4.1966 r
+  moduleIF/U824/B (LVT_ADH1HDV1)                        0.0917    0.0000     4.1966 r
+  moduleIF/U824/CO (LVT_ADH1HDV1)                       0.0917    0.1392     4.3358 r
+  moduleIF/n710 (net)                           1                 0.0000     4.3358 r
+  moduleIF/U828/B (LVT_ADH1HDV1)                        0.0917    0.0000     4.3358 r
+  moduleIF/U828/CO (LVT_ADH1HDV1)                       0.0917    0.1392     4.4750 r
+  moduleIF/n713 (net)                           1                 0.0000     4.4750 r
+  moduleIF/U832/B (LVT_ADH1HDV1)                        0.0917    0.0000     4.4750 r
+  moduleIF/U832/CO (LVT_ADH1HDV1)                       0.0917    0.1392     4.6142 r
+  moduleIF/n716 (net)                           1                 0.0000     4.6142 r
+  moduleIF/U836/B (LVT_ADH1HDV1)                        0.0917    0.0000     4.6142 r
+  moduleIF/U836/CO (LVT_ADH1HDV1)                       0.0917    0.1392     4.7534 r
+  moduleIF/n720 (net)                           1                 0.0000     4.7534 r
+  moduleIF/U840/B (LVT_ADH1HDV1)                        0.0917    0.0000     4.7534 r
+  moduleIF/U840/CO (LVT_ADH1HDV1)                       0.0917    0.1392     4.8926 r
+  moduleIF/n723 (net)                           1                 0.0000     4.8926 r
+  moduleIF/U844/B (LVT_ADH1HDV1)                        0.0917    0.0000     4.8926 r
+  moduleIF/U844/CO (LVT_ADH1HDV1)                       0.0917    0.1392     5.0318 r
+  moduleIF/n726 (net)                           1                 0.0000     5.0318 r
+  moduleIF/U847/B (LVT_ADH1HDV1)                        0.0917    0.0000     5.0318 r
+  moduleIF/U847/S (LVT_ADH1HDV1)                        0.1500    0.0867     5.1186 r
+  moduleIF/n727 (net)                           1                 0.0000     5.1186 r
+  moduleIF/U21/I (LVT_INHDV1)                           0.1500    0.0000     5.1186 r
+  moduleIF/U21/ZN (LVT_INHDV1)                          0.0648    0.0551     5.1737 f
+  moduleIF/n786 (net)                           2                 0.0000     5.1737 f
+  moduleIF/U26/A1 (LVT_OAI21HDV1)                       0.0648    0.0000     5.1737 f
+  moduleIF/U26/ZN (LVT_OAI21HDV1)                       0.2589    0.1523     5.3260 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[62] (net)
+                                                3                 0.0000     5.3260 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[62] (ysyx_210153_IF_0)
+                                                                  0.0000     5.3260 r
+  moduleIF_io_immu_pipelineReq_cpuReq_addr[62] (net)              0.0000     5.3260 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[62] (ysyx_210153_MMU_0)
+                                                                  0.0000     5.3260 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[62] (net)             0.0000     5.3260 r
+  moduleMMU/U120/I (LVT_INHDV1)                         0.2589    0.0000     5.3260 r
+  moduleMMU/U120/ZN (LVT_INHDV1)                        0.0857    0.0654     5.3914 f
+  moduleMMU/n2128 (net)                         2                 0.0000     5.3914 f
+  moduleMMU/U117/A1 (LVT_OAI21HDV1)                     0.0857    0.0000     5.3914 f
+  moduleMMU/U117/ZN (LVT_OAI21HDV1)                     0.1676    0.1141     5.5055 r
+  moduleMMU/n2113 (net)                         1                 0.0000     5.5055 r
+  moduleMMU/U442/B (LVT_OAI21HDV2)                      0.1676    0.0000     5.5055 r
+  moduleMMU/U442/ZN (LVT_OAI21HDV2)                     0.1083    0.0972     5.6027 f
+  moduleMMU/n2152 (net)                         3                 0.0000     5.6027 f
+  moduleMMU/U728/A1 (LVT_NOR3HDV2)                      0.1083    0.0000     5.6027 f
+  moduleMMU/U728/ZN (LVT_NOR3HDV2)                      0.2071    0.1254     5.7281 r
+  moduleMMU/n2212 (net)                         2                 0.0000     5.7281 r
+  moduleMMU/U731/A1 (LVT_AND2HDV2)                      0.2071    0.0000     5.7281 r
+  moduleMMU/U731/Z (LVT_AND2HDV2)                       0.4713    0.3619     6.0900 r
+  moduleMMU/n2248 (net)                        27                 0.0000     6.0900 r
+  moduleMMU/U3050/B1 (LVT_AOI22HDV1)                    0.4713    0.0000     6.0900 r
+  moduleMMU/U3050/ZN (LVT_AOI22HDV1)                    0.1767    0.0999     6.1900 f
+  moduleMMU/n2245 (net)                         1                 0.0000     6.1900 f
+  moduleMMU/U3051/B (LVT_OAI21HDV1)                     0.1767    0.0000     6.1900 f
+  moduleMMU/U3051/ZN (LVT_OAI21HDV1)                    0.1570    0.0661     6.2561 r
+  moduleMMU/n2777 (net)                         1                 0.0000     6.2561 r
+  moduleMMU/vaddr_vpn_0_reg_5_/D (LVT_DQHDV1)           0.1570    0.0000     6.2561 r
+  data arrival time                                                          6.2561
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  moduleMMU/vaddr_vpn_0_reg_5_/CK (LVT_DQHDV1)                    0.0000     6.3500 r
+  library setup time                                             -0.0937     6.2563
+  data required time                                                         6.2563
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2563
+  data arrival time                                                         -6.2561
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0003

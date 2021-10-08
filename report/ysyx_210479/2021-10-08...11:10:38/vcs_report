@@ -1,0 +1,66 @@
+
+core:  ysyx_210479
+
+#####################
+#vcs compile log
+#####################
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210479.v, 2663
+"ysyx_210479_mADD #((CONFIG_AW - 2)) U_NPC( .a (ex_pc),  .b ('b1),  .s ('b0),  .sum (s1i_npc));"
+  The following 32-bit expression is connected to 30-bit port "b" of module 
+  "ysyx_210479_mADD", instance "U_NPC".
+  Expression: 'b1
+  Instantiated module defined at: "../cpu/ysyx_210479.v", 6183
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210479.v, 2663
+"ysyx_210479_mADD #((CONFIG_AW - 2)) U_NPC( .a (ex_pc),  .b ('b1),  .s ('b0),  .sum (s1i_npc));"
+  The following 32-bit expression is connected to 1-bit port "s" of module 
+  "ysyx_210479_mADD", instance "U_NPC".
+  Expression: 'b0
+  Instantiated module defined at: "../cpu/ysyx_210479.v", 6183
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210479.v, 5450
+"ysyx_210479_mRF_nw_dio_r #(1, 6, 'b0, (IW + WW)) U_BUSYTABLE( .CLK (clk),  .RST (rst),  .WE ({prd_we, prf_WE}),  .WADDR ({prd, prf_WADDR}),  .WDATA ({{IW {1'b1}}, {WW {1'b0}}}),  .REP (flush),  .DO (busytable),  .DI ('b0));"
+  The following 32-bit expression is connected to 64-bit port "DI" of module 
+  "ysyx_210479_mRF_nw_dio_r", instance "U_BUSYTABLE".
+  Expression: 'b0
+  Instantiated module defined at: "../cpu/ysyx_210479.v", 6357
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210479.v, 349
+"ysyx_210479_mADD #((CONFIG_AW - 2)) U_NPC( .a (cmt_pc[(0 * (CONFIG_AW - 2))+:(CONFIG_AW - 2)]),  .b ('b1),  .s ('b0),  .sum (cmt_npc_0));"
+  The following 32-bit expression is connected to 30-bit port "b" of module 
+  "ysyx_210479_mADD", instance "U_NPC".
+  Expression: 'b1
+  Instantiated module defined at: "../cpu/ysyx_210479.v", 6183
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210479.v, 349
+"ysyx_210479_mADD #((CONFIG_AW - 2)) U_NPC( .a (cmt_pc[(0 * (CONFIG_AW - 2))+:(CONFIG_AW - 2)]),  .b ('b1),  .s ('b0),  .sum (cmt_npc_0));"
+  The following 32-bit expression is connected to 1-bit port "s" of module 
+  "ysyx_210479_mADD", instance "U_NPC".
+  Expression: 'b0
+  Instantiated module defined at: "../cpu/ysyx_210479.v", 6183
+  Use +lint=PCWM for more details.
+
+
+
+#####################
+#vcs system test
+#####################
+!!!!Hello test fail!!!!
+!!!!Mem test fail!!!!
+!!!!rtthread test fail!!!!
+
+
+程序未跑通，可能是由于某些寄存器控制信号未初始化，请自行检查修正后再次提交测试

@@ -1,0 +1,612 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Thu_Oct_7_23:24:09_2021_+0800
+top_name: ysyx_210669
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+1. Warning:  /Project/home/CICD/asic_data/ysyx3_test/cpu/ysyx_210669.v:4783: Statement unreachable (Branch condition impossible to meet).  (VER-61)
+2. Warning:  /Project/home/CICD/asic_data/ysyx3_test/cpu/ysyx_210669.v:3490: Statement unreachable (Branch condition impossible to meet).  (VER-61)
+3. Warning:  /Project/home/CICD/asic_data/ysyx3_test/cpu/ysyx_210669.v:3665: Statement unreachable (Branch condition impossible to meet).  (VER-61)
+****** Message Summary: 0 Error(s), 3 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+226004.4  226004.4  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+19817  19817  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210669
+Date   : Fri Oct  8 12:14:56 2021
+****************************************
+    
+Number of ports:                         7359
+Number of nets:                         25558
+Number of cells:                        20055
+Number of combinational cells:          16131
+Number of sequential cells:              3686
+Number of macros/black boxes:               0
+Number of buf/inv:                       2403
+Number of references:                      29
+Combinational area:             131821.329962
+Buf/Inv area:                    12581.948757
+Noncombinational area:           94183.071194
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                226004.401155
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  ------------------------
+ysyx_210669                       226004.4012    100.0     884.8784     52.4472  0.0000  ysyx_210669
+ExMem                               5348.2697      2.4    1745.5504   3602.7193  0.0000  ysyx_210669_EXMEM_0
+ExStage                            76634.7733     33.9   33375.2463      0.0000  0.0000  ysyx_210669_EX_0
+ExStage/adSignEx                     645.5040      0.3     645.5040      0.0000  0.0000  ysyx_210669_SignExtend_2
+ExStage/csr                        42614.0230     18.9   21329.8727  21284.1503  0.0000  ysyx_210669_CSR_0
+IdEx                               11311.1130      5.0    3696.8552   7614.2579  0.0000  ysyx_210669_IDEX_0
+IdStage                           101020.0327     44.7   50326.4502  50693.5825  0.0000  ysyx_210669_ID_0
+IfAxiRw                             1932.4776      0.9    1063.7368    868.7408  0.0000  ysyx_210669_AXIrw_0
+IfId                                4775.3849      2.1    1581.4848   3193.9001  0.0000  ysyx_210669_IFID_0
+IfStage                             5571.5064      2.5    2935.6984   1635.2769  0.0000  ysyx_210669_IF_0
+IfStage/controller                  1000.5312      0.4    1000.5312      0.0000  0.0000  ysyx_210669_Controller_0
+MemAxiRw                            4366.5657      1.9    2603.5328   1763.0329  0.0000  ysyx_210669_AXIrw_1_0
+MemStage                            5645.4704      2.5    4983.8288      0.0000  0.0000  ysyx_210669_MEM_0
+MemStage/dmSignEx                    661.6416      0.3     661.6416      0.0000  0.0000  ysyx_210669_SignExtend_3
+MemWb                               5116.9641      2.3    1667.5520   3449.4121  0.0000  ysyx_210669_MEMWB_0
+WbStage                              823.0176      0.4     823.0176      0.0000  0.0000  ysyx_210669_WB_0
+crossbar                            2521.5000      1.1    1843.7208     25.5512  0.0000  ysyx_210669_CrossBar_0
+crossbar/readArb                     652.2280      0.3     652.2280      0.0000  0.0000  ysyx_210669_Arbiter_0
+--------------------------------  -----------  -------  -----------  ----------  ------  ------------------------
+Total                                                   131821.3300  94183.0712  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210669
+Date   : Fri Oct  8 12:14:54 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: IdEx/io_out_shiftByte_r_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: IdEx/io_out_readData2_r_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  IdEx/io_out_shiftByte_r_reg_0_/CK (LVT_DQHDV1)        0.0000    0.0000 #   0.0000 r
+  IdEx/io_out_shiftByte_r_reg_0_/Q (LVT_DQHDV1)         0.1391    0.2802     0.2802 r
+  IdEx/io_out_shiftByte[0] (net)                3                 0.0000     0.2802 r
+  IdEx/io_out_shiftByte[0] (ysyx_210669_IDEX_0)                   0.0000     0.2802 r
+  IdEx_io_out_shiftByte[0] (net)                                  0.0000     0.2802 r
+  ExStage/io_in_shiftByte[0] (ysyx_210669_EX_0)                   0.0000     0.2802 r
+  ExStage/io_in_shiftByte[0] (net)                                0.0000     0.2802 r
+  ExStage/U2002/A1 (LVT_INOR2HDV2)                      0.1391    0.0000     0.2802 r
+  ExStage/U2002/ZN (LVT_INOR2HDV2)                      0.1458    0.1518     0.4320 r
+  ExStage/n781 (net)                            1                 0.0000     0.4320 r
+  ExStage/U128/I (LVT_INHDV4)                           0.1458    0.0000     0.4320 r
+  ExStage/U128/ZN (LVT_INHDV4)                          0.0817    0.0713     0.5033 f
+  ExStage/n1873 (net)                          10                 0.0000     0.5033 f
+  ExStage/U2139/I (LVT_INHDV2)                          0.0817    0.0000     0.5033 f
+  ExStage/U2139/ZN (LVT_INHDV2)                         0.4682    0.2731     0.7764 r
+  ExStage/n2386 (net)                          29                 0.0000     0.7764 r
+  ExStage/U3087/A1 (LVT_AOI22HDV1)                      0.4682    0.0000     0.7764 r
+  ExStage/U3087/ZN (LVT_AOI22HDV1)                      0.1918    0.1429     0.9193 f
+  ExStage/n1814 (net)                           1                 0.0000     0.9193 f
+  ExStage/U3088/B (LVT_OAI21HDV1)                       0.1918    0.0000     0.9193 f
+  ExStage/U3088/ZN (LVT_OAI21HDV1)                      0.2429    0.1108     1.0302 r
+  ExStage/n1837 (net)                           3                 0.0000     1.0302 r
+  ExStage/U3107/A1 (LVT_NAND2HDV1)                      0.2429    0.0000     1.0302 r
+  ExStage/U3107/ZN (LVT_NAND2HDV1)                      0.1353    0.1125     1.1426 f
+  ExStage/n1925 (net)                           3                 0.0000     1.1426 f
+  ExStage/U3182/A2 (LVT_OAI21HDV1)                      0.1353    0.0000     1.1426 f
+  ExStage/U3182/ZN (LVT_OAI21HDV1)                      0.1979    0.1481     1.2907 r
+  ExStage/n2043 (net)                           2                 0.0000     1.2907 r
+  ExStage/U3283/A2 (LVT_AOI21HDV1)                      0.1979    0.0000     1.2907 r
+  ExStage/U3283/ZN (LVT_AOI21HDV1)                      0.1155    0.1013     1.3921 f
+  ExStage/n2269 (net)                           2                 0.0000     1.3921 f
+  ExStage/U3473/A1 (LVT_OAI21HDV1)                      0.1155    0.0000     1.3921 f
+  ExStage/U3473/ZN (LVT_OAI21HDV1)                      0.1943    0.1397     1.5317 r
+  ExStage/n2713 (net)                           2                 0.0000     1.5317 r
+  ExStage/U3835/A1 (LVT_AOI21HDV1)                      0.1943    0.0000     1.5317 r
+  ExStage/U3835/ZN (LVT_AOI21HDV1)                      0.1025    0.0904     1.6222 f
+  ExStage/n2714 (net)                           1                 0.0000     1.6222 f
+  ExStage/U3836/B (LVT_OAI21HDV1)                       0.1025    0.0000     1.6222 f
+  ExStage/U3836/ZN (LVT_OAI21HDV1)                      0.1929    0.0725     1.6947 r
+  ExStage/n3054 (net)                           2                 0.0000     1.6947 r
+  ExStage/U4093/A1 (LVT_AOI21HDV1)                      0.1929    0.0000     1.6947 r
+  ExStage/U4093/ZN (LVT_AOI21HDV1)                      0.1296    0.1140     1.8087 f
+  ExStage/n3117 (net)                           2                 0.0000     1.8087 f
+  ExStage/U4140/A1 (LVT_OAI21HDV1)                      0.1296    0.0000     1.8087 f
+  ExStage/U4140/ZN (LVT_OAI21HDV1)                      0.2157    0.1551     1.9638 r
+  ExStage/n3162 (net)                           2                 0.0000     1.9638 r
+  ExStage/U1314/A1 (LVT_AOI21HDV1)                      0.2157    0.0000     1.9638 r
+  ExStage/U1314/ZN (LVT_AOI21HDV1)                      0.1346    0.1173     2.0811 f
+  ExStage/n3177 (net)                           2                 0.0000     2.0811 f
+  ExStage/U1173/A1 (LVT_OAI21HDV1)                      0.1346    0.0000     2.0811 f
+  ExStage/U1173/ZN (LVT_OAI21HDV1)                      0.2296    0.1643     2.2454 r
+  ExStage/n3230 (net)                           2                 0.0000     2.2454 r
+  ExStage/U4223/A1 (LVT_AOI21HDV2)                      0.2296    0.0000     2.2454 r
+  ExStage/U4223/ZN (LVT_AOI21HDV2)                      0.1219    0.1066     2.3520 f
+  ExStage/n3281 (net)                           2                 0.0000     2.3520 f
+  ExStage/U4257/A1 (LVT_OAI21HDV2)                      0.1219    0.0000     2.3520 f
+  ExStage/U4257/ZN (LVT_OAI21HDV2)                      0.1848    0.1355     2.4874 r
+  ExStage/n3344 (net)                           2                 0.0000     2.4874 r
+  ExStage/U1174/A1 (LVT_AOI21HDV2)                      0.1848    0.0000     2.4874 r
+  ExStage/U1174/ZN (LVT_AOI21HDV2)                      0.1083    0.0969     2.5843 f
+  ExStage/n3391 (net)                           2                 0.0000     2.5843 f
+  ExStage/U1176/A1 (LVT_OAI21HDV1)                      0.1083    0.0000     2.5843 f
+  ExStage/U1176/ZN (LVT_OAI21HDV1)                      0.2292    0.1574     2.7417 r
+  ExStage/n3448 (net)                           2                 0.0000     2.7417 r
+  ExStage/U4347/A1 (LVT_AOI21HDV2)                      0.2292    0.0000     2.7417 r
+  ExStage/U4347/ZN (LVT_AOI21HDV2)                      0.1219    0.1066     2.8483 f
+  ExStage/n3497 (net)                           2                 0.0000     2.8483 f
+  ExStage/U4369/A1 (LVT_OAI21HDV2)                      0.1219    0.0000     2.8483 f
+  ExStage/U4369/ZN (LVT_OAI21HDV2)                      0.1848    0.1355     2.9838 r
+  ExStage/n3542 (net)                           2                 0.0000     2.9838 r
+  ExStage/U1177/A1 (LVT_AOI21HDV2)                      0.1848    0.0000     2.9838 r
+  ExStage/U1177/ZN (LVT_AOI21HDV2)                      0.1084    0.0969     3.0807 f
+  ExStage/n3599 (net)                           2                 0.0000     3.0807 f
+  ExStage/U1179/A1 (LVT_OAI21HDV1)                      0.1084    0.0000     3.0807 f
+  ExStage/U1179/ZN (LVT_OAI21HDV1)                      0.2292    0.1574     3.2382 r
+  ExStage/n3646 (net)                           2                 0.0000     3.2382 r
+  ExStage/U4448/A1 (LVT_AOI21HDV2)                      0.2292    0.0000     3.2382 r
+  ExStage/U4448/ZN (LVT_AOI21HDV2)                      0.1172    0.1024     3.3406 f
+  ExStage/n3696 (net)                           2                 0.0000     3.3406 f
+  ExStage/U1323/A1 (LVT_OAI21HDV1)                      0.1172    0.0000     3.3406 f
+  ExStage/U1323/ZN (LVT_OAI21HDV1)                      0.2293    0.1598     3.5003 r
+  ExStage/n3747 (net)                           2                 0.0000     3.5003 r
+  ExStage/U1180/A1 (LVT_AOI21HDV2)                      0.2293    0.0000     3.5003 r
+  ExStage/U1180/ZN (LVT_AOI21HDV2)                      0.1172    0.1024     3.6027 f
+  ExStage/n3796 (net)                           2                 0.0000     3.6027 f
+  ExStage/U1182/A1 (LVT_OAI21HDV1)                      0.1172    0.0000     3.6027 f
+  ExStage/U1182/ZN (LVT_OAI21HDV1)                      0.2293    0.1598     3.7624 r
+  ExStage/n3845 (net)                           2                 0.0000     3.7624 r
+  ExStage/U4552/A1 (LVT_AOI21HDV2)                      0.2293    0.0000     3.7624 r
+  ExStage/U4552/ZN (LVT_AOI21HDV2)                      0.1219    0.1066     3.8690 f
+  ExStage/n3894 (net)                           2                 0.0000     3.8690 f
+  ExStage/U4575/A1 (LVT_OAI21HDV2)                      0.1219    0.0000     3.8690 f
+  ExStage/U4575/ZN (LVT_OAI21HDV2)                      0.1848    0.1355     4.0045 r
+  ExStage/n3943 (net)                           2                 0.0000     4.0045 r
+  ExStage/U1184/A1 (LVT_AOI21HDV2)                      0.1848    0.0000     4.0045 r
+  ExStage/U1184/ZN (LVT_AOI21HDV2)                      0.1129    0.1009     4.1054 f
+  ExStage/n3993 (net)                           2                 0.0000     4.1054 f
+  ExStage/U4616/A1 (LVT_OAI21HDV2)                      0.1129    0.0000     4.1054 f
+  ExStage/U4616/ZN (LVT_OAI21HDV2)                      0.1841    0.1331     4.2385 r
+  ExStage/n4045 (net)                           2                 0.0000     4.2385 r
+  ExStage/U4642/A1 (LVT_AOI21HDV2)                      0.1841    0.0000     4.2385 r
+  ExStage/U4642/ZN (LVT_AOI21HDV2)                      0.1127    0.1008     4.3393 f
+  ExStage/n4095 (net)                           2                 0.0000     4.3393 f
+  ExStage/U4664/A1 (LVT_OAI21HDV2)                      0.1127    0.0000     4.3393 f
+  ExStage/U4664/ZN (LVT_OAI21HDV2)                      0.1693    0.1247     4.4641 r
+  ExStage/n4153 (net)                           2                 0.0000     4.4641 r
+  ExStage/U1188/A1 (LVT_AO21HDV2)                       0.1693    0.0000     4.4641 r
+  ExStage/U1188/Z (LVT_AO21HDV2)                        0.0670    0.1611     4.6252 r
+  ExStage/n4201 (net)                           1                 0.0000     4.6252 r
+  ExStage/U4711/CI (LVT_AD1HDV1)                        0.0670    0.0000     4.6252 r
+  ExStage/U4711/CO (LVT_AD1HDV1)                        0.1248    0.1849     4.8100 r
+  ExStage/n4256 (net)                           1                 0.0000     4.8100 r
+  ExStage/U4725/CI (LVT_AD1HDV1)                        0.1248    0.0000     4.8100 r
+  ExStage/U4725/CO (LVT_AD1HDV1)                        0.1248    0.1969     5.0069 r
+  ExStage/n4305 (net)                           1                 0.0000     5.0069 r
+  ExStage/U4735/CI (LVT_AD1HDV1)                        0.1248    0.0000     5.0069 r
+  ExStage/U4735/CO (LVT_AD1HDV1)                        0.1219    0.1950     5.2020 r
+  ExStage/n4313 (net)                           1                 0.0000     5.2020 r
+  ExStage/U1366/A1 (LVT_XOR2HDV1)                       0.1219    0.0000     5.2020 r
+  ExStage/U1366/Z (LVT_XOR2HDV1)                        0.0940    0.1740     5.3759 f
+  ExStage/n4554 (net)                           2                 0.0000     5.3759 f
+  ExStage/U1169/A1 (LVT_AOI21HDV2)                      0.0940    0.0000     5.3759 f
+  ExStage/U1169/ZN (LVT_AOI21HDV2)                      0.1445    0.0925     5.4684 r
+  ExStage/n4357 (net)                           1                 0.0000     5.4684 r
+  ExStage/U4751/B (LVT_IOA21HDV2)                       0.1445    0.0000     5.4684 r
+  ExStage/U4751/ZN (LVT_IOA21HDV2)                      0.0713    0.0608     5.5292 f
+  ExStage/result_63_ (net)                      2                 0.0000     5.5292 f
+  ExStage/adSignEx/io_inputData[63] (ysyx_210669_SignExtend_2)    0.0000     5.5292 f
+  ExStage/adSignEx/io_inputData[63] (net)                         0.0000     5.5292 f
+  ExStage/adSignEx/U79/A1 (LVT_IOA21HDV2)               0.0713    0.0000     5.5292 f
+  ExStage/adSignEx/U79/ZN (LVT_IOA21HDV2)               0.0942    0.1187     5.6480 f
+  ExStage/adSignEx/io_outputData[63] (net)      1                 0.0000     5.6480 f
+  ExStage/adSignEx/io_outputData[63] (ysyx_210669_SignExtend_2)   0.0000     5.6480 f
+  ExStage/adSignEx_io_outputData[63] (net)                        0.0000     5.6480 f
+  ExStage/U1386/I0 (LVT_MUX2HDV1)                       0.0942    0.0000     5.6480 f
+  ExStage/U1386/Z (LVT_MUX2HDV1)                        0.1020    0.2122     5.8602 f
+  ExStage/io_exH2Id_wbData[63] (net)            3                 0.0000     5.8602 f
+  ExStage/io_exH2Id_wbData[63] (ysyx_210669_EX_0)                 0.0000     5.8602 f
+  ExStage_io_exH2Id_wbData[63] (net)                              0.0000     5.8602 f
+  IdStage/io_exH2Id_wbData[63] (ysyx_210669_ID_0)                 0.0000     5.8602 f
+  IdStage/io_exH2Id_wbData[63] (net)                              0.0000     5.8602 f
+  IdStage/U216/A1 (LVT_NAND2HDV1)                       0.1020    0.0000     5.8602 f
+  IdStage/U216/ZN (LVT_NAND2HDV1)                       0.0973    0.0611     5.9213 r
+  IdStage/n3500 (net)                           1                 0.0000     5.9213 r
+  IdStage/U215/B (LVT_OAI211HDV2)                       0.0973    0.0000     5.9213 r
+  IdStage/U215/ZN (LVT_OAI211HDV2)                      0.1244    0.0770     5.9983 f
+  IdStage/io_out_readData2[63] (net)            1                 0.0000     5.9983 f
+  IdStage/io_out_readData2[63] (ysyx_210669_ID_0)                 0.0000     5.9983 f
+  IdStage_io_out_readData2[63] (net)                              0.0000     5.9983 f
+  IdEx/io_in_readData2[63] (ysyx_210669_IDEX_0)                   0.0000     5.9983 f
+  IdEx/io_in_readData2[63] (net)                                  0.0000     5.9983 f
+  IdEx/U193/B1 (LVT_AO22HDV1)                           0.1244    0.0000     5.9983 f
+  IdEx/U193/Z (LVT_AO22HDV1)                            0.0735    0.2064     6.2047 f
+  IdEx/n169 (net)                               1                 0.0000     6.2047 f
+  IdEx/io_out_readData2_r_reg_63_/D (LVT_DQHDV2)        0.0735    0.0000     6.2047 f
+  data arrival time                                                          6.2047
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  IdEx/io_out_readData2_r_reg_63_/CK (LVT_DQHDV2)                 0.0000     6.3500 r
+  library setup time                                             -0.1395     6.2105
+  data required time                                                         6.2105
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2105
+  data arrival time                                                         -6.2047
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0058
+  Startpoint: IdEx/io_out_shiftByte_r_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: IdEx/io_out_readData1_r_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  IdEx/io_out_shiftByte_r_reg_0_/CK (LVT_DQHDV1)        0.0000    0.0000 #   0.0000 r
+  IdEx/io_out_shiftByte_r_reg_0_/Q (LVT_DQHDV1)         0.1391    0.2802     0.2802 r
+  IdEx/io_out_shiftByte[0] (net)                3                 0.0000     0.2802 r
+  IdEx/io_out_shiftByte[0] (ysyx_210669_IDEX_0)                   0.0000     0.2802 r
+  IdEx_io_out_shiftByte[0] (net)                                  0.0000     0.2802 r
+  ExStage/io_in_shiftByte[0] (ysyx_210669_EX_0)                   0.0000     0.2802 r
+  ExStage/io_in_shiftByte[0] (net)                                0.0000     0.2802 r
+  ExStage/U2002/A1 (LVT_INOR2HDV2)                      0.1391    0.0000     0.2802 r
+  ExStage/U2002/ZN (LVT_INOR2HDV2)                      0.1458    0.1518     0.4320 r
+  ExStage/n781 (net)                            1                 0.0000     0.4320 r
+  ExStage/U128/I (LVT_INHDV4)                           0.1458    0.0000     0.4320 r
+  ExStage/U128/ZN (LVT_INHDV4)                          0.0817    0.0713     0.5033 f
+  ExStage/n1873 (net)                          10                 0.0000     0.5033 f
+  ExStage/U2139/I (LVT_INHDV2)                          0.0817    0.0000     0.5033 f
+  ExStage/U2139/ZN (LVT_INHDV2)                         0.4682    0.2731     0.7764 r
+  ExStage/n2386 (net)                          29                 0.0000     0.7764 r
+  ExStage/U3087/A1 (LVT_AOI22HDV1)                      0.4682    0.0000     0.7764 r
+  ExStage/U3087/ZN (LVT_AOI22HDV1)                      0.1918    0.1429     0.9193 f
+  ExStage/n1814 (net)                           1                 0.0000     0.9193 f
+  ExStage/U3088/B (LVT_OAI21HDV1)                       0.1918    0.0000     0.9193 f
+  ExStage/U3088/ZN (LVT_OAI21HDV1)                      0.2429    0.1108     1.0302 r
+  ExStage/n1837 (net)                           3                 0.0000     1.0302 r
+  ExStage/U3107/A1 (LVT_NAND2HDV1)                      0.2429    0.0000     1.0302 r
+  ExStage/U3107/ZN (LVT_NAND2HDV1)                      0.1353    0.1125     1.1426 f
+  ExStage/n1925 (net)                           3                 0.0000     1.1426 f
+  ExStage/U3182/A2 (LVT_OAI21HDV1)                      0.1353    0.0000     1.1426 f
+  ExStage/U3182/ZN (LVT_OAI21HDV1)                      0.1979    0.1481     1.2907 r
+  ExStage/n2043 (net)                           2                 0.0000     1.2907 r
+  ExStage/U3283/A2 (LVT_AOI21HDV1)                      0.1979    0.0000     1.2907 r
+  ExStage/U3283/ZN (LVT_AOI21HDV1)                      0.1155    0.1013     1.3921 f
+  ExStage/n2269 (net)                           2                 0.0000     1.3921 f
+  ExStage/U3473/A1 (LVT_OAI21HDV1)                      0.1155    0.0000     1.3921 f
+  ExStage/U3473/ZN (LVT_OAI21HDV1)                      0.1943    0.1397     1.5317 r
+  ExStage/n2713 (net)                           2                 0.0000     1.5317 r
+  ExStage/U3835/A1 (LVT_AOI21HDV1)                      0.1943    0.0000     1.5317 r
+  ExStage/U3835/ZN (LVT_AOI21HDV1)                      0.1025    0.0904     1.6222 f
+  ExStage/n2714 (net)                           1                 0.0000     1.6222 f
+  ExStage/U3836/B (LVT_OAI21HDV1)                       0.1025    0.0000     1.6222 f
+  ExStage/U3836/ZN (LVT_OAI21HDV1)                      0.1929    0.0725     1.6947 r
+  ExStage/n3054 (net)                           2                 0.0000     1.6947 r
+  ExStage/U4093/A1 (LVT_AOI21HDV1)                      0.1929    0.0000     1.6947 r
+  ExStage/U4093/ZN (LVT_AOI21HDV1)                      0.1296    0.1140     1.8087 f
+  ExStage/n3117 (net)                           2                 0.0000     1.8087 f
+  ExStage/U4140/A1 (LVT_OAI21HDV1)                      0.1296    0.0000     1.8087 f
+  ExStage/U4140/ZN (LVT_OAI21HDV1)                      0.2157    0.1551     1.9638 r
+  ExStage/n3162 (net)                           2                 0.0000     1.9638 r
+  ExStage/U1314/A1 (LVT_AOI21HDV1)                      0.2157    0.0000     1.9638 r
+  ExStage/U1314/ZN (LVT_AOI21HDV1)                      0.1346    0.1173     2.0811 f
+  ExStage/n3177 (net)                           2                 0.0000     2.0811 f
+  ExStage/U1173/A1 (LVT_OAI21HDV1)                      0.1346    0.0000     2.0811 f
+  ExStage/U1173/ZN (LVT_OAI21HDV1)                      0.2296    0.1643     2.2454 r
+  ExStage/n3230 (net)                           2                 0.0000     2.2454 r
+  ExStage/U4223/A1 (LVT_AOI21HDV2)                      0.2296    0.0000     2.2454 r
+  ExStage/U4223/ZN (LVT_AOI21HDV2)                      0.1219    0.1066     2.3520 f
+  ExStage/n3281 (net)                           2                 0.0000     2.3520 f
+  ExStage/U4257/A1 (LVT_OAI21HDV2)                      0.1219    0.0000     2.3520 f
+  ExStage/U4257/ZN (LVT_OAI21HDV2)                      0.1848    0.1355     2.4874 r
+  ExStage/n3344 (net)                           2                 0.0000     2.4874 r
+  ExStage/U1174/A1 (LVT_AOI21HDV2)                      0.1848    0.0000     2.4874 r
+  ExStage/U1174/ZN (LVT_AOI21HDV2)                      0.1083    0.0969     2.5843 f
+  ExStage/n3391 (net)                           2                 0.0000     2.5843 f
+  ExStage/U1176/A1 (LVT_OAI21HDV1)                      0.1083    0.0000     2.5843 f
+  ExStage/U1176/ZN (LVT_OAI21HDV1)                      0.2292    0.1574     2.7417 r
+  ExStage/n3448 (net)                           2                 0.0000     2.7417 r
+  ExStage/U4347/A1 (LVT_AOI21HDV2)                      0.2292    0.0000     2.7417 r
+  ExStage/U4347/ZN (LVT_AOI21HDV2)                      0.1219    0.1066     2.8483 f
+  ExStage/n3497 (net)                           2                 0.0000     2.8483 f
+  ExStage/U4369/A1 (LVT_OAI21HDV2)                      0.1219    0.0000     2.8483 f
+  ExStage/U4369/ZN (LVT_OAI21HDV2)                      0.1848    0.1355     2.9838 r
+  ExStage/n3542 (net)                           2                 0.0000     2.9838 r
+  ExStage/U1177/A1 (LVT_AOI21HDV2)                      0.1848    0.0000     2.9838 r
+  ExStage/U1177/ZN (LVT_AOI21HDV2)                      0.1084    0.0969     3.0807 f
+  ExStage/n3599 (net)                           2                 0.0000     3.0807 f
+  ExStage/U1179/A1 (LVT_OAI21HDV1)                      0.1084    0.0000     3.0807 f
+  ExStage/U1179/ZN (LVT_OAI21HDV1)                      0.2292    0.1574     3.2382 r
+  ExStage/n3646 (net)                           2                 0.0000     3.2382 r
+  ExStage/U4448/A1 (LVT_AOI21HDV2)                      0.2292    0.0000     3.2382 r
+  ExStage/U4448/ZN (LVT_AOI21HDV2)                      0.1172    0.1024     3.3406 f
+  ExStage/n3696 (net)                           2                 0.0000     3.3406 f
+  ExStage/U1323/A1 (LVT_OAI21HDV1)                      0.1172    0.0000     3.3406 f
+  ExStage/U1323/ZN (LVT_OAI21HDV1)                      0.2293    0.1598     3.5003 r
+  ExStage/n3747 (net)                           2                 0.0000     3.5003 r
+  ExStage/U1180/A1 (LVT_AOI21HDV2)                      0.2293    0.0000     3.5003 r
+  ExStage/U1180/ZN (LVT_AOI21HDV2)                      0.1172    0.1024     3.6027 f
+  ExStage/n3796 (net)                           2                 0.0000     3.6027 f
+  ExStage/U1182/A1 (LVT_OAI21HDV1)                      0.1172    0.0000     3.6027 f
+  ExStage/U1182/ZN (LVT_OAI21HDV1)                      0.2293    0.1598     3.7624 r
+  ExStage/n3845 (net)                           2                 0.0000     3.7624 r
+  ExStage/U4552/A1 (LVT_AOI21HDV2)                      0.2293    0.0000     3.7624 r
+  ExStage/U4552/ZN (LVT_AOI21HDV2)                      0.1219    0.1066     3.8690 f
+  ExStage/n3894 (net)                           2                 0.0000     3.8690 f
+  ExStage/U4575/A1 (LVT_OAI21HDV2)                      0.1219    0.0000     3.8690 f
+  ExStage/U4575/ZN (LVT_OAI21HDV2)                      0.1848    0.1355     4.0045 r
+  ExStage/n3943 (net)                           2                 0.0000     4.0045 r
+  ExStage/U1184/A1 (LVT_AOI21HDV2)                      0.1848    0.0000     4.0045 r
+  ExStage/U1184/ZN (LVT_AOI21HDV2)                      0.1129    0.1009     4.1054 f
+  ExStage/n3993 (net)                           2                 0.0000     4.1054 f
+  ExStage/U4616/A1 (LVT_OAI21HDV2)                      0.1129    0.0000     4.1054 f
+  ExStage/U4616/ZN (LVT_OAI21HDV2)                      0.1841    0.1331     4.2385 r
+  ExStage/n4045 (net)                           2                 0.0000     4.2385 r
+  ExStage/U4642/A1 (LVT_AOI21HDV2)                      0.1841    0.0000     4.2385 r
+  ExStage/U4642/ZN (LVT_AOI21HDV2)                      0.1127    0.1008     4.3393 f
+  ExStage/n4095 (net)                           2                 0.0000     4.3393 f
+  ExStage/U4664/A1 (LVT_OAI21HDV2)                      0.1127    0.0000     4.3393 f
+  ExStage/U4664/ZN (LVT_OAI21HDV2)                      0.1693    0.1247     4.4641 r
+  ExStage/n4153 (net)                           2                 0.0000     4.4641 r
+  ExStage/U1188/A1 (LVT_AO21HDV2)                       0.1693    0.0000     4.4641 r
+  ExStage/U1188/Z (LVT_AO21HDV2)                        0.0670    0.1611     4.6252 r
+  ExStage/n4201 (net)                           1                 0.0000     4.6252 r
+  ExStage/U4711/CI (LVT_AD1HDV1)                        0.0670    0.0000     4.6252 r
+  ExStage/U4711/CO (LVT_AD1HDV1)                        0.1248    0.1849     4.8100 r
+  ExStage/n4256 (net)                           1                 0.0000     4.8100 r
+  ExStage/U4725/CI (LVT_AD1HDV1)                        0.1248    0.0000     4.8100 r
+  ExStage/U4725/CO (LVT_AD1HDV1)                        0.1248    0.1969     5.0069 r
+  ExStage/n4305 (net)                           1                 0.0000     5.0069 r
+  ExStage/U4735/CI (LVT_AD1HDV1)                        0.1248    0.0000     5.0069 r
+  ExStage/U4735/CO (LVT_AD1HDV1)                        0.1219    0.1950     5.2020 r
+  ExStage/n4313 (net)                           1                 0.0000     5.2020 r
+  ExStage/U1366/A1 (LVT_XOR2HDV1)                       0.1219    0.0000     5.2020 r
+  ExStage/U1366/Z (LVT_XOR2HDV1)                        0.0940    0.1740     5.3759 f
+  ExStage/n4554 (net)                           2                 0.0000     5.3759 f
+  ExStage/U1169/A1 (LVT_AOI21HDV2)                      0.0940    0.0000     5.3759 f
+  ExStage/U1169/ZN (LVT_AOI21HDV2)                      0.1445    0.0925     5.4684 r
+  ExStage/n4357 (net)                           1                 0.0000     5.4684 r
+  ExStage/U4751/B (LVT_IOA21HDV2)                       0.1445    0.0000     5.4684 r
+  ExStage/U4751/ZN (LVT_IOA21HDV2)                      0.0713    0.0608     5.5292 f
+  ExStage/result_63_ (net)                      2                 0.0000     5.5292 f
+  ExStage/adSignEx/io_inputData[63] (ysyx_210669_SignExtend_2)    0.0000     5.5292 f
+  ExStage/adSignEx/io_inputData[63] (net)                         0.0000     5.5292 f
+  ExStage/adSignEx/U79/A1 (LVT_IOA21HDV2)               0.0713    0.0000     5.5292 f
+  ExStage/adSignEx/U79/ZN (LVT_IOA21HDV2)               0.0942    0.1187     5.6480 f
+  ExStage/adSignEx/io_outputData[63] (net)      1                 0.0000     5.6480 f
+  ExStage/adSignEx/io_outputData[63] (ysyx_210669_SignExtend_2)   0.0000     5.6480 f
+  ExStage/adSignEx_io_outputData[63] (net)                        0.0000     5.6480 f
+  ExStage/U1386/I0 (LVT_MUX2HDV1)                       0.0942    0.0000     5.6480 f
+  ExStage/U1386/Z (LVT_MUX2HDV1)                        0.1020    0.2122     5.8602 f
+  ExStage/io_exH2Id_wbData[63] (net)            3                 0.0000     5.8602 f
+  ExStage/io_exH2Id_wbData[63] (ysyx_210669_EX_0)                 0.0000     5.8602 f
+  ExStage_io_exH2Id_wbData[63] (net)                              0.0000     5.8602 f
+  IdStage/io_exH2Id_wbData[63] (ysyx_210669_ID_0)                 0.0000     5.8602 f
+  IdStage/io_exH2Id_wbData[63] (net)                              0.0000     5.8602 f
+  IdStage/U222/A1 (LVT_NAND2HDV1)                       0.1020    0.0000     5.8602 f
+  IdStage/U222/ZN (LVT_NAND2HDV1)                       0.0985    0.0611     5.9213 r
+  IdStage/n5270 (net)                           1                 0.0000     5.9213 r
+  IdStage/U221/B (LVT_OAI211HDV2)                       0.0985    0.0000     5.9213 r
+  IdStage/U221/ZN (LVT_OAI211HDV2)                      0.1233    0.0772     5.9985 f
+  IdStage/io_out_readData1[63] (net)            1                 0.0000     5.9985 f
+  IdStage/io_out_readData1[63] (ysyx_210669_ID_0)                 0.0000     5.9985 f
+  IdStage_io_out_readData1[63] (net)                              0.0000     5.9985 f
+  IdEx/io_in_readData1[63] (ysyx_210669_IDEX_0)                   0.0000     5.9985 f
+  IdEx/io_in_readData1[63] (net)                                  0.0000     5.9985 f
+  IdEx/U255/B1 (LVT_AO22HDV1)                           0.1233    0.0000     5.9985 f
+  IdEx/U255/Z (LVT_AO22HDV1)                            0.0736    0.2061     6.2046 f
+  IdEx/n233 (net)                               1                 0.0000     6.2046 f
+  IdEx/io_out_readData1_r_reg_63_/D (LVT_DQHDV2)        0.0736    0.0000     6.2046 f
+  data arrival time                                                          6.2046
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  IdEx/io_out_readData1_r_reg_63_/CK (LVT_DQHDV2)                 0.0000     6.3500 r
+  library setup time                                             -0.1395     6.2105
+  data required time                                                         6.2105
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2105
+  data arrival time                                                         -6.2046
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0059
+  Startpoint: IdEx/io_out_aluSrc_r_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: IdEx/io_out_imm_r_reg_34_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  IdEx/io_out_aluSrc_r_reg/CK (LVT_DQHDV2)              0.0000    0.0000 #   0.0000 r
+  IdEx/io_out_aluSrc_r_reg/Q (LVT_DQHDV2)               0.2184    0.3537     0.3537 f
+  IdEx/io_out_aluSrc (net)                     14                 0.0000     0.3537 f
+  IdEx/io_out_aluSrc (ysyx_210669_IDEX_0)                         0.0000     0.3537 f
+  IdEx_io_out_aluSrc (net)                                        0.0000     0.3537 f
+  ExStage/io_in_aluSrc (ysyx_210669_EX_0)                         0.0000     0.3537 f
+  ExStage/io_in_aluSrc (net)                                      0.0000     0.3537 f
+  ExStage/U14/I (LVT_INHDV4)                            0.2184    0.0000     0.3537 f
+  ExStage/U14/ZN (LVT_INHDV4)                           0.1941    0.1583     0.5119 r
+  ExStage/n128 (net)                           17                 0.0000     0.5119 r
+  ExStage/U1201/I (LVT_BUFHDV4)                         0.1941    0.0000     0.5119 r
+  ExStage/U1201/Z (LVT_BUFHDV4)                         0.4403    0.3187     0.8306 r
+  ExStage/n217 (net)                           49                 0.0000     0.8306 r
+  ExStage/U72/A1 (LVT_NAND2HDV2)                        0.4403    0.0000     0.8306 r
+  ExStage/U72/ZN (LVT_NAND2HDV2)                        0.1158    0.0842     0.9148 f
+  ExStage/n138 (net)                            1                 0.0000     0.9148 f
+  ExStage/U545/A1 (LVT_NAND2HDV2)                       0.1158    0.0000     0.9148 f
+  ExStage/U545/ZN (LVT_NAND2HDV2)                       0.3255    0.2039     1.1187 r
+  ExStage/n916 (net)                           13                 0.0000     1.1187 r
+  ExStage/U1202/A1 (LVT_XNOR2HDV1)                      0.3255    0.0000     1.1187 r
+  ExStage/U1202/ZN (LVT_XNOR2HDV1)                      0.0726    0.2021     1.3208 f
+  ExStage/n20 (net)                             1                 0.0000     1.3208 f
+  ExStage/U2027/A1 (LVT_OAI21HDV1)                      0.0726    0.0000     1.3208 f
+  ExStage/U2027/ZN (LVT_OAI21HDV1)                      0.1945    0.1286     1.4493 r
+  ExStage/n946 (net)                            2                 0.0000     1.4493 r
+  ExStage/U2281/A2 (LVT_AOI21HDV1)                      0.1945    0.0000     1.4493 r
+  ExStage/U2281/ZN (LVT_AOI21HDV1)                      0.1218    0.1064     1.5558 f
+  ExStage/n1202 (net)                           2                 0.0000     1.5558 f
+  ExStage/U89/A1 (LVT_OAI21HDV2)                        0.1218    0.0000     1.5558 f
+  ExStage/U89/ZN (LVT_OAI21HDV2)                        0.1595    0.1210     1.6768 r
+  ExStage/n1722 (net)                           2                 0.0000     1.6768 r
+  ExStage/U34/A1 (LVT_AOI21HDV1)                        0.1595    0.0000     1.6768 r
+  ExStage/U34/ZN (LVT_AOI21HDV1)                        0.1209    0.1049     1.7817 f
+  ExStage/n2636 (net)                           2                 0.0000     1.7817 f
+  ExStage/U415/A1 (LVT_OAI21HDV2)                       0.1209    0.0000     1.7817 f
+  ExStage/U415/ZN (LVT_OAI21HDV2)                       0.1691    0.1263     1.9080 r
+  ExStage/n3357 (net)                           2                 0.0000     1.9080 r
+  ExStage/U525/A1 (LVT_AOI21HDV2)                       0.1691    0.0000     1.9080 r
+  ExStage/U525/ZN (LVT_AOI21HDV2)                       0.1100    0.0976     2.0056 f
+  ExStage/n3399 (net)                           2                 0.0000     2.0056 f
+  ExStage/U531/A1 (LVT_OAI21HDV2)                       0.1100    0.0000     2.0056 f
+  ExStage/U531/ZN (LVT_OAI21HDV2)                       0.1850    0.1324     2.1380 r
+  ExStage/n3457 (net)                           2                 0.0000     2.1380 r
+  ExStage/U534/A1 (LVT_AOI21HDV2)                       0.1850    0.0000     2.1380 r
+  ExStage/U534/ZN (LVT_AOI21HDV2)                       0.1129    0.1009     2.2389 f
+  ExStage/n3504 (net)                           2                 0.0000     2.2389 f
+  ExStage/U30/A1 (LVT_OAI21HDV2)                        0.1129    0.0000     2.2389 f
+  ExStage/U30/ZN (LVT_OAI21HDV2)                        0.1849    0.1331     2.3720 r
+  ExStage/n3551 (net)                           2                 0.0000     2.3720 r
+  ExStage/U86/A1 (LVT_AOI21HDV2)                        0.1849    0.0000     2.3720 r
+  ExStage/U86/ZN (LVT_AOI21HDV2)                        0.1129    0.1009     2.4729 f
+  ExStage/n3607 (net)                           2                 0.0000     2.4729 f
+  ExStage/U544/A1 (LVT_OAI21HDV2)                       0.1129    0.0000     2.4729 f
+  ExStage/U544/ZN (LVT_OAI21HDV2)                       0.1851    0.1331     2.6061 r
+  ExStage/n3655 (net)                           2                 0.0000     2.6061 r
+  ExStage/U1209/A1 (LVT_AOI21HDV2)                      0.1851    0.0000     2.6061 r
+  ExStage/U1209/ZN (LVT_AOI21HDV2)                      0.1281    0.1143     2.7203 f
+  ExStage/n3703 (net)                           2                 0.0000     2.7203 f
+  ExStage/U4481/A1 (LVT_OAI21HDV4)                      0.1281    0.0000     2.7203 f
+  ExStage/U4481/ZN (LVT_OAI21HDV4)                      0.1373    0.1081     2.8284 r
+  ExStage/n3756 (net)                           2                 0.0000     2.8284 r
+  ExStage/U28/A1 (LVT_AOI21HDV2)                        0.1373    0.0000     2.8284 r
+  ExStage/U28/ZN (LVT_AOI21HDV2)                        0.1042    0.0907     2.9191 f
+  ExStage/n3803 (net)                           2                 0.0000     2.9191 f
+  ExStage/U594/A1 (LVT_OAI21HDV2)                       0.1042    0.0000     2.9191 f
+  ExStage/U594/ZN (LVT_OAI21HDV2)                       0.1838    0.1309     3.0500 r
+  ExStage/n3854 (net)                           2                 0.0000     3.0500 r
+  ExStage/U85/A1 (LVT_AOI21HDV2)                        0.1838    0.0000     3.0500 r
+  ExStage/U85/ZN (LVT_AOI21HDV2)                        0.1126    0.1008     3.1508 f
+  ExStage/n3901 (net)                           2                 0.0000     3.1508 f
+  ExStage/U595/A1 (LVT_OAI21HDV2)                       0.1126    0.0000     3.1508 f
+  ExStage/U595/ZN (LVT_OAI21HDV2)                       0.1841    0.1331     3.2838 r
+  ExStage/n3952 (net)                           2                 0.0000     3.2838 r
+  ExStage/U597/A1 (LVT_AOI21HDV2)                       0.1841    0.0000     3.2838 r
+  ExStage/U597/ZN (LVT_AOI21HDV2)                       0.1127    0.1008     3.3846 f
+  ExStage/n4000 (net)                           2                 0.0000     3.3846 f
+  ExStage/U21/A1 (LVT_OAI21HDV2)                        0.1127    0.0000     3.3846 f
+  ExStage/U21/ZN (LVT_OAI21HDV2)                        0.1847    0.1331     3.5177 r
+  ExStage/n4053 (net)                           2                 0.0000     3.5177 r
+  ExStage/U4648/A1 (LVT_AOI21HDV2)                      0.1847    0.0000     3.5177 r
+  ExStage/U4648/ZN (LVT_AOI21HDV2)                      0.1280    0.1142     3.6319 f
+  ExStage/n4102 (net)                           2                 0.0000     3.6319 f
+  ExStage/U4672/A1 (LVT_OAI21HDV4)                      0.1280    0.0000     3.6319 f
+  ExStage/U4672/ZN (LVT_OAI21HDV4)                      0.1559    0.1189     3.7508 r
+  ExStage/n4157 (net)                           2                 0.0000     3.7508 r
+  ExStage/U4690/A1 (LVT_AOI21HDV4)                      0.1559    0.0000     3.7508 r
+  ExStage/U4690/ZN (LVT_AOI21HDV4)                      0.0849    0.0763     3.8271 f
+  ExStage/n4207 (net)                           2                 0.0000     3.8271 f
+  ExStage/U25/A1 (LVT_OAI21HDV2)                        0.0849    0.0000     3.8271 f
+  ExStage/U25/ZN (LVT_OAI21HDV2)                        0.1565    0.1097     3.9368 r
+  ExStage/n4260 (net)                           1                 0.0000     3.9368 r
+  ExStage/U4726/CI (LVT_AD1HDV2)                        0.1565    0.0000     3.9368 r
+  ExStage/U4726/CO (LVT_AD1HDV2)                        0.1487    0.2103     4.1471 r
+  ExStage/n4314 (net)                           1                 0.0000     4.1471 r
+  ExStage/U4742/CI (LVT_AD1HDV4)                        0.1487    0.0000     4.1471 r
+  ExStage/U4742/CO (LVT_AD1HDV4)                        0.0875    0.1304     4.2776 r
+  ExStage/n4319 (net)                           1                 0.0000     4.2776 r
+  ExStage/U690/A1 (LVT_XOR2HDV2)                        0.0875    0.0000     4.2776 r
+  ExStage/U690/Z (LVT_XOR2HDV2)                         0.0681    0.1378     4.4154 f
+  ExStage/n4352 (net)                           1                 0.0000     4.4154 f
+  ExStage/U688/A1 (LVT_AOI21HDV2)                       0.0681    0.0000     4.4154 f
+  ExStage/U688/ZN (LVT_AOI21HDV2)                       0.1538    0.1000     4.5154 r
+  ExStage/n4444 (net)                           2                 0.0000     4.5154 r
+  ExStage/U84/A1 (LVT_NAND4HDV1)                        0.1538    0.0000     4.5154 r
+  ExStage/U84/ZN (LVT_NAND4HDV1)                        0.1571    0.1171     4.6325 f
+  ExStage/n4445 (net)                           1                 0.0000     4.6325 f
+  ExStage/U4769/A2 (LVT_NOR2HDV2)                       0.1571    0.0000     4.6325 f
+  ExStage/U4769/ZN (LVT_NOR2HDV2)                       0.1086    0.0879     4.7204 r
+  ExStage/n4470 (net)                           1                 0.0000     4.7204 r
+  ExStage/U4772/A1 (LVT_INOR3HDV4)                      0.1086    0.0000     4.7204 r
+  ExStage/U4772/ZN (LVT_INOR3HDV4)                      0.1543    0.1246     4.8450 r
+  ExStage/n4472 (net)                           1                 0.0000     4.8450 r
+  ExStage/U385/A3 (LVT_AOI31HDV2)                       0.1543    0.0000     4.8450 r
+  ExStage/U385/ZN (LVT_AOI31HDV2)                       0.1497    0.1192     4.9642 f
+  ExStage/io_pcSrc (net)                        3                 0.0000     4.9642 f
+  ExStage/io_pcSrc (ysyx_210669_EX_0)                             0.0000     4.9642 f
+  ExStage_io_pcSrc (net)                                          0.0000     4.9642 f
+  U88/A1 (LVT_AND2HDV4)                                 0.1497    0.0000     4.9642 f
+  U88/Z (LVT_AND2HDV4)                                  0.0778    0.1480     5.1122 f
+  IfId_io_reset (net)                           8                 0.0000     5.1122 f
+  U363/B (LVT_AO31HDV4)                                 0.0778    0.0000     5.1122 f
+  U363/Z (LVT_AO31HDV4)                                 0.0739    0.1766     5.2887 f
+  IdEx_io_reset (net)                           4                 0.0000     5.2887 f
+  IdEx/io_reset (ysyx_210669_IDEX_0)                              0.0000     5.2887 f
+  IdEx/io_reset (net)                                             0.0000     5.2887 f
+  IdEx/U16/A1 (LVT_OR2HDV4)                             0.0739    0.0000     5.2887 f
+  IdEx/U16/Z (LVT_OR2HDV4)                              0.1321    0.1954     5.4841 f
+  IdEx/n319 (net)                              12                 0.0000     5.4841 f
+  IdEx/U15/I (LVT_INHDV6)                               0.1321    0.0000     5.4841 f
+  IdEx/U15/ZN (LVT_INHDV6)                              0.2188    0.1558     5.6399 r
+  IdEx/n355 (net)                              52                 0.0000     5.6399 r
+  IdEx/U19/A1 (LVT_NOR2HDV3)                            0.2188    0.0000     5.6399 r
+  IdEx/U19/ZN (LVT_NOR2HDV3)                            0.1388    0.1227     5.7626 f
+  IdEx/n354 (net)                               9                 0.0000     5.7626 f
+  IdEx/U17/I (LVT_BUFHDV8)                              0.1388    0.0000     5.7626 f
+  IdEx/U17/Z (LVT_BUFHDV8)                              0.0740    0.1340     5.8966 f
+  IdEx/n306 (net)                              27                 0.0000     5.8966 f
+  IdEx/U317/A1 (LVT_NAND2HDV4)                          0.0740    0.0000     5.8966 f
+  IdEx/U317/ZN (LVT_NAND2HDV4)                          0.3158    0.1854     6.0820 r
+  IdEx/n328 (net)                              32                 0.0000     6.0820 r
+  IdEx/U95/B (LVT_OAI21HDV1)                            0.3158    0.0000     6.0820 r
+  IdEx/U95/ZN (LVT_OAI21HDV1)                           0.1154    0.0908     6.1728 f
+  IdEx/n64 (net)                                1                 0.0000     6.1728 f
+  IdEx/io_out_imm_r_reg_34_/D (LVT_DQHDV1)              0.1154    0.0000     6.1728 f
+  data arrival time                                                          6.1728
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  IdEx/io_out_imm_r_reg_34_/CK (LVT_DQHDV1)                       0.0000     6.3500 r
+  library setup time                                             -0.1574     6.1926
+  data required time                                                         6.1926
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1926
+  data arrival time                                                         -6.1728
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0198
