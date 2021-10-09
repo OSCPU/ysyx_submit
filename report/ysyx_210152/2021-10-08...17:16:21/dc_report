@@ -1,0 +1,128 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Fri_Oct_8_15:43:03_2021_+0800
+top_name: ysyx_210152
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+1. Error: Width mismatch on port 'io_master_awaddr' of reference to 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-3)
+2. Error: Width mismatch on port 'io_master_awaddr' of reference to 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-3)
+3. Error: Width mismatch on port 'io_master_awaddr' of reference to 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-3)
+4. Error: Width mismatch on port 'io_master_awaddr' of reference to 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-3)
+5. Error: Width mismatch on port 'io_master_awaddr' of reference to 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-3)
+6. Error: Width mismatch on port 'io_master_awaddr' of reference to 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-3)
+7. Error: Width mismatch on port 'io_master_awaddr' of reference to 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-3)
+8. Error: divide by zero
+Warnings
+1. Warning:  /Project/home/CICD/asic_data/ysyx3_test/cpu/ysyx_210152.v:15996: The value 01 is too large for the numeric data type being used (VER-1)
+2. Warning: Unable to resolve reference 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-5)
+3. Warning: Unable to resolve reference 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-5)
+4. Warning: Unable to resolve reference 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-5)
+5. Warning: Unable to resolve reference 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-5)
+6. Warning: Unable to resolve reference 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-5)
+7. Warning: Unable to resolve reference 'ysyx_210152_Vostok564_top' in 'ysyx_210152'. (LINK-5)
+****** Message Summary: 8 Error(s), 7 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total  std  mem  ipio  sub_harden
+0.0    0.0  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std  mem  ipio  sub_harden
+0      1    0    0     0 
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210152
+Date   : Fri Oct  8 17:18:35 2021
+****************************************
+    No libraries used.
+Number of ports:                          519
+Number of nets:                           260
+Number of cells:                            1
+Number of combinational cells:              0
+Number of sequential cells:                 1
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       1
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                     0.000000
+Total area:                 undefined
+Information: This design contains black box (unknown) components. (RPT-8)
+Hierarchical area distribution
+------------------------------
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+ysyx_210152                          0.0000      0.0    0.0000     0.0000  0.0000  ysyx_210152
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                   0.0000     0.0000  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210152
+Date   : Fri Oct  8 17:18:34 2021
+****************************************
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: Core_N1/io_master_awvalid (internal pin)
+  Endpoint: io_master_awvalid
+            (output port)
+  Path Group: (none)
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  Core_N1/io_master_awvalid (ysyx_210152_Vostok564_top)
+                                                        0.0000    0.0000     0.0000 r
+  io_master_awvalid (net)                       1                 0.0000     0.0000 r
+  io_master_awvalid (out)                               0.0000    0.0000     0.0000 r
+  data arrival time                                                          0.0000
+  ------------------------------------------------------------------------------------
+  (Path is unconstrained)
+  Startpoint: Core_N1/io_master_awaddr[31] (internal pin)
+  Endpoint: io_master_awaddr[31]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  Core_N1/io_master_awaddr[31] (ysyx_210152_Vostok564_top)
+                                                        0.0000    0.0000     0.0000 r
+  io_master_awaddr[31] (net)                    1                 0.0000     0.0000 r
+  io_master_awaddr[31] (out)                            0.0000    0.0000     0.0000 r
+  data arrival time                                                          0.0000
+  ------------------------------------------------------------------------------------
+  (Path is unconstrained)
+  Startpoint: Core_N1/io_master_awaddr[30] (internal pin)
+  Endpoint: io_master_awaddr[30]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  Core_N1/io_master_awaddr[30] (ysyx_210152_Vostok564_top)
+                                                        0.0000    0.0000     0.0000 r
+  io_master_awaddr[30] (net)                    1                 0.0000     0.0000 r
+  io_master_awaddr[30] (out)                            0.0000    0.0000     0.0000 r
+  data arrival time                                                          0.0000
+  ------------------------------------------------------------------------------------
+  (Path is unconstrained)

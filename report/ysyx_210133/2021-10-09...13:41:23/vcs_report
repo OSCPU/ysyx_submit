@@ -1,0 +1,33 @@
+
+core:  ysyx_210133
+
+#####################
+#vcs compile log
+#####################
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210133.v, 559
+"ysyx_210133_pipe_dff #((239 + 147)) mem2wb_dff( .clk (clock),  .rst (reset),  .flush (0),  .stall (mem_stall),  .dnxt ({mem_in, mem_csr_in, mem_exp_ecall, mem_mret}),  .qout ({mem_out, mem_csr_out, wb_exp_ecall, wb_mret}));"
+  The following 32-bit expression is connected to 1-bit port "flush" of module
+  "ysyx_210133_pipe_dff", instance "mem2wb_dff".
+  Expression: 0
+  Instantiated module defined at: "../cpu/ysyx_210133.v", 3288
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210133.v, 2337
+"ysyx_210133_csr_dff mhartid(clk, rst, 64'b0, en_mhartid, 0, mhartid_r);"
+  The following 32-bit expression is connected to 64-bit port "dnxt" of module
+  "ysyx_210133_csr_dff", instance "mhartid".
+  Expression: 0
+  Instantiated module defined at: "../cpu/ysyx_210133.v", 3263
+  Use +lint=PCWM for more details.
+
+
+
+#####################
+#vcs system test
+#####################
+Hello test pass!!
+Mem test pass!!
+rtthread test pass!!

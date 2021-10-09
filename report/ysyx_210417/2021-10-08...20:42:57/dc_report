@@ -1,0 +1,552 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Fri_Oct_8_05:21:42_2021_-0700
+top_name: ysyx_210417
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+256056.6  256056.6  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+23195  23195  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210417
+Date   : Fri Oct  8 20:48:32 2021
+****************************************
+    
+Number of ports:                         1588
+Number of nets:                         25120
+Number of cells:                        23313
+Number of combinational cells:          18660
+Number of sequential cells:              4535
+Number of macros/black boxes:               0
+Number of buf/inv:                       3979
+Number of references:                       3
+Combinational area:             139276.901152
+Buf/Inv area:                    17584.604742
+Noncombinational area:          116779.745689
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                256056.646841
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  -------------------------------
+ysyx_210417                       256056.6468    100.0     766.5360       0.0000  0.0000  ysyx_210417
+axi_inst                           28637.5164     11.2    7003.7184    8836.6810  0.0000  ysyx_210417_AXI_AXI_ID_WIDTH4_0
+axi_inst/interrupt_inst            12797.1170      5.0    6940.5128    5856.6042  0.0000  ysyx_210417_pliclint_0
+rv64i_inst                        226652.5944     88.5  124566.1340  102086.4604  0.0000  ysyx_210417_core_0
+--------------------------------  -----------  -------  -----------  -----------  ------  -------------------------------
+Total                                                   139276.9012  116779.7457  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210417
+Date   : Fri Oct  8 20:48:29 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: rv64i_inst/queue_vld_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: rv64i_inst/pc_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  rv64i_inst/queue_vld_reg/CK (LVT_DQHDV4)              0.0000    0.0000 #   0.0000 r
+  rv64i_inst/queue_vld_reg/Q (LVT_DQHDV4)               0.2631    0.3804     0.3804 r
+  rv64i_inst/queue_vld (net)                    9                 0.0000     0.3804 r
+  rv64i_inst/U329/I (LVT_INHDV12)                       0.2631    0.0000     0.3804 r
+  rv64i_inst/U329/ZN (LVT_INHDV12)                      0.1083    0.0906     0.4710 f
+  rv64i_inst/n2170 (net)                       29                 0.0000     0.4710 f
+  rv64i_inst/U1364/I (LVT_INHDV3)                       0.1083    0.0000     0.4710 f
+  rv64i_inst/U1364/ZN (LVT_INHDV3)                      0.4268    0.2597     0.7307 r
+  rv64i_inst/n9810 (net)                       27                 0.0000     0.7307 r
+  rv64i_inst/U847/A2 (LVT_NAND2HDV1)                    0.4268    0.0000     0.7307 r
+  rv64i_inst/U847/ZN (LVT_NAND2HDV1)                    0.1181    0.0878     0.8185 f
+  rv64i_inst/n429 (net)                         1                 0.0000     0.8185 f
+  rv64i_inst/U846/A2 (LVT_NAND2HDV2)                    0.1181    0.0000     0.8185 f
+  rv64i_inst/U846/ZN (LVT_NAND2HDV2)                    0.1896    0.1377     0.9562 r
+  rv64i_inst/n8357 (net)                        9                 0.0000     0.9562 r
+  rv64i_inst/U850/I (LVT_INHDV1)                        0.1896    0.0000     0.9562 r
+  rv64i_inst/U850/ZN (LVT_INHDV1)                       0.0928    0.0794     1.0356 f
+  rv64i_inst/n4377 (net)                        3                 0.0000     1.0356 f
+  rv64i_inst/U2298/A2 (LVT_NOR2HDV2)                    0.0928    0.0000     1.0356 f
+  rv64i_inst/U2298/ZN (LVT_NOR2HDV2)                    0.1344    0.0935     1.1291 r
+  rv64i_inst/n2948 (net)                        2                 0.0000     1.1291 r
+  rv64i_inst/U2300/A1 (LVT_NAND2HDV2)                   0.1344    0.0000     1.1291 r
+  rv64i_inst/U2300/ZN (LVT_NAND2HDV2)                   0.1373    0.1111     1.2402 f
+  rv64i_inst/n16719 (net)                       6                 0.0000     1.2402 f
+  rv64i_inst/U2301/B1 (LVT_IOA22HDV2)                   0.1373    0.0000     1.2402 f
+  rv64i_inst/U2301/ZN (LVT_IOA22HDV2)                   0.1425    0.1123     1.3525 r
+  rv64i_inst/n436 (net)                         1                 0.0000     1.3525 r
+  rv64i_inst/U1280/A1 (LVT_AND2HDV4)                    0.1425    0.0000     1.3525 r
+  rv64i_inst/U1280/Z (LVT_AND2HDV4)                     0.0949    0.1412     1.4937 r
+  rv64i_inst/n177 (net)                         5                 0.0000     1.4937 r
+  rv64i_inst/U1849/I (LVT_INHDV6)                       0.0949    0.0000     1.4937 r
+  rv64i_inst/U1849/ZN (LVT_INHDV6)                      0.2691    0.1852     1.6789 f
+  rv64i_inst/n16720 (net)                      55                 0.0000     1.6789 f
+  rv64i_inst/U3517/A1 (LVT_NOR2HDV1)                    0.2691    0.0000     1.6789 f
+  rv64i_inst/U3517/ZN (LVT_NOR2HDV1)                    0.1935    0.1570     1.8359 r
+  rv64i_inst/n1315 (net)                        2                 0.0000     1.8359 r
+  rv64i_inst/U3518/I (LVT_INHDV2)                       0.1935    0.0000     1.8359 r
+  rv64i_inst/U3518/ZN (LVT_INHDV2)                      0.1480    0.1291     1.9649 f
+  rv64i_inst/n2410 (net)                       12                 0.0000     1.9649 f
+  rv64i_inst/U3521/A1 (LVT_OAI22HDV1)                   0.1480    0.0000     1.9649 f
+  rv64i_inst/U3521/ZN (LVT_OAI22HDV1)                   0.2464    0.1249     2.0898 r
+  rv64i_inst/n1029 (net)                        2                 0.0000     2.0898 r
+  rv64i_inst/U3524/A1 (LVT_NAND2HDV1)                   0.2464    0.0000     2.0898 r
+  rv64i_inst/U3524/ZN (LVT_NAND2HDV1)                   0.1228    0.1016     2.1915 f
+  rv64i_inst/n1339 (net)                        3                 0.0000     2.1915 f
+  rv64i_inst/U4094/A2 (LVT_OAI21HDV1)                   0.1228    0.0000     2.1915 f
+  rv64i_inst/U4094/ZN (LVT_OAI21HDV1)                   0.1933    0.1439     2.3353 r
+  rv64i_inst/n2102 (net)                        2                 0.0000     2.3353 r
+  rv64i_inst/U5555/A1 (LVT_AOI21HDV1)                   0.1933    0.0000     2.3353 r
+  rv64i_inst/U5555/ZN (LVT_AOI21HDV1)                   0.1204    0.1061     2.4414 f
+  rv64i_inst/n2168 (net)                        2                 0.0000     2.4414 f
+  rv64i_inst/U5664/A1 (LVT_OAI21HDV1)                   0.1204    0.0000     2.4414 f
+  rv64i_inst/U5664/ZN (LVT_OAI21HDV1)                   0.1929    0.1400     2.5813 r
+  rv64i_inst/n2434 (net)                        2                 0.0000     2.5813 r
+  rv64i_inst/U6091/A1 (LVT_AOI21HDV1)                   0.1929    0.0000     2.5813 r
+  rv64i_inst/U6091/ZN (LVT_AOI21HDV1)                   0.1269    0.1117     2.6930 f
+  rv64i_inst/n2937 (net)                        2                 0.0000     2.6930 f
+  rv64i_inst/U6975/A1 (LVT_OAI21HDV2)                   0.1269    0.0000     2.6930 f
+  rv64i_inst/U6975/ZN (LVT_OAI21HDV2)                   0.1696    0.1278     2.8209 r
+  rv64i_inst/n2958 (net)                        2                 0.0000     2.8209 r
+  rv64i_inst/U1367/A1 (LVT_AOI21HDV2)                   0.1696    0.0000     2.8209 r
+  rv64i_inst/U1367/ZN (LVT_AOI21HDV2)                   0.1255    0.1108     2.9316 f
+  rv64i_inst/n3397 (net)                        2                 0.0000     2.9316 f
+  rv64i_inst/U565/A1 (LVT_OAI21HDV4)                    0.1255    0.0000     2.9316 f
+  rv64i_inst/U565/ZN (LVT_OAI21HDV4)                    0.1541    0.1183     3.0499 r
+  rv64i_inst/n3624 (net)                        2                 0.0000     3.0499 r
+  rv64i_inst/U7824/A1 (LVT_AOI21HDV4)                   0.1541    0.0000     3.0499 r
+  rv64i_inst/U7824/ZN (LVT_AOI21HDV4)                   0.0926    0.0824     3.1323 f
+  rv64i_inst/n4325 (net)                        2                 0.0000     3.1323 f
+  rv64i_inst/U8718/A1 (LVT_OAI21HDV4)                   0.0926    0.0000     3.1323 f
+  rv64i_inst/U8718/ZN (LVT_OAI21HDV4)                   0.1364    0.0991     3.2314 r
+  rv64i_inst/n4385 (net)                        2                 0.0000     3.2314 r
+  rv64i_inst/U562/A1 (LVT_AOI21HDV2)                    0.1364    0.0000     3.2314 r
+  rv64i_inst/U562/ZN (LVT_AOI21HDV2)                    0.1041    0.0905     3.3219 f
+  rv64i_inst/n6005 (net)                        2                 0.0000     3.3219 f
+  rv64i_inst/U10543/A1 (LVT_OAI21HDV2)                  0.1041    0.0000     3.3219 f
+  rv64i_inst/U10543/ZN (LVT_OAI21HDV2)                  0.1844    0.1308     3.4528 r
+  rv64i_inst/n6845 (net)                        2                 0.0000     3.4528 r
+  rv64i_inst/U11531/A1 (LVT_AOI21HDV2)                  0.1844    0.0000     3.4528 r
+  rv64i_inst/U11531/ZN (LVT_AOI21HDV2)                  0.1128    0.1008     3.5536 f
+  rv64i_inst/n8180 (net)                        2                 0.0000     3.5536 f
+  rv64i_inst/U568/A1 (LVT_OAI21HDV2)                    0.1128    0.0000     3.5536 f
+  rv64i_inst/U568/ZN (LVT_OAI21HDV2)                    0.1844    0.1331     3.6867 r
+  rv64i_inst/n8845 (net)                        2                 0.0000     3.6867 r
+  rv64i_inst/U13537/A1 (LVT_AOI21HDV2)                  0.1844    0.0000     3.6867 r
+  rv64i_inst/U13537/ZN (LVT_AOI21HDV2)                  0.1128    0.1008     3.7876 f
+  rv64i_inst/n9208 (net)                        2                 0.0000     3.7876 f
+  rv64i_inst/U588/A1 (LVT_OAI21HDV2)                    0.1128    0.0000     3.7876 f
+  rv64i_inst/U588/ZN (LVT_OAI21HDV2)                    0.1841    0.1331     3.9207 r
+  rv64i_inst/n10498 (net)                       2                 0.0000     3.9207 r
+  rv64i_inst/U14529/A1 (LVT_AOI21HDV2)                  0.1841    0.0000     3.9207 r
+  rv64i_inst/U14529/ZN (LVT_AOI21HDV2)                  0.1127    0.1008     4.0215 f
+  rv64i_inst/n13771 (net)                       2                 0.0000     4.0215 f
+  rv64i_inst/U37/A1 (LVT_OAI21HDV2)                     0.1127    0.0000     4.0215 f
+  rv64i_inst/U37/ZN (LVT_OAI21HDV2)                     0.1841    0.1331     4.1545 r
+  rv64i_inst/n13780 (net)                       2                 0.0000     4.1545 r
+  rv64i_inst/U14574/A1 (LVT_AOI21HDV2)                  0.1841    0.0000     4.1545 r
+  rv64i_inst/U14574/ZN (LVT_AOI21HDV2)                  0.1127    0.1008     4.2553 f
+  rv64i_inst/n14114 (net)                       2                 0.0000     4.2553 f
+  rv64i_inst/U578/A1 (LVT_OAI21HDV2)                    0.1127    0.0000     4.2553 f
+  rv64i_inst/U578/ZN (LVT_OAI21HDV2)                    0.1743    0.1276     4.3829 r
+  rv64i_inst/n14543 (net)                       2                 0.0000     4.3829 r
+  rv64i_inst/U15201/A1 (LVT_AOI21HDV1)                  0.1743    0.0000     4.3829 r
+  rv64i_inst/U15201/ZN (LVT_AOI21HDV1)                  0.1328    0.1162     4.4992 f
+  rv64i_inst/n14605 (net)                       2                 0.0000     4.4992 f
+  rv64i_inst/U576/A1 (LVT_OAI21HDV2)                    0.1328    0.0000     4.4992 f
+  rv64i_inst/U576/ZN (LVT_OAI21HDV2)                    0.1857    0.1383     4.6375 r
+  rv64i_inst/n14666 (net)                       2                 0.0000     4.6375 r
+  rv64i_inst/U324/A1 (LVT_AOI21HDV2)                    0.1857    0.0000     4.6375 r
+  rv64i_inst/U324/ZN (LVT_AOI21HDV2)                    0.1282    0.1143     4.7518 f
+  rv64i_inst/n14686 (net)                       2                 0.0000     4.7518 f
+  rv64i_inst/U15278/A1 (LVT_OAI21HDV4)                  0.1282    0.0000     4.7518 f
+  rv64i_inst/U15278/ZN (LVT_OAI21HDV4)                  0.1310    0.1054     4.8572 r
+  rv64i_inst/n14705 (net)                       2                 0.0000     4.8572 r
+  rv64i_inst/U15288/A1 (LVT_AOI21HDV1)                  0.1310    0.0000     4.8572 r
+  rv64i_inst/U15288/ZN (LVT_AOI21HDV1)                  0.1194    0.1005     4.9577 f
+  rv64i_inst/n14825 (net)                       2                 0.0000     4.9577 f
+  rv64i_inst/U15355/A1 (LVT_OAI21HDV1)                  0.1194    0.0000     4.9577 f
+  rv64i_inst/U15355/ZN (LVT_OAI21HDV1)                  0.2154    0.1524     5.1102 r
+  rv64i_inst/n14881 (net)                       2                 0.0000     5.1102 r
+  rv64i_inst/U15385/A1 (LVT_AOI21HDV1)                  0.2154    0.0000     5.1102 r
+  rv64i_inst/U15385/ZN (LVT_AOI21HDV1)                  0.1413    0.1232     5.2334 f
+  rv64i_inst/n14946 (net)                       2                 0.0000     5.2334 f
+  rv64i_inst/U584/A1 (LVT_OAI21HDV2)                    0.1413    0.0000     5.2334 f
+  rv64i_inst/U584/ZN (LVT_OAI21HDV2)                    0.1503    0.1195     5.3529 r
+  rv64i_inst/n15001 (net)                       1                 0.0000     5.3529 r
+  rv64i_inst/U15437/CI (LVT_AD1HDV1)                    0.1503    0.0000     5.3529 r
+  rv64i_inst/U15437/CO (LVT_AD1HDV1)                    0.1247    0.2021     5.5550 r
+  rv64i_inst/n16488 (net)                       1                 0.0000     5.5550 r
+  rv64i_inst/U16576/CI (LVT_AD1HDV1)                    0.1247    0.0000     5.5550 r
+  rv64i_inst/U16576/CO (LVT_AD1HDV1)                    0.1305    0.2007     5.7557 r
+  rv64i_inst/n16507 (net)                       1                 0.0000     5.7557 r
+  rv64i_inst/U16588/CI (LVT_AD1HDV2)                    0.1305    0.0000     5.7557 r
+  rv64i_inst/U16588/CO (LVT_AD1HDV2)                    0.1119    0.1797     5.9354 r
+  rv64i_inst/n16511 (net)                       1                 0.0000     5.9354 r
+  rv64i_inst/U16591/A1 (LVT_XOR2HDV2)                   0.1119    0.0000     5.9354 r
+  rv64i_inst/U16591/Z (LVT_XOR2HDV2)                    0.0682    0.1446     6.0800 f
+  rv64i_inst/n16513 (net)                       1                 0.0000     6.0800 f
+  rv64i_inst/U16592/A1 (LVT_NAND2HDV2)                  0.0682    0.0000     6.0800 f
+  rv64i_inst/U16592/ZN (LVT_NAND2HDV2)                  0.0863    0.0423     6.1223 r
+  rv64i_inst/n16515 (net)                       1                 0.0000     6.1223 r
+  rv64i_inst/U1307/B (LVT_OAI211HDV1)                   0.0863    0.0000     6.1223 r
+  rv64i_inst/U1307/ZN (LVT_OAI211HDV1)                  0.1301    0.0863     6.2086 f
+  rv64i_inst/n13724 (net)                       1                 0.0000     6.2086 f
+  rv64i_inst/pc_reg_63_/D (LVT_DQHDV4)                  0.1301    0.0000     6.2086 f
+  data arrival time                                                          6.2086
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  rv64i_inst/pc_reg_63_/CK (LVT_DQHDV4)                           0.0000     6.3500 r
+  library setup time                                             -0.1376     6.2124
+  data required time                                                         6.2124
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2124
+  data arrival time                                                         -6.2086
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0038
+  Startpoint: rv64i_inst/rs1_pass_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: rv64i_inst/pc_jump_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  rv64i_inst/rs1_pass_reg/CK (LVT_DHDV1)                0.0000    0.0000 #   0.0000 r
+  rv64i_inst/rs1_pass_reg/Q (LVT_DHDV1)                 0.1268    0.2839     0.2839 f
+  rv64i_inst/rs1_pass (net)                     2                 0.0000     0.2839 f
+  rv64i_inst/U1281/A2 (LVT_NAND2HDV4)                   0.1268    0.0000     0.2839 f
+  rv64i_inst/U1281/ZN (LVT_NAND2HDV4)                   0.2996    0.1986     0.4826 r
+  rv64i_inst/n13965 (net)                      30                 0.0000     0.4826 r
+  rv64i_inst/U126/I (LVT_BUFHDV8)                       0.2996    0.0000     0.4826 r
+  rv64i_inst/U126/Z (LVT_BUFHDV8)                       0.4389    0.3249     0.8075 r
+  rv64i_inst/n77 (net)                         99                 0.0000     0.8075 r
+  rv64i_inst/U14613/A1 (LVT_NAND2HDV1)                  0.4389    0.0000     0.8075 r
+  rv64i_inst/U14613/ZN (LVT_NAND2HDV1)                  0.1243    0.0909     0.8984 f
+  rv64i_inst/n13835 (net)                       1                 0.0000     0.8984 f
+  rv64i_inst/U14614/B (LVT_OAI21HDV1)                   0.1243    0.0000     0.8984 f
+  rv64i_inst/U14614/ZN (LVT_OAI21HDV1)                  0.1991    0.0730     0.9714 r
+  rv64i_inst/n14320 (net)                       2                 0.0000     0.9714 r
+  rv64i_inst/U14615/A1 (LVT_NAND2HDV1)                  0.1991    0.0000     0.9714 r
+  rv64i_inst/U14615/ZN (LVT_NAND2HDV1)                  0.1139    0.0960     1.0675 f
+  rv64i_inst/n14321 (net)                       3                 0.0000     1.0675 f
+  rv64i_inst/U14617/A2 (LVT_OAI21HDV1)                  0.1139    0.0000     1.0675 f
+  rv64i_inst/U14617/ZN (LVT_OAI21HDV1)                  0.1947    0.1435     1.2109 r
+  rv64i_inst/n14174 (net)                       2                 0.0000     1.2109 r
+  rv64i_inst/U14621/A2 (LVT_AOI21HDV1)                  0.1947    0.0000     1.2109 r
+  rv64i_inst/U14621/ZN (LVT_AOI21HDV1)                  0.1149    0.1010     1.3119 f
+  rv64i_inst/n13896 (net)                       2                 0.0000     1.3119 f
+  rv64i_inst/U14644/A1 (LVT_OAI21HDV1)                  0.1149    0.0000     1.3119 f
+  rv64i_inst/U14644/ZN (LVT_OAI21HDV1)                  0.1925    0.1385     1.4505 r
+  rv64i_inst/n13888 (net)                       2                 0.0000     1.4505 r
+  rv64i_inst/U14700/A1 (LVT_AOI21HDV1)                  0.1925    0.0000     1.4505 r
+  rv64i_inst/U14700/ZN (LVT_AOI21HDV1)                  0.1203    0.1060     1.5564 f
+  rv64i_inst/n13964 (net)                       2                 0.0000     1.5564 f
+  rv64i_inst/U1141/A1 (LVT_OAI21HDV1)                   0.1203    0.0000     1.5564 f
+  rv64i_inst/U1141/ZN (LVT_OAI21HDV1)                   0.2154    0.1527     1.7091 r
+  rv64i_inst/n14160 (net)                       2                 0.0000     1.7091 r
+  rv64i_inst/U570/A1 (LVT_AOI21HDV1)                    0.2154    0.0000     1.7091 r
+  rv64i_inst/U570/ZN (LVT_AOI21HDV1)                    0.1413    0.1232     1.8323 f
+  rv64i_inst/n14144 (net)                       2                 0.0000     1.8323 f
+  rv64i_inst/U326/A1 (LVT_OAI21HDV2)                    0.1413    0.0000     1.8323 f
+  rv64i_inst/U326/ZN (LVT_OAI21HDV2)                    0.1864    0.1406     1.9729 r
+  rv64i_inst/n14370 (net)                       2                 0.0000     1.9729 r
+  rv64i_inst/U325/A1 (LVT_AOI21HDV2)                    0.1864    0.0000     1.9729 r
+  rv64i_inst/U325/ZN (LVT_AOI21HDV2)                    0.1132    0.1011     2.0740 f
+  rv64i_inst/n14026 (net)                       2                 0.0000     2.0740 f
+  rv64i_inst/U393/A1 (LVT_OAI21HDV2)                    0.1132    0.0000     2.0740 f
+  rv64i_inst/U393/ZN (LVT_OAI21HDV2)                    0.1743    0.1277     2.2017 r
+  rv64i_inst/n14187 (net)                       2                 0.0000     2.2017 r
+  rv64i_inst/U14820/A1 (LVT_AOI21HDV1)                  0.1743    0.0000     2.2017 r
+  rv64i_inst/U14820/ZN (LVT_AOI21HDV1)                  0.1328    0.1162     2.3179 f
+  rv64i_inst/n14086 (net)                       2                 0.0000     2.3179 f
+  rv64i_inst/U566/A1 (LVT_OAI21HDV2)                    0.1328    0.0000     2.3179 f
+  rv64i_inst/U566/ZN (LVT_OAI21HDV2)                    0.1761    0.1328     2.4507 r
+  rv64i_inst/n14206 (net)                       2                 0.0000     2.4507 r
+  rv64i_inst/U14821/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     2.4507 r
+  rv64i_inst/U14821/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     2.5674 f
+  rv64i_inst/n14489 (net)                       2                 0.0000     2.5674 f
+  rv64i_inst/U486/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     2.5674 f
+  rv64i_inst/U486/ZN (LVT_OAI21HDV2)                    0.1761    0.1328     2.7002 r
+  rv64i_inst/n14073 (net)                       2                 0.0000     2.7002 r
+  rv64i_inst/U14895/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     2.7002 r
+  rv64i_inst/U14895/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     2.8169 f
+  rv64i_inst/n14286 (net)                       2                 0.0000     2.8169 f
+  rv64i_inst/U1126/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     2.8169 f
+  rv64i_inst/U1126/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     2.9498 r
+  rv64i_inst/n14214 (net)                       2                 0.0000     2.9498 r
+  rv64i_inst/U14992/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     2.9498 r
+  rv64i_inst/U14992/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.0664 f
+  rv64i_inst/n14474 (net)                       2                 0.0000     3.0664 f
+  rv64i_inst/U1120/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     3.0664 f
+  rv64i_inst/U1120/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     3.1993 r
+  rv64i_inst/n14294 (net)                       2                 0.0000     3.1993 r
+  rv64i_inst/U14993/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.1993 r
+  rv64i_inst/U14993/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.3160 f
+  rv64i_inst/n14230 (net)                       2                 0.0000     3.3160 f
+  rv64i_inst/U395/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     3.3160 f
+  rv64i_inst/U395/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     3.4488 r
+  rv64i_inst/n14240 (net)                       2                 0.0000     3.4488 r
+  rv64i_inst/U15006/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.4488 r
+  rv64i_inst/U15006/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.5655 f
+  rv64i_inst/n14277 (net)                       2                 0.0000     3.5655 f
+  rv64i_inst/U1139/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     3.5655 f
+  rv64i_inst/U1139/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     3.6984 r
+  rv64i_inst/n14526 (net)                       2                 0.0000     3.6984 r
+  rv64i_inst/U15007/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.6984 r
+  rv64i_inst/U15007/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.8150 f
+  rv64i_inst/n14269 (net)                       2                 0.0000     3.8150 f
+  rv64i_inst/U573/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     3.8150 f
+  rv64i_inst/U573/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     3.9479 r
+  rv64i_inst/n14481 (net)                       2                 0.0000     3.9479 r
+  rv64i_inst/U15010/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.9479 r
+  rv64i_inst/U15010/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     4.0646 f
+  rv64i_inst/n14498 (net)                       2                 0.0000     4.0646 f
+  rv64i_inst/U579/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     4.0646 f
+  rv64i_inst/U579/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     4.1974 r
+  rv64i_inst/n14505 (net)                       2                 0.0000     4.1974 r
+  rv64i_inst/U15014/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     4.1974 r
+  rv64i_inst/U15014/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     4.3141 f
+  rv64i_inst/n14533 (net)                       2                 0.0000     4.3141 f
+  rv64i_inst/U577/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     4.3141 f
+  rv64i_inst/U577/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     4.4469 r
+  rv64i_inst/n14553 (net)                       2                 0.0000     4.4469 r
+  rv64i_inst/U15205/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     4.4469 r
+  rv64i_inst/U15205/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     4.5636 f
+  rv64i_inst/n14655 (net)                       2                 0.0000     4.5636 f
+  rv64i_inst/U587/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     4.5636 f
+  rv64i_inst/U587/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     4.6965 r
+  rv64i_inst/n14676 (net)                       2                 0.0000     4.6965 r
+  rv64i_inst/U15272/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     4.6965 r
+  rv64i_inst/U15272/ZN (LVT_AOI21HDV1)                  0.1264    0.1111     4.8076 f
+  rv64i_inst/n14695 (net)                       2                 0.0000     4.8076 f
+  rv64i_inst/U44/A1 (LVT_OAI21HDV1)                     0.1264    0.0000     4.8076 f
+  rv64i_inst/U44/ZN (LVT_OAI21HDV1)                     0.2085    0.1502     4.9578 r
+  rv64i_inst/n14784 (net)                       2                 0.0000     4.9578 r
+  rv64i_inst/U581/A1 (LVT_AO21HDV2)                     0.2085    0.0000     4.9578 r
+  rv64i_inst/U581/Z (LVT_AO21HDV2)                      0.0679    0.1682     5.1261 r
+  rv64i_inst/n14890 (net)                       1                 0.0000     5.1261 r
+  rv64i_inst/U15391/CI (LVT_AD1HDV1)                    0.0679    0.0000     5.1261 r
+  rv64i_inst/U15391/CO (LVT_AD1HDV1)                    0.1242    0.1851     5.3112 r
+  rv64i_inst/n14953 (net)                       1                 0.0000     5.3112 r
+  rv64i_inst/U15417/CI (LVT_AD1HDV1)                    0.1242    0.0000     5.3112 r
+  rv64i_inst/U15417/CO (LVT_AD1HDV1)                    0.1242    0.1968     5.5080 r
+  rv64i_inst/n15008 (net)                       1                 0.0000     5.5080 r
+  rv64i_inst/U15442/CI (LVT_AD1HDV1)                    0.1242    0.0000     5.5080 r
+  rv64i_inst/U15442/CO (LVT_AD1HDV1)                    0.1242    0.1968     5.7048 r
+  rv64i_inst/n16497 (net)                       1                 0.0000     5.7048 r
+  rv64i_inst/U16582/CI (LVT_AD1HDV1)                    0.1242    0.0000     5.7048 r
+  rv64i_inst/U16582/CO (LVT_AD1HDV1)                    0.1214    0.1949     5.8997 r
+  rv64i_inst/n16502 (net)                       1                 0.0000     5.8997 r
+  rv64i_inst/U1180/A1 (LVT_XOR2HDV1)                    0.1214    0.0000     5.8997 r
+  rv64i_inst/U1180/Z (LVT_XOR2HDV1)                     0.0778    0.1592     6.0589 f
+  rv64i_inst/n16503 (net)                       1                 0.0000     6.0589 f
+  rv64i_inst/U1179/A1 (LVT_NAND2HDV1)                   0.0778    0.0000     6.0589 f
+  rv64i_inst/U1179/ZN (LVT_NAND2HDV1)                   0.0978    0.0514     6.1103 r
+  rv64i_inst/n16505 (net)                       1                 0.0000     6.1103 r
+  rv64i_inst/U16587/B (LVT_OAI211HDV1)                  0.0978    0.0000     6.1103 r
+  rv64i_inst/U16587/ZN (LVT_OAI211HDV1)                 0.1270    0.0872     6.1975 f
+  rv64i_inst/n13725 (net)                       1                 0.0000     6.1975 f
+  rv64i_inst/pc_jump_reg_63_/D (LVT_DQHDV2)             0.1270    0.0000     6.1975 f
+  data arrival time                                                          6.1975
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  rv64i_inst/pc_jump_reg_63_/CK (LVT_DQHDV2)                      0.0000     6.3500 r
+  library setup time                                             -0.1484     6.2016
+  data required time                                                         6.2016
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2016
+  data arrival time                                                         -6.1975
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0041
+  Startpoint: rv64i_inst/rs2_pass_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: rv64i_inst/alu_out_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  rv64i_inst/rs2_pass_reg/CK (LVT_DQHDV2)               0.0000    0.0000 #   0.0000 r
+  rv64i_inst/rs2_pass_reg/Q (LVT_DQHDV2)                0.3611    0.4127     0.4127 r
+  rv64i_inst/rs2_pass (net)                     9                 0.0000     0.4127 r
+  rv64i_inst/U1370/A1 (LVT_NAND2HDV2)                   0.3611    0.0000     0.4127 r
+  rv64i_inst/U1370/ZN (LVT_NAND2HDV2)                   0.3111    0.2550     0.6677 f
+  rv64i_inst/n2443 (net)                        7                 0.0000     0.6677 f
+  rv64i_inst/U1398/S (LVT_MUX2NHDV1)                    0.3111    0.0000     0.6677 f
+  rv64i_inst/U1398/ZN (LVT_MUX2NHDV1)                   0.0929    0.1223     0.7901 f
+  rv64i_inst/n189 (net)                         1                 0.0000     0.7901 f
+  rv64i_inst/U1399/I (LVT_BUFHDV2)                      0.0929    0.0000     0.7901 f
+  rv64i_inst/U1399/Z (LVT_BUFHDV2)                      0.2490    0.2480     1.0380 f
+  rv64i_inst/n8805 (net)                       14                 0.0000     1.0380 f
+  rv64i_inst/U327/I (LVT_INHDV1)                        0.2490    0.0000     1.0380 f
+  rv64i_inst/U327/ZN (LVT_INHDV1)                       0.2493    0.1960     1.2341 r
+  rv64i_inst/n191 (net)                         6                 0.0000     1.2341 r
+  rv64i_inst/U1402/A1 (LVT_NOR2HDV1)                    0.2493    0.0000     1.2341 r
+  rv64i_inst/U1402/ZN (LVT_NOR2HDV1)                    0.1313    0.0669     1.3009 f
+  rv64i_inst/n3508 (net)                        2                 0.0000     1.3009 f
+  rv64i_inst/U1404/A2 (LVT_OAI21HDV1)                   0.1313    0.0000     1.3009 f
+  rv64i_inst/U1404/ZN (LVT_OAI21HDV1)                   0.1974    0.1473     1.4482 r
+  rv64i_inst/n3961 (net)                        2                 0.0000     1.4482 r
+  rv64i_inst/U1405/C (LVT_OAI211HDV1)                   0.1974    0.0000     1.4482 r
+  rv64i_inst/U1405/ZN (LVT_OAI211HDV1)                  0.1466    0.1142     1.5625 f
+  rv64i_inst/n195 (net)                         1                 0.0000     1.5625 f
+  rv64i_inst/U1406/C (LVT_OAI211HDV1)                   0.1466    0.0000     1.5625 f
+  rv64i_inst/U1406/ZN (LVT_OAI211HDV1)                  0.3655    0.1329     1.6953 r
+  rv64i_inst/n16472 (net)                       4                 0.0000     1.6953 r
+  rv64i_inst/U6105/I (LVT_INHDV1)                       0.3655    0.0000     1.6953 r
+  rv64i_inst/U6105/ZN (LVT_INHDV1)                      0.0846    0.0516     1.7469 f
+  rv64i_inst/n2462 (net)                        1                 0.0000     1.7469 f
+  rv64i_inst/U6141/A1 (LVT_OAI21HDV1)                   0.0846    0.0000     1.7469 f
+  rv64i_inst/U6141/ZN (LVT_OAI21HDV1)                   0.1905    0.1306     1.8775 r
+  rv64i_inst/n2748 (net)                        2                 0.0000     1.8775 r
+  rv64i_inst/U190/A1 (LVT_AOI21HDV1)                    0.1905    0.0000     1.8775 r
+  rv64i_inst/U190/ZN (LVT_AOI21HDV1)                    0.1264    0.1114     1.9889 f
+  rv64i_inst/n3814 (net)                        2                 0.0000     1.9889 f
+  rv64i_inst/U8124/A1 (LVT_OAI21HDV2)                   0.1264    0.0000     1.9889 f
+  rv64i_inst/U8124/ZN (LVT_OAI21HDV2)                   0.1755    0.1311     2.1200 r
+  rv64i_inst/n4613 (net)                        2                 0.0000     2.1200 r
+  rv64i_inst/U927/A1 (LVT_AOI21HDV1)                    0.1755    0.0000     2.1200 r
+  rv64i_inst/U927/ZN (LVT_AOI21HDV1)                    0.1329    0.1165     2.2365 f
+  rv64i_inst/n4538 (net)                        2                 0.0000     2.2365 f
+  rv64i_inst/U8135/A1 (LVT_OAI21HDV2)                   0.1329    0.0000     2.2365 f
+  rv64i_inst/U8135/ZN (LVT_OAI21HDV2)                   0.1770    0.1328     2.3694 r
+  rv64i_inst/n4729 (net)                        2                 0.0000     2.3694 r
+  rv64i_inst/U140/A1 (LVT_AOI21HDV1)                    0.1770    0.0000     2.3694 r
+  rv64i_inst/U140/ZN (LVT_AOI21HDV1)                    0.1266    0.1113     2.4807 f
+  rv64i_inst/n4694 (net)                        2                 0.0000     2.4807 f
+  rv64i_inst/U931/A1 (LVT_OAI21HDV1)                    0.1266    0.0000     2.4807 f
+  rv64i_inst/U931/ZN (LVT_OAI21HDV1)                    0.2156    0.1543     2.6350 r
+  rv64i_inst/n4648 (net)                        2                 0.0000     2.6350 r
+  rv64i_inst/U933/A1 (LVT_AOI21HDV1)                    0.2156    0.0000     2.6350 r
+  rv64i_inst/U933/ZN (LVT_AOI21HDV1)                    0.1346    0.1174     2.7524 f
+  rv64i_inst/n4754 (net)                        2                 0.0000     2.7524 f
+  rv64i_inst/U780/A1 (LVT_OAI21HDV1)                    0.1346    0.0000     2.7524 f
+  rv64i_inst/U780/ZN (LVT_OAI21HDV1)                    0.2159    0.1564     2.9088 r
+  rv64i_inst/n4904 (net)                        2                 0.0000     2.9088 r
+  rv64i_inst/U129/A1 (LVT_AOI21HDV1)                    0.2159    0.0000     2.9088 r
+  rv64i_inst/U129/ZN (LVT_AOI21HDV1)                    0.1347    0.1174     3.0263 f
+  rv64i_inst/n15626 (net)                       2                 0.0000     3.0263 f
+  rv64i_inst/U768/A1 (LVT_OAI21HDV1)                    0.1347    0.0000     3.0263 f
+  rv64i_inst/U768/ZN (LVT_OAI21HDV1)                    0.2176    0.1564     3.1827 r
+  rv64i_inst/n15308 (net)                       2                 0.0000     3.1827 r
+  rv64i_inst/U744/A1 (LVT_AOI21HDV1)                    0.2176    0.0000     3.1827 r
+  rv64i_inst/U744/ZN (LVT_AOI21HDV1)                    0.1418    0.1236     3.3063 f
+  rv64i_inst/n6583 (net)                        2                 0.0000     3.3063 f
+  rv64i_inst/U11228/A1 (LVT_OAI21HDV2)                  0.1418    0.0000     3.3063 f
+  rv64i_inst/U11228/ZN (LVT_OAI21HDV2)                  0.1864    0.1407     3.4470 r
+  rv64i_inst/n7318 (net)                        2                 0.0000     3.4470 r
+  rv64i_inst/U12059/A1 (LVT_AOI21HDV2)                  0.1864    0.0000     3.4470 r
+  rv64i_inst/U12059/ZN (LVT_AOI21HDV2)                  0.1087    0.0971     3.5441 f
+  rv64i_inst/n8449 (net)                        2                 0.0000     3.5441 f
+  rv64i_inst/U799/A1 (LVT_OAI21HDV1)                    0.1087    0.0000     3.5441 f
+  rv64i_inst/U799/ZN (LVT_OAI21HDV1)                    0.2149    0.1496     3.6937 r
+  rv64i_inst/n8905 (net)                        2                 0.0000     3.6937 r
+  rv64i_inst/U128/A1 (LVT_AOI21HDV1)                    0.2149    0.0000     3.6937 r
+  rv64i_inst/U128/ZN (LVT_AOI21HDV1)                    0.1345    0.1173     3.8110 f
+  rv64i_inst/n9711 (net)                        2                 0.0000     3.8110 f
+  rv64i_inst/U758/A1 (LVT_OAI21HDV1)                    0.1345    0.0000     3.8110 f
+  rv64i_inst/U758/ZN (LVT_OAI21HDV1)                    0.2312    0.1643     3.9753 r
+  rv64i_inst/n13731 (net)                       2                 0.0000     3.9753 r
+  rv64i_inst/U14535/A1 (LVT_AOI21HDV2)                  0.2312    0.0000     3.9753 r
+  rv64i_inst/U14535/ZN (LVT_AOI21HDV2)                  0.1176    0.1026     4.0779 f
+  rv64i_inst/n13789 (net)                       2                 0.0000     4.0779 f
+  rv64i_inst/U763/A1 (LVT_OAI21HDV1)                    0.1176    0.0000     4.0779 f
+  rv64i_inst/U763/ZN (LVT_OAI21HDV1)                    0.2308    0.1599     4.2378 r
+  rv64i_inst/n15755 (net)                       2                 0.0000     4.2378 r
+  rv64i_inst/U14580/A1 (LVT_AOI21HDV2)                  0.2308    0.0000     4.2378 r
+  rv64i_inst/U14580/ZN (LVT_AOI21HDV2)                  0.1222    0.1068     4.3446 f
+  rv64i_inst/n14438 (net)                       2                 0.0000     4.3446 f
+  rv64i_inst/U15142/A1 (LVT_OAI21HDV2)                  0.1222    0.0000     4.3446 f
+  rv64i_inst/U15142/ZN (LVT_OAI21HDV2)                  0.1862    0.1356     4.4802 r
+  rv64i_inst/n14564 (net)                       2                 0.0000     4.4802 r
+  rv64i_inst/U15211/A1 (LVT_AOI21HDV2)                  0.1862    0.0000     4.4802 r
+  rv64i_inst/U15211/ZN (LVT_AOI21HDV2)                  0.1086    0.0971     4.5773 f
+  rv64i_inst/n14614 (net)                       2                 0.0000     4.5773 f
+  rv64i_inst/U53/A1 (LVT_OAI21HDV1)                     0.1086    0.0000     4.5773 f
+  rv64i_inst/U53/ZN (LVT_OAI21HDV1)                     0.2291    0.1575     4.7348 r
+  rv64i_inst/n14717 (net)                       2                 0.0000     4.7348 r
+  rv64i_inst/U15292/A1 (LVT_AOI21HDV2)                  0.2291    0.0000     4.7348 r
+  rv64i_inst/U15292/ZN (LVT_AOI21HDV2)                  0.1172    0.1024     4.8371 f
+  rv64i_inst/n15710 (net)                       2                 0.0000     4.8371 f
+  rv64i_inst/U778/A1 (LVT_OAI21HDV1)                    0.1172    0.0000     4.8371 f
+  rv64i_inst/U778/ZN (LVT_OAI21HDV1)                    0.2293    0.1597     4.9969 r
+  rv64i_inst/n14788 (net)                       2                 0.0000     4.9969 r
+  rv64i_inst/U15297/A1 (LVT_AOI21HDV2)                  0.2293    0.0000     4.9969 r
+  rv64i_inst/U15297/ZN (LVT_AOI21HDV2)                  0.1219    0.1066     5.1035 f
+  rv64i_inst/n14835 (net)                       2                 0.0000     5.1035 f
+  rv64i_inst/U15360/A1 (LVT_OAI21HDV2)                  0.1219    0.0000     5.1035 f
+  rv64i_inst/U15360/ZN (LVT_OAI21HDV2)                  0.1488    0.1145     5.2180 r
+  rv64i_inst/n14897 (net)                       1                 0.0000     5.2180 r
+  rv64i_inst/U15393/CI (LVT_AD1HDV1)                    0.1488    0.0000     5.2180 r
+  rv64i_inst/U15393/CO (LVT_AD1HDV1)                    0.1299    0.2018     5.4198 r
+  rv64i_inst/n14959 (net)                       1                 0.0000     5.4198 r
+  rv64i_inst/U15419/CI (LVT_AD1HDV1)                    0.1299    0.0000     5.4198 r
+  rv64i_inst/U15419/CO (LVT_AD1HDV1)                    0.1300    0.1980     5.6177 r
+  rv64i_inst/n16607 (net)                       1                 0.0000     5.6177 r
+  rv64i_inst/U16670/CI (LVT_AD1HDV1)                    0.1300    0.0000     5.6177 r
+  rv64i_inst/U16670/CO (LVT_AD1HDV1)                    0.1259    0.1961     5.8138 r
+  rv64i_inst/n16610 (net)                       1                 0.0000     5.8138 r
+  rv64i_inst/U81/A1 (LVT_XOR2HDV1)                      0.1259    0.0000     5.8138 r
+  rv64i_inst/U81/Z (LVT_XOR2HDV1)                       0.0768    0.1595     5.9733 f
+  rv64i_inst/n16645 (net)                       1                 0.0000     5.9733 f
+  rv64i_inst/U1166/A2 (LVT_AOI21HDV1)                   0.0768    0.0000     5.9733 f
+  rv64i_inst/U1166/ZN (LVT_AOI21HDV1)                   0.1393    0.1119     6.0852 r
+  rv64i_inst/n16658 (net)                       1                 0.0000     6.0852 r
+  rv64i_inst/U16685/A1 (LVT_OAI211HDV1)                 0.1393    0.0000     6.0852 r
+  rv64i_inst/U16685/ZN (LVT_OAI211HDV1)                 0.1442    0.0937     6.1789 f
+  rv64i_inst/n9890 (net)                        1                 0.0000     6.1789 f
+  rv64i_inst/alu_out_reg_63_/D (LVT_DQHDV1)             0.1442    0.0000     6.1789 f
+  data arrival time                                                          6.1789
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  rv64i_inst/alu_out_reg_63_/CK (LVT_DQHDV1)                      0.0000     6.3500 r
+  library setup time                                             -0.1623     6.1877
+  data required time                                                         6.1877
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1877
+  data arrival time                                                         -6.1789
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0087
