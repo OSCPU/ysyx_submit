@@ -1,0 +1,72 @@
+
+core:  ysyx_210152
+
+#####################
+#vcs compile log
+#####################
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210152.v, 16849
+"ysyx_210152_PRV564_top #(8'b0, , , , , , ) PRV564_top( .GLB_CLKi (clock),  .GLB_ARSTi (Core_SRST),  .ITLB_FIB_WRENo (ITLB_FIB_WRENo),  .DTLB_FIB_WRENo (DTLB_FIB_WRENo),  .ITLB_FIB_REQo (ITLB_FIB_REQo),  .DTLB_FIB_REQo (DTLB_FIB_REQo),  .ITLB_FIB_ACKi (ITLB_FIB_ACKi),  .DTLB_FIB_ACKi (DTLB_FIB_ACKi),  .ITLB_FIB_FULLi (FIB_AQ_FULL),  .DTLB_FIB_FULLi (FIB_AQ_FULL),  .ITLB_FIB_IDo (ITLB_FIB_IDo),  .DTLB_FIB_IDo (DTLB_FIB_IDo),  .ITLB_FIB_CMDo (ITLB_FIB_CMDo),  .DTLB_FIB_CMDo (DTLB_FIB_CMDo),  .ITLB_FIB_BURSTo (ITLB_FIB_BURSTo),  .DTLB_FIB_BURSTo (DTLB_FIB_BURSTo),  .ITLB_FIB_SIZEo (ITLB_FIB_SIZEo),  .DTLB_FIB_SIZEo (DTLB_FIB_SIZEo),  .ITLB_FIB_ADDRo (ITLB_FIB_ADDRo),  .DTLB_FIB_ADDRo (DTLB_FIB_ADDRo),  .ITLB_FIB_DATAo (ITLB_FIB_DATAo),  .DTLB_FIB_DATAo (DTL ... "
+  The following 32-bit expression is connected to 64-bit port "ITLB_FIB_ADDRo"
+  of module "ysyx_210152_PRV564_top", instance "PRV564_top".
+  Expression: ITLB_FIB_ADDRo
+  Instantiated module defined at: "../cpu/ysyx_210152.v", 14863
+  Use +lint=PCWM for more details.
+
+
+Warning-[PCWM-W] Port connection width mismatch
+../cpu/ysyx_210152.v, 16849
+"ysyx_210152_PRV564_top #(8'b0, , , , , , ) PRV564_top( .GLB_CLKi (clock),  .GLB_ARSTi (Core_SRST),  .ITLB_FIB_WRENo (ITLB_FIB_WRENo),  .DTLB_FIB_WRENo (DTLB_FIB_WRENo),  .ITLB_FIB_REQo (ITLB_FIB_REQo),  .DTLB_FIB_REQo (DTLB_FIB_REQo),  .ITLB_FIB_ACKi (ITLB_FIB_ACKi),  .DTLB_FIB_ACKi (DTLB_FIB_ACKi),  .ITLB_FIB_FULLi (FIB_AQ_FULL),  .DTLB_FIB_FULLi (FIB_AQ_FULL),  .ITLB_FIB_IDo (ITLB_FIB_IDo),  .DTLB_FIB_IDo (DTLB_FIB_IDo),  .ITLB_FIB_CMDo (ITLB_FIB_CMDo),  .DTLB_FIB_CMDo (DTLB_FIB_CMDo),  .ITLB_FIB_BURSTo (ITLB_FIB_BURSTo),  .DTLB_FIB_BURSTo (DTLB_FIB_BURSTo),  .ITLB_FIB_SIZEo (ITLB_FIB_SIZEo),  .DTLB_FIB_SIZEo (DTLB_FIB_SIZEo),  .ITLB_FIB_ADDRo (ITLB_FIB_ADDRo),  .DTLB_FIB_ADDRo (DTLB_FIB_ADDRo),  .ITLB_FIB_DATAo (ITLB_FIB_DATAo),  .DTLB_FIB_DATAo (DTL ... "
+  The following 32-bit expression is connected to 64-bit port "DTLB_FIB_ADDRo"
+  of module "ysyx_210152_PRV564_top", instance "PRV564_top".
+  Expression: DTLB_FIB_ADDRo
+  Instantiated module defined at: "../cpu/ysyx_210152.v", 14863
+  Use +lint=PCWM for more details.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../cpu/ysyx_210152.v, 14009
+ysyx_210152_L1I, "ysyx_210152_tagman_wa #(.WAY_DEPTH(INDEX_DEPTH), .WAY_NUM(WAY_NUM), .TAG_WID(TAG_WIDTH), .READ_ONLY(1'b1), .WBACK_ENABLE(1'b0)) TAG_MANAGER_L1I( .clk (GLB_CLKi),  .rst (GLB_RSTi),  .entry_read (CacheAccess),  .entry_wthru (1'b0),  .entry_wback (1'b0),  .address_tag (tag_addr),  .address_index (index_addr),  .valid_clear (TagFlush),  .dfence_en (1'b0),  .line_refillok (bus_finished),  .writeback_ok (1'b0),  .line_miss (line_miss),  .way_replace_addr (WayReplace_Addr),  .way_access_addr (WayAccess_addr));"
+  The above instance has fewer port connections than the module definition,
+  There are 17 port(s) in module "ysyx_210152_tagman_wa_0000" definition, but 
+  only 16 port connect(s) in the instance.
+  output port 'dirty_comp' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../cpu/ysyx_210152.v, 17044
+ysyx_210152_Vostok564_top, "ysyx_210152_FIB2AXI #(.AXI_ID_WIDTH(4), .AXI_ADDR_WID(32)) FIB2AXI( .CLKi (clock),  .RSTi (Core_SRST),  .FIBo_ACK (FIB2AXI_AQ_ACK),  .FIBi_V (FIB2AXI_AQ_V),  .FIBi_ID (FIB2AXI_AQ_ID),  .FIBi_CMD (FIB2AXI_AQ_CMD),  .FIBi_BURST (FIB2AXI_AQ_BURST),  .FIBi_SIZE (FIB2AXI_AQ_SIZE),  .FIBi_ADDR (FIB2AXI_AQ_ADDR),  .FIBi_DATA (FIB2AXI_AQ_DATA),  .FIBo_ID (FIB_RQ_AXIID),  .FIBo_RPL (FIB_RQ_RPL),  .FIBo_WREN (FIB_RQ_V),  .FIBi_FULL (1'b0),  .FIBo_DATA (FIB_RQ_DATA),  .FIBo_SFRi_ADDR (SFRi_ADDR),  .FIBo_SFRi_DATA (SFRi_DATA),  .FIBo_SFRi_CS (SFRi_CS),  .FIBo_SFRi_WR (SFRi_WR),  .FIBi_SFRo_DATA (SFRo_DATA),  .FIBo_AXI_awid (io_master_awid),  .FIBo_AXI_awaddr (io_master_awaddr),  .FIBo_AXI_awlen (io_master_awlen),  .FIBo_AXI_awsize (io_master_awsize),  .FIBo_AXI_awb ... "
+  The above instance has fewer port connections than the module definition,
+  There are 59 port(s) in module "ysyx_210152_FIB2AXI" definition, but only 49
+  port connect(s) in the instance.
+  output port 'FIBo_AXI_awlock' is not connected,
+  output port 'FIBo_AXI_awcache' is not connected,
+  output port 'FIBo_AXI_awprot' is not connected,
+  output port 'FIBo_AXI_awqos' is not connected,
+  output port 'FIBo_AXI_awregion' is not connected,
+  output port 'FIBo_AXI_arlock' is not connected,
+  output port 'FIBo_AXI_arcache' is not connected,
+  output port 'FIBo_AXI_arprot' is not connected,
+  output port 'FIBo_AXI_arqos' is not connected,
+  output port 'FIBo_AXI_arregion' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../cpu/ysyx_210152.v, 17219
+ysyx_210152, "ysyx_210152_Vostok564_top Core_N1( .clock (clock),  .reset (reset),  .io_master_awid (io_master_awid),  .io_master_awaddr (io_master_awaddr),  .io_master_awlen (io_master_awlen),  .io_master_awsize (io_master_awsize),  .io_master_awburst (io_master_awburst),  .io_master_awvalid (io_master_awvalid),  .io_master_awready (io_master_awready),  .io_master_wdata (io_master_wdata),  .io_master_wstrb (io_master_wstrb),  .io_master_wlast (io_master_wlast),  .io_master_wvalid (io_master_wvalid),  .io_master_wready (io_master_wready),  .io_master_bid (io_master_bid),  .io_master_bresp (io_master_bresp),  .io_master_bvalid (io_master_bvalid),  .io_master_bready (io_master_bready),  .io_master_arid (io_master_arid),  .io_master_araddr (io_master_araddr),  .io_master ... "
+  The above instance has fewer port connections than the module definition,
+  There are 32 port(s) in module "ysyx_210152_Vostok564_top" definition, but 
+  only 31 port connect(s) in the instance.
+  input port 'io_interrupt' is not connected.
+
+
+
+#####################
+#vcs system test
+#####################
+!!!!Hello test fail!!!!
+!!!!Mem test fail!!!!
+!!!!rtthread test fail!!!!
+
+
+程序未跑通，可能是由于某些寄存器控制信号未初始化，请自行检查修正后再次提交测试
