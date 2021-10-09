@@ -1,0 +1,661 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Sat_Oct_9_14:22:37_2021_+0800
+top_name: ysyx_210184
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+395224.8  395224.8  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+26517  26517  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210184
+Date   : Sat Oct  9 17:01:07 2021
+****************************************
+    
+    
+Number of ports:                         6990
+Number of nets:                         33263
+Number of cells:                        26789
+Number of combinational cells:          21373
+Number of sequential cells:              5142
+Number of macros/black boxes:               2
+Number of buf/inv:                       4599
+Number of references:                      41
+Combinational area:             161307.414679
+Buf/Inv area:                    20213.688732
+Noncombinational area:          131782.335653
+Macro/Black Box area:           102135.085938
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                395224.836269
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area                 Local cell area
+                                  --------------------  ------------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes        Design
+--------------------------------  -----------  -------  -----------  -----------  -----------  -------------------------
+ysyx_210184                       395224.8363    100.0    8105.1096    5189.5834       0.0000  ysyx_210184
+axi4                               13507.1714      3.4    5176.1352    5496.1978       0.0000  ysyx_210184_axirw_0
+axi4/ff_ar_addr                     1252.0088      0.3     348.3032     903.7056       0.0000  ysyx_210184_ffn_WIDTH64_2
+axi4/ff_ar_size                       79.3432      0.0      25.5512      53.7920       0.0000  ysyx_210184_ffn_WIDTH3_2
+axi4/ff_ar_valid                      43.0336      0.0      14.7928      28.2408       0.0000  ysyx_210184_ffn_WIDTH1_6
+axi4/ff_aw_addr                     1252.0088      0.3     348.3032     903.7056       0.0000  ysyx_210184_ffn_WIDTH64_3
+axi4/ff_aw_size                       79.3432      0.0      25.5512      53.7920       0.0000  ysyx_210184_ffn_WIDTH3_3
+axi4/ff_aw_valid                      43.0336      0.0      14.7928      28.2408       0.0000  ysyx_210184_ffn_WIDTH1_7
+axi4/ff_w_last                        43.0336      0.0      14.7928      28.2408       0.0000  ysyx_210184_ffn_WIDTH1_4
+axi4/ff_w_valid                       43.0336      0.0      14.7928      28.2408       0.0000  ysyx_210184_ffn_WIDTH1_5
+cpu_core                          368422.9719     93.2    1543.8304       0.0000       0.0000  ysyx_210184_core_0
+cpu_core/CSR                       22236.2683      5.6   12240.3696    9995.8987       0.0000  ysyx_210184_csr_0
+cpu_core/EX                        28234.0761      7.1   20146.4487       0.0000       0.0000  ysyx_210184_exe_0
+cpu_core/EX/ff_ALU                  2435.4329      0.6     800.1560    1635.2769       0.0000  ysyx_210184_ff_WIDTH64_15
+cpu_core/EX/ff_inst_valid             43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_50
+cpu_core/EX/ff_is_B_jump              43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_40
+cpu_core/EX/ff_is_B_o                 45.7232      0.0      20.1720      25.5512       0.0000  ysyx_210184_ff_WIDTH1_44
+cpu_core/EX/ff_is_csr                 45.7232      0.0      20.1720      25.5512       0.0000  ysyx_210184_ff_WIDTH1_35
+cpu_core/EX/ff_is_ecall               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_39
+cpu_core/EX/ff_is_jal                 43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_41
+cpu_core/EX/ff_is_jalr                45.7232      0.0      20.1720      25.5512       0.0000  ysyx_210184_ff_WIDTH1_54
+cpu_core/EX/ff_is_mret                43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_61
+cpu_core/EX/ff_load_ena               45.7232      0.0      20.1720      25.5512       0.0000  ysyx_210184_ff_WIDTH1_36
+cpu_core/EX/ff_load_store_bytes      129.1008      0.0      52.4472      76.6536       0.0000  ysyx_210184_ff_WIDTH3_3
+cpu_core/EX/ff_pc_plus_o            2397.7785      0.6     788.0528    1609.7257       0.0000  ysyx_210184_ff_WIDTH64_9
+cpu_core/EX/ff_rd                    200.3752      0.1      72.6192     127.7560       0.0000  ysyx_210184_ff_WIDTH5_6
+cpu_core/EX/ff_rs2_data_o           2435.4329      0.6     800.1560    1635.2769       0.0000  ysyx_210184_ff_WIDTH64_12
+cpu_core/EX/ff_store_ena              45.7232      0.0      20.1720      25.5512       0.0000  ysyx_210184_ff_WIDTH1_65
+cpu_core/EX/ff_w_rd_ena               45.7232      0.0      20.1720      25.5512       0.0000  ysyx_210184_ff_WIDTH1_59
+cpu_core/ID                       115689.1114     29.3    3683.4072       0.0000       0.0000  ysyx_210184_id_0
+cpu_core/ID/RegFile               101420.7831     25.7   50725.8558   50694.9273       0.0000  ysyx_210184_regfile_0
+cpu_core/ID/ff_inst_valid             43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_51
+cpu_core/ID/ff_is_AL_OP               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_46
+cpu_core/ID/ff_is_B                   43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_55
+cpu_core/ID/ff_is_I_AL_OP             43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_48
+cpu_core/ID/ff_is_I_reg               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_47
+cpu_core/ID/ff_is_J                   43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_62
+cpu_core/ID/ff_is_S_reg               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_34
+cpu_core/ID/ff_is_U_reg               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_58
+cpu_core/ID/ff_is_auipc               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_37
+cpu_core/ID/ff_is_csr_reg             43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_38
+cpu_core/ID/ff_is_ecall               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_52
+cpu_core/ID/ff_is_jalr                43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_45
+cpu_core/ID/ff_is_lui                 43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_66
+cpu_core/ID/ff_is_mret                43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_42
+cpu_core/ID/ff_load_ena               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_67
+cpu_core/ID/ff_load_store_bytes      129.1008      0.0      52.4472      76.6536       0.0000  ysyx_210184_ff_WIDTH3_2
+cpu_core/ID/ff_mode_ALU              162.7208      0.0      60.5160     102.2048       0.0000  ysyx_210184_ff_WIDTH4_0
+cpu_core/ID/ff_n_bytes_ALU            77.9984      0.0      26.8960      51.1024       0.0000  ysyx_210184_ff_WIDTH2_0
+cpu_core/ID/ff_op1                  2065.6129      0.5     430.3360    1635.2769       0.0000  ysyx_210184_ff_WIDTH64_10
+cpu_core/ID/ff_op2                  2435.4329      0.6     800.1560    1635.2769       0.0000  ysyx_210184_ff_WIDTH64_14
+cpu_core/ID/ff_pc_plus              2315.7457      0.6     706.0200    1609.7257       0.0000  ysyx_210184_ff_WIDTH64_17
+cpu_core/ID/ff_rd                    200.3752      0.1      72.6192     127.7560       0.0000  ysyx_210184_ff_WIDTH5_7
+cpu_core/ID/ff_rs1                   200.3752      0.1      72.6192     127.7560       0.0000  ysyx_210184_ff_WIDTH5_5
+cpu_core/ID/ff_rs2                   200.3752      0.1      72.6192     127.7560       0.0000  ysyx_210184_ff_WIDTH5_8
+cpu_core/ID/ff_rs2_data             2065.6129      0.5     430.3360    1635.2769       0.0000  ysyx_210184_ff_WIDTH64_11
+cpu_core/ID/ff_store_ena              43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_56
+cpu_core/ID/ff_w_rd_ena               43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_63
+cpu_core/IF                        20561.9923      5.2   11434.8344    9084.1243       0.0000  ysyx_210184_if_0
+cpu_core/IF/ff_inst_valid             43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210184_ff_WIDTH1_57
+cpu_core/MEM                        7579.2929      1.9    3219.4512       0.0000       0.0000  ysyx_210184_mem_0
+cpu_core/MEM/ff_inst_valid            32.2752      0.0       4.0344      28.2408       0.0000  ysyx_210184_ff_WIDTH1_43
+cpu_core/MEM/ff_is_jal                32.2752      0.0       4.0344      28.2408       0.0000  ysyx_210184_ff_WIDTH1_53
+cpu_core/MEM/ff_is_jalr               32.2752      0.0       4.0344      28.2408       0.0000  ysyx_210184_ff_WIDTH1_60
+cpu_core/MEM/ff_load_ena              32.2752      0.0       4.0344      28.2408       0.0000  ysyx_210184_ff_WIDTH1_64
+cpu_core/MEM/ff_rd                   145.2384      0.0       4.0344     141.2040       0.0000  ysyx_210184_ff_WIDTH5_9
+cpu_core/MEM/ff_result_ALU          2070.9921      0.5     435.7152    1635.2769       0.0000  ysyx_210184_ff_WIDTH64_13
+cpu_core/MEM/ff_w_rd_ena              32.2752      0.0       4.0344      28.2408       0.0000  ysyx_210184_ff_WIDTH1_49
+cpu_core/MEM/ff_wb_data             1982.2353      0.5     266.2704    1715.9649       0.0000  ysyx_210184_ff_WIDTH64_16
+cpu_core/WB                         1196.8720      0.3    1196.8720       0.0000       0.0000  ysyx_210184_wb_0
+cpu_core/mac                      171381.5285     43.4   36540.9055   32705.5371  102135.0859  ysyx_210184_MemAccCtrl_0
+--------------------------------  -----------  -------  -----------  -----------  -----------  -------------------------
+Total                                                   161307.4147  131782.3357  102135.0859
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210184
+Date   : Sat Oct  9 17:01:05 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: cpu_core/ID/ff_rs1/q_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: cpu_core/EX/ff_ALU/q_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  cpu_core/ID/ff_rs1/q_reg_3_/CK (LVT_DQHDV1)           0.0000    0.0000 #   0.0000 r
+  cpu_core/ID/ff_rs1/q_reg_3_/Q (LVT_DQHDV1)            0.1280    0.2756     0.2756 f
+  cpu_core/ID/ff_rs1/q[3] (net)                 4                 0.0000     0.2756 f
+  cpu_core/ID/ff_rs1/q[3] (ysyx_210184_ff_WIDTH5_5)               0.0000     0.2756 f
+  cpu_core/ID/rs1[3] (net)                                        0.0000     0.2756 f
+  cpu_core/ID/rs1[3] (ysyx_210184_id_0)                           0.0000     0.2756 f
+  cpu_core/rs1_id_ex[3] (net)                                     0.0000     0.2756 f
+  cpu_core/EX/rs1[3] (ysyx_210184_exe_0)                          0.0000     0.2756 f
+  cpu_core/EX/rs1[3] (net)                                        0.0000     0.2756 f
+  cpu_core/EX/U327/A2 (LVT_XNOR2HDV2)                   0.1280    0.0000     0.2756 f
+  cpu_core/EX/U327/ZN (LVT_XNOR2HDV2)                   0.0669    0.2024     0.4780 r
+  cpu_core/EX/n782 (net)                        2                 0.0000     0.4780 r
+  cpu_core/EX/U329/A2 (LVT_NAND4HDV1)                   0.0669    0.0000     0.4780 r
+  cpu_core/EX/U329/ZN (LVT_NAND4HDV1)                   0.1455    0.1090     0.5871 f
+  cpu_core/EX/n46 (net)                         1                 0.0000     0.5871 f
+  cpu_core/EX/U331/A1 (LVT_NOR2HDV2)                    0.1455    0.0000     0.5871 f
+  cpu_core/EX/U331/ZN (LVT_NOR2HDV2)                    0.2237    0.1579     0.7450 r
+  cpu_core/EX/n792 (net)                        4                 0.0000     0.7450 r
+  cpu_core/EX/U300/A1 (LVT_NAND2HDV2)                   0.2237    0.0000     0.7450 r
+  cpu_core/EX/U300/ZN (LVT_NAND2HDV2)                   0.4487    0.3169     1.0619 f
+  cpu_core/EX/n484 (net)                       26                 0.0000     1.0619 f
+  cpu_core/EX/U366/I (LVT_BUFHDV4)                      0.4487    0.0000     1.0619 f
+  cpu_core/EX/U366/Z (LVT_BUFHDV4)                      0.2081    0.2802     1.3421 f
+  cpu_core/EX/n508 (net)                       39                 0.0000     1.3421 f
+  cpu_core/EX/U407/B1 (LVT_IOA22HDV1)                   0.2081    0.0000     1.3421 f
+  cpu_core/EX/U407/ZN (LVT_IOA22HDV1)                   0.1648    0.1380     1.4800 r
+  cpu_core/EX/n96 (net)                         1                 0.0000     1.4800 r
+  cpu_core/EX/U408/B (LVT_AOI21HDV1)                    0.1648    0.0000     1.4800 r
+  cpu_core/EX/U408/ZN (LVT_AOI21HDV1)                   0.1429    0.0512     1.5313 f
+  cpu_core/EX/n97 (net)                         1                 0.0000     1.5313 f
+  cpu_core/EX/U409/A2 (LVT_NAND2HDV1)                   0.1429    0.0000     1.5313 f
+  cpu_core/EX/U409/ZN (LVT_NAND2HDV1)                   0.2059    0.1537     1.6850 r
+  cpu_core/EX/n2027 (net)                       8                 0.0000     1.6850 r
+  cpu_core/EX/U410/A1 (LVT_OR2HDV1)                     0.2059    0.0000     1.6850 r
+  cpu_core/EX/U410/Z (LVT_OR2HDV1)                      0.0634    0.1162     1.8012 r
+  cpu_core/EX/n100 (net)                        1                 0.0000     1.8012 r
+  cpu_core/EX/U412/A2 (LVT_AOI21HDV1)                   0.0634    0.0000     1.8012 r
+  cpu_core/EX/U412/ZN (LVT_AOI21HDV1)                   0.0963    0.0787     1.8799 f
+  cpu_core/EX/n1241 (net)                       2                 0.0000     1.8799 f
+  cpu_core/EX/U414/A2 (LVT_OAI21HDV1)                   0.0963    0.0000     1.8799 f
+  cpu_core/EX/U414/ZN (LVT_OAI21HDV1)                   0.1935    0.1405     2.0204 r
+  cpu_core/EX/n1085 (net)                       2                 0.0000     2.0204 r
+  cpu_core/EX/U418/A2 (LVT_AOI21HDV1)                   0.1935    0.0000     2.0204 r
+  cpu_core/EX/U418/ZN (LVT_AOI21HDV1)                   0.1168    0.1025     2.1230 f
+  cpu_core/EX/n1068 (net)                       2                 0.0000     2.1230 f
+  cpu_core/EX/U426/A2 (LVT_OAI21HDV1)                   0.1168    0.0000     2.1230 f
+  cpu_core/EX/U426/ZN (LVT_OAI21HDV1)                   0.1929    0.1428     2.2658 r
+  cpu_core/EX/n979 (net)                        2                 0.0000     2.2658 r
+  cpu_core/EX/U529/A1 (LVT_AOI21HDV1)                   0.1929    0.0000     2.2658 r
+  cpu_core/EX/U529/ZN (LVT_AOI21HDV1)                   0.1203    0.1060     2.3718 f
+  cpu_core/EX/n573 (net)                        2                 0.0000     2.3718 f
+  cpu_core/EX/U1029/A1 (LVT_OAI21HDV1)                  0.1203    0.0000     2.3718 f
+  cpu_core/EX/U1029/ZN (LVT_OAI21HDV1)                  0.1929    0.1399     2.5117 r
+  cpu_core/EX/n2135 (net)                       2                 0.0000     2.5117 r
+  cpu_core/EX/U1094/A1 (LVT_AOI21HDV1)                  0.1929    0.0000     2.5117 r
+  cpu_core/EX/U1094/ZN (LVT_AOI21HDV1)                  0.1362    0.1198     2.6316 f
+  cpu_core/EX/n2320 (net)                       2                 0.0000     2.6316 f
+  cpu_core/EX/U169/A1 (LVT_OAI21HDV2)                   0.1362    0.0000     2.6316 f
+  cpu_core/EX/U169/ZN (LVT_OAI21HDV2)                   0.1764    0.1337     2.7653 r
+  cpu_core/EX/n2336 (net)                       2                 0.0000     2.7653 r
+  cpu_core/EX/U1101/A1 (LVT_AOI21HDV1)                  0.1764    0.0000     2.7653 r
+  cpu_core/EX/U1101/ZN (LVT_AOI21HDV1)                  0.1331    0.1168     2.8820 f
+  cpu_core/EX/n2354 (net)                       2                 0.0000     2.8820 f
+  cpu_core/EX/U170/A1 (LVT_OAI21HDV2)                   0.1331    0.0000     2.8820 f
+  cpu_core/EX/U170/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     3.0149 r
+  cpu_core/EX/n2372 (net)                       2                 0.0000     3.0149 r
+  cpu_core/EX/U1105/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.0149 r
+  cpu_core/EX/U1105/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.1316 f
+  cpu_core/EX/n2390 (net)                       2                 0.0000     3.1316 f
+  cpu_core/EX/U168/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     3.1316 f
+  cpu_core/EX/U168/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     3.2644 r
+  cpu_core/EX/n2407 (net)                       2                 0.0000     3.2644 r
+  cpu_core/EX/U1109/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.2644 r
+  cpu_core/EX/U1109/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.3811 f
+  cpu_core/EX/n2425 (net)                       2                 0.0000     3.3811 f
+  cpu_core/EX/U66/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     3.3811 f
+  cpu_core/EX/U66/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     3.5139 r
+  cpu_core/EX/n2442 (net)                       2                 0.0000     3.5139 r
+  cpu_core/EX/U1113/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.5139 r
+  cpu_core/EX/U1113/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.6306 f
+  cpu_core/EX/n2460 (net)                       2                 0.0000     3.6306 f
+  cpu_core/EX/U173/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     3.6306 f
+  cpu_core/EX/U173/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     3.7635 r
+  cpu_core/EX/n2477 (net)                       2                 0.0000     3.7635 r
+  cpu_core/EX/U1117/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     3.7635 r
+  cpu_core/EX/U1117/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     3.8801 f
+  cpu_core/EX/n2496 (net)                       2                 0.0000     3.8801 f
+  cpu_core/EX/U285/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     3.8801 f
+  cpu_core/EX/U285/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     4.0130 r
+  cpu_core/EX/n2514 (net)                       2                 0.0000     4.0130 r
+  cpu_core/EX/U1122/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     4.0130 r
+  cpu_core/EX/U1122/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     4.1297 f
+  cpu_core/EX/n2533 (net)                       2                 0.0000     4.1297 f
+  cpu_core/EX/U68/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     4.1297 f
+  cpu_core/EX/U68/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     4.2625 r
+  cpu_core/EX/n2552 (net)                       2                 0.0000     4.2625 r
+  cpu_core/EX/U1128/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     4.2625 r
+  cpu_core/EX/U1128/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     4.3792 f
+  cpu_core/EX/n2572 (net)                       2                 0.0000     4.3792 f
+  cpu_core/EX/U287/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     4.3792 f
+  cpu_core/EX/U287/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     4.5121 r
+  cpu_core/EX/n2593 (net)                       2                 0.0000     4.5121 r
+  cpu_core/EX/U1136/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     4.5121 r
+  cpu_core/EX/U1136/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     4.6287 f
+  cpu_core/EX/n2611 (net)                       2                 0.0000     4.6287 f
+  cpu_core/EX/U288/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     4.6287 f
+  cpu_core/EX/U288/ZN (LVT_OAI21HDV2)                   0.1761    0.1329     4.7616 r
+  cpu_core/EX/n2628 (net)                       2                 0.0000     4.7616 r
+  cpu_core/EX/U1145/A1 (LVT_AOI21HDV1)                  0.1761    0.0000     4.7616 r
+  cpu_core/EX/U1145/ZN (LVT_AOI21HDV1)                  0.1330    0.1167     4.8783 f
+  cpu_core/EX/n2647 (net)                       2                 0.0000     4.8783 f
+  cpu_core/EX/U289/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     4.8783 f
+  cpu_core/EX/U289/ZN (LVT_OAI21HDV2)                   0.1712    0.1300     5.0083 r
+  cpu_core/EX/n2665 (net)                       2                 0.0000     5.0083 r
+  cpu_core/EX/U271/A1 (LVT_AO21HDV2)                    0.1712    0.0000     5.0083 r
+  cpu_core/EX/U271/Z (LVT_AO21HDV2)                     0.0670    0.1615     5.1698 r
+  cpu_core/EX/n722 (net)                        1                 0.0000     5.1698 r
+  cpu_core/EX/U1289/CI (LVT_AD1HDV1)                    0.0670    0.0000     5.1698 r
+  cpu_core/EX/U1289/CO (LVT_AD1HDV1)                    0.1223    0.1849     5.3547 r
+  cpu_core/EX/n2683 (net)                       1                 0.0000     5.3547 r
+  cpu_core/EX/U2845/CI (LVT_AD1HDV1)                    0.1223    0.0000     5.3547 r
+  cpu_core/EX/U2845/CO (LVT_AD1HDV1)                    0.1228    0.1964     5.5511 r
+  cpu_core/EX/n2701 (net)                       1                 0.0000     5.5511 r
+  cpu_core/EX/U2853/CI (LVT_AD1HDV1)                    0.1228    0.0000     5.5511 r
+  cpu_core/EX/U2853/CO (LVT_AD1HDV1)                    0.1270    0.1990     5.7501 r
+  cpu_core/EX/n2707 (net)                       1                 0.0000     5.7501 r
+  cpu_core/EX/U2856/A1 (LVT_XOR2HDV2)                   0.1270    0.0000     5.7501 r
+  cpu_core/EX/U2856/Z (LVT_XOR2HDV2)                    0.0682    0.1487     5.8988 f
+  cpu_core/EX/n2708 (net)                       1                 0.0000     5.8988 f
+  cpu_core/EX/U2857/A1 (LVT_NAND2HDV2)                  0.0682    0.0000     5.8988 f
+  cpu_core/EX/U2857/ZN (LVT_NAND2HDV2)                  0.0685    0.0413     5.9401 r
+  cpu_core/EX/n2728 (net)                       1                 0.0000     5.9401 r
+  cpu_core/EX/U2863/A1 (LVT_NAND4HDV1)                  0.0685    0.0000     5.9401 r
+  cpu_core/EX/U2863/ZN (LVT_NAND4HDV1)                  0.1395    0.0843     6.0243 f
+  cpu_core/EX/result_ALU_wire_1[63] (net)       1                 0.0000     6.0243 f
+  cpu_core/EX/ff_ALU/d[63] (ysyx_210184_ff_WIDTH64_15)            0.0000     6.0243 f
+  cpu_core/EX/ff_ALU/d[63] (net)                                  0.0000     6.0243 f
+  cpu_core/EX/ff_ALU/U2/B1 (LVT_AO22HDV2)               0.1395    0.0000     6.0243 f
+  cpu_core/EX/ff_ALU/U2/Z (LVT_AO22HDV2)                0.0625    0.1870     6.2114 f
+  cpu_core/EX/ff_ALU/n67 (net)                  1                 0.0000     6.2114 f
+  cpu_core/EX/ff_ALU/q_reg_63_/D (LVT_DQHDV2)           0.0625    0.0000     6.2114 f
+  data arrival time                                                          6.2114
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  cpu_core/EX/ff_ALU/q_reg_63_/CK (LVT_DQHDV2)                    0.0000     6.3500 r
+  library setup time                                             -0.1376     6.2124
+  data required time                                                         6.2124
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2124
+  data arrival time                                                         -6.2114
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0010
+  Startpoint: mtime_reg_29_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: cpu_core/IF/pc_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  mtime_reg_29_/CK (LVT_DQHDV1)                         0.0000    0.0000 #   0.0000 r
+  mtime_reg_29_/Q (LVT_DQHDV1)                          0.1357    0.2779     0.2779 r
+  mtime[29] (net)                               3                 0.0000     0.2779 r
+  U993/I (LVT_INHDV1)                                   0.1357    0.0000     0.2779 r
+  U993/ZN (LVT_INHDV1)                                  0.0765    0.0660     0.3440 f
+  n1229 (net)                                   3                 0.0000     0.3440 f
+  U1144/A1 (LVT_NOR2HDV1)                               0.0765    0.0000     0.3440 f
+  U1144/ZN (LVT_NOR2HDV1)                               0.1603    0.1054     0.4494 r
+  n866 (net)                                    2                 0.0000     0.4494 r
+  U1198/A1 (LVT_OAI21HDV1)                              0.1603    0.0000     0.4494 r
+  U1198/ZN (LVT_OAI21HDV1)                              0.0697    0.0724     0.5218 f
+  n872 (net)                                    1                 0.0000     0.5218 f
+  U937/A2 (LVT_AOI21HDV1)                               0.0697    0.0000     0.5218 f
+  U937/ZN (LVT_AOI21HDV1)                               0.1296    0.1105     0.6323 r
+  n874 (net)                                    1                 0.0000     0.6323 r
+  U1174/B (LVT_OAI21HDV1)                               0.1296    0.0000     0.6323 r
+  U1174/ZN (LVT_OAI21HDV1)                              0.0795    0.0724     0.7047 f
+  n877 (net)                                    1                 0.0000     0.7047 f
+  U920/B (LVT_AOI21HDV1)                                0.0795    0.0000     0.7047 f
+  U920/ZN (LVT_AOI21HDV1)                               0.1442    0.0986     0.8033 r
+  n880 (net)                                    1                 0.0000     0.8033 r
+  U1386/B (LVT_OAI21HDV2)                               0.1442    0.0000     0.8033 r
+  U1386/ZN (LVT_OAI21HDV2)                              0.0787    0.0729     0.8762 f
+  n1041 (net)                                   1                 0.0000     0.8762 f
+  U1241/A1 (LVT_AOI21HDV2)                              0.0787    0.0000     0.8762 f
+  U1241/ZN (LVT_AOI21HDV2)                              0.1343    0.0997     0.9758 r
+  mtime_intr (net)                              2                 0.0000     0.9758 r
+  cpu_core/mtime_intr (ysyx_210184_core_0)                        0.0000     0.9758 r
+  cpu_core/mtime_intr (net)                                       0.0000     0.9758 r
+  cpu_core/U9/A1 (LVT_NAND3HDV2)                        0.1343    0.0000     0.9758 r
+  cpu_core/U9/ZN (LVT_NAND3HDV2)                        0.1538    0.1083     1.0841 f
+  cpu_core/n325 (net)                           3                 0.0000     1.0841 f
+  cpu_core/U8/I (LVT_INHDV2)                            0.1538    0.0000     1.0841 f
+  cpu_core/U8/ZN (LVT_INHDV2)                           0.0866    0.0729     1.1570 r
+  cpu_core/mtime_intr_enable (net)              1                 0.0000     1.1570 r
+  cpu_core/MEM/mtime_intr_enable_i (ysyx_210184_mem_0)            0.0000     1.1570 r
+  cpu_core/MEM/mtime_intr_enable_i (net)                          0.0000     1.1570 r
+  cpu_core/MEM/U8/A1 (LVT_NOR2HDV4)                     0.0866    0.0000     1.1570 r
+  cpu_core/MEM/U8/ZN (LVT_NOR2HDV4)                     0.0584    0.0422     1.1992 f
+  cpu_core/MEM/n206 (net)                       3                 0.0000     1.1992 f
+  cpu_core/MEM/U17/A1 (LVT_NAND2HDV4)                   0.0584    0.0000     1.1992 f
+  cpu_core/MEM/U17/ZN (LVT_NAND2HDV4)                   0.2485    0.1452     1.3444 r
+  cpu_core/MEM/n193 (net)                      24                 0.0000     1.3444 r
+  cpu_core/MEM/U16/I (LVT_INHDV4)                       0.2485    0.0000     1.3444 r
+  cpu_core/MEM/U16/ZN (LVT_INHDV4)                      0.0635    0.0446     1.3890 f
+  cpu_core/MEM/n146 (net)                       2                 0.0000     1.3890 f
+  cpu_core/MEM/U15/A1 (LVT_AND2HDV2)                    0.0635    0.0000     1.3890 f
+  cpu_core/MEM/U15/Z (LVT_AND2HDV2)                     0.0857    0.1394     1.5284 f
+  cpu_core/MEM/n204 (net)                       3                 0.0000     1.5284 f
+  cpu_core/MEM/U4/I (LVT_INHDV6)                        0.0857    0.0000     1.5284 f
+  cpu_core/MEM/U4/ZN (LVT_INHDV6)                       0.2710    0.1708     1.6993 r
+  cpu_core/MEM/n205 (net)                      44                 0.0000     1.6993 r
+  cpu_core/MEM/U465/C (LVT_AO211HDV4)                   0.2710    0.0000     1.6993 r
+  cpu_core/MEM/U465/Z (LVT_AO211HDV4)                   0.1371    0.1710     1.8703 r
+  cpu_core/MEM/flush (net)                     12                 0.0000     1.8703 r
+  cpu_core/MEM/flush (ysyx_210184_mem_0)                          0.0000     1.8703 r
+  cpu_core/flush_mem (net)                                        0.0000     1.8703 r
+  cpu_core/IF/flush_i (ysyx_210184_if_0)                          0.0000     1.8703 r
+  cpu_core/IF/flush_i (net)                                       0.0000     1.8703 r
+  cpu_core/IF/U233/A1 (LVT_NAND2HDV2)                   0.1371    0.0000     1.8703 r
+  cpu_core/IF/U233/ZN (LVT_NAND2HDV2)                   0.0993    0.0715     1.9417 f
+  cpu_core/IF/n14 (net)                         2                 0.0000     1.9417 f
+  cpu_core/IF/U22/A1 (LVT_NAND2HDV1)                    0.0993    0.0000     1.9417 f
+  cpu_core/IF/U22/ZN (LVT_NAND2HDV1)                    0.1091    0.0799     2.0216 r
+  cpu_core/IF/n17 (net)                         3                 0.0000     2.0216 r
+  cpu_core/IF/U8/A1 (LVT_NAND2HDV1)                     0.1091    0.0000     2.0216 r
+  cpu_core/IF/U8/ZN (LVT_NAND2HDV1)                     0.0984    0.0777     2.0993 f
+  cpu_core/IF/n18 (net)                         2                 0.0000     2.0993 f
+  cpu_core/IF/U240/A1 (LVT_NOR2HDV2)                    0.0984    0.0000     2.0993 f
+  cpu_core/IF/U240/ZN (LVT_NOR2HDV2)                    0.3927    0.2370     2.3363 r
+  cpu_core/IF/n19 (net)                        15                 0.0000     2.3363 r
+  cpu_core/IF/U241/I (LVT_INHDV2)                       0.3927    0.0000     2.3363 r
+  cpu_core/IF/U241/ZN (LVT_INHDV2)                      0.1535    0.1230     2.4593 f
+  cpu_core/IF/n84 (net)                         4                 0.0000     2.4593 f
+  cpu_core/IF/U345/I (LVT_INHDV6)                       0.1535    0.0000     2.4593 f
+  cpu_core/IF/U345/ZN (LVT_INHDV6)                      0.3158    0.2146     2.6739 r
+  cpu_core/IF/n629 (net)                       80                 0.0000     2.6739 r
+  cpu_core/IF/U409/A1 (LVT_IOA22HDV1)                   0.3158    0.0000     2.6739 r
+  cpu_core/IF/U409/ZN (LVT_IOA22HDV1)                   0.2191    0.1829     2.8568 r
+  cpu_core/IF/n151 (net)                        2                 0.0000     2.8568 r
+  cpu_core/IF/U469/A1 (LVT_NAND2HDV1)                   0.2191    0.0000     2.8568 r
+  cpu_core/IF/U469/ZN (LVT_NAND2HDV1)                   0.1305    0.1093     2.9661 f
+  cpu_core/IF/n984 (net)                        3                 0.0000     2.9661 f
+  cpu_core/IF/U471/A2 (LVT_OAI21HDV1)                   0.1305    0.0000     2.9661 f
+  cpu_core/IF/U471/ZN (LVT_OAI21HDV1)                   0.1976    0.1473     3.1134 r
+  cpu_core/IF/n959 (net)                        2                 0.0000     3.1134 r
+  cpu_core/IF/U475/A2 (LVT_AOI21HDV1)                   0.1976    0.0000     3.1134 r
+  cpu_core/IF/U475/ZN (LVT_AOI21HDV1)                   0.1223    0.1067     3.2201 f
+  cpu_core/IF/n925 (net)                        2                 0.0000     3.2201 f
+  cpu_core/IF/U483/A1 (LVT_OAI21HDV2)                   0.1223    0.0000     3.2201 f
+  cpu_core/IF/U483/ZN (LVT_OAI21HDV2)                   0.1607    0.1218     3.3420 r
+  cpu_core/IF/n262 (net)                        2                 0.0000     3.3420 r
+  cpu_core/IF/U4/A1 (LVT_AOI21HDV1)                     0.1607    0.0000     3.3420 r
+  cpu_core/IF/U4/ZN (LVT_AOI21HDV1)                     0.0957    0.0847     3.4267 f
+  cpu_core/IF/n263 (net)                        1                 0.0000     3.4267 f
+  cpu_core/IF/U3/B (LVT_OAI21HDV1)                      0.0957    0.0000     3.4267 f
+  cpu_core/IF/U3/ZN (LVT_OAI21HDV1)                     0.2068    0.0753     3.5020 r
+  cpu_core/IF/n755 (net)                        2                 0.0000     3.5020 r
+  cpu_core/IF/U724/A1 (LVT_AOI21HDV2)                   0.2068    0.0000     3.5020 r
+  cpu_core/IF/U724/ZN (LVT_AOI21HDV2)                   0.1173    0.1037     3.6057 f
+  cpu_core/IF/n752 (net)                        2                 0.0000     3.6057 f
+  cpu_core/IF/U729/A1 (LVT_OAI21HDV2)                   0.1173    0.0000     3.6057 f
+  cpu_core/IF/U729/ZN (LVT_OAI21HDV2)                   0.1845    0.1343     3.7400 r
+  cpu_core/IF/n745 (net)                        2                 0.0000     3.7400 r
+  cpu_core/IF/U734/A1 (LVT_AOI21HDV2)                   0.1845    0.0000     3.7400 r
+  cpu_core/IF/U734/ZN (LVT_AOI21HDV2)                   0.1128    0.1008     3.8408 f
+  cpu_core/IF/n739 (net)                        2                 0.0000     3.8408 f
+  cpu_core/IF/U739/A1 (LVT_OAI21HDV2)                   0.1128    0.0000     3.8408 f
+  cpu_core/IF/U739/ZN (LVT_OAI21HDV2)                   0.1841    0.1331     3.9740 r
+  cpu_core/IF/n732 (net)                        2                 0.0000     3.9740 r
+  cpu_core/IF/U743/A1 (LVT_AOI21HDV2)                   0.1841    0.0000     3.9740 r
+  cpu_core/IF/U743/ZN (LVT_AOI21HDV2)                   0.1127    0.1008     4.0748 f
+  cpu_core/IF/n726 (net)                        2                 0.0000     4.0748 f
+  cpu_core/IF/U747/A1 (LVT_OAI21HDV2)                   0.1127    0.0000     4.0748 f
+  cpu_core/IF/U747/ZN (LVT_OAI21HDV2)                   0.1841    0.1331     4.2078 r
+  cpu_core/IF/n719 (net)                        2                 0.0000     4.2078 r
+  cpu_core/IF/U751/A1 (LVT_AOI21HDV2)                   0.1841    0.0000     4.2078 r
+  cpu_core/IF/U751/ZN (LVT_AOI21HDV2)                   0.1127    0.1008     4.3086 f
+  cpu_core/IF/n713 (net)                        2                 0.0000     4.3086 f
+  cpu_core/IF/U755/A1 (LVT_OAI21HDV2)                   0.1127    0.0000     4.3086 f
+  cpu_core/IF/U755/ZN (LVT_OAI21HDV2)                   0.1841    0.1331     4.4417 r
+  cpu_core/IF/n706 (net)                        2                 0.0000     4.4417 r
+  cpu_core/IF/U759/A1 (LVT_AOI21HDV2)                   0.1841    0.0000     4.4417 r
+  cpu_core/IF/U759/ZN (LVT_AOI21HDV2)                   0.1127    0.1008     4.5425 f
+  cpu_core/IF/n700 (net)                        2                 0.0000     4.5425 f
+  cpu_core/IF/U763/A1 (LVT_OAI21HDV2)                   0.1127    0.0000     4.5425 f
+  cpu_core/IF/U763/ZN (LVT_OAI21HDV2)                   0.1841    0.1331     4.6756 r
+  cpu_core/IF/n693 (net)                        2                 0.0000     4.6756 r
+  cpu_core/IF/U767/A1 (LVT_AOI21HDV2)                   0.1841    0.0000     4.6756 r
+  cpu_core/IF/U767/ZN (LVT_AOI21HDV2)                   0.1127    0.1008     4.7764 f
+  cpu_core/IF/n687 (net)                        2                 0.0000     4.7764 f
+  cpu_core/IF/U771/A1 (LVT_OAI21HDV2)                   0.1127    0.0000     4.7764 f
+  cpu_core/IF/U771/ZN (LVT_OAI21HDV2)                   0.1841    0.1331     4.9095 r
+  cpu_core/IF/n680 (net)                        2                 0.0000     4.9095 r
+  cpu_core/IF/U775/A1 (LVT_AOI21HDV2)                   0.1841    0.0000     4.9095 r
+  cpu_core/IF/U775/ZN (LVT_AOI21HDV2)                   0.1127    0.1008     5.0103 f
+  cpu_core/IF/n674 (net)                        2                 0.0000     5.0103 f
+  cpu_core/IF/U780/A1 (LVT_OAI21HDV2)                   0.1127    0.0000     5.0103 f
+  cpu_core/IF/U780/ZN (LVT_OAI21HDV2)                   0.1841    0.1331     5.1434 r
+  cpu_core/IF/n667 (net)                        2                 0.0000     5.1434 r
+  cpu_core/IF/U785/A1 (LVT_AOI21HDV2)                   0.1841    0.0000     5.1434 r
+  cpu_core/IF/U785/ZN (LVT_AOI21HDV2)                   0.1127    0.1008     5.2442 f
+  cpu_core/IF/n661 (net)                        2                 0.0000     5.2442 f
+  cpu_core/IF/U790/A1 (LVT_OAI21HDV2)                   0.1127    0.0000     5.2442 f
+  cpu_core/IF/U790/ZN (LVT_OAI21HDV2)                   0.1861    0.1342     5.3784 r
+  cpu_core/IF/n654 (net)                        2                 0.0000     5.3784 r
+  cpu_core/IF/U798/A1 (LVT_AO21HDV4)                    0.1861    0.0000     5.3784 r
+  cpu_core/IF/U798/Z (LVT_AO21HDV4)                     0.0457    0.1369     5.5153 r
+  cpu_core/IF/n646 (net)                        1                 0.0000     5.5153 r
+  cpu_core/IF/U820/CI (LVT_AD1HDV1)                     0.0457    0.0000     5.5153 r
+  cpu_core/IF/U820/CO (LVT_AD1HDV1)                     0.1225    0.1794     5.6947 r
+  cpu_core/IF/n641 (net)                        1                 0.0000     5.6947 r
+  cpu_core/IF/U815/CI (LVT_AD1HDV1)                     0.1225    0.0000     5.6947 r
+  cpu_core/IF/U815/CO (LVT_AD1HDV1)                     0.1263    0.1989     5.8936 r
+  cpu_core/IF/n637 (net)                        1                 0.0000     5.8936 r
+  cpu_core/IF/U806/A1 (LVT_XOR2HDV2)                    0.1263    0.0000     5.8936 r
+  cpu_core/IF/U806/Z (LVT_XOR2HDV2)                     0.0593    0.1401     6.0337 f
+  cpu_core/IF/n638 (net)                        1                 0.0000     6.0337 f
+  cpu_core/IF/U807/B (LVT_AO21HDV1)                     0.0593    0.0000     6.0337 f
+  cpu_core/IF/U807/Z (LVT_AO21HDV1)                     0.0662    0.1766     6.2103 f
+  cpu_core/IF/N230 (net)                        1                 0.0000     6.2103 f
+  cpu_core/IF/pc_reg_63_/D (LVT_DQHDV2)                 0.0662    0.0000     6.2103 f
+  data arrival time                                                          6.2103
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  cpu_core/IF/pc_reg_63_/CK (LVT_DQHDV2)                          0.0000     6.3500 r
+  library setup time                                             -0.1383     6.2117
+  data required time                                                         6.2117
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2117
+  data arrival time                                                         -6.2103
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0014
+  Startpoint: cpu_core/EX/ff_ALU/q_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: cpu_core/mac/addr_to_axi4_reg_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  cpu_core/EX/ff_ALU/q_reg_1_/CK (LVT_DQHDV2)           0.0000    0.0000 #   0.0000 r
+  cpu_core/EX/ff_ALU/q_reg_1_/Q (LVT_DQHDV2)            0.3926    0.4300     0.4300 r
+  cpu_core/EX/ff_ALU/q[1] (net)                23                 0.0000     0.4300 r
+  cpu_core/EX/ff_ALU/q[1] (ysyx_210184_ff_WIDTH64_15)             0.0000     0.4300 r
+  cpu_core/EX/result_ALU[1] (net)                                 0.0000     0.4300 r
+  cpu_core/EX/result_ALU[1] (ysyx_210184_exe_0)                   0.0000     0.4300 r
+  cpu_core/result_ALU_ex_mem[1] (net)                             0.0000     0.4300 r
+  cpu_core/mac/rw_mem_addr[1] (ysyx_210184_MemAccCtrl_0)          0.0000     0.4300 r
+  cpu_core/mac/rw_mem_addr[1] (net)                               0.0000     0.4300 r
+  cpu_core/mac/U335/I (LVT_INHDV2)                      0.3926    0.0000     0.4300 r
+  cpu_core/mac/U335/ZN (LVT_INHDV2)                     0.2419    0.2116     0.6416 f
+  cpu_core/mac/n59 (net)                       16                 0.0000     0.6416 f
+  cpu_core/mac/U336/I (LVT_INHDV2)                      0.2419    0.0000     0.6416 f
+  cpu_core/mac/U336/ZN (LVT_INHDV2)                     0.2836    0.2153     0.8569 r
+  cpu_core/mac/n2660 (net)                     14                 0.0000     0.8569 r
+  cpu_core/mac/U35/A2 (LVT_NAND2HDV2)                   0.2836    0.0000     0.8569 r
+  cpu_core/mac/U35/ZN (LVT_NAND2HDV2)                   0.4202    0.3001     1.1569 f
+  cpu_core/mac/n4698 (net)                     22                 0.0000     1.1569 f
+  cpu_core/mac/U337/A1 (LVT_NAND2HDV2)                  0.4202    0.0000     1.1569 f
+  cpu_core/mac/U337/ZN (LVT_NAND2HDV2)                  0.1062    0.0784     1.2353 r
+  cpu_core/mac/n58 (net)                        1                 0.0000     1.2353 r
+  cpu_core/mac/U91/A1 (LVT_NAND2HDV1)                   0.1062    0.0000     1.2353 r
+  cpu_core/mac/U91/ZN (LVT_NAND2HDV1)                   0.0721    0.0576     1.2929 f
+  cpu_core/mac/n61 (net)                        1                 0.0000     1.2929 f
+  cpu_core/mac/U89/A1 (LVT_NAND3HDV1)                   0.0721    0.0000     1.2929 f
+  cpu_core/mac/U89/ZN (LVT_NAND3HDV1)                   0.1142    0.0735     1.3665 r
+  cpu_core/mac/n1059 (net)                      2                 0.0000     1.3665 r
+  cpu_core/mac/U339/A1 (LVT_NAND2HDV2)                  0.1142    0.0000     1.3665 r
+  cpu_core/mac/U339/ZN (LVT_NAND2HDV2)                  0.1077    0.0880     1.4545 f
+  cpu_core/mac/n511 (net)                       4                 0.0000     1.4545 f
+  cpu_core/mac/U760/A2 (LVT_AOI21HDV2)                  0.1077    0.0000     1.4545 f
+  cpu_core/mac/U760/ZN (LVT_AOI21HDV2)                  0.1116    0.1022     1.5567 r
+  cpu_core/mac/n484 (net)                       1                 0.0000     1.5567 r
+  cpu_core/mac/U40/C (LVT_OAI211HDV1)                   0.1116    0.0000     1.5567 r
+  cpu_core/mac/U40/ZN (LVT_OAI211HDV1)                  0.2111    0.1571     1.7138 f
+  cpu_core/mac/n755 (net)                       2                 0.0000     1.7138 f
+  cpu_core/mac/U762/A2 (LVT_NOR2HDV4)                   0.2111    0.0000     1.7138 f
+  cpu_core/mac/U762/ZN (LVT_NOR2HDV4)                   0.1763    0.1354     1.8492 r
+  cpu_core/mac/n1298 (net)                      7                 0.0000     1.8492 r
+  cpu_core/mac/U98/A1 (LVT_AND2HDV4)                    0.1763    0.0000     1.8492 r
+  cpu_core/mac/U98/Z (LVT_AND2HDV4)                     0.2554    0.2384     2.0876 r
+  cpu_core/mac/n4697 (net)                     37                 0.0000     2.0876 r
+  cpu_core/mac/U43/I (LVT_INHDV6)                       0.2554    0.0000     2.0876 r
+  cpu_core/mac/U43/ZN (LVT_INHDV6)                      0.1425    0.1238     2.2115 f
+  cpu_core/mac/n17 (net)                       26                 0.0000     2.2115 f
+  cpu_core/mac/U2626/B2 (LVT_IOA22HDV1)                 0.1425    0.0000     2.2115 f
+  cpu_core/mac/U2626/ZN (LVT_IOA22HDV1)                 0.2506    0.1766     2.3881 r
+  cpu_core/mac/n1826 (net)                      3                 0.0000     2.3881 r
+  cpu_core/mac/U2692/A1 (LVT_NAND2HDV1)                 0.2506    0.0000     2.3881 r
+  cpu_core/mac/U2692/ZN (LVT_NAND2HDV1)                 0.1137    0.0936     2.4817 f
+  cpu_core/mac/n1933 (net)                      2                 0.0000     2.4817 f
+  cpu_core/mac/U2698/A1 (LVT_NOR2HDV1)                  0.1137    0.0000     2.4817 f
+  cpu_core/mac/U2698/ZN (LVT_NOR2HDV1)                  0.1591    0.1142     2.5959 r
+  cpu_core/mac/n2242 (net)                      2                 0.0000     2.5959 r
+  cpu_core/mac/U23/A1 (LVT_NAND2HDV1)                   0.1591    0.0000     2.5959 r
+  cpu_core/mac/U23/ZN (LVT_NAND2HDV1)                   0.0846    0.0728     2.6688 f
+  cpu_core/mac/n1836 (net)                      1                 0.0000     2.6688 f
+  cpu_core/mac/U53/A2 (LVT_NOR2HDV2)                    0.0846    0.0000     2.6688 f
+  cpu_core/mac/U53/ZN (LVT_NOR2HDV2)                    0.1322    0.0990     2.7678 r
+  cpu_core/mac/n1927 (net)                      2                 0.0000     2.7678 r
+  cpu_core/mac/U2711/A2 (LVT_NAND2HDV2)                 0.1322    0.0000     2.7678 r
+  cpu_core/mac/U2711/ZN (LVT_NAND2HDV2)                 0.0938    0.0797     2.8474 f
+  cpu_core/mac/n2292 (net)                      2                 0.0000     2.8474 f
+  cpu_core/mac/U2714/A1 (LVT_NOR2HDV4)                  0.0938    0.0000     2.8474 f
+  cpu_core/mac/U2714/ZN (LVT_NOR2HDV4)                  0.0938    0.0714     2.9188 r
+  cpu_core/mac/n2298 (net)                      1                 0.0000     2.9188 r
+  cpu_core/mac/U30/B (LVT_ADH1HDV1)                     0.0938    0.0000     2.9188 r
+  cpu_core/mac/U30/CO (LVT_ADH1HDV1)                    0.1046    0.1484     3.0673 r
+  cpu_core/mac/n2466 (net)                      1                 0.0000     3.0673 r
+  cpu_core/mac/U3555/B (LVT_ADH1HDV2)                   0.1046    0.0000     3.0673 r
+  cpu_core/mac/U3555/CO (LVT_ADH1HDV2)                  0.0800    0.1246     3.1919 r
+  cpu_core/mac/n2615 (net)                      1                 0.0000     3.1919 r
+  cpu_core/mac/U3722/B (LVT_ADH1HDV2)                   0.0800    0.0000     3.1919 r
+  cpu_core/mac/U3722/CO (LVT_ADH1HDV2)                  0.0800    0.1199     3.3117 r
+  cpu_core/mac/n2725 (net)                      1                 0.0000     3.3117 r
+  cpu_core/mac/U3838/B (LVT_ADH1HDV2)                   0.0800    0.0000     3.3117 r
+  cpu_core/mac/U3838/CO (LVT_ADH1HDV2)                  0.0800    0.1199     3.4316 r
+  cpu_core/mac/n2738 (net)                      1                 0.0000     3.4316 r
+  cpu_core/mac/U3850/B (LVT_ADH1HDV2)                   0.0800    0.0000     3.4316 r
+  cpu_core/mac/U3850/CO (LVT_ADH1HDV2)                  0.0800    0.1199     3.5515 r
+  cpu_core/mac/n2753 (net)                      1                 0.0000     3.5515 r
+  cpu_core/mac/U3862/B (LVT_ADH1HDV2)                   0.0800    0.0000     3.5515 r
+  cpu_core/mac/U3862/CO (LVT_ADH1HDV2)                  0.0800    0.1199     3.6714 r
+  cpu_core/mac/n2759 (net)                      1                 0.0000     3.6714 r
+  cpu_core/mac/U323/B (LVT_ADH1HDV2)                    0.0800    0.0000     3.6714 r
+  cpu_core/mac/U323/CO (LVT_ADH1HDV2)                   0.0700    0.1139     3.7853 r
+  cpu_core/mac/n2765 (net)                      1                 0.0000     3.7853 r
+  cpu_core/mac/U3871/B (LVT_ADH1HDV1)                   0.0700    0.0000     3.7853 r
+  cpu_core/mac/U3871/CO (LVT_ADH1HDV1)                  0.1047    0.1436     3.9290 r
+  cpu_core/mac/n2771 (net)                      1                 0.0000     3.9290 r
+  cpu_core/mac/U3876/B (LVT_ADH1HDV2)                   0.1047    0.0000     3.9290 r
+  cpu_core/mac/U3876/CO (LVT_ADH1HDV2)                  0.0800    0.1246     4.0536 r
+  cpu_core/mac/n2777 (net)                      1                 0.0000     4.0536 r
+  cpu_core/mac/U3882/B (LVT_ADH1HDV2)                   0.0800    0.0000     4.0536 r
+  cpu_core/mac/U3882/CO (LVT_ADH1HDV2)                  0.0800    0.1199     4.1735 r
+  cpu_core/mac/n2783 (net)                      1                 0.0000     4.1735 r
+  cpu_core/mac/U3887/B (LVT_ADH1HDV2)                   0.0800    0.0000     4.1735 r
+  cpu_core/mac/U3887/CO (LVT_ADH1HDV2)                  0.0694    0.1139     4.2874 r
+  cpu_core/mac/n2789 (net)                      1                 0.0000     4.2874 r
+  cpu_core/mac/U31/B (LVT_ADH1HDV1)                     0.0694    0.0000     4.2874 r
+  cpu_core/mac/U31/CO (LVT_ADH1HDV1)                    0.1047    0.1435     4.4309 r
+  cpu_core/mac/n2795 (net)                      1                 0.0000     4.4309 r
+  cpu_core/mac/U3896/B (LVT_ADH1HDV2)                   0.1047    0.0000     4.4309 r
+  cpu_core/mac/U3896/CO (LVT_ADH1HDV2)                  0.0800    0.1246     4.5555 r
+  cpu_core/mac/n2802 (net)                      1                 0.0000     4.5555 r
+  cpu_core/mac/U3899/B (LVT_ADH1HDV2)                   0.0800    0.0000     4.5555 r
+  cpu_core/mac/U3899/CO (LVT_ADH1HDV2)                  0.0800    0.1199     4.6753 r
+  cpu_core/mac/n2808 (net)                      1                 0.0000     4.6753 r
+  cpu_core/mac/U3902/B (LVT_ADH1HDV2)                   0.0800    0.0000     4.6753 r
+  cpu_core/mac/U3902/CO (LVT_ADH1HDV2)                  0.0800    0.1199     4.7952 r
+  cpu_core/mac/n2815 (net)                      1                 0.0000     4.7952 r
+  cpu_core/mac/U3905/B (LVT_ADH1HDV2)                   0.0800    0.0000     4.7952 r
+  cpu_core/mac/U3905/CO (LVT_ADH1HDV2)                  0.0800    0.1199     4.9151 r
+  cpu_core/mac/n2821 (net)                      1                 0.0000     4.9151 r
+  cpu_core/mac/U3908/B (LVT_ADH1HDV2)                   0.0800    0.0000     4.9151 r
+  cpu_core/mac/U3908/CO (LVT_ADH1HDV2)                  0.0700    0.1139     5.0290 r
+  cpu_core/mac/n2828 (net)                      1                 0.0000     5.0290 r
+  cpu_core/mac/U3911/B (LVT_ADH1HDV1)                   0.0700    0.0000     5.0290 r
+  cpu_core/mac/U3911/CO (LVT_ADH1HDV1)                  0.1047    0.1436     5.1727 r
+  cpu_core/mac/n2834 (net)                      1                 0.0000     5.1727 r
+  cpu_core/mac/U324/B (LVT_ADH1HDV2)                    0.1047    0.0000     5.1727 r
+  cpu_core/mac/U324/CO (LVT_ADH1HDV2)                   0.0700    0.1186     5.2913 r
+  cpu_core/mac/n2840 (net)                      1                 0.0000     5.2913 r
+  cpu_core/mac/U3916/B (LVT_ADH1HDV1)                   0.0700    0.0000     5.2913 r
+  cpu_core/mac/U3916/CO (LVT_ADH1HDV1)                  0.1047    0.1436     5.4349 r
+  cpu_core/mac/n4055 (net)                      1                 0.0000     5.4349 r
+  cpu_core/mac/U3919/B (LVT_ADH1HDV2)                   0.1047    0.0000     5.4349 r
+  cpu_core/mac/U3919/CO (LVT_ADH1HDV2)                  0.0800    0.1246     5.5595 r
+  cpu_core/mac/n4061 (net)                      1                 0.0000     5.5595 r
+  cpu_core/mac/U3922/B (LVT_ADH1HDV2)                   0.0800    0.0000     5.5595 r
+  cpu_core/mac/U3922/CO (LVT_ADH1HDV2)                  0.0700    0.1139     5.6734 r
+  cpu_core/mac/n4067 (net)                      1                 0.0000     5.6734 r
+  cpu_core/mac/U3925/B (LVT_ADH1HDV1)                   0.0700    0.0000     5.6734 r
+  cpu_core/mac/U3925/CO (LVT_ADH1HDV1)                  0.1047    0.1436     5.8171 r
+  cpu_core/mac/n4255 (net)                      1                 0.0000     5.8171 r
+  cpu_core/mac/U4396/B (LVT_ADH1HDV2)                   0.1047    0.0000     5.8171 r
+  cpu_core/mac/U4396/CO (LVT_ADH1HDV2)                  0.0610    0.1126     5.9296 r
+  cpu_core/mac/n4258 (net)                      1                 0.0000     5.9296 r
+  cpu_core/mac/U4398/A1 (LVT_XOR2HDV2)                  0.0610    0.0000     5.9296 r
+  cpu_core/mac/U4398/Z (LVT_XOR2HDV2)                   0.0682    0.1304     6.0600 f
+  cpu_core/mac/n4260 (net)                      1                 0.0000     6.0600 f
+  cpu_core/mac/U279/A1 (LVT_NAND2HDV2)                  0.0682    0.0000     6.0600 f
+  cpu_core/mac/U279/ZN (LVT_NAND2HDV2)                  0.0928    0.0423     6.1024 r
+  cpu_core/mac/n4262 (net)                      1                 0.0000     6.1024 r
+  cpu_core/mac/U221/B (LVT_OAI211HDV1)                  0.0928    0.0000     6.1024 r
+  cpu_core/mac/U221/ZN (LVT_OAI211HDV1)                 0.1356    0.0851     6.1875 f
+  cpu_core/mac/N3252 (net)                      1                 0.0000     6.1875 f
+  cpu_core/mac/addr_to_axi4_reg_reg_63_/D (LVT_DQHDV1)
+                                                        0.1356    0.0000     6.1875 f
+  data arrival time                                                          6.1875
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  cpu_core/mac/addr_to_axi4_reg_reg_63_/CK (LVT_DQHDV1)           0.0000     6.3500 r
+  library setup time                                             -0.1610     6.1890
+  data required time                                                         6.1890
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1890
+  data arrival time                                                         -6.1875
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0015

@@ -1,0 +1,571 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Thu_Oct_7_13:08:38_2021_+0800
+top_name: ysyx_210171
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+584726.0  584726.0  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+44542  44542  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210171
+Date   : Sat Oct  9 16:17:49 2021
+****************************************
+    
+    S011HD1P_X32Y2D128_BW_SS_1.08_125 (File: /Project/home/fangwenji/prj/coosca/lib_data/ccsdb/S011HD1P_X32Y2D128_BW_SS_1.08_125.db)
+    
+Number of ports:                        15719
+Number of nets:                         55299
+Number of cells:                        44877
+Number of combinational cells:          36209
+Number of sequential cells:              8331
+Number of macros/black boxes:               2
+Number of buf/inv:                      10359
+Number of references:                      23
+Combinational area:             269707.707914
+Buf/Inv area:                    52636.816622
+Noncombinational area:          212883.192009
+Macro/Black Box area:           102135.085938
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                584725.985861
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area                 Local cell area
+                                  --------------------  ------------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes        Design
+--------------------------------  -----------  -------  -----------  -----------  -----------  -----------------------
+ysyx_210171                       584725.9859    100.0   15137.0687      51.1024       0.0000  ysyx_210171
+CSR                                55529.4824      9.5   29365.0527   26164.4297       0.0000  ysyx_210171_CSR_0
+Clint                               8387.5177      1.4    4861.4520    3526.0657       0.0000  ysyx_210171_Clint_0
+Dcache                            142722.3882     24.4   49639.2574   42015.5878   51067.5430  ysyx_210171_Dcache_0
+Decode                              3587.9264      0.6    1213.0096     843.1896       0.0000  ysyx_210171_Decode_0
+Decode/Decoding                     1531.7272      0.3    1531.7272       0.0000       0.0000  ysyx_210171_Decoding_0
+Exec                              101938.5305     17.4   15661.5407   32682.6755       0.0000  ysyx_210171_Exec_0
+Exec/Executing                     53594.3142      9.2   53594.3142       0.0000       0.0000  ysyx_210171_Executing_0
+Fetch                               1510.2104      0.3     615.9184     894.2920       0.0000  ysyx_210171_Fetch_0
+GPR                               101264.7863     17.3   50571.2038   50693.5825       0.0000  ysyx_210171_GPR_0
+Icache                            128913.9819     22.0   34379.8119   43466.6271   51067.5430  ysyx_210171_Icache_0
+MemAc                              19549.3579      3.3    8690.0976   10859.2604       0.0000  ysyx_210171_MemAc_0
+PC                                  3126.6601      0.5    1491.3832    1635.2769       0.0000  ysyx_210171_PC_0
+Rid_slct                             570.1952      0.1     544.6440      25.5512       0.0000  ysyx_210171_Rid_slct_0
+WriteBack                           2436.7776      0.4    2411.2264      25.5512       0.0000  ysyx_210171_WriteBack_0
+--------------------------------  -----------  -------  -----------  -----------  -----------  -----------------------
+Total                                                   269707.7079  212883.1920  102135.0859
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210171
+Date   : Sat Oct  9 16:17:45 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: Exec/src2_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: MemAc/g_calc_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  Exec/src2_reg_3_/CK (LVT_DQHDV1)                      0.0000    0.0000 #   0.0000 r
+  Exec/src2_reg_3_/Q (LVT_DQHDV1)                       0.3766    0.4192     0.4192 r
+  Exec/Executing_io_src2[3] (net)              14                 0.0000     0.4192 r
+  Exec/Executing/io_src2[3] (ysyx_210171_Executing_0)             0.0000     0.4192 r
+  Exec/Executing/io_src2[3] (net)                                 0.0000     0.4192 r
+  Exec/Executing/U1832/I (LVT_INHDV2)                   0.3766    0.0000     0.4192 r
+  Exec/Executing/U1832/ZN (LVT_INHDV2)                  0.2843    0.2492     0.6684 f
+  Exec/Executing/n1140 (net)                   22                 0.0000     0.6684 f
+  Exec/Executing/U1833/I (LVT_INHDV4)                   0.2843    0.0000     0.6684 f
+  Exec/Executing/U1833/ZN (LVT_INHDV4)                  0.4060    0.2975     0.9658 r
+  Exec/Executing/n4112 (net)                   46                 0.0000     0.9658 r
+  Exec/Executing/U2440/A1 (LVT_NOR2HDV1)                0.4060    0.0000     0.9658 r
+  Exec/Executing/U2440/ZN (LVT_NOR2HDV1)                0.1371    0.0763     1.0422 f
+  Exec/Executing/n1426 (net)                    2                 0.0000     1.0422 f
+  Exec/Executing/U2445/A1 (LVT_OAI21HDV1)               0.1371    0.0000     1.0422 f
+  Exec/Executing/U2445/ZN (LVT_OAI21HDV1)               0.1517    0.1199     1.1620 r
+  Exec/Executing/n1427 (net)                    1                 0.0000     1.1620 r
+  Exec/Executing/U2446/B (LVT_AOI21HDV1)                0.1517    0.0000     1.1620 r
+  Exec/Executing/U2446/ZN (LVT_AOI21HDV1)               0.1153    0.0622     1.2242 f
+  Exec/Executing/n1808 (net)                    2                 0.0000     1.2242 f
+  Exec/Executing/U3040/A1 (LVT_OAI21HDV1)               0.1153    0.0000     1.2242 f
+  Exec/Executing/U3040/ZN (LVT_OAI21HDV1)               0.1925    0.1386     1.3629 r
+  Exec/Executing/n2105 (net)                    2                 0.0000     1.3629 r
+  Exec/Executing/U3071/A1 (LVT_AOI21HDV1)               0.1925    0.0000     1.3629 r
+  Exec/Executing/U3071/ZN (LVT_AOI21HDV1)               0.1203    0.1060     1.4688 f
+  Exec/Executing/n2013 (net)                    2                 0.0000     1.4688 f
+  Exec/Executing/U3469/A1 (LVT_OAI21HDV1)               0.1203    0.0000     1.4688 f
+  Exec/Executing/U3469/ZN (LVT_OAI21HDV1)               0.1929    0.1399     1.6088 r
+  Exec/Executing/n3039 (net)                    2                 0.0000     1.6088 r
+  Exec/Executing/U319/A1 (LVT_AOI21HDV1)                0.1929    0.0000     1.6088 r
+  Exec/Executing/U319/ZN (LVT_AOI21HDV1)                0.1297    0.1141     1.7229 f
+  Exec/Executing/n4493 (net)                    2                 0.0000     1.7229 f
+  Exec/Executing/U193/A1 (LVT_OAI21HDV1)                0.1297    0.0000     1.7229 f
+  Exec/Executing/U193/ZN (LVT_OAI21HDV1)                0.2158    0.1551     1.8780 r
+  Exec/Executing/n5312 (net)                    2                 0.0000     1.8780 r
+  Exec/Executing/U318/A1 (LVT_AOI21HDV1)                0.2158    0.0000     1.8780 r
+  Exec/Executing/U318/ZN (LVT_AOI21HDV1)                0.1414    0.1233     2.0013 f
+  Exec/Executing/n4643 (net)                    2                 0.0000     2.0013 f
+  Exec/Executing/U21/A1 (LVT_OAI21HDV2)                 0.1414    0.0000     2.0013 f
+  Exec/Executing/U21/ZN (LVT_OAI21HDV2)                 0.1864    0.1406     2.1419 r
+  Exec/Executing/n5205 (net)                    2                 0.0000     2.1419 r
+  Exec/Executing/U132/A1 (LVT_AOI21HDV2)                0.1864    0.0000     2.1419 r
+  Exec/Executing/U132/ZN (LVT_AOI21HDV2)                0.1132    0.1011     2.2430 f
+  Exec/Executing/n4937 (net)                    2                 0.0000     2.2430 f
+  Exec/Executing/U5760/A1 (LVT_OAI21HDV2)               0.1132    0.0000     2.2430 f
+  Exec/Executing/U5760/ZN (LVT_OAI21HDV2)               0.1743    0.1277     2.3707 r
+  Exec/Executing/n5163 (net)                    2                 0.0000     2.3707 r
+  Exec/Executing/U386/A1 (LVT_AOI21HDV1)                0.1743    0.0000     2.3707 r
+  Exec/Executing/U386/ZN (LVT_AOI21HDV1)                0.1262    0.1107     2.4814 f
+  Exec/Executing/n5220 (net)                    2                 0.0000     2.4814 f
+  Exec/Executing/U186/A1 (LVT_OAI21HDV1)                0.1262    0.0000     2.4814 f
+  Exec/Executing/U186/ZN (LVT_OAI21HDV1)                0.2156    0.1542     2.6356 r
+  Exec/Executing/n4777 (net)                    2                 0.0000     2.6356 r
+  Exec/Executing/U316/A1 (LVT_AOI21HDV1)                0.2156    0.0000     2.6356 r
+  Exec/Executing/U316/ZN (LVT_AOI21HDV1)                0.1346    0.1174     2.7530 f
+  Exec/Executing/n5359 (net)                    2                 0.0000     2.7530 f
+  Exec/Executing/U184/A1 (LVT_OAI21HDV1)                0.1346    0.0000     2.7530 f
+  Exec/Executing/U184/ZN (LVT_OAI21HDV1)                0.2159    0.1564     2.9094 r
+  Exec/Executing/n5752 (net)                    2                 0.0000     2.9094 r
+  Exec/Executing/U315/A1 (LVT_AOI21HDV1)                0.2159    0.0000     2.9094 r
+  Exec/Executing/U315/ZN (LVT_AOI21HDV1)                0.1347    0.1174     3.0268 f
+  Exec/Executing/n5821 (net)                    2                 0.0000     3.0268 f
+  Exec/Executing/U182/A1 (LVT_OAI21HDV1)                0.1347    0.0000     3.0268 f
+  Exec/Executing/U182/ZN (LVT_OAI21HDV1)                0.2159    0.1564     3.1833 r
+  Exec/Executing/n6062 (net)                    2                 0.0000     3.1833 r
+  Exec/Executing/U312/A1 (LVT_AOI21HDV1)                0.2159    0.0000     3.1833 r
+  Exec/Executing/U312/ZN (LVT_AOI21HDV1)                0.1347    0.1174     3.3007 f
+  Exec/Executing/n6144 (net)                    2                 0.0000     3.3007 f
+  Exec/Executing/U181/A1 (LVT_OAI21HDV1)                0.1347    0.0000     3.3007 f
+  Exec/Executing/U181/ZN (LVT_OAI21HDV1)                0.2159    0.1564     3.4572 r
+  Exec/Executing/n6221 (net)                    2                 0.0000     3.4572 r
+  Exec/Executing/U310/A1 (LVT_AOI21HDV1)                0.2159    0.0000     3.4572 r
+  Exec/Executing/U310/ZN (LVT_AOI21HDV1)                0.1347    0.1174     3.5746 f
+  Exec/Executing/n6315 (net)                    2                 0.0000     3.5746 f
+  Exec/Executing/U179/A1 (LVT_OAI21HDV1)                0.1347    0.0000     3.5746 f
+  Exec/Executing/U179/ZN (LVT_OAI21HDV1)                0.2162    0.1564     3.7311 r
+  Exec/Executing/n6379 (net)                    2                 0.0000     3.7311 r
+  Exec/Executing/U306/A1 (LVT_AOI21HDV1)                0.2162    0.0000     3.7311 r
+  Exec/Executing/U306/ZN (LVT_AOI21HDV1)                0.1415    0.1234     3.8544 f
+  Exec/Executing/n6466 (net)                    2                 0.0000     3.8544 f
+  Exec/Executing/U7193/A1 (LVT_OAI21HDV2)               0.1415    0.0000     3.8544 f
+  Exec/Executing/U7193/ZN (LVT_OAI21HDV2)               0.1769    0.1351     3.9895 r
+  Exec/Executing/n6539 (net)                    2                 0.0000     3.9895 r
+  Exec/Executing/U303/A1 (LVT_AOI21HDV1)                0.1769    0.0000     3.9895 r
+  Exec/Executing/U303/ZN (LVT_AOI21HDV1)                0.1331    0.1169     4.1063 f
+  Exec/Executing/n6614 (net)                    2                 0.0000     4.1063 f
+  Exec/Executing/U7285/A1 (LVT_OAI21HDV2)               0.1331    0.0000     4.1063 f
+  Exec/Executing/U7285/ZN (LVT_OAI21HDV2)               0.1761    0.1329     4.2392 r
+  Exec/Executing/n6690 (net)                    2                 0.0000     4.2392 r
+  Exec/Executing/U296/A1 (LVT_AOI21HDV1)                0.1761    0.0000     4.2392 r
+  Exec/Executing/U296/ZN (LVT_AOI21HDV1)                0.1264    0.1111     4.3503 f
+  Exec/Executing/n6765 (net)                    2                 0.0000     4.3503 f
+  Exec/Executing/U300/A1 (LVT_OAI21HDV1)                0.1264    0.0000     4.3503 f
+  Exec/Executing/U300/ZN (LVT_OAI21HDV1)                0.2162    0.1543     4.5046 r
+  Exec/Executing/n6838 (net)                    2                 0.0000     4.5046 r
+  Exec/Executing/U178/A1 (LVT_AOI21HDV1)                0.2162    0.0000     4.5046 r
+  Exec/Executing/U178/ZN (LVT_AOI21HDV1)                0.1415    0.1234     4.6280 f
+  Exec/Executing/n6919 (net)                    2                 0.0000     4.6280 f
+  Exec/Executing/U7445/A1 (LVT_OAI21HDV2)               0.1415    0.0000     4.6280 f
+  Exec/Executing/U7445/ZN (LVT_OAI21HDV2)               0.1688    0.1303     4.7583 r
+  Exec/Executing/n7045 (net)                    2                 0.0000     4.7583 r
+  Exec/Executing/U366/A1 (LVT_AO21HDV1)                 0.1688    0.0000     4.7583 r
+  Exec/Executing/U366/Z (LVT_AO21HDV1)                  0.0818    0.1780     4.9363 r
+  Exec/Executing/n88 (net)                      1                 0.0000     4.9363 r
+  Exec/Executing/U7533/CI (LVT_AD1HDV1)                 0.0818    0.0000     4.9363 r
+  Exec/Executing/U7533/CO (LVT_AD1HDV1)                 0.1224    0.1882     5.1244 r
+  Exec/Executing/n7200 (net)                    1                 0.0000     5.1244 r
+  Exec/Executing/U7571/CI (LVT_AD1HDV1)                 0.1224    0.0000     5.1244 r
+  Exec/Executing/U7571/CO (LVT_AD1HDV1)                 0.1228    0.1964     5.3208 r
+  Exec/Executing/n7272 (net)                    1                 0.0000     5.3208 r
+  Exec/Executing/U7606/CI (LVT_AD1HDV1)                 0.1228    0.0000     5.3208 r
+  Exec/Executing/U7606/CO (LVT_AD1HDV1)                 0.1229    0.1965     5.5174 r
+  Exec/Executing/n7345 (net)                    1                 0.0000     5.5174 r
+  Exec/Executing/U7640/CI (LVT_AD1HDV1)                 0.1229    0.0000     5.5174 r
+  Exec/Executing/U7640/CO (LVT_AD1HDV1)                 0.1266    0.1990     5.7163 r
+  Exec/Executing/n7346 (net)                    1                 0.0000     5.7163 r
+  Exec/Executing/U7641/A1 (LVT_XOR2HDV2)                0.1266    0.0000     5.7163 r
+  Exec/Executing/U7641/Z (LVT_XOR2HDV2)                 0.0608    0.1412     5.8576 f
+  Exec/Executing/n7430 (net)                    1                 0.0000     5.8576 f
+  Exec/Executing/U7678/A1 (LVT_IOA21HDV2)               0.0608    0.0000     5.8576 f
+  Exec/Executing/U7678/ZN (LVT_IOA21HDV2)               0.0842    0.1369     5.9945 f
+  Exec/Executing/io_g_calc[63] (net)            2                 0.0000     5.9945 f
+  Exec/Executing/io_g_calc[63] (ysyx_210171_Executing_0)          0.0000     5.9945 f
+  Exec/io_toGPR_calc[63] (net)                                    0.0000     5.9945 f
+  Exec/io_toGPR_calc[63] (ysyx_210171_Exec_0)                     0.0000     5.9945 f
+  Exec_io_toGPR_calc[63] (net)                                    0.0000     5.9945 f
+  MemAc/io_toGPR_I_calc[63] (ysyx_210171_MemAc_0)                 0.0000     5.9945 f
+  MemAc/io_toGPR_I_calc[63] (net)                                 0.0000     5.9945 f
+  MemAc/U959/A1 (LVT_AOI21HDV1)                         0.0842    0.0000     5.9945 f
+  MemAc/U959/ZN (LVT_AOI21HDV1)                         0.1520    0.1000     6.0945 r
+  MemAc/n1007 (net)                             1                 0.0000     6.0945 r
+  MemAc/U961/A1 (LVT_OAI211HDV1)                        0.1520    0.0000     6.0945 r
+  MemAc/U961/ZN (LVT_OAI211HDV1)                        0.1133    0.0950     6.1895 f
+  MemAc/n554 (net)                              1                 0.0000     6.1895 f
+  MemAc/g_calc_reg_63_/D (LVT_DQHDV1)                   0.1133    0.0000     6.1895 f
+  data arrival time                                                          6.1895
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  MemAc/g_calc_reg_63_/CK (LVT_DQHDV1)                            0.0000     6.3500 r
+  library setup time                                             -0.1570     6.1930
+  data required time                                                         6.1930
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1930
+  data arrival time                                                         -6.1895
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0035
+  Startpoint: Exec/imme_reg_3_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: MemAc/p_calc_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  Exec/imme_reg_3_/CK (LVT_DQHDV1)                      0.0000    0.0000 #   0.0000 r
+  Exec/imme_reg_3_/Q (LVT_DQHDV1)                       0.1251    0.2708     0.2708 r
+  Exec/Executing_io_imme[3] (net)               4                 0.0000     0.2708 r
+  Exec/Executing/io_imme[3] (ysyx_210171_Executing_0)             0.0000     0.2708 r
+  Exec/Executing/io_imme[3] (net)                                 0.0000     0.2708 r
+  Exec/Executing/U23/I (LVT_BUFHDV2)                    0.1251    0.0000     0.2708 r
+  Exec/Executing/U23/Z (LVT_BUFHDV2)                    0.3881    0.2836     0.5544 r
+  Exec/Executing/n5661 (net)                   19                 0.0000     0.5544 r
+  Exec/Executing/U815/A1 (LVT_NOR2HDV1)                 0.3881    0.0000     0.5544 r
+  Exec/Executing/U815/ZN (LVT_NOR2HDV1)                 0.1311    0.0969     0.6512 f
+  Exec/Executing/n320 (net)                     3                 0.0000     0.6512 f
+  Exec/Executing/U823/A1 (LVT_OAI21HDV1)                0.1311    0.0000     0.6512 f
+  Exec/Executing/U823/ZN (LVT_OAI21HDV1)                0.1524    0.1183     0.7696 r
+  Exec/Executing/n147 (net)                     1                 0.0000     0.7696 r
+  Exec/Executing/U332/B (LVT_AOI21HDV1)                 0.1524    0.0000     0.7696 r
+  Exec/Executing/U332/ZN (LVT_AOI21HDV1)                0.1219    0.0665     0.8361 f
+  Exec/Executing/n257 (net)                     2                 0.0000     0.8361 f
+  Exec/Executing/U833/A1 (LVT_OAI21HDV2)                0.1219    0.0000     0.8361 f
+  Exec/Executing/U833/ZN (LVT_OAI21HDV2)                0.1692    0.1265     0.9626 r
+  Exec/Executing/n233 (net)                     2                 0.0000     0.9626 r
+  Exec/Executing/U846/A1 (LVT_AOI21HDV2)                0.1692    0.0000     0.9626 r
+  Exec/Executing/U846/ZN (LVT_AOI21HDV2)                0.0988    0.0883     1.0509 f
+  Exec/Executing/n362 (net)                     2                 0.0000     1.0509 f
+  Exec/Executing/U560/A1 (LVT_OAI21HDV1)                0.0988    0.0000     1.0509 f
+  Exec/Executing/U560/ZN (LVT_OAI21HDV1)                0.1745    0.1250     1.1759 r
+  Exec/Executing/n199 (net)                     1                 0.0000     1.1759 r
+  Exec/Executing/U892/CI (LVT_AD1HDV1)                  0.1745    0.0000     1.1759 r
+  Exec/Executing/U892/CO (LVT_AD1HDV1)                  0.1394    0.2180     1.3940 r
+  Exec/Executing/n474 (net)                     1                 0.0000     1.3940 r
+  Exec/Executing/U1131/B (LVT_ADH1HDV1)                 0.1394    0.0000     1.3940 r
+  Exec/Executing/U1131/CO (LVT_ADH1HDV1)                0.0936    0.1488     1.5427 r
+  Exec/Executing/n580 (net)                     1                 0.0000     1.5427 r
+  Exec/Executing/U1211/B (LVT_ADH1HDV1)                 0.0936    0.0000     1.5427 r
+  Exec/Executing/U1211/CO (LVT_ADH1HDV1)                0.0929    0.1396     1.6823 r
+  Exec/Executing/n702 (net)                     1                 0.0000     1.6823 r
+  Exec/Executing/U1302/B (LVT_ADH1HDV1)                 0.0929    0.0000     1.6823 r
+  Exec/Executing/U1302/CO (LVT_ADH1HDV1)                0.0948    0.1394     1.8217 r
+  Exec/Executing/n757 (net)                     1                 0.0000     1.8217 r
+  Exec/Executing/U1334/B (LVT_ADH1HDV1)                 0.0948    0.0000     1.8217 r
+  Exec/Executing/U1334/CO (LVT_ADH1HDV1)                0.0940    0.1398     1.9616 r
+  Exec/Executing/n766 (net)                     1                 0.0000     1.9616 r
+  Exec/Executing/U1341/B (LVT_ADH1HDV1)                 0.0940    0.0000     1.9616 r
+  Exec/Executing/U1341/CO (LVT_ADH1HDV1)                0.0929    0.1397     2.1012 r
+  Exec/Executing/n773 (net)                     1                 0.0000     2.1012 r
+  Exec/Executing/U1346/B (LVT_ADH1HDV1)                 0.0929    0.0000     2.1012 r
+  Exec/Executing/U1346/CO (LVT_ADH1HDV1)                0.0931    0.1394     2.2407 r
+  Exec/Executing/n782 (net)                     1                 0.0000     2.2407 r
+  Exec/Executing/U1353/B (LVT_ADH1HDV1)                 0.0931    0.0000     2.2407 r
+  Exec/Executing/U1353/CO (LVT_ADH1HDV1)                0.0946    0.1395     2.3802 r
+  Exec/Executing/n789 (net)                     1                 0.0000     2.3802 r
+  Exec/Executing/U1358/B (LVT_ADH1HDV1)                 0.0946    0.0000     2.3802 r
+  Exec/Executing/U1358/CO (LVT_ADH1HDV1)                0.0946    0.1398     2.5200 r
+  Exec/Executing/n798 (net)                     1                 0.0000     2.5200 r
+  Exec/Executing/U1366/B (LVT_ADH1HDV1)                 0.0946    0.0000     2.5200 r
+  Exec/Executing/U1366/CO (LVT_ADH1HDV1)                0.0933    0.1398     2.6598 r
+  Exec/Executing/n1022 (net)                    1                 0.0000     2.6598 r
+  Exec/Executing/U1594/B (LVT_ADH1HDV1)                 0.0933    0.0000     2.6598 r
+  Exec/Executing/U1594/CO (LVT_ADH1HDV1)                0.0948    0.1395     2.7993 r
+  Exec/Executing/n1731 (net)                    1                 0.0000     2.7993 r
+  Exec/Executing/U2963/B (LVT_ADH1HDV1)                 0.0948    0.0000     2.7993 r
+  Exec/Executing/U2963/CO (LVT_ADH1HDV1)                0.0939    0.1398     2.9391 r
+  Exec/Executing/n1783 (net)                    1                 0.0000     2.9391 r
+  Exec/Executing/U3018/B (LVT_ADH1HDV1)                 0.0939    0.0000     2.9391 r
+  Exec/Executing/U3018/CO (LVT_ADH1HDV1)                0.0933    0.1397     3.0788 r
+  Exec/Executing/n4789 (net)                    1                 0.0000     3.0788 r
+  Exec/Executing/U5886/B (LVT_ADH1HDV1)                 0.0933    0.0000     3.0788 r
+  Exec/Executing/U5886/CO (LVT_ADH1HDV1)                0.0939    0.1395     3.2183 r
+  Exec/Executing/n5346 (net)                    1                 0.0000     3.2183 r
+  Exec/Executing/U6340/B (LVT_ADH1HDV1)                 0.0939    0.0000     3.2183 r
+  Exec/Executing/U6340/CO (LVT_ADH1HDV1)                0.0939    0.1397     3.3580 r
+  Exec/Executing/n5810 (net)                    1                 0.0000     3.3580 r
+  Exec/Executing/U6753/B (LVT_ADH1HDV1)                 0.0939    0.0000     3.3580 r
+  Exec/Executing/U6753/CO (LVT_ADH1HDV1)                0.0933    0.1397     3.4976 r
+  Exec/Executing/n6049 (net)                    1                 0.0000     3.4976 r
+  Exec/Executing/U6888/B (LVT_ADH1HDV1)                 0.0933    0.0000     3.4976 r
+  Exec/Executing/U6888/CO (LVT_ADH1HDV1)                0.0923    0.1395     3.6371 r
+  Exec/Executing/n6119 (net)                    1                 0.0000     3.6371 r
+  Exec/Executing/U6940/B (LVT_ADH1HDV1)                 0.0923    0.0000     3.6371 r
+  Exec/Executing/U6940/CO (LVT_ADH1HDV1)                0.0933    0.1393     3.7765 r
+  Exec/Executing/n6208 (net)                    1                 0.0000     3.7765 r
+  Exec/Executing/U7015/B (LVT_ADH1HDV1)                 0.0933    0.0000     3.7765 r
+  Exec/Executing/U7015/CO (LVT_ADH1HDV1)                0.0942    0.1395     3.9160 r
+  Exec/Executing/n6282 (net)                    1                 0.0000     3.9160 r
+  Exec/Executing/U7067/B (LVT_ADH1HDV1)                 0.0942    0.0000     3.9160 r
+  Exec/Executing/U7067/CO (LVT_ADH1HDV1)                0.0944    0.1397     4.0557 r
+  Exec/Executing/n6444 (net)                    1                 0.0000     4.0557 r
+  Exec/Executing/U7180/B (LVT_ADH1HDV1)                 0.0944    0.0000     4.0557 r
+  Exec/Executing/U7180/CO (LVT_ADH1HDV1)                0.0939    0.1397     4.1954 r
+  Exec/Executing/n6454 (net)                    1                 0.0000     4.1954 r
+  Exec/Executing/U7186/B (LVT_ADH1HDV1)                 0.0939    0.0000     4.1954 r
+  Exec/Executing/U7186/CO (LVT_ADH1HDV1)                0.0920    0.1397     4.3351 r
+  Exec/Executing/n6527 (net)                    1                 0.0000     4.3351 r
+  Exec/Executing/U7230/B (LVT_ADH1HDV1)                 0.0920    0.0000     4.3351 r
+  Exec/Executing/U7230/CO (LVT_ADH1HDV1)                0.0928    0.1393     4.4743 r
+  Exec/Executing/n6602 (net)                    1                 0.0000     4.4743 r
+  Exec/Executing/U7275/B (LVT_ADH1HDV1)                 0.0928    0.0000     4.4743 r
+  Exec/Executing/U7275/CO (LVT_ADH1HDV1)                0.0931    0.1394     4.6138 r
+  Exec/Executing/n6677 (net)                    1                 0.0000     4.6138 r
+  Exec/Executing/U7317/B (LVT_ADH1HDV1)                 0.0931    0.0000     4.6138 r
+  Exec/Executing/U7317/CO (LVT_ADH1HDV1)                0.0933    0.1395     4.7533 r
+  Exec/Executing/n6754 (net)                    1                 0.0000     4.7533 r
+  Exec/Executing/U7362/B (LVT_ADH1HDV1)                 0.0933    0.0000     4.7533 r
+  Exec/Executing/U7362/CO (LVT_ADH1HDV1)                0.0931    0.1395     4.8928 r
+  Exec/Executing/n6827 (net)                    1                 0.0000     4.8928 r
+  Exec/Executing/U7397/B (LVT_ADH1HDV1)                 0.0931    0.0000     4.8928 r
+  Exec/Executing/U7397/CO (LVT_ADH1HDV1)                0.0923    0.1395     5.0323 r
+  Exec/Executing/n6906 (net)                    1                 0.0000     5.0323 r
+  Exec/Executing/U7438/B (LVT_ADH1HDV1)                 0.0923    0.0000     5.0323 r
+  Exec/Executing/U7438/CO (LVT_ADH1HDV1)                0.0925    0.1393     5.1716 r
+  Exec/Executing/n6981 (net)                    1                 0.0000     5.1716 r
+  Exec/Executing/U7478/B (LVT_ADH1HDV1)                 0.0925    0.0000     5.1716 r
+  Exec/Executing/U7478/CO (LVT_ADH1HDV1)                0.0929    0.1394     5.3110 r
+  Exec/Executing/n6988 (net)                    1                 0.0000     5.3110 r
+  Exec/Executing/U7482/B (LVT_ADH1HDV1)                 0.0929    0.0000     5.3110 r
+  Exec/Executing/U7482/CO (LVT_ADH1HDV1)                0.0916    0.1394     5.4504 r
+  Exec/Executing/n6994 (net)                    1                 0.0000     5.4504 r
+  Exec/Executing/U7486/B (LVT_ADH1HDV1)                 0.0916    0.0000     5.4504 r
+  Exec/Executing/U7486/CO (LVT_ADH1HDV1)                0.0926    0.1392     5.5896 r
+  Exec/Executing/n7003 (net)                    1                 0.0000     5.5896 r
+  Exec/Executing/U7493/B (LVT_ADH1HDV1)                 0.0926    0.0000     5.5896 r
+  Exec/Executing/U7493/CO (LVT_ADH1HDV1)                0.0794    0.1315     5.7211 r
+  Exec/Executing/n7004 (net)                    1                 0.0000     5.7211 r
+  Exec/Executing/U7494/A1 (LVT_XOR2HDV2)                0.0794    0.0000     5.7211 r
+  Exec/Executing/U7494/Z (LVT_XOR2HDV2)                 0.0650    0.1321     5.8532 f
+  Exec/Executing/n7005 (net)                    1                 0.0000     5.8532 f
+  Exec/Executing/U36/A1 (LVT_NAND2HDV1)                 0.0650    0.0000     5.8532 f
+  Exec/Executing/U36/ZN (LVT_NAND2HDV1)                 0.1036    0.0485     5.9017 r
+  Exec/Executing/n7007 (net)                    1                 0.0000     5.9017 r
+  Exec/Executing/U595/B (LVT_OAI211HDV1)                0.1036    0.0000     5.9017 r
+  Exec/Executing/U595/ZN (LVT_OAI211HDV1)               0.1283    0.0866     5.9883 f
+  Exec/Executing/io_toPC_calc[63] (net)         1                 0.0000     5.9883 f
+  Exec/Executing/io_toPC_calc[63] (ysyx_210171_Executing_0)       0.0000     5.9883 f
+  Exec/io_toPC_calc[63] (net)                                     0.0000     5.9883 f
+  Exec/io_toPC_calc[63] (ysyx_210171_Exec_0)                      0.0000     5.9883 f
+  Exec_io_toPC_calc[63] (net)                                     0.0000     5.9883 f
+  MemAc/io_toPC_I_calc[63] (ysyx_210171_MemAc_0)                  0.0000     5.9883 f
+  MemAc/io_toPC_I_calc[63] (net)                                  0.0000     5.9883 f
+  MemAc/U140/B1 (LVT_AO22HDV1)                          0.1283    0.0000     5.9883 f
+  MemAc/U140/Z (LVT_AO22HDV1)                           0.0744    0.2065     6.1948 f
+  MemAc/n783 (net)                              1                 0.0000     6.1948 f
+  MemAc/p_calc_reg_63_/D (LVT_DQHDV1)                   0.0744    0.0000     6.1948 f
+  data arrival time                                                          6.1948
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  MemAc/p_calc_reg_63_/CK (LVT_DQHDV1)                            0.0000     6.3500 r
+  library setup time                                             -0.1489     6.2011
+  data required time                                                         6.2011
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2011
+  data arrival time                                                         -6.1948
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0063
+  Startpoint: Exec/imme_reg_4_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: MemAc/g_calc_reg_62_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  Exec/imme_reg_4_/CK (LVT_DQHDV1)                      0.0000    0.0000 #   0.0000 r
+  Exec/imme_reg_4_/Q (LVT_DQHDV1)                       0.1656    0.2980     0.2980 r
+  Exec/Executing_io_imme[4] (net)               4                 0.0000     0.2980 r
+  Exec/Executing/io_imme[4] (ysyx_210171_Executing_0)             0.0000     0.2980 r
+  Exec/Executing/io_imme[4] (net)                                 0.0000     0.2980 r
+  Exec/Executing/U597/I (LVT_INHDV4)                    0.1656    0.0000     0.2980 r
+  Exec/Executing/U597/ZN (LVT_INHDV4)                   0.1743    0.1447     0.4427 f
+  Exec/Executing/n301 (net)                    29                 0.0000     0.4427 f
+  Exec/Executing/U602/I (LVT_INHDV4)                    0.1743    0.0000     0.4427 f
+  Exec/Executing/U602/ZN (LVT_INHDV4)                   0.4971    0.3156     0.7583 r
+  Exec/Executing/n5668 (net)                   53                 0.0000     0.7583 r
+  Exec/Executing/U707/A1 (LVT_NAND2HDV1)                0.4971    0.0000     0.7583 r
+  Exec/Executing/U707/ZN (LVT_NAND2HDV1)                0.1583    0.1188     0.8770 f
+  Exec/Executing/n270 (net)                     2                 0.0000     0.8770 f
+  Exec/Executing/U401/A2 (LVT_OAI21HDV1)                0.1583    0.0000     0.8770 f
+  Exec/Executing/U401/ZN (LVT_OAI21HDV1)                0.2449    0.1781     1.0552 r
+  Exec/Executing/n328 (net)                     3                 0.0000     1.0552 r
+  Exec/Executing/U712/A1 (LVT_AOI21HDV1)                0.2449    0.0000     1.0552 r
+  Exec/Executing/U712/ZN (LVT_AOI21HDV1)                0.1188    0.1018     1.1570 f
+  Exec/Executing/n118 (net)                     1                 0.0000     1.1570 f
+  Exec/Executing/U713/B (LVT_OAI21HDV2)                 0.1188    0.0000     1.1570 f
+  Exec/Executing/U713/ZN (LVT_OAI21HDV2)                0.1595    0.0655     1.2224 r
+  Exec/Executing/n224 (net)                     2                 0.0000     1.2224 r
+  Exec/Executing/U141/A1 (LVT_AOI21HDV1)                0.1595    0.0000     1.2224 r
+  Exec/Executing/U141/ZN (LVT_AOI21HDV1)                0.1210    0.1049     1.3273 f
+  Exec/Executing/n197 (net)                     2                 0.0000     1.3273 f
+  Exec/Executing/U885/A1 (LVT_OAI21HDV2)                0.1210    0.0000     1.3273 f
+  Exec/Executing/U885/ZN (LVT_OAI21HDV2)                0.1594    0.1208     1.4481 r
+  Exec/Executing/n699 (net)                     2                 0.0000     1.4481 r
+  Exec/Executing/U445/A1 (LVT_AOI21HDV1)                0.1594    0.0000     1.4481 r
+  Exec/Executing/U445/ZN (LVT_AOI21HDV1)                0.1238    0.1072     1.5553 f
+  Exec/Executing/n755 (net)                     2                 0.0000     1.5553 f
+  Exec/Executing/U449/A1 (LVT_OAI21HDV1)                0.1238    0.0000     1.5553 f
+  Exec/Executing/U449/ZN (LVT_OAI21HDV1)                0.2156    0.1536     1.7089 r
+  Exec/Executing/n763 (net)                     2                 0.0000     1.7089 r
+  Exec/Executing/U452/A1 (LVT_AOI21HDV1)                0.2156    0.0000     1.7089 r
+  Exec/Executing/U452/ZN (LVT_AOI21HDV1)                0.1345    0.1173     1.8262 f
+  Exec/Executing/n771 (net)                     2                 0.0000     1.8262 f
+  Exec/Executing/U456/A1 (LVT_OAI21HDV1)                0.1345    0.0000     1.8262 f
+  Exec/Executing/U456/ZN (LVT_OAI21HDV1)                0.2159    0.1564     1.9826 r
+  Exec/Executing/n779 (net)                     2                 0.0000     1.9826 r
+  Exec/Executing/U459/A1 (LVT_AOI21HDV1)                0.2159    0.0000     1.9826 r
+  Exec/Executing/U459/ZN (LVT_AOI21HDV1)                0.1346    0.1173     2.0999 f
+  Exec/Executing/n787 (net)                     2                 0.0000     2.0999 f
+  Exec/Executing/U463/A1 (LVT_OAI21HDV1)                0.1346    0.0000     2.0999 f
+  Exec/Executing/U463/ZN (LVT_OAI21HDV1)                0.2159    0.1564     2.2563 r
+  Exec/Executing/n795 (net)                     2                 0.0000     2.2563 r
+  Exec/Executing/U466/A1 (LVT_AOI21HDV1)                0.2159    0.0000     2.2563 r
+  Exec/Executing/U466/ZN (LVT_AOI21HDV1)                0.1347    0.1174     2.3738 f
+  Exec/Executing/n1020 (net)                    2                 0.0000     2.3738 f
+  Exec/Executing/U470/A1 (LVT_OAI21HDV1)                0.1347    0.0000     2.3738 f
+  Exec/Executing/U470/ZN (LVT_OAI21HDV1)                0.2159    0.1564     2.5302 r
+  Exec/Executing/n1728 (net)                    2                 0.0000     2.5302 r
+  Exec/Executing/U473/A1 (LVT_AOI21HDV1)                0.2159    0.0000     2.5302 r
+  Exec/Executing/U473/ZN (LVT_AOI21HDV1)                0.1346    0.1173     2.6475 f
+  Exec/Executing/n1781 (net)                    2                 0.0000     2.6475 f
+  Exec/Executing/U477/A1 (LVT_OAI21HDV1)                0.1346    0.0000     2.6475 f
+  Exec/Executing/U477/ZN (LVT_OAI21HDV1)                0.2159    0.1564     2.8039 r
+  Exec/Executing/n4786 (net)                    2                 0.0000     2.8039 r
+  Exec/Executing/U480/A1 (LVT_AOI21HDV1)                0.2159    0.0000     2.8039 r
+  Exec/Executing/U480/ZN (LVT_AOI21HDV1)                0.1346    0.1173     2.9213 f
+  Exec/Executing/n5344 (net)                    2                 0.0000     2.9213 f
+  Exec/Executing/U485/A1 (LVT_OAI21HDV1)                0.1346    0.0000     2.9213 f
+  Exec/Executing/U485/ZN (LVT_OAI21HDV1)                0.2159    0.1564     3.0777 r
+  Exec/Executing/n5807 (net)                    2                 0.0000     3.0777 r
+  Exec/Executing/U487/A1 (LVT_AOI21HDV1)                0.2159    0.0000     3.0777 r
+  Exec/Executing/U487/ZN (LVT_AOI21HDV1)                0.1346    0.1173     3.1950 f
+  Exec/Executing/n6047 (net)                    2                 0.0000     3.1950 f
+  Exec/Executing/U491/A1 (LVT_OAI21HDV1)                0.1346    0.0000     3.1950 f
+  Exec/Executing/U491/ZN (LVT_OAI21HDV1)                0.2300    0.1643     3.3593 r
+  Exec/Executing/n6116 (net)                    2                 0.0000     3.3593 r
+  Exec/Executing/U6936/A1 (LVT_AOI21HDV2)               0.2300    0.0000     3.3593 r
+  Exec/Executing/U6936/ZN (LVT_AOI21HDV2)               0.1220    0.1066     3.4660 f
+  Exec/Executing/n6206 (net)                    2                 0.0000     3.4660 f
+  Exec/Executing/U7013/A1 (LVT_OAI21HDV2)               0.1220    0.0000     3.4660 f
+  Exec/Executing/U7013/ZN (LVT_OAI21HDV2)               0.1854    0.1355     3.6015 r
+  Exec/Executing/n6279 (net)                    2                 0.0000     3.6015 r
+  Exec/Executing/U7063/A1 (LVT_AOI21HDV2)               0.1854    0.0000     3.6015 r
+  Exec/Executing/U7063/ZN (LVT_AOI21HDV2)               0.1084    0.0969     3.6984 f
+  Exec/Executing/n6442 (net)                    2                 0.0000     3.6984 f
+  Exec/Executing/U148/A1 (LVT_OAI21HDV1)                0.1084    0.0000     3.6984 f
+  Exec/Executing/U148/ZN (LVT_OAI21HDV1)                0.2160    0.1496     3.8480 r
+  Exec/Executing/n6451 (net)                    2                 0.0000     3.8480 r
+  Exec/Executing/U149/A1 (LVT_AOI21HDV1)                0.2160    0.0000     3.8480 r
+  Exec/Executing/U149/ZN (LVT_AOI21HDV1)                0.1346    0.1173     3.9653 f
+  Exec/Executing/n6525 (net)                    2                 0.0000     3.9653 f
+  Exec/Executing/U151/A1 (LVT_OAI21HDV1)                0.1346    0.0000     3.9653 f
+  Exec/Executing/U151/ZN (LVT_OAI21HDV1)                0.2163    0.1564     4.1217 r
+  Exec/Executing/n6599 (net)                    2                 0.0000     4.1217 r
+  Exec/Executing/U152/A1 (LVT_AOI21HDV1)                0.2163    0.0000     4.1217 r
+  Exec/Executing/U152/ZN (LVT_AOI21HDV1)                0.1347    0.1174     4.2391 f
+  Exec/Executing/n6675 (net)                    2                 0.0000     4.2391 f
+  Exec/Executing/U154/A1 (LVT_OAI21HDV1)                0.1347    0.0000     4.2391 f
+  Exec/Executing/U154/ZN (LVT_OAI21HDV1)                0.2162    0.1564     4.3955 r
+  Exec/Executing/n6751 (net)                    2                 0.0000     4.3955 r
+  Exec/Executing/U155/A1 (LVT_AOI21HDV1)                0.2162    0.0000     4.3955 r
+  Exec/Executing/U155/ZN (LVT_AOI21HDV1)                0.1346    0.1174     4.5129 f
+  Exec/Executing/n6825 (net)                    2                 0.0000     4.5129 f
+  Exec/Executing/U157/A1 (LVT_OAI21HDV1)                0.1346    0.0000     4.5129 f
+  Exec/Executing/U157/ZN (LVT_OAI21HDV1)                0.2162    0.1564     4.6693 r
+  Exec/Executing/n6903 (net)                    2                 0.0000     4.6693 r
+  Exec/Executing/U158/A1 (LVT_AOI21HDV1)                0.2162    0.0000     4.6693 r
+  Exec/Executing/U158/ZN (LVT_AOI21HDV1)                0.1348    0.1175     4.7868 f
+  Exec/Executing/n6980 (net)                    2                 0.0000     4.7868 f
+  Exec/Executing/U33/A1 (LVT_OAI21HDV1)                 0.1348    0.0000     4.7868 f
+  Exec/Executing/U33/ZN (LVT_OAI21HDV1)                 0.1776    0.1344     4.9212 r
+  Exec/Executing/n6987 (net)                    1                 0.0000     4.9212 r
+  Exec/Executing/U7481/CI (LVT_AD1HDV1)                 0.1776    0.0000     4.9212 r
+  Exec/Executing/U7481/CO (LVT_AD1HDV1)                 0.1220    0.2077     5.1289 r
+  Exec/Executing/n6993 (net)                    1                 0.0000     5.1289 r
+  Exec/Executing/U7485/CI (LVT_AD1HDV1)                 0.1220    0.0000     5.1289 r
+  Exec/Executing/U7485/CO (LVT_AD1HDV1)                 0.1225    0.1963     5.3252 r
+  Exec/Executing/n7000 (net)                    1                 0.0000     5.3252 r
+  Exec/Executing/U7490/CI (LVT_AD1HDV1)                 0.1225    0.0000     5.3252 r
+  Exec/Executing/U7490/S (LVT_AD1HDV1)                  0.1515    0.2139     5.5392 f
+  Exec/Executing/n7275 (net)                    2                 0.0000     5.5392 f
+  Exec/Executing/U245/A1 (LVT_NAND2HDV1)                0.1515    0.0000     5.5392 f
+  Exec/Executing/U245/ZN (LVT_NAND2HDV1)                0.0783    0.0643     5.6035 r
+  Exec/Executing/n7339 (net)                    1                 0.0000     5.6035 r
+  Exec/Executing/U244/B (LVT_OAI211HDV1)                0.0783    0.0000     5.6035 r
+  Exec/Executing/U244/ZN (LVT_OAI211HDV1)               0.1295    0.0876     5.6910 f
+  Exec/Executing/n7341 (net)                    1                 0.0000     5.6910 f
+  Exec/Executing/U243/B (LVT_AOI21HDV1)                 0.1295    0.0000     5.6910 f
+  Exec/Executing/U243/ZN (LVT_AOI21HDV1)                0.1421    0.1047     5.7957 r
+  Exec/Executing/n7343 (net)                    1                 0.0000     5.7957 r
+  Exec/Executing/U242/B (LVT_IOA21HDV1)                 0.1421    0.0000     5.7957 r
+  Exec/Executing/U242/ZN (LVT_IOA21HDV1)                0.0992    0.0808     5.8765 f
+  Exec/Executing/io_g_calc[62] (net)            2                 0.0000     5.8765 f
+  Exec/Executing/io_g_calc[62] (ysyx_210171_Executing_0)          0.0000     5.8765 f
+  Exec/io_toGPR_calc[62] (net)                                    0.0000     5.8765 f
+  Exec/io_toGPR_calc[62] (ysyx_210171_Exec_0)                     0.0000     5.8765 f
+  Exec_io_toGPR_calc[62] (net)                                    0.0000     5.8765 f
+  MemAc/io_toGPR_I_calc[62] (ysyx_210171_MemAc_0)                 0.0000     5.8765 f
+  MemAc/io_toGPR_I_calc[62] (net)                                 0.0000     5.8765 f
+  MemAc/U91/A1 (LVT_AOI21HDV1)                          0.0992    0.0000     5.8765 f
+  MemAc/U91/ZN (LVT_AOI21HDV1)                          0.1563    0.1014     5.9778 r
+  MemAc/n366 (net)                              1                 0.0000     5.9778 r
+  MemAc/U103/A2 (LVT_OAI211HDV1)                        0.1563    0.0000     5.9778 r
+  MemAc/U103/ZN (LVT_OAI211HDV1)                        0.1127    0.1087     6.0865 f
+  MemAc/n555 (net)                              1                 0.0000     6.0865 f
+  MemAc/g_calc_reg_62_/D (LVT_DQHDV1)                   0.1127    0.0000     6.0865 f
+  data arrival time                                                          6.0865
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  MemAc/g_calc_reg_62_/CK (LVT_DQHDV1)                            0.0000     6.3500 r
+  library setup time                                             -0.1568     6.1932
+  data required time                                                         6.1932
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1932
+  data arrival time                                                         -6.0865
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.1067
