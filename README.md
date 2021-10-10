@@ -20,6 +20,8 @@ ysyx_submit中仓库存在submit和report两个目录，submit目录用于存放
       ├─ dc_report                                 #DC综合报告
       
       ├─ vcs_report                                #VCS仿真报告
+      
+      ├─ commit date                               #本次报告对应的RTL代码提交时间
 ```
 
 
