@@ -1,0 +1,1216 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Mon_Oct_11_13:29:01_2021_+0800
+top_name: ysyx_210611
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+245181.3  245181.3  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+22943  22943  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210611
+Date   : Mon Oct 11 13:36:42 2021
+****************************************
+    
+Number of ports:                         9827
+Number of nets:                         30270
+Number of cells:                        23208
+Number of combinational cells:          18901
+Number of sequential cells:              4042
+Number of macros/black boxes:               0
+Number of buf/inv:                       4542
+Number of references:                       7
+Combinational area:             141887.157924
+Buf/Inv area:                    20248.653532
+Noncombinational area:          103294.091499
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                245181.249423
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  --------------------------
+ysyx_210611                       245181.2494    100.0     723.5024       0.0000  0.0000  ysyx_210611
+ysyx_210611_Clint                  14276.3970      5.8    8374.0696    5902.3274  0.0000  ysyx_210611_clint_0
+ysyx_210611_axi_2x2                 6090.5992      2.5    5906.3616     184.2376  0.0000  ysyx_210611_axi_2x2_0
+ysyx_210611_if_axi_rw               3532.7896      1.4    2431.3984    1101.3912  0.0000  ysyx_210611_axi_rw_3
+ysyx_210611_mem_axi_rw              9667.7673      3.9    5833.7424    3834.0249  0.0000  ysyx_210611_axi_rw_2
+ysyx_210611_u_cpu                 210890.1939     86.0       0.0000       0.0000  0.0000  ysyx_210611_cpu_0
+ysyx_210611_u_cpu/ysyx_210611_CSRfile
+                                   24184.8836      9.9   12482.4336   11702.4500  0.0000  ysyx_210611_csrfile_0
+ysyx_210611_u_cpu/ysyx_210611_Ex_stage
+                                   46457.4611     18.9    9597.8376   10886.1564  0.0000  ysyx_210611_ex_stage_0
+ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Excp_handler
+                                    3431.9296      1.4    3431.9296       0.0000  0.0000  ysyx_210611_excp_handler_0
+ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu
+                                   14873.4880      6.1   14873.4880       0.0000  0.0000  ysyx_210611_ex_stage_alu_0
+ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj
+                                    4047.8480      1.7    4047.8480       0.0000  0.0000  ysyx_210611_ex_stage_bj_0
+ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward
+                                    3620.2016      1.5    3620.2016       0.0000  0.0000  ysyx_210611_forward_0
+ysyx_210611_u_cpu/ysyx_210611_Id_stage
+                                    6549.1761      2.7    4069.3648    2479.8113  0.0000  ysyx_210611_id_stage_0
+ysyx_210611_u_cpu/ysyx_210611_If_stage
+                                    8160.2465      3.3    3995.4008    4164.8457  0.0000  ysyx_210611_if_stage_0
+ysyx_210611_u_cpu/ysyx_210611_Mem_stage
+                                   12912.7698      5.3    5731.5376    7181.2322  0.0000  ysyx_210611_mem_stage_0
+ysyx_210611_u_cpu/ysyx_210611_Regfile
+                                  102813.9959     41.9   52120.4134   50693.5825  0.0000  ysyx_210611_regfile_0
+ysyx_210611_u_cpu/ysyx_210611_Wb_stage
+                                    9811.6610      4.0    4647.6288    5164.0322  0.0000  ysyx_210611_wb_stage_0
+--------------------------------  -----------  -------  -----------  -----------  ------  --------------------------
+Total                                                   141887.1579  103294.0915  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210611
+Date   : Mon Oct 11 13:36:40 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: ysyx_210611_u_cpu/ysyx_210611_If_stage/if_axi_addr_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg/CK (LVT_DHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg/QN (LVT_DHDV1)
+                                                        0.0686    0.3267     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n604 (net)
+                                                1                 0.0000     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U94/A2 (LVT_NAND2HDV2)
+                                                        0.0686    0.0000     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U94/ZN (LVT_NAND2HDV2)
+                                                        0.1211    0.0873     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n479 (net)
+                                                2                 0.0000     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U624/I (LVT_INHDV6)
+                                                        0.1211    0.0000     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U624/ZN (LVT_INHDV6)
+                                                        0.1249    0.0978     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n598 (net)
+                                               19                 0.0000     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U159/A1 (LVT_NAND2HDV1)
+                                                        0.1249    0.0000     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U159/ZN (LVT_NAND2HDV1)
+                                                        0.0758    0.0663     0.5781 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n470 (net)
+                                                1                 0.0000     0.5781 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U158/I (LVT_INHDV2)
+                                                        0.0758    0.0000     0.5781 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U158/ZN (LVT_INHDV2)
+                                                        0.1964    0.1291     0.7072 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_rs1_addr[3] (net)
+                                                8                 0.0000     0.7072 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_rs1_addr[3] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     0.7072 r
+  ysyx_210611_u_cpu/rs1_r_addr[3] (net)                           0.0000     0.7072 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_addr1[3] (ysyx_210611_regfile_0)
+                                                                  0.0000     0.7072 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_addr1[3] (net)          0.0000     0.7072 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1031/A1 (LVT_XOR2HDV2)
+                                                        0.1964    0.0000     0.7072 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1031/Z (LVT_XOR2HDV2)
+                                                        0.0672    0.1645     0.8718 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n716 (net)
+                                                1                 0.0000     0.8718 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1033/A1 (LVT_NOR2HDV2)
+                                                        0.0672    0.0000     0.8718 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1033/ZN (LVT_NOR2HDV2)
+                                                        0.1282    0.0880     0.9598 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n720 (net)
+                                                1                 0.0000     0.9598 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1037/A1 (LVT_NAND4HDV4)
+                                                        0.1282    0.0000     0.9598 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1037/ZN (LVT_NAND4HDV4)
+                                                        0.1502    0.1112     1.0710 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n737 (net)
+                                                3                 0.0000     1.0710 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U316/I (LVT_INHDV2)
+                                                        0.1502    0.0000     1.0710 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U316/ZN (LVT_INHDV2)
+                                                        0.0659    0.0564     1.1273 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n733 (net)
+                                                1                 0.0000     1.1273 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1045/A1 (LVT_NOR2HDV2)
+                                                        0.0659    0.0000     1.1273 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1045/ZN (LVT_NOR2HDV2)
+                                                        0.1163    0.0692     1.1965 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n736 (net)
+                                                3                 0.0000     1.1965 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U329/A1 (LVT_NAND2HDV2)
+                                                        0.1163    0.0000     1.1965 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U329/ZN (LVT_NAND2HDV2)
+                                                        0.1827    0.1297     1.3263 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n759 (net)
+                                                8                 0.0000     1.3263 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U324/A1 (LVT_NOR2HDV1)
+                                                        0.1827    0.0000     1.3263 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U324/ZN (LVT_NOR2HDV1)
+                                                        0.0926    0.0559     1.3822 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n1580 (net)
+                                                1                 0.0000     1.3822 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U237/I (LVT_INHDV2)
+                                                        0.0926    0.0000     1.3822 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U237/ZN (LVT_INHDV2)
+                                                        0.1031    0.0798     1.4620 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n120 (net)
+                                                3                 0.0000     1.4620 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U47/I (LVT_INHDV1)
+                                                        0.1031    0.0000     1.4620 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U47/ZN (LVT_INHDV1)
+                                                        0.2024    0.1482     1.6101 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n121 (net)
+                                               13                 0.0000     1.6101 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1342/B1 (LVT_AOI22HDV1)
+                                                        0.2024    0.0000     1.6101 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1342/ZN (LVT_AOI22HDV1)
+                                                        0.1607    0.1240     1.7342 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n1037 (net)
+                                                1                 0.0000     1.7342 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1346/A1 (LVT_NAND4HDV1)
+                                                        0.1607    0.0000     1.7342 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1346/ZN (LVT_NAND4HDV1)
+                                                        0.1273    0.1003     1.8344 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n1038 (net)
+                                                1                 0.0000     1.8344 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1347/A4 (LVT_OR4HDV1)
+                                                        0.1273    0.0000     1.8344 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U1347/Z (LVT_OR4HDV1)
+                                                        0.1147    0.3982     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_data1[17] (net)
+                                                1                 0.0000     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_data1[17] (ysyx_210611_regfile_0)
+                                                                  0.0000     2.2326 f
+  ysyx_210611_u_cpu/r_data1[17] (net)                             0.0000     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/rs1_data[17] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/rs1_data[17] (net)       0.0000     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/ex_rs1_data[17] (ysyx_210611_forward_0)
+                                                                  0.0000     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/ex_rs1_data[17] (net)
+                                                                  0.0000     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U508/A1 (LVT_NAND2HDV1)
+                                                        0.1147    0.0000     2.2326 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U508/ZN (LVT_NAND2HDV1)
+                                                        0.1009    0.0579     2.2905 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/n371 (net)
+                                                1                 0.0000     2.2905 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U10/B (LVT_OAI211HDV1)
+                                                        0.1009    0.0000     2.2905 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U10/ZN (LVT_OAI211HDV1)
+                                                        0.1392    0.1029     2.3934 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/rs1_forward[17] (net)
+                                                2                 0.0000     2.3934 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/rs1_forward[17] (ysyx_210611_forward_0)
+                                                                  0.0000     2.3934 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/rs1_forward[17] (net)    0.0000     2.3934 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/rs1_data[17] (ysyx_210611_ex_stage_bj_0)
+                                                                  0.0000     2.3934 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/rs1_data[17] (net)
+                                                                  0.0000     2.3934 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U132/I1 (LVT_MUX2HDV1)
+                                                        0.1392    0.0000     2.3934 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U132/Z (LVT_MUX2HDV1)
+                                                        0.0887    0.2154     2.6088 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n44 (net)
+                                                2                 0.0000     2.6088 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U35/A1 (LVT_NOR2HDV1)
+                                                        0.0887    0.0000     2.6088 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U35/ZN (LVT_NOR2HDV1)
+                                                        0.2061    0.1354     2.7442 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n383 (net)
+                                                3                 0.0000     2.7442 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U34/A1 (LVT_OAI21HDV1)
+                                                        0.2061    0.0000     2.7442 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U34/ZN (LVT_OAI21HDV1)
+                                                        0.0988    0.0942     2.8384 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n369 (net)
+                                                2                 0.0000     2.8384 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U173/A2 (LVT_AOI21HDV1)
+                                                        0.0988    0.0000     2.8384 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U173/ZN (LVT_AOI21HDV1)
+                                                        0.1814    0.1425     2.9810 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n343 (net)
+                                                2                 0.0000     2.9810 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U179/A1 (LVT_OAI21HDV1)
+                                                        0.1814    0.0000     2.9810 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U179/ZN (LVT_OAI21HDV1)
+                                                        0.1037    0.0927     3.0736 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n290 (net)
+                                                2                 0.0000     3.0736 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U191/A1 (LVT_AOI21HDV1)
+                                                        0.1037    0.0000     3.0736 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U191/ZN (LVT_AOI21HDV1)
+                                                        0.1442    0.1109     3.1846 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n73 (net)
+                                                1                 0.0000     3.1846 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U192/B (LVT_OAI21HDV2)
+                                                        0.1442    0.0000     3.1846 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U192/ZN (LVT_OAI21HDV2)
+                                                        0.0895    0.0810     3.2655 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n207 (net)
+                                                2                 0.0000     3.2655 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U7/A1 (LVT_AOI21HDV1)
+                                                        0.0895    0.0000     3.2655 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U7/ZN (LVT_AOI21HDV1)
+                                                        0.2037    0.1408     3.4064 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n206 (net)
+                                                2                 0.0000     3.4064 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U50/A1 (LVT_OAI21HDV1)
+                                                        0.2037    0.0000     3.4064 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U50/ZN (LVT_OAI21HDV1)
+                                                        0.1145    0.1027     3.5091 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n201 (net)
+                                                2                 0.0000     3.5091 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U243/A1 (LVT_AOI21HDV1)
+                                                        0.1145    0.0000     3.5091 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U243/ZN (LVT_AOI21HDV1)
+                                                        0.2039    0.1451     3.6542 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n197 (net)
+                                                2                 0.0000     3.6542 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U58/A1 (LVT_OAI21HDV1)
+                                                        0.2039    0.0000     3.6542 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U58/ZN (LVT_OAI21HDV1)
+                                                        0.1145    0.1027     3.7569 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n192 (net)
+                                                2                 0.0000     3.7569 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U251/A1 (LVT_AOI21HDV1)
+                                                        0.1145    0.0000     3.7569 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U251/ZN (LVT_AOI21HDV1)
+                                                        0.2213    0.1547     3.9115 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n188 (net)
+                                                2                 0.0000     3.9115 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U57/A1 (LVT_OAI21HDV2)
+                                                        0.2213    0.0000     3.9115 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U57/ZN (LVT_OAI21HDV2)
+                                                        0.0965    0.0885     4.0001 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n183 (net)
+                                                2                 0.0000     4.0001 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U259/A1 (LVT_AOI21HDV1)
+                                                        0.0965    0.0000     4.0001 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U259/ZN (LVT_AOI21HDV1)
+                                                        0.2213    0.1515     4.1516 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n179 (net)
+                                                2                 0.0000     4.1516 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U56/A1 (LVT_OAI21HDV2)
+                                                        0.2213    0.0000     4.1516 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U56/ZN (LVT_OAI21HDV2)
+                                                        0.0965    0.0885     4.2401 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n174 (net)
+                                                2                 0.0000     4.2401 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U267/A1 (LVT_AOI21HDV1)
+                                                        0.0965    0.0000     4.2401 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U267/ZN (LVT_AOI21HDV1)
+                                                        0.2213    0.1515     4.3916 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n170 (net)
+                                                2                 0.0000     4.3916 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U55/A1 (LVT_OAI21HDV2)
+                                                        0.2213    0.0000     4.3916 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U55/ZN (LVT_OAI21HDV2)
+                                                        0.0965    0.0885     4.4801 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n165 (net)
+                                                2                 0.0000     4.4801 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U275/A1 (LVT_AOI21HDV1)
+                                                        0.0965    0.0000     4.4801 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U275/ZN (LVT_AOI21HDV1)
+                                                        0.2213    0.1515     4.6316 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n161 (net)
+                                                2                 0.0000     4.6316 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U54/A1 (LVT_OAI21HDV2)
+                                                        0.2213    0.0000     4.6316 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U54/ZN (LVT_OAI21HDV2)
+                                                        0.1014    0.0927     4.7242 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n156 (net)
+                                                2                 0.0000     4.7242 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U283/A1 (LVT_AOI21HDV2)
+                                                        0.1014    0.0000     4.7242 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U283/ZN (LVT_AOI21HDV2)
+                                                        0.1715    0.1231     4.8474 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n152 (net)
+                                                2                 0.0000     4.8474 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U53/A1 (LVT_OAI21HDV2)
+                                                        0.1715    0.0000     4.8474 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U53/ZN (LVT_OAI21HDV2)
+                                                        0.1014    0.0882     4.9356 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n147 (net)
+                                                2                 0.0000     4.9356 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U291/A1 (LVT_AOI21HDV2)
+                                                        0.1014    0.0000     4.9356 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U291/ZN (LVT_AOI21HDV2)
+                                                        0.1715    0.1231     5.0587 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n143 (net)
+                                                2                 0.0000     5.0587 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U52/A1 (LVT_OAI21HDV2)
+                                                        0.1715    0.0000     5.0587 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U52/ZN (LVT_OAI21HDV2)
+                                                        0.1013    0.0882     5.1469 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n138 (net)
+                                                2                 0.0000     5.1469 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U1/A1 (LVT_AOI21HDV2)
+                                                        0.1013    0.0000     5.1469 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U1/ZN (LVT_AOI21HDV2)
+                                                        0.1715    0.1231     5.2700 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n134 (net)
+                                                2                 0.0000     5.2700 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U302/A1 (LVT_OAI21HDV2)
+                                                        0.1715    0.0000     5.2700 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U302/ZN (LVT_OAI21HDV2)
+                                                        0.0826    0.0737     5.3437 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n128 (net)
+                                                1                 0.0000     5.3437 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U306/CI (LVT_AD1HDV1)
+                                                        0.0826    0.0000     5.3437 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U306/CO (LVT_AD1HDV1)
+                                                        0.1170    0.1997     5.5435 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n126 (net)
+                                                1                 0.0000     5.5435 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U305/CI (LVT_AD1HDV1)
+                                                        0.1170    0.0000     5.5435 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U305/CO (LVT_AD1HDV1)
+                                                        0.1149    0.2074     5.7508 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n125 (net)
+                                                1                 0.0000     5.7508 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U69/A1 (LVT_XOR2HDV1)
+                                                        0.1149    0.0000     5.7508 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U69/Z (LVT_XOR2HDV1)
+                                                        0.0705    0.1604     5.9112 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/new_pc[63] (net)
+                                                1                 0.0000     5.9112 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/new_pc[63] (ysyx_210611_ex_stage_bj_0)
+                                                                  0.0000     5.9112 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_bj_pc[63] (net)       0.0000     5.9112 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U626/I0 (LVT_MUX2HDV1)
+                                                        0.0705    0.0000     5.9112 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U626/Z (LVT_MUX2HDV1)
+                                                        0.0667    0.1722     6.0834 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/bj_ctrl_bus[65] (net)
+                                                1                 0.0000     6.0834 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/bj_ctrl_bus[65] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     6.0834 f
+  ysyx_210611_u_cpu/bj_ctrl_bus[65] (net)                         0.0000     6.0834 f
+  ysyx_210611_u_cpu/ysyx_210611_If_stage/bj_ctrl_bus[65] (ysyx_210611_if_stage_0)
+                                                                  0.0000     6.0834 f
+  ysyx_210611_u_cpu/ysyx_210611_If_stage/bj_ctrl_bus[65] (net)    0.0000     6.0834 f
+  ysyx_210611_u_cpu/ysyx_210611_If_stage/U186/A1 (LVT_IOA21HDV2)
+                                                        0.0667    0.0000     6.0834 f
+  ysyx_210611_u_cpu/ysyx_210611_If_stage/U186/ZN (LVT_IOA21HDV2)
+                                                        0.0602    0.1181     6.2014 f
+  ysyx_210611_u_cpu/ysyx_210611_If_stage/n212 (net)
+                                                1                 0.0000     6.2014 f
+  ysyx_210611_u_cpu/ysyx_210611_If_stage/if_axi_addr_reg_63_/D (LVT_DQHDV1)
+                                                        0.0602    0.0000     6.2014 f
+  data arrival time                                                          6.2014
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  ysyx_210611_u_cpu/ysyx_210611_If_stage/if_axi_addr_reg_63_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1459     6.2041
+  data required time                                                         6.2041
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2041
+  data arrival time                                                         -6.2014
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0027
+  Startpoint: ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_bus_r_reg_2_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg/CK (LVT_DHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg/QN (LVT_DHDV1)
+                                                        0.0686    0.3267     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n604 (net)
+                                                1                 0.0000     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U94/A2 (LVT_NAND2HDV2)
+                                                        0.0686    0.0000     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U94/ZN (LVT_NAND2HDV2)
+                                                        0.1211    0.0873     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n479 (net)
+                                                2                 0.0000     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U624/I (LVT_INHDV6)
+                                                        0.1211    0.0000     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U624/ZN (LVT_INHDV6)
+                                                        0.1249    0.0978     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n598 (net)
+                                               19                 0.0000     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U593/A1 (LVT_AND2HDV4)
+                                                        0.1249    0.0000     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U593/Z (LVT_AND2HDV4)
+                                                        0.1173    0.1515     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_rs2_addr[4] (net)
+                                                8                 0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_rs2_addr[4] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     0.6633 r
+  ysyx_210611_u_cpu/rs2_r_addr[4] (net)                           0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_addr2[4] (ysyx_210611_regfile_0)
+                                                                  0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_addr2[4] (net)          0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U447/A1 (LVT_XOR2HDV2)
+                                                        0.1173    0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U447/Z (LVT_XOR2HDV2)
+                                                        0.0847    0.1607     0.8240 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n152 (net)
+                                                1                 0.0000     0.8240 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U227/A2 (LVT_NOR2HDV4)
+                                                        0.0847    0.0000     0.8240 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U227/ZN (LVT_NOR2HDV4)
+                                                        0.0875    0.0741     0.8981 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n157 (net)
+                                                1                 0.0000     0.8981 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U208/A1 (LVT_NAND4HDV4)
+                                                        0.0875    0.0000     0.8981 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U208/ZN (LVT_NAND4HDV4)
+                                                        0.1760    0.1182     1.0163 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n173 (net)
+                                                3                 0.0000     1.0163 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U181/I (LVT_INHDV4)
+                                                        0.1760    0.0000     1.0163 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U181/ZN (LVT_INHDV4)
+                                                        0.0666    0.0562     1.0725 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n169 (net)
+                                                1                 0.0000     1.0725 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U263/A1 (LVT_NOR2HDV4)
+                                                        0.0666    0.0000     1.0725 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U263/ZN (LVT_NOR2HDV4)
+                                                        0.0752    0.0402     1.1127 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n172 (net)
+                                                3                 0.0000     1.1127 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U480/A1 (LVT_NAND2HDV2)
+                                                        0.0752    0.0000     1.1127 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U480/ZN (LVT_NAND2HDV2)
+                                                        0.2274    0.1408     1.2534 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n193 (net)
+                                                8                 0.0000     1.2534 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U512/A1 (LVT_NOR2HDV2)
+                                                        0.2274    0.0000     1.2534 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U512/ZN (LVT_NOR2HDV2)
+                                                        0.1583    0.1404     1.3939 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n1109 (net)
+                                               11                 0.0000     1.3939 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U87/I (LVT_BUFHDV4)
+                                                        0.1583    0.0000     1.3939 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U87/Z (LVT_BUFHDV4)
+                                                        0.2997    0.2849     1.6788 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n40 (net)
+                                               54                 0.0000     1.6788 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U515/A1 (LVT_AOI22HDV1)
+                                                        0.2997    0.0000     1.6788 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U515/ZN (LVT_AOI22HDV1)
+                                                        0.1705    0.1603     1.8391 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n196 (net)
+                                                1                 0.0000     1.8391 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U516/A4 (LVT_NAND4HDV1)
+                                                        0.1705    0.0000     1.8391 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U516/ZN (LVT_NAND4HDV1)
+                                                        0.1278    0.1165     1.9556 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n200 (net)
+                                                1                 0.0000     1.9556 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U517/A4 (LVT_OR4HDV1)
+                                                        0.1278    0.0000     1.9556 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U517/Z (LVT_OR4HDV1)
+                                                        0.1147    0.3983     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_data2[15] (net)
+                                                1                 0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_data2[15] (ysyx_210611_regfile_0)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/r_data2[15] (net)                             0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/rs2_data[15] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/rs2_data[15] (net)       0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/ex_rs2_data[15] (ysyx_210611_forward_0)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/ex_rs2_data[15] (net)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U398/A1 (LVT_NAND2HDV1)
+                                                        0.1147    0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U398/ZN (LVT_NAND2HDV1)
+                                                        0.0968    0.0579     2.4117 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/n225 (net)
+                                                1                 0.0000     2.4117 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U26/B (LVT_OAI211HDV1)
+                                                        0.0968    0.0000     2.4117 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U26/ZN (LVT_OAI211HDV1)
+                                                        0.1370    0.1013     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/rs2_forward[15] (net)
+                                                2                 0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/rs2_forward[15] (ysyx_210611_forward_0)
+                                                                  0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_to_mem_bus[154] (net)
+                                                                  0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U611/B1 (LVT_AO22HDV2)
+                                                        0.1370    0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U611/Z (LVT_AO22HDV2)
+                                                        0.1226    0.2415     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/true_op2[15] (net)
+                                                5                 0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/op2[15] (ysyx_210611_ex_stage_alu_0)
+                                                                  0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/op2[15] (net)
+                                                                  0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U619/S (LVT_MUX2NHDV1)
+                                                        0.1226    0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U619/ZN (LVT_MUX2NHDV1)
+                                                        0.2248    0.1013     2.8558 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n41 (net)
+                                                2                 0.0000     2.8558 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U655/A1 (LVT_NAND2HDV1)
+                                                        0.2248    0.0000     2.8558 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U655/ZN (LVT_NAND2HDV1)
+                                                        0.1317    0.1101     2.9659 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1740 (net)
+                                                3                 0.0000     2.9659 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U657/A2 (LVT_OAI21HDV1)
+                                                        0.1317    0.0000     2.9659 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U657/ZN (LVT_OAI21HDV1)
+                                                        0.1976    0.1475     3.1134 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1209 (net)
+                                                2                 0.0000     3.1134 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U5/A2 (LVT_AOI21HDV1)
+                                                        0.1976    0.0000     3.1134 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U5/ZN (LVT_AOI21HDV1)
+                                                        0.1223    0.1067     3.2201 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n586 (net)
+                                                2                 0.0000     3.2201 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U667/A1 (LVT_OAI21HDV2)
+                                                        0.1223    0.0000     3.2201 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U667/ZN (LVT_OAI21HDV2)
+                                                        0.1704    0.1274     3.3475 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n145 (net)
+                                                2                 0.0000     3.3475 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U676/A1 (LVT_AOI21HDV2)
+                                                        0.1704    0.0000     3.3475 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U676/ZN (LVT_AOI21HDV2)
+                                                        0.1100    0.0977     3.4452 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n71 (net)
+                                                1                 0.0000     3.4452 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U677/B (LVT_OAI21HDV4)
+                                                        0.1100    0.0000     3.4452 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U677/ZN (LVT_OAI21HDV4)
+                                                        0.1455    0.0584     3.5036 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n258 (net)
+                                                2                 0.0000     3.5036 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U771/A1 (LVT_AOI21HDV4)
+                                                        0.1455    0.0000     3.5036 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U771/ZN (LVT_AOI21HDV4)
+                                                        0.0909    0.0807     3.5842 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n380 (net)
+                                                2                 0.0000     3.5842 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U772/A1 (LVT_OAI21HDV4)
+                                                        0.0909    0.0000     3.5842 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U772/ZN (LVT_OAI21HDV4)
+                                                        0.1537    0.1094     3.6936 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1270 (net)
+                                                2                 0.0000     3.6936 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U773/A1 (LVT_AOI21HDV4)
+                                                        0.1537    0.0000     3.6936 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U773/ZN (LVT_AOI21HDV4)
+                                                        0.0925    0.0823     3.7759 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n553 (net)
+                                                2                 0.0000     3.7759 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U774/A1 (LVT_OAI21HDV4)
+                                                        0.0925    0.0000     3.7759 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U774/ZN (LVT_OAI21HDV4)
+                                                        0.1532    0.1098     3.8857 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n793 (net)
+                                                2                 0.0000     3.8857 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U775/A1 (LVT_AOI21HDV4)
+                                                        0.1532    0.0000     3.8857 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U775/ZN (LVT_AOI21HDV4)
+                                                        0.0924    0.0822     3.9679 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1991 (net)
+                                                2                 0.0000     3.9679 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U776/A1 (LVT_OAI21HDV4)
+                                                        0.0924    0.0000     3.9679 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U776/ZN (LVT_OAI21HDV4)
+                                                        0.1527    0.1098     4.0777 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n758 (net)
+                                                2                 0.0000     4.0777 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U777/A1 (LVT_AOI21HDV4)
+                                                        0.1527    0.0000     4.0777 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U777/ZN (LVT_AOI21HDV4)
+                                                        0.0923    0.0821     4.1598 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n2009 (net)
+                                                2                 0.0000     4.1598 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U778/A1 (LVT_OAI21HDV4)
+                                                        0.0923    0.0000     4.1598 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U778/ZN (LVT_OAI21HDV4)
+                                                        0.1538    0.1097     4.2695 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n2024 (net)
+                                                2                 0.0000     4.2695 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U779/A1 (LVT_AOI21HDV4)
+                                                        0.1538    0.0000     4.2695 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U779/ZN (LVT_AOI21HDV4)
+                                                        0.0844    0.0759     4.3454 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1083 (net)
+                                                2                 0.0000     4.3454 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U553/A1 (LVT_OAI21HDV2)
+                                                        0.0844    0.0000     4.3454 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U553/ZN (LVT_OAI21HDV2)
+                                                        0.1441    0.1049     4.4503 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1111 (net)
+                                                1                 0.0000     4.4503 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U1628/CI (LVT_AD1HDV1)
+                                                        0.1441    0.0000     4.4503 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U1628/CO (LVT_AD1HDV1)
+                                                        0.1257    0.2033     4.6536 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n141 (net)
+                                                1                 0.0000     4.6536 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U431/A1 (LVT_XOR2HDV2)
+                                                        0.1257    0.0000     4.6536 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U431/Z (LVT_XOR2HDV2)
+                                                        0.0822    0.1611     4.8147 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n143 (net)
+                                                1                 0.0000     4.8147 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U430/A1 (LVT_NAND2HDV4)
+                                                        0.0822    0.0000     4.8147 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U430/ZN (LVT_NAND2HDV4)
+                                                        0.0690    0.0543     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/bj_data[5] (net)
+                                                3                 0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/bj_data[5] (ysyx_210611_ex_stage_alu_0)
+                                                                  0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_bj_data[5] (net)      0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_data[5] (ysyx_210611_ex_stage_bj_0)
+                                                                  0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_data[5] (net)
+                                                                  0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U12/I (LVT_INHDV2)
+                                                        0.0690    0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U12/ZN (LVT_INHDV2)
+                                                        0.0349    0.0339     4.9030 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n5 (net)
+                                                1                 0.0000     4.9030 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U5/B (LVT_OAI21HDV2)
+                                                        0.0349    0.0000     4.9030 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U5/ZN (LVT_OAI21HDV2)
+                                                        0.1261    0.0386     4.9415 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n10 (net)
+                                                1                 0.0000     4.9415 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U72/A1 (LVT_AND4HDV4)
+                                                        0.1261    0.0000     4.9415 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U72/Z (LVT_AND4HDV4)
+                                                        0.0550    0.1528     5.0944 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n11 (net)
+                                                1                 0.0000     5.0944 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U4/B1 (LVT_INOR3HDV2)
+                                                        0.0550    0.0000     5.0944 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U4/ZN (LVT_INOR3HDV2)
+                                                        0.0604    0.0416     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_ena (net)
+                                                1                 0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_ena (ysyx_210611_ex_stage_bj_0)
+                                                                  0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_bj_ena (net)          0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U932/A1 (LVT_INAND2HDV4)
+                                                        0.0604    0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U932/ZN (LVT_INAND2HDV4)
+                                                        0.1209    0.1245     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/bj_ctrl_bus[1] (net)
+                                                4                 0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/bj_ctrl_bus[1] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     5.2605 f
+  ysyx_210611_u_cpu/bj_ctrl_bus[1] (net)                          0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/bj_ctrl_bus[1] (ysyx_210611_id_stage_0)
+                                                                  0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/bj_ctrl_bus[1] (net)     0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/U211/A1 (LVT_AOI21HDV4)
+                                                        0.1209    0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/U211/ZN (LVT_AOI21HDV4)
+                                                        0.1323    0.1017     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/id_to_ex_valid (net)
+                                                2                 0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/id_to_ex_valid (ysyx_210611_id_stage_0)
+                                                                  0.0000     5.3622 r
+  ysyx_210611_u_cpu/id_to_ex_valid (net)                          0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_valid (ysyx_210611_ex_stage_0)
+                                                                  0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_valid (net)     0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U55/A1 (LVT_NAND2HDV4)
+                                                        0.1323    0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U55/ZN (LVT_NAND2HDV4)
+                                                        0.0786    0.0677     5.4299 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n589 (net)
+                                                3                 0.0000     5.4299 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U591/I (LVT_INHDV4)
+                                                        0.0786    0.0000     5.4299 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U591/ZN (LVT_INHDV4)
+                                                        0.1519    0.1064     5.5364 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n597 (net)
+                                               16                 0.0000     5.5364 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U5/A1 (LVT_NOR2HDV2)
+                                                        0.1519    0.0000     5.5364 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U5/ZN (LVT_NOR2HDV2)
+                                                        0.0637    0.0553     5.5916 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n590 (net)
+                                                2                 0.0000     5.5916 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U4/I (LVT_INHDV2)
+                                                        0.0637    0.0000     5.5916 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U4/ZN (LVT_INHDV2)
+                                                        0.0552    0.0486     5.6402 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n593 (net)
+                                                2                 0.0000     5.6402 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U3/I (LVT_BUFHDV4)
+                                                        0.0552    0.0000     5.6402 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U3/Z (LVT_BUFHDV4)
+                                                        0.0576    0.0885     5.7287 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n596 (net)
+                                                2                 0.0000     5.7287 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U50/I (LVT_BUFHDV6)
+                                                        0.0576    0.0000     5.7287 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U50/Z (LVT_BUFHDV6)
+                                                        0.0850    0.1024     5.8311 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n367 (net)
+                                                6                 0.0000     5.8311 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U1044/I (LVT_INHDV3)
+                                                        0.0850    0.0000     5.8311 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U1044/ZN (LVT_INHDV3)
+                                                        0.1976    0.1404     5.9715 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n603 (net)
+                                               37                 0.0000     5.9715 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U337/B1 (LVT_AO22HDV1)
+                                                        0.1976    0.0000     5.9715 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U337/Z (LVT_AO22HDV1)
+                                                        0.0728    0.2254     6.1969 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n106 (net)
+                                                1                 0.0000     6.1969 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_bus_r_reg_2_/D (LVT_DQHDV1)
+                                                        0.0728    0.0000     6.1969 f
+  data arrival time                                                          6.1969
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_bus_r_reg_2_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1485     6.2015
+  data required time                                                         6.2015
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2015
+  data arrival time                                                         -6.1969
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0045
+  Startpoint: ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_bus_r_reg_5_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg/CK (LVT_DHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/itrp_valid_reg/QN (LVT_DHDV1)
+                                                        0.0686    0.3267     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n604 (net)
+                                                1                 0.0000     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U94/A2 (LVT_NAND2HDV2)
+                                                        0.0686    0.0000     0.3267 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U94/ZN (LVT_NAND2HDV2)
+                                                        0.1211    0.0873     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n479 (net)
+                                                2                 0.0000     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U624/I (LVT_INHDV6)
+                                                        0.1211    0.0000     0.4140 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U624/ZN (LVT_INHDV6)
+                                                        0.1249    0.0978     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n598 (net)
+                                               19                 0.0000     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U593/A1 (LVT_AND2HDV4)
+                                                        0.1249    0.0000     0.5118 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U593/Z (LVT_AND2HDV4)
+                                                        0.1173    0.1515     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_rs2_addr[4] (net)
+                                                8                 0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_rs2_addr[4] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     0.6633 r
+  ysyx_210611_u_cpu/rs2_r_addr[4] (net)                           0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_addr2[4] (ysyx_210611_regfile_0)
+                                                                  0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_addr2[4] (net)          0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U447/A1 (LVT_XOR2HDV2)
+                                                        0.1173    0.0000     0.6633 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U447/Z (LVT_XOR2HDV2)
+                                                        0.0847    0.1607     0.8240 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n152 (net)
+                                                1                 0.0000     0.8240 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U227/A2 (LVT_NOR2HDV4)
+                                                        0.0847    0.0000     0.8240 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U227/ZN (LVT_NOR2HDV4)
+                                                        0.0875    0.0741     0.8981 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n157 (net)
+                                                1                 0.0000     0.8981 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U208/A1 (LVT_NAND4HDV4)
+                                                        0.0875    0.0000     0.8981 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U208/ZN (LVT_NAND4HDV4)
+                                                        0.1760    0.1182     1.0163 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n173 (net)
+                                                3                 0.0000     1.0163 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U181/I (LVT_INHDV4)
+                                                        0.1760    0.0000     1.0163 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U181/ZN (LVT_INHDV4)
+                                                        0.0666    0.0562     1.0725 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n169 (net)
+                                                1                 0.0000     1.0725 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U263/A1 (LVT_NOR2HDV4)
+                                                        0.0666    0.0000     1.0725 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U263/ZN (LVT_NOR2HDV4)
+                                                        0.0752    0.0402     1.1127 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n172 (net)
+                                                3                 0.0000     1.1127 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U480/A1 (LVT_NAND2HDV2)
+                                                        0.0752    0.0000     1.1127 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U480/ZN (LVT_NAND2HDV2)
+                                                        0.2274    0.1408     1.2534 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n193 (net)
+                                                8                 0.0000     1.2534 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U512/A1 (LVT_NOR2HDV2)
+                                                        0.2274    0.0000     1.2534 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U512/ZN (LVT_NOR2HDV2)
+                                                        0.1583    0.1404     1.3939 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n1109 (net)
+                                               11                 0.0000     1.3939 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U87/I (LVT_BUFHDV4)
+                                                        0.1583    0.0000     1.3939 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U87/Z (LVT_BUFHDV4)
+                                                        0.2997    0.2849     1.6788 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n40 (net)
+                                               54                 0.0000     1.6788 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U515/A1 (LVT_AOI22HDV1)
+                                                        0.2997    0.0000     1.6788 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U515/ZN (LVT_AOI22HDV1)
+                                                        0.1705    0.1603     1.8391 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n196 (net)
+                                                1                 0.0000     1.8391 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U516/A4 (LVT_NAND4HDV1)
+                                                        0.1705    0.0000     1.8391 r
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U516/ZN (LVT_NAND4HDV1)
+                                                        0.1278    0.1165     1.9556 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/n200 (net)
+                                                1                 0.0000     1.9556 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U517/A4 (LVT_OR4HDV1)
+                                                        0.1278    0.0000     1.9556 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/U517/Z (LVT_OR4HDV1)
+                                                        0.1147    0.3983     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_data2[15] (net)
+                                                1                 0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Regfile/r_data2[15] (ysyx_210611_regfile_0)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/r_data2[15] (net)                             0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/rs2_data[15] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/rs2_data[15] (net)       0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/ex_rs2_data[15] (ysyx_210611_forward_0)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/ex_rs2_data[15] (net)
+                                                                  0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U398/A1 (LVT_NAND2HDV1)
+                                                        0.1147    0.0000     2.3538 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U398/ZN (LVT_NAND2HDV1)
+                                                        0.0968    0.0579     2.4117 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/n225 (net)
+                                                1                 0.0000     2.4117 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U26/B (LVT_OAI211HDV1)
+                                                        0.0968    0.0000     2.4117 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/U26/ZN (LVT_OAI211HDV1)
+                                                        0.1370    0.1013     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/rs2_forward[15] (net)
+                                                2                 0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Forward/rs2_forward[15] (ysyx_210611_forward_0)
+                                                                  0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_to_mem_bus[154] (net)
+                                                                  0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U611/B1 (LVT_AO22HDV2)
+                                                        0.1370    0.0000     2.5130 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U611/Z (LVT_AO22HDV2)
+                                                        0.1226    0.2415     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/true_op2[15] (net)
+                                                5                 0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/op2[15] (ysyx_210611_ex_stage_alu_0)
+                                                                  0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/op2[15] (net)
+                                                                  0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U619/S (LVT_MUX2NHDV1)
+                                                        0.1226    0.0000     2.7545 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U619/ZN (LVT_MUX2NHDV1)
+                                                        0.2248    0.1013     2.8558 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n41 (net)
+                                                2                 0.0000     2.8558 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U655/A1 (LVT_NAND2HDV1)
+                                                        0.2248    0.0000     2.8558 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U655/ZN (LVT_NAND2HDV1)
+                                                        0.1317    0.1101     2.9659 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1740 (net)
+                                                3                 0.0000     2.9659 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U657/A2 (LVT_OAI21HDV1)
+                                                        0.1317    0.0000     2.9659 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U657/ZN (LVT_OAI21HDV1)
+                                                        0.1976    0.1475     3.1134 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1209 (net)
+                                                2                 0.0000     3.1134 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U5/A2 (LVT_AOI21HDV1)
+                                                        0.1976    0.0000     3.1134 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U5/ZN (LVT_AOI21HDV1)
+                                                        0.1223    0.1067     3.2201 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n586 (net)
+                                                2                 0.0000     3.2201 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U667/A1 (LVT_OAI21HDV2)
+                                                        0.1223    0.0000     3.2201 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U667/ZN (LVT_OAI21HDV2)
+                                                        0.1704    0.1274     3.3475 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n145 (net)
+                                                2                 0.0000     3.3475 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U676/A1 (LVT_AOI21HDV2)
+                                                        0.1704    0.0000     3.3475 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U676/ZN (LVT_AOI21HDV2)
+                                                        0.1100    0.0977     3.4452 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n71 (net)
+                                                1                 0.0000     3.4452 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U677/B (LVT_OAI21HDV4)
+                                                        0.1100    0.0000     3.4452 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U677/ZN (LVT_OAI21HDV4)
+                                                        0.1455    0.0584     3.5036 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n258 (net)
+                                                2                 0.0000     3.5036 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U771/A1 (LVT_AOI21HDV4)
+                                                        0.1455    0.0000     3.5036 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U771/ZN (LVT_AOI21HDV4)
+                                                        0.0909    0.0807     3.5842 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n380 (net)
+                                                2                 0.0000     3.5842 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U772/A1 (LVT_OAI21HDV4)
+                                                        0.0909    0.0000     3.5842 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U772/ZN (LVT_OAI21HDV4)
+                                                        0.1537    0.1094     3.6936 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1270 (net)
+                                                2                 0.0000     3.6936 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U773/A1 (LVT_AOI21HDV4)
+                                                        0.1537    0.0000     3.6936 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U773/ZN (LVT_AOI21HDV4)
+                                                        0.0925    0.0823     3.7759 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n553 (net)
+                                                2                 0.0000     3.7759 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U774/A1 (LVT_OAI21HDV4)
+                                                        0.0925    0.0000     3.7759 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U774/ZN (LVT_OAI21HDV4)
+                                                        0.1532    0.1098     3.8857 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n793 (net)
+                                                2                 0.0000     3.8857 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U775/A1 (LVT_AOI21HDV4)
+                                                        0.1532    0.0000     3.8857 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U775/ZN (LVT_AOI21HDV4)
+                                                        0.0924    0.0822     3.9679 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1991 (net)
+                                                2                 0.0000     3.9679 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U776/A1 (LVT_OAI21HDV4)
+                                                        0.0924    0.0000     3.9679 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U776/ZN (LVT_OAI21HDV4)
+                                                        0.1527    0.1098     4.0777 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n758 (net)
+                                                2                 0.0000     4.0777 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U777/A1 (LVT_AOI21HDV4)
+                                                        0.1527    0.0000     4.0777 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U777/ZN (LVT_AOI21HDV4)
+                                                        0.0923    0.0821     4.1598 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n2009 (net)
+                                                2                 0.0000     4.1598 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U778/A1 (LVT_OAI21HDV4)
+                                                        0.0923    0.0000     4.1598 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U778/ZN (LVT_OAI21HDV4)
+                                                        0.1538    0.1097     4.2695 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n2024 (net)
+                                                2                 0.0000     4.2695 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U779/A1 (LVT_AOI21HDV4)
+                                                        0.1538    0.0000     4.2695 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U779/ZN (LVT_AOI21HDV4)
+                                                        0.0844    0.0759     4.3454 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1083 (net)
+                                                2                 0.0000     4.3454 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U553/A1 (LVT_OAI21HDV2)
+                                                        0.0844    0.0000     4.3454 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U553/ZN (LVT_OAI21HDV2)
+                                                        0.1441    0.1049     4.4503 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n1111 (net)
+                                                1                 0.0000     4.4503 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U1628/CI (LVT_AD1HDV1)
+                                                        0.1441    0.0000     4.4503 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U1628/CO (LVT_AD1HDV1)
+                                                        0.1257    0.2033     4.6536 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n141 (net)
+                                                1                 0.0000     4.6536 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U431/A1 (LVT_XOR2HDV2)
+                                                        0.1257    0.0000     4.6536 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U431/Z (LVT_XOR2HDV2)
+                                                        0.0822    0.1611     4.8147 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/n143 (net)
+                                                1                 0.0000     4.8147 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U430/A1 (LVT_NAND2HDV4)
+                                                        0.0822    0.0000     4.8147 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/U430/ZN (LVT_NAND2HDV4)
+                                                        0.0690    0.0543     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/bj_data[5] (net)
+                                                3                 0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_alu/bj_data[5] (ysyx_210611_ex_stage_alu_0)
+                                                                  0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_bj_data[5] (net)      0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_data[5] (ysyx_210611_ex_stage_bj_0)
+                                                                  0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_data[5] (net)
+                                                                  0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U12/I (LVT_INHDV2)
+                                                        0.0690    0.0000     4.8691 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U12/ZN (LVT_INHDV2)
+                                                        0.0349    0.0339     4.9030 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n5 (net)
+                                                1                 0.0000     4.9030 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U5/B (LVT_OAI21HDV2)
+                                                        0.0349    0.0000     4.9030 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U5/ZN (LVT_OAI21HDV2)
+                                                        0.1261    0.0386     4.9415 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n10 (net)
+                                                1                 0.0000     4.9415 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U72/A1 (LVT_AND4HDV4)
+                                                        0.1261    0.0000     4.9415 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U72/Z (LVT_AND4HDV4)
+                                                        0.0550    0.1528     5.0944 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/n11 (net)
+                                                1                 0.0000     5.0944 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U4/B1 (LVT_INOR3HDV2)
+                                                        0.0550    0.0000     5.0944 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/U4/ZN (LVT_INOR3HDV2)
+                                                        0.0604    0.0416     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_ena (net)
+                                                1                 0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ysyx_210611_Exe_stage_bj/bj_ena (ysyx_210611_ex_stage_bj_0)
+                                                                  0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/ex_bj_ena (net)          0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U932/A1 (LVT_INAND2HDV4)
+                                                        0.0604    0.0000     5.1360 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U932/ZN (LVT_INAND2HDV4)
+                                                        0.1209    0.1245     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/bj_ctrl_bus[1] (net)
+                                                4                 0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/bj_ctrl_bus[1] (ysyx_210611_ex_stage_0)
+                                                                  0.0000     5.2605 f
+  ysyx_210611_u_cpu/bj_ctrl_bus[1] (net)                          0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/bj_ctrl_bus[1] (ysyx_210611_id_stage_0)
+                                                                  0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/bj_ctrl_bus[1] (net)     0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/U211/A1 (LVT_AOI21HDV4)
+                                                        0.1209    0.0000     5.2605 f
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/U211/ZN (LVT_AOI21HDV4)
+                                                        0.1323    0.1017     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/id_to_ex_valid (net)
+                                                2                 0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Id_stage/id_to_ex_valid (ysyx_210611_id_stage_0)
+                                                                  0.0000     5.3622 r
+  ysyx_210611_u_cpu/id_to_ex_valid (net)                          0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_valid (ysyx_210611_ex_stage_0)
+                                                                  0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_valid (net)     0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U55/A1 (LVT_NAND2HDV4)
+                                                        0.1323    0.0000     5.3622 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U55/ZN (LVT_NAND2HDV4)
+                                                        0.0786    0.0677     5.4299 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n589 (net)
+                                                3                 0.0000     5.4299 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U591/I (LVT_INHDV4)
+                                                        0.0786    0.0000     5.4299 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U591/ZN (LVT_INHDV4)
+                                                        0.1519    0.1064     5.5364 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n597 (net)
+                                               16                 0.0000     5.5364 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U5/A1 (LVT_NOR2HDV2)
+                                                        0.1519    0.0000     5.5364 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U5/ZN (LVT_NOR2HDV2)
+                                                        0.0637    0.0553     5.5916 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n590 (net)
+                                                2                 0.0000     5.5916 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U4/I (LVT_INHDV2)
+                                                        0.0637    0.0000     5.5916 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U4/ZN (LVT_INHDV2)
+                                                        0.0552    0.0486     5.6402 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n593 (net)
+                                                2                 0.0000     5.6402 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U3/I (LVT_BUFHDV4)
+                                                        0.0552    0.0000     5.6402 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U3/Z (LVT_BUFHDV4)
+                                                        0.0576    0.0885     5.7287 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n596 (net)
+                                                2                 0.0000     5.7287 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U50/I (LVT_BUFHDV6)
+                                                        0.0576    0.0000     5.7287 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U50/Z (LVT_BUFHDV6)
+                                                        0.0850    0.1024     5.8311 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n367 (net)
+                                                6                 0.0000     5.8311 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U1044/I (LVT_INHDV3)
+                                                        0.0850    0.0000     5.8311 r
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U1044/ZN (LVT_INHDV3)
+                                                        0.1976    0.1404     5.9715 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n603 (net)
+                                               37                 0.0000     5.9715 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U334/B1 (LVT_AO22HDV1)
+                                                        0.1976    0.0000     5.9715 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/U334/Z (LVT_AO22HDV1)
+                                                        0.0728    0.2254     6.1969 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/n103 (net)
+                                                1                 0.0000     6.1969 f
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_bus_r_reg_5_/D (LVT_DQHDV1)
+                                                        0.0728    0.0000     6.1969 f
+  data arrival time                                                          6.1969
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  ysyx_210611_u_cpu/ysyx_210611_Ex_stage/id_to_ex_bus_r_reg_5_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1485     6.2015
+  data required time                                                         6.2015
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2015
+  data arrival time                                                         -6.1969
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0045
