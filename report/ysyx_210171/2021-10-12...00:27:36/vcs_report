@@ -1,0 +1,54 @@
+
+core:  ysyx_210243
+
+#####################
+#vcs compile log
+#####################
+Warning-[TMR] Text macro redefined
+../cpu/ysyx_210295.v, 26
+  Text macro (ZERO_WORD) is redefined. The last definition will override 
+  previous ones.
+  Location of previous definition: ../cpu/ysyx_210243.v, 5.
+  Previous value: 64'h00000000_00000000
+
+
+Warning-[TMR] Text macro redefined
+../cpu/ysyx_210295.v, 366
+  Text macro (PC_START) is redefined. The last definition will override 
+  previous ones.
+  Location of previous definition: ../cpu/ysyx_210243.v, 6.
+  Previous value: 64'h00000000_30000000
+
+
+Warning-[TMR] Text macro redefined
+../cpu/ysyx_210295.v, 367
+  Text macro (REG_BUS) is redefined. The last definition will override 
+  previous ones.
+  Location of previous definition: ../cpu/ysyx_210243.v, 8.
+  Previous value: 63 : 0
+
+
+Warning-[TMR] Text macro redefined
+../cpu/ysyx_210295.v, 368
+  Text macro (INST_ADD) is redefined. The last definition will override 
+  previous ones.
+  Location of previous definition: ../cpu/ysyx_210243.v, 53.
+  Previous value: 9'b0000_01100
+
+
+
+#####################
+#vcs system test
+#####################
+Hello test pass!!
+!!!!Mem test fail!!!!
+!!!!rtthread test fail!!!!
+
+
+程序未跑通，可能是由于某些寄存器控制信号未初始化，或是某些逻辑错误,请自行检查修正后再次提交测试
+
+以下为未复位的寄存器:
+
+  10) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210243.u_axi_interconnect.if_hs 
+  11) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210243.u_axi_interconnect.mem_hs 
+  41) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210243.u_cpu.Mem_Stage.mem_mtime_mtimecmp_bit 
