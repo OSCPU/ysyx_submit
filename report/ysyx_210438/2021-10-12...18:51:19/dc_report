@@ -1,0 +1,668 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Tue_Oct_12_18:41:17_2021_+0800
+top_name: ysyx_210438
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+259039.4  259039.4  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+24070  24070  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210438
+Date   : Tue Oct 12 18:57:47 2021
+****************************************
+    
+Number of ports:                         8202
+Number of nets:                         32180
+Number of cells:                        24361
+Number of combinational cells:          20056
+Number of sequential cells:              4014
+Number of macros/black boxes:               0
+Number of buf/inv:                       3445
+Number of references:                       8
+Combinational area:             155476.361884
+Buf/Inv area:                    16325.871944
+Noncombinational area:          103563.050770
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                259039.412654
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  ----------------------------------------------------------------------------------------------------------
+ysyx_210438                       259039.4127    100.0     753.0880       0.0000  0.0000  ysyx_210438
+U_AXI_INTERCONNECT                  2849.6312      1.1    2795.8392      53.7920  0.0000  ysyx_210438_axi_interconnect_DATA_WIDTH64_ADDR_WIDTH32_ID_WIDTH4_STRB_WIDTH8_0
+U_IF_AXI_RW                         3152.2112      1.2    1568.0368    1584.1745  0.0000  ysyx_210438_if_axi_rw_DATA_WIDTH64_ADDR_WIDTH32_ID_WIDTH4_0
+U_MEM_AXI_RW                        2428.7088      0.9    1507.5208     921.1880  0.0000  ysyx_210438_mem_axi_rw_DATA_WIDTH64_ADDR_WIDTH32_ID_WIDTH4_STRB_WIDTH8_0
+U_RISCV                           237237.5149     91.6   13503.1368    1637.9665  0.0000  ysyx_210438_riscv_IBUS_DATA_WIDTH32_DBUS_DATA_WIDTH64_RF_ADDR_WIDTH5_IMEM_ADDR_WIDTH32_DMEM_ADDR_WIDTH32_0
+U_RISCV/RISCV_LOAD_DMEM              685.8480      0.3     685.8480       0.0000  0.0000  ysyx_210438_riscv_load_WIDTH64_0
+U_RISCV/RISCV_STORE_EX               677.7792      0.3     677.7792       0.0000  0.0000  ysyx_210438_riscv_store_WIDTH64_0
+U_RISCV/U_CSR                      30926.3660     11.9   17844.1511   13082.2148  0.0000  ysyx_210438_riscv_csr_ADDR_WIDTH12_I_BUS_WIDTH32_D_BUS_WIDTH64_0
+U_RISCV/U_RISCV_ADDER_EX            2980.0768      1.2    2980.0768       0.0000  0.0000  ysyx_210438_riscv_adder_DATA_WIDTH64_5
+U_RISCV/U_RISCV_ADDER_ID            3098.4192      1.2    3098.4192       0.0000  0.0000  ysyx_210438_riscv_adder_DATA_WIDTH64_3
+U_RISCV/U_RISCV_ADDER_IF            1406.6608      0.5    1406.6608       0.0000  0.0000  ysyx_210438_riscv_adder_DATA_WIDTH64_4
+U_RISCV/U_RISCV_ALU                22990.7007      8.9   22990.7007       0.0000  0.0000  ysyx_210438_riscv_alu_WIDTH64_0
+U_RISCV/U_RISCV_ALU_CTRL             145.2384      0.1     145.2384       0.0000  0.0000  ysyx_210438_riscv_alu_ctrl_0
+U_RISCV/U_RISCV_BRANCH               112.9632      0.0     112.9632       0.0000  0.0000  ysyx_210438_riscv_branch_0
+U_RISCV/U_RISCV_CTRL                 174.8240      0.1     174.8240       0.0000  0.0000  ysyx_210438_riscv_ctrl_0
+U_RISCV/U_RISCV_EXCEP_DETECT_UNIT    102.2048      0.0     102.2048       0.0000  0.0000  ysyx_210438_riscv_excep_detect_unit_I_BUS_WIDTH32_0
+U_RISCV/U_RISCV_FWD_UNIT             377.8888      0.1     377.8888       0.0000  0.0000  ysyx_210438_riscv_fwd_unit_RF_ADDR_WIDTH5_0
+U_RISCV/U_RISCV_HZD_DETECT_UNIT      151.9624      0.1     151.9624       0.0000  0.0000  ysyx_210438_riscv_hzd_detect_unit_RF_ADDR_WIDTH5_0
+U_RISCV/U_RISCV_IMM_GEN              788.0528      0.3     653.5728       0.0000  0.0000  ysyx_210438_riscv_imm_gen_IBUS_DATA_WIDTH32_DBUS_DATA_WIDTH64_0
+U_RISCV/U_RISCV_IMM_GEN/U_RISCV_SEXT_BTYPE
+                                      53.7920      0.0      53.7920       0.0000  0.0000  ysyx_210438_riscv_ext_b_IS_SIGNED1_DATA_WIDTH_I13_DATA_WIDTH_O64_0
+U_RISCV/U_RISCV_IMM_GEN/U_RISCV_SEXT_ITYPE
+                                       5.3792      0.0       5.3792       0.0000  0.0000  ysyx_210438_riscv_ext_i_IS_SIGNED1_DATA_WIDTH_I12_DATA_WIDTH_O64_0
+U_RISCV/U_RISCV_IMM_GEN/U_RISCV_SEXT_JTYPE
+                                      21.5168      0.0      21.5168       0.0000  0.0000  ysyx_210438_riscv_ext_j_IS_SIGNED1_DATA_WIDTH_I21_DATA_WIDTH_O64_0
+U_RISCV/U_RISCV_IMM_GEN/U_RISCV_SEXT_STYPE
+                                      10.7584      0.0      10.7584       0.0000  0.0000  ysyx_210438_riscv_ext_s_IS_SIGNED1_DATA_WIDTH_I12_DATA_WIDTH_O64_0
+U_RISCV/U_RISCV_IMM_GEN/U_RISCV_SEXT_UTYPE
+                                      43.0336      0.0      43.0336       0.0000  0.0000  ysyx_210438_riscv_ext_u_IS_SIGNED1_DATA_WIDTH_I20_DATA_WIDTH_O64_0
+U_RISCV/U_RISCV_JALR_HZD_DETECT_UNIT_ID
+                                     320.0624      0.1     320.0624       0.0000  0.0000  ysyx_210438_riscv_jalr_hzd_detect_unit_RF_ADDR_WIDTH5_IBUS_DATA_WIDTH32_0
+U_RISCV/U_RISCV_RF                114905.0921     44.4   61634.8734   53270.2187  0.0000  ysyx_210438_riscv_rf_DATA_WIDTH64_ADDR_WIDTH5_0
+U_RISCV/U_RISCV_RS_EX2MEM          15930.5011      6.1    5224.5480   10705.9532  0.0000  ysyx_210438_riscv_rs_431_DATA_WIDTH431_0
+U_RISCV/U_RISCV_RS_ID2EX           11476.5234      4.4    3785.6120    7690.9115  0.0000  ysyx_210438_riscv_rs_301_DATA_WIDTH301_0
+U_RISCV/U_RISCV_RS_IF2ID            3660.5457      1.4    1207.6304    2452.9153  0.0000  ysyx_210438_riscv_rs_96_DATA_WIDTH96_0
+U_RISCV/U_RISCV_RS_MEM2WB          11184.7019      4.3    2366.8480    8817.8539  0.0000  ysyx_210438_riscv_rs_357_DATA_WIDTH357_0
+U_RISCV_CLINT                       8010.9737      3.1    4665.1112    3345.8625  0.0000  ysyx_210438_riscv_clint_ADDR_WIDTH32_D_BUS_WIDTH64_0
+U_RISCV_ROUTER                      2118.0600      0.8    2118.0600       0.0000  0.0000  ysyx_210438_riscv_router_DBUS_DATA_WIDTH64_DMEM_ADDR_WIDTH32_0
+U_mem_ctrl                          2489.2248      1.0    2489.2248       0.0000  0.0000  ysyx_210438_mem_ctrl_0
+--------------------------------  -----------  -------  -----------  -----------  ------  ----------------------------------------------------------------------------------------------------------
+Total                                                   155476.3619  103563.0508  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210438
+Date   : Tue Oct 12 18:57:45 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: U_RISCV/U_RISCV_RS_ID2EX/dout_reg_84_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_/Q (LVT_DQHDV1)
+                                                        0.3192    0.3867     0.3867 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout[73] (net)     13                 0.0000     0.3867 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout[73] (ysyx_210438_riscv_rs_357_DATA_WIDTH357_0)
+                                                                  0.0000     0.3867 r
+  U_RISCV/instr_mem2wb_ff[9] (net)                                0.0000     0.3867 r
+  U_RISCV/U7/A2 (LVT_NOR2HDV1)                          0.3192    0.0000     0.3867 r
+  U_RISCV/U7/ZN (LVT_NOR2HDV1)                          0.0987    0.0725     0.4592 f
+  U_RISCV/n179 (net)                            1                 0.0000     0.4592 f
+  U_RISCV/U393/A2 (LVT_AOI31HDV2)                       0.0987    0.0000     0.4592 f
+  U_RISCV/U393/ZN (LVT_AOI31HDV2)                       0.1952    0.1436     0.6028 r
+  U_RISCV/n193 (net)                            3                 0.0000     0.6028 r
+  U_RISCV/U10/A1 (LVT_NAND2HDV1)                        0.1952    0.0000     0.6028 r
+  U_RISCV/U10/ZN (LVT_NAND2HDV1)                        0.1163    0.0982     0.7010 f
+  U_RISCV/n182 (net)                            2                 0.0000     0.7010 f
+  U_RISCV/U397/I (LVT_INHDV2)                           0.1163    0.0000     0.7010 f
+  U_RISCV/U397/ZN (LVT_INHDV2)                          0.0573    0.0499     0.7509 r
+  U_RISCV/n184 (net)                            1                 0.0000     0.7509 r
+  U_RISCV/U398/A1 (LVT_NAND2HDV2)                       0.0573    0.0000     0.7509 r
+  U_RISCV/U398/ZN (LVT_NAND2HDV2)                       0.0879    0.0684     0.8194 f
+  U_RISCV/n186 (net)                            2                 0.0000     0.8194 f
+  U_RISCV/U298/A1 (LVT_NOR2HDV4)                        0.0879    0.0000     0.8194 f
+  U_RISCV/U298/ZN (LVT_NOR2HDV4)                        0.3065    0.1881     1.0074 r
+  U_RISCV/n735 (net)                           15                 0.0000     1.0074 r
+  U_RISCV/U407/I (LVT_BUFHDV4)                          0.3065    0.0000     1.0074 r
+  U_RISCV/U407/Z (LVT_BUFHDV4)                          0.4413    0.3322     1.3396 r
+  U_RISCV/n789 (net)                           50                 0.0000     1.3396 r
+  U_RISCV/U120/A1 (LVT_NAND2HDV1)                       0.4413    0.0000     1.3396 r
+  U_RISCV/U120/ZN (LVT_NAND2HDV1)                       0.1242    0.0905     1.4301 f
+  U_RISCV/n692 (net)                            1                 0.0000     1.4301 f
+  U_RISCV/U31/B (LVT_IOA21HDV1)                         0.1242    0.0000     1.4301 f
+  U_RISCV/U31/ZN (LVT_IOA21HDV1)                        0.0774    0.0680     1.4981 r
+  U_RISCV/n693 (net)                            1                 0.0000     1.4981 r
+  U_RISCV/U259/B (LVT_AOI21HDV1)                        0.0774    0.0000     1.4981 r
+  U_RISCV/U259/ZN (LVT_AOI21HDV1)                       0.1570    0.0443     1.5425 f
+  U_RISCV/n694 (net)                            1                 0.0000     1.5425 f
+  U_RISCV/U1054/A2 (LVT_NAND2HDV2)                      0.1570    0.0000     1.5425 f
+  U_RISCV/U1054/ZN (LVT_NAND2HDV2)                      0.1072    0.0916     1.6340 r
+  U_RISCV/wr_data_wb_stage[4] (net)             2                 0.0000     1.6340 r
+  U_RISCV/U1055/I (LVT_INHDV2)                          0.1072    0.0000     1.6340 r
+  U_RISCV/U1055/ZN (LVT_INHDV2)                         0.0611    0.0544     1.6884 f
+  U_RISCV/n1240 (net)                           3                 0.0000     1.6884 f
+  U_RISCV/U1526/A1 (LVT_OAI21HDV2)                      0.0611    0.0000     1.6884 f
+  U_RISCV/U1526/ZN (LVT_OAI21HDV2)                      0.1487    0.0936     1.7820 r
+  U_RISCV/n1105 (net)                           2                 0.0000     1.7820 r
+  U_RISCV/U1527/I0 (LVT_MUX2HDV2)                       0.1487    0.0000     1.7820 r
+  U_RISCV/U1527/Z (LVT_MUX2HDV2)                        0.2847    0.3008     2.0828 r
+  U_RISCV/alu_b_ex_stage[4] (net)              13                 0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/b[4] (ysyx_210438_riscv_alu_WIDTH64_0)      0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/b[4] (net)                                  0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/U438/I (LVT_INHDV2)               0.2847    0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/U438/ZN (LVT_INHDV2)              0.1121    0.0908     2.1736 f
+  U_RISCV/U_RISCV_ALU/n291 (net)                2                 0.0000     2.1736 f
+  U_RISCV/U_RISCV_ALU/U403/I (LVT_INHDV6)               0.1121    0.0000     2.1736 f
+  U_RISCV/U_RISCV_ALU/U403/ZN (LVT_INHDV6)              0.3310    0.2103     2.3839 r
+  U_RISCV/U_RISCV_ALU/n3133 (net)              52                 0.0000     2.3839 r
+  U_RISCV/U_RISCV_ALU/U694/A1 (LVT_NAND2HDV1)           0.3310    0.0000     2.3839 r
+  U_RISCV/U_RISCV_ALU/U694/ZN (LVT_NAND2HDV1)           0.1411    0.1023     2.4863 f
+  U_RISCV/U_RISCV_ALU/n1407 (net)               2                 0.0000     2.4863 f
+  U_RISCV/U_RISCV_ALU/U696/A1 (LVT_OAI21HDV1)           0.1411    0.0000     2.4863 f
+  U_RISCV/U_RISCV_ALU/U696/ZN (LVT_OAI21HDV1)           0.1961    0.1464     2.6326 r
+  U_RISCV/U_RISCV_ALU/n351 (net)                2                 0.0000     2.6326 r
+  U_RISCV/U_RISCV_ALU/U64/A1 (LVT_AOI21HDV1)            0.1961    0.0000     2.6326 r
+  U_RISCV/U_RISCV_ALU/U64/ZN (LVT_AOI21HDV1)            0.1092    0.0961     2.7288 f
+  U_RISCV/U_RISCV_ALU/n169 (net)                1                 0.0000     2.7288 f
+  U_RISCV/U_RISCV_ALU/U708/B (LVT_OAI21HDV2)            0.1092    0.0000     2.7288 f
+  U_RISCV/U_RISCV_ALU/U708/ZN (LVT_OAI21HDV2)           0.1692    0.0668     2.7955 r
+  U_RISCV/U_RISCV_ALU/n551 (net)                2                 0.0000     2.7955 r
+  U_RISCV/U_RISCV_ALU/U18/A1 (LVT_AOI21HDV2)            0.1692    0.0000     2.7955 r
+  U_RISCV/U_RISCV_ALU/U18/ZN (LVT_AOI21HDV2)            0.1236    0.1091     2.9046 f
+  U_RISCV/U_RISCV_ALU/n265 (net)                2                 0.0000     2.9046 f
+  U_RISCV/U_RISCV_ALU/U869/A1 (LVT_OAI21HDV4)           0.1236    0.0000     2.9046 f
+  U_RISCV/U_RISCV_ALU/U869/ZN (LVT_OAI21HDV4)           0.1351    0.1070     3.0116 r
+  U_RISCV/U_RISCV_ALU/n1072 (net)               2                 0.0000     3.0116 r
+  U_RISCV/U_RISCV_ALU/U13/A1 (LVT_AOI21HDV2)            0.1351    0.0000     3.0116 r
+  U_RISCV/U_RISCV_ALU/U13/ZN (LVT_AOI21HDV2)            0.1202    0.1025     3.1141 f
+  U_RISCV/U_RISCV_ALU/n1084 (net)               2                 0.0000     3.1141 f
+  U_RISCV/U_RISCV_ALU/U870/A1 (LVT_OAI21HDV4)           0.1202    0.0000     3.1141 f
+  U_RISCV/U_RISCV_ALU/U870/ZN (LVT_OAI21HDV4)           0.1390    0.1061     3.2202 r
+  U_RISCV/U_RISCV_ALU/n1843 (net)               2                 0.0000     3.2202 r
+  U_RISCV/U_RISCV_ALU/U871/A1 (LVT_AOI21HDV2)           0.1390    0.0000     3.2202 r
+  U_RISCV/U_RISCV_ALU/U871/ZN (LVT_AOI21HDV2)           0.1046    0.0911     3.3113 f
+  U_RISCV/U_RISCV_ALU/n886 (net)                2                 0.0000     3.3113 f
+  U_RISCV/U_RISCV_ALU/U872/A1 (LVT_OAI21HDV2)           0.1046    0.0000     3.3113 f
+  U_RISCV/U_RISCV_ALU/U872/ZN (LVT_OAI21HDV2)           0.1840    0.1310     3.4422 r
+  U_RISCV/U_RISCV_ALU/n2701 (net)               2                 0.0000     3.4422 r
+  U_RISCV/U_RISCV_ALU/U873/A1 (LVT_AOI21HDV2)           0.1840    0.0000     3.4422 r
+  U_RISCV/U_RISCV_ALU/U873/ZN (LVT_AOI21HDV2)           0.1082    0.0968     3.5391 f
+  U_RISCV/U_RISCV_ALU/n2664 (net)               2                 0.0000     3.5391 f
+  U_RISCV/U_RISCV_ALU/U874/A1 (LVT_OAI21HDV1)           0.1082    0.0000     3.5391 f
+  U_RISCV/U_RISCV_ALU/U874/ZN (LVT_OAI21HDV1)           0.2311    0.1574     3.6965 r
+  U_RISCV/U_RISCV_ALU/n2713 (net)               2                 0.0000     3.6965 r
+  U_RISCV/U_RISCV_ALU/U875/A1 (LVT_AOI21HDV2)           0.2311    0.0000     3.6965 r
+  U_RISCV/U_RISCV_ALU/U875/ZN (LVT_AOI21HDV2)           0.1176    0.1026     3.7991 f
+  U_RISCV/U_RISCV_ALU/n2774 (net)               2                 0.0000     3.7991 f
+  U_RISCV/U_RISCV_ALU/U876/A1 (LVT_OAI21HDV1)           0.1176    0.0000     3.7991 f
+  U_RISCV/U_RISCV_ALU/U876/ZN (LVT_OAI21HDV1)           0.2158    0.1520     3.9511 r
+  U_RISCV/U_RISCV_ALU/n2745 (net)               2                 0.0000     3.9511 r
+  U_RISCV/U_RISCV_ALU/U877/A1 (LVT_AOI21HDV1)           0.2158    0.0000     3.9511 r
+  U_RISCV/U_RISCV_ALU/U877/ZN (LVT_AOI21HDV1)           0.1414    0.1233     4.0744 f
+  U_RISCV/U_RISCV_ALU/n2814 (net)               2                 0.0000     4.0744 f
+  U_RISCV/U_RISCV_ALU/U3187/A1 (LVT_OAI21HDV2)          0.1414    0.0000     4.0744 f
+  U_RISCV/U_RISCV_ALU/U3187/ZN (LVT_OAI21HDV2)          0.1503    0.1195     4.1939 r
+  U_RISCV/U_RISCV_ALU/n2847 (net)               1                 0.0000     4.1939 r
+  U_RISCV/U_RISCV_ALU/U3194/CI (LVT_AD1HDV1)            0.1503    0.0000     4.1939 r
+  U_RISCV/U_RISCV_ALU/U3194/CO (LVT_AD1HDV1)            0.1329    0.2046     4.3985 r
+  U_RISCV/U_RISCV_ALU/n2816 (net)               1                 0.0000     4.3985 r
+  U_RISCV/U_RISCV_ALU/U3188/A1 (LVT_XOR2HDV2)           0.1329    0.0000     4.3985 r
+  U_RISCV/U_RISCV_ALU/U3188/Z (LVT_XOR2HDV2)            0.0681    0.1502     4.5486 f
+  U_RISCV/U_RISCV_ALU/n2843 (net)               1                 0.0000     4.5486 f
+  U_RISCV/U_RISCV_ALU/U45/A1 (LVT_AOI21HDV2)            0.0681    0.0000     4.5486 f
+  U_RISCV/U_RISCV_ALU/U45/ZN (LVT_AOI21HDV2)            0.1425    0.0888     4.6374 r
+  U_RISCV/U_RISCV_ALU/n2844 (net)               1                 0.0000     4.6374 r
+  U_RISCV/U_RISCV_ALU/U3192/A2 (LVT_NAND2HDV2)          0.1425    0.0000     4.6374 r
+  U_RISCV/U_RISCV_ALU/U3192/ZN (LVT_NAND2HDV2)          0.0728    0.0666     4.7040 f
+  U_RISCV/U_RISCV_ALU/n3094 (net)               2                 0.0000     4.7040 f
+  U_RISCV/U_RISCV_ALU/U42/A1 (LVT_OR4HDV4)              0.0728    0.0000     4.7040 f
+  U_RISCV/U_RISCV_ALU/U42/Z (LVT_OR4HDV4)               0.0987    0.2357     4.9397 f
+  U_RISCV/U_RISCV_ALU/alu_out[63] (net)         4                 0.0000     4.9397 f
+  U_RISCV/U_RISCV_ALU/alu_out[63] (ysyx_210438_riscv_alu_WIDTH64_0)
+                                                                  0.0000     4.9397 f
+  U_RISCV/alu_out_ex_stage[63] (net)                              0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/alu_out (ysyx_210438_riscv_branch_0)     0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/alu_out (net)                            0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/U10/A1 (LVT_OA211HDV4)         0.0987    0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/U10/Z (LVT_OA211HDV4)          0.0532    0.1802     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/n2 (net)               1                 0.0000     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/U11/B (LVT_AOI21HDV2)          0.0532    0.0000     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/U11/ZN (LVT_AOI21HDV2)         0.1342    0.0860     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/n4 (net)               1                 0.0000     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/U3/A1 (LVT_XNOR2HDV2)          0.1342    0.0000     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/U3/ZN (LVT_XNOR2HDV2)          0.0824    0.1808     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/n15 (net)              1                 0.0000     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/U17/A1 (LVT_AOI21HDV4)         0.0824    0.0000     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/U17/ZN (LVT_AOI21HDV4)         0.1667    0.1179     5.5045 r
+  U_RISCV/U_RISCV_BRANCH/branch_out (net)       5                 0.0000     5.5045 r
+  U_RISCV/U_RISCV_BRANCH/branch_out (ysyx_210438_riscv_branch_0)
+                                                                  0.0000     5.5045 r
+  U_RISCV/branch_out_signal (net)                                 0.0000     5.5045 r
+  U_RISCV/U2020/B1 (LVT_INOR2HDV2)                      0.1667    0.0000     5.5045 r
+  U_RISCV/U2020/ZN (LVT_INOR2HDV2)                      0.0649    0.0550     5.5595 f
+  U_RISCV/n_13_net_ (net)                       1                 0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/en (ysyx_210438_riscv_rs_301_DATA_WIDTH301_0)
+                                                                  0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/en (net)                               0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/U36/I (LVT_INHDV2)           0.0649    0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/U36/ZN (LVT_INHDV2)          0.0666    0.0551     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/n311 (net)           1                 0.0000     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/U34/A1 (LVT_NOR2HDV4)        0.0666    0.0000     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/U34/ZN (LVT_NOR2HDV4)        0.0941    0.0682     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/n319 (net)          17                 0.0000     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/U7/I (LVT_BUFHDV4)           0.0941    0.0000     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/U7/Z (LVT_BUFHDV4)           0.1110    0.1550     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/n316 (net)          22                 0.0000     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/U121/I (LVT_BUFHDV2)         0.1110    0.0000     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/U121/Z (LVT_BUFHDV2)         0.1305    0.1800     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/n314 (net)          13                 0.0000     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/U122/B1 (LVT_AO22HDV2)       0.1305    0.0000     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/U122/Z (LVT_AO22HDV2)        0.0621    0.1840     6.2018 f
+  U_RISCV/U_RISCV_RS_ID2EX/n89 (net)            1                 0.0000     6.2018 f
+  U_RISCV/U_RISCV_RS_ID2EX/dout_reg_84_/D (LVT_DQHDV1)
+                                                        0.0621    0.0000     6.2018 f
+  data arrival time                                                          6.2018
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  U_RISCV/U_RISCV_RS_ID2EX/dout_reg_84_/CK (LVT_DQHDV1)           0.0000     6.3500 r
+  library setup time                                             -0.1463     6.2037
+  data required time                                                         6.2037
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2037
+  data arrival time                                                         -6.2018
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0019
+  Startpoint: U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: U_RISCV/U_RISCV_RS_ID2EX/dout_reg_86_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_/Q (LVT_DQHDV1)
+                                                        0.3192    0.3867     0.3867 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout[73] (net)     13                 0.0000     0.3867 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout[73] (ysyx_210438_riscv_rs_357_DATA_WIDTH357_0)
+                                                                  0.0000     0.3867 r
+  U_RISCV/instr_mem2wb_ff[9] (net)                                0.0000     0.3867 r
+  U_RISCV/U7/A2 (LVT_NOR2HDV1)                          0.3192    0.0000     0.3867 r
+  U_RISCV/U7/ZN (LVT_NOR2HDV1)                          0.0987    0.0725     0.4592 f
+  U_RISCV/n179 (net)                            1                 0.0000     0.4592 f
+  U_RISCV/U393/A2 (LVT_AOI31HDV2)                       0.0987    0.0000     0.4592 f
+  U_RISCV/U393/ZN (LVT_AOI31HDV2)                       0.1952    0.1436     0.6028 r
+  U_RISCV/n193 (net)                            3                 0.0000     0.6028 r
+  U_RISCV/U10/A1 (LVT_NAND2HDV1)                        0.1952    0.0000     0.6028 r
+  U_RISCV/U10/ZN (LVT_NAND2HDV1)                        0.1163    0.0982     0.7010 f
+  U_RISCV/n182 (net)                            2                 0.0000     0.7010 f
+  U_RISCV/U397/I (LVT_INHDV2)                           0.1163    0.0000     0.7010 f
+  U_RISCV/U397/ZN (LVT_INHDV2)                          0.0573    0.0499     0.7509 r
+  U_RISCV/n184 (net)                            1                 0.0000     0.7509 r
+  U_RISCV/U398/A1 (LVT_NAND2HDV2)                       0.0573    0.0000     0.7509 r
+  U_RISCV/U398/ZN (LVT_NAND2HDV2)                       0.0879    0.0684     0.8194 f
+  U_RISCV/n186 (net)                            2                 0.0000     0.8194 f
+  U_RISCV/U298/A1 (LVT_NOR2HDV4)                        0.0879    0.0000     0.8194 f
+  U_RISCV/U298/ZN (LVT_NOR2HDV4)                        0.3065    0.1881     1.0074 r
+  U_RISCV/n735 (net)                           15                 0.0000     1.0074 r
+  U_RISCV/U407/I (LVT_BUFHDV4)                          0.3065    0.0000     1.0074 r
+  U_RISCV/U407/Z (LVT_BUFHDV4)                          0.4413    0.3322     1.3396 r
+  U_RISCV/n789 (net)                           50                 0.0000     1.3396 r
+  U_RISCV/U120/A1 (LVT_NAND2HDV1)                       0.4413    0.0000     1.3396 r
+  U_RISCV/U120/ZN (LVT_NAND2HDV1)                       0.1242    0.0905     1.4301 f
+  U_RISCV/n692 (net)                            1                 0.0000     1.4301 f
+  U_RISCV/U31/B (LVT_IOA21HDV1)                         0.1242    0.0000     1.4301 f
+  U_RISCV/U31/ZN (LVT_IOA21HDV1)                        0.0774    0.0680     1.4981 r
+  U_RISCV/n693 (net)                            1                 0.0000     1.4981 r
+  U_RISCV/U259/B (LVT_AOI21HDV1)                        0.0774    0.0000     1.4981 r
+  U_RISCV/U259/ZN (LVT_AOI21HDV1)                       0.1570    0.0443     1.5425 f
+  U_RISCV/n694 (net)                            1                 0.0000     1.5425 f
+  U_RISCV/U1054/A2 (LVT_NAND2HDV2)                      0.1570    0.0000     1.5425 f
+  U_RISCV/U1054/ZN (LVT_NAND2HDV2)                      0.1072    0.0916     1.6340 r
+  U_RISCV/wr_data_wb_stage[4] (net)             2                 0.0000     1.6340 r
+  U_RISCV/U1055/I (LVT_INHDV2)                          0.1072    0.0000     1.6340 r
+  U_RISCV/U1055/ZN (LVT_INHDV2)                         0.0611    0.0544     1.6884 f
+  U_RISCV/n1240 (net)                           3                 0.0000     1.6884 f
+  U_RISCV/U1526/A1 (LVT_OAI21HDV2)                      0.0611    0.0000     1.6884 f
+  U_RISCV/U1526/ZN (LVT_OAI21HDV2)                      0.1487    0.0936     1.7820 r
+  U_RISCV/n1105 (net)                           2                 0.0000     1.7820 r
+  U_RISCV/U1527/I0 (LVT_MUX2HDV2)                       0.1487    0.0000     1.7820 r
+  U_RISCV/U1527/Z (LVT_MUX2HDV2)                        0.2847    0.3008     2.0828 r
+  U_RISCV/alu_b_ex_stage[4] (net)              13                 0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/b[4] (ysyx_210438_riscv_alu_WIDTH64_0)      0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/b[4] (net)                                  0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/U438/I (LVT_INHDV2)               0.2847    0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/U438/ZN (LVT_INHDV2)              0.1121    0.0908     2.1736 f
+  U_RISCV/U_RISCV_ALU/n291 (net)                2                 0.0000     2.1736 f
+  U_RISCV/U_RISCV_ALU/U403/I (LVT_INHDV6)               0.1121    0.0000     2.1736 f
+  U_RISCV/U_RISCV_ALU/U403/ZN (LVT_INHDV6)              0.3310    0.2103     2.3839 r
+  U_RISCV/U_RISCV_ALU/n3133 (net)              52                 0.0000     2.3839 r
+  U_RISCV/U_RISCV_ALU/U694/A1 (LVT_NAND2HDV1)           0.3310    0.0000     2.3839 r
+  U_RISCV/U_RISCV_ALU/U694/ZN (LVT_NAND2HDV1)           0.1411    0.1023     2.4863 f
+  U_RISCV/U_RISCV_ALU/n1407 (net)               2                 0.0000     2.4863 f
+  U_RISCV/U_RISCV_ALU/U696/A1 (LVT_OAI21HDV1)           0.1411    0.0000     2.4863 f
+  U_RISCV/U_RISCV_ALU/U696/ZN (LVT_OAI21HDV1)           0.1961    0.1464     2.6326 r
+  U_RISCV/U_RISCV_ALU/n351 (net)                2                 0.0000     2.6326 r
+  U_RISCV/U_RISCV_ALU/U64/A1 (LVT_AOI21HDV1)            0.1961    0.0000     2.6326 r
+  U_RISCV/U_RISCV_ALU/U64/ZN (LVT_AOI21HDV1)            0.1092    0.0961     2.7288 f
+  U_RISCV/U_RISCV_ALU/n169 (net)                1                 0.0000     2.7288 f
+  U_RISCV/U_RISCV_ALU/U708/B (LVT_OAI21HDV2)            0.1092    0.0000     2.7288 f
+  U_RISCV/U_RISCV_ALU/U708/ZN (LVT_OAI21HDV2)           0.1692    0.0668     2.7955 r
+  U_RISCV/U_RISCV_ALU/n551 (net)                2                 0.0000     2.7955 r
+  U_RISCV/U_RISCV_ALU/U18/A1 (LVT_AOI21HDV2)            0.1692    0.0000     2.7955 r
+  U_RISCV/U_RISCV_ALU/U18/ZN (LVT_AOI21HDV2)            0.1236    0.1091     2.9046 f
+  U_RISCV/U_RISCV_ALU/n265 (net)                2                 0.0000     2.9046 f
+  U_RISCV/U_RISCV_ALU/U869/A1 (LVT_OAI21HDV4)           0.1236    0.0000     2.9046 f
+  U_RISCV/U_RISCV_ALU/U869/ZN (LVT_OAI21HDV4)           0.1351    0.1070     3.0116 r
+  U_RISCV/U_RISCV_ALU/n1072 (net)               2                 0.0000     3.0116 r
+  U_RISCV/U_RISCV_ALU/U13/A1 (LVT_AOI21HDV2)            0.1351    0.0000     3.0116 r
+  U_RISCV/U_RISCV_ALU/U13/ZN (LVT_AOI21HDV2)            0.1202    0.1025     3.1141 f
+  U_RISCV/U_RISCV_ALU/n1084 (net)               2                 0.0000     3.1141 f
+  U_RISCV/U_RISCV_ALU/U870/A1 (LVT_OAI21HDV4)           0.1202    0.0000     3.1141 f
+  U_RISCV/U_RISCV_ALU/U870/ZN (LVT_OAI21HDV4)           0.1390    0.1061     3.2202 r
+  U_RISCV/U_RISCV_ALU/n1843 (net)               2                 0.0000     3.2202 r
+  U_RISCV/U_RISCV_ALU/U871/A1 (LVT_AOI21HDV2)           0.1390    0.0000     3.2202 r
+  U_RISCV/U_RISCV_ALU/U871/ZN (LVT_AOI21HDV2)           0.1046    0.0911     3.3113 f
+  U_RISCV/U_RISCV_ALU/n886 (net)                2                 0.0000     3.3113 f
+  U_RISCV/U_RISCV_ALU/U872/A1 (LVT_OAI21HDV2)           0.1046    0.0000     3.3113 f
+  U_RISCV/U_RISCV_ALU/U872/ZN (LVT_OAI21HDV2)           0.1840    0.1310     3.4422 r
+  U_RISCV/U_RISCV_ALU/n2701 (net)               2                 0.0000     3.4422 r
+  U_RISCV/U_RISCV_ALU/U873/A1 (LVT_AOI21HDV2)           0.1840    0.0000     3.4422 r
+  U_RISCV/U_RISCV_ALU/U873/ZN (LVT_AOI21HDV2)           0.1082    0.0968     3.5391 f
+  U_RISCV/U_RISCV_ALU/n2664 (net)               2                 0.0000     3.5391 f
+  U_RISCV/U_RISCV_ALU/U874/A1 (LVT_OAI21HDV1)           0.1082    0.0000     3.5391 f
+  U_RISCV/U_RISCV_ALU/U874/ZN (LVT_OAI21HDV1)           0.2311    0.1574     3.6965 r
+  U_RISCV/U_RISCV_ALU/n2713 (net)               2                 0.0000     3.6965 r
+  U_RISCV/U_RISCV_ALU/U875/A1 (LVT_AOI21HDV2)           0.2311    0.0000     3.6965 r
+  U_RISCV/U_RISCV_ALU/U875/ZN (LVT_AOI21HDV2)           0.1176    0.1026     3.7991 f
+  U_RISCV/U_RISCV_ALU/n2774 (net)               2                 0.0000     3.7991 f
+  U_RISCV/U_RISCV_ALU/U876/A1 (LVT_OAI21HDV1)           0.1176    0.0000     3.7991 f
+  U_RISCV/U_RISCV_ALU/U876/ZN (LVT_OAI21HDV1)           0.2158    0.1520     3.9511 r
+  U_RISCV/U_RISCV_ALU/n2745 (net)               2                 0.0000     3.9511 r
+  U_RISCV/U_RISCV_ALU/U877/A1 (LVT_AOI21HDV1)           0.2158    0.0000     3.9511 r
+  U_RISCV/U_RISCV_ALU/U877/ZN (LVT_AOI21HDV1)           0.1414    0.1233     4.0744 f
+  U_RISCV/U_RISCV_ALU/n2814 (net)               2                 0.0000     4.0744 f
+  U_RISCV/U_RISCV_ALU/U3187/A1 (LVT_OAI21HDV2)          0.1414    0.0000     4.0744 f
+  U_RISCV/U_RISCV_ALU/U3187/ZN (LVT_OAI21HDV2)          0.1503    0.1195     4.1939 r
+  U_RISCV/U_RISCV_ALU/n2847 (net)               1                 0.0000     4.1939 r
+  U_RISCV/U_RISCV_ALU/U3194/CI (LVT_AD1HDV1)            0.1503    0.0000     4.1939 r
+  U_RISCV/U_RISCV_ALU/U3194/CO (LVT_AD1HDV1)            0.1329    0.2046     4.3985 r
+  U_RISCV/U_RISCV_ALU/n2816 (net)               1                 0.0000     4.3985 r
+  U_RISCV/U_RISCV_ALU/U3188/A1 (LVT_XOR2HDV2)           0.1329    0.0000     4.3985 r
+  U_RISCV/U_RISCV_ALU/U3188/Z (LVT_XOR2HDV2)            0.0681    0.1502     4.5486 f
+  U_RISCV/U_RISCV_ALU/n2843 (net)               1                 0.0000     4.5486 f
+  U_RISCV/U_RISCV_ALU/U45/A1 (LVT_AOI21HDV2)            0.0681    0.0000     4.5486 f
+  U_RISCV/U_RISCV_ALU/U45/ZN (LVT_AOI21HDV2)            0.1425    0.0888     4.6374 r
+  U_RISCV/U_RISCV_ALU/n2844 (net)               1                 0.0000     4.6374 r
+  U_RISCV/U_RISCV_ALU/U3192/A2 (LVT_NAND2HDV2)          0.1425    0.0000     4.6374 r
+  U_RISCV/U_RISCV_ALU/U3192/ZN (LVT_NAND2HDV2)          0.0728    0.0666     4.7040 f
+  U_RISCV/U_RISCV_ALU/n3094 (net)               2                 0.0000     4.7040 f
+  U_RISCV/U_RISCV_ALU/U42/A1 (LVT_OR4HDV4)              0.0728    0.0000     4.7040 f
+  U_RISCV/U_RISCV_ALU/U42/Z (LVT_OR4HDV4)               0.0987    0.2357     4.9397 f
+  U_RISCV/U_RISCV_ALU/alu_out[63] (net)         4                 0.0000     4.9397 f
+  U_RISCV/U_RISCV_ALU/alu_out[63] (ysyx_210438_riscv_alu_WIDTH64_0)
+                                                                  0.0000     4.9397 f
+  U_RISCV/alu_out_ex_stage[63] (net)                              0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/alu_out (ysyx_210438_riscv_branch_0)     0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/alu_out (net)                            0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/U10/A1 (LVT_OA211HDV4)         0.0987    0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/U10/Z (LVT_OA211HDV4)          0.0532    0.1802     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/n2 (net)               1                 0.0000     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/U11/B (LVT_AOI21HDV2)          0.0532    0.0000     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/U11/ZN (LVT_AOI21HDV2)         0.1342    0.0860     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/n4 (net)               1                 0.0000     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/U3/A1 (LVT_XNOR2HDV2)          0.1342    0.0000     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/U3/ZN (LVT_XNOR2HDV2)          0.0824    0.1808     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/n15 (net)              1                 0.0000     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/U17/A1 (LVT_AOI21HDV4)         0.0824    0.0000     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/U17/ZN (LVT_AOI21HDV4)         0.1667    0.1179     5.5045 r
+  U_RISCV/U_RISCV_BRANCH/branch_out (net)       5                 0.0000     5.5045 r
+  U_RISCV/U_RISCV_BRANCH/branch_out (ysyx_210438_riscv_branch_0)
+                                                                  0.0000     5.5045 r
+  U_RISCV/branch_out_signal (net)                                 0.0000     5.5045 r
+  U_RISCV/U2020/B1 (LVT_INOR2HDV2)                      0.1667    0.0000     5.5045 r
+  U_RISCV/U2020/ZN (LVT_INOR2HDV2)                      0.0649    0.0550     5.5595 f
+  U_RISCV/n_13_net_ (net)                       1                 0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/en (ysyx_210438_riscv_rs_301_DATA_WIDTH301_0)
+                                                                  0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/en (net)                               0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/U36/I (LVT_INHDV2)           0.0649    0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/U36/ZN (LVT_INHDV2)          0.0666    0.0551     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/n311 (net)           1                 0.0000     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/U34/A1 (LVT_NOR2HDV4)        0.0666    0.0000     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/U34/ZN (LVT_NOR2HDV4)        0.0941    0.0682     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/n319 (net)          17                 0.0000     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/U7/I (LVT_BUFHDV4)           0.0941    0.0000     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/U7/Z (LVT_BUFHDV4)           0.1110    0.1550     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/n316 (net)          22                 0.0000     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/U121/I (LVT_BUFHDV2)         0.1110    0.0000     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/U121/Z (LVT_BUFHDV2)         0.1305    0.1800     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/n314 (net)          13                 0.0000     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/U124/B1 (LVT_AO22HDV2)       0.1305    0.0000     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/U124/Z (LVT_AO22HDV2)        0.0621    0.1840     6.2018 f
+  U_RISCV/U_RISCV_RS_ID2EX/n91 (net)            1                 0.0000     6.2018 f
+  U_RISCV/U_RISCV_RS_ID2EX/dout_reg_86_/D (LVT_DQHDV1)
+                                                        0.0621    0.0000     6.2018 f
+  data arrival time                                                          6.2018
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  U_RISCV/U_RISCV_RS_ID2EX/dout_reg_86_/CK (LVT_DQHDV1)           0.0000     6.3500 r
+  library setup time                                             -0.1463     6.2037
+  data required time                                                         6.2037
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2037
+  data arrival time                                                         -6.2018
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0019
+  Startpoint: U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: U_RISCV/U_RISCV_RS_ID2EX/dout_reg_85_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout_reg_73_/Q (LVT_DQHDV1)
+                                                        0.3192    0.3867     0.3867 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout[73] (net)     13                 0.0000     0.3867 r
+  U_RISCV/U_RISCV_RS_MEM2WB/dout[73] (ysyx_210438_riscv_rs_357_DATA_WIDTH357_0)
+                                                                  0.0000     0.3867 r
+  U_RISCV/instr_mem2wb_ff[9] (net)                                0.0000     0.3867 r
+  U_RISCV/U7/A2 (LVT_NOR2HDV1)                          0.3192    0.0000     0.3867 r
+  U_RISCV/U7/ZN (LVT_NOR2HDV1)                          0.0987    0.0725     0.4592 f
+  U_RISCV/n179 (net)                            1                 0.0000     0.4592 f
+  U_RISCV/U393/A2 (LVT_AOI31HDV2)                       0.0987    0.0000     0.4592 f
+  U_RISCV/U393/ZN (LVT_AOI31HDV2)                       0.1952    0.1436     0.6028 r
+  U_RISCV/n193 (net)                            3                 0.0000     0.6028 r
+  U_RISCV/U10/A1 (LVT_NAND2HDV1)                        0.1952    0.0000     0.6028 r
+  U_RISCV/U10/ZN (LVT_NAND2HDV1)                        0.1163    0.0982     0.7010 f
+  U_RISCV/n182 (net)                            2                 0.0000     0.7010 f
+  U_RISCV/U397/I (LVT_INHDV2)                           0.1163    0.0000     0.7010 f
+  U_RISCV/U397/ZN (LVT_INHDV2)                          0.0573    0.0499     0.7509 r
+  U_RISCV/n184 (net)                            1                 0.0000     0.7509 r
+  U_RISCV/U398/A1 (LVT_NAND2HDV2)                       0.0573    0.0000     0.7509 r
+  U_RISCV/U398/ZN (LVT_NAND2HDV2)                       0.0879    0.0684     0.8194 f
+  U_RISCV/n186 (net)                            2                 0.0000     0.8194 f
+  U_RISCV/U298/A1 (LVT_NOR2HDV4)                        0.0879    0.0000     0.8194 f
+  U_RISCV/U298/ZN (LVT_NOR2HDV4)                        0.3065    0.1881     1.0074 r
+  U_RISCV/n735 (net)                           15                 0.0000     1.0074 r
+  U_RISCV/U407/I (LVT_BUFHDV4)                          0.3065    0.0000     1.0074 r
+  U_RISCV/U407/Z (LVT_BUFHDV4)                          0.4413    0.3322     1.3396 r
+  U_RISCV/n789 (net)                           50                 0.0000     1.3396 r
+  U_RISCV/U120/A1 (LVT_NAND2HDV1)                       0.4413    0.0000     1.3396 r
+  U_RISCV/U120/ZN (LVT_NAND2HDV1)                       0.1242    0.0905     1.4301 f
+  U_RISCV/n692 (net)                            1                 0.0000     1.4301 f
+  U_RISCV/U31/B (LVT_IOA21HDV1)                         0.1242    0.0000     1.4301 f
+  U_RISCV/U31/ZN (LVT_IOA21HDV1)                        0.0774    0.0680     1.4981 r
+  U_RISCV/n693 (net)                            1                 0.0000     1.4981 r
+  U_RISCV/U259/B (LVT_AOI21HDV1)                        0.0774    0.0000     1.4981 r
+  U_RISCV/U259/ZN (LVT_AOI21HDV1)                       0.1570    0.0443     1.5425 f
+  U_RISCV/n694 (net)                            1                 0.0000     1.5425 f
+  U_RISCV/U1054/A2 (LVT_NAND2HDV2)                      0.1570    0.0000     1.5425 f
+  U_RISCV/U1054/ZN (LVT_NAND2HDV2)                      0.1072    0.0916     1.6340 r
+  U_RISCV/wr_data_wb_stage[4] (net)             2                 0.0000     1.6340 r
+  U_RISCV/U1055/I (LVT_INHDV2)                          0.1072    0.0000     1.6340 r
+  U_RISCV/U1055/ZN (LVT_INHDV2)                         0.0611    0.0544     1.6884 f
+  U_RISCV/n1240 (net)                           3                 0.0000     1.6884 f
+  U_RISCV/U1526/A1 (LVT_OAI21HDV2)                      0.0611    0.0000     1.6884 f
+  U_RISCV/U1526/ZN (LVT_OAI21HDV2)                      0.1487    0.0936     1.7820 r
+  U_RISCV/n1105 (net)                           2                 0.0000     1.7820 r
+  U_RISCV/U1527/I0 (LVT_MUX2HDV2)                       0.1487    0.0000     1.7820 r
+  U_RISCV/U1527/Z (LVT_MUX2HDV2)                        0.2847    0.3008     2.0828 r
+  U_RISCV/alu_b_ex_stage[4] (net)              13                 0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/b[4] (ysyx_210438_riscv_alu_WIDTH64_0)      0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/b[4] (net)                                  0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/U438/I (LVT_INHDV2)               0.2847    0.0000     2.0828 r
+  U_RISCV/U_RISCV_ALU/U438/ZN (LVT_INHDV2)              0.1121    0.0908     2.1736 f
+  U_RISCV/U_RISCV_ALU/n291 (net)                2                 0.0000     2.1736 f
+  U_RISCV/U_RISCV_ALU/U403/I (LVT_INHDV6)               0.1121    0.0000     2.1736 f
+  U_RISCV/U_RISCV_ALU/U403/ZN (LVT_INHDV6)              0.3310    0.2103     2.3839 r
+  U_RISCV/U_RISCV_ALU/n3133 (net)              52                 0.0000     2.3839 r
+  U_RISCV/U_RISCV_ALU/U694/A1 (LVT_NAND2HDV1)           0.3310    0.0000     2.3839 r
+  U_RISCV/U_RISCV_ALU/U694/ZN (LVT_NAND2HDV1)           0.1411    0.1023     2.4863 f
+  U_RISCV/U_RISCV_ALU/n1407 (net)               2                 0.0000     2.4863 f
+  U_RISCV/U_RISCV_ALU/U696/A1 (LVT_OAI21HDV1)           0.1411    0.0000     2.4863 f
+  U_RISCV/U_RISCV_ALU/U696/ZN (LVT_OAI21HDV1)           0.1961    0.1464     2.6326 r
+  U_RISCV/U_RISCV_ALU/n351 (net)                2                 0.0000     2.6326 r
+  U_RISCV/U_RISCV_ALU/U64/A1 (LVT_AOI21HDV1)            0.1961    0.0000     2.6326 r
+  U_RISCV/U_RISCV_ALU/U64/ZN (LVT_AOI21HDV1)            0.1092    0.0961     2.7288 f
+  U_RISCV/U_RISCV_ALU/n169 (net)                1                 0.0000     2.7288 f
+  U_RISCV/U_RISCV_ALU/U708/B (LVT_OAI21HDV2)            0.1092    0.0000     2.7288 f
+  U_RISCV/U_RISCV_ALU/U708/ZN (LVT_OAI21HDV2)           0.1692    0.0668     2.7955 r
+  U_RISCV/U_RISCV_ALU/n551 (net)                2                 0.0000     2.7955 r
+  U_RISCV/U_RISCV_ALU/U18/A1 (LVT_AOI21HDV2)            0.1692    0.0000     2.7955 r
+  U_RISCV/U_RISCV_ALU/U18/ZN (LVT_AOI21HDV2)            0.1236    0.1091     2.9046 f
+  U_RISCV/U_RISCV_ALU/n265 (net)                2                 0.0000     2.9046 f
+  U_RISCV/U_RISCV_ALU/U869/A1 (LVT_OAI21HDV4)           0.1236    0.0000     2.9046 f
+  U_RISCV/U_RISCV_ALU/U869/ZN (LVT_OAI21HDV4)           0.1351    0.1070     3.0116 r
+  U_RISCV/U_RISCV_ALU/n1072 (net)               2                 0.0000     3.0116 r
+  U_RISCV/U_RISCV_ALU/U13/A1 (LVT_AOI21HDV2)            0.1351    0.0000     3.0116 r
+  U_RISCV/U_RISCV_ALU/U13/ZN (LVT_AOI21HDV2)            0.1202    0.1025     3.1141 f
+  U_RISCV/U_RISCV_ALU/n1084 (net)               2                 0.0000     3.1141 f
+  U_RISCV/U_RISCV_ALU/U870/A1 (LVT_OAI21HDV4)           0.1202    0.0000     3.1141 f
+  U_RISCV/U_RISCV_ALU/U870/ZN (LVT_OAI21HDV4)           0.1390    0.1061     3.2202 r
+  U_RISCV/U_RISCV_ALU/n1843 (net)               2                 0.0000     3.2202 r
+  U_RISCV/U_RISCV_ALU/U871/A1 (LVT_AOI21HDV2)           0.1390    0.0000     3.2202 r
+  U_RISCV/U_RISCV_ALU/U871/ZN (LVT_AOI21HDV2)           0.1046    0.0911     3.3113 f
+  U_RISCV/U_RISCV_ALU/n886 (net)                2                 0.0000     3.3113 f
+  U_RISCV/U_RISCV_ALU/U872/A1 (LVT_OAI21HDV2)           0.1046    0.0000     3.3113 f
+  U_RISCV/U_RISCV_ALU/U872/ZN (LVT_OAI21HDV2)           0.1840    0.1310     3.4422 r
+  U_RISCV/U_RISCV_ALU/n2701 (net)               2                 0.0000     3.4422 r
+  U_RISCV/U_RISCV_ALU/U873/A1 (LVT_AOI21HDV2)           0.1840    0.0000     3.4422 r
+  U_RISCV/U_RISCV_ALU/U873/ZN (LVT_AOI21HDV2)           0.1082    0.0968     3.5391 f
+  U_RISCV/U_RISCV_ALU/n2664 (net)               2                 0.0000     3.5391 f
+  U_RISCV/U_RISCV_ALU/U874/A1 (LVT_OAI21HDV1)           0.1082    0.0000     3.5391 f
+  U_RISCV/U_RISCV_ALU/U874/ZN (LVT_OAI21HDV1)           0.2311    0.1574     3.6965 r
+  U_RISCV/U_RISCV_ALU/n2713 (net)               2                 0.0000     3.6965 r
+  U_RISCV/U_RISCV_ALU/U875/A1 (LVT_AOI21HDV2)           0.2311    0.0000     3.6965 r
+  U_RISCV/U_RISCV_ALU/U875/ZN (LVT_AOI21HDV2)           0.1176    0.1026     3.7991 f
+  U_RISCV/U_RISCV_ALU/n2774 (net)               2                 0.0000     3.7991 f
+  U_RISCV/U_RISCV_ALU/U876/A1 (LVT_OAI21HDV1)           0.1176    0.0000     3.7991 f
+  U_RISCV/U_RISCV_ALU/U876/ZN (LVT_OAI21HDV1)           0.2158    0.1520     3.9511 r
+  U_RISCV/U_RISCV_ALU/n2745 (net)               2                 0.0000     3.9511 r
+  U_RISCV/U_RISCV_ALU/U877/A1 (LVT_AOI21HDV1)           0.2158    0.0000     3.9511 r
+  U_RISCV/U_RISCV_ALU/U877/ZN (LVT_AOI21HDV1)           0.1414    0.1233     4.0744 f
+  U_RISCV/U_RISCV_ALU/n2814 (net)               2                 0.0000     4.0744 f
+  U_RISCV/U_RISCV_ALU/U3187/A1 (LVT_OAI21HDV2)          0.1414    0.0000     4.0744 f
+  U_RISCV/U_RISCV_ALU/U3187/ZN (LVT_OAI21HDV2)          0.1503    0.1195     4.1939 r
+  U_RISCV/U_RISCV_ALU/n2847 (net)               1                 0.0000     4.1939 r
+  U_RISCV/U_RISCV_ALU/U3194/CI (LVT_AD1HDV1)            0.1503    0.0000     4.1939 r
+  U_RISCV/U_RISCV_ALU/U3194/CO (LVT_AD1HDV1)            0.1329    0.2046     4.3985 r
+  U_RISCV/U_RISCV_ALU/n2816 (net)               1                 0.0000     4.3985 r
+  U_RISCV/U_RISCV_ALU/U3188/A1 (LVT_XOR2HDV2)           0.1329    0.0000     4.3985 r
+  U_RISCV/U_RISCV_ALU/U3188/Z (LVT_XOR2HDV2)            0.0681    0.1502     4.5486 f
+  U_RISCV/U_RISCV_ALU/n2843 (net)               1                 0.0000     4.5486 f
+  U_RISCV/U_RISCV_ALU/U45/A1 (LVT_AOI21HDV2)            0.0681    0.0000     4.5486 f
+  U_RISCV/U_RISCV_ALU/U45/ZN (LVT_AOI21HDV2)            0.1425    0.0888     4.6374 r
+  U_RISCV/U_RISCV_ALU/n2844 (net)               1                 0.0000     4.6374 r
+  U_RISCV/U_RISCV_ALU/U3192/A2 (LVT_NAND2HDV2)          0.1425    0.0000     4.6374 r
+  U_RISCV/U_RISCV_ALU/U3192/ZN (LVT_NAND2HDV2)          0.0728    0.0666     4.7040 f
+  U_RISCV/U_RISCV_ALU/n3094 (net)               2                 0.0000     4.7040 f
+  U_RISCV/U_RISCV_ALU/U42/A1 (LVT_OR4HDV4)              0.0728    0.0000     4.7040 f
+  U_RISCV/U_RISCV_ALU/U42/Z (LVT_OR4HDV4)               0.0987    0.2357     4.9397 f
+  U_RISCV/U_RISCV_ALU/alu_out[63] (net)         4                 0.0000     4.9397 f
+  U_RISCV/U_RISCV_ALU/alu_out[63] (ysyx_210438_riscv_alu_WIDTH64_0)
+                                                                  0.0000     4.9397 f
+  U_RISCV/alu_out_ex_stage[63] (net)                              0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/alu_out (ysyx_210438_riscv_branch_0)     0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/alu_out (net)                            0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/U10/A1 (LVT_OA211HDV4)         0.0987    0.0000     4.9397 f
+  U_RISCV/U_RISCV_BRANCH/U10/Z (LVT_OA211HDV4)          0.0532    0.1802     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/n2 (net)               1                 0.0000     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/U11/B (LVT_AOI21HDV2)          0.0532    0.0000     5.1199 f
+  U_RISCV/U_RISCV_BRANCH/U11/ZN (LVT_AOI21HDV2)         0.1342    0.0860     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/n4 (net)               1                 0.0000     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/U3/A1 (LVT_XNOR2HDV2)          0.1342    0.0000     5.2058 r
+  U_RISCV/U_RISCV_BRANCH/U3/ZN (LVT_XNOR2HDV2)          0.0824    0.1808     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/n15 (net)              1                 0.0000     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/U17/A1 (LVT_AOI21HDV4)         0.0824    0.0000     5.3866 f
+  U_RISCV/U_RISCV_BRANCH/U17/ZN (LVT_AOI21HDV4)         0.1667    0.1179     5.5045 r
+  U_RISCV/U_RISCV_BRANCH/branch_out (net)       5                 0.0000     5.5045 r
+  U_RISCV/U_RISCV_BRANCH/branch_out (ysyx_210438_riscv_branch_0)
+                                                                  0.0000     5.5045 r
+  U_RISCV/branch_out_signal (net)                                 0.0000     5.5045 r
+  U_RISCV/U2020/B1 (LVT_INOR2HDV2)                      0.1667    0.0000     5.5045 r
+  U_RISCV/U2020/ZN (LVT_INOR2HDV2)                      0.0649    0.0550     5.5595 f
+  U_RISCV/n_13_net_ (net)                       1                 0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/en (ysyx_210438_riscv_rs_301_DATA_WIDTH301_0)
+                                                                  0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/en (net)                               0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/U36/I (LVT_INHDV2)           0.0649    0.0000     5.5595 f
+  U_RISCV/U_RISCV_RS_ID2EX/U36/ZN (LVT_INHDV2)          0.0666    0.0551     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/n311 (net)           1                 0.0000     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/U34/A1 (LVT_NOR2HDV4)        0.0666    0.0000     5.6146 r
+  U_RISCV/U_RISCV_RS_ID2EX/U34/ZN (LVT_NOR2HDV4)        0.0941    0.0682     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/n319 (net)          17                 0.0000     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/U7/I (LVT_BUFHDV4)           0.0941    0.0000     5.6828 f
+  U_RISCV/U_RISCV_RS_ID2EX/U7/Z (LVT_BUFHDV4)           0.1110    0.1550     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/n316 (net)          22                 0.0000     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/U121/I (LVT_BUFHDV2)         0.1110    0.0000     5.8379 f
+  U_RISCV/U_RISCV_RS_ID2EX/U121/Z (LVT_BUFHDV2)         0.1305    0.1800     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/n314 (net)          13                 0.0000     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/U123/B1 (LVT_AO22HDV2)       0.1305    0.0000     6.0178 f
+  U_RISCV/U_RISCV_RS_ID2EX/U123/Z (LVT_AO22HDV2)        0.0621    0.1840     6.2018 f
+  U_RISCV/U_RISCV_RS_ID2EX/n90 (net)            1                 0.0000     6.2018 f
+  U_RISCV/U_RISCV_RS_ID2EX/dout_reg_85_/D (LVT_DQHDV1)
+                                                        0.0621    0.0000     6.2018 f
+  data arrival time                                                          6.2018
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  U_RISCV/U_RISCV_RS_ID2EX/dout_reg_85_/CK (LVT_DQHDV1)           0.0000     6.3500 r
+  library setup time                                             -0.1463     6.2037
+  data required time                                                         6.2037
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2037
+  data arrival time                                                         -6.2018
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0019
