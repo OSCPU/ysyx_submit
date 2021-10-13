@@ -1,0 +1,871 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Oct_13_10:42:46_2021_+0800
+top_name: ysyx_210544
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total      std        mem  ipio  sub_harden
+1154529.2  1154529.2  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+62958  62958  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210544
+Date   : Wed Oct 13 10:57:21 2021
+****************************************
+    
+    S011HD1P_X32Y2D128_BW_SS_1.08_125 (File: /Project/home/fangwenji/prj/coosca/lib_data/ccsdb/S011HD1P_X32Y2D128_BW_SS_1.08_125.db)
+Number of ports:                        26971
+Number of nets:                         85506
+Number of cells:                        63305
+Number of combinational cells:          48627
+Number of sequential cells:             14323
+Number of macros/black boxes:               8
+Number of buf/inv:                       6112
+Number of references:                       3
+Combinational area:             380013.582792
+Buf/Inv area:                    27470.229511
+Noncombinational area:          365975.229210
+Macro/Black Box area:           408540.343750
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:               1154529.155752
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area                  Local cell area
+                                  ---------------------  ------------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes        Design
+--------------------------------  ------------  -------  -----------  -----------  -----------  ---------------------------
+ysyx_210544                       1154529.1558    100.0     719.4680       0.0000       0.0000  ysyx_210544
+u_axi_rw                            36097.1220      3.1   21021.9135   15075.2085       0.0000  ysyx_210544_axi_rw_0
+u_cpu                             1117712.5657     96.8       0.0000       0.0000       0.0000  ysyx_210544_cpu_0
+u_cpu/Cache                        879110.0778     76.1   16874.5503       0.0000       0.0000  ysyx_210544_cache_0
+u_cpu/Cache/Cache_sync              20883.3997      1.8    6855.7904   14027.6093       0.0000  ysyx_210544_cache_sync_0
+u_cpu/Cache/DCache                 445981.8383     38.6    8911.9896    3347.2073       0.0000  ysyx_210544_cache_core_3
+u_cpu/Cache/DCache/Cache_basic     433722.6414     37.6   84672.6421   98448.7769  204270.1719  ysyx_210544_cache_basic_2
+u_cpu/Cache/DCache/Cache_basic/Cache_axi
+                                    46331.0505      4.0   19119.0215   27212.0289       0.0000  ysyx_210544_cache_axi_3
+u_cpu/Cache/ICache                 389086.0390     33.7    3197.9344    1611.0705       0.0000  ysyx_210544_cache_core_2
+u_cpu/Cache/ICache/Cache_basic     384277.0341     33.3   62192.9654   71441.1576  204270.1719  ysyx_210544_cache_basic_3
+u_cpu/Cache/ICache/Cache_basic/Cache_axi
+                                    46372.7393      4.0   19160.7103   27212.0289       0.0000  ysyx_210544_cache_axi_2
+u_cpu/Cache/NoCache                  6284.2505      0.5    2068.3024    4215.9481       0.0000  ysyx_210544_cache_nocache_0
+u_cpu/Csrfile                       23570.3100      2.0   10488.0952   13082.2148       0.0000  ysyx_210544_csrfile_0
+u_cpu/Exe_stage                     50949.0932      4.4    6565.3136    6927.0650       0.0000  ysyx_210544_exe_stage_0
+u_cpu/Exe_stage/ExceptionU          11317.8370      1.0    4265.7056    7052.1314       0.0000  ysyx_210544_exceptionU_0
+u_cpu/Exe_stage/ExeU                26138.8775      2.3   26138.8775       0.0000       0.0000  ysyx_210544_exeU_0
+u_cpu/Id_stage                      11159.1505      1.0    1608.3808    2427.3641       0.0000  ysyx_210544_id_stage_0
+u_cpu/Id_stage/IdU                   7123.4056      0.6    7123.4056       0.0000       0.0000  ysyx_210544_idU_0
+u_cpu/If_stage                      15627.9210      1.4       0.0000       0.0000       0.0000  ysyx_210544_if_stage_0
+u_cpu/If_stage/IfU                  15627.9210      1.4    8243.6240    7384.2971       0.0000  ysyx_210544_ifU_0
+u_cpu/Mem_stage                     32772.7764      2.8    6265.4232    2018.5449       0.0000  ysyx_210544_mem_stage_0
+u_cpu/Mem_stage/MemU                 6367.6281      0.6    2126.1288    4241.4993       0.0000  ysyx_210544_memU_0
+u_cpu/Mem_stage/Mem_cachesync          86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210544_mem_cachesync_0
+u_cpu/Mem_stage/Mem_mmio            18002.8378      1.6    1465.8320    1660.8281       0.0000  ysyx_210544_mem_mmio_0
+u_cpu/Mem_stage/Mem_mmio/Clint       8347.1737      0.7    5076.6200    3270.5537       0.0000  ysyx_210544_clint_0
+u_cpu/Mem_stage/Mem_mmio/Rtc         6529.0041      0.6    3795.0256    2733.9785       0.0000  ysyx_210544_rtc_0
+u_cpu/Mem_stage/Mem_nothing            32.2752      0.0       6.7240      25.5512       0.0000  ysyx_210544_mem_nothing_0
+u_cpu/Regfile                      101360.2671      8.8   50666.6846   50693.5825       0.0000  ysyx_210544_regfile_0
+u_cpu/Wb_stage                       3162.9697      0.3    1347.4896    1815.4801       0.0000  ysyx_210544_wb_stage_0
+--------------------------------  ------------  -------  -----------  -----------  -----------  ---------------------------
+Total                                                    380013.5828  365975.2292  408540.3438
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210544
+Date   : Wed Oct 13 10:57:15 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__2_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_/CK (LVT_DQHDV2)
+                                                        0.0000    0.0000 #   0.0000 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_/Q (LVT_DQHDV2)
+                                                        0.1412    0.2840     0.2840 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr[4] (net)
+                                                5                 0.0000     0.2840 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr[4] (ysyx_210544_memU_0)      0.0000     0.2840 r
+  u_cpu/Mem_stage/o_dcache_addr[4] (net)                          0.0000     0.2840 r
+  u_cpu/Mem_stage/o_dcache_addr[4] (ysyx_210544_mem_stage_0)      0.0000     0.2840 r
+  u_cpu/o_dcache_addr[4] (net)                                    0.0000     0.2840 r
+  u_cpu/Cache/i_dcache_addr[4] (ysyx_210544_cache_0)              0.0000     0.2840 r
+  u_cpu/Cache/i_dcache_addr[4] (net)                              0.0000     0.2840 r
+  u_cpu/Cache/DCache/i_cache_core_addr[4] (ysyx_210544_cache_core_3)
+                                                                  0.0000     0.2840 r
+  u_cpu/Cache/DCache/i_cache_core_addr[4] (net)                   0.0000     0.2840 r
+  u_cpu/Cache/DCache/U790/B (LVT_ADH1HDV2)              0.1412    0.0000     0.2840 r
+  u_cpu/Cache/DCache/U790/CO (LVT_ADH1HDV2)             0.0805    0.1315     0.4155 r
+  u_cpu/Cache/DCache/n914 (net)                 1                 0.0000     0.4155 r
+  u_cpu/Cache/DCache/U525/B (LVT_ADH1HDV2)              0.0805    0.0000     0.4155 r
+  u_cpu/Cache/DCache/U525/CO (LVT_ADH1HDV2)             0.0801    0.1200     0.5355 r
+  u_cpu/Cache/DCache/n912 (net)                 1                 0.0000     0.5355 r
+  u_cpu/Cache/DCache/U524/B (LVT_ADH1HDV2)              0.0801    0.0000     0.5355 r
+  u_cpu/Cache/DCache/U524/CO (LVT_ADH1HDV2)             0.0809    0.1199     0.6554 r
+  u_cpu/Cache/DCache/n910 (net)                 1                 0.0000     0.6554 r
+  u_cpu/Cache/DCache/U523/B (LVT_ADH1HDV2)              0.0809    0.0000     0.6554 r
+  u_cpu/Cache/DCache/U523/CO (LVT_ADH1HDV2)             0.0696    0.1132     0.7687 r
+  u_cpu/Cache/DCache/n908 (net)                 2                 0.0000     0.7687 r
+  u_cpu/Cache/DCache/U72/A1 (LVT_AND2HDV2)              0.0696    0.0000     0.7687 r
+  u_cpu/Cache/DCache/U72/Z (LVT_AND2HDV2)               0.0817    0.1234     0.8921 r
+  u_cpu/Cache/DCache/n633 (net)                 1                 0.0000     0.8921 r
+  u_cpu/Cache/DCache/U513/B (LVT_ADH1HDV2)              0.0817    0.0000     0.8921 r
+  u_cpu/Cache/DCache/U513/CO (LVT_ADH1HDV2)             0.0710    0.1142     1.0063 r
+  u_cpu/Cache/DCache/n891 (net)                 1                 0.0000     1.0063 r
+  u_cpu/Cache/DCache/U19/B (LVT_ADH1HDV1)               0.0710    0.0000     1.0063 r
+  u_cpu/Cache/DCache/U19/CO (LVT_ADH1HDV1)              0.0911    0.1350     1.1413 r
+  u_cpu/Cache/DCache/n885 (net)                 1                 0.0000     1.1413 r
+  u_cpu/Cache/DCache/U515/B (LVT_ADH1HDV1)              0.0911    0.0000     1.1413 r
+  u_cpu/Cache/DCache/U515/CO (LVT_ADH1HDV1)             0.1053    0.1479     1.2893 r
+  u_cpu/Cache/DCache/n889 (net)                 1                 0.0000     1.2893 r
+  u_cpu/Cache/DCache/U516/B (LVT_ADH1HDV2)              0.1053    0.0000     1.2893 r
+  u_cpu/Cache/DCache/U516/CO (LVT_ADH1HDV2)             0.0809    0.1247     1.4139 r
+  u_cpu/Cache/DCache/n903 (net)                 1                 0.0000     1.4139 r
+  u_cpu/Cache/DCache/U521/B (LVT_ADH1HDV2)              0.0809    0.0000     1.4139 r
+  u_cpu/Cache/DCache/U521/CO (LVT_ADH1HDV2)             0.0809    0.1201     1.5340 r
+  u_cpu/Cache/DCache/n883 (net)                 1                 0.0000     1.5340 r
+  u_cpu/Cache/DCache/U514/B (LVT_ADH1HDV2)              0.0809    0.0000     1.5340 r
+  u_cpu/Cache/DCache/U514/CO (LVT_ADH1HDV2)             0.0710    0.1141     1.6481 r
+  u_cpu/Cache/DCache/n893 (net)                 1                 0.0000     1.6481 r
+  u_cpu/Cache/DCache/U81/B (LVT_ADH1HDV1)               0.0710    0.0000     1.6481 r
+  u_cpu/Cache/DCache/U81/CO (LVT_ADH1HDV1)              0.1053    0.1439     1.7920 r
+  u_cpu/Cache/DCache/n901 (net)                 1                 0.0000     1.7920 r
+  u_cpu/Cache/DCache/U520/B (LVT_ADH1HDV2)              0.1053    0.0000     1.7920 r
+  u_cpu/Cache/DCache/U520/CO (LVT_ADH1HDV2)             0.0809    0.1247     1.9167 r
+  u_cpu/Cache/DCache/n899 (net)                 1                 0.0000     1.9167 r
+  u_cpu/Cache/DCache/U519/B (LVT_ADH1HDV2)              0.0809    0.0000     1.9167 r
+  u_cpu/Cache/DCache/U519/CO (LVT_ADH1HDV2)             0.0696    0.1132     2.0299 r
+  u_cpu/Cache/DCache/n896 (net)                 2                 0.0000     2.0299 r
+  u_cpu/Cache/DCache/U64/A1 (LVT_AND2HDV2)              0.0696    0.0000     2.0299 r
+  u_cpu/Cache/DCache/U64/Z (LVT_AND2HDV2)               0.0817    0.1234     2.1533 r
+  u_cpu/Cache/DCache/n630 (net)                 1                 0.0000     2.1533 r
+  u_cpu/Cache/DCache/U517/B (LVT_ADH1HDV2)              0.0817    0.0000     2.1533 r
+  u_cpu/Cache/DCache/U517/CO (LVT_ADH1HDV2)             0.0696    0.1134     2.2667 r
+  u_cpu/Cache/DCache/n887 (net)                 2                 0.0000     2.2667 r
+  u_cpu/Cache/DCache/U71/A1 (LVT_AND2HDV2)              0.0696    0.0000     2.2667 r
+  u_cpu/Cache/DCache/U71/Z (LVT_AND2HDV2)               0.0817    0.1234     2.3901 r
+  u_cpu/Cache/DCache/n632 (net)                 1                 0.0000     2.3901 r
+  u_cpu/Cache/DCache/U518/B (LVT_ADH1HDV2)              0.0817    0.0000     2.3901 r
+  u_cpu/Cache/DCache/U518/CO (LVT_ADH1HDV2)             0.0778    0.1183     2.5084 r
+  u_cpu/Cache/DCache/n871 (net)                 2                 0.0000     2.5084 r
+  u_cpu/Cache/DCache/U63/A1 (LVT_AND2HDV4)              0.0778    0.0000     2.5084 r
+  u_cpu/Cache/DCache/U63/Z (LVT_AND2HDV4)               0.0517    0.1005     2.6089 r
+  u_cpu/Cache/DCache/n629 (net)                 2                 0.0000     2.6089 r
+  u_cpu/Cache/DCache/U509/A1 (LVT_NAND2HDV2)            0.0517    0.0000     2.6089 r
+  u_cpu/Cache/DCache/U509/ZN (LVT_NAND2HDV2)            0.0879    0.0607     2.6696 f
+  u_cpu/Cache/DCache/n1122 (net)                2                 0.0000     2.6696 f
+  u_cpu/Cache/DCache/U9/A1 (LVT_XNOR2HDV2)              0.0879    0.0000     2.6696 f
+  u_cpu/Cache/DCache/U9/ZN (LVT_XNOR2HDV2)              0.0662    0.1266     2.7962 f
+  u_cpu/Cache/DCache/n1123 (net)                1                 0.0000     2.7962 f
+  u_cpu/Cache/DCache/U792/I0 (LVT_MUX2HDV4)             0.0662    0.0000     2.7962 f
+  u_cpu/Cache/DCache/U792/Z (LVT_MUX2HDV4)              0.1225    0.2030     2.9992 f
+  u_cpu/Cache/DCache/o_cache_basic_addr[25] (net)
+                                                9                 0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/i_cache_basic_addr[25] (ysyx_210544_cache_basic_2)
+                                                                  0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/i_cache_basic_addr[25] (net)     0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/U161/A1 (LVT_AOI22HDV2)
+                                                        0.1225    0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/U161/ZN (LVT_AOI22HDV2)
+                                                        0.1355    0.1178     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/n49700 (net)
+                                                1                 0.0000     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/U1505/A1 (LVT_NAND4HDV1)
+                                                        0.1355    0.0000     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/U1505/ZN (LVT_NAND4HDV1)
+                                                        0.1421    0.1046     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/n49701 (net)
+                                                1                 0.0000     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/U160/A2 (LVT_NOR2HDV1)
+                                                        0.1421    0.0000     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/U160/ZN (LVT_NOR2HDV1)
+                                                        0.1166    0.0948     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/n49703 (net)
+                                                1                 0.0000     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/U1506/C (LVT_OAI211HDV1)
+                                                        0.1166    0.0000     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/U1506/ZN (LVT_OAI211HDV1)
+                                                        0.1354    0.1073     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/n49718 (net)
+                                                1                 0.0000     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/U1517/B (LVT_AOI211HDV2)
+                                                        0.1354    0.0000     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/U1517/ZN (LVT_AOI211HDV2)
+                                                        0.1963    0.1479     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/n49719 (net)
+                                                1                 0.0000     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/U1518/A4 (LVT_NAND4HDV1)
+                                                        0.1963    0.0000     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/U1518/ZN (LVT_NAND4HDV1)
+                                                        0.1412    0.1282     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/n49723 (net)
+                                                1                 0.0000     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/U1519/A2 (LVT_NOR2HDV1)
+                                                        0.1412    0.0000     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/U1519/ZN (LVT_NOR2HDV1)
+                                                        0.1000    0.0844     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/n49726 (net)
+                                                1                 0.0000     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/U130/A1 (LVT_INOR2HDV1)
+                                                        0.1000    0.0000     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/U130/ZN (LVT_INOR2HDV1)
+                                                        0.1145    0.1263     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/n49727 (net)
+                                                1                 0.0000     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/U1520/A3 (LVT_NAND3HDV1)
+                                                        0.1145    0.0000     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/U1520/ZN (LVT_NAND3HDV1)
+                                                        0.0983    0.0894     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/n49730 (net)
+                                                1                 0.0000     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/U131/B (LVT_IAO21HDV1)
+                                                        0.0983    0.0000     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/U131/ZN (LVT_IAO21HDV1)
+                                                        0.1109    0.0897     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/n49731 (net)
+                                                1                 0.0000     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/U1522/A4 (LVT_NAND4HDV1)
+                                                        0.1109    0.0000     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/U1522/ZN (LVT_NAND4HDV1)
+                                                        0.1488    0.1292     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/n49735 (net)
+                                                1                 0.0000     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/U1523/A3 (LVT_NOR3HDV2)
+                                                        0.1488    0.0000     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/U1523/ZN (LVT_NOR3HDV2)
+                                                        0.1801    0.1446     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/n49738 (net)
+                                                1                 0.0000     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/U149/A2 (LVT_NAND2HDV2)
+                                                        0.1801    0.0000     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/U149/ZN (LVT_NAND2HDV2)
+                                                        0.1089    0.0936     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/n50314 (net)
+                                                2                 0.0000     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/U1524/B (LVT_OAI31HDV2)
+                                                        0.1089    0.0000     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/U1524/ZN (LVT_OAI31HDV2)
+                                                        0.2746    0.0684     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/n50340 (net)
+                                                2                 0.0000     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/U146/A1 (LVT_NOR2HDV2)
+                                                        0.2746    0.0000     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/U146/ZN (LVT_NOR2HDV2)
+                                                        0.0855    0.0634     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/n51433 (net)
+                                                2                 0.0000     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/U2082/A1 (LVT_NAND2HDV2)
+                                                        0.0855    0.0000     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/U2082/ZN (LVT_NAND2HDV2)
+                                                        0.0755    0.0601     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/n50315 (net)
+                                                1                 0.0000     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/U2083/A1 (LVT_NAND3HDV4)
+                                                        0.0755    0.0000     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/U2083/ZN (LVT_NAND3HDV4)
+                                                        0.1074    0.0803     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/n50343 (net)
+                                                4                 0.0000     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/U110/A1 (LVT_NAND2HDV2)
+                                                        0.1074    0.0000     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/U110/ZN (LVT_NAND2HDV2)
+                                                        0.2319    0.1524     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/n55142 (net)
+                                                4                 0.0000     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/U4006/A1 (LVT_NAND2HDV8)
+                                                        0.2319    0.0000     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/U4006/ZN (LVT_NAND2HDV8)
+                                                        0.2638    0.1882     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/n55150 (net)
+                                               19                 0.0000     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/U251/A1 (LVT_NAND2HDV8)
+                                                        0.2638    0.0000     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/U251/ZN (LVT_NAND2HDV8)
+                                                        0.4406    0.3072     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/n55147 (net)
+                                              131                 0.0000     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/U83/I (LVT_INHDV6)     0.4406    0.0000     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/U83/ZN (LVT_INHDV6)    0.3147    0.2740     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/n49160 (net)
+                                               78                 0.0000     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/U9732/C (LVT_AOI211HDV2)
+                                                        0.3147    0.0000     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/U9732/ZN (LVT_AOI211HDV2)
+                                                        0.3952    0.2822     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/n55145 (net)
+                                                7                 0.0000     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/U607/I (LVT_INHDV1)    0.3952    0.0000     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/U607/ZN (LVT_INHDV1)   0.0919    0.0559     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/n55144 (net)
+                                                1                 0.0000     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/U606/A1 (LVT_NAND2HDV1)
+                                                        0.0919    0.0000     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/U606/ZN (LVT_NAND2HDV1)
+                                                        0.2188    0.1241     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/n55146 (net)
+                                                6                 0.0000     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/U9735/B2 (LVT_IOA22HDV1)
+                                                        0.2188    0.0000     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/U9735/ZN (LVT_IOA22HDV1)
+                                                        0.0884    0.0849     6.1980 f
+  u_cpu/Cache/DCache/Cache_basic/n6922 (net)
+                                                1                 0.0000     6.1980 f
+  u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__2_/D (LVT_DQHDV1)
+                                                        0.0884    0.0000     6.1980 f
+  data arrival time                                                          6.1980
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__2_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1518     6.1982
+  data required time                                                         6.1982
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1982
+  data arrival time                                                         -6.1980
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0002
+  Startpoint: u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__3_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_/CK (LVT_DQHDV2)
+                                                        0.0000    0.0000 #   0.0000 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_/Q (LVT_DQHDV2)
+                                                        0.1412    0.2840     0.2840 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr[4] (net)
+                                                5                 0.0000     0.2840 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr[4] (ysyx_210544_memU_0)      0.0000     0.2840 r
+  u_cpu/Mem_stage/o_dcache_addr[4] (net)                          0.0000     0.2840 r
+  u_cpu/Mem_stage/o_dcache_addr[4] (ysyx_210544_mem_stage_0)      0.0000     0.2840 r
+  u_cpu/o_dcache_addr[4] (net)                                    0.0000     0.2840 r
+  u_cpu/Cache/i_dcache_addr[4] (ysyx_210544_cache_0)              0.0000     0.2840 r
+  u_cpu/Cache/i_dcache_addr[4] (net)                              0.0000     0.2840 r
+  u_cpu/Cache/DCache/i_cache_core_addr[4] (ysyx_210544_cache_core_3)
+                                                                  0.0000     0.2840 r
+  u_cpu/Cache/DCache/i_cache_core_addr[4] (net)                   0.0000     0.2840 r
+  u_cpu/Cache/DCache/U790/B (LVT_ADH1HDV2)              0.1412    0.0000     0.2840 r
+  u_cpu/Cache/DCache/U790/CO (LVT_ADH1HDV2)             0.0805    0.1315     0.4155 r
+  u_cpu/Cache/DCache/n914 (net)                 1                 0.0000     0.4155 r
+  u_cpu/Cache/DCache/U525/B (LVT_ADH1HDV2)              0.0805    0.0000     0.4155 r
+  u_cpu/Cache/DCache/U525/CO (LVT_ADH1HDV2)             0.0801    0.1200     0.5355 r
+  u_cpu/Cache/DCache/n912 (net)                 1                 0.0000     0.5355 r
+  u_cpu/Cache/DCache/U524/B (LVT_ADH1HDV2)              0.0801    0.0000     0.5355 r
+  u_cpu/Cache/DCache/U524/CO (LVT_ADH1HDV2)             0.0809    0.1199     0.6554 r
+  u_cpu/Cache/DCache/n910 (net)                 1                 0.0000     0.6554 r
+  u_cpu/Cache/DCache/U523/B (LVT_ADH1HDV2)              0.0809    0.0000     0.6554 r
+  u_cpu/Cache/DCache/U523/CO (LVT_ADH1HDV2)             0.0696    0.1132     0.7687 r
+  u_cpu/Cache/DCache/n908 (net)                 2                 0.0000     0.7687 r
+  u_cpu/Cache/DCache/U72/A1 (LVT_AND2HDV2)              0.0696    0.0000     0.7687 r
+  u_cpu/Cache/DCache/U72/Z (LVT_AND2HDV2)               0.0817    0.1234     0.8921 r
+  u_cpu/Cache/DCache/n633 (net)                 1                 0.0000     0.8921 r
+  u_cpu/Cache/DCache/U513/B (LVT_ADH1HDV2)              0.0817    0.0000     0.8921 r
+  u_cpu/Cache/DCache/U513/CO (LVT_ADH1HDV2)             0.0710    0.1142     1.0063 r
+  u_cpu/Cache/DCache/n891 (net)                 1                 0.0000     1.0063 r
+  u_cpu/Cache/DCache/U19/B (LVT_ADH1HDV1)               0.0710    0.0000     1.0063 r
+  u_cpu/Cache/DCache/U19/CO (LVT_ADH1HDV1)              0.0911    0.1350     1.1413 r
+  u_cpu/Cache/DCache/n885 (net)                 1                 0.0000     1.1413 r
+  u_cpu/Cache/DCache/U515/B (LVT_ADH1HDV1)              0.0911    0.0000     1.1413 r
+  u_cpu/Cache/DCache/U515/CO (LVT_ADH1HDV1)             0.1053    0.1479     1.2893 r
+  u_cpu/Cache/DCache/n889 (net)                 1                 0.0000     1.2893 r
+  u_cpu/Cache/DCache/U516/B (LVT_ADH1HDV2)              0.1053    0.0000     1.2893 r
+  u_cpu/Cache/DCache/U516/CO (LVT_ADH1HDV2)             0.0809    0.1247     1.4139 r
+  u_cpu/Cache/DCache/n903 (net)                 1                 0.0000     1.4139 r
+  u_cpu/Cache/DCache/U521/B (LVT_ADH1HDV2)              0.0809    0.0000     1.4139 r
+  u_cpu/Cache/DCache/U521/CO (LVT_ADH1HDV2)             0.0809    0.1201     1.5340 r
+  u_cpu/Cache/DCache/n883 (net)                 1                 0.0000     1.5340 r
+  u_cpu/Cache/DCache/U514/B (LVT_ADH1HDV2)              0.0809    0.0000     1.5340 r
+  u_cpu/Cache/DCache/U514/CO (LVT_ADH1HDV2)             0.0710    0.1141     1.6481 r
+  u_cpu/Cache/DCache/n893 (net)                 1                 0.0000     1.6481 r
+  u_cpu/Cache/DCache/U81/B (LVT_ADH1HDV1)               0.0710    0.0000     1.6481 r
+  u_cpu/Cache/DCache/U81/CO (LVT_ADH1HDV1)              0.1053    0.1439     1.7920 r
+  u_cpu/Cache/DCache/n901 (net)                 1                 0.0000     1.7920 r
+  u_cpu/Cache/DCache/U520/B (LVT_ADH1HDV2)              0.1053    0.0000     1.7920 r
+  u_cpu/Cache/DCache/U520/CO (LVT_ADH1HDV2)             0.0809    0.1247     1.9167 r
+  u_cpu/Cache/DCache/n899 (net)                 1                 0.0000     1.9167 r
+  u_cpu/Cache/DCache/U519/B (LVT_ADH1HDV2)              0.0809    0.0000     1.9167 r
+  u_cpu/Cache/DCache/U519/CO (LVT_ADH1HDV2)             0.0696    0.1132     2.0299 r
+  u_cpu/Cache/DCache/n896 (net)                 2                 0.0000     2.0299 r
+  u_cpu/Cache/DCache/U64/A1 (LVT_AND2HDV2)              0.0696    0.0000     2.0299 r
+  u_cpu/Cache/DCache/U64/Z (LVT_AND2HDV2)               0.0817    0.1234     2.1533 r
+  u_cpu/Cache/DCache/n630 (net)                 1                 0.0000     2.1533 r
+  u_cpu/Cache/DCache/U517/B (LVT_ADH1HDV2)              0.0817    0.0000     2.1533 r
+  u_cpu/Cache/DCache/U517/CO (LVT_ADH1HDV2)             0.0696    0.1134     2.2667 r
+  u_cpu/Cache/DCache/n887 (net)                 2                 0.0000     2.2667 r
+  u_cpu/Cache/DCache/U71/A1 (LVT_AND2HDV2)              0.0696    0.0000     2.2667 r
+  u_cpu/Cache/DCache/U71/Z (LVT_AND2HDV2)               0.0817    0.1234     2.3901 r
+  u_cpu/Cache/DCache/n632 (net)                 1                 0.0000     2.3901 r
+  u_cpu/Cache/DCache/U518/B (LVT_ADH1HDV2)              0.0817    0.0000     2.3901 r
+  u_cpu/Cache/DCache/U518/CO (LVT_ADH1HDV2)             0.0778    0.1183     2.5084 r
+  u_cpu/Cache/DCache/n871 (net)                 2                 0.0000     2.5084 r
+  u_cpu/Cache/DCache/U63/A1 (LVT_AND2HDV4)              0.0778    0.0000     2.5084 r
+  u_cpu/Cache/DCache/U63/Z (LVT_AND2HDV4)               0.0517    0.1005     2.6089 r
+  u_cpu/Cache/DCache/n629 (net)                 2                 0.0000     2.6089 r
+  u_cpu/Cache/DCache/U509/A1 (LVT_NAND2HDV2)            0.0517    0.0000     2.6089 r
+  u_cpu/Cache/DCache/U509/ZN (LVT_NAND2HDV2)            0.0879    0.0607     2.6696 f
+  u_cpu/Cache/DCache/n1122 (net)                2                 0.0000     2.6696 f
+  u_cpu/Cache/DCache/U9/A1 (LVT_XNOR2HDV2)              0.0879    0.0000     2.6696 f
+  u_cpu/Cache/DCache/U9/ZN (LVT_XNOR2HDV2)              0.0662    0.1266     2.7962 f
+  u_cpu/Cache/DCache/n1123 (net)                1                 0.0000     2.7962 f
+  u_cpu/Cache/DCache/U792/I0 (LVT_MUX2HDV4)             0.0662    0.0000     2.7962 f
+  u_cpu/Cache/DCache/U792/Z (LVT_MUX2HDV4)              0.1225    0.2030     2.9992 f
+  u_cpu/Cache/DCache/o_cache_basic_addr[25] (net)
+                                                9                 0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/i_cache_basic_addr[25] (ysyx_210544_cache_basic_2)
+                                                                  0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/i_cache_basic_addr[25] (net)     0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/U161/A1 (LVT_AOI22HDV2)
+                                                        0.1225    0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/U161/ZN (LVT_AOI22HDV2)
+                                                        0.1355    0.1178     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/n49700 (net)
+                                                1                 0.0000     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/U1505/A1 (LVT_NAND4HDV1)
+                                                        0.1355    0.0000     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/U1505/ZN (LVT_NAND4HDV1)
+                                                        0.1421    0.1046     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/n49701 (net)
+                                                1                 0.0000     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/U160/A2 (LVT_NOR2HDV1)
+                                                        0.1421    0.0000     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/U160/ZN (LVT_NOR2HDV1)
+                                                        0.1166    0.0948     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/n49703 (net)
+                                                1                 0.0000     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/U1506/C (LVT_OAI211HDV1)
+                                                        0.1166    0.0000     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/U1506/ZN (LVT_OAI211HDV1)
+                                                        0.1354    0.1073     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/n49718 (net)
+                                                1                 0.0000     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/U1517/B (LVT_AOI211HDV2)
+                                                        0.1354    0.0000     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/U1517/ZN (LVT_AOI211HDV2)
+                                                        0.1963    0.1479     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/n49719 (net)
+                                                1                 0.0000     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/U1518/A4 (LVT_NAND4HDV1)
+                                                        0.1963    0.0000     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/U1518/ZN (LVT_NAND4HDV1)
+                                                        0.1412    0.1282     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/n49723 (net)
+                                                1                 0.0000     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/U1519/A2 (LVT_NOR2HDV1)
+                                                        0.1412    0.0000     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/U1519/ZN (LVT_NOR2HDV1)
+                                                        0.1000    0.0844     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/n49726 (net)
+                                                1                 0.0000     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/U130/A1 (LVT_INOR2HDV1)
+                                                        0.1000    0.0000     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/U130/ZN (LVT_INOR2HDV1)
+                                                        0.1145    0.1263     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/n49727 (net)
+                                                1                 0.0000     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/U1520/A3 (LVT_NAND3HDV1)
+                                                        0.1145    0.0000     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/U1520/ZN (LVT_NAND3HDV1)
+                                                        0.0983    0.0894     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/n49730 (net)
+                                                1                 0.0000     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/U131/B (LVT_IAO21HDV1)
+                                                        0.0983    0.0000     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/U131/ZN (LVT_IAO21HDV1)
+                                                        0.1109    0.0897     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/n49731 (net)
+                                                1                 0.0000     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/U1522/A4 (LVT_NAND4HDV1)
+                                                        0.1109    0.0000     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/U1522/ZN (LVT_NAND4HDV1)
+                                                        0.1488    0.1292     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/n49735 (net)
+                                                1                 0.0000     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/U1523/A3 (LVT_NOR3HDV2)
+                                                        0.1488    0.0000     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/U1523/ZN (LVT_NOR3HDV2)
+                                                        0.1801    0.1446     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/n49738 (net)
+                                                1                 0.0000     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/U149/A2 (LVT_NAND2HDV2)
+                                                        0.1801    0.0000     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/U149/ZN (LVT_NAND2HDV2)
+                                                        0.1089    0.0936     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/n50314 (net)
+                                                2                 0.0000     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/U1524/B (LVT_OAI31HDV2)
+                                                        0.1089    0.0000     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/U1524/ZN (LVT_OAI31HDV2)
+                                                        0.2746    0.0684     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/n50340 (net)
+                                                2                 0.0000     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/U146/A1 (LVT_NOR2HDV2)
+                                                        0.2746    0.0000     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/U146/ZN (LVT_NOR2HDV2)
+                                                        0.0855    0.0634     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/n51433 (net)
+                                                2                 0.0000     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/U2082/A1 (LVT_NAND2HDV2)
+                                                        0.0855    0.0000     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/U2082/ZN (LVT_NAND2HDV2)
+                                                        0.0755    0.0601     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/n50315 (net)
+                                                1                 0.0000     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/U2083/A1 (LVT_NAND3HDV4)
+                                                        0.0755    0.0000     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/U2083/ZN (LVT_NAND3HDV4)
+                                                        0.1074    0.0803     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/n50343 (net)
+                                                4                 0.0000     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/U110/A1 (LVT_NAND2HDV2)
+                                                        0.1074    0.0000     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/U110/ZN (LVT_NAND2HDV2)
+                                                        0.2319    0.1524     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/n55142 (net)
+                                                4                 0.0000     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/U4006/A1 (LVT_NAND2HDV8)
+                                                        0.2319    0.0000     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/U4006/ZN (LVT_NAND2HDV8)
+                                                        0.2638    0.1882     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/n55150 (net)
+                                               19                 0.0000     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/U251/A1 (LVT_NAND2HDV8)
+                                                        0.2638    0.0000     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/U251/ZN (LVT_NAND2HDV8)
+                                                        0.4406    0.3072     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/n55147 (net)
+                                              131                 0.0000     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/U83/I (LVT_INHDV6)     0.4406    0.0000     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/U83/ZN (LVT_INHDV6)    0.3147    0.2740     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/n49160 (net)
+                                               78                 0.0000     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/U9732/C (LVT_AOI211HDV2)
+                                                        0.3147    0.0000     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/U9732/ZN (LVT_AOI211HDV2)
+                                                        0.3952    0.2822     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/n55145 (net)
+                                                7                 0.0000     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/U607/I (LVT_INHDV1)    0.3952    0.0000     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/U607/ZN (LVT_INHDV1)   0.0919    0.0559     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/n55144 (net)
+                                                1                 0.0000     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/U606/A1 (LVT_NAND2HDV1)
+                                                        0.0919    0.0000     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/U606/ZN (LVT_NAND2HDV1)
+                                                        0.2188    0.1241     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/n55146 (net)
+                                                6                 0.0000     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/U9736/B2 (LVT_IOA22HDV1)
+                                                        0.2188    0.0000     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/U9736/ZN (LVT_IOA22HDV1)
+                                                        0.0881    0.0849     6.1980 f
+  u_cpu/Cache/DCache/Cache_basic/n6921 (net)
+                                                1                 0.0000     6.1980 f
+  u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__3_/D (LVT_DQHDV1)
+                                                        0.0881    0.0000     6.1980 f
+  data arrival time                                                          6.1980
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__3_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1517     6.1983
+  data required time                                                         6.1983
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1983
+  data arrival time                                                         -6.1980
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0003
+  Startpoint: u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__4_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_/CK (LVT_DQHDV2)
+                                                        0.0000    0.0000 #   0.0000 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr_reg_4_/Q (LVT_DQHDV2)
+                                                        0.1412    0.2840     0.2840 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr[4] (net)
+                                                5                 0.0000     0.2840 r
+  u_cpu/Mem_stage/MemU/o_dcache_addr[4] (ysyx_210544_memU_0)      0.0000     0.2840 r
+  u_cpu/Mem_stage/o_dcache_addr[4] (net)                          0.0000     0.2840 r
+  u_cpu/Mem_stage/o_dcache_addr[4] (ysyx_210544_mem_stage_0)      0.0000     0.2840 r
+  u_cpu/o_dcache_addr[4] (net)                                    0.0000     0.2840 r
+  u_cpu/Cache/i_dcache_addr[4] (ysyx_210544_cache_0)              0.0000     0.2840 r
+  u_cpu/Cache/i_dcache_addr[4] (net)                              0.0000     0.2840 r
+  u_cpu/Cache/DCache/i_cache_core_addr[4] (ysyx_210544_cache_core_3)
+                                                                  0.0000     0.2840 r
+  u_cpu/Cache/DCache/i_cache_core_addr[4] (net)                   0.0000     0.2840 r
+  u_cpu/Cache/DCache/U790/B (LVT_ADH1HDV2)              0.1412    0.0000     0.2840 r
+  u_cpu/Cache/DCache/U790/CO (LVT_ADH1HDV2)             0.0805    0.1315     0.4155 r
+  u_cpu/Cache/DCache/n914 (net)                 1                 0.0000     0.4155 r
+  u_cpu/Cache/DCache/U525/B (LVT_ADH1HDV2)              0.0805    0.0000     0.4155 r
+  u_cpu/Cache/DCache/U525/CO (LVT_ADH1HDV2)             0.0801    0.1200     0.5355 r
+  u_cpu/Cache/DCache/n912 (net)                 1                 0.0000     0.5355 r
+  u_cpu/Cache/DCache/U524/B (LVT_ADH1HDV2)              0.0801    0.0000     0.5355 r
+  u_cpu/Cache/DCache/U524/CO (LVT_ADH1HDV2)             0.0809    0.1199     0.6554 r
+  u_cpu/Cache/DCache/n910 (net)                 1                 0.0000     0.6554 r
+  u_cpu/Cache/DCache/U523/B (LVT_ADH1HDV2)              0.0809    0.0000     0.6554 r
+  u_cpu/Cache/DCache/U523/CO (LVT_ADH1HDV2)             0.0696    0.1132     0.7687 r
+  u_cpu/Cache/DCache/n908 (net)                 2                 0.0000     0.7687 r
+  u_cpu/Cache/DCache/U72/A1 (LVT_AND2HDV2)              0.0696    0.0000     0.7687 r
+  u_cpu/Cache/DCache/U72/Z (LVT_AND2HDV2)               0.0817    0.1234     0.8921 r
+  u_cpu/Cache/DCache/n633 (net)                 1                 0.0000     0.8921 r
+  u_cpu/Cache/DCache/U513/B (LVT_ADH1HDV2)              0.0817    0.0000     0.8921 r
+  u_cpu/Cache/DCache/U513/CO (LVT_ADH1HDV2)             0.0710    0.1142     1.0063 r
+  u_cpu/Cache/DCache/n891 (net)                 1                 0.0000     1.0063 r
+  u_cpu/Cache/DCache/U19/B (LVT_ADH1HDV1)               0.0710    0.0000     1.0063 r
+  u_cpu/Cache/DCache/U19/CO (LVT_ADH1HDV1)              0.0911    0.1350     1.1413 r
+  u_cpu/Cache/DCache/n885 (net)                 1                 0.0000     1.1413 r
+  u_cpu/Cache/DCache/U515/B (LVT_ADH1HDV1)              0.0911    0.0000     1.1413 r
+  u_cpu/Cache/DCache/U515/CO (LVT_ADH1HDV1)             0.1053    0.1479     1.2893 r
+  u_cpu/Cache/DCache/n889 (net)                 1                 0.0000     1.2893 r
+  u_cpu/Cache/DCache/U516/B (LVT_ADH1HDV2)              0.1053    0.0000     1.2893 r
+  u_cpu/Cache/DCache/U516/CO (LVT_ADH1HDV2)             0.0809    0.1247     1.4139 r
+  u_cpu/Cache/DCache/n903 (net)                 1                 0.0000     1.4139 r
+  u_cpu/Cache/DCache/U521/B (LVT_ADH1HDV2)              0.0809    0.0000     1.4139 r
+  u_cpu/Cache/DCache/U521/CO (LVT_ADH1HDV2)             0.0809    0.1201     1.5340 r
+  u_cpu/Cache/DCache/n883 (net)                 1                 0.0000     1.5340 r
+  u_cpu/Cache/DCache/U514/B (LVT_ADH1HDV2)              0.0809    0.0000     1.5340 r
+  u_cpu/Cache/DCache/U514/CO (LVT_ADH1HDV2)             0.0710    0.1141     1.6481 r
+  u_cpu/Cache/DCache/n893 (net)                 1                 0.0000     1.6481 r
+  u_cpu/Cache/DCache/U81/B (LVT_ADH1HDV1)               0.0710    0.0000     1.6481 r
+  u_cpu/Cache/DCache/U81/CO (LVT_ADH1HDV1)              0.1053    0.1439     1.7920 r
+  u_cpu/Cache/DCache/n901 (net)                 1                 0.0000     1.7920 r
+  u_cpu/Cache/DCache/U520/B (LVT_ADH1HDV2)              0.1053    0.0000     1.7920 r
+  u_cpu/Cache/DCache/U520/CO (LVT_ADH1HDV2)             0.0809    0.1247     1.9167 r
+  u_cpu/Cache/DCache/n899 (net)                 1                 0.0000     1.9167 r
+  u_cpu/Cache/DCache/U519/B (LVT_ADH1HDV2)              0.0809    0.0000     1.9167 r
+  u_cpu/Cache/DCache/U519/CO (LVT_ADH1HDV2)             0.0696    0.1132     2.0299 r
+  u_cpu/Cache/DCache/n896 (net)                 2                 0.0000     2.0299 r
+  u_cpu/Cache/DCache/U64/A1 (LVT_AND2HDV2)              0.0696    0.0000     2.0299 r
+  u_cpu/Cache/DCache/U64/Z (LVT_AND2HDV2)               0.0817    0.1234     2.1533 r
+  u_cpu/Cache/DCache/n630 (net)                 1                 0.0000     2.1533 r
+  u_cpu/Cache/DCache/U517/B (LVT_ADH1HDV2)              0.0817    0.0000     2.1533 r
+  u_cpu/Cache/DCache/U517/CO (LVT_ADH1HDV2)             0.0696    0.1134     2.2667 r
+  u_cpu/Cache/DCache/n887 (net)                 2                 0.0000     2.2667 r
+  u_cpu/Cache/DCache/U71/A1 (LVT_AND2HDV2)              0.0696    0.0000     2.2667 r
+  u_cpu/Cache/DCache/U71/Z (LVT_AND2HDV2)               0.0817    0.1234     2.3901 r
+  u_cpu/Cache/DCache/n632 (net)                 1                 0.0000     2.3901 r
+  u_cpu/Cache/DCache/U518/B (LVT_ADH1HDV2)              0.0817    0.0000     2.3901 r
+  u_cpu/Cache/DCache/U518/CO (LVT_ADH1HDV2)             0.0778    0.1183     2.5084 r
+  u_cpu/Cache/DCache/n871 (net)                 2                 0.0000     2.5084 r
+  u_cpu/Cache/DCache/U63/A1 (LVT_AND2HDV4)              0.0778    0.0000     2.5084 r
+  u_cpu/Cache/DCache/U63/Z (LVT_AND2HDV4)               0.0517    0.1005     2.6089 r
+  u_cpu/Cache/DCache/n629 (net)                 2                 0.0000     2.6089 r
+  u_cpu/Cache/DCache/U509/A1 (LVT_NAND2HDV2)            0.0517    0.0000     2.6089 r
+  u_cpu/Cache/DCache/U509/ZN (LVT_NAND2HDV2)            0.0879    0.0607     2.6696 f
+  u_cpu/Cache/DCache/n1122 (net)                2                 0.0000     2.6696 f
+  u_cpu/Cache/DCache/U9/A1 (LVT_XNOR2HDV2)              0.0879    0.0000     2.6696 f
+  u_cpu/Cache/DCache/U9/ZN (LVT_XNOR2HDV2)              0.0662    0.1266     2.7962 f
+  u_cpu/Cache/DCache/n1123 (net)                1                 0.0000     2.7962 f
+  u_cpu/Cache/DCache/U792/I0 (LVT_MUX2HDV4)             0.0662    0.0000     2.7962 f
+  u_cpu/Cache/DCache/U792/Z (LVT_MUX2HDV4)              0.1225    0.2030     2.9992 f
+  u_cpu/Cache/DCache/o_cache_basic_addr[25] (net)
+                                                9                 0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/i_cache_basic_addr[25] (ysyx_210544_cache_basic_2)
+                                                                  0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/i_cache_basic_addr[25] (net)     0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/U161/A1 (LVT_AOI22HDV2)
+                                                        0.1225    0.0000     2.9992 f
+  u_cpu/Cache/DCache/Cache_basic/U161/ZN (LVT_AOI22HDV2)
+                                                        0.1355    0.1178     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/n49700 (net)
+                                                1                 0.0000     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/U1505/A1 (LVT_NAND4HDV1)
+                                                        0.1355    0.0000     3.1170 r
+  u_cpu/Cache/DCache/Cache_basic/U1505/ZN (LVT_NAND4HDV1)
+                                                        0.1421    0.1046     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/n49701 (net)
+                                                1                 0.0000     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/U160/A2 (LVT_NOR2HDV1)
+                                                        0.1421    0.0000     3.2216 f
+  u_cpu/Cache/DCache/Cache_basic/U160/ZN (LVT_NOR2HDV1)
+                                                        0.1166    0.0948     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/n49703 (net)
+                                                1                 0.0000     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/U1506/C (LVT_OAI211HDV1)
+                                                        0.1166    0.0000     3.3164 r
+  u_cpu/Cache/DCache/Cache_basic/U1506/ZN (LVT_OAI211HDV1)
+                                                        0.1354    0.1073     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/n49718 (net)
+                                                1                 0.0000     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/U1517/B (LVT_AOI211HDV2)
+                                                        0.1354    0.0000     3.4237 f
+  u_cpu/Cache/DCache/Cache_basic/U1517/ZN (LVT_AOI211HDV2)
+                                                        0.1963    0.1479     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/n49719 (net)
+                                                1                 0.0000     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/U1518/A4 (LVT_NAND4HDV1)
+                                                        0.1963    0.0000     3.5716 r
+  u_cpu/Cache/DCache/Cache_basic/U1518/ZN (LVT_NAND4HDV1)
+                                                        0.1412    0.1282     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/n49723 (net)
+                                                1                 0.0000     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/U1519/A2 (LVT_NOR2HDV1)
+                                                        0.1412    0.0000     3.6997 f
+  u_cpu/Cache/DCache/Cache_basic/U1519/ZN (LVT_NOR2HDV1)
+                                                        0.1000    0.0844     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/n49726 (net)
+                                                1                 0.0000     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/U130/A1 (LVT_INOR2HDV1)
+                                                        0.1000    0.0000     3.7842 r
+  u_cpu/Cache/DCache/Cache_basic/U130/ZN (LVT_INOR2HDV1)
+                                                        0.1145    0.1263     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/n49727 (net)
+                                                1                 0.0000     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/U1520/A3 (LVT_NAND3HDV1)
+                                                        0.1145    0.0000     3.9104 r
+  u_cpu/Cache/DCache/Cache_basic/U1520/ZN (LVT_NAND3HDV1)
+                                                        0.0983    0.0894     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/n49730 (net)
+                                                1                 0.0000     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/U131/B (LVT_IAO21HDV1)
+                                                        0.0983    0.0000     3.9998 f
+  u_cpu/Cache/DCache/Cache_basic/U131/ZN (LVT_IAO21HDV1)
+                                                        0.1109    0.0897     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/n49731 (net)
+                                                1                 0.0000     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/U1522/A4 (LVT_NAND4HDV1)
+                                                        0.1109    0.0000     4.0895 r
+  u_cpu/Cache/DCache/Cache_basic/U1522/ZN (LVT_NAND4HDV1)
+                                                        0.1488    0.1292     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/n49735 (net)
+                                                1                 0.0000     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/U1523/A3 (LVT_NOR3HDV2)
+                                                        0.1488    0.0000     4.2187 f
+  u_cpu/Cache/DCache/Cache_basic/U1523/ZN (LVT_NOR3HDV2)
+                                                        0.1801    0.1446     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/n49738 (net)
+                                                1                 0.0000     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/U149/A2 (LVT_NAND2HDV2)
+                                                        0.1801    0.0000     4.3633 r
+  u_cpu/Cache/DCache/Cache_basic/U149/ZN (LVT_NAND2HDV2)
+                                                        0.1089    0.0936     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/n50314 (net)
+                                                2                 0.0000     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/U1524/B (LVT_OAI31HDV2)
+                                                        0.1089    0.0000     4.4569 f
+  u_cpu/Cache/DCache/Cache_basic/U1524/ZN (LVT_OAI31HDV2)
+                                                        0.2746    0.0684     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/n50340 (net)
+                                                2                 0.0000     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/U146/A1 (LVT_NOR2HDV2)
+                                                        0.2746    0.0000     4.5253 r
+  u_cpu/Cache/DCache/Cache_basic/U146/ZN (LVT_NOR2HDV2)
+                                                        0.0855    0.0634     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/n51433 (net)
+                                                2                 0.0000     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/U2082/A1 (LVT_NAND2HDV2)
+                                                        0.0855    0.0000     4.5887 f
+  u_cpu/Cache/DCache/Cache_basic/U2082/ZN (LVT_NAND2HDV2)
+                                                        0.0755    0.0601     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/n50315 (net)
+                                                1                 0.0000     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/U2083/A1 (LVT_NAND3HDV4)
+                                                        0.0755    0.0000     4.6488 r
+  u_cpu/Cache/DCache/Cache_basic/U2083/ZN (LVT_NAND3HDV4)
+                                                        0.1074    0.0803     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/n50343 (net)
+                                                4                 0.0000     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/U110/A1 (LVT_NAND2HDV2)
+                                                        0.1074    0.0000     4.7290 f
+  u_cpu/Cache/DCache/Cache_basic/U110/ZN (LVT_NAND2HDV2)
+                                                        0.2319    0.1524     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/n55142 (net)
+                                                4                 0.0000     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/U4006/A1 (LVT_NAND2HDV8)
+                                                        0.2319    0.0000     4.8815 r
+  u_cpu/Cache/DCache/Cache_basic/U4006/ZN (LVT_NAND2HDV8)
+                                                        0.2638    0.1882     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/n55150 (net)
+                                               19                 0.0000     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/U251/A1 (LVT_NAND2HDV8)
+                                                        0.2638    0.0000     5.0696 f
+  u_cpu/Cache/DCache/Cache_basic/U251/ZN (LVT_NAND2HDV8)
+                                                        0.4406    0.3072     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/n55147 (net)
+                                              131                 0.0000     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/U83/I (LVT_INHDV6)     0.4406    0.0000     5.3769 r
+  u_cpu/Cache/DCache/Cache_basic/U83/ZN (LVT_INHDV6)    0.3147    0.2740     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/n49160 (net)
+                                               78                 0.0000     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/U9732/C (LVT_AOI211HDV2)
+                                                        0.3147    0.0000     5.6508 f
+  u_cpu/Cache/DCache/Cache_basic/U9732/ZN (LVT_AOI211HDV2)
+                                                        0.3952    0.2822     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/n55145 (net)
+                                                7                 0.0000     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/U607/I (LVT_INHDV1)    0.3952    0.0000     5.9331 r
+  u_cpu/Cache/DCache/Cache_basic/U607/ZN (LVT_INHDV1)   0.0919    0.0559     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/n55144 (net)
+                                                1                 0.0000     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/U606/A1 (LVT_NAND2HDV1)
+                                                        0.0919    0.0000     5.9890 f
+  u_cpu/Cache/DCache/Cache_basic/U606/ZN (LVT_NAND2HDV1)
+                                                        0.2188    0.1241     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/n55146 (net)
+                                                6                 0.0000     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/U9737/B2 (LVT_IOA22HDV1)
+                                                        0.2188    0.0000     6.1131 r
+  u_cpu/Cache/DCache/Cache_basic/U9737/ZN (LVT_IOA22HDV1)
+                                                        0.0879    0.0849     6.1980 f
+  u_cpu/Cache/DCache/Cache_basic/n6920 (net)
+                                                1                 0.0000     6.1980 f
+  u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__4_/D (LVT_DQHDV1)
+                                                        0.0879    0.0000     6.1980 f
+  data arrival time                                                          6.1980
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  u_cpu/Cache/DCache/Cache_basic/chip_data_addr_reg_3__4_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1517     6.1983
+  data required time                                                         6.1983
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1983
+  data arrival time                                                         -6.1980
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0003
