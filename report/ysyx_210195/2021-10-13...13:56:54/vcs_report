@@ -1,0 +1,88 @@
+
+core:  ysyx_210195
+
+#####################
+#vcs compile log
+#####################
+Warning-[CIWC] Ignored /* within /* */ comment
+../cpu/ysyx_210195.v, 2913
+  Nested comments is found. Ignoring nested '/*'. 
+  /*assign	cmt_valid_t = (i_if_addr > 64'h0000_0000_8000_000c) ? 
+  ^
+
+
+Warning-[CIWC] Ignored /* within /* */ comment
+../cpu/ysyx_210195.v, 3054
+  Nested comments is found. Ignoring nested '/*'. 
+  /*
+  ^
+
+
+
+#####################
+#vcs system test
+#####################
+!!!!Hello test fail!!!!
+!!!!Mem test fail!!!!
+!!!!rtthread test fail!!!!
+
+
+程序未跑通，可能是由于某些寄存器控制信号未初始化，或是某些逻辑错误,请自行检查修正后再次提交测试
+
+以下为未复位的寄存器:
+
+  41) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_idid_op2[63:0] 
+  42) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_idid_inst_opcode[7:0] 
+  43) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ctrlidctrlid_wb_sel[1:0] 
+  44) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ififif_pc_out[63:0] 
+  45) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ctrlidctrlid_ecall_en 
+  46) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ctrlidctrlid_mret_en 
+  47) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_exe_data[63:0] 
+  48) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_csrunit_csr_addr[11:0] 
+  49) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_csrunit_csr_w_ena 
+  50) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_csrunit_csr_w_data[63:0] 
+  51) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_csrunit_csr_r_ena 
+  52) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_csrunit_csr_r_data[63:0] 
+  53) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ctrlexe_load_axi_en 
+  54) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ctrlexe_load_clint_en 
+  55) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_idid_rd_w_ena 
+  56) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ctrlexe_store_axi_en 
+  57) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_ctrlexe_store_clint_en 
+  58) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_clint_load_data[63:0] 
+  59) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_EXMEM_REG.o_idid_rd_w_addr[4:0] 
+  60) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_rd_w_addr[4:0] 
+  61) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_csr_imm_ena 
+  62) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_csr_imm[63:0] 
+  63) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_rs1_r_ena 
+  64) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_inst_opcode[7:0] 
+  65) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_op1[63:0] 
+  66) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_op2[63:0] 
+  67) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_extend_imm[63:0] 
+  68) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_funct7[6:0] 
+  69) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_ctrlid_wb_sel[1:0] 
+  70) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_ctrlid_ecall_en 
+  71) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_ctrlid_mret_en 
+  72) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_ctrlid_load_mem_en 
+  73) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_ifif_pc_out[63:0] 
+  74) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_rs1_r_addr[4:0] 
+  75) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IDEX_REG.o_id_rd_w_ena 
+  81) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IFID.o_if_inst[31:0] 
+  82) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_IFID.o_if_pc_out[63:0] 
+  97) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ididid_op2[63:0] 
+  98) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ctrlidctrlidctrlid_wb_sel[1:0] 
+  99) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ctrlidctrlidctrlid_ecall_en 
+ 100) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ifififif_pc_out[63:0] 
+ 101) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ctrlidctrlidctrlid_mret_en 
+ 102) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_exeexe_data[63:0] 
+ 103) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_csrunitcsrunit_csr_addr[11:0] 
+ 104) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_csrunitcsrunit_csr_w_ena 
+ 105) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_csrunitcsrunit_csr_w_data[63:0] 
+ 106) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_csrunitcsrunit_csr_r_ena 
+ 107) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_csrunitcsrunit_csr_r_data[63:0] 
+ 108) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ctrlexectrlexe_load_axi_en 
+ 109) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ctrlexectrlexe_load_clint_en 
+ 110) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ctrlexectrlexe_store_clint_en 
+ 111) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ididid_rd_w_ena 
+ 112) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_lspro_axi_ld_data[63:0] 
+ 113) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_clintclint_load_data[63:0] 
+ 114) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210195.ysyx_210195_cpu.ysyx_210195_MEMWB_REG.o_ididid_rd_w_addr[4:0] 
