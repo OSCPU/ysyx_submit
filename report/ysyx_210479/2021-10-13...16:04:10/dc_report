@@ -1,0 +1,1566 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Oct_13_15:54:23_2021_+0800
+top_name: ysyx_210479
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total      std        mem  ipio  sub_harden
+1073395.6  1073395.6  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+72645  72645  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210479
+Date   : Wed Oct 13 16:15:52 2021
+****************************************
+    
+    S011HD1P_X32Y2D128_BW_SS_1.08_125 (File: /Project/home/fangwenji/prj/coosca/lib_data/ccsdb/S011HD1P_X32Y2D128_BW_SS_1.08_125.db)
+Number of ports:                        39276
+Number of nets:                        108795
+Number of cells:                        73510
+Number of combinational cells:          56349
+Number of sequential cells:             16292
+Number of macros/black boxes:               4
+Number of buf/inv:                       7556
+Number of references:                       4
+Combinational area:             452834.502548
+Buf/Inv area:                    35477.168683
+Noncombinational area:          416290.922915
+Macro/Black Box area:           204270.171875
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:               1073395.597338
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area                  Local cell area
+                                  ---------------------  ------------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes        Design
+--------------------------------  ------------  -------  -----------  -----------  -----------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ysyx_210479                       1073395.5973    100.0     703.3304       0.0000       0.0000  ysyx_210479
+U_AXI4_ARBITER                       3292.0704      0.3       0.0000       0.0000       0.0000  ysyx_210479_axi4_arbiter_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0
+U_AXI4_ARBITER/U_ARBITER_R            310.6488      0.0     160.0312       0.0000       0.0000  ysyx_210479_axi4_arbiter_r_0
+U_AXI4_ARBITER/U_ARBITER_R/ff_fsm_state
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_2_1_7
+U_AXI4_ARBITER/U_ARBITER_R/s0_pending_ff
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_127
+U_AXI4_ARBITER/U_ARBITER_R/s1_pending_ff
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_114
+U_AXI4_ARBITER/U_ARBITER_W            151.9624      0.0      57.8264       0.0000       0.0000  ysyx_210479_axi4_arbiter_w_0
+U_AXI4_ARBITER/U_ARBITER_W/ff_fsm_state
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_2_1_8
+U_AXI4_ARBITER/U_ARBITER_W/s1_pending_ff
+                                       29.5856      0.0       4.0344      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_144
+U_AXI4_ARBITER/U_MUX_R               1332.6968      0.1    1332.6968       0.0000       0.0000  ysyx_210479_axi4_mux_r_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0
+U_AXI4_ARBITER/U_MUX_W               1496.7624      0.1    1496.7624       0.0000       0.0000  ysyx_210479_axi4_mux_w_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0
+U_CORE                            1069400.1965     99.6       6.7240       0.0000       0.0000  ysyx_210479_ncpu64k_32_32_5_2_1_13_6_4_1_6_4_1_2_2_2_1_1_1_2_2_30000000_1c_14_0c_04_08_20_18_24_32_2_3_3_2_32_4_1_0
+U_CORE/U_CMT                       207360.3083     19.3    2073.6816       0.0000       0.0000  ysyx_210479_cmt_32_32_5_1_1_2_2_32_1_4_6_13_1_2_2_1c_14_0c_04_08_20_18_24_3_32_4_1_0
+U_CORE/U_CMT/U_CLO                     16.1376      0.0      16.1376       0.0000       0.0000  ysyx_210479_popcnt_DW2_P_DW1_3
+U_CORE/U_CMT/U_EPU                  17316.9898      1.6    4010.1936       0.0000       0.0000  ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0
+U_CORE/U_CMT/U_EPU/U_IRQC            1792.6184      0.2     411.5088       0.0000       0.0000  ysyx_210479_cmt_irqc_CONFIG_DW32_CONFIG_NUM_IRQ32_0
+U_CORE/U_CMT/U_EPU/U_IRQC/dff_msr_irqc_irr
+                                       64.5504      0.0      10.7584      53.7920       0.0000  ysyx_210479_mDFF_r_DW32_3
+U_CORE/U_CMT/U_EPU/U_IRQC/dff_msr_irqc_irr_0
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_DW32_2
+U_CORE/U_CMT/U_EPU/U_IRQC/ff_imr_    1252.0088      0.1     434.3704     817.6384       0.0000  ysyx_210479_mDFF_lr_32_ffffffff_0
+U_CORE/U_CMT/U_EPU/U_TSC             4047.8480      0.4    1594.9328       0.0000       0.0000  ysyx_210479_cmt_tsc_CONFIG_DW32_0
+U_CORE/U_CMT/U_EPU/U_TSC/ff_msr_tsc_tsr
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_50
+U_CORE/U_CMT/U_EPU/U_TSC/ff_tcr      1186.1136      0.1     394.0264     792.0872       0.0000  ysyx_210479_mDFF_lr_DW32_37
+U_CORE/U_CMT/U_EPU/U_TSC/ff_tsc_irq
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_108
+U_CORE/U_CMT/U_EPU/ff_epu_wb_dout    1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_56
+U_CORE/U_CMT/U_EPU/ff_epu_wb_dout_sel
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_115
+U_CORE/U_CMT/U_EPU/ff_epu_wb_valid
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_197
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_EINSN
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_162
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_EIPF
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_146
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_EIRQ
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_116
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_EITM
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_131
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_ERET
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_148
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_ESYSCALL
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_177
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_epc
+                                     1151.1488      0.1     384.6128     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_32
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_nepc
+                                     1149.8040      0.1     383.2680     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_41
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_refetch
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_183
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_wmsr_dat
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_48
+U_CORE/U_CMT/U_EPU/ff_s1o_commit_wmsr_we
+                                      652.2280      0.1     217.8576     434.3704       0.0000  ysyx_210479_mDFF_lr_DW22_3
+U_CORE/U_CMT/U_EPU/ff_s1o_msr_evect
+                                      923.8776      0.1     310.6488     613.2288       0.0000  ysyx_210479_mDFF_lr_DW24_2
+U_CORE/U_CMT/U_EPU/pmux_dout_sr       753.0880      0.1     753.0880       0.0000       0.0000  ysyx_210479_pmux_SELW4_DW32_0
+U_CORE/U_CMT/U_LSU                 174069.7839     16.2    1804.7216       0.0000       0.0000  ysyx_210479_cmt_lsu_CONFIG_AW32_CONFIG_DW32_CONFIG_P_DW5_CONFIG_P_PAGE_SIZE13_CONFIG_DMMU_ENABLE_UNCACHED_SEG1_CONFIG_DTLB_P_SETS2_CONFIG_DC_P_LINE6_CONFIG_DC_P_SETS4_CONFIG_DC_P_WAYS1_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0
+U_CORE/U_CMT/U_LSU/U_D_CACHE       158478.1724     14.8    4954.2432       0.0000       0.0000  ysyx_210479_dcache_CONFIG_AW32_CONFIG_DW32_CONFIG_P_DW5_CONFIG_P_PAGE_SIZE13_CONFIG_DC_P_LINE6_CONFIG_DC_P_SETS4_CONFIG_DC_P_WAYS1_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0
+U_CORE/U_CMT/U_LSU/U_D_CACHE/U_ALIGN_R
+                                      411.5088      0.0     411.5088       0.0000       0.0000  ysyx_210479_align_r_IN_P_DW_BYTES3_IN_AW6_OUT_P_DW_BYTES2_0
+U_CORE/U_CMT/U_LSU/U_D_CACHE/U_ALIGN_W
+                                      217.8576      0.0     217.8576       0.0000       0.0000  ysyx_210479_align_w_IN_P_DW_BYTES3_OUT_P_DW_BYTES2_IN_AW6_0
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_dbus_ARADDR
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_54
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_dbus_ARVALID
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_167
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_dbus_AWADDR
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_46
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_dbus_AWVALID
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_151
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_dbus_WLAST
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_121
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_dbus_WVALID
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_136
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_fsm_boot_cnt_nxt
+                                      129.1008      0.0      26.8960     102.2048       0.0000  ysyx_210479_mDFF_r_DW4_3
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_fsm_free_idx
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_2_1_6
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_fsm_refill_cnt
+                                      129.1008      0.0      26.8960     102.2048       0.0000  ysyx_210479_mDFF_r_DW6_3
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_fls
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_134
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_inv
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_149
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_line_addr
+                                      162.7208      0.0      60.5160     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_14
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_size
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW3_20
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_valid
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_165
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_vpo
+                                      501.6104      0.0     169.4448     332.1656       0.0000  ysyx_210479_mDFF_lr_DW13_2
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_wdat
+                                     1226.4576      0.1     408.8192     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_49
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s1o_wmsk
+                                      162.7208      0.0      60.5160     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_20
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_d
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_35
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_fls
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_119
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_free_dirty
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_106
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_free_tag
+                                      848.5688      0.1     286.4424     562.1264       0.0000  ysyx_210479_mDFF_lr_DW22_2
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_fsm_free_way
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_34
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_line_addr
+                                      162.7208      0.0      60.5160     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_16
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_match_vec
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_45
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_paddr
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_36
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_payload_addr
+                                      313.3384      0.0     108.9288     204.4096       0.0000  ysyx_210479_mDFF_lr_DW8_8
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_size
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW3_30
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_use_uncached_dout
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_190
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_wb_addr
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW6_26
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_wdat
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_41
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_s2o_wmsk
+                                      162.7208      0.0      60.5160     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_18
+U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r
+                                      129.1008      0.0      26.8960     102.2048       0.0000  ysyx_210479_mDFF_r_4_0_0
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_uncached_align_U_ALIGN_UNUCACHED_R
+                                      396.7160      0.0     396.7160       0.0000       0.0000  ysyx_210479_align_r_IN_P_DW_BYTES3_IN_AW32_OUT_P_DW_BYTES2_3
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_uncached_align_ff_axi_aligned_rdata
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_32
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_0__U_D_RF
+                                      981.7040      0.1     547.3336     434.3704       0.0000  ysyx_210479_mRF_nwnr_r_DW1_AW4_NUM_READ1_NUM_WRITE1_3
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_0__U_PAYLOAD_RAM
+                                    52369.3094      4.9     989.7728       0.0000   51067.5430  ysyx_210479_mRAM_s_s_be_P_DW5_AW8_2
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_0__U_PAYLOAD_RAM/ff_re_addr
+                                      311.9936      0.0     107.5840     204.4096       0.0000  ysyx_210479_mDFF_lr_DW8_7
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_0__U_TAG_V_RAM
+                                    16746.7947      1.6    6756.2752    9990.5195       0.0000  ysyx_210479_mRF_1wr_r_DW23_AW4_5
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_0__ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_122
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_0__ff_rd_d
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_109
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_1__U_D_RF
+                                      981.7040      0.1     547.3336     434.3704       0.0000  ysyx_210479_mRF_nwnr_r_DW1_AW4_NUM_READ1_NUM_WRITE1_2
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_1__U_PAYLOAD_RAM
+                                    52369.3094      4.9     989.7728       0.0000   51067.5430  ysyx_210479_mRAM_s_s_be_P_DW5_AW8_3
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_1__U_PAYLOAD_RAM/ff_re_addr
+                                      311.9936      0.0     107.5840     204.4096       0.0000  ysyx_210479_mDFF_lr_DW8_9
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_1__U_TAG_V_RAM
+                                    16746.7947      1.6    6756.2752    9990.5195       0.0000  ysyx_210479_mRF_1wr_r_DW23_AW4_7
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_1__ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_195
+U_CORE/U_CMT/U_LSU/U_D_CACHE/gen_ways_1__ff_rd_d
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_181
+U_CORE/U_CMT/U_LSU/U_D_CACHE/pmux_s1o_free_dirty
+                                       20.1720      0.0      20.1720       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW1_3
+U_CORE/U_CMT/U_LSU/U_D_CACHE/pmux_s2i_free_tag
+                                      281.0632      0.0     281.0632       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW22_0
+U_CORE/U_CMT/U_LSU/U_D_CACHE/pmux_s2o_d
+                                       20.1720      0.0      20.1720       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW1_2
+U_CORE/U_CMT/U_LSU/U_D_CACHE/pmux_s2o_payload
+                                      402.0952      0.0     402.0952       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW32_2
+U_CORE/U_CMT/U_LSU/U_D_CACHE/pmux_s2o_wb_payload
+                                      406.1296      0.0     406.1296       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW32_3
+U_CORE/U_CMT/U_LSU/U_D_MMU          10744.9522      1.0     590.3672       0.0000       0.0000  ysyx_210479_dmmu_CONFIG_AW32_CONFIG_DW32_CONFIG_P_PAGE_SIZE13_CONFIG_DMMU_ENABLE_UNCACHED_SEG1_CONFIG_DTLB_P_SETS2_0
+U_CORE/U_CMT/U_LSU/U_D_MMU/U_TLB_H
+                                     5038.9657      0.5    1972.8216    3066.1441       0.0000  ysyx_210479_mRF_nwnr_r_DW32_AW2_NUM_READ1_NUM_WRITE1_5
+U_CORE/U_CMT/U_LSU/U_D_MMU/U_TLB_L
+                                     4256.2921      0.4    1701.1720    2555.1201       0.0000  ysyx_210479_mRF_nwnr_r_DW32_AW2_NUM_READ1_NUM_WRITE1_6
+U_CORE/U_CMT/U_LSU/U_D_MMU/ff_msr_psr_dmme
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_168
+U_CORE/U_CMT/U_LSU/U_D_MMU/ff_msr_psr_rm
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_152
+U_CORE/U_CMT/U_LSU/U_D_MMU/ff_tgt_vpn
+                                      730.2264      0.1     244.7536     485.4728       0.0000  ysyx_210479_mDFF_lr_DW19_3
+U_CORE/U_CMT/U_LSU/U_D_MMU/ff_we       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_137
+U_CORE/U_CMT/U_LSU/ff_s1o_dcop         43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_170
+U_CORE/U_CMT/U_LSU/ff_s1o_misalign
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_124
+U_CORE/U_CMT/U_LSU/ff_s1o_msr_psr_dce
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_111
+U_CORE/U_CMT/U_LSU/ff_s1o_sign_ext
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_184
+U_CORE/U_CMT/U_LSU/ff_s1o_size         82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW3_34
+U_CORE/U_CMT/U_LSU/ff_s1o_vaddr      1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_30
+U_CORE/U_CMT/U_LSU/ff_s1o_valid        43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_139
+U_CORE/U_CMT/U_LSU/ff_s2o_EALIGN       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_191
+U_CORE/U_CMT/U_LSU/ff_s2o_EDPF         43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_180
+U_CORE/U_CMT/U_LSU/ff_s2o_EDTM         43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_194
+U_CORE/U_CMT/U_LSU/ff_s2o_sign_ext
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_154
+U_CORE/U_CMT/U_LSU/ff_s2o_size         82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW3_37
+U_CORE/U_CMT/U_LSU/ff_s2o_vaddr      1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_44
+U_CORE/U_CMT/U_LSU/ff_s2o_valid        43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_104
+U_CORE/U_CMT/U_NPC                    544.6440      0.1     544.6440       0.0000       0.0000  ysyx_210479_mADD_DW30_3
+U_CORE/U_CMT/U_PSR                  12083.0282      1.1    3171.0384       0.0000       0.0000  ysyx_210479_cmt_psr_CONFIG_DW32_CPUID_VER1_CPUID_REV0_CPUID_FIMM1_CPUID_FDMM1_CPUID_FICA1_CPUID_FDCA1_CPUID_FDBG0_CPUID_FFPU0_CPUID_FIRQC1_CPUID_FTSC1_0
+U_CORE/U_CMT/U_PSR/dff_msr_elsa      1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_40
+U_CORE/U_CMT/U_PSR/dff_msr_evect      922.5328      0.1     309.3040     613.2288       0.0000  ysyx_210479_mDFF_lr_DW24_3
+U_CORE/U_CMT/U_PSR/ff_msr_epc        1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_35
+U_CORE/U_CMT/U_PSR/ff_msr_epsr        387.3024      0.0     131.7904     255.5120       0.0000  ysyx_210479_mDFF_lr_DW10_7
+U_CORE/U_CMT/U_PSR/ff_msr_psr_dce      43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_110
+U_CORE/U_CMT/U_PSR/ff_msr_psr_dmme
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_138
+U_CORE/U_CMT/U_PSR/ff_msr_psr_ice      43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_123
+U_CORE/U_CMT/U_PSR/ff_msr_psr_imme
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_153
+U_CORE/U_CMT/U_PSR/ff_msr_psr_ire      43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_169
+U_CORE/U_CMT/U_PSR/ff_msr_psr_rm       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_1_1_0
+U_CORE/U_CMT/U_PSR/gen_sr_0__dff_sr
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_53
+U_CORE/U_CMT/U_PSR/gen_sr_1__dff_sr
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_31
+U_CORE/U_CMT/U_PSR/gen_sr_2__dff_sr
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_45
+U_CORE/U_CMT/U_PSR/gen_sr_3__dff_sr
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_57
+U_CORE/U_CMT/ff_fsm_state_ff           64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_2_1_5
+U_CORE/U_CMT/ff_s1o_se_fls             43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_117
+U_CORE/U_CMT/ff_s1o_se_tgt           1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_26
+U_CORE/U_EX                         34819.5618      3.2       0.0000       0.0000       0.0000  ysyx_210479_ex_CONFIG_AW32_CONFIG_DW32_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_ROB_DEPTH3_CONFIG_ENABLE_ASR1_0
+U_CORE/U_EX/gen_FUs_0__U_PIPE       17419.1945      1.6    2236.4024       0.0000       0.0000  ysyx_210479_ex_pipe_CONFIG_AW32_CONFIG_DW32_CONFIG_P_ROB_DEPTH3_CONFIG_P_COMMIT_WIDTH1_CONFIG_ENABLE_ASR1_2
+U_CORE/U_EX/gen_FUs_0__U_PIPE/U_ADD_AGU
+                                     1909.6160      0.2    1909.6160       0.0000       0.0000  ysyx_210479_mADD_c_o_DW32_2
+U_CORE/U_EX/gen_FUs_0__U_PIPE/U_AGU
+                                      188.2720      0.0     188.2720       0.0000       0.0000  ysyx_210479_ex_agu_CONFIG_AW32_2
+U_CORE/U_EX/gen_FUs_0__U_PIPE/U_ALU
+                                     3758.7160      0.4    3758.7160       0.0000       0.0000  ysyx_210479_ex_alu_CONFIG_DW32_CONFIG_ENABLE_ASR1_2
+U_CORE/U_EX/gen_FUs_0__U_PIPE/U_BRU
+                                     3430.5848      0.3    3430.5848       0.0000       0.0000  ysyx_210479_ex_bru_CONFIG_DW32_CONFIG_AW32_2
+U_CORE/U_EX/gen_FUs_0__U_PIPE/U_BUF
+                                       83.3776      0.0      40.3440       0.0000       0.0000  ysyx_210479_hds_buf_BYPASS1_6
+U_CORE/U_EX/gen_FUs_0__U_PIPE/U_BUF/ff_pending
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_196
+U_CORE/U_EX/gen_FUs_0__U_PIPE/U_NPC
+                                      455.8872      0.0     455.8872       0.0000       0.0000  ysyx_210479_mADD_DW30_5
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_prf_WADDR_ex
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_15
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_prf_WDATA_ex
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_43
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_prf_WE_ex
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_155
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_wb_exc
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_140
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_wb_fls
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_130
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_wb_opera
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_55
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_wb_operb
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_47
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_wb_rob_bank
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_171
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_wb_rob_id
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_19
+U_CORE/U_EX/gen_FUs_0__U_PIPE/ff_wb_se_tgt
+                                     1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_37
+U_CORE/U_EX/gen_FUs_1__U_PIPE       17400.3673      1.6    2221.6096       0.0000       0.0000  ysyx_210479_ex_pipe_CONFIG_AW32_CONFIG_DW32_CONFIG_P_ROB_DEPTH3_CONFIG_P_COMMIT_WIDTH1_CONFIG_ENABLE_ASR1_3
+U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU
+                                     1905.5816      0.2    1905.5816       0.0000       0.0000  ysyx_210479_mADD_c_o_DW32_3
+U_CORE/U_EX/gen_FUs_1__U_PIPE/U_AGU
+                                      188.2720      0.0     188.2720       0.0000       0.0000  ysyx_210479_ex_agu_CONFIG_AW32_3
+U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ALU
+                                     3758.7160      0.4    3758.7160       0.0000       0.0000  ysyx_210479_ex_alu_CONFIG_DW32_CONFIG_ENABLE_ASR1_3
+U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU
+                                     3430.5848      0.3    3430.5848       0.0000       0.0000  ysyx_210479_ex_bru_CONFIG_DW32_CONFIG_AW32_3
+U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BUF
+                                       83.3776      0.0      40.3440       0.0000       0.0000  ysyx_210479_hds_buf_BYPASS1_5
+U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BUF/ff_pending
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_182
+U_CORE/U_EX/gen_FUs_1__U_PIPE/U_NPC
+                                      455.8872      0.0     455.8872       0.0000       0.0000  ysyx_210479_mADD_DW30_4
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_prf_WADDR_ex
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_17
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_prf_WDATA_ex
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_34
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_prf_WE_ex
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_112
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_exc
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_198
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls
+                                       44.3784      0.0      17.4824      26.8960       0.0000  ysyx_210479_mDFF_lr_DW1_145
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_opera
+                                     1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_39
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_operb
+                                     1223.7680      0.1     406.1296     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_52
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_rob_bank
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_125
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_rob_id
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_25
+U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_se_tgt
+                                     1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_23
+U_CORE/U_FNT                       357220.7885     33.3    4171.5696       0.0000       0.0000  ysyx_210479_frontend_32_32_2_1_2_13_2_6_4_1_2_2_30000000_1_3_2_32_4_1_0
+U_CORE/U_FNT/U_BPU                  31737.2805      3.0    2778.3568       0.0000       0.0000  ysyx_210479_bpu_CONFIG_PHT_P_NUM2_CONFIG_BTB_P_NUM2_CONFIG_AW32_CONFIG_P_FETCH_WIDTH2_0
+U_CORE/U_FNT/U_BPU/U_BTB            22981.2876      2.1   10512.3016   12468.9860       0.0000  ysyx_210479_mRF_nwnr_r_DW61_AW2_NUM_READ4_NUM_WRITE1_0
+U_CORE/U_FNT/U_BPU/U_PHT              883.5336      0.1     474.7144     408.8192       0.0000  ysyx_210479_mRF_nwnr_r_DW2_AW2_NUM_READ4_NUM_WRITE1_0
+U_CORE/U_FNT/U_BPU/ff_GHSR             82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_43
+U_CORE/U_FNT/U_BPU/ff_s1o_msr_psr_imme
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_189
+U_CORE/U_FNT/U_BPU/gen_fw_0__ff_s1o_btb_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_42
+U_CORE/U_FNT/U_BPU/gen_fw_0__ff_s1o_pc
+                                     1073.1504      0.1     357.7168     715.4336       0.0000  ysyx_210479_mDFF_lr_DW30_27
+U_CORE/U_FNT/U_BPU/gen_fw_0__ff_s1o_pht_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_44
+U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_btb_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_33
+U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc
+                                     1079.8744      0.1     364.4408     715.4336       0.0000  ysyx_210479_mDFF_lr_DW30_29
+U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pht_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_28
+U_CORE/U_FNT/U_BPU/gen_fw_2__ff_s1o_btb_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_37
+U_CORE/U_FNT/U_BPU/gen_fw_2__ff_s1o_pc
+                                     1079.8744      0.1     364.4408     715.4336       0.0000  ysyx_210479_mDFF_lr_DW30_38
+U_CORE/U_FNT/U_BPU/gen_fw_2__ff_s1o_pht_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_39
+U_CORE/U_FNT/U_BPU/gen_fw_3__ff_s1o_btb_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_31
+U_CORE/U_FNT/U_BPU/gen_fw_3__ff_s1o_pc
+                                     1079.8744      0.1     364.4408     715.4336       0.0000  ysyx_210479_mDFF_lr_DW30_24
+U_CORE/U_FNT/U_BPU/gen_fw_3__ff_s1o_pht_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_40
+U_CORE/U_FNT/U_I_CACHE             153059.9731     14.3    4745.7992       0.0000       0.0000  ysyx_210479_icache_CONFIG_AW32_CONFIG_DW32_CONFIG_P_FETCH_WIDTH2_CONFIG_P_PAGE_SIZE13_CONFIG_IC_P_LINE6_CONFIG_IC_P_SETS4_CONFIG_IC_P_WAYS1_AXI_P_DW_BYTES3_AXI_UNCACHED_P_DW_BYTES2_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0
+U_CORE/U_FNT/U_I_CACHE/U_ALIGN_R      762.5016      0.1     762.5016       0.0000       0.0000  ysyx_210479_align_r_IN_P_DW_BYTES3_IN_AW6_OUT_P_DW_BYTES4_0
+U_CORE/U_FNT/U_I_CACHE/U_ALIGN_R_UNCACHED_A
+                                      404.7848      0.0     404.7848       0.0000       0.0000  ysyx_210479_align_r_IN_P_DW_BYTES3_IN_AW32_OUT_P_DW_BYTES2_2
+U_CORE/U_FNT/U_I_CACHE/U_ALIGN_R_UNCACHED_B
+                                      247.4432      0.0     247.4432       0.0000       0.0000  ysyx_210479_align_r_IN_P_DW_BYTES2_IN_AW32_OUT_P_DW_BYTES4_0
+U_CORE/U_FNT/U_I_CACHE/ff_axi_ar_addr
+                                     1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW32_42
+U_CORE/U_FNT/U_I_CACHE/ff_axi_ar_valid
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_186
+U_CORE/U_FNT/U_I_CACHE/ff_fsm_boot_cnt_nxt
+                                      129.1008      0.0      26.8960     102.2048       0.0000  ysyx_210479_mDFF_r_DW4_5
+U_CORE/U_FNT/U_I_CACHE/ff_fsm_free_idx
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_2_1_9
+U_CORE/U_FNT/U_I_CACHE/ff_fsm_refill_cnt
+                                       96.8256      0.0      20.1720      76.6536       0.0000  ysyx_210479_mDFF_r_DW6_2
+U_CORE/U_FNT/U_I_CACHE/ff_fsm_uncached_cnt
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_DW4_4
+U_CORE/U_FNT/U_I_CACHE/ff_ins        4865.4865      0.5    1594.9328    3270.5537       0.0000  ysyx_210479_mDFF_lr_DW128_0
+U_CORE/U_FNT/U_I_CACHE/ff_s1o_line_addr
+                                      161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_17
+U_CORE/U_FNT/U_I_CACHE/ff_s1o_op_inv_paddr
+                                      162.7208      0.0      60.5160     102.2048       0.0000  ysyx_210479_mDFF_lr_DW32_38
+U_CORE/U_FNT/U_I_CACHE/ff_s1o_payload_addr
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_24
+U_CORE/U_FNT/U_I_CACHE/ff_s1o_valid
+                                       34.9648      0.0       9.4136      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_161
+U_CORE/U_FNT/U_I_CACHE/ff_s1o_vpo     349.6480      0.0     119.6872     229.9608       0.0000  ysyx_210479_mDFF_lr_DW13_3
+U_CORE/U_FNT/U_I_CACHE/ff_s2o_fsm_free_way
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_48
+U_CORE/U_FNT/U_I_CACHE/ff_s2o_line_addr
+                                      161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_22
+U_CORE/U_FNT/U_I_CACHE/ff_s2o_miss_inflight
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_179
+U_CORE/U_FNT/U_I_CACHE/ff_s2o_paddr
+                                     1073.1504      0.1     357.7168     715.4336       0.0000  ysyx_210479_mDFF_lr_DW32_51
+U_CORE/U_FNT/U_I_CACHE/ff_s2o_uncached_inflight
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_176
+U_CORE/U_FNT/U_I_CACHE/ff_s2o_valid
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_200
+U_CORE/U_FNT/U_I_CACHE/ff_state_r      96.8256      0.0      20.1720      76.6536       0.0000  ysyx_210479_mDFF_r_3_0_0
+U_CORE/U_FNT/U_I_CACHE/gen_ways_0__U_PAYLOAD_RAM
+                                    51456.1902      4.8     151.9624       0.0000   51067.5430  ysyx_210479_mRAM_s_s_be_P_DW7_AW6_2
+U_CORE/U_FNT/U_I_CACHE/gen_ways_0__U_PAYLOAD_RAM/ff_re_addr
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_23
+U_CORE/U_FNT/U_I_CACHE/gen_ways_0__U_TAG_V_RAM
+                                    16736.0363      1.6    6745.5168    9990.5195       0.0000  ysyx_210479_mRF_1wr_r_DW23_AW4_6
+U_CORE/U_FNT/U_I_CACHE/gen_ways_1__U_PAYLOAD_RAM
+                                    51475.0174      4.8     170.7896       0.0000   51067.5430  ysyx_210479_mRAM_s_s_be_P_DW7_AW6_3
+U_CORE/U_FNT/U_I_CACHE/gen_ways_1__U_PAYLOAD_RAM/ff_re_addr
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_19
+U_CORE/U_FNT/U_I_CACHE/gen_ways_1__U_TAG_V_RAM
+                                    16741.4155      1.6    6750.8960    9990.5195       0.0000  ysyx_210479_mRF_1wr_r_DW23_AW4_4
+U_CORE/U_FNT/U_I_CACHE/pmux_s1o_payload
+                                     1590.8984      0.1    1590.8984       0.0000       0.0000  ysyx_210479_pmux_v_SELW2_DW128_0
+U_CORE/U_FNT/U_I_MMU                10268.8930      1.0     571.5400       0.0000       0.0000  ysyx_210479_immu_CONFIG_AW32_CONFIG_DW32_CONFIG_IMMU_ENABLE_UNCACHED_SEG1_CONFIG_P_PAGE_SIZE13_CONFIG_ITLB_P_SETS2_0
+U_CORE/U_FNT/U_I_MMU/U_TLB_H         4636.8705      0.4    1826.2384    2810.6321       0.0000  ysyx_210479_mRF_nwnr_r_DW32_AW2_NUM_READ1_NUM_WRITE1_4
+U_CORE/U_FNT/U_I_MMU/U_TLB_L         4242.8441      0.4    1687.7240    2555.1201       0.0000  ysyx_210479_mRF_nwnr_r_DW32_AW2_NUM_READ1_NUM_WRITE1_7
+U_CORE/U_FNT/U_I_MMU/ff_msr_psr_imme
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_102
+U_CORE/U_FNT/U_I_MMU/ff_msr_psr_rm
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_172
+U_CORE/U_FNT/U_I_MMU/ff_tgt_vpn       731.5712      0.1     246.0984     485.4728       0.0000  ysyx_210479_mDFF_lr_DW19_2
+U_CORE/U_FNT/U_PREFETCH_BUF        140449.5695     13.1   13817.8200       0.0000       0.0000  ysyx_210479_prefetch_buf_CONFIG_AW32_CONFIG_P_FETCH_WIDTH2_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_IQ_DEPTH2_CONFIG_PHT_P_NUM2_CONFIG_BTB_P_NUM2_0
+U_CORE/U_FNT/U_PREFETCH_BUF/ff_head
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_DW2_2
+U_CORE/U_FNT/U_PREFETCH_BUF/ff_tail
+                                       64.5504      0.0      13.4480      51.1024       0.0000  ysyx_210479_mDFF_r_DW2_3
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO
+                                    31621.6278      2.9       0.0000       0.0000       0.0000  ysyx_210479_fifo_fwft_DW102_DEPTH_WIDTH2_4
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_CTRL
+                                    10703.2634      1.0    2610.2568       0.0000       0.0000  ysyx_210479_fifo_fwft_ctrl_DW102_DEPTH_WIDTH2_5
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_CTRL/ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_135
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_CTRL/ff_dat
+                                     3878.4033      0.4    1272.1808    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_9
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_CTRL/ff_din
+                                     3878.4033      0.4    1272.1808    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_14
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_CTRL/ff_r_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_32
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_CTRL/ff_state
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_105
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_CTRL/ff_w_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_28
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_0__U_FIFO/U_RF
+                                    20918.3644      1.9    7887.2520   13031.1124       0.0000  ysyx_210479_mRF_nwnr_r_DW102_AW2_NUM_READ1_NUM_WRITE1_6
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO
+                                    31617.5934      2.9       0.0000       0.0000       0.0000  ysyx_210479_fifo_fwft_DW102_DEPTH_WIDTH2_5
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_CTRL
+                                    10715.3666      1.0    2607.5672       0.0000       0.0000  ysyx_210479_fifo_fwft_ctrl_DW102_DEPTH_WIDTH2_4
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_CTRL/ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_120
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_CTRL/ff_dat
+                                     3874.3689      0.4    1268.1464    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_12
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_CTRL/ff_din
+                                     3895.8857      0.4    1289.6632    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_13
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_CTRL/ff_r_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_29
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_CTRL/ff_state
+                                       44.3784      0.0      17.4824      26.8960       0.0000  ysyx_210479_mDFF_lr_DW1_192
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_CTRL/ff_w_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_33
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_1__U_FIFO/U_RF
+                                    20902.2268      1.9    7871.1144   13031.1124       0.0000  ysyx_210479_mRF_nwnr_r_DW102_AW2_NUM_READ1_NUM_WRITE1_7
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO
+                                    31613.5590      2.9       0.0000       0.0000       0.0000  ysyx_210479_fifo_fwft_DW102_DEPTH_WIDTH2_7
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_CTRL
+                                    10697.8842      1.0    2606.2224       0.0000       0.0000  ysyx_210479_fifo_fwft_ctrl_DW102_DEPTH_WIDTH2_7
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_CTRL/ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_107
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_CTRL/ff_dat
+                                     3878.4033      0.4    1272.1808    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_11
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_CTRL/ff_din
+                                     3877.0585      0.4    1270.8360    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_10
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_CTRL/ff_r_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_24
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_CTRL/ff_state
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_178
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_CTRL/ff_w_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_26
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_2__U_FIFO/U_RF
+                                    20915.6748      1.9    7884.5624   13031.1124       0.0000  ysyx_210479_mRF_nwnr_r_DW102_AW2_NUM_READ1_NUM_WRITE1_4
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO
+                                    31649.8686      2.9       0.0000       0.0000       0.0000  ysyx_210479_fifo_fwft_DW102_DEPTH_WIDTH2_6
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_CTRL
+                                    10712.6770      1.0    2621.0152       0.0000       0.0000  ysyx_210479_fifo_fwft_ctrl_DW102_DEPTH_WIDTH2_6
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_CTRL/ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_193
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_CTRL/ff_dat
+                                     3874.3689      0.4    1268.1464    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_8
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_CTRL/ff_din
+                                     3881.0929      0.4    1274.8704    2606.2225       0.0000  ysyx_210479_mDFF_lr_DW102_15
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_CTRL/ff_r_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_21
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_CTRL/ff_state
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_103
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_CTRL/ff_w_ptr_r
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_35
+U_CORE/U_FNT/U_PREFETCH_BUF/gen_banks_3__U_FIFO/U_RF
+                                    20937.1916      2.0    7906.0792   13031.1124       0.0000  ysyx_210479_mRF_nwnr_r_DW102_AW2_NUM_READ1_NUM_WRITE1_5
+U_CORE/U_FNT/ff_pc                    968.2560      0.1     201.7200     766.5360       0.0000  ysyx_210479_mDFF_r_32_30000000_0
+U_CORE/U_FNT/ff_s1o_fetch_aligned     161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_24
+U_CORE/U_FNT/ff_s1o_msr_psr_ice        43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_159
+U_CORE/U_FNT/ff_s1o_push_offset        82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW3_22
+U_CORE/U_FNT/ff_s2o_exc                82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_26
+U_CORE/U_FNT/ff_s2o_push_cnt          125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_23
+U_CORE/U_FNT/ff_s2o_push_offset        82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW3_36
+U_CORE/U_FNT/gen_iq_din_0__ff_s1o_pc
+                                     1149.8040      0.1     383.2680     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_35
+U_CORE/U_FNT/gen_iq_din_0__ff_s2o_bpu_upd
+                                     1451.0392      0.1     480.0936     970.9456       0.0000  ysyx_210479_mDFF_lr_DW38_5
+U_CORE/U_FNT/gen_iq_din_0__ff_s2o_pc
+                                     1149.8040      0.1     383.2680     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_21
+U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc
+                                     1156.5280      0.1     389.9920     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_30
+U_CORE/U_FNT/gen_iq_din_1__ff_s2o_bpu_upd
+                                     1451.0392      0.1     480.0936     970.9456       0.0000  ysyx_210479_mDFF_lr_DW38_6
+U_CORE/U_FNT/gen_iq_din_1__ff_s2o_pc
+                                     1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_39
+U_CORE/U_FNT/gen_iq_din_2__ff_s1o_pc
+                                     1155.1832      0.1     388.6472     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_33
+U_CORE/U_FNT/gen_iq_din_2__ff_s2o_bpu_upd
+                                     1451.0392      0.1     480.0936     970.9456       0.0000  ysyx_210479_mDFF_lr_DW38_4
+U_CORE/U_FNT/gen_iq_din_2__ff_s2o_pc
+                                     1149.8040      0.1     383.2680     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_25
+U_CORE/U_FNT/gen_iq_din_3__ff_s1o_pc
+                                     1156.5280      0.1     389.9920     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_28
+U_CORE/U_FNT/gen_iq_din_3__ff_s2o_bpu_upd
+                                     1451.0392      0.1     480.0936     970.9456       0.0000  ysyx_210479_mDFF_lr_DW38_7
+U_CORE/U_FNT/gen_iq_din_3__ff_s2o_pc
+                                     1149.8040      0.1     383.2680     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_36
+U_CORE/U_FNT/pmux_s1o_bpu_npc         845.8792      0.1     845.8792       0.0000       0.0000  ysyx_210479_pmux_v_SELW4_DW30_0
+U_CORE/U_FNT/popc_1                    43.0336      0.0      43.0336       0.0000       0.0000  ysyx_210479_popcnt_DW4_P_DW2_2
+U_CORE/U_FNT/popc_2                    80.6880      0.0      80.6880       0.0000       0.0000  ysyx_210479_popcnt_DW4_P_DW2_3
+U_CORE/U_ID                         13909.2666      1.3      59.1712       0.0000       0.0000  ysyx_210479_id_CONFIG_AW32_CONFIG_DW32_CONFIG_P_ISSUE_WIDTH1_CONFIG_PHT_P_NUM2_CONFIG_BTB_P_NUM2_CONFIG_ENABLE_ASR1_0
+U_CORE/U_ID/U_CLO                      20.1720      0.0      20.1720       0.0000       0.0000  ysyx_210479_popcnt_DW2_P_DW1_2
+U_CORE/U_ID/ff_rn_alu_opc_bus         688.5376      0.1     228.6160     459.9216       0.0000  ysyx_210479_mDFF_lr_DW18_3
+U_CORE/U_ID/ff_rn_bpu_upd            2900.7337      0.3     958.8424    1941.8913       0.0000  ysyx_210479_mDFF_lr_DW76_2
+U_CORE/U_ID/ff_rn_bru_opc_bus         613.2288      0.1     204.4096     408.8192       0.0000  ysyx_210479_mDFF_lr_DW16_3
+U_CORE/U_ID/ff_rn_epu_opc_bus         161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_19
+U_CORE/U_ID/ff_rn_fe                  469.3352      0.0     162.7208     306.6144       0.0000  ysyx_210479_mDFF_lr_DW12_8
+U_CORE/U_ID/ff_rn_imm                2432.7433      0.2     797.4664    1635.2769       0.0000  ysyx_210479_mDFF_lr_DW64_2
+U_CORE/U_ID/ff_rn_lrd                 387.3024      0.0     131.7904     255.5120       0.0000  ysyx_210479_mDFF_lr_DW10_8
+U_CORE/U_ID/ff_rn_lrd_we               86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_29
+U_CORE/U_ID/ff_rn_lrs1                387.3024      0.0     131.7904     255.5120       0.0000  ysyx_210479_mDFF_lr_DW10_6
+U_CORE/U_ID/ff_rn_lrs1_re              86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_32
+U_CORE/U_ID/ff_rn_lrs2                387.3024      0.0     131.7904     255.5120       0.0000  ysyx_210479_mDFF_lr_DW10_5
+U_CORE/U_ID/ff_rn_lrs2_re              86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_41
+U_CORE/U_ID/ff_rn_lsu_opc_bus         462.6112      0.0     155.9968     306.6144       0.0000  ysyx_210479_mDFF_lr_DW14_3
+U_CORE/U_ID/ff_rn_pc                 2291.5392      0.2     758.4672    1533.0721       0.0000  ysyx_210479_mDFF_lr_DW60_2
+U_CORE/U_ID/ff_rn_push_size            90.1016      0.0      38.9992      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_38
+U_CORE/U_ID/ff_rn_valid                86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_27
+U_CORE/U_ID/gen_dec_0__U_DEC         1104.0808      0.1    1104.0808       0.0000       0.0000  ysyx_210479_id_dec_CONFIG_DW32_CONFIG_ENABLE_ASR1_2
+U_CORE/U_ID/gen_dec_1__U_DEC         1109.4600      0.1    1109.4600       0.0000       0.0000  ysyx_210479_id_dec_CONFIG_DW32_CONFIG_ENABLE_ASR1_3
+U_CORE/U_ISSUE                      70369.3507      6.6    1178.0448       0.0000       0.0000  ysyx_210479_issue_CONFIG_DW32_CONFIG_AW32_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_ROB_DEPTH3_CONFIG_P_RS_DEPTH2_CONFIG_PHT_P_NUM2_CONFIG_BTB_P_NUM2_0
+U_CORE/U_ISSUE/gen_RS_0__U_RS       34600.3598      3.2    4717.5584       0.0000       0.0000  ysyx_210479_issue_rs_CONFIG_DW32_CONFIG_AW32_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_ROB_DEPTH3_CONFIG_P_RS_DEPTH2_3
+U_CORE/U_ISSUE/gen_RS_0__U_RS/U_PAYLOAD
+                                    26558.4557      2.5   10077.9312   16480.5246       0.0000  ysyx_210479_mRF_nwnr_r_DW129_AW2_NUM_READ1_NUM_WRITE1_2
+U_CORE/U_ISSUE/gen_RS_0__U_RS/U_RF_RS1
+                                      987.0832      0.1     373.8544     613.2288       0.0000  ysyx_210479_mRF_nw_do_r_DW6_AW2_NUM_WRITE1_5
+U_CORE/U_ISSUE/gen_RS_0__U_RS/U_RF_RS1_RE
+                                      227.2712      0.0     125.0664     102.2048       0.0000  ysyx_210479_mRF_nw_do_r_DW1_AW2_NUM_WRITE1_7
+U_CORE/U_ISSUE/gen_RS_0__U_RS/U_RF_RS2
+                                      987.0832      0.1     373.8544     613.2288       0.0000  ysyx_210479_mRF_nw_do_r_DW6_AW2_NUM_WRITE1_6
+U_CORE/U_ISSUE/gen_RS_0__U_RS/U_RF_RS2_RE
+                                      227.2712      0.0     125.0664     102.2048       0.0000  ysyx_210479_mRF_nw_do_r_DW1_AW2_NUM_WRITE1_4
+U_CORE/U_ISSUE/gen_RS_0__U_RS/ff_free_vec
+                                      129.1008      0.0      26.8960     102.2048       0.0000  ysyx_210479_mDFF_r_4_f_2
+U_CORE/U_ISSUE/gen_RS_0__U_RS/ff_has_rdy
+                                       32.2752      0.0       6.7240      25.5512       0.0000  ysyx_210479_mDFF_r_DW1_5
+U_CORE/U_ISSUE/gen_RS_0__U_RS/ff_issue_prs1
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_22
+U_CORE/U_ISSUE/gen_RS_0__U_RS/ff_issue_prs1_re
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_156
+U_CORE/U_ISSUE/gen_RS_0__U_RS/ff_issue_prs2
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_25
+U_CORE/U_ISSUE/gen_RS_0__U_RS/ff_issue_prs2_re
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_141
+U_CORE/U_ISSUE/gen_RS_0__U_RS/ff_rdy_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_51
+U_CORE/U_ISSUE/gen_RS_0__U_RS/penc_free
+                                       48.4128      0.0      48.4128       0.0000       0.0000  ysyx_210479_priority_encoder_gs_P_DW2_4
+U_CORE/U_ISSUE/gen_RS_0__U_RS/penc_rdy
+                                       44.3784      0.0      44.3784       0.0000       0.0000  ysyx_210479_priority_encoder_gs_P_DW2_7
+U_CORE/U_ISSUE/gen_RS_1__U_RS       34590.9462      3.2    4716.2136       0.0000       0.0000  ysyx_210479_issue_rs_CONFIG_DW32_CONFIG_AW32_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_ROB_DEPTH3_CONFIG_P_RS_DEPTH2_2
+U_CORE/U_ISSUE/gen_RS_1__U_RS/U_PAYLOAD
+                                    26550.3869      2.5   10069.8624   16480.5246       0.0000  ysyx_210479_mRF_nwnr_r_DW129_AW2_NUM_READ1_NUM_WRITE1_3
+U_CORE/U_ISSUE/gen_RS_1__U_RS/U_RF_RS1
+                                      987.0832      0.1     373.8544     613.2288       0.0000  ysyx_210479_mRF_nw_do_r_DW6_AW2_NUM_WRITE1_7
+U_CORE/U_ISSUE/gen_RS_1__U_RS/U_RF_RS1_RE
+                                      227.2712      0.0     125.0664     102.2048       0.0000  ysyx_210479_mRF_nw_do_r_DW1_AW2_NUM_WRITE1_6
+U_CORE/U_ISSUE/gen_RS_1__U_RS/U_RF_RS2
+                                      987.0832      0.1     373.8544     613.2288       0.0000  ysyx_210479_mRF_nw_do_r_DW6_AW2_NUM_WRITE1_4
+U_CORE/U_ISSUE/gen_RS_1__U_RS/U_RF_RS2_RE
+                                      227.2712      0.0     125.0664     102.2048       0.0000  ysyx_210479_mRF_nw_do_r_DW1_AW2_NUM_WRITE1_5
+U_CORE/U_ISSUE/gen_RS_1__U_RS/ff_free_vec
+                                      129.1008      0.0      26.8960     102.2048       0.0000  ysyx_210479_mDFF_r_4_f_3
+U_CORE/U_ISSUE/gen_RS_1__U_RS/ff_has_rdy
+                                       32.2752      0.0       6.7240      25.5512       0.0000  ysyx_210479_mDFF_r_DW1_6
+U_CORE/U_ISSUE/gen_RS_1__U_RS/ff_issue_prs1
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_27
+U_CORE/U_ISSUE/gen_RS_1__U_RS/ff_issue_prs1_re
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_126
+U_CORE/U_ISSUE/gen_RS_1__U_RS/ff_issue_prs2
+                                      236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_21
+U_CORE/U_ISSUE/gen_RS_1__U_RS/ff_issue_prs2_re
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_113
+U_CORE/U_ISSUE/gen_RS_1__U_RS/ff_rdy_addr
+                                       82.0328      0.0      30.9304      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_47
+U_CORE/U_ISSUE/gen_RS_1__U_RS/penc_free
+                                       48.4128      0.0      48.4128       0.0000       0.0000  ysyx_210479_priority_encoder_gs_P_DW2_6
+U_CORE/U_ISSUE/gen_RS_1__U_RS/penc_rdy
+                                       44.3784      0.0      44.3784       0.0000       0.0000  ysyx_210479_priority_encoder_gs_P_DW2_5
+U_CORE/U_PRF                       140461.6720     13.1     935.9808       0.0000       0.0000  ysyx_210479_prf_CONFIG_DW32_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_WRITEBACK_WIDTH1_0
+U_CORE/U_PRF/U_PRF                 139352.2120     13.0   83752.7989   55599.4131       0.0000  ysyx_210479_mRF_nwnr_r_DW32_AW6_NUM_READ4_NUM_WRITE2_0
+U_CORE/U_PRF/gen_zero_dec_0__ff_prf_zero_RADDR
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_129
+U_CORE/U_PRF/gen_zero_dec_1__ff_prf_zero_RADDR
+                                       44.3784      0.0      17.4824      26.8960       0.0000  ysyx_210479_mDFF_lr_DW1_143
+U_CORE/U_PRF/gen_zero_dec_2__ff_prf_zero_RADDR
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_164
+U_CORE/U_PRF/gen_zero_dec_3__ff_prf_zero_RADDR
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_128
+U_CORE/U_RN                         60452.7951      5.6      91.4464       0.0000       0.0000  ysyx_210479_rn_CONFIG_DW32_CONFIG_AW32_CONFIG_PHT_P_NUM2_CONFIG_BTB_P_NUM2_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_WRITEBACK_WIDTH1_0
+U_CORE/U_RN/U_BUSYTABLE              4154.0872      0.4       0.0000       0.0000       0.0000  ysyx_210479_rn_busytable_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_WRITEBACK_WIDTH1_0
+U_CORE/U_RN/U_BUSYTABLE/U_BUSYTABLE
+                                     4154.0872      0.4    2518.8104    1635.2769       0.0000  ysyx_210479_mRF_nw_dio_r_1_6_0000000000000000_4_0
+U_CORE/U_RN/U_FL                    13718.3049      1.3    6612.3816       0.0000       0.0000  ysyx_210479_rn_fl_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_0
+U_CORE/U_RN/U_FL/ff_afl              2033.3377      0.2     423.6120    1609.7257       0.0000  ysyx_210479_mDFF_r_63_7fffffffffffffff_2
+U_CORE/U_RN/U_FL/ff_fl               2033.3377      0.2     423.6120    1609.7257       0.0000  ysyx_210479_mDFF_r_63_7fffffffffffffff_3
+U_CORE/U_RN/U_FL/gen_sel_2_PENC_FL_0
+                                     1514.2448      0.1    1514.2448       0.0000       0.0000  ysyx_210479_priority_encoder_gs_P_DW6_2
+U_CORE/U_RN/U_FL/gen_sel_2_PENC_FL_1
+                                     1525.0032      0.1    1525.0032       0.0000       0.0000  ysyx_210479_priority_encoder_gs_P_DW6_3
+U_CORE/U_RN/U_RAT                   29810.1819      2.8    7618.2920       0.0000       0.0000  ysyx_210479_rn_rat_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_0
+U_CORE/U_RN/U_RAT/U_RAT             11455.0065      1.1    6549.1760    4905.8306       0.0000  ysyx_210479_mRF_nw_dio_r_6_5_2_0
+U_CORE/U_RN/U_RAT/U_aRAT            10506.9225      1.0    5601.0920    4905.8306       0.0000  ysyx_210479_mRF_nw_do_r_6_5_2_0
+U_CORE/U_RN/U_RAT/gen_raw_waw_1__pmux_pfree
+                                       76.6536      0.0      76.6536       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW6_4
+U_CORE/U_RN/U_RAT/gen_raw_waw_1__pmux_prs1
+                                       76.6536      0.0      76.6536       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW6_3
+U_CORE/U_RN/U_RAT/gen_raw_waw_1__pmux_prs2
+                                       76.6536      0.0      76.6536       0.0000       0.0000  ysyx_210479_pmux_SELW2_DW6_5
+U_CORE/U_RN/ff_issue_alu_opc_bus      688.5376      0.1     228.6160     459.9216       0.0000  ysyx_210479_mDFF_lr_DW18_2
+U_CORE/U_RN/ff_issue_bpu_upd         2892.6649      0.3     950.7736    1941.8913       0.0000  ysyx_210479_mDFF_lr_DW76_3
+U_CORE/U_RN/ff_issue_bru_opc_bus      613.2288      0.1     204.4096     408.8192       0.0000  ysyx_210479_mDFF_lr_DW16_2
+U_CORE/U_RN/ff_issue_epu_opc_bus      161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_13
+U_CORE/U_RN/ff_issue_fe               462.6112      0.0     155.9968     306.6144       0.0000  ysyx_210479_mDFF_lr_DW12_10
+U_CORE/U_RN/ff_issue_imm             2442.1569      0.2     806.8800    1635.2769       0.0000  ysyx_210479_mDFF_lr_DW64_3
+U_CORE/U_RN/ff_issue_lrd              387.3024      0.0     131.7904     255.5120       0.0000  ysyx_210479_mDFF_lr_DW10_9
+U_CORE/U_RN/ff_issue_lsu_opc_bus      462.6112      0.0     155.9968     306.6144       0.0000  ysyx_210479_mDFF_lr_DW14_2
+U_CORE/U_RN/ff_issue_pc              2287.5048      0.2     754.4328    1533.0721       0.0000  ysyx_210479_mDFF_lr_DW60_3
+U_CORE/U_RN/ff_issue_pfree            462.6112      0.0     155.9968     306.6144       0.0000  ysyx_210479_mDFF_lr_DW12_6
+U_CORE/U_RN/ff_issue_prd              462.6112      0.0     155.9968     306.6144       0.0000  ysyx_210479_mDFF_lr_DW12_11
+U_CORE/U_RN/ff_issue_prd_we            86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_50
+U_CORE/U_RN/ff_issue_prs1             462.6112      0.0     155.9968     306.6144       0.0000  ysyx_210479_mDFF_lr_DW12_7
+U_CORE/U_RN/ff_issue_prs1_re           86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_36
+U_CORE/U_RN/ff_issue_prs2             462.6112      0.0     155.9968     306.6144       0.0000  ysyx_210479_mDFF_lr_DW12_9
+U_CORE/U_RN/ff_issue_prs2_re           86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_30
+U_CORE/U_RN/ff_issue_push_size         86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_46
+U_CORE/U_RN/ff_s1o_valid               86.0672      0.0      34.9648      51.1024       0.0000  ysyx_210479_mDFF_lr_DW2_49
+U_CORE/U_RO                         12253.8178      1.1    1906.9264       0.0000       0.0000  ysyx_210479_ro_CONFIG_DW32_CONFIG_AW32_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_ROB_DEPTH3_0
+U_CORE/U_RO/gen_ro_0__U_BUF            83.3776      0.0      40.3440       0.0000       0.0000  ysyx_210479_hds_buf_BYPASS1_4
+U_CORE/U_RO/gen_ro_0__U_BUF/ff_pending
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_199
+U_CORE/U_RO/gen_ro_0__ff_ex_alu_opc_bus
+                                      350.9928      0.0     121.0320     229.9608       0.0000  ysyx_210479_mDFF_lr_DW9_3
+U_CORE/U_RO/gen_ro_0__ff_ex_bpu_pred_taken
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_160
+U_CORE/U_RO/gen_ro_0__ff_ex_bpu_pred_tgt
+                                     1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_22
+U_CORE/U_RO/gen_ro_0__ff_ex_bru_opc_bus
+                                      311.9936      0.0     107.5840     204.4096       0.0000  ysyx_210479_mDFF_lr_DW8_5
+U_CORE/U_RO/gen_ro_0__ff_ex_epu_opc_bus
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_174
+U_CORE/U_RO/gen_ro_0__ff_ex_fe        236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_20
+U_CORE/U_RO/gen_ro_0__ff_ex_imm      1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_33
+U_CORE/U_RO/gen_ro_0__ff_ex_lsu_opc_bus
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_163
+U_CORE/U_RO/gen_ro_0__ff_ex_pc       1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_31
+U_CORE/U_RO/gen_ro_0__ff_ex_prd       236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_14
+U_CORE/U_RO/gen_ro_0__ff_ex_prd_we
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_201
+U_CORE/U_RO/gen_ro_0__ff_ex_rob_bank
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_187
+U_CORE/U_RO/gen_ro_0__ff_ex_rob_id
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_27
+U_CORE/U_RO/gen_ro_0__ff_s1o_prs1_re
+                                       44.3784      0.0      17.4824      26.8960       0.0000  ysyx_210479_mDFF_lr_DW1_175
+U_CORE/U_RO/gen_ro_0__ff_s1o_prs2_re
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_188
+U_CORE/U_RO/gen_ro_1__U_BUF            83.3776      0.0      40.3440       0.0000       0.0000  ysyx_210479_hds_buf_BYPASS1_7
+U_CORE/U_RO/gen_ro_1__U_BUF/ff_pending
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_185
+U_CORE/U_RO/gen_ro_1__ff_ex_alu_opc_bus
+                                      350.9928      0.0     121.0320     229.9608       0.0000  ysyx_210479_mDFF_lr_DW9_2
+U_CORE/U_RO/gen_ro_1__ff_ex_bpu_pred_taken
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_173
+U_CORE/U_RO/gen_ro_1__ff_ex_bpu_pred_tgt
+                                     1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_40
+U_CORE/U_RO/gen_ro_1__ff_ex_bru_opc_bus
+                                      311.9936      0.0     107.5840     204.4096       0.0000  ysyx_210479_mDFF_lr_DW8_6
+U_CORE/U_RO/gen_ro_1__ff_ex_epu_opc_bus
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_147
+U_CORE/U_RO/gen_ro_1__ff_ex_fe        236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_16
+U_CORE/U_RO/gen_ro_1__ff_ex_imm      1225.1128      0.1     407.4744     817.6384       0.0000  ysyx_210479_mDFF_lr_DW32_29
+U_CORE/U_RO/gen_ro_1__ff_ex_lsu_opc_bus
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_132
+U_CORE/U_RO/gen_ro_1__ff_ex_pc       1148.4592      0.1     381.9232     766.5360       0.0000  ysyx_210479_mDFF_lr_DW30_34
+U_CORE/U_RO/gen_ro_1__ff_ex_prd       236.6848      0.0      83.3776     153.3072       0.0000  ysyx_210479_mDFF_lr_DW6_18
+U_CORE/U_RO/gen_ro_1__ff_ex_prd_we
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_157
+U_CORE/U_RO/gen_ro_1__ff_ex_rob_bank
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_142
+U_CORE/U_RO/gen_ro_1__ff_ex_rob_id
+                                      125.0664      0.0      48.4128      76.6536       0.0000  ysyx_210479_mDFF_lr_DW3_31
+U_CORE/U_RO/gen_ro_1__ff_s1o_prs1_re
+                                       44.3784      0.0      17.4824      26.8960       0.0000  ysyx_210479_mDFF_lr_DW1_158
+U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re
+                                       51.1024      0.0      24.2064      26.8960       0.0000  ysyx_210479_mDFF_lr_DW1_79
+U_CORE/U_ROB                       171853.3398     16.0   15804.0895       0.0000       0.0000  ysyx_210479_rob_CONFIG_DW32_CONFIG_AW32_CONFIG_PHT_P_NUM2_CONFIG_BTB_P_NUM2_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_WRITEBACK_WIDTH1_CONFIG_P_ROB_DEPTH3_0
+U_CORE/U_ROB/ff_head                   32.2752      0.0       6.7240      25.5512       0.0000  ysyx_210479_mDFF_r_DW1_4
+U_CORE/U_ROB/ff_tail                   32.2752      0.0       6.7240      25.5512       0.0000  ysyx_210479_mDFF_r_DW1_7
+U_CORE/U_ROB/gen_BANKS_0__U_FIFO_CTRL
+                                    10375.1322      1.0    2592.7744       0.0000       0.0000  ysyx_210479_fifo_fwft_ctrl_rp_wp_DW98_DEPTH_WIDTH3_2
+U_CORE/U_ROB/gen_BANKS_0__U_FIFO_CTRL/ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_166
+U_CORE/U_ROB/gen_BANKS_0__U_FIFO_CTRL/ff_dat
+                                     3676.6833      0.3    1198.2168    2478.4665       0.0000  ysyx_210479_mDFF_lr_DW98_7
+U_CORE/U_ROB/gen_BANKS_0__U_FIFO_CTRL/ff_din
+                                     3696.8553      0.3    1218.3888    2478.4665       0.0000  ysyx_210479_mDFF_lr_DW98_6
+U_CORE/U_ROB/gen_BANKS_0__U_FIFO_CTRL/ff_r_ptr_r
+                                      161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_23
+U_CORE/U_ROB/gen_BANKS_0__U_FIFO_CTRL/ff_state
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_133
+U_CORE/U_ROB/gen_BANKS_0__U_FIFO_CTRL/ff_w_ptr_r
+                                      161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_21
+U_CORE/U_ROB/gen_BANKS_0__U_TAG_EXC
+                                      533.8856      0.0     329.4760     204.4096       0.0000  ysyx_210479_mRF_nw_do_r_1_3_00_2_9
+U_CORE/U_ROB/gen_BANKS_0__U_TAG_FLS
+                                      533.8856      0.0     329.4760     204.4096       0.0000  ysyx_210479_mRF_nw_do_r_1_3_00_2_11
+U_CORE/U_ROB/gen_BANKS_0__U_TAG_RDY
+                                      416.8880      0.0     212.4784     204.4096       0.0000  ysyx_210479_mRF_nw_do_r_1_3_00_2_10
+U_CORE/U_ROB/gen_BANKS_0__U_uBANK   37927.3951      3.5   15621.1967   22306.1984       0.0000  ysyx_210479_mRF_nwnr_r_DW98_AW3_NUM_READ1_NUM_WRITE1_2
+U_CORE/U_ROB/gen_BANKS_0__U_vBANK   28166.8366      2.6    8952.3336   19214.5031       0.0000  ysyx_210479_mRF_nw_do_r_DW94_AW3_NUM_WRITE1_2
+U_CORE/U_ROB/gen_BANKS_1__U_FIFO_CTRL
+                                    10388.5802      1.0    2602.1880       0.0000       0.0000  ysyx_210479_fifo_fwft_ctrl_rp_wp_DW98_DEPTH_WIDTH3_3
+U_CORE/U_ROB/gen_BANKS_1__U_FIFO_CTRL/ff_bypass
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_150
+U_CORE/U_ROB/gen_BANKS_1__U_FIFO_CTRL/ff_dat
+                                     3680.7177      0.3    1202.2512    2478.4665       0.0000  ysyx_210479_mDFF_lr_DW98_5
+U_CORE/U_ROB/gen_BANKS_1__U_FIFO_CTRL/ff_din
+                                     3696.8553      0.3    1218.3888    2478.4665       0.0000  ysyx_210479_mDFF_lr_DW98_4
+U_CORE/U_ROB/gen_BANKS_1__U_FIFO_CTRL/ff_r_ptr_r
+                                      161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_25
+U_CORE/U_ROB/gen_BANKS_1__U_FIFO_CTRL/ff_state
+                                       43.0336      0.0      17.4824      25.5512       0.0000  ysyx_210479_mDFF_lr_DW1_118
+U_CORE/U_ROB/gen_BANKS_1__U_FIFO_CTRL/ff_w_ptr_r
+                                      161.3760      0.0      59.1712     102.2048       0.0000  ysyx_210479_mDFF_lr_DW4_15
+U_CORE/U_ROB/gen_BANKS_1__U_TAG_EXC
+                                      527.1616      0.0     322.7520     204.4096       0.0000  ysyx_210479_mRF_nw_do_r_1_3_00_2_8
+U_CORE/U_ROB/gen_BANKS_1__U_TAG_FLS
+                                      527.1616      0.0     322.7520     204.4096       0.0000  ysyx_210479_mRF_nw_do_r_1_3_00_2_7
+U_CORE/U_ROB/gen_BANKS_1__U_TAG_RDY
+                                      416.8880      0.0     212.4784     204.4096       0.0000  ysyx_210479_mRF_nw_do_r_1_3_00_2_6
+U_CORE/U_ROB/gen_BANKS_1__U_uBANK   37981.1871      3.5   15674.9887   22306.1984       0.0000  ysyx_210479_mRF_nwnr_r_DW98_AW3_NUM_READ1_NUM_WRITE1_3
+U_CORE/U_ROB/gen_BANKS_1__U_vBANK   28189.6982      2.6    8975.1952   19214.5031       0.0000  ysyx_210479_mRF_nw_do_r_DW94_AW3_NUM_WRITE1_3
+U_CORE/U_WB_MUX                       692.5720      0.1     692.5720       0.0000       0.0000  ysyx_210479_wb_mux_CONFIG_DW32_CONFIG_P_WRITEBACK_WIDTH1_0
+--------------------------------  ------------  -------  -----------  -----------  -----------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                    452834.5025  416290.9229  204270.1719
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210479
+Date   : Wed Oct 13 16:15:45 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/Q_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/Q_reg_0_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/Q_reg_0_/CK (LVT_DHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/Q_reg_0_/QN (LVT_DHDV1)
+                                                        0.0907    0.3495     0.3495 f
+  U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/n7 (net)
+                                                1                 0.0000     0.3495 f
+  U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/U4/I (LVT_INHDV6)
+                                                        0.0907    0.0000     0.3495 f
+  U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/U4/ZN (LVT_INHDV6)
+                                                        0.3051    0.1902     0.5397 r
+  U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/Q[0] (net)
+                                               33                 0.0000     0.5397 r
+  U_CORE/U_RO/gen_ro_1__ff_s1o_prs2_re/Q[0] (ysyx_210479_mDFF_lr_DW1_79)
+                                                                  0.0000     0.5397 r
+  U_CORE/U_RO/s1o_prs2_re[1] (net)                                0.0000     0.5397 r
+  U_CORE/U_RO/U72/S (LVT_MUX2HDV1)                      0.3051    0.0000     0.5397 r
+  U_CORE/U_RO/U72/Z (LVT_MUX2HDV1)                      0.1871    0.3038     0.8435 f
+  U_CORE/U_RO/ex_operand2[38] (net)             9                 0.0000     0.8435 f
+  U_CORE/U_RO/ex_operand2[38] (ysyx_210479_ro_CONFIG_DW32_CONFIG_AW32_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_ROB_DEPTH3_0)
+                                                                  0.0000     0.8435 f
+  U_CORE/ex_operand2[38] (net)                                    0.0000     0.8435 f
+  U_CORE/U_EX/ex_operand2[38] (ysyx_210479_ex_CONFIG_AW32_CONFIG_DW32_CONFIG_P_ISSUE_WIDTH1_CONFIG_P_COMMIT_WIDTH1_CONFIG_P_ROB_DEPTH3_CONFIG_ENABLE_ASR1_0)
+                                                                  0.0000     0.8435 f
+  U_CORE/U_EX/ex_operand2[38] (net)                               0.0000     0.8435 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ex_operand2[6] (ysyx_210479_ex_pipe_CONFIG_AW32_CONFIG_DW32_CONFIG_P_ROB_DEPTH3_CONFIG_P_COMMIT_WIDTH1_CONFIG_ENABLE_ASR1_3)
+                                                                  0.0000     0.8435 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ex_operand2[6] (net)              0.0000     0.8435 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U282/I (LVT_INHDV1)     0.1871    0.0000     0.8435 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U282/ZN (LVT_INHDV1)    0.0761    0.0655     0.9090 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/n205 (net)      1                 0.0000     0.9090 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U284/A1 (LVT_OAI21HDV1)
+                                                        0.0761    0.0000     0.9090 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U284/ZN (LVT_OAI21HDV1)
+                                                        0.1114    0.0693     0.9783 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/n_2_net__6_ (net)
+                                                1                 0.0000     0.9783 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/b[6] (ysyx_210479_mADD_c_o_DW32_3)
+                                                                  0.0000     0.9783 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/b[6] (net)              0.0000     0.9783 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U52/A1 (LVT_XNOR2HDV1)
+                                                        0.1114    0.0000     0.9783 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U52/ZN (LVT_XNOR2HDV1)
+                                                        0.0940    0.1788     1.1571 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n13 (net)
+                                                2                 0.0000     1.1571 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U53/A1 (LVT_NOR2HDV1)
+                                                        0.0940    0.0000     1.1571 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U53/ZN (LVT_NOR2HDV1)
+                                                        0.1226    0.0635     1.2206 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n165 (net)
+                                                3                 0.0000     1.2206 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U54/A2 (LVT_NOR2HDV1)
+                                                        0.1226    0.0000     1.2206 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U54/ZN (LVT_NOR2HDV1)
+                                                        0.1598    0.1190     1.3396 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n15 (net)
+                                                2                 0.0000     1.3396 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U55/A2 (LVT_NAND2HDV1)
+                                                        0.1598    0.0000     1.3396 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U55/ZN (LVT_NAND2HDV1)
+                                                        0.0833    0.0705     1.4101 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n17 (net)
+                                                1                 0.0000     1.4101 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U23/A2 (LVT_OAI21HDV2)
+                                                        0.0833    0.0000     1.4101 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U23/ZN (LVT_OAI21HDV2)
+                                                        0.1675    0.1227     1.5328 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n145 (net)
+                                                2                 0.0000     1.5328 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U7/A1 (LVT_AOI21HDV2)
+                                                        0.1675    0.0000     1.5328 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U7/ZN (LVT_AOI21HDV2)
+                                                        0.1097    0.0973     1.6301 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n144 (net)
+                                                2                 0.0000     1.6301 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U6/A1 (LVT_OAI21HDV2)
+                                                        0.1097    0.0000     1.6301 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U6/ZN (LVT_OAI21HDV2)
+                                                        0.1839    0.1323     1.7624 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n139 (net)
+                                                2                 0.0000     1.7624 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U27/A1 (LVT_AOI21HDV2)
+                                                        0.1839    0.0000     1.7624 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U27/ZN (LVT_AOI21HDV2)
+                                                        0.1082    0.0968     1.8592 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n135 (net)
+                                                2                 0.0000     1.8592 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U28/A1 (LVT_OAI21HDV1)
+                                                        0.1082    0.0000     1.8592 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U28/ZN (LVT_OAI21HDV1)
+                                                        0.2154    0.1495     2.0087 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n130 (net)
+                                                2                 0.0000     2.0087 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U5/A1 (LVT_AOI21HDV1)
+                                                        0.2154    0.0000     2.0087 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U5/ZN (LVT_AOI21HDV1)
+                                                        0.1346    0.1174     2.1261 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n126 (net)
+                                                2                 0.0000     2.1261 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U93/A1 (LVT_OAI21HDV1)
+                                                        0.1346    0.0000     2.1261 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U93/ZN (LVT_OAI21HDV1)
+                                                        0.2297    0.1643     2.2904 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n121 (net)
+                                                2                 0.0000     2.2904 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U29/A1 (LVT_AOI21HDV2)
+                                                        0.2297    0.0000     2.2904 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U29/ZN (LVT_AOI21HDV2)
+                                                        0.1220    0.1067     2.3970 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n117 (net)
+                                                2                 0.0000     2.3970 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U30/A1 (LVT_OAI21HDV2)
+                                                        0.1220    0.0000     2.3970 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U30/ZN (LVT_OAI21HDV2)
+                                                        0.1848    0.1355     2.5326 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n112 (net)
+                                                2                 0.0000     2.5326 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U1/A1 (LVT_AOI21HDV2)
+                                                        0.1848    0.0000     2.5326 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U1/ZN (LVT_AOI21HDV2)
+                                                        0.1280    0.1142     2.6468 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n108 (net)
+                                                2                 0.0000     2.6468 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U108/A1 (LVT_OAI21HDV4)
+                                                        0.1280    0.0000     2.6468 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U108/ZN (LVT_OAI21HDV4)
+                                                        0.1544    0.1189     2.7657 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n103 (net)
+                                                2                 0.0000     2.7657 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U4/A1 (LVT_AOI21HDV4)
+                                                        0.1544    0.0000     2.7657 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U4/ZN (LVT_AOI21HDV4)
+                                                        0.0927    0.0824     2.8481 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n99 (net)
+                                                2                 0.0000     2.8481 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U3/A1 (LVT_OAI21HDV4)
+                                                        0.0927    0.0000     2.8481 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U3/ZN (LVT_OAI21HDV4)
+                                                        0.1539    0.1098     2.9580 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n94 (net)
+                                                2                 0.0000     2.9580 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U119/A1 (LVT_AOI21HDV4)
+                                                        0.1539    0.0000     2.9580 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U119/ZN (LVT_AOI21HDV4)
+                                                        0.0925    0.0823     3.0403 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n90 (net)
+                                                2                 0.0000     3.0403 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U122/A1 (LVT_OAI21HDV4)
+                                                        0.0925    0.0000     3.0403 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U122/ZN (LVT_OAI21HDV4)
+                                                        0.1544    0.1098     3.1501 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n85 (net)
+                                                2                 0.0000     3.1501 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U11/A1 (LVT_AOI21HDV4)
+                                                        0.1544    0.0000     3.1501 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U11/ZN (LVT_AOI21HDV4)
+                                                        0.0926    0.0824     3.2326 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n81 (net)
+                                                2                 0.0000     3.2326 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U13/A1 (LVT_OAI21HDV4)
+                                                        0.0926    0.0000     3.2326 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U13/ZN (LVT_OAI21HDV4)
+                                                        0.1536    0.1098     3.3424 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n76 (net)
+                                                2                 0.0000     3.3424 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U12/A1 (LVT_AOI21HDV4)
+                                                        0.1536    0.0000     3.3424 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U12/ZN (LVT_AOI21HDV4)
+                                                        0.0925    0.0823     3.4247 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n72 (net)
+                                                2                 0.0000     3.4247 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U134/A1 (LVT_OAI21HDV4)
+                                                        0.0925    0.0000     3.4247 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U134/ZN (LVT_OAI21HDV4)
+                                                        0.1541    0.1098     3.5345 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n67 (net)
+                                                2                 0.0000     3.5345 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U32/A1 (LVT_AOI21HDV4)
+                                                        0.1541    0.0000     3.5345 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U32/ZN (LVT_AOI21HDV4)
+                                                        0.0926    0.0824     3.6169 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n63 (net)
+                                                2                 0.0000     3.6169 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U31/A1 (LVT_OAI21HDV4)
+                                                        0.0926    0.0000     3.6169 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U31/ZN (LVT_OAI21HDV4)
+                                                        0.1164    0.0885     3.7053 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n57 (net)
+                                                1                 0.0000     3.7053 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U143/CI (LVT_AD1HDV1)
+                                                        0.1164    0.0000     3.7053 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U143/CO (LVT_AD1HDV1)
+                                                        0.1295    0.1990     3.9043 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n55 (net)
+                                                1                 0.0000     3.9043 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U142/CI (LVT_AD1HDV2)
+                                                        0.1295    0.0000     3.9043 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U142/CO (LVT_AD1HDV2)
+                                                        0.1050    0.1771     4.0814 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n54 (net)
+                                                1                 0.0000     4.0814 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U141/CI (LVT_AD1HDV1)
+                                                        0.1050    0.0000     4.0814 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U141/S (LVT_AD1HDV1)
+                                                        0.1752    0.2301     4.3116 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/sum[31] (net)
+                                                4                 0.0000     4.3116 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U231/A1 (LVT_INAND3HDV2)
+                                                        0.1752    0.0000     4.3116 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U231/ZN (LVT_INAND3HDV2)
+                                                        0.1141    0.1706     4.4822 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/n202 (net)
+                                                1                 0.0000     4.4822 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U14/B (LVT_OAI31HDV2)
+                                                        0.1141    0.0000     4.4822 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/U14/ZN (LVT_OAI31HDV2)
+                                                        0.2479    0.0621     4.5443 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/overflow (net)
+                                                1                 0.0000     4.5443 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_ADD_AGU/overflow (ysyx_210479_mADD_c_o_DW32_3)
+                                                                  0.0000     4.5443 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/add_overflow (net)                0.0000     4.5443 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/add_overflow (ysyx_210479_ex_bru_CONFIG_DW32_CONFIG_AW32_3)
+                                                                  0.0000     4.5443 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/add_overflow (net)          0.0000     4.5443 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U22/A1 (LVT_XNOR2HDV2)
+                                                        0.2479    0.0000     4.5443 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U22/ZN (LVT_XNOR2HDV2)
+                                                        0.0809    0.2024     4.7467 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/n296 (net)
+                                                2                 0.0000     4.7467 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U23/A1 (LVT_NAND2HDV2)
+                                                        0.0809    0.0000     4.7467 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U23/ZN (LVT_NAND2HDV2)
+                                                        0.0617    0.0447     4.7914 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/n223 (net)
+                                                1                 0.0000     4.7914 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U24/A1 (LVT_NAND2HDV1)
+                                                        0.0617    0.0000     4.7914 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U24/ZN (LVT_NAND2HDV1)
+                                                        0.0736    0.0555     4.8468 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/n295 (net)
+                                                1                 0.0000     4.8468 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U97/A1 (LVT_NAND2HDV2)
+                                                        0.0736    0.0000     4.8468 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U97/ZN (LVT_NAND2HDV2)
+                                                        0.0848    0.0588     4.9056 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/n303 (net)
+                                                1                 0.0000     4.9056 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U17/A1 (LVT_NAND2HDV4)
+                                                        0.0848    0.0000     4.9056 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U17/ZN (LVT_NAND2HDV4)
+                                                        0.2045    0.1374     5.0430 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/n616 (net)
+                                               31                 0.0000     5.0430 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U235/A1 (LVT_IOA21HDV1)
+                                                        0.2045    0.0000     5.0430 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/U235/ZN (LVT_IOA21HDV1)
+                                                        0.1001    0.1994     5.2425 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/b_tgt[26] (net)
+                                                2                 0.0000     5.2425 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U_BRU/b_tgt[26] (ysyx_210479_ex_bru_CONFIG_DW32_CONFIG_AW32_3)
+                                                                  0.0000     5.2425 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/b_tgt[26] (net)                   0.0000     5.2425 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U36/A1 (LVT_XNOR2HDV1)
+                                                        0.1001    0.0000     5.2425 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U36/ZN (LVT_XNOR2HDV1)
+                                                        0.0658    0.1592     5.4017 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/n50 (net)       1                 0.0000     5.4017 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U37/A4 (LVT_NAND4HDV1)
+                                                        0.0658    0.0000     5.4017 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U37/ZN (LVT_NAND4HDV1)
+                                                        0.1232    0.1113     5.5130 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/n54 (net)       1                 0.0000     5.5130 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U38/A4 (LVT_OR4HDV2)    0.1232    0.0000     5.5130 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U38/Z (LVT_OR4HDV2)     0.0878    0.3310     5.8440 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/n78 (net)       1                 0.0000     5.8440 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U59/A1 (LVT_INAND3HDV1)
+                                                        0.0878    0.0000     5.8440 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U59/ZN (LVT_INAND3HDV1)
+                                                        0.0945    0.1447     5.9887 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/n79 (net)       1                 0.0000     5.9887 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U16/B (LVT_OA211HDV2)   0.0945    0.0000     5.9887 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/U16/Z (LVT_OA211HDV2)   0.0737    0.1251     6.1138 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/s1i_wb_fls (net)
+                                                1                 0.0000     6.1138 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/D[0] (ysyx_210479_mDFF_lr_DW1_145)
+                                                                  0.0000     6.1138 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/D[0] (net)              0.0000     6.1138 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/U3/I (LVT_INHDV2)
+                                                        0.0737    0.0000     6.1138 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/U3/ZN (LVT_INHDV2)
+                                                        0.0444    0.0398     6.1536 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/n8 (net)
+                                                1                 0.0000     6.1536 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/U4/A1 (LVT_AOI211HDV1)
+                                                        0.0444    0.0000     6.1536 r
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/U4/ZN (LVT_AOI211HDV1)
+                                                        0.1032    0.0629     6.2166 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/n4 (net)
+                                                1                 0.0000     6.2166 f
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/Q_reg_0_/D (LVT_DQHDV4)
+                                                        0.1032    0.0000     6.2166 f
+  data arrival time                                                          6.2166
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  U_CORE/U_EX/gen_FUs_1__U_PIPE/ff_wb_fls/Q_reg_0_/CK (LVT_DQHDV4)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1332     6.2168
+  data required time                                                         6.2168
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2168
+  data arrival time                                                         -6.2166
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0002
+  Startpoint: U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/Q_reg_29_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q_reg_1_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q_reg_1_/Q (LVT_DQHDV1)
+                                                        0.1841    0.3250     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q[1] (net)
+                                                8                 0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q[1] (ysyx_210479_mDFF_r_4_0_0)
+                                                                  0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/fsm_state_ff[1] (net)              0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U25/I (LVT_INHDV1)       0.1841    0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U25/ZN (LVT_INHDV1)      0.1128    0.0960     0.4210 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/n612 (net)       3                 0.0000     0.4210 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U24/A2 (LVT_AND3HDV2)    0.1128    0.0000     0.4210 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U24/Z (LVT_AND3HDV2)     0.0842    0.1636     0.5846 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/n401 (net)       2                 0.0000     0.5846 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U29/A1 (LVT_NAND2HDV2)   0.0842    0.0000     0.5846 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U29/ZN (LVT_NAND2HDV2)   0.1234    0.0895     0.6741 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/stall_req (net)
+                                                4                 0.0000     0.6741 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/stall_req (ysyx_210479_dcache_CONFIG_AW32_CONFIG_DW32_CONFIG_P_DW5_CONFIG_P_PAGE_SIZE13_CONFIG_DC_P_LINE6_CONFIG_DC_P_SETS4_CONFIG_DC_P_WAYS1_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0)
+                                                                  0.0000     0.6741 f
+  U_CORE/U_CMT/U_LSU/lsu_stall_req (net)                          0.0000     0.6741 f
+  U_CORE/U_CMT/U_LSU/lsu_stall_req (ysyx_210479_cmt_lsu_CONFIG_AW32_CONFIG_DW32_CONFIG_P_DW5_CONFIG_P_PAGE_SIZE13_CONFIG_DMMU_ENABLE_UNCACHED_SEG1_CONFIG_DTLB_P_SETS2_CONFIG_DC_P_LINE6_CONFIG_DC_P_SETS4_CONFIG_DC_P_WAYS1_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0)
+                                                                  0.0000     0.6741 f
+  U_CORE/U_CMT/lsu_stall_req (net)                                0.0000     0.6741 f
+  U_CORE/U_CMT/U35/I (LVT_INHDV4)                       0.1234    0.0000     0.6741 f
+  U_CORE/U_CMT/U35/ZN (LVT_INHDV4)                      0.1865    0.1359     0.8100 r
+  U_CORE/U_CMT/n339 (net)                      22                 0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/p_ce_s2 (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/p_ce_s2 (net)                                0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/U24/A1 (LVT_NAND2HDV8)             0.1865    0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/U24/ZN (LVT_NAND2HDV8)             0.1412    0.1206     0.9306 f
+  U_CORE/U_CMT/U_EPU/n507 (net)                19                 0.0000     0.9306 f
+  U_CORE/U_CMT/U_EPU/U5/I (LVT_INHDV2)                  0.1412    0.0000     0.9306 f
+  U_CORE/U_CMT/U_EPU/U5/ZN (LVT_INHDV2)                 0.1506    0.1190     1.0496 r
+  U_CORE/U_CMT/U_EPU/n302 (net)                 3                 0.0000     1.0496 r
+  U_CORE/U_CMT/U_EPU/U18/A1 (LVT_NOR2HDV8)              0.1506    0.0000     1.0496 r
+  U_CORE/U_CMT/U_EPU/U18/ZN (LVT_NOR2HDV8)              0.1044    0.0683     1.1180 f
+  U_CORE/U_CMT/U_EPU/n504 (net)                14                 0.0000     1.1180 f
+  U_CORE/U_CMT/U_EPU/U17/I (LVT_INHDV2)                 0.1044    0.0000     1.1180 f
+  U_CORE/U_CMT/U_EPU/U17/ZN (LVT_INHDV2)                0.3165    0.2004     1.3184 r
+  U_CORE/U_CMT/U_EPU/n560 (net)                17                 0.0000     1.3184 r
+  U_CORE/U_CMT/U_EPU/U544/A1 (LVT_OAI21HDV1)            0.3165    0.0000     1.3184 r
+  U_CORE/U_CMT/U_EPU/U544/ZN (LVT_OAI21HDV1)            0.1018    0.0891     1.4075 f
+  U_CORE/U_CMT/U_EPU/msr_epc_nxt[3] (net)       2                 0.0000     1.4075 f
+  U_CORE/U_CMT/U_EPU/msr_epc_nxt[3] (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     1.4075 f
+  U_CORE/U_CMT/msr_epc_nxt[3] (net)                               0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/msr_epc_nxt[3] (ysyx_210479_cmt_psr_CONFIG_DW32_CPUID_VER1_CPUID_REV0_CPUID_FIMM1_CPUID_FDMM1_CPUID_FICA1_CPUID_FDCA1_CPUID_FDBG0_CPUID_FFPU0_CPUID_FIRQC1_CPUID_FTSC1_0)
+                                                                  0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/msr_epc_nxt[3] (net)                         0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/U16/I1 (LVT_MUX2HDV1)              0.1018    0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/U16/Z (LVT_MUX2HDV1)               0.0890    0.2047     1.6122 f
+  U_CORE/U_CMT/U_PSR/msr_epc[3] (net)           2                 0.0000     1.6122 f
+  U_CORE/U_CMT/U_PSR/msr_epc[3] (ysyx_210479_cmt_psr_CONFIG_DW32_CPUID_VER1_CPUID_REV0_CPUID_FIMM1_CPUID_FDMM1_CPUID_FICA1_CPUID_FDCA1_CPUID_FDBG0_CPUID_FFPU0_CPUID_FIRQC1_CPUID_FTSC1_0)
+                                                                  0.0000     1.6122 f
+  U_CORE/U_CMT/msr_epc[3] (net)                                   0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/msr_epc[3] (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/msr_epc[3] (net)                             0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/U41/A1 (LVT_NAND2HDV1)             0.0890    0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/U41/ZN (LVT_NAND2HDV1)             0.1027    0.0518     1.6640 r
+  U_CORE/U_CMT/U_EPU/n564 (net)                 1                 0.0000     1.6640 r
+  U_CORE/U_CMT/U_EPU/U546/A1 (LVT_NAND4HDV1)            0.1027    0.0000     1.6640 r
+  U_CORE/U_CMT/U_EPU/U546/ZN (LVT_NAND4HDV1)            0.1367    0.0866     1.7506 f
+  U_CORE/U_CMT/U_EPU/exc_flush_tgt[1] (net)     1                 0.0000     1.7506 f
+  U_CORE/U_CMT/U_EPU/exc_flush_tgt[1] (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     1.7506 f
+  U_CORE/U_CMT/exc_flush_tgt[1] (net)                             0.0000     1.7506 f
+  U_CORE/U_CMT/U34/A1 (LVT_IOA21HDV1)                   0.1367    0.0000     1.7506 f
+  U_CORE/U_CMT/U34/ZN (LVT_IOA21HDV1)                   0.1113    0.1876     1.9382 f
+  U_CORE/U_CMT/flush_tgt[1] (net)               1                 0.0000     1.9382 f
+  U_CORE/U_CMT/flush_tgt[1] (ysyx_210479_cmt_32_32_5_1_1_2_2_32_1_4_6_13_1_2_2_1c_14_0c_04_08_20_18_24_3_32_4_1_0)
+                                                                  0.0000     1.9382 f
+  U_CORE/flush_tgt[1] (net)                                       0.0000     1.9382 f
+  U_CORE/U_FNT/flush_tgt[1] (ysyx_210479_frontend_32_32_2_1_2_13_2_6_4_1_2_2_30000000_1_3_2_32_4_1_0)
+                                                                  0.0000     1.9382 f
+  U_CORE/U_FNT/flush_tgt[1] (net)                                 0.0000     1.9382 f
+  U_CORE/U_FNT/U237/A1 (LVT_AOI21HDV4)                  0.1113    0.0000     1.9382 f
+  U_CORE/U_FNT/U237/ZN (LVT_AOI21HDV4)                  0.1579    0.1114     2.0496 r
+  U_CORE/U_FNT/n510 (net)                       3                 0.0000     2.0496 r
+  U_CORE/U_FNT/U118/A2 (LVT_NAND2HDV2)                  0.1579    0.0000     2.0496 r
+  U_CORE/U_FNT/U118/ZN (LVT_NAND2HDV2)                  0.1556    0.1259     2.1755 f
+  U_CORE/U_FNT/DP_OP_30J17_122_2874_n529 (net)
+                                                8                 0.0000     2.1755 f
+  U_CORE/U_FNT/U459/A1 (LVT_OR2HDV2)                    0.1556    0.0000     2.1755 f
+  U_CORE/U_FNT/U459/Z (LVT_OR2HDV2)                     0.0817    0.1868     2.3622 f
+  U_CORE/U_FNT/n68 (net)                        3                 0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/bitmap[0] (ysyx_210479_popcnt_DW4_P_DW2_2)
+                                                                  0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/bitmap[0] (net)                             0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/U1/A3 (LVT_XOR3HDV2)              0.0817    0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/U1/Z (LVT_XOR3HDV2)               0.0893    0.1657     2.5280 r
+  U_CORE/U_FNT/popc_1/count[0] (net)            2                 0.0000     2.5280 r
+  U_CORE/U_FNT/popc_1/count[0] (ysyx_210479_popcnt_DW4_P_DW2_2)   0.0000     2.5280 r
+  U_CORE/U_FNT/s1i_push_offset[0] (net)                           0.0000     2.5280 r
+  U_CORE/U_FNT/U26/I (LVT_INHDV2)                       0.0893    0.0000     2.5280 r
+  U_CORE/U_FNT/U26/ZN (LVT_INHDV2)                      0.0533    0.0487     2.5767 f
+  U_CORE/U_FNT/n346 (net)                       2                 0.0000     2.5767 f
+  U_CORE/U_FNT/U6/A1 (LVT_NOR2HDV2)                     0.0533    0.0000     2.5767 f
+  U_CORE/U_FNT/U6/ZN (LVT_NOR2HDV2)                     0.1369    0.0858     2.6625 r
+  U_CORE/U_FNT/n344 (net)                       2                 0.0000     2.6625 r
+  U_CORE/U_FNT/U23/A1 (LVT_OAI21HDV2)                   0.1369    0.0000     2.6625 r
+  U_CORE/U_FNT/U23/ZN (LVT_OAI21HDV2)                   0.0952    0.0784     2.7409 f
+  U_CORE/U_FNT/n330 (net)                       2                 0.0000     2.7409 f
+  U_CORE/U_FNT/U289/I (LVT_INHDV2)                      0.0952    0.0000     2.7409 f
+  U_CORE/U_FNT/U289/ZN (LVT_INHDV2)                     0.1174    0.0889     2.8298 r
+  U_CORE/U_FNT/n340 (net)                       5                 0.0000     2.8298 r
+  U_CORE/U_FNT/U291/A1 (LVT_NAND2HDV1)                  0.1174    0.0000     2.8298 r
+  U_CORE/U_FNT/U291/ZN (LVT_NAND2HDV1)                  0.0830    0.0712     2.9010 f
+  U_CORE/U_FNT/n333 (net)                       1                 0.0000     2.9010 f
+  U_CORE/U_FNT/U292/A1 (LVT_XNOR2HDV2)                  0.0830    0.0000     2.9010 f
+  U_CORE/U_FNT/U292/ZN (LVT_XNOR2HDV2)                  0.1256    0.1885     3.0895 r
+  U_CORE/U_FNT/s1i_bpu_pc[5] (net)              6                 0.0000     3.0895 r
+  U_CORE/U_FNT/U64/A2 (LVT_AND2HDV1)                    0.1256    0.0000     3.0895 r
+  U_CORE/U_FNT/U64/Z (LVT_AND2HDV1)                     0.1090    0.1597     3.2492 r
+  U_CORE/U_FNT/n155 (net)                       3                 0.0000     3.2492 r
+  U_CORE/U_FNT/U65/A3 (LVT_NAND3HDV1)                   0.1090    0.0000     3.2492 r
+  U_CORE/U_FNT/U65/ZN (LVT_NAND3HDV1)                   0.1322    0.1051     3.3543 f
+  U_CORE/U_FNT/n400 (net)                       2                 0.0000     3.3543 f
+  U_CORE/U_FNT/U74/A1 (LVT_NOR2HDV1)                    0.1322    0.0000     3.3543 f
+  U_CORE/U_FNT/U74/ZN (LVT_NOR2HDV1)                    0.1747    0.1273     3.4816 r
+  U_CORE/U_FNT/n481 (net)                       2                 0.0000     3.4816 r
+  U_CORE/U_FNT/U44/A2 (LVT_AND2HDV4)                    0.1747    0.0000     3.4816 r
+  U_CORE/U_FNT/U44/Z (LVT_AND2HDV4)                     0.0490    0.1136     3.5952 r
+  U_CORE/U_FNT/n480 (net)                       1                 0.0000     3.5952 r
+  U_CORE/U_FNT/U101/B (LVT_ADH1HDV1)                    0.0490    0.0000     3.5952 r
+  U_CORE/U_FNT/U101/CO (LVT_ADH1HDV1)                   0.0847    0.1265     3.7217 r
+  U_CORE/U_FNT/n404 (net)                       2                 0.0000     3.7217 r
+  U_CORE/U_FNT/U103/A1 (LVT_AND2HDV1)                   0.0847    0.0000     3.7217 r
+  U_CORE/U_FNT/U103/Z (LVT_AND2HDV1)                    0.0924    0.1409     3.8626 r
+  U_CORE/U_FNT/n479 (net)                       1                 0.0000     3.8626 r
+  U_CORE/U_FNT/U102/B (LVT_ADH1HDV1)                    0.0924    0.0000     3.8626 r
+  U_CORE/U_FNT/U102/CO (LVT_ADH1HDV1)                   0.0856    0.1357     3.9983 r
+  U_CORE/U_FNT/n403 (net)                       2                 0.0000     3.9983 r
+  U_CORE/U_FNT/U105/A1 (LVT_AND2HDV1)                   0.0856    0.0000     3.9983 r
+  U_CORE/U_FNT/U105/Z (LVT_AND2HDV1)                    0.0934    0.1411     4.1394 r
+  U_CORE/U_FNT/n478 (net)                       1                 0.0000     4.1394 r
+  U_CORE/U_FNT/U104/B (LVT_ADH1HDV1)                    0.0934    0.0000     4.1394 r
+  U_CORE/U_FNT/U104/CO (LVT_ADH1HDV1)                   0.0872    0.1359     4.2754 r
+  U_CORE/U_FNT/n402 (net)                       2                 0.0000     4.2754 r
+  U_CORE/U_FNT/U107/A1 (LVT_AND2HDV1)                   0.0872    0.0000     4.2754 r
+  U_CORE/U_FNT/U107/Z (LVT_AND2HDV1)                    0.0934    0.1414     4.4168 r
+  U_CORE/U_FNT/n163 (net)                       1                 0.0000     4.4168 r
+  U_CORE/U_FNT/U106/B (LVT_ADH1HDV1)                    0.0934    0.0000     4.4168 r
+  U_CORE/U_FNT/U106/CO (LVT_ADH1HDV1)                   0.0872    0.1359     4.5527 r
+  U_CORE/U_FNT/n401 (net)                       2                 0.0000     4.5527 r
+  U_CORE/U_FNT/U132/A1 (LVT_AND2HDV1)                   0.0872    0.0000     4.5527 r
+  U_CORE/U_FNT/U132/Z (LVT_AND2HDV1)                    0.1076    0.1502     4.7029 r
+  U_CORE/U_FNT/n162 (net)                       1                 0.0000     4.7029 r
+  U_CORE/U_FNT/U61/B (LVT_ADH1HDV2)                     0.1076    0.0000     4.7029 r
+  U_CORE/U_FNT/U61/CO (LVT_ADH1HDV2)                    0.0674    0.1167     4.8196 r
+  U_CORE/U_FNT/n470 (net)                       2                 0.0000     4.8196 r
+  U_CORE/U_FNT/U108/A1 (LVT_AND2HDV1)                   0.0674    0.0000     4.8196 r
+  U_CORE/U_FNT/U108/Z (LVT_AND2HDV1)                    0.0929    0.1373     4.9569 r
+  U_CORE/U_FNT/n160 (net)                       1                 0.0000     4.9569 r
+  U_CORE/U_FNT/U146/B (LVT_ADH1HDV1)                    0.0929    0.0000     4.9569 r
+  U_CORE/U_FNT/U146/CO (LVT_ADH1HDV1)                   0.1056    0.1483     5.1052 r
+  U_CORE/U_FNT/n477 (net)                       1                 0.0000     5.1052 r
+  U_CORE/U_FNT/U434/B (LVT_ADH1HDV2)                    0.1056    0.0000     5.1052 r
+  U_CORE/U_FNT/U434/CO (LVT_ADH1HDV2)                   0.0737    0.1188     5.2240 r
+  U_CORE/U_FNT/n476 (net)                       1                 0.0000     5.2240 r
+  U_CORE/U_FNT/U433/B (LVT_ADH1HDV1)                    0.0737    0.0000     5.2240 r
+  U_CORE/U_FNT/U433/CO (LVT_ADH1HDV1)                   0.0917    0.1356     5.3596 r
+  U_CORE/U_FNT/n475 (net)                       1                 0.0000     5.3596 r
+  U_CORE/U_FNT/U432/B (LVT_ADH1HDV1)                    0.0917    0.0000     5.3596 r
+  U_CORE/U_FNT/U432/CO (LVT_ADH1HDV1)                   0.0915    0.1392     5.4988 r
+  U_CORE/U_FNT/n474 (net)                       1                 0.0000     5.4988 r
+  U_CORE/U_FNT/U431/B (LVT_ADH1HDV1)                    0.0915    0.0000     5.4988 r
+  U_CORE/U_FNT/U431/CO (LVT_ADH1HDV1)                   0.0915    0.1392     5.6380 r
+  U_CORE/U_FNT/n473 (net)                       1                 0.0000     5.6380 r
+  U_CORE/U_FNT/U430/B (LVT_ADH1HDV1)                    0.0915    0.0000     5.6380 r
+  U_CORE/U_FNT/U430/CO (LVT_ADH1HDV1)                   0.0917    0.1392     5.7771 r
+  U_CORE/U_FNT/n472 (net)                       1                 0.0000     5.7771 r
+  U_CORE/U_FNT/U429/B (LVT_ADH1HDV1)                    0.0917    0.0000     5.7771 r
+  U_CORE/U_FNT/U429/CO (LVT_ADH1HDV1)                   0.0722    0.1272     5.9043 r
+  U_CORE/U_FNT/n471 (net)                       1                 0.0000     5.9043 r
+  U_CORE/U_FNT/U428/A1 (LVT_XOR2HDV1)                   0.0722    0.0000     5.9043 r
+  U_CORE/U_FNT/U428/Z (LVT_XOR2HDV1)                    0.0821    0.1505     6.0548 f
+  U_CORE/U_FNT/s1i_bpu_pc[59] (net)             2                 0.0000     6.0548 f
+  U_CORE/U_FNT/U_BPU/pc[59] (ysyx_210479_bpu_CONFIG_PHT_P_NUM2_CONFIG_BTB_P_NUM2_CONFIG_AW32_CONFIG_P_FETCH_WIDTH2_0)
+                                                                  0.0000     6.0548 f
+  U_CORE/U_FNT/U_BPU/pc[59] (net)                                 0.0000     6.0548 f
+  U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/D[29] (ysyx_210479_mDFF_lr_DW30_29)
+                                                                  0.0000     6.0548 f
+  U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/D[29] (net)              0.0000     6.0548 f
+  U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/U9/A1 (LVT_IOA22HDV1)
+                                                        0.0821    0.0000     6.0548 f
+  U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/U9/ZN (LVT_IOA22HDV1)
+                                                        0.0803    0.1543     6.2091 f
+  U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/n31 (net)
+                                                1                 0.0000     6.2091 f
+  U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/Q_reg_29_/D (LVT_DQHDV2)
+                                                        0.0803    0.0000     6.2091 f
+  data arrival time                                                          6.2091
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  U_CORE/U_FNT/U_BPU/gen_fw_1__ff_s1o_pc/Q_reg_29_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1406     6.2094
+  data required time                                                         6.2094
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2094
+  data arrival time                                                         -6.2091
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0002
+  Startpoint: U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/Q_reg_29_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q_reg_1_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q_reg_1_/Q (LVT_DQHDV1)
+                                                        0.1841    0.3250     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q[1] (net)
+                                                8                 0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/ff_state_r/Q[1] (ysyx_210479_mDFF_r_4_0_0)
+                                                                  0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/fsm_state_ff[1] (net)              0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U25/I (LVT_INHDV1)       0.1841    0.0000     0.3250 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U25/ZN (LVT_INHDV1)      0.1128    0.0960     0.4210 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/n612 (net)       3                 0.0000     0.4210 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U24/A2 (LVT_AND3HDV2)    0.1128    0.0000     0.4210 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U24/Z (LVT_AND3HDV2)     0.0842    0.1636     0.5846 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/n401 (net)       2                 0.0000     0.5846 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U29/A1 (LVT_NAND2HDV2)   0.0842    0.0000     0.5846 r
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/U29/ZN (LVT_NAND2HDV2)   0.1234    0.0895     0.6741 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/stall_req (net)
+                                                4                 0.0000     0.6741 f
+  U_CORE/U_CMT/U_LSU/U_D_CACHE/stall_req (ysyx_210479_dcache_CONFIG_AW32_CONFIG_DW32_CONFIG_P_DW5_CONFIG_P_PAGE_SIZE13_CONFIG_DC_P_LINE6_CONFIG_DC_P_SETS4_CONFIG_DC_P_WAYS1_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0)
+                                                                  0.0000     0.6741 f
+  U_CORE/U_CMT/U_LSU/lsu_stall_req (net)                          0.0000     0.6741 f
+  U_CORE/U_CMT/U_LSU/lsu_stall_req (ysyx_210479_cmt_lsu_CONFIG_AW32_CONFIG_DW32_CONFIG_P_DW5_CONFIG_P_PAGE_SIZE13_CONFIG_DMMU_ENABLE_UNCACHED_SEG1_CONFIG_DTLB_P_SETS2_CONFIG_DC_P_LINE6_CONFIG_DC_P_SETS4_CONFIG_DC_P_WAYS1_AXI_P_DW_BYTES3_AXI_ADDR_WIDTH32_AXI_ID_WIDTH4_AXI_USER_WIDTH1_0)
+                                                                  0.0000     0.6741 f
+  U_CORE/U_CMT/lsu_stall_req (net)                                0.0000     0.6741 f
+  U_CORE/U_CMT/U35/I (LVT_INHDV4)                       0.1234    0.0000     0.6741 f
+  U_CORE/U_CMT/U35/ZN (LVT_INHDV4)                      0.1865    0.1359     0.8100 r
+  U_CORE/U_CMT/n339 (net)                      22                 0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/p_ce_s2 (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/p_ce_s2 (net)                                0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/U24/A1 (LVT_NAND2HDV8)             0.1865    0.0000     0.8100 r
+  U_CORE/U_CMT/U_EPU/U24/ZN (LVT_NAND2HDV8)             0.1412    0.1206     0.9306 f
+  U_CORE/U_CMT/U_EPU/n507 (net)                19                 0.0000     0.9306 f
+  U_CORE/U_CMT/U_EPU/U5/I (LVT_INHDV2)                  0.1412    0.0000     0.9306 f
+  U_CORE/U_CMT/U_EPU/U5/ZN (LVT_INHDV2)                 0.1506    0.1190     1.0496 r
+  U_CORE/U_CMT/U_EPU/n302 (net)                 3                 0.0000     1.0496 r
+  U_CORE/U_CMT/U_EPU/U18/A1 (LVT_NOR2HDV8)              0.1506    0.0000     1.0496 r
+  U_CORE/U_CMT/U_EPU/U18/ZN (LVT_NOR2HDV8)              0.1044    0.0683     1.1180 f
+  U_CORE/U_CMT/U_EPU/n504 (net)                14                 0.0000     1.1180 f
+  U_CORE/U_CMT/U_EPU/U17/I (LVT_INHDV2)                 0.1044    0.0000     1.1180 f
+  U_CORE/U_CMT/U_EPU/U17/ZN (LVT_INHDV2)                0.3165    0.2004     1.3184 r
+  U_CORE/U_CMT/U_EPU/n560 (net)                17                 0.0000     1.3184 r
+  U_CORE/U_CMT/U_EPU/U544/A1 (LVT_OAI21HDV1)            0.3165    0.0000     1.3184 r
+  U_CORE/U_CMT/U_EPU/U544/ZN (LVT_OAI21HDV1)            0.1018    0.0891     1.4075 f
+  U_CORE/U_CMT/U_EPU/msr_epc_nxt[3] (net)       2                 0.0000     1.4075 f
+  U_CORE/U_CMT/U_EPU/msr_epc_nxt[3] (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     1.4075 f
+  U_CORE/U_CMT/msr_epc_nxt[3] (net)                               0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/msr_epc_nxt[3] (ysyx_210479_cmt_psr_CONFIG_DW32_CPUID_VER1_CPUID_REV0_CPUID_FIMM1_CPUID_FDMM1_CPUID_FICA1_CPUID_FDCA1_CPUID_FDBG0_CPUID_FFPU0_CPUID_FIRQC1_CPUID_FTSC1_0)
+                                                                  0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/msr_epc_nxt[3] (net)                         0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/U16/I1 (LVT_MUX2HDV1)              0.1018    0.0000     1.4075 f
+  U_CORE/U_CMT/U_PSR/U16/Z (LVT_MUX2HDV1)               0.0890    0.2047     1.6122 f
+  U_CORE/U_CMT/U_PSR/msr_epc[3] (net)           2                 0.0000     1.6122 f
+  U_CORE/U_CMT/U_PSR/msr_epc[3] (ysyx_210479_cmt_psr_CONFIG_DW32_CPUID_VER1_CPUID_REV0_CPUID_FIMM1_CPUID_FDMM1_CPUID_FICA1_CPUID_FDCA1_CPUID_FDBG0_CPUID_FFPU0_CPUID_FIRQC1_CPUID_FTSC1_0)
+                                                                  0.0000     1.6122 f
+  U_CORE/U_CMT/msr_epc[3] (net)                                   0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/msr_epc[3] (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/msr_epc[3] (net)                             0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/U41/A1 (LVT_NAND2HDV1)             0.0890    0.0000     1.6122 f
+  U_CORE/U_CMT/U_EPU/U41/ZN (LVT_NAND2HDV1)             0.1027    0.0518     1.6640 r
+  U_CORE/U_CMT/U_EPU/n564 (net)                 1                 0.0000     1.6640 r
+  U_CORE/U_CMT/U_EPU/U546/A1 (LVT_NAND4HDV1)            0.1027    0.0000     1.6640 r
+  U_CORE/U_CMT/U_EPU/U546/ZN (LVT_NAND4HDV1)            0.1367    0.0866     1.7506 f
+  U_CORE/U_CMT/U_EPU/exc_flush_tgt[1] (net)     1                 0.0000     1.7506 f
+  U_CORE/U_CMT/U_EPU/exc_flush_tgt[1] (ysyx_210479_cmt_epu_32_32_1c_14_0c_04_08_20_18_24_2_2_32_0)
+                                                                  0.0000     1.7506 f
+  U_CORE/U_CMT/exc_flush_tgt[1] (net)                             0.0000     1.7506 f
+  U_CORE/U_CMT/U34/A1 (LVT_IOA21HDV1)                   0.1367    0.0000     1.7506 f
+  U_CORE/U_CMT/U34/ZN (LVT_IOA21HDV1)                   0.1113    0.1876     1.9382 f
+  U_CORE/U_CMT/flush_tgt[1] (net)               1                 0.0000     1.9382 f
+  U_CORE/U_CMT/flush_tgt[1] (ysyx_210479_cmt_32_32_5_1_1_2_2_32_1_4_6_13_1_2_2_1c_14_0c_04_08_20_18_24_3_32_4_1_0)
+                                                                  0.0000     1.9382 f
+  U_CORE/flush_tgt[1] (net)                                       0.0000     1.9382 f
+  U_CORE/U_FNT/flush_tgt[1] (ysyx_210479_frontend_32_32_2_1_2_13_2_6_4_1_2_2_30000000_1_3_2_32_4_1_0)
+                                                                  0.0000     1.9382 f
+  U_CORE/U_FNT/flush_tgt[1] (net)                                 0.0000     1.9382 f
+  U_CORE/U_FNT/U237/A1 (LVT_AOI21HDV4)                  0.1113    0.0000     1.9382 f
+  U_CORE/U_FNT/U237/ZN (LVT_AOI21HDV4)                  0.1579    0.1114     2.0496 r
+  U_CORE/U_FNT/n510 (net)                       3                 0.0000     2.0496 r
+  U_CORE/U_FNT/U118/A2 (LVT_NAND2HDV2)                  0.1579    0.0000     2.0496 r
+  U_CORE/U_FNT/U118/ZN (LVT_NAND2HDV2)                  0.1556    0.1259     2.1755 f
+  U_CORE/U_FNT/DP_OP_30J17_122_2874_n529 (net)
+                                                8                 0.0000     2.1755 f
+  U_CORE/U_FNT/U459/A1 (LVT_OR2HDV2)                    0.1556    0.0000     2.1755 f
+  U_CORE/U_FNT/U459/Z (LVT_OR2HDV2)                     0.0817    0.1868     2.3622 f
+  U_CORE/U_FNT/n68 (net)                        3                 0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/bitmap[0] (ysyx_210479_popcnt_DW4_P_DW2_2)
+                                                                  0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/bitmap[0] (net)                             0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/U1/A3 (LVT_XOR3HDV2)              0.0817    0.0000     2.3622 f
+  U_CORE/U_FNT/popc_1/U1/Z (LVT_XOR3HDV2)               0.0893    0.1657     2.5280 r
+  U_CORE/U_FNT/popc_1/count[0] (net)            2                 0.0000     2.5280 r
+  U_CORE/U_FNT/popc_1/count[0] (ysyx_210479_popcnt_DW4_P_DW2_2)   0.0000     2.5280 r
+  U_CORE/U_FNT/s1i_push_offset[0] (net)                           0.0000     2.5280 r
+  U_CORE/U_FNT/U26/I (LVT_INHDV2)                       0.0893    0.0000     2.5280 r
+  U_CORE/U_FNT/U26/ZN (LVT_INHDV2)                      0.0533    0.0487     2.5767 f
+  U_CORE/U_FNT/n346 (net)                       2                 0.0000     2.5767 f
+  U_CORE/U_FNT/U6/A1 (LVT_NOR2HDV2)                     0.0533    0.0000     2.5767 f
+  U_CORE/U_FNT/U6/ZN (LVT_NOR2HDV2)                     0.1369    0.0858     2.6625 r
+  U_CORE/U_FNT/n344 (net)                       2                 0.0000     2.6625 r
+  U_CORE/U_FNT/U23/A1 (LVT_OAI21HDV2)                   0.1369    0.0000     2.6625 r
+  U_CORE/U_FNT/U23/ZN (LVT_OAI21HDV2)                   0.0952    0.0784     2.7409 f
+  U_CORE/U_FNT/n330 (net)                       2                 0.0000     2.7409 f
+  U_CORE/U_FNT/U289/I (LVT_INHDV2)                      0.0952    0.0000     2.7409 f
+  U_CORE/U_FNT/U289/ZN (LVT_INHDV2)                     0.1174    0.0889     2.8298 r
+  U_CORE/U_FNT/n340 (net)                       5                 0.0000     2.8298 r
+  U_CORE/U_FNT/U291/A1 (LVT_NAND2HDV1)                  0.1174    0.0000     2.8298 r
+  U_CORE/U_FNT/U291/ZN (LVT_NAND2HDV1)                  0.0830    0.0712     2.9010 f
+  U_CORE/U_FNT/n333 (net)                       1                 0.0000     2.9010 f
+  U_CORE/U_FNT/U292/A1 (LVT_XNOR2HDV2)                  0.0830    0.0000     2.9010 f
+  U_CORE/U_FNT/U292/ZN (LVT_XNOR2HDV2)                  0.1256    0.1885     3.0895 r
+  U_CORE/U_FNT/s1i_bpu_pc[5] (net)              6                 0.0000     3.0895 r
+  U_CORE/U_FNT/U64/A2 (LVT_AND2HDV1)                    0.1256    0.0000     3.0895 r
+  U_CORE/U_FNT/U64/Z (LVT_AND2HDV1)                     0.1090    0.1597     3.2492 r
+  U_CORE/U_FNT/n155 (net)                       3                 0.0000     3.2492 r
+  U_CORE/U_FNT/U65/A3 (LVT_NAND3HDV1)                   0.1090    0.0000     3.2492 r
+  U_CORE/U_FNT/U65/ZN (LVT_NAND3HDV1)                   0.1322    0.1051     3.3543 f
+  U_CORE/U_FNT/n400 (net)                       2                 0.0000     3.3543 f
+  U_CORE/U_FNT/U74/A1 (LVT_NOR2HDV1)                    0.1322    0.0000     3.3543 f
+  U_CORE/U_FNT/U74/ZN (LVT_NOR2HDV1)                    0.1747    0.1273     3.4816 r
+  U_CORE/U_FNT/n481 (net)                       2                 0.0000     3.4816 r
+  U_CORE/U_FNT/U44/A2 (LVT_AND2HDV4)                    0.1747    0.0000     3.4816 r
+  U_CORE/U_FNT/U44/Z (LVT_AND2HDV4)                     0.0490    0.1136     3.5952 r
+  U_CORE/U_FNT/n480 (net)                       1                 0.0000     3.5952 r
+  U_CORE/U_FNT/U101/B (LVT_ADH1HDV1)                    0.0490    0.0000     3.5952 r
+  U_CORE/U_FNT/U101/CO (LVT_ADH1HDV1)                   0.0847    0.1265     3.7217 r
+  U_CORE/U_FNT/n404 (net)                       2                 0.0000     3.7217 r
+  U_CORE/U_FNT/U103/A1 (LVT_AND2HDV1)                   0.0847    0.0000     3.7217 r
+  U_CORE/U_FNT/U103/Z (LVT_AND2HDV1)                    0.0924    0.1409     3.8626 r
+  U_CORE/U_FNT/n479 (net)                       1                 0.0000     3.8626 r
+  U_CORE/U_FNT/U102/B (LVT_ADH1HDV1)                    0.0924    0.0000     3.8626 r
+  U_CORE/U_FNT/U102/CO (LVT_ADH1HDV1)                   0.0856    0.1357     3.9983 r
+  U_CORE/U_FNT/n403 (net)                       2                 0.0000     3.9983 r
+  U_CORE/U_FNT/U105/A1 (LVT_AND2HDV1)                   0.0856    0.0000     3.9983 r
+  U_CORE/U_FNT/U105/Z (LVT_AND2HDV1)                    0.0934    0.1411     4.1394 r
+  U_CORE/U_FNT/n478 (net)                       1                 0.0000     4.1394 r
+  U_CORE/U_FNT/U104/B (LVT_ADH1HDV1)                    0.0934    0.0000     4.1394 r
+  U_CORE/U_FNT/U104/CO (LVT_ADH1HDV1)                   0.0872    0.1359     4.2754 r
+  U_CORE/U_FNT/n402 (net)                       2                 0.0000     4.2754 r
+  U_CORE/U_FNT/U107/A1 (LVT_AND2HDV1)                   0.0872    0.0000     4.2754 r
+  U_CORE/U_FNT/U107/Z (LVT_AND2HDV1)                    0.0934    0.1414     4.4168 r
+  U_CORE/U_FNT/n163 (net)                       1                 0.0000     4.4168 r
+  U_CORE/U_FNT/U106/B (LVT_ADH1HDV1)                    0.0934    0.0000     4.4168 r
+  U_CORE/U_FNT/U106/CO (LVT_ADH1HDV1)                   0.0872    0.1359     4.5527 r
+  U_CORE/U_FNT/n401 (net)                       2                 0.0000     4.5527 r
+  U_CORE/U_FNT/U132/A1 (LVT_AND2HDV1)                   0.0872    0.0000     4.5527 r
+  U_CORE/U_FNT/U132/Z (LVT_AND2HDV1)                    0.1076    0.1502     4.7029 r
+  U_CORE/U_FNT/n162 (net)                       1                 0.0000     4.7029 r
+  U_CORE/U_FNT/U61/B (LVT_ADH1HDV2)                     0.1076    0.0000     4.7029 r
+  U_CORE/U_FNT/U61/CO (LVT_ADH1HDV2)                    0.0674    0.1167     4.8196 r
+  U_CORE/U_FNT/n470 (net)                       2                 0.0000     4.8196 r
+  U_CORE/U_FNT/U108/A1 (LVT_AND2HDV1)                   0.0674    0.0000     4.8196 r
+  U_CORE/U_FNT/U108/Z (LVT_AND2HDV1)                    0.0929    0.1373     4.9569 r
+  U_CORE/U_FNT/n160 (net)                       1                 0.0000     4.9569 r
+  U_CORE/U_FNT/U146/B (LVT_ADH1HDV1)                    0.0929    0.0000     4.9569 r
+  U_CORE/U_FNT/U146/CO (LVT_ADH1HDV1)                   0.1056    0.1483     5.1052 r
+  U_CORE/U_FNT/n477 (net)                       1                 0.0000     5.1052 r
+  U_CORE/U_FNT/U434/B (LVT_ADH1HDV2)                    0.1056    0.0000     5.1052 r
+  U_CORE/U_FNT/U434/CO (LVT_ADH1HDV2)                   0.0737    0.1188     5.2240 r
+  U_CORE/U_FNT/n476 (net)                       1                 0.0000     5.2240 r
+  U_CORE/U_FNT/U433/B (LVT_ADH1HDV1)                    0.0737    0.0000     5.2240 r
+  U_CORE/U_FNT/U433/CO (LVT_ADH1HDV1)                   0.0917    0.1356     5.3596 r
+  U_CORE/U_FNT/n475 (net)                       1                 0.0000     5.3596 r
+  U_CORE/U_FNT/U432/B (LVT_ADH1HDV1)                    0.0917    0.0000     5.3596 r
+  U_CORE/U_FNT/U432/CO (LVT_ADH1HDV1)                   0.0915    0.1392     5.4988 r
+  U_CORE/U_FNT/n474 (net)                       1                 0.0000     5.4988 r
+  U_CORE/U_FNT/U431/B (LVT_ADH1HDV1)                    0.0915    0.0000     5.4988 r
+  U_CORE/U_FNT/U431/CO (LVT_ADH1HDV1)                   0.0915    0.1392     5.6380 r
+  U_CORE/U_FNT/n473 (net)                       1                 0.0000     5.6380 r
+  U_CORE/U_FNT/U430/B (LVT_ADH1HDV1)                    0.0915    0.0000     5.6380 r
+  U_CORE/U_FNT/U430/CO (LVT_ADH1HDV1)                   0.0917    0.1392     5.7771 r
+  U_CORE/U_FNT/n472 (net)                       1                 0.0000     5.7771 r
+  U_CORE/U_FNT/U429/B (LVT_ADH1HDV1)                    0.0917    0.0000     5.7771 r
+  U_CORE/U_FNT/U429/CO (LVT_ADH1HDV1)                   0.0722    0.1272     5.9043 r
+  U_CORE/U_FNT/n471 (net)                       1                 0.0000     5.9043 r
+  U_CORE/U_FNT/U428/A1 (LVT_XOR2HDV1)                   0.0722    0.0000     5.9043 r
+  U_CORE/U_FNT/U428/Z (LVT_XOR2HDV1)                    0.0821    0.1505     6.0548 f
+  U_CORE/U_FNT/s1i_bpu_pc[59] (net)             2                 0.0000     6.0548 f
+  U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/D[29] (ysyx_210479_mDFF_lr_DW30_30)
+                                                                  0.0000     6.0548 f
+  U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/D[29] (net)                0.0000     6.0548 f
+  U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/U8/A1 (LVT_IOA22HDV1)
+                                                        0.0821    0.0000     6.0548 f
+  U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/U8/ZN (LVT_IOA22HDV1)
+                                                        0.0796    0.1543     6.2091 f
+  U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/n33 (net)
+                                                1                 0.0000     6.2091 f
+  U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/Q_reg_29_/D (LVT_DQHDV2)
+                                                        0.0796    0.0000     6.2091 f
+  data arrival time                                                          6.2091
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  U_CORE/U_FNT/gen_iq_din_1__ff_s1o_pc/Q_reg_29_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1405     6.2095
+  data required time                                                         6.2095
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2095
+  data arrival time                                                         -6.2091
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0004
