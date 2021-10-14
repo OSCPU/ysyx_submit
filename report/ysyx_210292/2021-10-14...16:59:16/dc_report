@@ -1,0 +1,1134 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Oct_13_20:46:17_2021_+0800
+top_name: ysyx_210292
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+298731.2  298731.2  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+28874  28874  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210292
+Date   : Thu Oct 14 17:07:51 2021
+****************************************
+    
+Number of ports:                         9332
+Number of nets:                         36660
+Number of cells:                        29670
+Number of combinational cells:          24203
+Number of sequential cells:              4671
+Number of macros/black boxes:               0
+Number of buf/inv:                       5794
+Number of references:                       4
+Combinational area:             179361.354620
+Buf/Inv area:                    25774.436717
+Noncombinational area:          119369.831234
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                298731.185854
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  ---------------------------------------
+ysyx_210292                       298731.1859    100.0     770.5704       0.0000  0.0000  ysyx_210292
+AXICare                            10664.2642      3.6    5324.0632    5340.2010  0.0000  ysyx_210292_AXICare_0
+AbstractCore                      287296.3513     96.2       0.0000       0.0000  0.0000  ysyx_210292_AbstractCore_0
+AbstractCore/iagent                 2879.2168      1.0    2009.1312     870.0856  0.0000  ysyx_210292_InterfaceAgent_0
+AbstractCore/mycore               284417.1345     95.2    3784.2672    1788.5841  0.0000  ysyx_210292_Rainbow_0
+AbstractCore/mycore/Execute       109057.9016     36.5   15006.6232   14191.6749  0.0000  ysyx_210292_Execute_0
+AbstractCore/mycore/Execute/alu    39902.9055     13.4   39902.9055       0.0000  0.0000  ysyx_210292_ArithmeticLogicalUnit_0
+AbstractCore/mycore/Execute/bc      8930.8168      3.0    8930.8168       0.0000  0.0000  ysyx_210292_BranchController_0
+AbstractCore/mycore/Execute/csru   31025.8813     10.4   14647.5616   16378.3198  0.0000  ysyx_210292_ControlStatusRegisterUnit_0
+AbstractCore/mycore/Fetch           5324.0632      1.8    3687.4416    1636.6217  0.0000  ysyx_210292_Fetch_0
+AbstractCore/mycore/InstDecode    107926.9256     36.1   54048.8566   53173.3938  0.0000  ysyx_210292_InstDecode_0
+AbstractCore/mycore/InstDecode/decoder
+                                     704.6752      0.2     704.6752       0.0000  0.0000  ysyx_210292_Decoder_0
+AbstractCore/mycore/Memory         43104.8749     14.4    7010.4424   11093.2556  0.0000  ysyx_210292_Memory_0
+AbstractCore/mycore/Memory/clint   18312.1418      6.1   11769.6896    6542.4522  0.0000  ysyx_210292_CoreLocalInterruptor_0
+AbstractCore/mycore/Memory/lsu      6689.0352      2.2    6689.0352       0.0000  0.0000  ysyx_210292_LoadStoreUnit_0
+AbstractCore/mycore/WriteBack      13430.5179      4.5    5075.2752    8355.2427  0.0000  ysyx_210292_WriteBack_0
+--------------------------------  -----------  -------  -----------  -----------  ------  ---------------------------------------
+Total                                                   179361.3546  119369.8312  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210292
+Date   : Thu Oct 14 17:07:48 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: AbstractCore/mycore/Memory/mems_src1_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: AbstractCore/mycore/Execute/exs_src2_reg_59_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  AbstractCore/mycore/Memory/mems_src1_reg_1_/CK (LVT_DQHDV2)
+                                                        0.0000    0.0000 #   0.0000 r
+  AbstractCore/mycore/Memory/mems_src1_reg_1_/Q (LVT_DQHDV2)
+                                                        0.1235    0.2729     0.2729 f
+  AbstractCore/mycore/Memory/lsu_io_src1[1] (net)
+                                                5                 0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/io_src1[1] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/io_src1[1] (net)                 0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/U52/A1 (LVT_NOR2HDV2)
+                                                        0.1235    0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/U52/ZN (LVT_NOR2HDV2)
+                                                        0.1808    0.1289     0.4018 r
+  AbstractCore/mycore/Memory/lsu/n223 (net)     2                 0.0000     0.4018 r
+  AbstractCore/mycore/Memory/lsu/U131/A2 (LVT_OAI21HDV4)
+                                                        0.1808    0.0000     0.4018 r
+  AbstractCore/mycore/Memory/lsu/U131/ZN (LVT_OAI21HDV4)
+                                                        0.0744    0.0782     0.4801 f
+  AbstractCore/mycore/Memory/lsu/n246 (net)     2                 0.0000     0.4801 f
+  AbstractCore/mycore/Memory/lsu/U164/A2 (LVT_AOI21HDV2)
+                                                        0.0744    0.0000     0.4801 f
+  AbstractCore/mycore/Memory/lsu/U164/ZN (LVT_AOI21HDV2)
+                                                        0.1542    0.1222     0.6022 r
+  AbstractCore/mycore/Memory/lsu/n774 (net)     2                 0.0000     0.6022 r
+  AbstractCore/mycore/Memory/lsu/U685/I (LVT_INHDV1)    0.1542    0.0000     0.6022 r
+  AbstractCore/mycore/Memory/lsu/U685/ZN (LVT_INHDV1)   0.1000    0.0869     0.6892 f
+  AbstractCore/mycore/Memory/lsu/n801 (net)     4                 0.0000     0.6892 f
+  AbstractCore/mycore/Memory/lsu/U213/A1 (LVT_AOI21HDV1)
+                                                        0.1000    0.0000     0.6892 f
+  AbstractCore/mycore/Memory/lsu/U213/ZN (LVT_AOI21HDV1)
+                                                        0.1666    0.1225     0.8116 r
+  AbstractCore/mycore/Memory/lsu/n783 (net)     1                 0.0000     0.8116 r
+  AbstractCore/mycore/Memory/lsu/U692/A1 (LVT_XOR2HDV2)
+                                                        0.1666    0.0000     0.8116 r
+  AbstractCore/mycore/Memory/lsu/U692/Z (LVT_XOR2HDV2)
+                                                        0.0953    0.1829     0.9945 f
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_addr[7] (net)
+                                                4                 0.0000     0.9945 f
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_addr[7] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     0.9945 f
+  AbstractCore/mycore/Memory/lsu_io_DataLoad_addr[7] (net)        0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_addr[7] (ysyx_210292_CoreLocalInterruptor_0)
+                                                                  0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_addr[7] (net)     0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/U140/A1 (LVT_NOR3HDV2)
+                                                        0.0953    0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/U140/ZN (LVT_NOR3HDV2)
+                                                        0.1578    0.0972     1.0917 r
+  AbstractCore/mycore/Memory/clint/n369 (net)
+                                                1                 0.0000     1.0917 r
+  AbstractCore/mycore/Memory/clint/U143/A1 (LVT_NAND4HDV1)
+                                                        0.1578    0.0000     1.0917 r
+  AbstractCore/mycore/Memory/clint/U143/ZN (LVT_NAND4HDV1)
+                                                        0.1437    0.1109     1.2025 f
+  AbstractCore/mycore/Memory/clint/n370 (net)
+                                                1                 0.0000     1.2025 f
+  AbstractCore/mycore/Memory/clint/U144/A1 (LVT_OR3HDV4)
+                                                        0.1437    0.0000     1.2025 f
+  AbstractCore/mycore/Memory/clint/U144/Z (LVT_OR3HDV4)
+                                                        0.0584    0.1835     1.3860 f
+  AbstractCore/mycore/Memory/clint/n371 (net)
+                                                1                 0.0000     1.3860 f
+  AbstractCore/mycore/Memory/clint/U19/A2 (LVT_OAI21HDV2)
+                                                        0.0584    0.0000     1.3860 f
+  AbstractCore/mycore/Memory/clint/U19/ZN (LVT_OAI21HDV2)
+                                                        0.1321    0.1008     1.4869 r
+  AbstractCore/mycore/Memory/clint/n373 (net)
+                                                1                 0.0000     1.4869 r
+  AbstractCore/mycore/Memory/clint/U145/C (LVT_OAI211HDV2)
+                                                        0.1321    0.0000     1.4869 r
+  AbstractCore/mycore/Memory/clint/U145/ZN (LVT_OAI211HDV2)
+                                                        0.1422    0.1185     1.6054 f
+  AbstractCore/mycore/Memory/clint/n377 (net)
+                                                1                 0.0000     1.6054 f
+  AbstractCore/mycore/Memory/clint/U146/A2 (LVT_NOR2HDV4)
+                                                        0.1422    0.0000     1.6054 f
+  AbstractCore/mycore/Memory/clint/U146/ZN (LVT_NOR2HDV4)
+                                                        0.1231    0.0975     1.7029 r
+  AbstractCore/mycore/Memory/clint/n380 (net)
+                                                2                 0.0000     1.7029 r
+  AbstractCore/mycore/Memory/clint/U149/I (LVT_INHDV4)
+                                                        0.1231    0.0000     1.7029 r
+  AbstractCore/mycore/Memory/clint/U149/ZN (LVT_INHDV4)
+                                                        0.0461    0.0401     1.7430 f
+  AbstractCore/mycore/Memory/clint/n1320 (net)
+                                                2                 0.0000     1.7430 f
+  AbstractCore/mycore/Memory/clint/U150/A1 (LVT_NOR2HDV4)
+                                                        0.0461    0.0000     1.7430 f
+  AbstractCore/mycore/Memory/clint/U150/ZN (LVT_NOR2HDV4)
+                                                        0.1033    0.0621     1.8051 r
+  AbstractCore/mycore/Memory/clint/n1331 (net)
+                                                1                 0.0000     1.8051 r
+  AbstractCore/mycore/Memory/clint/U155/I (LVT_INHDV4)
+                                                        0.1033    0.0000     1.8051 r
+  AbstractCore/mycore/Memory/clint/U155/ZN (LVT_INHDV4)
+                                                        0.0678    0.0596     1.8647 f
+  AbstractCore/mycore/Memory/clint/n1324 (net)
+                                                3                 0.0000     1.8647 f
+  AbstractCore/mycore/Memory/clint/U67/I (LVT_INHDV2)   0.0678    0.0000     1.8647 f
+  AbstractCore/mycore/Memory/clint/U67/ZN (LVT_INHDV2)
+                                                        0.1888    0.1229     1.9875 r
+  AbstractCore/mycore/Memory/clint/n1380 (net)
+                                               10                 0.0000     1.9875 r
+  AbstractCore/mycore/Memory/clint/U7/B1 (LVT_AOI22HDV2)
+                                                        0.1888    0.0000     1.9875 r
+  AbstractCore/mycore/Memory/clint/U7/ZN (LVT_AOI22HDV2)
+                                                        0.1282    0.0913     2.0788 f
+  AbstractCore/mycore/Memory/clint/n385 (net)
+                                                1                 0.0000     2.0788 f
+  AbstractCore/mycore/Memory/clint/U158/B (LVT_IOA21HDV4)
+                                                        0.1282    0.0000     2.0788 f
+  AbstractCore/mycore/Memory/clint/U158/ZN (LVT_IOA21HDV4)
+                                                        0.0690    0.0603     2.1391 r
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_data[63] (net)
+                                                2                 0.0000     2.1391 r
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_data[63] (ysyx_210292_CoreLocalInterruptor_0)
+                                                                  0.0000     2.1391 r
+  AbstractCore/mycore/Memory/clint_io_ClintLoad_data[63] (net)    0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_data[63] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_data[63] (net)       0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/U14/A1 (LVT_NAND2HDV2)
+                                                        0.0690    0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/U14/ZN (LVT_NAND2HDV2)
+                                                        0.0929    0.0626     2.2017 f
+  AbstractCore/mycore/Memory/lsu/n229 (net)     1                 0.0000     2.2017 f
+  AbstractCore/mycore/Memory/lsu/U143/A2 (LVT_NAND2HDV4)
+                                                        0.0929    0.0000     2.2017 f
+  AbstractCore/mycore/Memory/lsu/U143/ZN (LVT_NAND2HDV4)
+                                                        0.0873    0.0727     2.2744 r
+  AbstractCore/mycore/Memory/lsu/n909 (net)     3                 0.0000     2.2744 r
+  AbstractCore/mycore/Memory/lsu/U144/A1 (LVT_NAND2HDV4)
+                                                        0.0873    0.0000     2.2744 r
+  AbstractCore/mycore/Memory/lsu/U144/ZN (LVT_NAND2HDV4)
+                                                        0.0683    0.0511     2.3255 f
+  AbstractCore/mycore/Memory/lsu/n231 (net)     1                 0.0000     2.3255 f
+  AbstractCore/mycore/Memory/lsu/U145/A2 (LVT_NAND2HDV4)
+                                                        0.0683    0.0000     2.3255 f
+  AbstractCore/mycore/Memory/lsu/U145/ZN (LVT_NAND2HDV4)
+                                                        0.1006    0.0671     2.3926 r
+  AbstractCore/mycore/Memory/lsu/n942 (net)     4                 0.0000     2.3926 r
+  AbstractCore/mycore/Memory/lsu/U153/A1 (LVT_NAND2HDV2)
+                                                        0.1006    0.0000     2.3926 r
+  AbstractCore/mycore/Memory/lsu/U153/ZN (LVT_NAND2HDV2)
+                                                        0.0793    0.0684     2.4610 f
+  AbstractCore/mycore/Memory/lsu/n242 (net)     1                 0.0000     2.4610 f
+  AbstractCore/mycore/Memory/lsu/U154/A2 (LVT_NAND2HDV4)
+                                                        0.0793    0.0000     2.4610 f
+  AbstractCore/mycore/Memory/lsu/U154/ZN (LVT_NAND2HDV4)
+                                                        0.0790    0.0666     2.5276 r
+  AbstractCore/mycore/Memory/lsu/n910 (net)     2                 0.0000     2.5276 r
+  AbstractCore/mycore/Memory/lsu/U155/I (LVT_INHDV4)    0.0790    0.0000     2.5276 r
+  AbstractCore/mycore/Memory/lsu/U155/ZN (LVT_INHDV4)   0.0963    0.0807     2.6083 f
+  AbstractCore/mycore/Memory/lsu/n961 (net)    16                 0.0000     2.6083 f
+  AbstractCore/mycore/Memory/lsu/U930/A1 (LVT_NAND2HDV1)
+                                                        0.0963    0.0000     2.6083 f
+  AbstractCore/mycore/Memory/lsu/U930/ZN (LVT_NAND2HDV1)
+                                                        0.0944    0.0615     2.6698 r
+  AbstractCore/mycore/Memory/lsu/io_load_data[22] (net)
+                                                2                 0.0000     2.6698 r
+  AbstractCore/mycore/Memory/lsu/io_load_data[22] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     2.6698 r
+  AbstractCore/mycore/Memory/io_memwb_loadData[22] (net)          0.0000     2.6698 r
+  AbstractCore/mycore/Memory/U635/I0 (LVT_MUX2HDV2)     0.0944    0.0000     2.6698 r
+  AbstractCore/mycore/Memory/U635/Z (LVT_MUX2HDV2)      0.0580    0.1490     2.8188 r
+  AbstractCore/mycore/Memory/io_redesMem_data[22] (net)
+                                                1                 0.0000     2.8188 r
+  AbstractCore/mycore/Memory/io_redesMem_data[22] (ysyx_210292_Memory_0)
+                                                                  0.0000     2.8188 r
+  AbstractCore/mycore/Memory_io_redesMem_data[22] (net)           0.0000     2.8188 r
+  AbstractCore/mycore/Execute/io_redesMem_data[22] (ysyx_210292_Execute_0)
+                                                                  0.0000     2.8188 r
+  AbstractCore/mycore/Execute/io_redesMem_data[22] (net)          0.0000     2.8188 r
+  AbstractCore/mycore/Execute/U992/I (LVT_INHDV1)       0.0580    0.0000     2.8188 r
+  AbstractCore/mycore/Execute/U992/ZN (LVT_INHDV1)      0.0532    0.0472     2.8660 f
+  AbstractCore/mycore/Execute/n1319 (net)       2                 0.0000     2.8660 f
+  AbstractCore/mycore/Execute/U182/A1 (LVT_OAI21HDV2)   0.0532    0.0000     2.8660 f
+  AbstractCore/mycore/Execute/U182/ZN (LVT_OAI21HDV2)   0.4107    0.2324     3.0984 r
+  AbstractCore/mycore/Execute/io_exmem_src1[22] (net)
+                                               10                 0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/io_src1[22] (ysyx_210292_BranchController_0)
+                                                                  0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/io_src1[22] (net)                0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/U14/A2 (LVT_XNOR2HDV1)
+                                                        0.4107    0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/U14/ZN (LVT_XNOR2HDV1)
+                                                        0.0788    0.2336     3.3320 r
+  AbstractCore/mycore/Execute/bc/n326 (net)     1                 0.0000     3.3320 r
+  AbstractCore/mycore/Execute/bc/U79/A2 (LVT_NAND3HDV2)
+                                                        0.0788    0.0000     3.3320 r
+  AbstractCore/mycore/Execute/bc/U79/ZN (LVT_NAND3HDV2)
+                                                        0.0860    0.0769     3.4089 f
+  AbstractCore/mycore/Execute/bc/n328 (net)     1                 0.0000     3.4089 f
+  AbstractCore/mycore/Execute/bc/U225/A2 (LVT_NOR2HDV2)
+                                                        0.0860    0.0000     3.4089 f
+  AbstractCore/mycore/Execute/bc/U225/ZN (LVT_NOR2HDV2)
+                                                        0.0964    0.0791     3.4881 r
+  AbstractCore/mycore/Execute/bc/n333 (net)     1                 0.0000     3.4881 r
+  AbstractCore/mycore/Execute/bc/U479/A2 (LVT_NAND3HDV2)
+                                                        0.0964    0.0000     3.4881 r
+  AbstractCore/mycore/Execute/bc/U479/ZN (LVT_NAND3HDV2)
+                                                        0.0858    0.0776     3.5656 f
+  AbstractCore/mycore/Execute/bc/n334 (net)     1                 0.0000     3.5656 f
+  AbstractCore/mycore/Execute/bc/U480/A4 (LVT_OR4HDV4)
+                                                        0.0858    0.0000     3.5656 f
+  AbstractCore/mycore/Execute/bc/U480/Z (LVT_OR4HDV4)   0.0876    0.2947     3.8603 f
+  AbstractCore/mycore/Execute/bc/n338 (net)     1                 0.0000     3.8603 f
+  AbstractCore/mycore/Execute/bc/U481/A3 (LVT_NOR3HDV4)
+                                                        0.0876    0.0000     3.8603 f
+  AbstractCore/mycore/Execute/bc/U481/ZN (LVT_NOR3HDV4)
+                                                        0.1666    0.1331     3.9934 r
+  AbstractCore/mycore/Execute/bc/n341 (net)     2                 0.0000     3.9934 r
+  AbstractCore/mycore/Execute/bc/U482/I (LVT_INHDV2)    0.1666    0.0000     3.9934 r
+  AbstractCore/mycore/Execute/bc/U482/ZN (LVT_INHDV2)   0.0527    0.0425     4.0359 f
+  AbstractCore/mycore/Execute/bc/n340 (net)     1                 0.0000     4.0359 f
+  AbstractCore/mycore/Execute/bc/U483/A2 (LVT_NAND2HDV2)
+                                                        0.0527    0.0000     4.0359 f
+  AbstractCore/mycore/Execute/bc/U483/ZN (LVT_NAND2HDV2)
+                                                        0.0572    0.0475     4.0834 r
+  AbstractCore/mycore/Execute/bc/n343 (net)     1                 0.0000     4.0834 r
+  AbstractCore/mycore/Execute/bc/U19/A1 (LVT_NAND2HDV2)
+                                                        0.0572    0.0000     4.0834 r
+  AbstractCore/mycore/Execute/bc/U19/ZN (LVT_NAND2HDV2)
+                                                        0.0754    0.0563     4.1397 f
+  AbstractCore/mycore/Execute/bc/n543 (net)     1                 0.0000     4.1397 f
+  AbstractCore/mycore/Execute/bc/U582/A1 (LVT_NOR2HDV4)
+                                                        0.0754    0.0000     4.1397 f
+  AbstractCore/mycore/Execute/bc/U582/ZN (LVT_NOR2HDV4)
+                                                        0.0891    0.0683     4.2079 r
+  AbstractCore/mycore/Execute/bc/n552 (net)     1                 0.0000     4.2079 r
+  AbstractCore/mycore/Execute/bc/U584/B (LVT_OAI211HDV4)
+                                                        0.0891    0.0000     4.2079 r
+  AbstractCore/mycore/Execute/bc/U584/ZN (LVT_OAI211HDV4)
+                                                        0.1099    0.0804     4.2883 f
+  AbstractCore/mycore/Execute/bc/io_branch (net)
+                                                1                 0.0000     4.2883 f
+  AbstractCore/mycore/Execute/bc/io_branch (ysyx_210292_BranchController_0)
+                                                                  0.0000     4.2883 f
+  AbstractCore/mycore/Execute/bc_io_branch (net)                  0.0000     4.2883 f
+  AbstractCore/mycore/Execute/U278/A1 (LVT_NAND2HDV4)   0.1099    0.0000     4.2883 f
+  AbstractCore/mycore/Execute/U278/ZN (LVT_NAND2HDV4)   0.1099    0.0561     4.3444 r
+  AbstractCore/mycore/Execute/n1196 (net)       2                 0.0000     4.3444 r
+  AbstractCore/mycore/Execute/U1247/A1 (LVT_NAND2HDV4)
+                                                        0.1099    0.0000     4.3444 r
+  AbstractCore/mycore/Execute/U1247/ZN (LVT_NAND2HDV4)
+                                                        0.0954    0.0779     4.4223 f
+  AbstractCore/mycore/Execute/io_cancel (net)
+                                                3                 0.0000     4.4223 f
+  AbstractCore/mycore/Execute/io_cancel (ysyx_210292_Execute_0)   0.0000     4.4223 f
+  AbstractCore/mycore/Execute_io_cancel (net)                     0.0000     4.4223 f
+  AbstractCore/mycore/U21/A1 (LVT_NAND2HDV8)            0.0954    0.0000     4.4223 f
+  AbstractCore/mycore/U21/ZN (LVT_NAND2HDV8)            0.0802    0.0601     4.4824 r
+  AbstractCore/mycore/n411 (net)                3                 0.0000     4.4824 r
+  AbstractCore/mycore/U20/A1 (LVT_NOR3HDV8)             0.0802    0.0000     4.4824 r
+  AbstractCore/mycore/U20/ZN (LVT_NOR3HDV8)             0.0956    0.0428     4.5252 f
+  AbstractCore/mycore/n387 (net)                2                 0.0000     4.5252 f
+  AbstractCore/mycore/U519/A2 (LVT_NOR2HDV8)            0.0956    0.0000     4.5252 f
+  AbstractCore/mycore/U519/ZN (LVT_NOR2HDV8)            0.1144    0.0916     4.6168 r
+  AbstractCore/mycore/n419 (net)                7                 0.0000     4.6168 r
+  AbstractCore/mycore/U4/A1 (LVT_AND2HDV2)              0.1144    0.0000     4.6168 r
+  AbstractCore/mycore/U4/Z (LVT_AND2HDV2)               0.1495    0.1739     4.7907 r
+  AbstractCore/mycore/InstDecode_io_wbdata_regdes[4] (net)
+                                                6                 0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/io_wbdata_regdes[4] (ysyx_210292_InstDecode_0)
+                                                                  0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/io_wbdata_regdes[4] (net)        0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/U420/A1 (LVT_XOR2HDV2)
+                                                        0.1495    0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/U420/Z (LVT_XOR2HDV2)
+                                                        0.0822    0.1660     4.9567 f
+  AbstractCore/mycore/InstDecode/n124 (net)     1                 0.0000     4.9567 f
+  AbstractCore/mycore/InstDecode/U598/A1 (LVT_NOR2HDV4)
+                                                        0.0822    0.0000     4.9567 f
+  AbstractCore/mycore/InstDecode/U598/ZN (LVT_NOR2HDV4)
+                                                        0.0958    0.0727     5.0294 r
+  AbstractCore/mycore/InstDecode/n229 (net)     1                 0.0000     5.0294 r
+  AbstractCore/mycore/InstDecode/U599/A2 (LVT_NAND2HDV4)
+                                                        0.0958    0.0000     5.0294 r
+  AbstractCore/mycore/InstDecode/U599/ZN (LVT_NAND2HDV4)
+                                                        0.1301    0.0971     5.1265 f
+  AbstractCore/mycore/InstDecode/n261 (net)     5                 0.0000     5.1265 f
+  AbstractCore/mycore/InstDecode/U607/A1 (LVT_NAND2HDV4)
+                                                        0.1301    0.0000     5.1265 f
+  AbstractCore/mycore/InstDecode/U607/ZN (LVT_NAND2HDV4)
+                                                        0.1049    0.0828     5.2093 r
+  AbstractCore/mycore/InstDecode/n259 (net)     7                 0.0000     5.2093 r
+  AbstractCore/mycore/InstDecode/U650/A1 (LVT_NOR2HDV1)
+                                                        0.1049    0.0000     5.2093 r
+  AbstractCore/mycore/InstDecode/U650/ZN (LVT_NOR2HDV1)
+                                                        0.0712    0.0504     5.2597 f
+  AbstractCore/mycore/InstDecode/n387 (net)     2                 0.0000     5.2597 f
+  AbstractCore/mycore/InstDecode/U651/I (LVT_BUFHDV3)   0.0712    0.0000     5.2597 f
+  AbstractCore/mycore/InstDecode/U651/Z (LVT_BUFHDV3)   0.0714    0.1254     5.3851 f
+  AbstractCore/mycore/InstDecode/n2837 (net)
+                                                7                 0.0000     5.3851 f
+  AbstractCore/mycore/InstDecode/U123/I (LVT_BUFHDV3)   0.0714    0.0000     5.3851 f
+  AbstractCore/mycore/InstDecode/U123/Z (LVT_BUFHDV3)   0.1911    0.2045     5.5896 f
+  AbstractCore/mycore/InstDecode/n42 (net)     24                 0.0000     5.5896 f
+  AbstractCore/mycore/InstDecode/U4973/B2 (LVT_AOI22HDV1)
+                                                        0.1911    0.0000     5.5896 f
+  AbstractCore/mycore/InstDecode/U4973/ZN (LVT_AOI22HDV1)
+                                                        0.1534    0.1283     5.7180 r
+  AbstractCore/mycore/InstDecode/n2709 (net)
+                                                1                 0.0000     5.7180 r
+  AbstractCore/mycore/InstDecode/U4978/A1 (LVT_AND4HDV1)
+                                                        0.1534    0.0000     5.7180 r
+  AbstractCore/mycore/InstDecode/U4978/Z (LVT_AND4HDV1)
+                                                        0.0934    0.2133     5.9313 r
+  AbstractCore/mycore/InstDecode/n2710 (net)
+                                                1                 0.0000     5.9313 r
+  AbstractCore/mycore/InstDecode/U4979/A4 (LVT_NAND4HDV2)
+                                                        0.0934    0.0000     5.9313 r
+  AbstractCore/mycore/InstDecode/U4979/ZN (LVT_NAND4HDV2)
+                                                        0.1073    0.1018     6.0331 f
+  AbstractCore/mycore/InstDecode/io_idex_src2[59] (net)
+                                                1                 0.0000     6.0331 f
+  AbstractCore/mycore/InstDecode/io_idex_src2[59] (ysyx_210292_InstDecode_0)
+                                                                  0.0000     6.0331 f
+  AbstractCore/mycore/InstDecode_io_idex_src2[59] (net)           0.0000     6.0331 f
+  AbstractCore/mycore/Execute/io_idex_src2[59] (ysyx_210292_Execute_0)
+                                                                  0.0000     6.0331 f
+  AbstractCore/mycore/Execute/io_idex_src2[59] (net)              0.0000     6.0331 f
+  AbstractCore/mycore/Execute/U52/B1 (LVT_AO22HDV2)     0.1073    0.0000     6.0331 f
+  AbstractCore/mycore/Execute/U52/Z (LVT_AO22HDV2)      0.0650    0.1784     6.2115 f
+  AbstractCore/mycore/Execute/n19 (net)         1                 0.0000     6.2115 f
+  AbstractCore/mycore/Execute/exs_src2_reg_59_/D (LVT_DQHDV2)
+                                                        0.0650    0.0000     6.2115 f
+  data arrival time                                                          6.2115
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  AbstractCore/mycore/Execute/exs_src2_reg_59_/CK (LVT_DQHDV2)    0.0000     6.3500 r
+  library setup time                                             -0.1381     6.2119
+  data required time                                                         6.2119
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2119
+  data arrival time                                                         -6.2115
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0005
+  Startpoint: AbstractCore/mycore/Memory/mems_src1_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: AbstractCore/mycore/Execute/exs_src1_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  AbstractCore/mycore/Memory/mems_src1_reg_1_/CK (LVT_DQHDV2)
+                                                        0.0000    0.0000 #   0.0000 r
+  AbstractCore/mycore/Memory/mems_src1_reg_1_/Q (LVT_DQHDV2)
+                                                        0.1235    0.2729     0.2729 f
+  AbstractCore/mycore/Memory/lsu_io_src1[1] (net)
+                                                5                 0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/io_src1[1] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/io_src1[1] (net)                 0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/U52/A1 (LVT_NOR2HDV2)
+                                                        0.1235    0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/U52/ZN (LVT_NOR2HDV2)
+                                                        0.1808    0.1289     0.4018 r
+  AbstractCore/mycore/Memory/lsu/n223 (net)     2                 0.0000     0.4018 r
+  AbstractCore/mycore/Memory/lsu/U131/A2 (LVT_OAI21HDV4)
+                                                        0.1808    0.0000     0.4018 r
+  AbstractCore/mycore/Memory/lsu/U131/ZN (LVT_OAI21HDV4)
+                                                        0.0744    0.0782     0.4801 f
+  AbstractCore/mycore/Memory/lsu/n246 (net)     2                 0.0000     0.4801 f
+  AbstractCore/mycore/Memory/lsu/U164/A2 (LVT_AOI21HDV2)
+                                                        0.0744    0.0000     0.4801 f
+  AbstractCore/mycore/Memory/lsu/U164/ZN (LVT_AOI21HDV2)
+                                                        0.1542    0.1222     0.6022 r
+  AbstractCore/mycore/Memory/lsu/n774 (net)     2                 0.0000     0.6022 r
+  AbstractCore/mycore/Memory/lsu/U685/I (LVT_INHDV1)    0.1542    0.0000     0.6022 r
+  AbstractCore/mycore/Memory/lsu/U685/ZN (LVT_INHDV1)   0.1000    0.0869     0.6892 f
+  AbstractCore/mycore/Memory/lsu/n801 (net)     4                 0.0000     0.6892 f
+  AbstractCore/mycore/Memory/lsu/U213/A1 (LVT_AOI21HDV1)
+                                                        0.1000    0.0000     0.6892 f
+  AbstractCore/mycore/Memory/lsu/U213/ZN (LVT_AOI21HDV1)
+                                                        0.1666    0.1225     0.8116 r
+  AbstractCore/mycore/Memory/lsu/n783 (net)     1                 0.0000     0.8116 r
+  AbstractCore/mycore/Memory/lsu/U692/A1 (LVT_XOR2HDV2)
+                                                        0.1666    0.0000     0.8116 r
+  AbstractCore/mycore/Memory/lsu/U692/Z (LVT_XOR2HDV2)
+                                                        0.0953    0.1829     0.9945 f
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_addr[7] (net)
+                                                4                 0.0000     0.9945 f
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_addr[7] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     0.9945 f
+  AbstractCore/mycore/Memory/lsu_io_DataLoad_addr[7] (net)        0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_addr[7] (ysyx_210292_CoreLocalInterruptor_0)
+                                                                  0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_addr[7] (net)     0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/U140/A1 (LVT_NOR3HDV2)
+                                                        0.0953    0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/U140/ZN (LVT_NOR3HDV2)
+                                                        0.1578    0.0972     1.0917 r
+  AbstractCore/mycore/Memory/clint/n369 (net)
+                                                1                 0.0000     1.0917 r
+  AbstractCore/mycore/Memory/clint/U143/A1 (LVT_NAND4HDV1)
+                                                        0.1578    0.0000     1.0917 r
+  AbstractCore/mycore/Memory/clint/U143/ZN (LVT_NAND4HDV1)
+                                                        0.1437    0.1109     1.2025 f
+  AbstractCore/mycore/Memory/clint/n370 (net)
+                                                1                 0.0000     1.2025 f
+  AbstractCore/mycore/Memory/clint/U144/A1 (LVT_OR3HDV4)
+                                                        0.1437    0.0000     1.2025 f
+  AbstractCore/mycore/Memory/clint/U144/Z (LVT_OR3HDV4)
+                                                        0.0584    0.1835     1.3860 f
+  AbstractCore/mycore/Memory/clint/n371 (net)
+                                                1                 0.0000     1.3860 f
+  AbstractCore/mycore/Memory/clint/U19/A2 (LVT_OAI21HDV2)
+                                                        0.0584    0.0000     1.3860 f
+  AbstractCore/mycore/Memory/clint/U19/ZN (LVT_OAI21HDV2)
+                                                        0.1321    0.1008     1.4869 r
+  AbstractCore/mycore/Memory/clint/n373 (net)
+                                                1                 0.0000     1.4869 r
+  AbstractCore/mycore/Memory/clint/U145/C (LVT_OAI211HDV2)
+                                                        0.1321    0.0000     1.4869 r
+  AbstractCore/mycore/Memory/clint/U145/ZN (LVT_OAI211HDV2)
+                                                        0.1422    0.1185     1.6054 f
+  AbstractCore/mycore/Memory/clint/n377 (net)
+                                                1                 0.0000     1.6054 f
+  AbstractCore/mycore/Memory/clint/U146/A2 (LVT_NOR2HDV4)
+                                                        0.1422    0.0000     1.6054 f
+  AbstractCore/mycore/Memory/clint/U146/ZN (LVT_NOR2HDV4)
+                                                        0.1231    0.0975     1.7029 r
+  AbstractCore/mycore/Memory/clint/n380 (net)
+                                                2                 0.0000     1.7029 r
+  AbstractCore/mycore/Memory/clint/U149/I (LVT_INHDV4)
+                                                        0.1231    0.0000     1.7029 r
+  AbstractCore/mycore/Memory/clint/U149/ZN (LVT_INHDV4)
+                                                        0.0461    0.0401     1.7430 f
+  AbstractCore/mycore/Memory/clint/n1320 (net)
+                                                2                 0.0000     1.7430 f
+  AbstractCore/mycore/Memory/clint/U150/A1 (LVT_NOR2HDV4)
+                                                        0.0461    0.0000     1.7430 f
+  AbstractCore/mycore/Memory/clint/U150/ZN (LVT_NOR2HDV4)
+                                                        0.1033    0.0621     1.8051 r
+  AbstractCore/mycore/Memory/clint/n1331 (net)
+                                                1                 0.0000     1.8051 r
+  AbstractCore/mycore/Memory/clint/U155/I (LVT_INHDV4)
+                                                        0.1033    0.0000     1.8051 r
+  AbstractCore/mycore/Memory/clint/U155/ZN (LVT_INHDV4)
+                                                        0.0678    0.0596     1.8647 f
+  AbstractCore/mycore/Memory/clint/n1324 (net)
+                                                3                 0.0000     1.8647 f
+  AbstractCore/mycore/Memory/clint/U67/I (LVT_INHDV2)   0.0678    0.0000     1.8647 f
+  AbstractCore/mycore/Memory/clint/U67/ZN (LVT_INHDV2)
+                                                        0.1888    0.1229     1.9875 r
+  AbstractCore/mycore/Memory/clint/n1380 (net)
+                                               10                 0.0000     1.9875 r
+  AbstractCore/mycore/Memory/clint/U7/B1 (LVT_AOI22HDV2)
+                                                        0.1888    0.0000     1.9875 r
+  AbstractCore/mycore/Memory/clint/U7/ZN (LVT_AOI22HDV2)
+                                                        0.1282    0.0913     2.0788 f
+  AbstractCore/mycore/Memory/clint/n385 (net)
+                                                1                 0.0000     2.0788 f
+  AbstractCore/mycore/Memory/clint/U158/B (LVT_IOA21HDV4)
+                                                        0.1282    0.0000     2.0788 f
+  AbstractCore/mycore/Memory/clint/U158/ZN (LVT_IOA21HDV4)
+                                                        0.0690    0.0603     2.1391 r
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_data[63] (net)
+                                                2                 0.0000     2.1391 r
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_data[63] (ysyx_210292_CoreLocalInterruptor_0)
+                                                                  0.0000     2.1391 r
+  AbstractCore/mycore/Memory/clint_io_ClintLoad_data[63] (net)    0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_data[63] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_data[63] (net)       0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/U14/A1 (LVT_NAND2HDV2)
+                                                        0.0690    0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/U14/ZN (LVT_NAND2HDV2)
+                                                        0.0929    0.0626     2.2017 f
+  AbstractCore/mycore/Memory/lsu/n229 (net)     1                 0.0000     2.2017 f
+  AbstractCore/mycore/Memory/lsu/U143/A2 (LVT_NAND2HDV4)
+                                                        0.0929    0.0000     2.2017 f
+  AbstractCore/mycore/Memory/lsu/U143/ZN (LVT_NAND2HDV4)
+                                                        0.0873    0.0727     2.2744 r
+  AbstractCore/mycore/Memory/lsu/n909 (net)     3                 0.0000     2.2744 r
+  AbstractCore/mycore/Memory/lsu/U144/A1 (LVT_NAND2HDV4)
+                                                        0.0873    0.0000     2.2744 r
+  AbstractCore/mycore/Memory/lsu/U144/ZN (LVT_NAND2HDV4)
+                                                        0.0683    0.0511     2.3255 f
+  AbstractCore/mycore/Memory/lsu/n231 (net)     1                 0.0000     2.3255 f
+  AbstractCore/mycore/Memory/lsu/U145/A2 (LVT_NAND2HDV4)
+                                                        0.0683    0.0000     2.3255 f
+  AbstractCore/mycore/Memory/lsu/U145/ZN (LVT_NAND2HDV4)
+                                                        0.1006    0.0671     2.3926 r
+  AbstractCore/mycore/Memory/lsu/n942 (net)     4                 0.0000     2.3926 r
+  AbstractCore/mycore/Memory/lsu/U153/A1 (LVT_NAND2HDV2)
+                                                        0.1006    0.0000     2.3926 r
+  AbstractCore/mycore/Memory/lsu/U153/ZN (LVT_NAND2HDV2)
+                                                        0.0793    0.0684     2.4610 f
+  AbstractCore/mycore/Memory/lsu/n242 (net)     1                 0.0000     2.4610 f
+  AbstractCore/mycore/Memory/lsu/U154/A2 (LVT_NAND2HDV4)
+                                                        0.0793    0.0000     2.4610 f
+  AbstractCore/mycore/Memory/lsu/U154/ZN (LVT_NAND2HDV4)
+                                                        0.0790    0.0666     2.5276 r
+  AbstractCore/mycore/Memory/lsu/n910 (net)     2                 0.0000     2.5276 r
+  AbstractCore/mycore/Memory/lsu/U155/I (LVT_INHDV4)    0.0790    0.0000     2.5276 r
+  AbstractCore/mycore/Memory/lsu/U155/ZN (LVT_INHDV4)   0.0963    0.0807     2.6083 f
+  AbstractCore/mycore/Memory/lsu/n961 (net)    16                 0.0000     2.6083 f
+  AbstractCore/mycore/Memory/lsu/U930/A1 (LVT_NAND2HDV1)
+                                                        0.0963    0.0000     2.6083 f
+  AbstractCore/mycore/Memory/lsu/U930/ZN (LVT_NAND2HDV1)
+                                                        0.0944    0.0615     2.6698 r
+  AbstractCore/mycore/Memory/lsu/io_load_data[22] (net)
+                                                2                 0.0000     2.6698 r
+  AbstractCore/mycore/Memory/lsu/io_load_data[22] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     2.6698 r
+  AbstractCore/mycore/Memory/io_memwb_loadData[22] (net)          0.0000     2.6698 r
+  AbstractCore/mycore/Memory/U635/I0 (LVT_MUX2HDV2)     0.0944    0.0000     2.6698 r
+  AbstractCore/mycore/Memory/U635/Z (LVT_MUX2HDV2)      0.0580    0.1490     2.8188 r
+  AbstractCore/mycore/Memory/io_redesMem_data[22] (net)
+                                                1                 0.0000     2.8188 r
+  AbstractCore/mycore/Memory/io_redesMem_data[22] (ysyx_210292_Memory_0)
+                                                                  0.0000     2.8188 r
+  AbstractCore/mycore/Memory_io_redesMem_data[22] (net)           0.0000     2.8188 r
+  AbstractCore/mycore/Execute/io_redesMem_data[22] (ysyx_210292_Execute_0)
+                                                                  0.0000     2.8188 r
+  AbstractCore/mycore/Execute/io_redesMem_data[22] (net)          0.0000     2.8188 r
+  AbstractCore/mycore/Execute/U992/I (LVT_INHDV1)       0.0580    0.0000     2.8188 r
+  AbstractCore/mycore/Execute/U992/ZN (LVT_INHDV1)      0.0532    0.0472     2.8660 f
+  AbstractCore/mycore/Execute/n1319 (net)       2                 0.0000     2.8660 f
+  AbstractCore/mycore/Execute/U182/A1 (LVT_OAI21HDV2)   0.0532    0.0000     2.8660 f
+  AbstractCore/mycore/Execute/U182/ZN (LVT_OAI21HDV2)   0.4107    0.2324     3.0984 r
+  AbstractCore/mycore/Execute/io_exmem_src1[22] (net)
+                                               10                 0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/io_src1[22] (ysyx_210292_BranchController_0)
+                                                                  0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/io_src1[22] (net)                0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/U14/A2 (LVT_XNOR2HDV1)
+                                                        0.4107    0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/U14/ZN (LVT_XNOR2HDV1)
+                                                        0.0788    0.2336     3.3320 r
+  AbstractCore/mycore/Execute/bc/n326 (net)     1                 0.0000     3.3320 r
+  AbstractCore/mycore/Execute/bc/U79/A2 (LVT_NAND3HDV2)
+                                                        0.0788    0.0000     3.3320 r
+  AbstractCore/mycore/Execute/bc/U79/ZN (LVT_NAND3HDV2)
+                                                        0.0860    0.0769     3.4089 f
+  AbstractCore/mycore/Execute/bc/n328 (net)     1                 0.0000     3.4089 f
+  AbstractCore/mycore/Execute/bc/U225/A2 (LVT_NOR2HDV2)
+                                                        0.0860    0.0000     3.4089 f
+  AbstractCore/mycore/Execute/bc/U225/ZN (LVT_NOR2HDV2)
+                                                        0.0964    0.0791     3.4881 r
+  AbstractCore/mycore/Execute/bc/n333 (net)     1                 0.0000     3.4881 r
+  AbstractCore/mycore/Execute/bc/U479/A2 (LVT_NAND3HDV2)
+                                                        0.0964    0.0000     3.4881 r
+  AbstractCore/mycore/Execute/bc/U479/ZN (LVT_NAND3HDV2)
+                                                        0.0858    0.0776     3.5656 f
+  AbstractCore/mycore/Execute/bc/n334 (net)     1                 0.0000     3.5656 f
+  AbstractCore/mycore/Execute/bc/U480/A4 (LVT_OR4HDV4)
+                                                        0.0858    0.0000     3.5656 f
+  AbstractCore/mycore/Execute/bc/U480/Z (LVT_OR4HDV4)   0.0876    0.2947     3.8603 f
+  AbstractCore/mycore/Execute/bc/n338 (net)     1                 0.0000     3.8603 f
+  AbstractCore/mycore/Execute/bc/U481/A3 (LVT_NOR3HDV4)
+                                                        0.0876    0.0000     3.8603 f
+  AbstractCore/mycore/Execute/bc/U481/ZN (LVT_NOR3HDV4)
+                                                        0.1666    0.1331     3.9934 r
+  AbstractCore/mycore/Execute/bc/n341 (net)     2                 0.0000     3.9934 r
+  AbstractCore/mycore/Execute/bc/U482/I (LVT_INHDV2)    0.1666    0.0000     3.9934 r
+  AbstractCore/mycore/Execute/bc/U482/ZN (LVT_INHDV2)   0.0527    0.0425     4.0359 f
+  AbstractCore/mycore/Execute/bc/n340 (net)     1                 0.0000     4.0359 f
+  AbstractCore/mycore/Execute/bc/U483/A2 (LVT_NAND2HDV2)
+                                                        0.0527    0.0000     4.0359 f
+  AbstractCore/mycore/Execute/bc/U483/ZN (LVT_NAND2HDV2)
+                                                        0.0572    0.0475     4.0834 r
+  AbstractCore/mycore/Execute/bc/n343 (net)     1                 0.0000     4.0834 r
+  AbstractCore/mycore/Execute/bc/U19/A1 (LVT_NAND2HDV2)
+                                                        0.0572    0.0000     4.0834 r
+  AbstractCore/mycore/Execute/bc/U19/ZN (LVT_NAND2HDV2)
+                                                        0.0754    0.0563     4.1397 f
+  AbstractCore/mycore/Execute/bc/n543 (net)     1                 0.0000     4.1397 f
+  AbstractCore/mycore/Execute/bc/U582/A1 (LVT_NOR2HDV4)
+                                                        0.0754    0.0000     4.1397 f
+  AbstractCore/mycore/Execute/bc/U582/ZN (LVT_NOR2HDV4)
+                                                        0.0891    0.0683     4.2079 r
+  AbstractCore/mycore/Execute/bc/n552 (net)     1                 0.0000     4.2079 r
+  AbstractCore/mycore/Execute/bc/U584/B (LVT_OAI211HDV4)
+                                                        0.0891    0.0000     4.2079 r
+  AbstractCore/mycore/Execute/bc/U584/ZN (LVT_OAI211HDV4)
+                                                        0.1099    0.0804     4.2883 f
+  AbstractCore/mycore/Execute/bc/io_branch (net)
+                                                1                 0.0000     4.2883 f
+  AbstractCore/mycore/Execute/bc/io_branch (ysyx_210292_BranchController_0)
+                                                                  0.0000     4.2883 f
+  AbstractCore/mycore/Execute/bc_io_branch (net)                  0.0000     4.2883 f
+  AbstractCore/mycore/Execute/U278/A1 (LVT_NAND2HDV4)   0.1099    0.0000     4.2883 f
+  AbstractCore/mycore/Execute/U278/ZN (LVT_NAND2HDV4)   0.1099    0.0561     4.3444 r
+  AbstractCore/mycore/Execute/n1196 (net)       2                 0.0000     4.3444 r
+  AbstractCore/mycore/Execute/U1247/A1 (LVT_NAND2HDV4)
+                                                        0.1099    0.0000     4.3444 r
+  AbstractCore/mycore/Execute/U1247/ZN (LVT_NAND2HDV4)
+                                                        0.0954    0.0779     4.4223 f
+  AbstractCore/mycore/Execute/io_cancel (net)
+                                                3                 0.0000     4.4223 f
+  AbstractCore/mycore/Execute/io_cancel (ysyx_210292_Execute_0)   0.0000     4.4223 f
+  AbstractCore/mycore/Execute_io_cancel (net)                     0.0000     4.4223 f
+  AbstractCore/mycore/U21/A1 (LVT_NAND2HDV8)            0.0954    0.0000     4.4223 f
+  AbstractCore/mycore/U21/ZN (LVT_NAND2HDV8)            0.0802    0.0601     4.4824 r
+  AbstractCore/mycore/n411 (net)                3                 0.0000     4.4824 r
+  AbstractCore/mycore/U20/A1 (LVT_NOR3HDV8)             0.0802    0.0000     4.4824 r
+  AbstractCore/mycore/U20/ZN (LVT_NOR3HDV8)             0.0956    0.0428     4.5252 f
+  AbstractCore/mycore/n387 (net)                2                 0.0000     4.5252 f
+  AbstractCore/mycore/U519/A2 (LVT_NOR2HDV8)            0.0956    0.0000     4.5252 f
+  AbstractCore/mycore/U519/ZN (LVT_NOR2HDV8)            0.1144    0.0916     4.6168 r
+  AbstractCore/mycore/n419 (net)                7                 0.0000     4.6168 r
+  AbstractCore/mycore/U44/A1 (LVT_AND2HDV2)             0.1144    0.0000     4.6168 r
+  AbstractCore/mycore/U44/Z (LVT_AND2HDV2)              0.1237    0.1580     4.7748 r
+  AbstractCore/mycore/InstDecode_io_wbdata_regdes[0] (net)
+                                                4                 0.0000     4.7748 r
+  AbstractCore/mycore/InstDecode/io_wbdata_regdes[0] (ysyx_210292_InstDecode_0)
+                                                                  0.0000     4.7748 r
+  AbstractCore/mycore/InstDecode/io_wbdata_regdes[0] (net)        0.0000     4.7748 r
+  AbstractCore/mycore/InstDecode/U464/A1 (LVT_XOR2HDV2)
+                                                        0.1237    0.0000     4.7748 r
+  AbstractCore/mycore/InstDecode/U464/Z (LVT_XOR2HDV2)
+                                                        0.0812    0.1591     4.9339 f
+  AbstractCore/mycore/InstDecode/n126 (net)     1                 0.0000     4.9339 f
+  AbstractCore/mycore/InstDecode/U465/A1 (LVT_NOR2HDV4)
+                                                        0.0812    0.0000     4.9339 f
+  AbstractCore/mycore/InstDecode/U465/ZN (LVT_NOR2HDV4)
+                                                        0.1250    0.0886     5.0226 r
+  AbstractCore/mycore/InstDecode/n134 (net)     1                 0.0000     5.0226 r
+  AbstractCore/mycore/InstDecode/U477/A1 (LVT_NAND4HDV8)
+                                                        0.1250    0.0000     5.0226 r
+  AbstractCore/mycore/InstDecode/U477/ZN (LVT_NAND4HDV8)
+                                                        0.1678    0.1185     5.1411 f
+  AbstractCore/mycore/InstDecode/n166 (net)     5                 0.0000     5.1411 f
+  AbstractCore/mycore/InstDecode/U501/A1 (LVT_NAND2HDV4)
+                                                        0.1678    0.0000     5.1411 f
+  AbstractCore/mycore/InstDecode/U501/ZN (LVT_NAND2HDV4)
+                                                        0.1185    0.0987     5.2398 r
+  AbstractCore/mycore/InstDecode/n155 (net)     8                 0.0000     5.2398 r
+  AbstractCore/mycore/InstDecode/U275/A1 (LVT_NOR2HDV1)
+                                                        0.1185    0.0000     5.2398 r
+  AbstractCore/mycore/InstDecode/U275/ZN (LVT_NOR2HDV1)
+                                                        0.0766    0.0564     5.2962 f
+  AbstractCore/mycore/InstDecode/n202 (net)     2                 0.0000     5.2962 f
+  AbstractCore/mycore/InstDecode/U503/I (LVT_BUFHDV2)   0.0766    0.0000     5.2962 f
+  AbstractCore/mycore/InstDecode/U503/Z (LVT_BUFHDV2)   0.2569    0.2479     5.5441 f
+  AbstractCore/mycore/InstDecode/n7102 (net)
+                                               24                 0.0000     5.5441 f
+  AbstractCore/mycore/InstDecode/U875/A2 (LVT_AOI22HDV1)
+                                                        0.2569    0.0000     5.5441 f
+  AbstractCore/mycore/InstDecode/U875/ZN (LVT_AOI22HDV1)
+                                                        0.1761    0.1673     5.7114 r
+  AbstractCore/mycore/InstDecode/n513 (net)     1                 0.0000     5.7114 r
+  AbstractCore/mycore/InstDecode/U879/A1 (LVT_NAND4HDV1)
+                                                        0.1761    0.0000     5.7114 r
+  AbstractCore/mycore/InstDecode/U879/ZN (LVT_NAND4HDV1)
+                                                        0.1474    0.1159     5.8273 f
+  AbstractCore/mycore/InstDecode/n525 (net)     1                 0.0000     5.8273 f
+  AbstractCore/mycore/InstDecode/U890/A2 (LVT_OR4HDV4)
+                                                        0.1474    0.0000     5.8273 f
+  AbstractCore/mycore/InstDecode/U890/Z (LVT_OR4HDV4)   0.0721    0.2534     6.0807 f
+  AbstractCore/mycore/InstDecode/io_idex_src1[63] (net)
+                                                1                 0.0000     6.0807 f
+  AbstractCore/mycore/InstDecode/io_idex_src1[63] (ysyx_210292_InstDecode_0)
+                                                                  0.0000     6.0807 f
+  AbstractCore/mycore/InstDecode_io_idex_src1[63] (net)           0.0000     6.0807 f
+  AbstractCore/mycore/Execute/io_idex_src1[63] (ysyx_210292_Execute_0)
+                                                                  0.0000     6.0807 f
+  AbstractCore/mycore/Execute/io_idex_src1[63] (net)              0.0000     6.0807 f
+  AbstractCore/mycore/Execute/U159/A1 (LVT_IOA22HDV2)   0.0721    0.0000     6.0807 f
+  AbstractCore/mycore/Execute/U159/ZN (LVT_IOA22HDV2)   0.1017    0.1358     6.2165 f
+  AbstractCore/mycore/Execute/n1957 (net)       1                 0.0000     6.2165 f
+  AbstractCore/mycore/Execute/exs_src1_reg_63_/D (LVT_DQHDV4)
+                                                        0.1017    0.0000     6.2165 f
+  data arrival time                                                          6.2165
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  AbstractCore/mycore/Execute/exs_src1_reg_63_/CK (LVT_DQHDV4)    0.0000     6.3500 r
+  library setup time                                             -0.1330     6.2170
+  data required time                                                         6.2170
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2170
+  data arrival time                                                         -6.2165
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0005
+  Startpoint: AbstractCore/mycore/Memory/mems_src1_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: AbstractCore/mycore/Execute/exs_src2_reg_31_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  AbstractCore/mycore/Memory/mems_src1_reg_1_/CK (LVT_DQHDV2)
+                                                        0.0000    0.0000 #   0.0000 r
+  AbstractCore/mycore/Memory/mems_src1_reg_1_/Q (LVT_DQHDV2)
+                                                        0.1235    0.2729     0.2729 f
+  AbstractCore/mycore/Memory/lsu_io_src1[1] (net)
+                                                5                 0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/io_src1[1] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/io_src1[1] (net)                 0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/U52/A1 (LVT_NOR2HDV2)
+                                                        0.1235    0.0000     0.2729 f
+  AbstractCore/mycore/Memory/lsu/U52/ZN (LVT_NOR2HDV2)
+                                                        0.1808    0.1289     0.4018 r
+  AbstractCore/mycore/Memory/lsu/n223 (net)     2                 0.0000     0.4018 r
+  AbstractCore/mycore/Memory/lsu/U131/A2 (LVT_OAI21HDV4)
+                                                        0.1808    0.0000     0.4018 r
+  AbstractCore/mycore/Memory/lsu/U131/ZN (LVT_OAI21HDV4)
+                                                        0.0744    0.0782     0.4801 f
+  AbstractCore/mycore/Memory/lsu/n246 (net)     2                 0.0000     0.4801 f
+  AbstractCore/mycore/Memory/lsu/U164/A2 (LVT_AOI21HDV2)
+                                                        0.0744    0.0000     0.4801 f
+  AbstractCore/mycore/Memory/lsu/U164/ZN (LVT_AOI21HDV2)
+                                                        0.1542    0.1222     0.6022 r
+  AbstractCore/mycore/Memory/lsu/n774 (net)     2                 0.0000     0.6022 r
+  AbstractCore/mycore/Memory/lsu/U685/I (LVT_INHDV1)    0.1542    0.0000     0.6022 r
+  AbstractCore/mycore/Memory/lsu/U685/ZN (LVT_INHDV1)   0.1000    0.0869     0.6892 f
+  AbstractCore/mycore/Memory/lsu/n801 (net)     4                 0.0000     0.6892 f
+  AbstractCore/mycore/Memory/lsu/U213/A1 (LVT_AOI21HDV1)
+                                                        0.1000    0.0000     0.6892 f
+  AbstractCore/mycore/Memory/lsu/U213/ZN (LVT_AOI21HDV1)
+                                                        0.1666    0.1225     0.8116 r
+  AbstractCore/mycore/Memory/lsu/n783 (net)     1                 0.0000     0.8116 r
+  AbstractCore/mycore/Memory/lsu/U692/A1 (LVT_XOR2HDV2)
+                                                        0.1666    0.0000     0.8116 r
+  AbstractCore/mycore/Memory/lsu/U692/Z (LVT_XOR2HDV2)
+                                                        0.0953    0.1829     0.9945 f
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_addr[7] (net)
+                                                4                 0.0000     0.9945 f
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_addr[7] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     0.9945 f
+  AbstractCore/mycore/Memory/lsu_io_DataLoad_addr[7] (net)        0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_addr[7] (ysyx_210292_CoreLocalInterruptor_0)
+                                                                  0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_addr[7] (net)     0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/U140/A1 (LVT_NOR3HDV2)
+                                                        0.0953    0.0000     0.9945 f
+  AbstractCore/mycore/Memory/clint/U140/ZN (LVT_NOR3HDV2)
+                                                        0.1578    0.0972     1.0917 r
+  AbstractCore/mycore/Memory/clint/n369 (net)
+                                                1                 0.0000     1.0917 r
+  AbstractCore/mycore/Memory/clint/U143/A1 (LVT_NAND4HDV1)
+                                                        0.1578    0.0000     1.0917 r
+  AbstractCore/mycore/Memory/clint/U143/ZN (LVT_NAND4HDV1)
+                                                        0.1437    0.1109     1.2025 f
+  AbstractCore/mycore/Memory/clint/n370 (net)
+                                                1                 0.0000     1.2025 f
+  AbstractCore/mycore/Memory/clint/U144/A1 (LVT_OR3HDV4)
+                                                        0.1437    0.0000     1.2025 f
+  AbstractCore/mycore/Memory/clint/U144/Z (LVT_OR3HDV4)
+                                                        0.0584    0.1835     1.3860 f
+  AbstractCore/mycore/Memory/clint/n371 (net)
+                                                1                 0.0000     1.3860 f
+  AbstractCore/mycore/Memory/clint/U19/A2 (LVT_OAI21HDV2)
+                                                        0.0584    0.0000     1.3860 f
+  AbstractCore/mycore/Memory/clint/U19/ZN (LVT_OAI21HDV2)
+                                                        0.1321    0.1008     1.4869 r
+  AbstractCore/mycore/Memory/clint/n373 (net)
+                                                1                 0.0000     1.4869 r
+  AbstractCore/mycore/Memory/clint/U145/C (LVT_OAI211HDV2)
+                                                        0.1321    0.0000     1.4869 r
+  AbstractCore/mycore/Memory/clint/U145/ZN (LVT_OAI211HDV2)
+                                                        0.1422    0.1185     1.6054 f
+  AbstractCore/mycore/Memory/clint/n377 (net)
+                                                1                 0.0000     1.6054 f
+  AbstractCore/mycore/Memory/clint/U146/A2 (LVT_NOR2HDV4)
+                                                        0.1422    0.0000     1.6054 f
+  AbstractCore/mycore/Memory/clint/U146/ZN (LVT_NOR2HDV4)
+                                                        0.1231    0.0975     1.7029 r
+  AbstractCore/mycore/Memory/clint/n380 (net)
+                                                2                 0.0000     1.7029 r
+  AbstractCore/mycore/Memory/clint/U149/I (LVT_INHDV4)
+                                                        0.1231    0.0000     1.7029 r
+  AbstractCore/mycore/Memory/clint/U149/ZN (LVT_INHDV4)
+                                                        0.0461    0.0401     1.7430 f
+  AbstractCore/mycore/Memory/clint/n1320 (net)
+                                                2                 0.0000     1.7430 f
+  AbstractCore/mycore/Memory/clint/U150/A1 (LVT_NOR2HDV4)
+                                                        0.0461    0.0000     1.7430 f
+  AbstractCore/mycore/Memory/clint/U150/ZN (LVT_NOR2HDV4)
+                                                        0.1033    0.0621     1.8051 r
+  AbstractCore/mycore/Memory/clint/n1331 (net)
+                                                1                 0.0000     1.8051 r
+  AbstractCore/mycore/Memory/clint/U155/I (LVT_INHDV4)
+                                                        0.1033    0.0000     1.8051 r
+  AbstractCore/mycore/Memory/clint/U155/ZN (LVT_INHDV4)
+                                                        0.0678    0.0596     1.8647 f
+  AbstractCore/mycore/Memory/clint/n1324 (net)
+                                                3                 0.0000     1.8647 f
+  AbstractCore/mycore/Memory/clint/U67/I (LVT_INHDV2)   0.0678    0.0000     1.8647 f
+  AbstractCore/mycore/Memory/clint/U67/ZN (LVT_INHDV2)
+                                                        0.1888    0.1229     1.9875 r
+  AbstractCore/mycore/Memory/clint/n1380 (net)
+                                               10                 0.0000     1.9875 r
+  AbstractCore/mycore/Memory/clint/U7/B1 (LVT_AOI22HDV2)
+                                                        0.1888    0.0000     1.9875 r
+  AbstractCore/mycore/Memory/clint/U7/ZN (LVT_AOI22HDV2)
+                                                        0.1282    0.0913     2.0788 f
+  AbstractCore/mycore/Memory/clint/n385 (net)
+                                                1                 0.0000     2.0788 f
+  AbstractCore/mycore/Memory/clint/U158/B (LVT_IOA21HDV4)
+                                                        0.1282    0.0000     2.0788 f
+  AbstractCore/mycore/Memory/clint/U158/ZN (LVT_IOA21HDV4)
+                                                        0.0690    0.0603     2.1391 r
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_data[63] (net)
+                                                2                 0.0000     2.1391 r
+  AbstractCore/mycore/Memory/clint/io_ClintLoad_data[63] (ysyx_210292_CoreLocalInterruptor_0)
+                                                                  0.0000     2.1391 r
+  AbstractCore/mycore/Memory/clint_io_ClintLoad_data[63] (net)    0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_data[63] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/io_DataLoad_data[63] (net)       0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/U14/A1 (LVT_NAND2HDV2)
+                                                        0.0690    0.0000     2.1391 r
+  AbstractCore/mycore/Memory/lsu/U14/ZN (LVT_NAND2HDV2)
+                                                        0.0929    0.0626     2.2017 f
+  AbstractCore/mycore/Memory/lsu/n229 (net)     1                 0.0000     2.2017 f
+  AbstractCore/mycore/Memory/lsu/U143/A2 (LVT_NAND2HDV4)
+                                                        0.0929    0.0000     2.2017 f
+  AbstractCore/mycore/Memory/lsu/U143/ZN (LVT_NAND2HDV4)
+                                                        0.0873    0.0727     2.2744 r
+  AbstractCore/mycore/Memory/lsu/n909 (net)     3                 0.0000     2.2744 r
+  AbstractCore/mycore/Memory/lsu/U144/A1 (LVT_NAND2HDV4)
+                                                        0.0873    0.0000     2.2744 r
+  AbstractCore/mycore/Memory/lsu/U144/ZN (LVT_NAND2HDV4)
+                                                        0.0683    0.0511     2.3255 f
+  AbstractCore/mycore/Memory/lsu/n231 (net)     1                 0.0000     2.3255 f
+  AbstractCore/mycore/Memory/lsu/U145/A2 (LVT_NAND2HDV4)
+                                                        0.0683    0.0000     2.3255 f
+  AbstractCore/mycore/Memory/lsu/U145/ZN (LVT_NAND2HDV4)
+                                                        0.1006    0.0671     2.3926 r
+  AbstractCore/mycore/Memory/lsu/n942 (net)     4                 0.0000     2.3926 r
+  AbstractCore/mycore/Memory/lsu/U153/A1 (LVT_NAND2HDV2)
+                                                        0.1006    0.0000     2.3926 r
+  AbstractCore/mycore/Memory/lsu/U153/ZN (LVT_NAND2HDV2)
+                                                        0.0793    0.0684     2.4610 f
+  AbstractCore/mycore/Memory/lsu/n242 (net)     1                 0.0000     2.4610 f
+  AbstractCore/mycore/Memory/lsu/U154/A2 (LVT_NAND2HDV4)
+                                                        0.0793    0.0000     2.4610 f
+  AbstractCore/mycore/Memory/lsu/U154/ZN (LVT_NAND2HDV4)
+                                                        0.0790    0.0666     2.5276 r
+  AbstractCore/mycore/Memory/lsu/n910 (net)     2                 0.0000     2.5276 r
+  AbstractCore/mycore/Memory/lsu/U155/I (LVT_INHDV4)    0.0790    0.0000     2.5276 r
+  AbstractCore/mycore/Memory/lsu/U155/ZN (LVT_INHDV4)   0.0963    0.0807     2.6083 f
+  AbstractCore/mycore/Memory/lsu/n961 (net)    16                 0.0000     2.6083 f
+  AbstractCore/mycore/Memory/lsu/U930/A1 (LVT_NAND2HDV1)
+                                                        0.0963    0.0000     2.6083 f
+  AbstractCore/mycore/Memory/lsu/U930/ZN (LVT_NAND2HDV1)
+                                                        0.0944    0.0615     2.6698 r
+  AbstractCore/mycore/Memory/lsu/io_load_data[22] (net)
+                                                2                 0.0000     2.6698 r
+  AbstractCore/mycore/Memory/lsu/io_load_data[22] (ysyx_210292_LoadStoreUnit_0)
+                                                                  0.0000     2.6698 r
+  AbstractCore/mycore/Memory/io_memwb_loadData[22] (net)          0.0000     2.6698 r
+  AbstractCore/mycore/Memory/U635/I0 (LVT_MUX2HDV2)     0.0944    0.0000     2.6698 r
+  AbstractCore/mycore/Memory/U635/Z (LVT_MUX2HDV2)      0.0580    0.1490     2.8188 r
+  AbstractCore/mycore/Memory/io_redesMem_data[22] (net)
+                                                1                 0.0000     2.8188 r
+  AbstractCore/mycore/Memory/io_redesMem_data[22] (ysyx_210292_Memory_0)
+                                                                  0.0000     2.8188 r
+  AbstractCore/mycore/Memory_io_redesMem_data[22] (net)           0.0000     2.8188 r
+  AbstractCore/mycore/Execute/io_redesMem_data[22] (ysyx_210292_Execute_0)
+                                                                  0.0000     2.8188 r
+  AbstractCore/mycore/Execute/io_redesMem_data[22] (net)          0.0000     2.8188 r
+  AbstractCore/mycore/Execute/U992/I (LVT_INHDV1)       0.0580    0.0000     2.8188 r
+  AbstractCore/mycore/Execute/U992/ZN (LVT_INHDV1)      0.0532    0.0472     2.8660 f
+  AbstractCore/mycore/Execute/n1319 (net)       2                 0.0000     2.8660 f
+  AbstractCore/mycore/Execute/U182/A1 (LVT_OAI21HDV2)   0.0532    0.0000     2.8660 f
+  AbstractCore/mycore/Execute/U182/ZN (LVT_OAI21HDV2)   0.4107    0.2324     3.0984 r
+  AbstractCore/mycore/Execute/io_exmem_src1[22] (net)
+                                               10                 0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/io_src1[22] (ysyx_210292_BranchController_0)
+                                                                  0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/io_src1[22] (net)                0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/U14/A2 (LVT_XNOR2HDV1)
+                                                        0.4107    0.0000     3.0984 r
+  AbstractCore/mycore/Execute/bc/U14/ZN (LVT_XNOR2HDV1)
+                                                        0.0788    0.2336     3.3320 r
+  AbstractCore/mycore/Execute/bc/n326 (net)     1                 0.0000     3.3320 r
+  AbstractCore/mycore/Execute/bc/U79/A2 (LVT_NAND3HDV2)
+                                                        0.0788    0.0000     3.3320 r
+  AbstractCore/mycore/Execute/bc/U79/ZN (LVT_NAND3HDV2)
+                                                        0.0860    0.0769     3.4089 f
+  AbstractCore/mycore/Execute/bc/n328 (net)     1                 0.0000     3.4089 f
+  AbstractCore/mycore/Execute/bc/U225/A2 (LVT_NOR2HDV2)
+                                                        0.0860    0.0000     3.4089 f
+  AbstractCore/mycore/Execute/bc/U225/ZN (LVT_NOR2HDV2)
+                                                        0.0964    0.0791     3.4881 r
+  AbstractCore/mycore/Execute/bc/n333 (net)     1                 0.0000     3.4881 r
+  AbstractCore/mycore/Execute/bc/U479/A2 (LVT_NAND3HDV2)
+                                                        0.0964    0.0000     3.4881 r
+  AbstractCore/mycore/Execute/bc/U479/ZN (LVT_NAND3HDV2)
+                                                        0.0858    0.0776     3.5656 f
+  AbstractCore/mycore/Execute/bc/n334 (net)     1                 0.0000     3.5656 f
+  AbstractCore/mycore/Execute/bc/U480/A4 (LVT_OR4HDV4)
+                                                        0.0858    0.0000     3.5656 f
+  AbstractCore/mycore/Execute/bc/U480/Z (LVT_OR4HDV4)   0.0876    0.2947     3.8603 f
+  AbstractCore/mycore/Execute/bc/n338 (net)     1                 0.0000     3.8603 f
+  AbstractCore/mycore/Execute/bc/U481/A3 (LVT_NOR3HDV4)
+                                                        0.0876    0.0000     3.8603 f
+  AbstractCore/mycore/Execute/bc/U481/ZN (LVT_NOR3HDV4)
+                                                        0.1666    0.1331     3.9934 r
+  AbstractCore/mycore/Execute/bc/n341 (net)     2                 0.0000     3.9934 r
+  AbstractCore/mycore/Execute/bc/U482/I (LVT_INHDV2)    0.1666    0.0000     3.9934 r
+  AbstractCore/mycore/Execute/bc/U482/ZN (LVT_INHDV2)   0.0527    0.0425     4.0359 f
+  AbstractCore/mycore/Execute/bc/n340 (net)     1                 0.0000     4.0359 f
+  AbstractCore/mycore/Execute/bc/U483/A2 (LVT_NAND2HDV2)
+                                                        0.0527    0.0000     4.0359 f
+  AbstractCore/mycore/Execute/bc/U483/ZN (LVT_NAND2HDV2)
+                                                        0.0572    0.0475     4.0834 r
+  AbstractCore/mycore/Execute/bc/n343 (net)     1                 0.0000     4.0834 r
+  AbstractCore/mycore/Execute/bc/U19/A1 (LVT_NAND2HDV2)
+                                                        0.0572    0.0000     4.0834 r
+  AbstractCore/mycore/Execute/bc/U19/ZN (LVT_NAND2HDV2)
+                                                        0.0754    0.0563     4.1397 f
+  AbstractCore/mycore/Execute/bc/n543 (net)     1                 0.0000     4.1397 f
+  AbstractCore/mycore/Execute/bc/U582/A1 (LVT_NOR2HDV4)
+                                                        0.0754    0.0000     4.1397 f
+  AbstractCore/mycore/Execute/bc/U582/ZN (LVT_NOR2HDV4)
+                                                        0.0891    0.0683     4.2079 r
+  AbstractCore/mycore/Execute/bc/n552 (net)     1                 0.0000     4.2079 r
+  AbstractCore/mycore/Execute/bc/U584/B (LVT_OAI211HDV4)
+                                                        0.0891    0.0000     4.2079 r
+  AbstractCore/mycore/Execute/bc/U584/ZN (LVT_OAI211HDV4)
+                                                        0.1099    0.0804     4.2883 f
+  AbstractCore/mycore/Execute/bc/io_branch (net)
+                                                1                 0.0000     4.2883 f
+  AbstractCore/mycore/Execute/bc/io_branch (ysyx_210292_BranchController_0)
+                                                                  0.0000     4.2883 f
+  AbstractCore/mycore/Execute/bc_io_branch (net)                  0.0000     4.2883 f
+  AbstractCore/mycore/Execute/U278/A1 (LVT_NAND2HDV4)   0.1099    0.0000     4.2883 f
+  AbstractCore/mycore/Execute/U278/ZN (LVT_NAND2HDV4)   0.1099    0.0561     4.3444 r
+  AbstractCore/mycore/Execute/n1196 (net)       2                 0.0000     4.3444 r
+  AbstractCore/mycore/Execute/U1247/A1 (LVT_NAND2HDV4)
+                                                        0.1099    0.0000     4.3444 r
+  AbstractCore/mycore/Execute/U1247/ZN (LVT_NAND2HDV4)
+                                                        0.0954    0.0779     4.4223 f
+  AbstractCore/mycore/Execute/io_cancel (net)
+                                                3                 0.0000     4.4223 f
+  AbstractCore/mycore/Execute/io_cancel (ysyx_210292_Execute_0)   0.0000     4.4223 f
+  AbstractCore/mycore/Execute_io_cancel (net)                     0.0000     4.4223 f
+  AbstractCore/mycore/U21/A1 (LVT_NAND2HDV8)            0.0954    0.0000     4.4223 f
+  AbstractCore/mycore/U21/ZN (LVT_NAND2HDV8)            0.0802    0.0601     4.4824 r
+  AbstractCore/mycore/n411 (net)                3                 0.0000     4.4824 r
+  AbstractCore/mycore/U20/A1 (LVT_NOR3HDV8)             0.0802    0.0000     4.4824 r
+  AbstractCore/mycore/U20/ZN (LVT_NOR3HDV8)             0.0956    0.0428     4.5252 f
+  AbstractCore/mycore/n387 (net)                2                 0.0000     4.5252 f
+  AbstractCore/mycore/U519/A2 (LVT_NOR2HDV8)            0.0956    0.0000     4.5252 f
+  AbstractCore/mycore/U519/ZN (LVT_NOR2HDV8)            0.1144    0.0916     4.6168 r
+  AbstractCore/mycore/n419 (net)                7                 0.0000     4.6168 r
+  AbstractCore/mycore/U4/A1 (LVT_AND2HDV2)              0.1144    0.0000     4.6168 r
+  AbstractCore/mycore/U4/Z (LVT_AND2HDV2)               0.1495    0.1739     4.7907 r
+  AbstractCore/mycore/InstDecode_io_wbdata_regdes[4] (net)
+                                                6                 0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/io_wbdata_regdes[4] (ysyx_210292_InstDecode_0)
+                                                                  0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/io_wbdata_regdes[4] (net)        0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/U420/A1 (LVT_XOR2HDV2)
+                                                        0.1495    0.0000     4.7907 r
+  AbstractCore/mycore/InstDecode/U420/Z (LVT_XOR2HDV2)
+                                                        0.0822    0.1660     4.9567 f
+  AbstractCore/mycore/InstDecode/n124 (net)     1                 0.0000     4.9567 f
+  AbstractCore/mycore/InstDecode/U598/A1 (LVT_NOR2HDV4)
+                                                        0.0822    0.0000     4.9567 f
+  AbstractCore/mycore/InstDecode/U598/ZN (LVT_NOR2HDV4)
+                                                        0.0958    0.0727     5.0294 r
+  AbstractCore/mycore/InstDecode/n229 (net)     1                 0.0000     5.0294 r
+  AbstractCore/mycore/InstDecode/U599/A2 (LVT_NAND2HDV4)
+                                                        0.0958    0.0000     5.0294 r
+  AbstractCore/mycore/InstDecode/U599/ZN (LVT_NAND2HDV4)
+                                                        0.1301    0.0971     5.1265 f
+  AbstractCore/mycore/InstDecode/n261 (net)     5                 0.0000     5.1265 f
+  AbstractCore/mycore/InstDecode/U625/A1 (LVT_NAND3HDV4)
+                                                        0.1301    0.0000     5.1265 f
+  AbstractCore/mycore/InstDecode/U625/ZN (LVT_NAND3HDV4)
+                                                        0.1481    0.0959     5.2224 r
+  AbstractCore/mycore/InstDecode/n248 (net)     8                 0.0000     5.2224 r
+  AbstractCore/mycore/InstDecode/U641/A1 (LVT_NOR2HDV1)
+                                                        0.1481    0.0000     5.2224 r
+  AbstractCore/mycore/InstDecode/U641/ZN (LVT_NOR2HDV1)
+                                                        0.0732    0.0539     5.2763 f
+  AbstractCore/mycore/InstDecode/n380 (net)     2                 0.0000     5.2763 f
+  AbstractCore/mycore/InstDecode/U642/I (LVT_BUFHDV2)   0.0732    0.0000     5.2763 f
+  AbstractCore/mycore/InstDecode/U642/Z (LVT_BUFHDV2)   0.0875    0.1394     5.4157 f
+  AbstractCore/mycore/InstDecode/n2832 (net)
+                                                6                 0.0000     5.4157 f
+  AbstractCore/mycore/InstDecode/U125/I (LVT_BUFHDV3)   0.0875    0.0000     5.4157 f
+  AbstractCore/mycore/InstDecode/U125/Z (LVT_BUFHDV3)   0.1935    0.2104     5.6261 f
+  AbstractCore/mycore/InstDecode/n44 (net)     24                 0.0000     5.6261 f
+  AbstractCore/mycore/InstDecode/U5434/B1 (LVT_AOI22HDV1)
+                                                        0.1935    0.0000     5.6261 f
+  AbstractCore/mycore/InstDecode/U5434/ZN (LVT_AOI22HDV1)
+                                                        0.1459    0.1130     5.7392 r
+  AbstractCore/mycore/InstDecode/n3180 (net)
+                                                1                 0.0000     5.7392 r
+  AbstractCore/mycore/InstDecode/U5438/A1 (LVT_AND4HDV1)
+                                                        0.1459    0.0000     5.7392 r
+  AbstractCore/mycore/InstDecode/U5438/Z (LVT_AND4HDV1)
+                                                        0.0833    0.2037     5.9428 r
+  AbstractCore/mycore/InstDecode/n3186 (net)
+                                                1                 0.0000     5.9428 r
+  AbstractCore/mycore/InstDecode/U9/A3 (LVT_NAND4HDV1)
+                                                        0.0833    0.0000     5.9428 r
+  AbstractCore/mycore/InstDecode/U9/ZN (LVT_NAND4HDV1)
+                                                        0.1355    0.1159     6.0587 f
+  AbstractCore/mycore/InstDecode/io_idex_src2[31] (net)
+                                                1                 0.0000     6.0587 f
+  AbstractCore/mycore/InstDecode/io_idex_src2[31] (ysyx_210292_InstDecode_0)
+                                                                  0.0000     6.0587 f
+  AbstractCore/mycore/InstDecode_io_idex_src2[31] (net)           0.0000     6.0587 f
+  AbstractCore/mycore/Execute/io_idex_src2[31] (ysyx_210292_Execute_0)
+                                                                  0.0000     6.0587 f
+  AbstractCore/mycore/Execute/io_idex_src2[31] (net)              0.0000     6.0587 f
+  AbstractCore/mycore/Execute/U1102/B1 (LVT_IAO22HDV1)
+                                                        0.1355    0.0000     6.0587 f
+  AbstractCore/mycore/Execute/U1102/ZN (LVT_IAO22HDV1)
+                                                        0.1582    0.1086     6.1673 r
+  AbstractCore/mycore/Execute/n1093 (net)       1                 0.0000     6.1673 r
+  AbstractCore/mycore/Execute/U1103/I (LVT_INHDV1)      0.1582    0.0000     6.1673 r
+  AbstractCore/mycore/Execute/U1103/ZN (LVT_INHDV1)     0.0489    0.0385     6.2059 f
+  AbstractCore/mycore/Execute/n597 (net)        1                 0.0000     6.2059 f
+  AbstractCore/mycore/Execute/exs_src2_reg_31_/D (LVT_DQHDV1)
+                                                        0.0489    0.0000     6.2059 f
+  data arrival time                                                          6.2059
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  AbstractCore/mycore/Execute/exs_src2_reg_31_/CK (LVT_DQHDV1)    0.0000     6.3500 r
+  library setup time                                             -0.1436     6.2064
+  data required time                                                         6.2064
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2064
+  data arrival time                                                         -6.2059
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0005
