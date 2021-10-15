@@ -1,0 +1,1376 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Oct_13_14:23:06_2021_+0800
+top_name: ysyx_210727
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+210454.5  210454.5  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+19463  19463  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210727
+Date   : Fri Oct 15 11:42:58 2021
+****************************************
+    
+Number of ports:                         9766
+Number of nets:                         26868
+Number of cells:                        19650
+Number of combinational cells:          16277
+Number of sequential cells:              3186
+Number of macros/black boxes:               0
+Number of buf/inv:                       2917
+Number of references:                       6
+Combinational area:             128833.184366
+Buf/Inv area:                    14636.803153
+Noncombinational area:           81621.293850
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                210454.478216
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------
+ysyx_210727                       210454.4782    100.0    1307.1456      0.0000  0.0000  ysyx_210727
+axi_interface                       3353.9312      1.6       0.0000      0.0000  0.0000  ysyx_210727_AxiInterface_0
+axi_interface/axi_read              2218.9200      1.1    1304.4560    914.4640  0.0000  ysyx_210727_AxiRead_0
+axi_interface/axi_write             1135.0112      0.5    1081.2192     53.7920  0.0000  ysyx_210727_AxiWrite_0
+clint                               8067.4553      3.8    4702.7656   3364.6897  0.0000  ysyx_210727_Clint_0
+hart0                             190234.0654     90.4      83.3776      0.0000  0.0000  ysyx_210727_HikelCore_0
+hart0/alu                          21686.2447     10.3   21686.2447      0.0000  0.0000  ysyx_210727_Alu_0
+hart0/commit                        8714.3041      4.1    3936.2296   4778.0746  0.0000  ysyx_210727_Commit_0
+hart0/csrfile                      20514.9242      9.7    3803.0944      0.0000  0.0000  ysyx_210727_CsrFile_0
+hart0/csrfile/csrfile_10            2442.1569      1.2     806.8800   1635.2769  0.0000  ysyx_210727_MScratch_0
+hart0/csrfile/csrfile_11            1526.3480      0.7     758.4672    767.8808  0.0000  ysyx_210727_MEpc_0
+hart0/csrfile/csrfile_12             205.7544      0.1      71.2744    134.4800  0.0000  ysyx_210727_MCause_0
+hart0/csrfile/csrfile_13            2439.4673      1.2     804.1904   1635.2769  0.0000  ysyx_210727_MtVal_0
+hart0/csrfile/csrfile_14              21.5168      0.0      21.5168      0.0000  0.0000  ysyx_210727_Mip_0
+hart0/csrfile/csrfile_15             135.8248      0.1      59.1712     76.6536  0.0000  ysyx_210727_Mie_0
+hart0/csrfile/csrfile_4             3407.7232      1.6    1705.2064   1702.5168  0.0000  ysyx_210727_MCycle_0
+hart0/csrfile/csrfile_5             3873.0240      1.8    2225.6440   1647.3800  0.0000  ysyx_210727_MInstret_0
+hart0/csrfile/csrfile_6              133.1352      0.1      82.0328     51.1024  0.0000  ysyx_210727_MStatus_0
+hart0/csrfile/csrfile_9             2526.8793      1.2     942.7048   1584.1745  0.0000  ysyx_210727_MtVec_0
+hart0/decode                        3839.4041      1.8    1069.1160   1711.9305  0.0000  ysyx_210727_Decode_0
+hart0/decode/decoder                 607.8496      0.3     607.8496      0.0000  0.0000  ysyx_210727_InstDecode_0
+hart0/decode/imm_gen                 450.5080      0.2     450.5080      0.0000  0.0000  ysyx_210727_ImmGen_0
+hart0/execute                      13653.7546      6.5    8002.9048   5650.8498  0.0000  ysyx_210727_Execute_0
+hart0/fetch                         4388.0824      2.1    2746.0816   1642.0009  0.0000  ysyx_210727_Fetch_0
+hart0/fetch_io_change_pc_brcond     5773.2264      2.7    5773.2264      0.0000  0.0000  ysyx_210727_BrCond_0
+hart0/issue                        13331.0025      6.3    9753.8344   3577.1681  0.0000  ysyx_210727_Issue_0
+hart0/regfile                      98171.7464     46.6   47478.1638  50693.5825  0.0000  ysyx_210727_RegFile_0
+hart0/trapctrl                        77.9984      0.0      77.9984      0.0000  0.0000  ysyx_210727_TrapCtrl_0
+lsu                                 7491.8808      3.6    6440.2472      0.0000  0.0000  ysyx_210727_Lsu_0
+lsu/arbiter                         1051.6336      0.5    1051.6336      0.0000  0.0000  ysyx_210727_LsuReadArbiter_0
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------
+Total                                                   128833.1844  81621.2938  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210727
+Date   : Fri Oct 15 11:42:56 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: hart0/execute/reg_rs1_data_reg_9_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: hart0/fetch/reg_pc_1_reg_21_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  hart0/execute/reg_rs1_data_reg_9_/CK (LVT_DQHDV2)     0.0000    0.0000 #   0.0000 r
+  hart0/execute/reg_rs1_data_reg_9_/Q (LVT_DQHDV2)      0.1265    0.2757     0.2757 f
+  hart0/execute/io__alu_in_in0[9] (net)         5                 0.0000     0.2757 f
+  hart0/execute/U182/A1 (LVT_NOR2HDV4)                  0.1265    0.0000     0.2757 f
+  hart0/execute/U182/ZN (LVT_NOR2HDV4)                  0.1399    0.1044     0.3802 r
+  hart0/execute/n613 (net)                      3                 0.0000     0.3802 r
+  hart0/execute/U211/A2 (LVT_OAI21HDV4)                 0.1399    0.0000     0.3802 r
+  hart0/execute/U211/ZN (LVT_OAI21HDV4)                 0.0784    0.0787     0.4588 f
+  hart0/execute/n637 (net)                      3                 0.0000     0.4588 f
+  hart0/execute/U215/A2 (LVT_AOI21HDV2)                 0.0784    0.0000     0.4588 f
+  hart0/execute/U215/ZN (LVT_AOI21HDV2)                 0.1903    0.1421     0.6010 r
+  hart0/execute/n649 (net)                      3                 0.0000     0.6010 r
+  hart0/execute/U594/I (LVT_INHDV1)                     0.1903    0.0000     0.6010 r
+  hart0/execute/U594/ZN (LVT_INHDV1)                    0.0889    0.0755     0.6764 f
+  hart0/execute/n680 (net)                      3                 0.0000     0.6764 f
+  hart0/execute/U601/A1 (LVT_AOI21HDV1)                 0.0889    0.0000     0.6764 f
+  hart0/execute/U601/ZN (LVT_AOI21HDV1)                 0.1442    0.1086     0.7850 r
+  hart0/execute/n663 (net)                      1                 0.0000     0.7850 r
+  hart0/execute/U602/B (LVT_OAI21HDV2)                  0.1442    0.0000     0.7850 r
+  hart0/execute/U602/ZN (LVT_OAI21HDV2)                 0.0804    0.0741     0.8592 f
+  hart0/execute/n667 (net)                      1                 0.0000     0.8592 f
+  hart0/execute/U605/A1 (LVT_XNOR2HDV1)                 0.0804    0.0000     0.8592 f
+  hart0/execute/U605/ZN (LVT_XNOR2HDV1)                 0.0858    0.1532     1.0124 f
+  hart0/execute/io__dread_bits_addr[14] (net)
+                                                2                 0.0000     1.0124 f
+  hart0/execute/io__dread_bits_addr[14] (ysyx_210727_Execute_0)   0.0000     1.0124 f
+  hart0/io_dread_bits_addr[14] (net)                              0.0000     1.0124 f
+  hart0/io_dread_bits_addr[14] (ysyx_210727_HikelCore_0)          0.0000     1.0124 f
+  hart0_io_dread_bits_addr[14] (net)                              0.0000     1.0124 f
+  lsu/io_dread_bits_addr[14] (ysyx_210727_Lsu_0)                  0.0000     1.0124 f
+  lsu/io_dread_bits_addr[14] (net)                                0.0000     1.0124 f
+  lsu/arbiter/io_dread_bits_addr[14] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     1.0124 f
+  lsu/arbiter/io_dread_bits_addr[14] (net)                        0.0000     1.0124 f
+  lsu/arbiter/U75/I0 (LVT_MUX2HDV2)                     0.0858    0.0000     1.0124 f
+  lsu/arbiter/U75/Z (LVT_MUX2HDV2)                      0.0863    0.1966     1.2090 f
+  lsu/arbiter/io_read_bits_addr[14] (net)       3                 0.0000     1.2090 f
+  lsu/arbiter/io_read_bits_addr[14] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     1.2090 f
+  lsu/io_clint_read_bits_addr[14] (net)                           0.0000     1.2090 f
+  lsu/io_clint_read_bits_addr[14] (ysyx_210727_Lsu_0)             0.0000     1.2090 f
+  lsu_io_clint_read_bits_addr[14] (net)                           0.0000     1.2090 f
+  clint/io_read_bits_addr[14] (ysyx_210727_Clint_0)               0.0000     1.2090 f
+  clint/io_read_bits_addr[14] (net)                               0.0000     1.2090 f
+  clint/U45/I (LVT_INHDV1)                              0.0863    0.0000     1.2090 f
+  clint/U45/ZN (LVT_INHDV1)                             0.0542    0.0486     1.2576 r
+  clint/n7 (net)                                1                 0.0000     1.2576 r
+  clint/U46/A4 (LVT_NAND4HDV1)                          0.0542    0.0000     1.2576 r
+  clint/U46/ZN (LVT_NAND4HDV1)                          0.1450    0.1155     1.3731 f
+  clint/n9 (net)                                1                 0.0000     1.3731 f
+  clint/U13/A2 (LVT_NOR2HDV1)                           0.1450    0.0000     1.3731 f
+  clint/U13/ZN (LVT_NOR2HDV1)                           0.1135    0.0927     1.4658 r
+  clint/n11 (net)                               1                 0.0000     1.4658 r
+  clint/U47/A1 (LVT_NAND3HDV1)                          0.1135    0.0000     1.4658 r
+  clint/U47/ZN (LVT_NAND3HDV1)                          0.1394    0.1033     1.5691 f
+  clint/n18 (net)                               1                 0.0000     1.5691 f
+  clint/U10/A1 (LVT_OR3HDV8)                            0.1394    0.0000     1.5691 f
+  clint/U10/Z (LVT_OR3HDV8)                             0.0911    0.2082     1.7773 f
+  clint/n4 (net)                                3                 0.0000     1.7773 f
+  clint/U4/I (LVT_INHDV8)                               0.0911    0.0000     1.7773 f
+  clint/U4/ZN (LVT_INHDV8)                              0.1054    0.0810     1.8584 r
+  clint/n1 (net)                               28                 0.0000     1.8584 r
+  clint/U70/A2 (LVT_AO22HDV1)                           0.1054    0.0000     1.8584 r
+  clint/U70/Z (LVT_AO22HDV1)                            0.1221    0.2123     2.0707 r
+  clint/io_read_bits_rdata[41] (net)            3                 0.0000     2.0707 r
+  clint/io_read_bits_rdata[41] (ysyx_210727_Clint_0)              0.0000     2.0707 r
+  clint_io_read_bits_rdata[41] (net)                              0.0000     2.0707 r
+  lsu/io_clint_read_bits_rdata[41] (ysyx_210727_Lsu_0)            0.0000     2.0707 r
+  lsu/io_clint_read_bits_rdata[41] (net)                          0.0000     2.0707 r
+  lsu/U7/A1 (LVT_AOI22HDV2)                             0.1221    0.0000     2.0707 r
+  lsu/U7/ZN (LVT_AOI22HDV2)                             0.1467    0.0835     2.1542 f
+  lsu/n160 (net)                                1                 0.0000     2.1542 f
+  lsu/U9/A2 (LVT_NAND4HDV1)                             0.1467    0.0000     2.1542 f
+  lsu/U9/ZN (LVT_NAND4HDV1)                             0.1060    0.0787     2.2329 r
+  lsu/n167 (net)                                1                 0.0000     2.2329 r
+  lsu/U32/I0 (LVT_MUX2HDV1)                             0.1060    0.0000     2.2329 r
+  lsu/U32/Z (LVT_MUX2HDV1)                              0.0787    0.1664     2.3993 r
+  lsu/arbiter_io_read_bits_data[1] (net)        2                 0.0000     2.3993 r
+  lsu/arbiter/io_read_bits_data[1] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     2.3993 r
+  lsu/arbiter/io_read_bits_data[1] (net)                          0.0000     2.3993 r
+  lsu/arbiter/U38/I (LVT_BUFHDV1)                       0.0787    0.0000     2.3993 r
+  lsu/arbiter/U38/Z (LVT_BUFHDV1)                       0.0557    0.0935     2.4928 r
+  lsu/arbiter/io_dread_bits_data[1] (net)       1                 0.0000     2.4928 r
+  lsu/arbiter/io_dread_bits_data[1] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     2.4928 r
+  lsu/io_dread_bits_data[1] (net)                                 0.0000     2.4928 r
+  lsu/io_dread_bits_data[1] (ysyx_210727_Lsu_0)                   0.0000     2.4928 r
+  lsu_io_dread_bits_data[1] (net)                                 0.0000     2.4928 r
+  hart0/io_dread_bits_data[1] (ysyx_210727_HikelCore_0)           0.0000     2.4928 r
+  hart0/io_dread_bits_data[1] (net)                               0.0000     2.4928 r
+  hart0/execute/io__dread_bits_data[1] (ysyx_210727_Execute_0)    0.0000     2.4928 r
+  hart0/execute/io__dread_bits_data[1] (net)                      0.0000     2.4928 r
+  hart0/execute/U4/A1 (LVT_NAND2HDV2)                   0.0557    0.0000     2.4928 r
+  hart0/execute/U4/ZN (LVT_NAND2HDV2)                   0.1217    0.0581     2.5509 f
+  hart0/execute/n585 (net)                      1                 0.0000     2.5509 f
+  hart0/execute/U19/B (LVT_OAI211HDV4)                  0.1217    0.0000     2.5509 f
+  hart0/execute/U19/ZN (LVT_OAI211HDV4)                 0.1875    0.0652     2.6162 r
+  hart0/execute/io_out_data1[1] (net)           2                 0.0000     2.6162 r
+  hart0/execute/io_out_data1[1] (ysyx_210727_Execute_0)           0.0000     2.6162 r
+  hart0/execute_io_out_data1[1] (net)                             0.0000     2.6162 r
+  hart0/issue/exec_rd_data_0[1] (ysyx_210727_Issue_0)             0.0000     2.6162 r
+  hart0/issue/exec_rd_data_0[1] (net)                             0.0000     2.6162 r
+  hart0/issue/U6/I (LVT_INHDV4)                         0.1875    0.0000     2.6162 r
+  hart0/issue/U6/ZN (LVT_INHDV4)                        0.0595    0.0476     2.6638 f
+  hart0/issue/n469 (net)                        2                 0.0000     2.6638 f
+  hart0/issue/U39/A1 (LVT_OAI211HDV4)                   0.0595    0.0000     2.6638 f
+  hart0/issue/U39/ZN (LVT_OAI211HDV4)                   0.1804    0.1075     2.7713 r
+  hart0/issue/io_brcond_in1[1] (net)            2                 0.0000     2.7713 r
+  hart0/issue/io_brcond_in1[1] (ysyx_210727_Issue_0)              0.0000     2.7713 r
+  hart0/issue_io_brcond_in1[1] (net)                              0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/io_in_in1[1] (ysyx_210727_BrCond_0)
+                                                                  0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/io_in_in1[1] (net)              0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/U22/I (LVT_INHDV2)    0.1804    0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/U22/ZN (LVT_INHDV2)   0.0794    0.0682     2.8395 f
+  hart0/fetch_io_change_pc_brcond/n27 (net)     2                 0.0000     2.8395 f
+  hart0/fetch_io_change_pc_brcond/U17/A1 (LVT_AOI211HDV4)
+                                                        0.0794    0.0000     2.8395 f
+  hart0/fetch_io_change_pc_brcond/U17/ZN (LVT_AOI211HDV4)
+                                                        0.1816    0.1301     2.9696 r
+  hart0/fetch_io_change_pc_brcond/n28 (net)     1                 0.0000     2.9696 r
+  hart0/fetch_io_change_pc_brcond/U16/B (LVT_AOI21HDV2)
+                                                        0.1816    0.0000     2.9696 r
+  hart0/fetch_io_change_pc_brcond/U16/ZN (LVT_AOI21HDV2)
+                                                        0.0731    0.0502     3.0198 f
+  hart0/fetch_io_change_pc_brcond/n36 (net)     1                 0.0000     3.0198 f
+  hart0/fetch_io_change_pc_brcond/U240/A2 (LVT_OAI21HDV2)
+                                                        0.0731    0.0000     3.0198 f
+  hart0/fetch_io_change_pc_brcond/U240/ZN (LVT_OAI21HDV2)
+                                                        0.1648    0.1212     3.1409 r
+  hart0/fetch_io_change_pc_brcond/n267 (net)
+                                                2                 0.0000     3.1409 r
+  hart0/fetch_io_change_pc_brcond/U11/I (LVT_INHDV2)    0.1648    0.0000     3.1409 r
+  hart0/fetch_io_change_pc_brcond/U11/ZN (LVT_INHDV2)   0.0516    0.0415     3.1824 f
+  hart0/fetch_io_change_pc_brcond/n39 (net)     1                 0.0000     3.1824 f
+  hart0/fetch_io_change_pc_brcond/U23/A1 (LVT_NOR2HDV2)
+                                                        0.0516    0.0000     3.1824 f
+  hart0/fetch_io_change_pc_brcond/U23/ZN (LVT_NOR2HDV2)
+                                                        0.1072    0.0685     3.2510 r
+  hart0/fetch_io_change_pc_brcond/n40 (net)     1                 0.0000     3.2510 r
+  hart0/fetch_io_change_pc_brcond/U242/C (LVT_AOI211HDV2)
+                                                        0.1072    0.0000     3.2510 r
+  hart0/fetch_io_change_pc_brcond/U242/ZN (LVT_AOI211HDV2)
+                                                        0.1114    0.0460     3.2970 f
+  hart0/fetch_io_change_pc_brcond/n44 (net)     1                 0.0000     3.2970 f
+  hart0/fetch_io_change_pc_brcond/U24/C (LVT_AOI211HDV2)
+                                                        0.1114    0.0000     3.2970 f
+  hart0/fetch_io_change_pc_brcond/U24/ZN (LVT_AOI211HDV2)
+                                                        0.2126    0.1369     3.4339 r
+  hart0/fetch_io_change_pc_brcond/n54 (net)     1                 0.0000     3.4339 r
+  hart0/fetch_io_change_pc_brcond/U57/A1 (LVT_OAI21HDV2)
+                                                        0.2126    0.0000     3.4339 r
+  hart0/fetch_io_change_pc_brcond/U57/ZN (LVT_OAI21HDV2)
+                                                        0.0778    0.0730     3.5069 f
+  hart0/fetch_io_change_pc_brcond/n55 (net)     1                 0.0000     3.5069 f
+  hart0/fetch_io_change_pc_brcond/U5/A2 (LVT_NAND2HDV2)
+                                                        0.0778    0.0000     3.5069 f
+  hart0/fetch_io_change_pc_brcond/U5/ZN (LVT_NAND2HDV2)
+                                                        0.0587    0.0537     3.5605 r
+  hart0/fetch_io_change_pc_brcond/n64 (net)     1                 0.0000     3.5605 r
+  hart0/fetch_io_change_pc_brcond/U14/A1 (LVT_AOI21HDV2)
+                                                        0.0587    0.0000     3.5605 r
+  hart0/fetch_io_change_pc_brcond/U14/ZN (LVT_AOI21HDV2)
+                                                        0.0957    0.0578     3.6183 f
+  hart0/fetch_io_change_pc_brcond/n95 (net)     1                 0.0000     3.6183 f
+  hart0/fetch_io_change_pc_brcond/U13/A1 (LVT_OAI21HDV2)
+                                                        0.0957    0.0000     3.6183 f
+  hart0/fetch_io_change_pc_brcond/U13/ZN (LVT_OAI21HDV2)
+                                                        0.1335    0.1015     3.7198 r
+  hart0/fetch_io_change_pc_brcond/n102 (net)
+                                                1                 0.0000     3.7198 r
+  hart0/fetch_io_change_pc_brcond/U312/A1 (LVT_NAND2HDV2)
+                                                        0.1335    0.0000     3.7198 r
+  hart0/fetch_io_change_pc_brcond/U312/ZN (LVT_NAND2HDV2)
+                                                        0.0597    0.0529     3.7727 f
+  hart0/fetch_io_change_pc_brcond/n127 (net)
+                                                1                 0.0000     3.7727 f
+  hart0/fetch_io_change_pc_brcond/U338/A1 (LVT_NAND3HDV1)
+                                                        0.0597    0.0000     3.7727 f
+  hart0/fetch_io_change_pc_brcond/U338/ZN (LVT_NAND3HDV1)
+                                                        0.0867    0.0536     3.8263 r
+  hart0/fetch_io_change_pc_brcond/n133 (net)
+                                                1                 0.0000     3.8263 r
+  hart0/fetch_io_change_pc_brcond/U346/A1 (LVT_NAND2HDV1)
+                                                        0.0867    0.0000     3.8263 r
+  hart0/fetch_io_change_pc_brcond/U346/ZN (LVT_NAND2HDV1)
+                                                        0.0677    0.0604     3.8867 f
+  hart0/fetch_io_change_pc_brcond/n143 (net)
+                                                1                 0.0000     3.8867 f
+  hart0/fetch_io_change_pc_brcond/U354/A1 (LVT_NAND2HDV2)
+                                                        0.0677    0.0000     3.8867 f
+  hart0/fetch_io_change_pc_brcond/U354/ZN (LVT_NAND2HDV2)
+                                                        0.0615    0.0456     3.9323 r
+  hart0/fetch_io_change_pc_brcond/n153 (net)
+                                                1                 0.0000     3.9323 r
+  hart0/fetch_io_change_pc_brcond/U364/A1 (LVT_NAND2HDV2)
+                                                        0.0615    0.0000     3.9323 r
+  hart0/fetch_io_change_pc_brcond/U364/ZN (LVT_NAND2HDV2)
+                                                        0.0593    0.0465     3.9788 f
+  hart0/fetch_io_change_pc_brcond/n173 (net)
+                                                1                 0.0000     3.9788 f
+  hart0/fetch_io_change_pc_brcond/U50/A1 (LVT_AOI21HDV2)
+                                                        0.0593    0.0000     3.9788 f
+  hart0/fetch_io_change_pc_brcond/U50/ZN (LVT_AOI21HDV2)
+                                                        0.1313    0.0872     4.0660 r
+  hart0/fetch_io_change_pc_brcond/n181 (net)
+                                                1                 0.0000     4.0660 r
+  hart0/fetch_io_change_pc_brcond/U49/B1 (LVT_IOA22HDV2)
+                                                        0.1313    0.0000     4.0660 r
+  hart0/fetch_io_change_pc_brcond/U49/ZN (LVT_IOA22HDV2)
+                                                        0.0876    0.0681     4.1341 f
+  hart0/fetch_io_change_pc_brcond/n183 (net)
+                                                1                 0.0000     4.1341 f
+  hart0/fetch_io_change_pc_brcond/U7/A1 (LVT_NAND2HDV2)
+                                                        0.0876    0.0000     4.1341 f
+  hart0/fetch_io_change_pc_brcond/U7/ZN (LVT_NAND2HDV2)
+                                                        0.0701    0.0490     4.1831 r
+  hart0/fetch_io_change_pc_brcond/n186 (net)
+                                                1                 0.0000     4.1831 r
+  hart0/fetch_io_change_pc_brcond/U48/A1 (LVT_NAND2HDV2)
+                                                        0.0701    0.0000     4.1831 r
+  hart0/fetch_io_change_pc_brcond/U48/ZN (LVT_NAND2HDV2)
+                                                        0.0510    0.0451     4.2282 f
+  hart0/fetch_io_change_pc_brcond/n187 (net)
+                                                1                 0.0000     4.2282 f
+  hart0/fetch_io_change_pc_brcond/U47/B (LVT_IOA21HDV1)
+                                                        0.0510    0.0000     4.2282 f
+  hart0/fetch_io_change_pc_brcond/U47/ZN (LVT_IOA21HDV1)
+                                                        0.0827    0.0545     4.2827 r
+  hart0/fetch_io_change_pc_brcond/n189 (net)
+                                                1                 0.0000     4.2827 r
+  hart0/fetch_io_change_pc_brcond/U45/B (LVT_IOA21HDV2)
+                                                        0.0827    0.0000     4.2827 r
+  hart0/fetch_io_change_pc_brcond/U45/ZN (LVT_IOA21HDV2)
+                                                        0.0648    0.0531     4.3357 f
+  hart0/fetch_io_change_pc_brcond/n191 (net)
+                                                1                 0.0000     4.3357 f
+  hart0/fetch_io_change_pc_brcond/U387/B (LVT_IOA21HDV2)
+                                                        0.0648    0.0000     4.3357 f
+  hart0/fetch_io_change_pc_brcond/U387/ZN (LVT_IOA21HDV2)
+                                                        0.0731    0.0511     4.3869 r
+  hart0/fetch_io_change_pc_brcond/n192 (net)
+                                                1                 0.0000     4.3869 r
+  hart0/fetch_io_change_pc_brcond/U388/B (LVT_IOA21HDV2)
+                                                        0.0731    0.0000     4.3869 r
+  hart0/fetch_io_change_pc_brcond/U388/ZN (LVT_IOA21HDV2)
+                                                        0.0648    0.0521     4.4390 f
+  hart0/fetch_io_change_pc_brcond/n194 (net)
+                                                1                 0.0000     4.4390 f
+  hart0/fetch_io_change_pc_brcond/U389/B (LVT_IOA21HDV2)
+                                                        0.0648    0.0000     4.4390 f
+  hart0/fetch_io_change_pc_brcond/U389/ZN (LVT_IOA21HDV2)
+                                                        0.0731    0.0511     4.4901 r
+  hart0/fetch_io_change_pc_brcond/n196 (net)
+                                                1                 0.0000     4.4901 r
+  hart0/fetch_io_change_pc_brcond/U390/B (LVT_IOA21HDV2)
+                                                        0.0731    0.0000     4.4901 r
+  hart0/fetch_io_change_pc_brcond/U390/ZN (LVT_IOA21HDV2)
+                                                        0.0658    0.0529     4.5430 f
+  hart0/fetch_io_change_pc_brcond/n200 (net)
+                                                1                 0.0000     4.5430 f
+  hart0/fetch_io_change_pc_brcond/U42/A1 (LVT_NAND2HDV2)
+                                                        0.0658    0.0000     4.5430 f
+  hart0/fetch_io_change_pc_brcond/U42/ZN (LVT_NAND2HDV2)
+                                                        0.0650    0.0451     4.5881 r
+  hart0/fetch_io_change_pc_brcond/n202 (net)
+                                                1                 0.0000     4.5881 r
+  hart0/fetch_io_change_pc_brcond/U41/A1 (LVT_NAND2HDV2)
+                                                        0.0650    0.0000     4.5881 r
+  hart0/fetch_io_change_pc_brcond/U41/ZN (LVT_NAND2HDV2)
+                                                        0.0617    0.0474     4.6355 f
+  hart0/fetch_io_change_pc_brcond/n205 (net)
+                                                1                 0.0000     4.6355 f
+  hart0/fetch_io_change_pc_brcond/U40/A1 (LVT_NAND2HDV2)
+                                                        0.0617    0.0000     4.6355 f
+  hart0/fetch_io_change_pc_brcond/U40/ZN (LVT_NAND2HDV2)
+                                                        0.0673    0.0440     4.6796 r
+  hart0/fetch_io_change_pc_brcond/n208 (net)
+                                                1                 0.0000     4.6796 r
+  hart0/fetch_io_change_pc_brcond/U39/A1 (LVT_NAND2HDV2)
+                                                        0.0673    0.0000     4.6796 r
+  hart0/fetch_io_change_pc_brcond/U39/ZN (LVT_NAND2HDV2)
+                                                        0.0555    0.0479     4.7274 f
+  hart0/fetch_io_change_pc_brcond/n210 (net)
+                                                1                 0.0000     4.7274 f
+  hart0/fetch_io_change_pc_brcond/U38/A1 (LVT_NAND2HDV2)
+                                                        0.0555    0.0000     4.7274 f
+  hart0/fetch_io_change_pc_brcond/U38/ZN (LVT_NAND2HDV2)
+                                                        0.0737    0.0425     4.7699 r
+  hart0/fetch_io_change_pc_brcond/n213 (net)
+                                                1                 0.0000     4.7699 r
+  hart0/fetch_io_change_pc_brcond/U37/A1 (LVT_NAND2HDV2)
+                                                        0.0737    0.0000     4.7699 r
+  hart0/fetch_io_change_pc_brcond/U37/ZN (LVT_NAND2HDV2)
+                                                        0.0555    0.0492     4.8191 f
+  hart0/fetch_io_change_pc_brcond/n215 (net)
+                                                1                 0.0000     4.8191 f
+  hart0/fetch_io_change_pc_brcond/U36/A1 (LVT_NAND2HDV2)
+                                                        0.0555    0.0000     4.8191 f
+  hart0/fetch_io_change_pc_brcond/U36/ZN (LVT_NAND2HDV2)
+                                                        0.0737    0.0425     4.8615 r
+  hart0/fetch_io_change_pc_brcond/n217 (net)
+                                                1                 0.0000     4.8615 r
+  hart0/fetch_io_change_pc_brcond/U35/A1 (LVT_NAND2HDV2)
+                                                        0.0737    0.0000     4.8615 r
+  hart0/fetch_io_change_pc_brcond/U35/ZN (LVT_NAND2HDV2)
+                                                        0.0586    0.0492     4.9107 f
+  hart0/fetch_io_change_pc_brcond/n220 (net)
+                                                1                 0.0000     4.9107 f
+  hart0/fetch_io_change_pc_brcond/U34/A1 (LVT_NAND2HDV2)
+                                                        0.0586    0.0000     4.9107 f
+  hart0/fetch_io_change_pc_brcond/U34/ZN (LVT_NAND2HDV2)
+                                                        0.0673    0.0433     4.9540 r
+  hart0/fetch_io_change_pc_brcond/n223 (net)
+                                                1                 0.0000     4.9540 r
+  hart0/fetch_io_change_pc_brcond/U33/A1 (LVT_NAND2HDV2)
+                                                        0.0673    0.0000     4.9540 r
+  hart0/fetch_io_change_pc_brcond/U33/ZN (LVT_NAND2HDV2)
+                                                        0.0747    0.0608     5.0148 f
+  hart0/fetch_io_change_pc_brcond/n227 (net)
+                                                1                 0.0000     5.0148 f
+  hart0/fetch_io_change_pc_brcond/U391/A1 (LVT_AOI21HDV4)
+                                                        0.0747    0.0000     5.0148 f
+  hart0/fetch_io_change_pc_brcond/U391/ZN (LVT_AOI21HDV4)
+                                                        0.1229    0.0868     5.1016 r
+  hart0/fetch_io_change_pc_brcond/n230 (net)
+                                                1                 0.0000     5.1016 r
+  hart0/fetch_io_change_pc_brcond/U392/A1 (LVT_OAI21HDV4)
+                                                        0.1229    0.0000     5.1016 r
+  hart0/fetch_io_change_pc_brcond/U392/ZN (LVT_OAI21HDV4)
+                                                        0.0859    0.0627     5.1643 f
+  hart0/fetch_io_change_pc_brcond/n232 (net)
+                                                1                 0.0000     5.1643 f
+  hart0/fetch_io_change_pc_brcond/U393/A1 (LVT_NAND2HDV4)
+                                                        0.0859    0.0000     5.1643 f
+  hart0/fetch_io_change_pc_brcond/U393/ZN (LVT_NAND2HDV4)
+                                                        0.0608    0.0478     5.2121 r
+  hart0/fetch_io_change_pc_brcond/n234 (net)
+                                                1                 0.0000     5.2121 r
+  hart0/fetch_io_change_pc_brcond/U394/A1 (LVT_NAND2HDV4)
+                                                        0.0608    0.0000     5.2121 r
+  hart0/fetch_io_change_pc_brcond/U394/ZN (LVT_NAND2HDV4)
+                                                        0.0610    0.0457     5.2577 f
+  hart0/fetch_io_change_pc_brcond/n237 (net)
+                                                1                 0.0000     5.2577 f
+  hart0/fetch_io_change_pc_brcond/U395/A1 (LVT_AOI21HDV4)
+                                                        0.0610    0.0000     5.2577 f
+  hart0/fetch_io_change_pc_brcond/U395/ZN (LVT_AOI21HDV4)
+                                                        0.1175    0.0854     5.3432 r
+  hart0/fetch_io_change_pc_brcond/n238 (net)
+                                                1                 0.0000     5.3432 r
+  hart0/fetch_io_change_pc_brcond/U396/B (LVT_IAO21HDV4)
+                                                        0.1175    0.0000     5.3432 r
+  hart0/fetch_io_change_pc_brcond/U396/ZN (LVT_IAO21HDV4)
+                                                        0.0540    0.0459     5.3890 f
+  hart0/fetch_io_change_pc_brcond/n241 (net)
+                                                1                 0.0000     5.3890 f
+  hart0/fetch_io_change_pc_brcond/U397/B1 (LVT_IOA22HDV4)
+                                                        0.0540    0.0000     5.3890 f
+  hart0/fetch_io_change_pc_brcond/U397/ZN (LVT_IOA22HDV4)
+                                                        0.1766    0.1114     5.5005 r
+  hart0/fetch_io_change_pc_brcond/n581 (net)
+                                                2                 0.0000     5.5005 r
+  hart0/fetch_io_change_pc_brcond/U6/A1 (LVT_OAI21HDV4)
+                                                        0.1766    0.0000     5.5005 r
+  hart0/fetch_io_change_pc_brcond/U6/ZN (LVT_OAI21HDV4)
+                                                        0.0663    0.0676     5.5680 f
+  hart0/fetch_io_change_pc_brcond/n582 (net)
+                                                1                 0.0000     5.5680 f
+  hart0/fetch_io_change_pc_brcond/U598/B (LVT_AOI21HDV4)
+                                                        0.0663    0.0000     5.5680 f
+  hart0/fetch_io_change_pc_brcond/U598/ZN (LVT_AOI21HDV4)
+                                                        0.1360    0.0878     5.6559 r
+  hart0/fetch_io_change_pc_brcond/io_change_pc (net)
+                                                2                 0.0000     5.6559 r
+  hart0/fetch_io_change_pc_brcond/io_change_pc (ysyx_210727_BrCond_0)
+                                                                  0.0000     5.6559 r
+  hart0/fetch_io_change_pc_brcond_io_change_pc (net)              0.0000     5.6559 r
+  hart0/U52/A2 (LVT_AND2HDV8)                           0.1360    0.0000     5.6559 r
+  hart0/U52/Z (LVT_AND2HDV8)                            0.0778    0.1250     5.7809 r
+  hart0/fetch_io_change_pc (net)                5                 0.0000     5.7809 r
+  hart0/fetch/io_change_pc (ysyx_210727_Fetch_0)                  0.0000     5.7809 r
+  hart0/fetch/io_change_pc (net)                                  0.0000     5.7809 r
+  hart0/fetch/U63/I (LVT_INHDV8)                        0.0778    0.0000     5.7809 r
+  hart0/fetch/U63/ZN (LVT_INHDV8)                       0.0337    0.0326     5.8135 f
+  hart0/fetch/n27 (net)                         1                 0.0000     5.8135 f
+  hart0/fetch/U4/A1 (LVT_NAND2HDV8)                     0.0337    0.0000     5.8135 f
+  hart0/fetch/U4/ZN (LVT_NAND2HDV8)                     0.1320    0.0691     5.8827 r
+  hart0/fetch/n12 (net)                        15                 0.0000     5.8827 r
+  hart0/fetch/U15/I (LVT_INHDV8)                        0.1320    0.0000     5.8827 r
+  hart0/fetch/U15/ZN (LVT_INHDV8)                       0.0512    0.0452     5.9278 f
+  hart0/fetch/n244 (net)                        8                 0.0000     5.9278 f
+  hart0/fetch/U64/A1 (LVT_NAND2HDV1)                    0.0512    0.0000     5.9278 f
+  hart0/fetch/U64/ZN (LVT_NAND2HDV1)                    0.1069    0.0556     5.9835 r
+  hart0/fetch/n222 (net)                        2                 0.0000     5.9835 r
+  hart0/fetch/U293/A1 (LVT_AO21HDV2)                    0.1069    0.0000     5.9835 r
+  hart0/fetch/U293/Z (LVT_AO21HDV2)                     0.0546    0.1370     6.1204 r
+  hart0/fetch/n228 (net)                        1                 0.0000     6.1204 r
+  hart0/fetch/U19/A1 (LVT_NAND4HDV1)                    0.0546    0.0000     6.1204 r
+  hart0/fetch/U19/ZN (LVT_NAND4HDV1)                    0.1320    0.0803     6.2007 f
+  hart0/fetch/n115 (net)                        1                 0.0000     6.2007 f
+  hart0/fetch/reg_pc_1_reg_21_/D (LVT_DQHDV2)           0.1320    0.0000     6.2007 f
+  data arrival time                                                          6.2007
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  hart0/fetch/reg_pc_1_reg_21_/CK (LVT_DQHDV2)                    0.0000     6.3500 r
+  library setup time                                             -0.1492     6.2008
+  data required time                                                         6.2008
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2008
+  data arrival time                                                         -6.2007
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
+  Startpoint: hart0/execute/reg_rs1_data_reg_9_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: hart0/fetch/reg_pc_1_reg_13_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  hart0/execute/reg_rs1_data_reg_9_/CK (LVT_DQHDV2)     0.0000    0.0000 #   0.0000 r
+  hart0/execute/reg_rs1_data_reg_9_/Q (LVT_DQHDV2)      0.1265    0.2757     0.2757 f
+  hart0/execute/io__alu_in_in0[9] (net)         5                 0.0000     0.2757 f
+  hart0/execute/U182/A1 (LVT_NOR2HDV4)                  0.1265    0.0000     0.2757 f
+  hart0/execute/U182/ZN (LVT_NOR2HDV4)                  0.1399    0.1044     0.3802 r
+  hart0/execute/n613 (net)                      3                 0.0000     0.3802 r
+  hart0/execute/U211/A2 (LVT_OAI21HDV4)                 0.1399    0.0000     0.3802 r
+  hart0/execute/U211/ZN (LVT_OAI21HDV4)                 0.0784    0.0787     0.4588 f
+  hart0/execute/n637 (net)                      3                 0.0000     0.4588 f
+  hart0/execute/U215/A2 (LVT_AOI21HDV2)                 0.0784    0.0000     0.4588 f
+  hart0/execute/U215/ZN (LVT_AOI21HDV2)                 0.1903    0.1421     0.6010 r
+  hart0/execute/n649 (net)                      3                 0.0000     0.6010 r
+  hart0/execute/U594/I (LVT_INHDV1)                     0.1903    0.0000     0.6010 r
+  hart0/execute/U594/ZN (LVT_INHDV1)                    0.0889    0.0755     0.6764 f
+  hart0/execute/n680 (net)                      3                 0.0000     0.6764 f
+  hart0/execute/U601/A1 (LVT_AOI21HDV1)                 0.0889    0.0000     0.6764 f
+  hart0/execute/U601/ZN (LVT_AOI21HDV1)                 0.1442    0.1086     0.7850 r
+  hart0/execute/n663 (net)                      1                 0.0000     0.7850 r
+  hart0/execute/U602/B (LVT_OAI21HDV2)                  0.1442    0.0000     0.7850 r
+  hart0/execute/U602/ZN (LVT_OAI21HDV2)                 0.0804    0.0741     0.8592 f
+  hart0/execute/n667 (net)                      1                 0.0000     0.8592 f
+  hart0/execute/U605/A1 (LVT_XNOR2HDV1)                 0.0804    0.0000     0.8592 f
+  hart0/execute/U605/ZN (LVT_XNOR2HDV1)                 0.0858    0.1532     1.0124 f
+  hart0/execute/io__dread_bits_addr[14] (net)
+                                                2                 0.0000     1.0124 f
+  hart0/execute/io__dread_bits_addr[14] (ysyx_210727_Execute_0)   0.0000     1.0124 f
+  hart0/io_dread_bits_addr[14] (net)                              0.0000     1.0124 f
+  hart0/io_dread_bits_addr[14] (ysyx_210727_HikelCore_0)          0.0000     1.0124 f
+  hart0_io_dread_bits_addr[14] (net)                              0.0000     1.0124 f
+  lsu/io_dread_bits_addr[14] (ysyx_210727_Lsu_0)                  0.0000     1.0124 f
+  lsu/io_dread_bits_addr[14] (net)                                0.0000     1.0124 f
+  lsu/arbiter/io_dread_bits_addr[14] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     1.0124 f
+  lsu/arbiter/io_dread_bits_addr[14] (net)                        0.0000     1.0124 f
+  lsu/arbiter/U75/I0 (LVT_MUX2HDV2)                     0.0858    0.0000     1.0124 f
+  lsu/arbiter/U75/Z (LVT_MUX2HDV2)                      0.0863    0.1966     1.2090 f
+  lsu/arbiter/io_read_bits_addr[14] (net)       3                 0.0000     1.2090 f
+  lsu/arbiter/io_read_bits_addr[14] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     1.2090 f
+  lsu/io_clint_read_bits_addr[14] (net)                           0.0000     1.2090 f
+  lsu/io_clint_read_bits_addr[14] (ysyx_210727_Lsu_0)             0.0000     1.2090 f
+  lsu_io_clint_read_bits_addr[14] (net)                           0.0000     1.2090 f
+  clint/io_read_bits_addr[14] (ysyx_210727_Clint_0)               0.0000     1.2090 f
+  clint/io_read_bits_addr[14] (net)                               0.0000     1.2090 f
+  clint/U45/I (LVT_INHDV1)                              0.0863    0.0000     1.2090 f
+  clint/U45/ZN (LVT_INHDV1)                             0.0542    0.0486     1.2576 r
+  clint/n7 (net)                                1                 0.0000     1.2576 r
+  clint/U46/A4 (LVT_NAND4HDV1)                          0.0542    0.0000     1.2576 r
+  clint/U46/ZN (LVT_NAND4HDV1)                          0.1450    0.1155     1.3731 f
+  clint/n9 (net)                                1                 0.0000     1.3731 f
+  clint/U13/A2 (LVT_NOR2HDV1)                           0.1450    0.0000     1.3731 f
+  clint/U13/ZN (LVT_NOR2HDV1)                           0.1135    0.0927     1.4658 r
+  clint/n11 (net)                               1                 0.0000     1.4658 r
+  clint/U47/A1 (LVT_NAND3HDV1)                          0.1135    0.0000     1.4658 r
+  clint/U47/ZN (LVT_NAND3HDV1)                          0.1394    0.1033     1.5691 f
+  clint/n18 (net)                               1                 0.0000     1.5691 f
+  clint/U10/A1 (LVT_OR3HDV8)                            0.1394    0.0000     1.5691 f
+  clint/U10/Z (LVT_OR3HDV8)                             0.0911    0.2082     1.7773 f
+  clint/n4 (net)                                3                 0.0000     1.7773 f
+  clint/U4/I (LVT_INHDV8)                               0.0911    0.0000     1.7773 f
+  clint/U4/ZN (LVT_INHDV8)                              0.1054    0.0810     1.8584 r
+  clint/n1 (net)                               28                 0.0000     1.8584 r
+  clint/U70/A2 (LVT_AO22HDV1)                           0.1054    0.0000     1.8584 r
+  clint/U70/Z (LVT_AO22HDV1)                            0.1221    0.2123     2.0707 r
+  clint/io_read_bits_rdata[41] (net)            3                 0.0000     2.0707 r
+  clint/io_read_bits_rdata[41] (ysyx_210727_Clint_0)              0.0000     2.0707 r
+  clint_io_read_bits_rdata[41] (net)                              0.0000     2.0707 r
+  lsu/io_clint_read_bits_rdata[41] (ysyx_210727_Lsu_0)            0.0000     2.0707 r
+  lsu/io_clint_read_bits_rdata[41] (net)                          0.0000     2.0707 r
+  lsu/U7/A1 (LVT_AOI22HDV2)                             0.1221    0.0000     2.0707 r
+  lsu/U7/ZN (LVT_AOI22HDV2)                             0.1467    0.0835     2.1542 f
+  lsu/n160 (net)                                1                 0.0000     2.1542 f
+  lsu/U9/A2 (LVT_NAND4HDV1)                             0.1467    0.0000     2.1542 f
+  lsu/U9/ZN (LVT_NAND4HDV1)                             0.1060    0.0787     2.2329 r
+  lsu/n167 (net)                                1                 0.0000     2.2329 r
+  lsu/U32/I0 (LVT_MUX2HDV1)                             0.1060    0.0000     2.2329 r
+  lsu/U32/Z (LVT_MUX2HDV1)                              0.0787    0.1664     2.3993 r
+  lsu/arbiter_io_read_bits_data[1] (net)        2                 0.0000     2.3993 r
+  lsu/arbiter/io_read_bits_data[1] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     2.3993 r
+  lsu/arbiter/io_read_bits_data[1] (net)                          0.0000     2.3993 r
+  lsu/arbiter/U38/I (LVT_BUFHDV1)                       0.0787    0.0000     2.3993 r
+  lsu/arbiter/U38/Z (LVT_BUFHDV1)                       0.0557    0.0935     2.4928 r
+  lsu/arbiter/io_dread_bits_data[1] (net)       1                 0.0000     2.4928 r
+  lsu/arbiter/io_dread_bits_data[1] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     2.4928 r
+  lsu/io_dread_bits_data[1] (net)                                 0.0000     2.4928 r
+  lsu/io_dread_bits_data[1] (ysyx_210727_Lsu_0)                   0.0000     2.4928 r
+  lsu_io_dread_bits_data[1] (net)                                 0.0000     2.4928 r
+  hart0/io_dread_bits_data[1] (ysyx_210727_HikelCore_0)           0.0000     2.4928 r
+  hart0/io_dread_bits_data[1] (net)                               0.0000     2.4928 r
+  hart0/execute/io__dread_bits_data[1] (ysyx_210727_Execute_0)    0.0000     2.4928 r
+  hart0/execute/io__dread_bits_data[1] (net)                      0.0000     2.4928 r
+  hart0/execute/U4/A1 (LVT_NAND2HDV2)                   0.0557    0.0000     2.4928 r
+  hart0/execute/U4/ZN (LVT_NAND2HDV2)                   0.1217    0.0581     2.5509 f
+  hart0/execute/n585 (net)                      1                 0.0000     2.5509 f
+  hart0/execute/U19/B (LVT_OAI211HDV4)                  0.1217    0.0000     2.5509 f
+  hart0/execute/U19/ZN (LVT_OAI211HDV4)                 0.1875    0.0652     2.6162 r
+  hart0/execute/io_out_data1[1] (net)           2                 0.0000     2.6162 r
+  hart0/execute/io_out_data1[1] (ysyx_210727_Execute_0)           0.0000     2.6162 r
+  hart0/execute_io_out_data1[1] (net)                             0.0000     2.6162 r
+  hart0/issue/exec_rd_data_0[1] (ysyx_210727_Issue_0)             0.0000     2.6162 r
+  hart0/issue/exec_rd_data_0[1] (net)                             0.0000     2.6162 r
+  hart0/issue/U6/I (LVT_INHDV4)                         0.1875    0.0000     2.6162 r
+  hart0/issue/U6/ZN (LVT_INHDV4)                        0.0595    0.0476     2.6638 f
+  hart0/issue/n469 (net)                        2                 0.0000     2.6638 f
+  hart0/issue/U39/A1 (LVT_OAI211HDV4)                   0.0595    0.0000     2.6638 f
+  hart0/issue/U39/ZN (LVT_OAI211HDV4)                   0.1804    0.1075     2.7713 r
+  hart0/issue/io_brcond_in1[1] (net)            2                 0.0000     2.7713 r
+  hart0/issue/io_brcond_in1[1] (ysyx_210727_Issue_0)              0.0000     2.7713 r
+  hart0/issue_io_brcond_in1[1] (net)                              0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/io_in_in1[1] (ysyx_210727_BrCond_0)
+                                                                  0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/io_in_in1[1] (net)              0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/U22/I (LVT_INHDV2)    0.1804    0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/U22/ZN (LVT_INHDV2)   0.0794    0.0682     2.8395 f
+  hart0/fetch_io_change_pc_brcond/n27 (net)     2                 0.0000     2.8395 f
+  hart0/fetch_io_change_pc_brcond/U17/A1 (LVT_AOI211HDV4)
+                                                        0.0794    0.0000     2.8395 f
+  hart0/fetch_io_change_pc_brcond/U17/ZN (LVT_AOI211HDV4)
+                                                        0.1816    0.1301     2.9696 r
+  hart0/fetch_io_change_pc_brcond/n28 (net)     1                 0.0000     2.9696 r
+  hart0/fetch_io_change_pc_brcond/U16/B (LVT_AOI21HDV2)
+                                                        0.1816    0.0000     2.9696 r
+  hart0/fetch_io_change_pc_brcond/U16/ZN (LVT_AOI21HDV2)
+                                                        0.0731    0.0502     3.0198 f
+  hart0/fetch_io_change_pc_brcond/n36 (net)     1                 0.0000     3.0198 f
+  hart0/fetch_io_change_pc_brcond/U240/A2 (LVT_OAI21HDV2)
+                                                        0.0731    0.0000     3.0198 f
+  hart0/fetch_io_change_pc_brcond/U240/ZN (LVT_OAI21HDV2)
+                                                        0.1648    0.1212     3.1409 r
+  hart0/fetch_io_change_pc_brcond/n267 (net)
+                                                2                 0.0000     3.1409 r
+  hart0/fetch_io_change_pc_brcond/U11/I (LVT_INHDV2)    0.1648    0.0000     3.1409 r
+  hart0/fetch_io_change_pc_brcond/U11/ZN (LVT_INHDV2)   0.0516    0.0415     3.1824 f
+  hart0/fetch_io_change_pc_brcond/n39 (net)     1                 0.0000     3.1824 f
+  hart0/fetch_io_change_pc_brcond/U23/A1 (LVT_NOR2HDV2)
+                                                        0.0516    0.0000     3.1824 f
+  hart0/fetch_io_change_pc_brcond/U23/ZN (LVT_NOR2HDV2)
+                                                        0.1072    0.0685     3.2510 r
+  hart0/fetch_io_change_pc_brcond/n40 (net)     1                 0.0000     3.2510 r
+  hart0/fetch_io_change_pc_brcond/U242/C (LVT_AOI211HDV2)
+                                                        0.1072    0.0000     3.2510 r
+  hart0/fetch_io_change_pc_brcond/U242/ZN (LVT_AOI211HDV2)
+                                                        0.1114    0.0460     3.2970 f
+  hart0/fetch_io_change_pc_brcond/n44 (net)     1                 0.0000     3.2970 f
+  hart0/fetch_io_change_pc_brcond/U24/C (LVT_AOI211HDV2)
+                                                        0.1114    0.0000     3.2970 f
+  hart0/fetch_io_change_pc_brcond/U24/ZN (LVT_AOI211HDV2)
+                                                        0.2126    0.1369     3.4339 r
+  hart0/fetch_io_change_pc_brcond/n54 (net)     1                 0.0000     3.4339 r
+  hart0/fetch_io_change_pc_brcond/U57/A1 (LVT_OAI21HDV2)
+                                                        0.2126    0.0000     3.4339 r
+  hart0/fetch_io_change_pc_brcond/U57/ZN (LVT_OAI21HDV2)
+                                                        0.0778    0.0730     3.5069 f
+  hart0/fetch_io_change_pc_brcond/n55 (net)     1                 0.0000     3.5069 f
+  hart0/fetch_io_change_pc_brcond/U5/A2 (LVT_NAND2HDV2)
+                                                        0.0778    0.0000     3.5069 f
+  hart0/fetch_io_change_pc_brcond/U5/ZN (LVT_NAND2HDV2)
+                                                        0.0587    0.0537     3.5605 r
+  hart0/fetch_io_change_pc_brcond/n64 (net)     1                 0.0000     3.5605 r
+  hart0/fetch_io_change_pc_brcond/U14/A1 (LVT_AOI21HDV2)
+                                                        0.0587    0.0000     3.5605 r
+  hart0/fetch_io_change_pc_brcond/U14/ZN (LVT_AOI21HDV2)
+                                                        0.0957    0.0578     3.6183 f
+  hart0/fetch_io_change_pc_brcond/n95 (net)     1                 0.0000     3.6183 f
+  hart0/fetch_io_change_pc_brcond/U13/A1 (LVT_OAI21HDV2)
+                                                        0.0957    0.0000     3.6183 f
+  hart0/fetch_io_change_pc_brcond/U13/ZN (LVT_OAI21HDV2)
+                                                        0.1335    0.1015     3.7198 r
+  hart0/fetch_io_change_pc_brcond/n102 (net)
+                                                1                 0.0000     3.7198 r
+  hart0/fetch_io_change_pc_brcond/U312/A1 (LVT_NAND2HDV2)
+                                                        0.1335    0.0000     3.7198 r
+  hart0/fetch_io_change_pc_brcond/U312/ZN (LVT_NAND2HDV2)
+                                                        0.0597    0.0529     3.7727 f
+  hart0/fetch_io_change_pc_brcond/n127 (net)
+                                                1                 0.0000     3.7727 f
+  hart0/fetch_io_change_pc_brcond/U338/A1 (LVT_NAND3HDV1)
+                                                        0.0597    0.0000     3.7727 f
+  hart0/fetch_io_change_pc_brcond/U338/ZN (LVT_NAND3HDV1)
+                                                        0.0867    0.0536     3.8263 r
+  hart0/fetch_io_change_pc_brcond/n133 (net)
+                                                1                 0.0000     3.8263 r
+  hart0/fetch_io_change_pc_brcond/U346/A1 (LVT_NAND2HDV1)
+                                                        0.0867    0.0000     3.8263 r
+  hart0/fetch_io_change_pc_brcond/U346/ZN (LVT_NAND2HDV1)
+                                                        0.0677    0.0604     3.8867 f
+  hart0/fetch_io_change_pc_brcond/n143 (net)
+                                                1                 0.0000     3.8867 f
+  hart0/fetch_io_change_pc_brcond/U354/A1 (LVT_NAND2HDV2)
+                                                        0.0677    0.0000     3.8867 f
+  hart0/fetch_io_change_pc_brcond/U354/ZN (LVT_NAND2HDV2)
+                                                        0.0615    0.0456     3.9323 r
+  hart0/fetch_io_change_pc_brcond/n153 (net)
+                                                1                 0.0000     3.9323 r
+  hart0/fetch_io_change_pc_brcond/U364/A1 (LVT_NAND2HDV2)
+                                                        0.0615    0.0000     3.9323 r
+  hart0/fetch_io_change_pc_brcond/U364/ZN (LVT_NAND2HDV2)
+                                                        0.0593    0.0465     3.9788 f
+  hart0/fetch_io_change_pc_brcond/n173 (net)
+                                                1                 0.0000     3.9788 f
+  hart0/fetch_io_change_pc_brcond/U50/A1 (LVT_AOI21HDV2)
+                                                        0.0593    0.0000     3.9788 f
+  hart0/fetch_io_change_pc_brcond/U50/ZN (LVT_AOI21HDV2)
+                                                        0.1313    0.0872     4.0660 r
+  hart0/fetch_io_change_pc_brcond/n181 (net)
+                                                1                 0.0000     4.0660 r
+  hart0/fetch_io_change_pc_brcond/U49/B1 (LVT_IOA22HDV2)
+                                                        0.1313    0.0000     4.0660 r
+  hart0/fetch_io_change_pc_brcond/U49/ZN (LVT_IOA22HDV2)
+                                                        0.0876    0.0681     4.1341 f
+  hart0/fetch_io_change_pc_brcond/n183 (net)
+                                                1                 0.0000     4.1341 f
+  hart0/fetch_io_change_pc_brcond/U7/A1 (LVT_NAND2HDV2)
+                                                        0.0876    0.0000     4.1341 f
+  hart0/fetch_io_change_pc_brcond/U7/ZN (LVT_NAND2HDV2)
+                                                        0.0701    0.0490     4.1831 r
+  hart0/fetch_io_change_pc_brcond/n186 (net)
+                                                1                 0.0000     4.1831 r
+  hart0/fetch_io_change_pc_brcond/U48/A1 (LVT_NAND2HDV2)
+                                                        0.0701    0.0000     4.1831 r
+  hart0/fetch_io_change_pc_brcond/U48/ZN (LVT_NAND2HDV2)
+                                                        0.0510    0.0451     4.2282 f
+  hart0/fetch_io_change_pc_brcond/n187 (net)
+                                                1                 0.0000     4.2282 f
+  hart0/fetch_io_change_pc_brcond/U47/B (LVT_IOA21HDV1)
+                                                        0.0510    0.0000     4.2282 f
+  hart0/fetch_io_change_pc_brcond/U47/ZN (LVT_IOA21HDV1)
+                                                        0.0827    0.0545     4.2827 r
+  hart0/fetch_io_change_pc_brcond/n189 (net)
+                                                1                 0.0000     4.2827 r
+  hart0/fetch_io_change_pc_brcond/U45/B (LVT_IOA21HDV2)
+                                                        0.0827    0.0000     4.2827 r
+  hart0/fetch_io_change_pc_brcond/U45/ZN (LVT_IOA21HDV2)
+                                                        0.0648    0.0531     4.3357 f
+  hart0/fetch_io_change_pc_brcond/n191 (net)
+                                                1                 0.0000     4.3357 f
+  hart0/fetch_io_change_pc_brcond/U387/B (LVT_IOA21HDV2)
+                                                        0.0648    0.0000     4.3357 f
+  hart0/fetch_io_change_pc_brcond/U387/ZN (LVT_IOA21HDV2)
+                                                        0.0731    0.0511     4.3869 r
+  hart0/fetch_io_change_pc_brcond/n192 (net)
+                                                1                 0.0000     4.3869 r
+  hart0/fetch_io_change_pc_brcond/U388/B (LVT_IOA21HDV2)
+                                                        0.0731    0.0000     4.3869 r
+  hart0/fetch_io_change_pc_brcond/U388/ZN (LVT_IOA21HDV2)
+                                                        0.0648    0.0521     4.4390 f
+  hart0/fetch_io_change_pc_brcond/n194 (net)
+                                                1                 0.0000     4.4390 f
+  hart0/fetch_io_change_pc_brcond/U389/B (LVT_IOA21HDV2)
+                                                        0.0648    0.0000     4.4390 f
+  hart0/fetch_io_change_pc_brcond/U389/ZN (LVT_IOA21HDV2)
+                                                        0.0731    0.0511     4.4901 r
+  hart0/fetch_io_change_pc_brcond/n196 (net)
+                                                1                 0.0000     4.4901 r
+  hart0/fetch_io_change_pc_brcond/U390/B (LVT_IOA21HDV2)
+                                                        0.0731    0.0000     4.4901 r
+  hart0/fetch_io_change_pc_brcond/U390/ZN (LVT_IOA21HDV2)
+                                                        0.0658    0.0529     4.5430 f
+  hart0/fetch_io_change_pc_brcond/n200 (net)
+                                                1                 0.0000     4.5430 f
+  hart0/fetch_io_change_pc_brcond/U42/A1 (LVT_NAND2HDV2)
+                                                        0.0658    0.0000     4.5430 f
+  hart0/fetch_io_change_pc_brcond/U42/ZN (LVT_NAND2HDV2)
+                                                        0.0650    0.0451     4.5881 r
+  hart0/fetch_io_change_pc_brcond/n202 (net)
+                                                1                 0.0000     4.5881 r
+  hart0/fetch_io_change_pc_brcond/U41/A1 (LVT_NAND2HDV2)
+                                                        0.0650    0.0000     4.5881 r
+  hart0/fetch_io_change_pc_brcond/U41/ZN (LVT_NAND2HDV2)
+                                                        0.0617    0.0474     4.6355 f
+  hart0/fetch_io_change_pc_brcond/n205 (net)
+                                                1                 0.0000     4.6355 f
+  hart0/fetch_io_change_pc_brcond/U40/A1 (LVT_NAND2HDV2)
+                                                        0.0617    0.0000     4.6355 f
+  hart0/fetch_io_change_pc_brcond/U40/ZN (LVT_NAND2HDV2)
+                                                        0.0673    0.0440     4.6796 r
+  hart0/fetch_io_change_pc_brcond/n208 (net)
+                                                1                 0.0000     4.6796 r
+  hart0/fetch_io_change_pc_brcond/U39/A1 (LVT_NAND2HDV2)
+                                                        0.0673    0.0000     4.6796 r
+  hart0/fetch_io_change_pc_brcond/U39/ZN (LVT_NAND2HDV2)
+                                                        0.0555    0.0479     4.7274 f
+  hart0/fetch_io_change_pc_brcond/n210 (net)
+                                                1                 0.0000     4.7274 f
+  hart0/fetch_io_change_pc_brcond/U38/A1 (LVT_NAND2HDV2)
+                                                        0.0555    0.0000     4.7274 f
+  hart0/fetch_io_change_pc_brcond/U38/ZN (LVT_NAND2HDV2)
+                                                        0.0737    0.0425     4.7699 r
+  hart0/fetch_io_change_pc_brcond/n213 (net)
+                                                1                 0.0000     4.7699 r
+  hart0/fetch_io_change_pc_brcond/U37/A1 (LVT_NAND2HDV2)
+                                                        0.0737    0.0000     4.7699 r
+  hart0/fetch_io_change_pc_brcond/U37/ZN (LVT_NAND2HDV2)
+                                                        0.0555    0.0492     4.8191 f
+  hart0/fetch_io_change_pc_brcond/n215 (net)
+                                                1                 0.0000     4.8191 f
+  hart0/fetch_io_change_pc_brcond/U36/A1 (LVT_NAND2HDV2)
+                                                        0.0555    0.0000     4.8191 f
+  hart0/fetch_io_change_pc_brcond/U36/ZN (LVT_NAND2HDV2)
+                                                        0.0737    0.0425     4.8615 r
+  hart0/fetch_io_change_pc_brcond/n217 (net)
+                                                1                 0.0000     4.8615 r
+  hart0/fetch_io_change_pc_brcond/U35/A1 (LVT_NAND2HDV2)
+                                                        0.0737    0.0000     4.8615 r
+  hart0/fetch_io_change_pc_brcond/U35/ZN (LVT_NAND2HDV2)
+                                                        0.0586    0.0492     4.9107 f
+  hart0/fetch_io_change_pc_brcond/n220 (net)
+                                                1                 0.0000     4.9107 f
+  hart0/fetch_io_change_pc_brcond/U34/A1 (LVT_NAND2HDV2)
+                                                        0.0586    0.0000     4.9107 f
+  hart0/fetch_io_change_pc_brcond/U34/ZN (LVT_NAND2HDV2)
+                                                        0.0673    0.0433     4.9540 r
+  hart0/fetch_io_change_pc_brcond/n223 (net)
+                                                1                 0.0000     4.9540 r
+  hart0/fetch_io_change_pc_brcond/U33/A1 (LVT_NAND2HDV2)
+                                                        0.0673    0.0000     4.9540 r
+  hart0/fetch_io_change_pc_brcond/U33/ZN (LVT_NAND2HDV2)
+                                                        0.0747    0.0608     5.0148 f
+  hart0/fetch_io_change_pc_brcond/n227 (net)
+                                                1                 0.0000     5.0148 f
+  hart0/fetch_io_change_pc_brcond/U391/A1 (LVT_AOI21HDV4)
+                                                        0.0747    0.0000     5.0148 f
+  hart0/fetch_io_change_pc_brcond/U391/ZN (LVT_AOI21HDV4)
+                                                        0.1229    0.0868     5.1016 r
+  hart0/fetch_io_change_pc_brcond/n230 (net)
+                                                1                 0.0000     5.1016 r
+  hart0/fetch_io_change_pc_brcond/U392/A1 (LVT_OAI21HDV4)
+                                                        0.1229    0.0000     5.1016 r
+  hart0/fetch_io_change_pc_brcond/U392/ZN (LVT_OAI21HDV4)
+                                                        0.0859    0.0627     5.1643 f
+  hart0/fetch_io_change_pc_brcond/n232 (net)
+                                                1                 0.0000     5.1643 f
+  hart0/fetch_io_change_pc_brcond/U393/A1 (LVT_NAND2HDV4)
+                                                        0.0859    0.0000     5.1643 f
+  hart0/fetch_io_change_pc_brcond/U393/ZN (LVT_NAND2HDV4)
+                                                        0.0608    0.0478     5.2121 r
+  hart0/fetch_io_change_pc_brcond/n234 (net)
+                                                1                 0.0000     5.2121 r
+  hart0/fetch_io_change_pc_brcond/U394/A1 (LVT_NAND2HDV4)
+                                                        0.0608    0.0000     5.2121 r
+  hart0/fetch_io_change_pc_brcond/U394/ZN (LVT_NAND2HDV4)
+                                                        0.0610    0.0457     5.2577 f
+  hart0/fetch_io_change_pc_brcond/n237 (net)
+                                                1                 0.0000     5.2577 f
+  hart0/fetch_io_change_pc_brcond/U395/A1 (LVT_AOI21HDV4)
+                                                        0.0610    0.0000     5.2577 f
+  hart0/fetch_io_change_pc_brcond/U395/ZN (LVT_AOI21HDV4)
+                                                        0.1175    0.0854     5.3432 r
+  hart0/fetch_io_change_pc_brcond/n238 (net)
+                                                1                 0.0000     5.3432 r
+  hart0/fetch_io_change_pc_brcond/U396/B (LVT_IAO21HDV4)
+                                                        0.1175    0.0000     5.3432 r
+  hart0/fetch_io_change_pc_brcond/U396/ZN (LVT_IAO21HDV4)
+                                                        0.0540    0.0459     5.3890 f
+  hart0/fetch_io_change_pc_brcond/n241 (net)
+                                                1                 0.0000     5.3890 f
+  hart0/fetch_io_change_pc_brcond/U397/B1 (LVT_IOA22HDV4)
+                                                        0.0540    0.0000     5.3890 f
+  hart0/fetch_io_change_pc_brcond/U397/ZN (LVT_IOA22HDV4)
+                                                        0.1766    0.1114     5.5005 r
+  hart0/fetch_io_change_pc_brcond/n581 (net)
+                                                2                 0.0000     5.5005 r
+  hart0/fetch_io_change_pc_brcond/U6/A1 (LVT_OAI21HDV4)
+                                                        0.1766    0.0000     5.5005 r
+  hart0/fetch_io_change_pc_brcond/U6/ZN (LVT_OAI21HDV4)
+                                                        0.0663    0.0676     5.5680 f
+  hart0/fetch_io_change_pc_brcond/n582 (net)
+                                                1                 0.0000     5.5680 f
+  hart0/fetch_io_change_pc_brcond/U598/B (LVT_AOI21HDV4)
+                                                        0.0663    0.0000     5.5680 f
+  hart0/fetch_io_change_pc_brcond/U598/ZN (LVT_AOI21HDV4)
+                                                        0.1360    0.0878     5.6559 r
+  hart0/fetch_io_change_pc_brcond/io_change_pc (net)
+                                                2                 0.0000     5.6559 r
+  hart0/fetch_io_change_pc_brcond/io_change_pc (ysyx_210727_BrCond_0)
+                                                                  0.0000     5.6559 r
+  hart0/fetch_io_change_pc_brcond_io_change_pc (net)              0.0000     5.6559 r
+  hart0/U52/A2 (LVT_AND2HDV8)                           0.1360    0.0000     5.6559 r
+  hart0/U52/Z (LVT_AND2HDV8)                            0.0778    0.1250     5.7809 r
+  hart0/fetch_io_change_pc (net)                5                 0.0000     5.7809 r
+  hart0/fetch/io_change_pc (ysyx_210727_Fetch_0)                  0.0000     5.7809 r
+  hart0/fetch/io_change_pc (net)                                  0.0000     5.7809 r
+  hart0/fetch/U63/I (LVT_INHDV8)                        0.0778    0.0000     5.7809 r
+  hart0/fetch/U63/ZN (LVT_INHDV8)                       0.0337    0.0326     5.8135 f
+  hart0/fetch/n27 (net)                         1                 0.0000     5.8135 f
+  hart0/fetch/U4/A1 (LVT_NAND2HDV8)                     0.0337    0.0000     5.8135 f
+  hart0/fetch/U4/ZN (LVT_NAND2HDV8)                     0.1320    0.0691     5.8827 r
+  hart0/fetch/n12 (net)                        15                 0.0000     5.8827 r
+  hart0/fetch/U15/I (LVT_INHDV8)                        0.1320    0.0000     5.8827 r
+  hart0/fetch/U15/ZN (LVT_INHDV8)                       0.0512    0.0452     5.9278 f
+  hart0/fetch/n244 (net)                        8                 0.0000     5.9278 f
+  hart0/fetch/U83/A1 (LVT_NAND2HDV1)                    0.0512    0.0000     5.9278 f
+  hart0/fetch/U83/ZN (LVT_NAND2HDV1)                    0.1069    0.0556     5.9835 r
+  hart0/fetch/n182 (net)                        2                 0.0000     5.9835 r
+  hart0/fetch/U255/A1 (LVT_AO21HDV2)                    0.1069    0.0000     5.9835 r
+  hart0/fetch/U255/Z (LVT_AO21HDV2)                     0.0546    0.1370     6.1204 r
+  hart0/fetch/n188 (net)                        1                 0.0000     6.1204 r
+  hart0/fetch/U20/A1 (LVT_NAND4HDV1)                    0.0546    0.0000     6.1204 r
+  hart0/fetch/U20/ZN (LVT_NAND4HDV1)                    0.1320    0.0803     6.2007 f
+  hart0/fetch/n123 (net)                        1                 0.0000     6.2007 f
+  hart0/fetch/reg_pc_1_reg_13_/D (LVT_DQHDV2)           0.1320    0.0000     6.2007 f
+  data arrival time                                                          6.2007
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  hart0/fetch/reg_pc_1_reg_13_/CK (LVT_DQHDV2)                    0.0000     6.3500 r
+  library setup time                                             -0.1492     6.2008
+  data required time                                                         6.2008
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2008
+  data arrival time                                                         -6.2007
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
+  Startpoint: hart0/execute/reg_rs1_data_reg_9_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: hart0/fetch/reg_pc_1_reg_17_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  hart0/execute/reg_rs1_data_reg_9_/CK (LVT_DQHDV2)     0.0000    0.0000 #   0.0000 r
+  hart0/execute/reg_rs1_data_reg_9_/Q (LVT_DQHDV2)      0.1265    0.2757     0.2757 f
+  hart0/execute/io__alu_in_in0[9] (net)         5                 0.0000     0.2757 f
+  hart0/execute/U182/A1 (LVT_NOR2HDV4)                  0.1265    0.0000     0.2757 f
+  hart0/execute/U182/ZN (LVT_NOR2HDV4)                  0.1399    0.1044     0.3802 r
+  hart0/execute/n613 (net)                      3                 0.0000     0.3802 r
+  hart0/execute/U211/A2 (LVT_OAI21HDV4)                 0.1399    0.0000     0.3802 r
+  hart0/execute/U211/ZN (LVT_OAI21HDV4)                 0.0784    0.0787     0.4588 f
+  hart0/execute/n637 (net)                      3                 0.0000     0.4588 f
+  hart0/execute/U215/A2 (LVT_AOI21HDV2)                 0.0784    0.0000     0.4588 f
+  hart0/execute/U215/ZN (LVT_AOI21HDV2)                 0.1903    0.1421     0.6010 r
+  hart0/execute/n649 (net)                      3                 0.0000     0.6010 r
+  hart0/execute/U594/I (LVT_INHDV1)                     0.1903    0.0000     0.6010 r
+  hart0/execute/U594/ZN (LVT_INHDV1)                    0.0889    0.0755     0.6764 f
+  hart0/execute/n680 (net)                      3                 0.0000     0.6764 f
+  hart0/execute/U601/A1 (LVT_AOI21HDV1)                 0.0889    0.0000     0.6764 f
+  hart0/execute/U601/ZN (LVT_AOI21HDV1)                 0.1442    0.1086     0.7850 r
+  hart0/execute/n663 (net)                      1                 0.0000     0.7850 r
+  hart0/execute/U602/B (LVT_OAI21HDV2)                  0.1442    0.0000     0.7850 r
+  hart0/execute/U602/ZN (LVT_OAI21HDV2)                 0.0804    0.0741     0.8592 f
+  hart0/execute/n667 (net)                      1                 0.0000     0.8592 f
+  hart0/execute/U605/A1 (LVT_XNOR2HDV1)                 0.0804    0.0000     0.8592 f
+  hart0/execute/U605/ZN (LVT_XNOR2HDV1)                 0.0858    0.1532     1.0124 f
+  hart0/execute/io__dread_bits_addr[14] (net)
+                                                2                 0.0000     1.0124 f
+  hart0/execute/io__dread_bits_addr[14] (ysyx_210727_Execute_0)   0.0000     1.0124 f
+  hart0/io_dread_bits_addr[14] (net)                              0.0000     1.0124 f
+  hart0/io_dread_bits_addr[14] (ysyx_210727_HikelCore_0)          0.0000     1.0124 f
+  hart0_io_dread_bits_addr[14] (net)                              0.0000     1.0124 f
+  lsu/io_dread_bits_addr[14] (ysyx_210727_Lsu_0)                  0.0000     1.0124 f
+  lsu/io_dread_bits_addr[14] (net)                                0.0000     1.0124 f
+  lsu/arbiter/io_dread_bits_addr[14] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     1.0124 f
+  lsu/arbiter/io_dread_bits_addr[14] (net)                        0.0000     1.0124 f
+  lsu/arbiter/U75/I0 (LVT_MUX2HDV2)                     0.0858    0.0000     1.0124 f
+  lsu/arbiter/U75/Z (LVT_MUX2HDV2)                      0.0863    0.1966     1.2090 f
+  lsu/arbiter/io_read_bits_addr[14] (net)       3                 0.0000     1.2090 f
+  lsu/arbiter/io_read_bits_addr[14] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     1.2090 f
+  lsu/io_clint_read_bits_addr[14] (net)                           0.0000     1.2090 f
+  lsu/io_clint_read_bits_addr[14] (ysyx_210727_Lsu_0)             0.0000     1.2090 f
+  lsu_io_clint_read_bits_addr[14] (net)                           0.0000     1.2090 f
+  clint/io_read_bits_addr[14] (ysyx_210727_Clint_0)               0.0000     1.2090 f
+  clint/io_read_bits_addr[14] (net)                               0.0000     1.2090 f
+  clint/U45/I (LVT_INHDV1)                              0.0863    0.0000     1.2090 f
+  clint/U45/ZN (LVT_INHDV1)                             0.0542    0.0486     1.2576 r
+  clint/n7 (net)                                1                 0.0000     1.2576 r
+  clint/U46/A4 (LVT_NAND4HDV1)                          0.0542    0.0000     1.2576 r
+  clint/U46/ZN (LVT_NAND4HDV1)                          0.1450    0.1155     1.3731 f
+  clint/n9 (net)                                1                 0.0000     1.3731 f
+  clint/U13/A2 (LVT_NOR2HDV1)                           0.1450    0.0000     1.3731 f
+  clint/U13/ZN (LVT_NOR2HDV1)                           0.1135    0.0927     1.4658 r
+  clint/n11 (net)                               1                 0.0000     1.4658 r
+  clint/U47/A1 (LVT_NAND3HDV1)                          0.1135    0.0000     1.4658 r
+  clint/U47/ZN (LVT_NAND3HDV1)                          0.1394    0.1033     1.5691 f
+  clint/n18 (net)                               1                 0.0000     1.5691 f
+  clint/U10/A1 (LVT_OR3HDV8)                            0.1394    0.0000     1.5691 f
+  clint/U10/Z (LVT_OR3HDV8)                             0.0911    0.2082     1.7773 f
+  clint/n4 (net)                                3                 0.0000     1.7773 f
+  clint/U4/I (LVT_INHDV8)                               0.0911    0.0000     1.7773 f
+  clint/U4/ZN (LVT_INHDV8)                              0.1054    0.0810     1.8584 r
+  clint/n1 (net)                               28                 0.0000     1.8584 r
+  clint/U70/A2 (LVT_AO22HDV1)                           0.1054    0.0000     1.8584 r
+  clint/U70/Z (LVT_AO22HDV1)                            0.1221    0.2123     2.0707 r
+  clint/io_read_bits_rdata[41] (net)            3                 0.0000     2.0707 r
+  clint/io_read_bits_rdata[41] (ysyx_210727_Clint_0)              0.0000     2.0707 r
+  clint_io_read_bits_rdata[41] (net)                              0.0000     2.0707 r
+  lsu/io_clint_read_bits_rdata[41] (ysyx_210727_Lsu_0)            0.0000     2.0707 r
+  lsu/io_clint_read_bits_rdata[41] (net)                          0.0000     2.0707 r
+  lsu/U7/A1 (LVT_AOI22HDV2)                             0.1221    0.0000     2.0707 r
+  lsu/U7/ZN (LVT_AOI22HDV2)                             0.1467    0.0835     2.1542 f
+  lsu/n160 (net)                                1                 0.0000     2.1542 f
+  lsu/U9/A2 (LVT_NAND4HDV1)                             0.1467    0.0000     2.1542 f
+  lsu/U9/ZN (LVT_NAND4HDV1)                             0.1060    0.0787     2.2329 r
+  lsu/n167 (net)                                1                 0.0000     2.2329 r
+  lsu/U32/I0 (LVT_MUX2HDV1)                             0.1060    0.0000     2.2329 r
+  lsu/U32/Z (LVT_MUX2HDV1)                              0.0787    0.1664     2.3993 r
+  lsu/arbiter_io_read_bits_data[1] (net)        2                 0.0000     2.3993 r
+  lsu/arbiter/io_read_bits_data[1] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     2.3993 r
+  lsu/arbiter/io_read_bits_data[1] (net)                          0.0000     2.3993 r
+  lsu/arbiter/U38/I (LVT_BUFHDV1)                       0.0787    0.0000     2.3993 r
+  lsu/arbiter/U38/Z (LVT_BUFHDV1)                       0.0557    0.0935     2.4928 r
+  lsu/arbiter/io_dread_bits_data[1] (net)       1                 0.0000     2.4928 r
+  lsu/arbiter/io_dread_bits_data[1] (ysyx_210727_LsuReadArbiter_0)
+                                                                  0.0000     2.4928 r
+  lsu/io_dread_bits_data[1] (net)                                 0.0000     2.4928 r
+  lsu/io_dread_bits_data[1] (ysyx_210727_Lsu_0)                   0.0000     2.4928 r
+  lsu_io_dread_bits_data[1] (net)                                 0.0000     2.4928 r
+  hart0/io_dread_bits_data[1] (ysyx_210727_HikelCore_0)           0.0000     2.4928 r
+  hart0/io_dread_bits_data[1] (net)                               0.0000     2.4928 r
+  hart0/execute/io__dread_bits_data[1] (ysyx_210727_Execute_0)    0.0000     2.4928 r
+  hart0/execute/io__dread_bits_data[1] (net)                      0.0000     2.4928 r
+  hart0/execute/U4/A1 (LVT_NAND2HDV2)                   0.0557    0.0000     2.4928 r
+  hart0/execute/U4/ZN (LVT_NAND2HDV2)                   0.1217    0.0581     2.5509 f
+  hart0/execute/n585 (net)                      1                 0.0000     2.5509 f
+  hart0/execute/U19/B (LVT_OAI211HDV4)                  0.1217    0.0000     2.5509 f
+  hart0/execute/U19/ZN (LVT_OAI211HDV4)                 0.1875    0.0652     2.6162 r
+  hart0/execute/io_out_data1[1] (net)           2                 0.0000     2.6162 r
+  hart0/execute/io_out_data1[1] (ysyx_210727_Execute_0)           0.0000     2.6162 r
+  hart0/execute_io_out_data1[1] (net)                             0.0000     2.6162 r
+  hart0/issue/exec_rd_data_0[1] (ysyx_210727_Issue_0)             0.0000     2.6162 r
+  hart0/issue/exec_rd_data_0[1] (net)                             0.0000     2.6162 r
+  hart0/issue/U6/I (LVT_INHDV4)                         0.1875    0.0000     2.6162 r
+  hart0/issue/U6/ZN (LVT_INHDV4)                        0.0595    0.0476     2.6638 f
+  hart0/issue/n469 (net)                        2                 0.0000     2.6638 f
+  hart0/issue/U39/A1 (LVT_OAI211HDV4)                   0.0595    0.0000     2.6638 f
+  hart0/issue/U39/ZN (LVT_OAI211HDV4)                   0.1804    0.1075     2.7713 r
+  hart0/issue/io_brcond_in1[1] (net)            2                 0.0000     2.7713 r
+  hart0/issue/io_brcond_in1[1] (ysyx_210727_Issue_0)              0.0000     2.7713 r
+  hart0/issue_io_brcond_in1[1] (net)                              0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/io_in_in1[1] (ysyx_210727_BrCond_0)
+                                                                  0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/io_in_in1[1] (net)              0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/U22/I (LVT_INHDV2)    0.1804    0.0000     2.7713 r
+  hart0/fetch_io_change_pc_brcond/U22/ZN (LVT_INHDV2)   0.0794    0.0682     2.8395 f
+  hart0/fetch_io_change_pc_brcond/n27 (net)     2                 0.0000     2.8395 f
+  hart0/fetch_io_change_pc_brcond/U17/A1 (LVT_AOI211HDV4)
+                                                        0.0794    0.0000     2.8395 f
+  hart0/fetch_io_change_pc_brcond/U17/ZN (LVT_AOI211HDV4)
+                                                        0.1816    0.1301     2.9696 r
+  hart0/fetch_io_change_pc_brcond/n28 (net)     1                 0.0000     2.9696 r
+  hart0/fetch_io_change_pc_brcond/U16/B (LVT_AOI21HDV2)
+                                                        0.1816    0.0000     2.9696 r
+  hart0/fetch_io_change_pc_brcond/U16/ZN (LVT_AOI21HDV2)
+                                                        0.0731    0.0502     3.0198 f
+  hart0/fetch_io_change_pc_brcond/n36 (net)     1                 0.0000     3.0198 f
+  hart0/fetch_io_change_pc_brcond/U240/A2 (LVT_OAI21HDV2)
+                                                        0.0731    0.0000     3.0198 f
+  hart0/fetch_io_change_pc_brcond/U240/ZN (LVT_OAI21HDV2)
+                                                        0.1648    0.1212     3.1409 r
+  hart0/fetch_io_change_pc_brcond/n267 (net)
+                                                2                 0.0000     3.1409 r
+  hart0/fetch_io_change_pc_brcond/U11/I (LVT_INHDV2)    0.1648    0.0000     3.1409 r
+  hart0/fetch_io_change_pc_brcond/U11/ZN (LVT_INHDV2)   0.0516    0.0415     3.1824 f
+  hart0/fetch_io_change_pc_brcond/n39 (net)     1                 0.0000     3.1824 f
+  hart0/fetch_io_change_pc_brcond/U23/A1 (LVT_NOR2HDV2)
+                                                        0.0516    0.0000     3.1824 f
+  hart0/fetch_io_change_pc_brcond/U23/ZN (LVT_NOR2HDV2)
+                                                        0.1072    0.0685     3.2510 r
+  hart0/fetch_io_change_pc_brcond/n40 (net)     1                 0.0000     3.2510 r
+  hart0/fetch_io_change_pc_brcond/U242/C (LVT_AOI211HDV2)
+                                                        0.1072    0.0000     3.2510 r
+  hart0/fetch_io_change_pc_brcond/U242/ZN (LVT_AOI211HDV2)
+                                                        0.1114    0.0460     3.2970 f
+  hart0/fetch_io_change_pc_brcond/n44 (net)     1                 0.0000     3.2970 f
+  hart0/fetch_io_change_pc_brcond/U24/C (LVT_AOI211HDV2)
+                                                        0.1114    0.0000     3.2970 f
+  hart0/fetch_io_change_pc_brcond/U24/ZN (LVT_AOI211HDV2)
+                                                        0.2126    0.1369     3.4339 r
+  hart0/fetch_io_change_pc_brcond/n54 (net)     1                 0.0000     3.4339 r
+  hart0/fetch_io_change_pc_brcond/U57/A1 (LVT_OAI21HDV2)
+                                                        0.2126    0.0000     3.4339 r
+  hart0/fetch_io_change_pc_brcond/U57/ZN (LVT_OAI21HDV2)
+                                                        0.0778    0.0730     3.5069 f
+  hart0/fetch_io_change_pc_brcond/n55 (net)     1                 0.0000     3.5069 f
+  hart0/fetch_io_change_pc_brcond/U5/A2 (LVT_NAND2HDV2)
+                                                        0.0778    0.0000     3.5069 f
+  hart0/fetch_io_change_pc_brcond/U5/ZN (LVT_NAND2HDV2)
+                                                        0.0587    0.0537     3.5605 r
+  hart0/fetch_io_change_pc_brcond/n64 (net)     1                 0.0000     3.5605 r
+  hart0/fetch_io_change_pc_brcond/U14/A1 (LVT_AOI21HDV2)
+                                                        0.0587    0.0000     3.5605 r
+  hart0/fetch_io_change_pc_brcond/U14/ZN (LVT_AOI21HDV2)
+                                                        0.0957    0.0578     3.6183 f
+  hart0/fetch_io_change_pc_brcond/n95 (net)     1                 0.0000     3.6183 f
+  hart0/fetch_io_change_pc_brcond/U13/A1 (LVT_OAI21HDV2)
+                                                        0.0957    0.0000     3.6183 f
+  hart0/fetch_io_change_pc_brcond/U13/ZN (LVT_OAI21HDV2)
+                                                        0.1335    0.1015     3.7198 r
+  hart0/fetch_io_change_pc_brcond/n102 (net)
+                                                1                 0.0000     3.7198 r
+  hart0/fetch_io_change_pc_brcond/U312/A1 (LVT_NAND2HDV2)
+                                                        0.1335    0.0000     3.7198 r
+  hart0/fetch_io_change_pc_brcond/U312/ZN (LVT_NAND2HDV2)
+                                                        0.0597    0.0529     3.7727 f
+  hart0/fetch_io_change_pc_brcond/n127 (net)
+                                                1                 0.0000     3.7727 f
+  hart0/fetch_io_change_pc_brcond/U338/A1 (LVT_NAND3HDV1)
+                                                        0.0597    0.0000     3.7727 f
+  hart0/fetch_io_change_pc_brcond/U338/ZN (LVT_NAND3HDV1)
+                                                        0.0867    0.0536     3.8263 r
+  hart0/fetch_io_change_pc_brcond/n133 (net)
+                                                1                 0.0000     3.8263 r
+  hart0/fetch_io_change_pc_brcond/U346/A1 (LVT_NAND2HDV1)
+                                                        0.0867    0.0000     3.8263 r
+  hart0/fetch_io_change_pc_brcond/U346/ZN (LVT_NAND2HDV1)
+                                                        0.0677    0.0604     3.8867 f
+  hart0/fetch_io_change_pc_brcond/n143 (net)
+                                                1                 0.0000     3.8867 f
+  hart0/fetch_io_change_pc_brcond/U354/A1 (LVT_NAND2HDV2)
+                                                        0.0677    0.0000     3.8867 f
+  hart0/fetch_io_change_pc_brcond/U354/ZN (LVT_NAND2HDV2)
+                                                        0.0615    0.0456     3.9323 r
+  hart0/fetch_io_change_pc_brcond/n153 (net)
+                                                1                 0.0000     3.9323 r
+  hart0/fetch_io_change_pc_brcond/U364/A1 (LVT_NAND2HDV2)
+                                                        0.0615    0.0000     3.9323 r
+  hart0/fetch_io_change_pc_brcond/U364/ZN (LVT_NAND2HDV2)
+                                                        0.0593    0.0465     3.9788 f
+  hart0/fetch_io_change_pc_brcond/n173 (net)
+                                                1                 0.0000     3.9788 f
+  hart0/fetch_io_change_pc_brcond/U50/A1 (LVT_AOI21HDV2)
+                                                        0.0593    0.0000     3.9788 f
+  hart0/fetch_io_change_pc_brcond/U50/ZN (LVT_AOI21HDV2)
+                                                        0.1313    0.0872     4.0660 r
+  hart0/fetch_io_change_pc_brcond/n181 (net)
+                                                1                 0.0000     4.0660 r
+  hart0/fetch_io_change_pc_brcond/U49/B1 (LVT_IOA22HDV2)
+                                                        0.1313    0.0000     4.0660 r
+  hart0/fetch_io_change_pc_brcond/U49/ZN (LVT_IOA22HDV2)
+                                                        0.0876    0.0681     4.1341 f
+  hart0/fetch_io_change_pc_brcond/n183 (net)
+                                                1                 0.0000     4.1341 f
+  hart0/fetch_io_change_pc_brcond/U7/A1 (LVT_NAND2HDV2)
+                                                        0.0876    0.0000     4.1341 f
+  hart0/fetch_io_change_pc_brcond/U7/ZN (LVT_NAND2HDV2)
+                                                        0.0701    0.0490     4.1831 r
+  hart0/fetch_io_change_pc_brcond/n186 (net)
+                                                1                 0.0000     4.1831 r
+  hart0/fetch_io_change_pc_brcond/U48/A1 (LVT_NAND2HDV2)
+                                                        0.0701    0.0000     4.1831 r
+  hart0/fetch_io_change_pc_brcond/U48/ZN (LVT_NAND2HDV2)
+                                                        0.0510    0.0451     4.2282 f
+  hart0/fetch_io_change_pc_brcond/n187 (net)
+                                                1                 0.0000     4.2282 f
+  hart0/fetch_io_change_pc_brcond/U47/B (LVT_IOA21HDV1)
+                                                        0.0510    0.0000     4.2282 f
+  hart0/fetch_io_change_pc_brcond/U47/ZN (LVT_IOA21HDV1)
+                                                        0.0827    0.0545     4.2827 r
+  hart0/fetch_io_change_pc_brcond/n189 (net)
+                                                1                 0.0000     4.2827 r
+  hart0/fetch_io_change_pc_brcond/U45/B (LVT_IOA21HDV2)
+                                                        0.0827    0.0000     4.2827 r
+  hart0/fetch_io_change_pc_brcond/U45/ZN (LVT_IOA21HDV2)
+                                                        0.0648    0.0531     4.3357 f
+  hart0/fetch_io_change_pc_brcond/n191 (net)
+                                                1                 0.0000     4.3357 f
+  hart0/fetch_io_change_pc_brcond/U387/B (LVT_IOA21HDV2)
+                                                        0.0648    0.0000     4.3357 f
+  hart0/fetch_io_change_pc_brcond/U387/ZN (LVT_IOA21HDV2)
+                                                        0.0731    0.0511     4.3869 r
+  hart0/fetch_io_change_pc_brcond/n192 (net)
+                                                1                 0.0000     4.3869 r
+  hart0/fetch_io_change_pc_brcond/U388/B (LVT_IOA21HDV2)
+                                                        0.0731    0.0000     4.3869 r
+  hart0/fetch_io_change_pc_brcond/U388/ZN (LVT_IOA21HDV2)
+                                                        0.0648    0.0521     4.4390 f
+  hart0/fetch_io_change_pc_brcond/n194 (net)
+                                                1                 0.0000     4.4390 f
+  hart0/fetch_io_change_pc_brcond/U389/B (LVT_IOA21HDV2)
+                                                        0.0648    0.0000     4.4390 f
+  hart0/fetch_io_change_pc_brcond/U389/ZN (LVT_IOA21HDV2)
+                                                        0.0731    0.0511     4.4901 r
+  hart0/fetch_io_change_pc_brcond/n196 (net)
+                                                1                 0.0000     4.4901 r
+  hart0/fetch_io_change_pc_brcond/U390/B (LVT_IOA21HDV2)
+                                                        0.0731    0.0000     4.4901 r
+  hart0/fetch_io_change_pc_brcond/U390/ZN (LVT_IOA21HDV2)
+                                                        0.0658    0.0529     4.5430 f
+  hart0/fetch_io_change_pc_brcond/n200 (net)
+                                                1                 0.0000     4.5430 f
+  hart0/fetch_io_change_pc_brcond/U42/A1 (LVT_NAND2HDV2)
+                                                        0.0658    0.0000     4.5430 f
+  hart0/fetch_io_change_pc_brcond/U42/ZN (LVT_NAND2HDV2)
+                                                        0.0650    0.0451     4.5881 r
+  hart0/fetch_io_change_pc_brcond/n202 (net)
+                                                1                 0.0000     4.5881 r
+  hart0/fetch_io_change_pc_brcond/U41/A1 (LVT_NAND2HDV2)
+                                                        0.0650    0.0000     4.5881 r
+  hart0/fetch_io_change_pc_brcond/U41/ZN (LVT_NAND2HDV2)
+                                                        0.0617    0.0474     4.6355 f
+  hart0/fetch_io_change_pc_brcond/n205 (net)
+                                                1                 0.0000     4.6355 f
+  hart0/fetch_io_change_pc_brcond/U40/A1 (LVT_NAND2HDV2)
+                                                        0.0617    0.0000     4.6355 f
+  hart0/fetch_io_change_pc_brcond/U40/ZN (LVT_NAND2HDV2)
+                                                        0.0673    0.0440     4.6796 r
+  hart0/fetch_io_change_pc_brcond/n208 (net)
+                                                1                 0.0000     4.6796 r
+  hart0/fetch_io_change_pc_brcond/U39/A1 (LVT_NAND2HDV2)
+                                                        0.0673    0.0000     4.6796 r
+  hart0/fetch_io_change_pc_brcond/U39/ZN (LVT_NAND2HDV2)
+                                                        0.0555    0.0479     4.7274 f
+  hart0/fetch_io_change_pc_brcond/n210 (net)
+                                                1                 0.0000     4.7274 f
+  hart0/fetch_io_change_pc_brcond/U38/A1 (LVT_NAND2HDV2)
+                                                        0.0555    0.0000     4.7274 f
+  hart0/fetch_io_change_pc_brcond/U38/ZN (LVT_NAND2HDV2)
+                                                        0.0737    0.0425     4.7699 r
+  hart0/fetch_io_change_pc_brcond/n213 (net)
+                                                1                 0.0000     4.7699 r
+  hart0/fetch_io_change_pc_brcond/U37/A1 (LVT_NAND2HDV2)
+                                                        0.0737    0.0000     4.7699 r
+  hart0/fetch_io_change_pc_brcond/U37/ZN (LVT_NAND2HDV2)
+                                                        0.0555    0.0492     4.8191 f
+  hart0/fetch_io_change_pc_brcond/n215 (net)
+                                                1                 0.0000     4.8191 f
+  hart0/fetch_io_change_pc_brcond/U36/A1 (LVT_NAND2HDV2)
+                                                        0.0555    0.0000     4.8191 f
+  hart0/fetch_io_change_pc_brcond/U36/ZN (LVT_NAND2HDV2)
+                                                        0.0737    0.0425     4.8615 r
+  hart0/fetch_io_change_pc_brcond/n217 (net)
+                                                1                 0.0000     4.8615 r
+  hart0/fetch_io_change_pc_brcond/U35/A1 (LVT_NAND2HDV2)
+                                                        0.0737    0.0000     4.8615 r
+  hart0/fetch_io_change_pc_brcond/U35/ZN (LVT_NAND2HDV2)
+                                                        0.0586    0.0492     4.9107 f
+  hart0/fetch_io_change_pc_brcond/n220 (net)
+                                                1                 0.0000     4.9107 f
+  hart0/fetch_io_change_pc_brcond/U34/A1 (LVT_NAND2HDV2)
+                                                        0.0586    0.0000     4.9107 f
+  hart0/fetch_io_change_pc_brcond/U34/ZN (LVT_NAND2HDV2)
+                                                        0.0673    0.0433     4.9540 r
+  hart0/fetch_io_change_pc_brcond/n223 (net)
+                                                1                 0.0000     4.9540 r
+  hart0/fetch_io_change_pc_brcond/U33/A1 (LVT_NAND2HDV2)
+                                                        0.0673    0.0000     4.9540 r
+  hart0/fetch_io_change_pc_brcond/U33/ZN (LVT_NAND2HDV2)
+                                                        0.0747    0.0608     5.0148 f
+  hart0/fetch_io_change_pc_brcond/n227 (net)
+                                                1                 0.0000     5.0148 f
+  hart0/fetch_io_change_pc_brcond/U391/A1 (LVT_AOI21HDV4)
+                                                        0.0747    0.0000     5.0148 f
+  hart0/fetch_io_change_pc_brcond/U391/ZN (LVT_AOI21HDV4)
+                                                        0.1229    0.0868     5.1016 r
+  hart0/fetch_io_change_pc_brcond/n230 (net)
+                                                1                 0.0000     5.1016 r
+  hart0/fetch_io_change_pc_brcond/U392/A1 (LVT_OAI21HDV4)
+                                                        0.1229    0.0000     5.1016 r
+  hart0/fetch_io_change_pc_brcond/U392/ZN (LVT_OAI21HDV4)
+                                                        0.0859    0.0627     5.1643 f
+  hart0/fetch_io_change_pc_brcond/n232 (net)
+                                                1                 0.0000     5.1643 f
+  hart0/fetch_io_change_pc_brcond/U393/A1 (LVT_NAND2HDV4)
+                                                        0.0859    0.0000     5.1643 f
+  hart0/fetch_io_change_pc_brcond/U393/ZN (LVT_NAND2HDV4)
+                                                        0.0608    0.0478     5.2121 r
+  hart0/fetch_io_change_pc_brcond/n234 (net)
+                                                1                 0.0000     5.2121 r
+  hart0/fetch_io_change_pc_brcond/U394/A1 (LVT_NAND2HDV4)
+                                                        0.0608    0.0000     5.2121 r
+  hart0/fetch_io_change_pc_brcond/U394/ZN (LVT_NAND2HDV4)
+                                                        0.0610    0.0457     5.2577 f
+  hart0/fetch_io_change_pc_brcond/n237 (net)
+                                                1                 0.0000     5.2577 f
+  hart0/fetch_io_change_pc_brcond/U395/A1 (LVT_AOI21HDV4)
+                                                        0.0610    0.0000     5.2577 f
+  hart0/fetch_io_change_pc_brcond/U395/ZN (LVT_AOI21HDV4)
+                                                        0.1175    0.0854     5.3432 r
+  hart0/fetch_io_change_pc_brcond/n238 (net)
+                                                1                 0.0000     5.3432 r
+  hart0/fetch_io_change_pc_brcond/U396/B (LVT_IAO21HDV4)
+                                                        0.1175    0.0000     5.3432 r
+  hart0/fetch_io_change_pc_brcond/U396/ZN (LVT_IAO21HDV4)
+                                                        0.0540    0.0459     5.3890 f
+  hart0/fetch_io_change_pc_brcond/n241 (net)
+                                                1                 0.0000     5.3890 f
+  hart0/fetch_io_change_pc_brcond/U397/B1 (LVT_IOA22HDV4)
+                                                        0.0540    0.0000     5.3890 f
+  hart0/fetch_io_change_pc_brcond/U397/ZN (LVT_IOA22HDV4)
+                                                        0.1766    0.1114     5.5005 r
+  hart0/fetch_io_change_pc_brcond/n581 (net)
+                                                2                 0.0000     5.5005 r
+  hart0/fetch_io_change_pc_brcond/U6/A1 (LVT_OAI21HDV4)
+                                                        0.1766    0.0000     5.5005 r
+  hart0/fetch_io_change_pc_brcond/U6/ZN (LVT_OAI21HDV4)
+                                                        0.0663    0.0676     5.5680 f
+  hart0/fetch_io_change_pc_brcond/n582 (net)
+                                                1                 0.0000     5.5680 f
+  hart0/fetch_io_change_pc_brcond/U598/B (LVT_AOI21HDV4)
+                                                        0.0663    0.0000     5.5680 f
+  hart0/fetch_io_change_pc_brcond/U598/ZN (LVT_AOI21HDV4)
+                                                        0.1360    0.0878     5.6559 r
+  hart0/fetch_io_change_pc_brcond/io_change_pc (net)
+                                                2                 0.0000     5.6559 r
+  hart0/fetch_io_change_pc_brcond/io_change_pc (ysyx_210727_BrCond_0)
+                                                                  0.0000     5.6559 r
+  hart0/fetch_io_change_pc_brcond_io_change_pc (net)              0.0000     5.6559 r
+  hart0/U52/A2 (LVT_AND2HDV8)                           0.1360    0.0000     5.6559 r
+  hart0/U52/Z (LVT_AND2HDV8)                            0.0778    0.1250     5.7809 r
+  hart0/fetch_io_change_pc (net)                5                 0.0000     5.7809 r
+  hart0/fetch/io_change_pc (ysyx_210727_Fetch_0)                  0.0000     5.7809 r
+  hart0/fetch/io_change_pc (net)                                  0.0000     5.7809 r
+  hart0/fetch/U63/I (LVT_INHDV8)                        0.0778    0.0000     5.7809 r
+  hart0/fetch/U63/ZN (LVT_INHDV8)                       0.0337    0.0326     5.8135 f
+  hart0/fetch/n27 (net)                         1                 0.0000     5.8135 f
+  hart0/fetch/U4/A1 (LVT_NAND2HDV8)                     0.0337    0.0000     5.8135 f
+  hart0/fetch/U4/ZN (LVT_NAND2HDV8)                     0.1320    0.0691     5.8827 r
+  hart0/fetch/n12 (net)                        15                 0.0000     5.8827 r
+  hart0/fetch/U15/I (LVT_INHDV8)                        0.1320    0.0000     5.8827 r
+  hart0/fetch/U15/ZN (LVT_INHDV8)                       0.0512    0.0452     5.9278 f
+  hart0/fetch/n244 (net)                        8                 0.0000     5.9278 f
+  hart0/fetch/U92/A1 (LVT_NAND2HDV1)                    0.0512    0.0000     5.9278 f
+  hart0/fetch/U92/ZN (LVT_NAND2HDV1)                    0.1069    0.0556     5.9835 r
+  hart0/fetch/n202 (net)                        2                 0.0000     5.9835 r
+  hart0/fetch/U274/A1 (LVT_AO21HDV2)                    0.1069    0.0000     5.9835 r
+  hart0/fetch/U274/Z (LVT_AO21HDV2)                     0.0545    0.1370     6.1204 r
+  hart0/fetch/n208 (net)                        1                 0.0000     6.1204 r
+  hart0/fetch/U21/A1 (LVT_NAND4HDV1)                    0.0545    0.0000     6.1204 r
+  hart0/fetch/U21/ZN (LVT_NAND4HDV1)                    0.1320    0.0803     6.2007 f
+  hart0/fetch/n119 (net)                        1                 0.0000     6.2007 f
+  hart0/fetch/reg_pc_1_reg_17_/D (LVT_DQHDV2)           0.1320    0.0000     6.2007 f
+  data arrival time                                                          6.2007
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  hart0/fetch/reg_pc_1_reg_17_/CK (LVT_DQHDV2)                    0.0000     6.3500 r
+  library setup time                                             -0.1492     6.2008
+  data required time                                                         6.2008
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2008
+  data arrival time                                                         -6.2007
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
