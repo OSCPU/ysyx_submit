@@ -1,0 +1,1364 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Sun_Oct_17_20:54:10_2021_+0800
+top_name: ysyx_210555
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+235190.7  235190.7  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+22171  22171  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210555
+Date   : Mon Oct 18 00:15:27 2021
+****************************************
+    
+Number of ports:                         9799
+Number of nets:                         31966
+Number of cells:                        22503
+Number of combinational cells:          18579
+Number of sequential cells:              3592
+Number of macros/black boxes:               0
+Number of buf/inv:                       3530
+Number of references:                       6
+Combinational area:             142446.594715
+Buf/Inv area:                    16133.565545
+Noncombinational area:           92744.134426
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                235190.729141
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  ------------------------------
+ysyx_210555                       235190.7291    100.0     784.0184      0.0000  0.0000  ysyx_210555
+uut_arbiter                         4717.5584      2.0    3847.4728    870.0856  0.0000  ysyx_210555_arbiter_0
+uut_axi_rw                         12315.6784      5.2   10576.8520   1738.8265  0.0000  ysyx_210555_axi_rw_0
+uut_clint                           8809.7849      3.7    5539.2312   3270.5537  0.0000  ysyx_210555_clint_0
+uut_cpu_diff                      208563.6890     88.7       0.0000      0.0000  0.0000  ysyx_210555_cpu_diff_0
+uut_cpu_diff/uut_rvcpu            208563.6890     88.7     193.6512      0.0000  0.0000  ysyx_210555_rvcpu_0
+uut_cpu_diff/uut_rvcpu/Rd_data_JU_mux
+                                    1147.1144      0.5    1147.1144      0.0000  0.0000  ysyx_210555_mux_3to1_2
+uut_cpu_diff/uut_rvcpu/Rs1_forward_mux
+                                    1763.0328      0.7    1763.0328      0.0000  0.0000  ysyx_210555_mux_4to1_4
+uut_cpu_diff/uut_rvcpu/Rs2_forward_mux
+                                    1772.4464      0.8    1772.4464      0.0000  0.0000  ysyx_210555_mux_4to1_7
+uut_cpu_diff/uut_rvcpu/csr_Rs1_imm_mux
+                                     718.1232      0.3     718.1232      0.0000  0.0000  ysyx_210555_mux_2to1_6
+uut_cpu_diff/uut_rvcpu/ex_forward_mux
+                                    1194.1824      0.5    1194.1824      0.0000  0.0000  ysyx_210555_mux_3to1_3
+uut_cpu_diff/uut_rvcpu/me_forward_mux
+                                    1734.7920      0.7    1734.7920      0.0000  0.0000  ysyx_210555_mux_4to1_6
+uut_cpu_diff/uut_rvcpu/op2_mux       817.6384      0.3     817.6384      0.0000  0.0000  ysyx_210555_mux_2to1_5
+uut_cpu_diff/uut_rvcpu/pc_add4_adder
+                                    1850.4448      0.8    1850.4448      0.0000  0.0000  ysyx_210555_adder_3
+uut_cpu_diff/uut_rvcpu/pc_adder     3656.5112      1.6    3656.5112      0.0000  0.0000  ysyx_210555_adder_2
+uut_cpu_diff/uut_rvcpu/pc_adder_a_mux
+                                     800.1560      0.3     800.1560      0.0000  0.0000  ysyx_210555_mux_2to1_7
+uut_cpu_diff/uut_rvcpu/pc_transf_mux
+                                     802.8456      0.3     802.8456      0.0000  0.0000  ysyx_210555_mux_2to1_4
+uut_cpu_diff/uut_rvcpu/uut_alu     18941.5079      8.1   18941.5079      0.0000  0.0000  ysyx_210555_alu_0
+uut_cpu_diff/uut_rvcpu/uut_branch_comp
+                                    3963.1256      1.7    3963.1256      0.0000  0.0000  ysyx_210555_branch_comp_0
+uut_cpu_diff/uut_rvcpu/uut_csr     20541.8203      8.7   11931.0656   8610.7547  0.0000  ysyx_210555_csr_0
+uut_cpu_diff/uut_rvcpu/uut_csr_op   1274.8704      0.5    1274.8704      0.0000  0.0000  ysyx_210555_csr_op_0
+uut_cpu_diff/uut_rvcpu/uut_ex_me   10268.8930      4.4    3344.5176   6924.3754  0.0000  ysyx_210555_ex_me_0
+uut_cpu_diff/uut_rvcpu/uut_forwarding
+                                     613.2288      0.3     613.2288      0.0000  0.0000  ysyx_210555_forwarding_0
+uut_cpu_diff/uut_rvcpu/uut_hazard_detect
+                                     162.7208      0.1     162.7208      0.0000  0.0000  ysyx_210555_hazard_detect_0
+uut_cpu_diff/uut_rvcpu/uut_id_ex   13027.0779      5.5    4211.9136   8815.1643  0.0000  ysyx_210555_id_ex_0
+uut_cpu_diff/uut_rvcpu/uut_if_axi    516.4032      0.2     516.4032      0.0000  0.0000  ysyx_210555_if_axi_0
+uut_cpu_diff/uut_rvcpu/uut_if_id    3761.4057      1.6    1274.8704   2486.5353  0.0000  ysyx_210555_if_id_0
+uut_cpu_diff/uut_rvcpu/uut_inst_decoder
+                                    1393.2128      0.6    1393.2128      0.0000  0.0000  ysyx_210555_inst_decoder_0
+uut_cpu_diff/uut_rvcpu/uut_inst_fetch
+                                    4236.1200      1.8    2600.8432   1635.2769  0.0000  ysyx_210555_inst_fetch_0
+uut_cpu_diff/uut_rvcpu/uut_me_wb   10080.6210      4.3    3309.5528   6771.0682  0.0000  ysyx_210555_me_wb_0
+uut_cpu_diff/uut_rvcpu/uut_mem_axi
+                                    2286.1600      1.0    2286.1600      0.0000  0.0000  ysyx_210555_mem_axi_0
+uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer
+                                      57.8264      0.0      57.8264      0.0000  0.0000  ysyx_210555_pc_ctrl_transfer_0
+uut_cpu_diff/uut_rvcpu/uut_regfile
+                                   99504.4425     42.3   47882.9486  51621.4939  0.0000  ysyx_210555_regfile_0
+uut_cpu_diff/uut_rvcpu/wb_mux       1483.3144      0.6    1483.3144      0.0000  0.0000  ysyx_210555_mux_4to1_5
+--------------------------------  -----------  -------  -----------  ----------  ------  ------------------------------
+Total                                                   142446.5947  92744.1344  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210555
+Date   : Mon Oct 18 00:15:25 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_36_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_/Q (LVT_DQHDV1)
+                                                        0.1130    0.2615     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result[60] (net)
+                                                4                 0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result[60] (ysyx_210555_ex_me_0)
+                                                                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/me_alu_result[60] (net)                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_addr[60] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_addr[60] (net)         0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U248/A1 (LVT_AND2HDV2)
+                                                        0.1130    0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U248/Z (LVT_AND2HDV2)
+                                                        0.0538    0.1246     0.3861 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_addr[60] (net)
+                                                2                 0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_addr[60] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/o_mem_addr[60] (net)                     0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/o_mem_addr[60] (ysyx_210555_rvcpu_0)     0.0000     0.3861 f
+  uut_cpu_diff/o_mem_addr[60] (net)                               0.0000     0.3861 f
+  uut_cpu_diff/o_mem_addr[60] (ysyx_210555_cpu_diff_0)            0.0000     0.3861 f
+  mem_addr[60] (net)                                              0.0000     0.3861 f
+  uut_arbiter/i_mem_addr[60] (ysyx_210555_arbiter_0)              0.0000     0.3861 f
+  uut_arbiter/i_mem_addr[60] (net)                                0.0000     0.3861 f
+  uut_arbiter/U20/A2 (LVT_NOR2HDV1)                     0.0538    0.0000     0.3861 f
+  uut_arbiter/U20/ZN (LVT_NOR2HDV1)                     0.1050    0.0813     0.4674 r
+  uut_arbiter/n24 (net)                         1                 0.0000     0.4674 r
+  uut_arbiter/U100/A3 (LVT_NAND3HDV1)                   0.1050    0.0000     0.4674 r
+  uut_arbiter/U100/ZN (LVT_NAND3HDV1)                   0.1572    0.1240     0.5914 f
+  uut_arbiter/n27 (net)                         1                 0.0000     0.5914 f
+  uut_arbiter/U102/A3 (LVT_NOR3HDV4)                    0.1572    0.0000     0.5914 f
+  uut_arbiter/U102/ZN (LVT_NOR3HDV4)                    0.1695    0.1374     0.7288 r
+  uut_arbiter/n79 (net)                         1                 0.0000     0.7288 r
+  uut_arbiter/U119/A1 (LVT_NAND3HDV4)                   0.1695    0.0000     0.7288 r
+  uut_arbiter/U119/ZN (LVT_NAND3HDV4)                   0.1047    0.0890     0.8178 f
+  uut_arbiter/n82 (net)                         2                 0.0000     0.8178 f
+  uut_arbiter/U54/A1 (LVT_INAND2HDV2)                   0.1047    0.0000     0.8178 f
+  uut_arbiter/U54/ZN (LVT_INAND2HDV2)                   0.1013    0.1556     0.9734 f
+  uut_arbiter/n88 (net)                         2                 0.0000     0.9734 f
+  uut_arbiter/U17/I (LVT_INHDV4)                        0.1013    0.0000     0.9734 f
+  uut_arbiter/U17/ZN (LVT_INHDV4)                       0.0708    0.0596     1.0331 r
+  uut_arbiter/n9 (net)                          1                 0.0000     1.0331 r
+  uut_arbiter/U11/I (LVT_INHDV8)                        0.0708    0.0000     1.0331 r
+  uut_arbiter/U11/ZN (LVT_INHDV8)                       0.0618    0.0551     1.0882 f
+  uut_arbiter/n7 (net)                          4                 0.0000     1.0882 f
+  uut_arbiter/U24/I (LVT_INHDV8)                        0.0618    0.0000     1.0882 f
+  uut_arbiter/U24/ZN (LVT_INHDV8)                       0.1529    0.1028     1.1910 r
+  uut_arbiter/n12 (net)                        52                 0.0000     1.1910 r
+  uut_arbiter/U39/A1 (LVT_AND2HDV1)                     0.1529    0.0000     1.1910 r
+  uut_arbiter/U39/Z (LVT_AND2HDV1)                      0.0865    0.1503     1.3413 r
+  uut_arbiter/o_clint_addr[6] (net)             2                 0.0000     1.3413 r
+  uut_arbiter/o_clint_addr[6] (ysyx_210555_arbiter_0)             0.0000     1.3413 r
+  clint_addr[6] (net)                                             0.0000     1.3413 r
+  uut_clint/i_clint_addr[6] (ysyx_210555_clint_0)                 0.0000     1.3413 r
+  uut_clint/i_clint_addr[6] (net)                                 0.0000     1.3413 r
+  uut_clint/U54/A4 (LVT_NAND4HDV1)                      0.0865    0.0000     1.3413 r
+  uut_clint/U54/ZN (LVT_NAND4HDV1)                      0.1341    0.1190     1.4603 f
+  uut_clint/n13 (net)                           1                 0.0000     1.4603 f
+  uut_clint/U55/A2 (LVT_NOR2HDV1)                       0.1341    0.0000     1.4603 f
+  uut_clint/U55/ZN (LVT_NOR2HDV1)                       0.1102    0.0898     1.5501 r
+  uut_clint/n17 (net)                           1                 0.0000     1.5501 r
+  uut_clint/U58/A1 (LVT_NAND4HDV1)                      0.1102    0.0000     1.5501 r
+  uut_clint/U58/ZN (LVT_NAND4HDV1)                      0.1357    0.0991     1.6492 f
+  uut_clint/n18 (net)                           1                 0.0000     1.6492 f
+  uut_clint/U59/A2 (LVT_NOR2HDV1)                       0.1357    0.0000     1.6492 f
+  uut_clint/U59/ZN (LVT_NOR2HDV1)                       0.1726    0.1283     1.7775 r
+  uut_clint/n381 (net)                          2                 0.0000     1.7775 r
+  uut_clint/U430/A1 (LVT_NAND2HDV2)                     0.1726    0.0000     1.7775 r
+  uut_clint/U430/ZN (LVT_NAND2HDV2)                     0.1760    0.1464     1.9238 f
+  uut_clint/n542 (net)                          8                 0.0000     1.9238 f
+  uut_clint/U8/I (LVT_BUFHDV6)                          0.1760    0.0000     1.9238 f
+  uut_clint/U8/Z (LVT_BUFHDV6)                          0.1990    0.2274     2.1512 f
+  uut_clint/n1 (net)                           57                 0.0000     2.1512 f
+  uut_clint/U449/B1 (LVT_OAI22HDV1)                     0.1990    0.0000     2.1512 f
+  uut_clint/U449/ZN (LVT_OAI22HDV1)                     0.1989    0.1466     2.2979 r
+  uut_clint/o_clint_rd_data[5] (net)            1                 0.0000     2.2979 r
+  uut_clint/o_clint_rd_data[5] (ysyx_210555_clint_0)              0.0000     2.2979 r
+  clint_rd_data[5] (net)                                          0.0000     2.2979 r
+  uut_arbiter/i_clint_rdata[5] (ysyx_210555_arbiter_0)            0.0000     2.2979 r
+  uut_arbiter/i_clint_rdata[5] (net)                              0.0000     2.2979 r
+  uut_arbiter/U71/A2 (LVT_IOA22HDV1)                    0.1989    0.0000     2.2979 r
+  uut_arbiter/U71/ZN (LVT_IOA22HDV1)                    0.1272    0.1420     2.4399 r
+  uut_arbiter/o_mem_rdata[5] (net)              1                 0.0000     2.4399 r
+  uut_arbiter/o_mem_rdata[5] (ysyx_210555_arbiter_0)              0.0000     2.4399 r
+  mem_rdata[5] (net)                                              0.0000     2.4399 r
+  uut_cpu_diff/i_mem_rdata[5] (ysyx_210555_cpu_diff_0)            0.0000     2.4399 r
+  uut_cpu_diff/i_mem_rdata[5] (net)                               0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/i_mem_rdata[5] (ysyx_210555_rvcpu_0)     0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/i_mem_rdata[5] (net)                     0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_rdata[5] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_rdata[5] (net)         0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U243/A1 (LVT_AND2HDV1)
+                                                        0.1272    0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U243/Z (LVT_AND2HDV1)
+                                                        0.0861    0.1403     2.5802 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_rd_data[5] (net)
+                                                2                 0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_rd_data[5] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_mem2reg_data[5] (net)                 0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/i_in1[5] (ysyx_210555_mux_4to1_6)
+                                                                  0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/i_in1[5] (net)            0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U219/A1 (LVT_NAND2HDV1)
+                                                        0.0861    0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U219/ZN (LVT_NAND2HDV1)
+                                                        0.1011    0.0552     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/n434 (net)
+                                                1                 0.0000     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U221/B (LVT_OAI211HDV1)
+                                                        0.1011    0.0000     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U221/ZN (LVT_OAI211HDV1)
+                                                        0.2424    0.0793     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/o_out[5] (net)
+                                                2                 0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/o_out[5] (ysyx_210555_mux_4to1_6)
+                                                                  0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_Rd_wr_data[5] (net)           0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/i_in2[5] (ysyx_210555_mux_4to1_7)
+                                                                  0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/i_in2[5] (net)           0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U213/I (LVT_INHDV1)
+                                                        0.2424    0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U213/ZN (LVT_INHDV1)
+                                                        0.0873    0.0687     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/n433 (net)
+                                                1                 0.0000     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U216/A1 (LVT_OAI211HDV4)
+                                                        0.0873    0.0000     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U216/ZN (LVT_OAI211HDV4)
+                                                        0.2287    0.1448     2.9281 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/o_out[5] (net)
+                                                6                 0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/o_out[5] (ysyx_210555_mux_4to1_7)
+                                                                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/id_Rs2_rd_data[5] (net)                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/i_Rs2[5] (ysyx_210555_branch_comp_0)
+                                                                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/i_Rs2[5] (net)           0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U160/I (LVT_INHDV1)
+                                                        0.2287    0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U160/ZN (LVT_INHDV1)
+                                                        0.0660    0.0484     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n43 (net)
+                                                1                 0.0000     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U132/A1 (LVT_AOI22HDV1)
+                                                        0.0660    0.0000     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U132/ZN (LVT_AOI22HDV1)
+                                                        0.1794    0.1260     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n44 (net)
+                                                1                 0.0000     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U161/B (LVT_OAI31HDV1)
+                                                        0.1794    0.0000     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U161/ZN (LVT_OAI31HDV1)
+                                                        0.1273    0.0968     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n48 (net)
+                                                1                 0.0000     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U165/A2 (LVT_OAI211HDV2)
+                                                        0.1273    0.0000     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U165/ZN (LVT_OAI211HDV2)
+                                                        0.1699    0.1318     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n50 (net)
+                                                1                 0.0000     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U166/B (LVT_AOI21HDV2)
+                                                        0.1699    0.0000     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U166/ZN (LVT_AOI21HDV2)
+                                                        0.1413    0.0482     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n52 (net)
+                                                1                 0.0000     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U167/C (LVT_AOI211HDV2)
+                                                        0.1413    0.0000     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U167/ZN (LVT_AOI211HDV2)
+                                                        0.2129    0.1438     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n56 (net)
+                                                1                 0.0000     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U123/A1 (LVT_IAO21HDV4)
+                                                        0.2129    0.0000     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U123/ZN (LVT_IAO21HDV4)
+                                                        0.1054    0.1398     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n14 (net)
+                                                1                 0.0000     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U122/A1 (LVT_OAI21HDV4)
+                                                        0.1054    0.0000     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U122/ZN (LVT_OAI21HDV4)
+                                                        0.0591    0.0537     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n13 (net)
+                                                1                 0.0000     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U27/A1 (LVT_NAND2HDV2)
+                                                        0.0591    0.0000     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U27/ZN (LVT_NAND2HDV2)
+                                                        0.0549    0.0435     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n82 (net)
+                                                1                 0.0000     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U195/B (LVT_OAI211HDV2)
+                                                        0.0549    0.0000     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U195/ZN (LVT_OAI211HDV2)
+                                                        0.1243    0.0772     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n84 (net)
+                                                1                 0.0000     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U23/A1 (LVT_AOI21HDV2)
+                                                        0.1243    0.0000     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U23/ZN (LVT_AOI21HDV2)
+                                                        0.1192    0.0982     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n16 (net)
+                                                1                 0.0000     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U93/A1 (LVT_OAI21HDV2)
+                                                        0.1192    0.0000     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U93/ZN (LVT_OAI21HDV2)
+                                                        0.0729    0.0636     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n142 (net)
+                                                1                 0.0000     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U256/A1 (LVT_IOA21HDV4)
+                                                        0.0729    0.0000     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U256/ZN (LVT_IOA21HDV4)
+                                                        0.0478    0.1064     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n143 (net)
+                                                1                 0.0000     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U124/A1 (LVT_AOI21HDV2)
+                                                        0.0478    0.0000     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U124/ZN (LVT_AOI21HDV2)
+                                                        0.1192    0.0860     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n19 (net)
+                                                1                 0.0000     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U29/A1 (LVT_OAI21HDV2)
+                                                        0.1192    0.0000     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U29/ZN (LVT_OAI21HDV2)
+                                                        0.0748    0.0649     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n18 (net)
+                                                1                 0.0000     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U28/A1 (LVT_NAND2HDV2)
+                                                        0.0748    0.0000     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U28/ZN (LVT_NAND2HDV2)
+                                                        0.0542    0.0470     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n204 (net)
+                                                1                 0.0000     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U329/B1 (LVT_AOI22HDV2)
+                                                        0.0542    0.0000     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U329/ZN (LVT_AOI22HDV2)
+                                                        0.1880    0.0601     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n208 (net)
+                                                1                 0.0000     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U331/A1 (LVT_OAI21HDV4)
+                                                        0.1880    0.0000     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U331/ZN (LVT_OAI21HDV4)
+                                                        0.1392    0.1197     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n213 (net)
+                                                1                 0.0000     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U333/A1 (LVT_AOI21HDV4)
+                                                        0.1392    0.0000     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U333/ZN (LVT_AOI21HDV4)
+                                                        0.0820    0.0736     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n214 (net)
+                                                1                 0.0000     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U334/B (LVT_IAO21HDV4)
+                                                        0.0820    0.0000     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U334/ZN (LVT_IAO21HDV4)
+                                                        0.1005    0.0798     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n217 (net)
+                                                1                 0.0000     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U335/A1 (LVT_MOAI22HDV4)
+                                                        0.1005    0.0000     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U335/ZN (LVT_MOAI22HDV4)
+                                                        0.0886    0.0625     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n218 (net)
+                                                1                 0.0000     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U119/I (LVT_INHDV4)
+                                                        0.0886    0.0000     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U119/ZN (LVT_INHDV4)
+                                                        0.0482    0.0428     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n9 (net)
+                                                1                 0.0000     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U118/A1 (LVT_OAI22HDV4)
+                                                        0.0482    0.0000     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U118/ZN (LVT_OAI22HDV4)
+                                                        0.0963    0.0539     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n11 (net)
+                                                1                 0.0000     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U121/A1 (LVT_OAI22HDV4)
+                                                        0.0963    0.0000     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U121/ZN (LVT_OAI22HDV4)
+                                                        0.2020    0.0840     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n10 (net)
+                                                1                 0.0000     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U120/A1 (LVT_AOI21HDV4)
+                                                        0.2020    0.0000     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U120/ZN (LVT_AOI21HDV4)
+                                                        0.0829    0.0727     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n227 (net)
+                                                1                 0.0000     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U336/B (LVT_AOI21HDV2)
+                                                        0.0829    0.0000     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U336/ZN (LVT_AOI21HDV2)
+                                                        0.1195    0.0854     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n229 (net)
+                                                1                 0.0000     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U337/B (LVT_IAO21HDV2)
+                                                        0.1195    0.0000     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U337/ZN (LVT_IAO21HDV2)
+                                                        0.0609    0.0480     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n231 (net)
+                                                1                 0.0000     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U338/B (LVT_AOI21HDV2)
+                                                        0.0609    0.0000     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U338/ZN (LVT_AOI21HDV2)
+                                                        0.1223    0.0810     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n233 (net)
+                                                1                 0.0000     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U340/A1 (LVT_OAI21HDV2)
+                                                        0.1223    0.0000     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U340/ZN (LVT_OAI21HDV2)
+                                                        0.0799    0.0653     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n234 (net)
+                                                1                 0.0000     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U341/A1 (LVT_NAND2HDV2)
+                                                        0.0799    0.0000     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U341/ZN (LVT_NAND2HDV2)
+                                                        0.0589    0.0479     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n237 (net)
+                                                1                 0.0000     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U342/A1 (LVT_NAND2HDV2)
+                                                        0.0589    0.0000     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U342/ZN (LVT_NAND2HDV2)
+                                                        0.0701    0.0587     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n575 (net)
+                                                1                 0.0000     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U577/A1 (LVT_AOI21HDV4)
+                                                        0.0701    0.0000     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U577/ZN (LVT_AOI21HDV4)
+                                                        0.1099    0.0834     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/o_equ_less (net)
+                                                2                 0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/o_equ_less (ysyx_210555_branch_comp_0)
+                                                                  0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/id_equ_less (net)                        0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/i_equ_less (ysyx_210555_pc_ctrl_transfer_0)
+                                                                  0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/i_equ_less (net)    0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U7/A1 (LVT_NOR2HDV1)
+                                                        0.1099    0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U7/ZN (LVT_NOR2HDV1)
+                                                        0.0699    0.0642     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/n2 (net)
+                                                1                 0.0000     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U6/A2 (LVT_NOR2HDV4)
+                                                        0.0699    0.0000     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U6/ZN (LVT_NOR2HDV4)
+                                                        0.0743    0.0653     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/o_pc_ctrf_vld (net)
+                                                2                 0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/o_pc_ctrf_vld (ysyx_210555_pc_ctrl_transfer_0)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/id_pc_ctrf_vld (net)                     0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/i_id_pc_ctrf_vld (ysyx_210555_hazard_detect_0)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/i_id_pc_ctrf_vld (net)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/U12/A1 (LVT_AND2HDV2)
+                                                        0.0743    0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/U12/Z (LVT_AND2HDV2)
+                                                        0.0529    0.1048     5.6568 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/o_flush_if_id (net)
+                                                1                 0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/o_flush_if_id (ysyx_210555_hazard_detect_0)
+                                                                  0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/id_flush_if_id (net)                     0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/U10/A1 (LVT_IOA21HDV4)         0.0529    0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/U10/ZN (LVT_IOA21HDV4)         0.1055    0.1364     5.7932 r
+  uut_cpu_diff/uut_rvcpu/n_1_net_ (net)         4                 0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/i_rst (ysyx_210555_if_id_0)    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/i_rst (net)                    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U4/A1 (LVT_NOR2HDV4)
+                                                        0.1055    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U4/ZN (LVT_NOR2HDV4)
+                                                        0.0952    0.0699     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n109 (net)
+                                                4                 0.0000     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U6/I (LVT_BUFHDV8)   0.0952    0.0000     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U6/Z (LVT_BUFHDV8)   0.0650    0.1175     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n2 (net)    22                 0.0000     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U31/A1 (LVT_AO22HDV1)
+                                                        0.0650    0.0000     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U31/Z (LVT_AO22HDV1)
+                                                        0.0735    0.2299     6.2105 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n72 (net)
+                                                1                 0.0000     6.2105 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_36_/D (LVT_DQHDV2)
+                                                        0.0735    0.0000     6.2105 f
+  data arrival time                                                          6.2105
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_36_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1395     6.2105
+  data required time                                                         6.2105
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2105
+  data arrival time                                                         -6.2105
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
+  Startpoint: uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_43_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_/Q (LVT_DQHDV1)
+                                                        0.1130    0.2615     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result[60] (net)
+                                                4                 0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result[60] (ysyx_210555_ex_me_0)
+                                                                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/me_alu_result[60] (net)                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_addr[60] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_addr[60] (net)         0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U248/A1 (LVT_AND2HDV2)
+                                                        0.1130    0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U248/Z (LVT_AND2HDV2)
+                                                        0.0538    0.1246     0.3861 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_addr[60] (net)
+                                                2                 0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_addr[60] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/o_mem_addr[60] (net)                     0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/o_mem_addr[60] (ysyx_210555_rvcpu_0)     0.0000     0.3861 f
+  uut_cpu_diff/o_mem_addr[60] (net)                               0.0000     0.3861 f
+  uut_cpu_diff/o_mem_addr[60] (ysyx_210555_cpu_diff_0)            0.0000     0.3861 f
+  mem_addr[60] (net)                                              0.0000     0.3861 f
+  uut_arbiter/i_mem_addr[60] (ysyx_210555_arbiter_0)              0.0000     0.3861 f
+  uut_arbiter/i_mem_addr[60] (net)                                0.0000     0.3861 f
+  uut_arbiter/U20/A2 (LVT_NOR2HDV1)                     0.0538    0.0000     0.3861 f
+  uut_arbiter/U20/ZN (LVT_NOR2HDV1)                     0.1050    0.0813     0.4674 r
+  uut_arbiter/n24 (net)                         1                 0.0000     0.4674 r
+  uut_arbiter/U100/A3 (LVT_NAND3HDV1)                   0.1050    0.0000     0.4674 r
+  uut_arbiter/U100/ZN (LVT_NAND3HDV1)                   0.1572    0.1240     0.5914 f
+  uut_arbiter/n27 (net)                         1                 0.0000     0.5914 f
+  uut_arbiter/U102/A3 (LVT_NOR3HDV4)                    0.1572    0.0000     0.5914 f
+  uut_arbiter/U102/ZN (LVT_NOR3HDV4)                    0.1695    0.1374     0.7288 r
+  uut_arbiter/n79 (net)                         1                 0.0000     0.7288 r
+  uut_arbiter/U119/A1 (LVT_NAND3HDV4)                   0.1695    0.0000     0.7288 r
+  uut_arbiter/U119/ZN (LVT_NAND3HDV4)                   0.1047    0.0890     0.8178 f
+  uut_arbiter/n82 (net)                         2                 0.0000     0.8178 f
+  uut_arbiter/U54/A1 (LVT_INAND2HDV2)                   0.1047    0.0000     0.8178 f
+  uut_arbiter/U54/ZN (LVT_INAND2HDV2)                   0.1013    0.1556     0.9734 f
+  uut_arbiter/n88 (net)                         2                 0.0000     0.9734 f
+  uut_arbiter/U17/I (LVT_INHDV4)                        0.1013    0.0000     0.9734 f
+  uut_arbiter/U17/ZN (LVT_INHDV4)                       0.0708    0.0596     1.0331 r
+  uut_arbiter/n9 (net)                          1                 0.0000     1.0331 r
+  uut_arbiter/U11/I (LVT_INHDV8)                        0.0708    0.0000     1.0331 r
+  uut_arbiter/U11/ZN (LVT_INHDV8)                       0.0618    0.0551     1.0882 f
+  uut_arbiter/n7 (net)                          4                 0.0000     1.0882 f
+  uut_arbiter/U24/I (LVT_INHDV8)                        0.0618    0.0000     1.0882 f
+  uut_arbiter/U24/ZN (LVT_INHDV8)                       0.1529    0.1028     1.1910 r
+  uut_arbiter/n12 (net)                        52                 0.0000     1.1910 r
+  uut_arbiter/U39/A1 (LVT_AND2HDV1)                     0.1529    0.0000     1.1910 r
+  uut_arbiter/U39/Z (LVT_AND2HDV1)                      0.0865    0.1503     1.3413 r
+  uut_arbiter/o_clint_addr[6] (net)             2                 0.0000     1.3413 r
+  uut_arbiter/o_clint_addr[6] (ysyx_210555_arbiter_0)             0.0000     1.3413 r
+  clint_addr[6] (net)                                             0.0000     1.3413 r
+  uut_clint/i_clint_addr[6] (ysyx_210555_clint_0)                 0.0000     1.3413 r
+  uut_clint/i_clint_addr[6] (net)                                 0.0000     1.3413 r
+  uut_clint/U54/A4 (LVT_NAND4HDV1)                      0.0865    0.0000     1.3413 r
+  uut_clint/U54/ZN (LVT_NAND4HDV1)                      0.1341    0.1190     1.4603 f
+  uut_clint/n13 (net)                           1                 0.0000     1.4603 f
+  uut_clint/U55/A2 (LVT_NOR2HDV1)                       0.1341    0.0000     1.4603 f
+  uut_clint/U55/ZN (LVT_NOR2HDV1)                       0.1102    0.0898     1.5501 r
+  uut_clint/n17 (net)                           1                 0.0000     1.5501 r
+  uut_clint/U58/A1 (LVT_NAND4HDV1)                      0.1102    0.0000     1.5501 r
+  uut_clint/U58/ZN (LVT_NAND4HDV1)                      0.1357    0.0991     1.6492 f
+  uut_clint/n18 (net)                           1                 0.0000     1.6492 f
+  uut_clint/U59/A2 (LVT_NOR2HDV1)                       0.1357    0.0000     1.6492 f
+  uut_clint/U59/ZN (LVT_NOR2HDV1)                       0.1726    0.1283     1.7775 r
+  uut_clint/n381 (net)                          2                 0.0000     1.7775 r
+  uut_clint/U430/A1 (LVT_NAND2HDV2)                     0.1726    0.0000     1.7775 r
+  uut_clint/U430/ZN (LVT_NAND2HDV2)                     0.1760    0.1464     1.9238 f
+  uut_clint/n542 (net)                          8                 0.0000     1.9238 f
+  uut_clint/U8/I (LVT_BUFHDV6)                          0.1760    0.0000     1.9238 f
+  uut_clint/U8/Z (LVT_BUFHDV6)                          0.1990    0.2274     2.1512 f
+  uut_clint/n1 (net)                           57                 0.0000     2.1512 f
+  uut_clint/U449/B1 (LVT_OAI22HDV1)                     0.1990    0.0000     2.1512 f
+  uut_clint/U449/ZN (LVT_OAI22HDV1)                     0.1989    0.1466     2.2979 r
+  uut_clint/o_clint_rd_data[5] (net)            1                 0.0000     2.2979 r
+  uut_clint/o_clint_rd_data[5] (ysyx_210555_clint_0)              0.0000     2.2979 r
+  clint_rd_data[5] (net)                                          0.0000     2.2979 r
+  uut_arbiter/i_clint_rdata[5] (ysyx_210555_arbiter_0)            0.0000     2.2979 r
+  uut_arbiter/i_clint_rdata[5] (net)                              0.0000     2.2979 r
+  uut_arbiter/U71/A2 (LVT_IOA22HDV1)                    0.1989    0.0000     2.2979 r
+  uut_arbiter/U71/ZN (LVT_IOA22HDV1)                    0.1272    0.1420     2.4399 r
+  uut_arbiter/o_mem_rdata[5] (net)              1                 0.0000     2.4399 r
+  uut_arbiter/o_mem_rdata[5] (ysyx_210555_arbiter_0)              0.0000     2.4399 r
+  mem_rdata[5] (net)                                              0.0000     2.4399 r
+  uut_cpu_diff/i_mem_rdata[5] (ysyx_210555_cpu_diff_0)            0.0000     2.4399 r
+  uut_cpu_diff/i_mem_rdata[5] (net)                               0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/i_mem_rdata[5] (ysyx_210555_rvcpu_0)     0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/i_mem_rdata[5] (net)                     0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_rdata[5] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_rdata[5] (net)         0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U243/A1 (LVT_AND2HDV1)
+                                                        0.1272    0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U243/Z (LVT_AND2HDV1)
+                                                        0.0861    0.1403     2.5802 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_rd_data[5] (net)
+                                                2                 0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_rd_data[5] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_mem2reg_data[5] (net)                 0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/i_in1[5] (ysyx_210555_mux_4to1_6)
+                                                                  0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/i_in1[5] (net)            0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U219/A1 (LVT_NAND2HDV1)
+                                                        0.0861    0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U219/ZN (LVT_NAND2HDV1)
+                                                        0.1011    0.0552     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/n434 (net)
+                                                1                 0.0000     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U221/B (LVT_OAI211HDV1)
+                                                        0.1011    0.0000     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U221/ZN (LVT_OAI211HDV1)
+                                                        0.2424    0.0793     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/o_out[5] (net)
+                                                2                 0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/o_out[5] (ysyx_210555_mux_4to1_6)
+                                                                  0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_Rd_wr_data[5] (net)           0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/i_in2[5] (ysyx_210555_mux_4to1_7)
+                                                                  0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/i_in2[5] (net)           0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U213/I (LVT_INHDV1)
+                                                        0.2424    0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U213/ZN (LVT_INHDV1)
+                                                        0.0873    0.0687     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/n433 (net)
+                                                1                 0.0000     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U216/A1 (LVT_OAI211HDV4)
+                                                        0.0873    0.0000     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U216/ZN (LVT_OAI211HDV4)
+                                                        0.2287    0.1448     2.9281 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/o_out[5] (net)
+                                                6                 0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/o_out[5] (ysyx_210555_mux_4to1_7)
+                                                                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/id_Rs2_rd_data[5] (net)                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/i_Rs2[5] (ysyx_210555_branch_comp_0)
+                                                                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/i_Rs2[5] (net)           0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U160/I (LVT_INHDV1)
+                                                        0.2287    0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U160/ZN (LVT_INHDV1)
+                                                        0.0660    0.0484     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n43 (net)
+                                                1                 0.0000     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U132/A1 (LVT_AOI22HDV1)
+                                                        0.0660    0.0000     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U132/ZN (LVT_AOI22HDV1)
+                                                        0.1794    0.1260     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n44 (net)
+                                                1                 0.0000     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U161/B (LVT_OAI31HDV1)
+                                                        0.1794    0.0000     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U161/ZN (LVT_OAI31HDV1)
+                                                        0.1273    0.0968     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n48 (net)
+                                                1                 0.0000     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U165/A2 (LVT_OAI211HDV2)
+                                                        0.1273    0.0000     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U165/ZN (LVT_OAI211HDV2)
+                                                        0.1699    0.1318     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n50 (net)
+                                                1                 0.0000     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U166/B (LVT_AOI21HDV2)
+                                                        0.1699    0.0000     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U166/ZN (LVT_AOI21HDV2)
+                                                        0.1413    0.0482     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n52 (net)
+                                                1                 0.0000     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U167/C (LVT_AOI211HDV2)
+                                                        0.1413    0.0000     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U167/ZN (LVT_AOI211HDV2)
+                                                        0.2129    0.1438     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n56 (net)
+                                                1                 0.0000     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U123/A1 (LVT_IAO21HDV4)
+                                                        0.2129    0.0000     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U123/ZN (LVT_IAO21HDV4)
+                                                        0.1054    0.1398     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n14 (net)
+                                                1                 0.0000     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U122/A1 (LVT_OAI21HDV4)
+                                                        0.1054    0.0000     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U122/ZN (LVT_OAI21HDV4)
+                                                        0.0591    0.0537     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n13 (net)
+                                                1                 0.0000     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U27/A1 (LVT_NAND2HDV2)
+                                                        0.0591    0.0000     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U27/ZN (LVT_NAND2HDV2)
+                                                        0.0549    0.0435     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n82 (net)
+                                                1                 0.0000     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U195/B (LVT_OAI211HDV2)
+                                                        0.0549    0.0000     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U195/ZN (LVT_OAI211HDV2)
+                                                        0.1243    0.0772     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n84 (net)
+                                                1                 0.0000     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U23/A1 (LVT_AOI21HDV2)
+                                                        0.1243    0.0000     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U23/ZN (LVT_AOI21HDV2)
+                                                        0.1192    0.0982     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n16 (net)
+                                                1                 0.0000     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U93/A1 (LVT_OAI21HDV2)
+                                                        0.1192    0.0000     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U93/ZN (LVT_OAI21HDV2)
+                                                        0.0729    0.0636     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n142 (net)
+                                                1                 0.0000     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U256/A1 (LVT_IOA21HDV4)
+                                                        0.0729    0.0000     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U256/ZN (LVT_IOA21HDV4)
+                                                        0.0478    0.1064     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n143 (net)
+                                                1                 0.0000     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U124/A1 (LVT_AOI21HDV2)
+                                                        0.0478    0.0000     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U124/ZN (LVT_AOI21HDV2)
+                                                        0.1192    0.0860     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n19 (net)
+                                                1                 0.0000     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U29/A1 (LVT_OAI21HDV2)
+                                                        0.1192    0.0000     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U29/ZN (LVT_OAI21HDV2)
+                                                        0.0748    0.0649     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n18 (net)
+                                                1                 0.0000     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U28/A1 (LVT_NAND2HDV2)
+                                                        0.0748    0.0000     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U28/ZN (LVT_NAND2HDV2)
+                                                        0.0542    0.0470     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n204 (net)
+                                                1                 0.0000     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U329/B1 (LVT_AOI22HDV2)
+                                                        0.0542    0.0000     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U329/ZN (LVT_AOI22HDV2)
+                                                        0.1880    0.0601     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n208 (net)
+                                                1                 0.0000     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U331/A1 (LVT_OAI21HDV4)
+                                                        0.1880    0.0000     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U331/ZN (LVT_OAI21HDV4)
+                                                        0.1392    0.1197     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n213 (net)
+                                                1                 0.0000     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U333/A1 (LVT_AOI21HDV4)
+                                                        0.1392    0.0000     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U333/ZN (LVT_AOI21HDV4)
+                                                        0.0820    0.0736     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n214 (net)
+                                                1                 0.0000     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U334/B (LVT_IAO21HDV4)
+                                                        0.0820    0.0000     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U334/ZN (LVT_IAO21HDV4)
+                                                        0.1005    0.0798     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n217 (net)
+                                                1                 0.0000     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U335/A1 (LVT_MOAI22HDV4)
+                                                        0.1005    0.0000     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U335/ZN (LVT_MOAI22HDV4)
+                                                        0.0886    0.0625     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n218 (net)
+                                                1                 0.0000     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U119/I (LVT_INHDV4)
+                                                        0.0886    0.0000     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U119/ZN (LVT_INHDV4)
+                                                        0.0482    0.0428     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n9 (net)
+                                                1                 0.0000     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U118/A1 (LVT_OAI22HDV4)
+                                                        0.0482    0.0000     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U118/ZN (LVT_OAI22HDV4)
+                                                        0.0963    0.0539     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n11 (net)
+                                                1                 0.0000     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U121/A1 (LVT_OAI22HDV4)
+                                                        0.0963    0.0000     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U121/ZN (LVT_OAI22HDV4)
+                                                        0.2020    0.0840     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n10 (net)
+                                                1                 0.0000     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U120/A1 (LVT_AOI21HDV4)
+                                                        0.2020    0.0000     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U120/ZN (LVT_AOI21HDV4)
+                                                        0.0829    0.0727     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n227 (net)
+                                                1                 0.0000     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U336/B (LVT_AOI21HDV2)
+                                                        0.0829    0.0000     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U336/ZN (LVT_AOI21HDV2)
+                                                        0.1195    0.0854     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n229 (net)
+                                                1                 0.0000     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U337/B (LVT_IAO21HDV2)
+                                                        0.1195    0.0000     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U337/ZN (LVT_IAO21HDV2)
+                                                        0.0609    0.0480     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n231 (net)
+                                                1                 0.0000     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U338/B (LVT_AOI21HDV2)
+                                                        0.0609    0.0000     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U338/ZN (LVT_AOI21HDV2)
+                                                        0.1223    0.0810     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n233 (net)
+                                                1                 0.0000     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U340/A1 (LVT_OAI21HDV2)
+                                                        0.1223    0.0000     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U340/ZN (LVT_OAI21HDV2)
+                                                        0.0799    0.0653     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n234 (net)
+                                                1                 0.0000     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U341/A1 (LVT_NAND2HDV2)
+                                                        0.0799    0.0000     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U341/ZN (LVT_NAND2HDV2)
+                                                        0.0589    0.0479     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n237 (net)
+                                                1                 0.0000     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U342/A1 (LVT_NAND2HDV2)
+                                                        0.0589    0.0000     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U342/ZN (LVT_NAND2HDV2)
+                                                        0.0701    0.0587     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n575 (net)
+                                                1                 0.0000     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U577/A1 (LVT_AOI21HDV4)
+                                                        0.0701    0.0000     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U577/ZN (LVT_AOI21HDV4)
+                                                        0.1099    0.0834     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/o_equ_less (net)
+                                                2                 0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/o_equ_less (ysyx_210555_branch_comp_0)
+                                                                  0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/id_equ_less (net)                        0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/i_equ_less (ysyx_210555_pc_ctrl_transfer_0)
+                                                                  0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/i_equ_less (net)    0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U7/A1 (LVT_NOR2HDV1)
+                                                        0.1099    0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U7/ZN (LVT_NOR2HDV1)
+                                                        0.0699    0.0642     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/n2 (net)
+                                                1                 0.0000     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U6/A2 (LVT_NOR2HDV4)
+                                                        0.0699    0.0000     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U6/ZN (LVT_NOR2HDV4)
+                                                        0.0743    0.0653     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/o_pc_ctrf_vld (net)
+                                                2                 0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/o_pc_ctrf_vld (ysyx_210555_pc_ctrl_transfer_0)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/id_pc_ctrf_vld (net)                     0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/i_id_pc_ctrf_vld (ysyx_210555_hazard_detect_0)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/i_id_pc_ctrf_vld (net)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/U12/A1 (LVT_AND2HDV2)
+                                                        0.0743    0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/U12/Z (LVT_AND2HDV2)
+                                                        0.0529    0.1048     5.6568 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/o_flush_if_id (net)
+                                                1                 0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/o_flush_if_id (ysyx_210555_hazard_detect_0)
+                                                                  0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/id_flush_if_id (net)                     0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/U10/A1 (LVT_IOA21HDV4)         0.0529    0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/U10/ZN (LVT_IOA21HDV4)         0.1055    0.1364     5.7932 r
+  uut_cpu_diff/uut_rvcpu/n_1_net_ (net)         4                 0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/i_rst (ysyx_210555_if_id_0)    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/i_rst (net)                    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U4/A1 (LVT_NOR2HDV4)
+                                                        0.1055    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U4/ZN (LVT_NOR2HDV4)
+                                                        0.0952    0.0699     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n109 (net)
+                                                4                 0.0000     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U6/I (LVT_BUFHDV8)   0.0952    0.0000     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U6/Z (LVT_BUFHDV8)   0.0650    0.1175     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n2 (net)    22                 0.0000     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U28/A1 (LVT_AO22HDV1)
+                                                        0.0650    0.0000     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U28/Z (LVT_AO22HDV1)
+                                                        0.0735    0.2299     6.2105 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n79 (net)
+                                                1                 0.0000     6.2105 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_43_/D (LVT_DQHDV2)
+                                                        0.0735    0.0000     6.2105 f
+  data arrival time                                                          6.2105
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_43_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1395     6.2105
+  data required time                                                         6.2105
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2105
+  data arrival time                                                         -6.2105
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
+  Startpoint: uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_55_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result_reg_60_/Q (LVT_DQHDV1)
+                                                        0.1130    0.2615     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result[60] (net)
+                                                4                 0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_ex_me/o_me_alu_result[60] (ysyx_210555_ex_me_0)
+                                                                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/me_alu_result[60] (net)                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_addr[60] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_addr[60] (net)         0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U248/A1 (LVT_AND2HDV2)
+                                                        0.1130    0.0000     0.2615 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U248/Z (LVT_AND2HDV2)
+                                                        0.0538    0.1246     0.3861 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_addr[60] (net)
+                                                2                 0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_addr[60] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/o_mem_addr[60] (net)                     0.0000     0.3861 f
+  uut_cpu_diff/uut_rvcpu/o_mem_addr[60] (ysyx_210555_rvcpu_0)     0.0000     0.3861 f
+  uut_cpu_diff/o_mem_addr[60] (net)                               0.0000     0.3861 f
+  uut_cpu_diff/o_mem_addr[60] (ysyx_210555_cpu_diff_0)            0.0000     0.3861 f
+  mem_addr[60] (net)                                              0.0000     0.3861 f
+  uut_arbiter/i_mem_addr[60] (ysyx_210555_arbiter_0)              0.0000     0.3861 f
+  uut_arbiter/i_mem_addr[60] (net)                                0.0000     0.3861 f
+  uut_arbiter/U20/A2 (LVT_NOR2HDV1)                     0.0538    0.0000     0.3861 f
+  uut_arbiter/U20/ZN (LVT_NOR2HDV1)                     0.1050    0.0813     0.4674 r
+  uut_arbiter/n24 (net)                         1                 0.0000     0.4674 r
+  uut_arbiter/U100/A3 (LVT_NAND3HDV1)                   0.1050    0.0000     0.4674 r
+  uut_arbiter/U100/ZN (LVT_NAND3HDV1)                   0.1572    0.1240     0.5914 f
+  uut_arbiter/n27 (net)                         1                 0.0000     0.5914 f
+  uut_arbiter/U102/A3 (LVT_NOR3HDV4)                    0.1572    0.0000     0.5914 f
+  uut_arbiter/U102/ZN (LVT_NOR3HDV4)                    0.1695    0.1374     0.7288 r
+  uut_arbiter/n79 (net)                         1                 0.0000     0.7288 r
+  uut_arbiter/U119/A1 (LVT_NAND3HDV4)                   0.1695    0.0000     0.7288 r
+  uut_arbiter/U119/ZN (LVT_NAND3HDV4)                   0.1047    0.0890     0.8178 f
+  uut_arbiter/n82 (net)                         2                 0.0000     0.8178 f
+  uut_arbiter/U54/A1 (LVT_INAND2HDV2)                   0.1047    0.0000     0.8178 f
+  uut_arbiter/U54/ZN (LVT_INAND2HDV2)                   0.1013    0.1556     0.9734 f
+  uut_arbiter/n88 (net)                         2                 0.0000     0.9734 f
+  uut_arbiter/U17/I (LVT_INHDV4)                        0.1013    0.0000     0.9734 f
+  uut_arbiter/U17/ZN (LVT_INHDV4)                       0.0708    0.0596     1.0331 r
+  uut_arbiter/n9 (net)                          1                 0.0000     1.0331 r
+  uut_arbiter/U11/I (LVT_INHDV8)                        0.0708    0.0000     1.0331 r
+  uut_arbiter/U11/ZN (LVT_INHDV8)                       0.0618    0.0551     1.0882 f
+  uut_arbiter/n7 (net)                          4                 0.0000     1.0882 f
+  uut_arbiter/U24/I (LVT_INHDV8)                        0.0618    0.0000     1.0882 f
+  uut_arbiter/U24/ZN (LVT_INHDV8)                       0.1529    0.1028     1.1910 r
+  uut_arbiter/n12 (net)                        52                 0.0000     1.1910 r
+  uut_arbiter/U39/A1 (LVT_AND2HDV1)                     0.1529    0.0000     1.1910 r
+  uut_arbiter/U39/Z (LVT_AND2HDV1)                      0.0865    0.1503     1.3413 r
+  uut_arbiter/o_clint_addr[6] (net)             2                 0.0000     1.3413 r
+  uut_arbiter/o_clint_addr[6] (ysyx_210555_arbiter_0)             0.0000     1.3413 r
+  clint_addr[6] (net)                                             0.0000     1.3413 r
+  uut_clint/i_clint_addr[6] (ysyx_210555_clint_0)                 0.0000     1.3413 r
+  uut_clint/i_clint_addr[6] (net)                                 0.0000     1.3413 r
+  uut_clint/U54/A4 (LVT_NAND4HDV1)                      0.0865    0.0000     1.3413 r
+  uut_clint/U54/ZN (LVT_NAND4HDV1)                      0.1341    0.1190     1.4603 f
+  uut_clint/n13 (net)                           1                 0.0000     1.4603 f
+  uut_clint/U55/A2 (LVT_NOR2HDV1)                       0.1341    0.0000     1.4603 f
+  uut_clint/U55/ZN (LVT_NOR2HDV1)                       0.1102    0.0898     1.5501 r
+  uut_clint/n17 (net)                           1                 0.0000     1.5501 r
+  uut_clint/U58/A1 (LVT_NAND4HDV1)                      0.1102    0.0000     1.5501 r
+  uut_clint/U58/ZN (LVT_NAND4HDV1)                      0.1357    0.0991     1.6492 f
+  uut_clint/n18 (net)                           1                 0.0000     1.6492 f
+  uut_clint/U59/A2 (LVT_NOR2HDV1)                       0.1357    0.0000     1.6492 f
+  uut_clint/U59/ZN (LVT_NOR2HDV1)                       0.1726    0.1283     1.7775 r
+  uut_clint/n381 (net)                          2                 0.0000     1.7775 r
+  uut_clint/U430/A1 (LVT_NAND2HDV2)                     0.1726    0.0000     1.7775 r
+  uut_clint/U430/ZN (LVT_NAND2HDV2)                     0.1760    0.1464     1.9238 f
+  uut_clint/n542 (net)                          8                 0.0000     1.9238 f
+  uut_clint/U8/I (LVT_BUFHDV6)                          0.1760    0.0000     1.9238 f
+  uut_clint/U8/Z (LVT_BUFHDV6)                          0.1990    0.2274     2.1512 f
+  uut_clint/n1 (net)                           57                 0.0000     2.1512 f
+  uut_clint/U449/B1 (LVT_OAI22HDV1)                     0.1990    0.0000     2.1512 f
+  uut_clint/U449/ZN (LVT_OAI22HDV1)                     0.1989    0.1466     2.2979 r
+  uut_clint/o_clint_rd_data[5] (net)            1                 0.0000     2.2979 r
+  uut_clint/o_clint_rd_data[5] (ysyx_210555_clint_0)              0.0000     2.2979 r
+  clint_rd_data[5] (net)                                          0.0000     2.2979 r
+  uut_arbiter/i_clint_rdata[5] (ysyx_210555_arbiter_0)            0.0000     2.2979 r
+  uut_arbiter/i_clint_rdata[5] (net)                              0.0000     2.2979 r
+  uut_arbiter/U71/A2 (LVT_IOA22HDV1)                    0.1989    0.0000     2.2979 r
+  uut_arbiter/U71/ZN (LVT_IOA22HDV1)                    0.1272    0.1420     2.4399 r
+  uut_arbiter/o_mem_rdata[5] (net)              1                 0.0000     2.4399 r
+  uut_arbiter/o_mem_rdata[5] (ysyx_210555_arbiter_0)              0.0000     2.4399 r
+  mem_rdata[5] (net)                                              0.0000     2.4399 r
+  uut_cpu_diff/i_mem_rdata[5] (ysyx_210555_cpu_diff_0)            0.0000     2.4399 r
+  uut_cpu_diff/i_mem_rdata[5] (net)                               0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/i_mem_rdata[5] (ysyx_210555_rvcpu_0)     0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/i_mem_rdata[5] (net)                     0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_rdata[5] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/i_mem_rdata[5] (net)         0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U243/A1 (LVT_AND2HDV1)
+                                                        0.1272    0.0000     2.4399 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/U243/Z (LVT_AND2HDV1)
+                                                        0.0861    0.1403     2.5802 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_rd_data[5] (net)
+                                                2                 0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/uut_mem_axi/o_mem_rd_data[5] (ysyx_210555_mem_axi_0)
+                                                                  0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_mem2reg_data[5] (net)                 0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/i_in1[5] (ysyx_210555_mux_4to1_6)
+                                                                  0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/i_in1[5] (net)            0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U219/A1 (LVT_NAND2HDV1)
+                                                        0.0861    0.0000     2.5802 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U219/ZN (LVT_NAND2HDV1)
+                                                        0.1011    0.0552     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/n434 (net)
+                                                1                 0.0000     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U221/B (LVT_OAI211HDV1)
+                                                        0.1011    0.0000     2.6353 f
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/U221/ZN (LVT_OAI211HDV1)
+                                                        0.2424    0.0793     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/o_out[5] (net)
+                                                2                 0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_mux/o_out[5] (ysyx_210555_mux_4to1_6)
+                                                                  0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/me_forward_Rd_wr_data[5] (net)           0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/i_in2[5] (ysyx_210555_mux_4to1_7)
+                                                                  0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/i_in2[5] (net)           0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U213/I (LVT_INHDV1)
+                                                        0.2424    0.0000     2.7146 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U213/ZN (LVT_INHDV1)
+                                                        0.0873    0.0687     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/n433 (net)
+                                                1                 0.0000     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U216/A1 (LVT_OAI211HDV4)
+                                                        0.0873    0.0000     2.7833 f
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/U216/ZN (LVT_OAI211HDV4)
+                                                        0.2287    0.1448     2.9281 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/o_out[5] (net)
+                                                6                 0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/Rs2_forward_mux/o_out[5] (ysyx_210555_mux_4to1_7)
+                                                                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/id_Rs2_rd_data[5] (net)                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/i_Rs2[5] (ysyx_210555_branch_comp_0)
+                                                                  0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/i_Rs2[5] (net)           0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U160/I (LVT_INHDV1)
+                                                        0.2287    0.0000     2.9281 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U160/ZN (LVT_INHDV1)
+                                                        0.0660    0.0484     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n43 (net)
+                                                1                 0.0000     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U132/A1 (LVT_AOI22HDV1)
+                                                        0.0660    0.0000     2.9765 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U132/ZN (LVT_AOI22HDV1)
+                                                        0.1794    0.1260     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n44 (net)
+                                                1                 0.0000     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U161/B (LVT_OAI31HDV1)
+                                                        0.1794    0.0000     3.1025 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U161/ZN (LVT_OAI31HDV1)
+                                                        0.1273    0.0968     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n48 (net)
+                                                1                 0.0000     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U165/A2 (LVT_OAI211HDV2)
+                                                        0.1273    0.0000     3.1993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U165/ZN (LVT_OAI211HDV2)
+                                                        0.1699    0.1318     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n50 (net)
+                                                1                 0.0000     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U166/B (LVT_AOI21HDV2)
+                                                        0.1699    0.0000     3.3311 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U166/ZN (LVT_AOI21HDV2)
+                                                        0.1413    0.0482     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n52 (net)
+                                                1                 0.0000     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U167/C (LVT_AOI211HDV2)
+                                                        0.1413    0.0000     3.3793 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U167/ZN (LVT_AOI211HDV2)
+                                                        0.2129    0.1438     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n56 (net)
+                                                1                 0.0000     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U123/A1 (LVT_IAO21HDV4)
+                                                        0.2129    0.0000     3.5232 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U123/ZN (LVT_IAO21HDV4)
+                                                        0.1054    0.1398     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n14 (net)
+                                                1                 0.0000     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U122/A1 (LVT_OAI21HDV4)
+                                                        0.1054    0.0000     3.6630 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U122/ZN (LVT_OAI21HDV4)
+                                                        0.0591    0.0537     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n13 (net)
+                                                1                 0.0000     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U27/A1 (LVT_NAND2HDV2)
+                                                        0.0591    0.0000     3.7166 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U27/ZN (LVT_NAND2HDV2)
+                                                        0.0549    0.0435     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n82 (net)
+                                                1                 0.0000     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U195/B (LVT_OAI211HDV2)
+                                                        0.0549    0.0000     3.7601 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U195/ZN (LVT_OAI211HDV2)
+                                                        0.1243    0.0772     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n84 (net)
+                                                1                 0.0000     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U23/A1 (LVT_AOI21HDV2)
+                                                        0.1243    0.0000     3.8374 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U23/ZN (LVT_AOI21HDV2)
+                                                        0.1192    0.0982     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n16 (net)
+                                                1                 0.0000     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U93/A1 (LVT_OAI21HDV2)
+                                                        0.1192    0.0000     3.9356 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U93/ZN (LVT_OAI21HDV2)
+                                                        0.0729    0.0636     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n142 (net)
+                                                1                 0.0000     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U256/A1 (LVT_IOA21HDV4)
+                                                        0.0729    0.0000     3.9993 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U256/ZN (LVT_IOA21HDV4)
+                                                        0.0478    0.1064     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n143 (net)
+                                                1                 0.0000     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U124/A1 (LVT_AOI21HDV2)
+                                                        0.0478    0.0000     4.1057 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U124/ZN (LVT_AOI21HDV2)
+                                                        0.1192    0.0860     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n19 (net)
+                                                1                 0.0000     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U29/A1 (LVT_OAI21HDV2)
+                                                        0.1192    0.0000     4.1917 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U29/ZN (LVT_OAI21HDV2)
+                                                        0.0748    0.0649     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n18 (net)
+                                                1                 0.0000     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U28/A1 (LVT_NAND2HDV2)
+                                                        0.0748    0.0000     4.2567 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U28/ZN (LVT_NAND2HDV2)
+                                                        0.0542    0.0470     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n204 (net)
+                                                1                 0.0000     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U329/B1 (LVT_AOI22HDV2)
+                                                        0.0542    0.0000     4.3036 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U329/ZN (LVT_AOI22HDV2)
+                                                        0.1880    0.0601     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n208 (net)
+                                                1                 0.0000     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U331/A1 (LVT_OAI21HDV4)
+                                                        0.1880    0.0000     4.3638 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U331/ZN (LVT_OAI21HDV4)
+                                                        0.1392    0.1197     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n213 (net)
+                                                1                 0.0000     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U333/A1 (LVT_AOI21HDV4)
+                                                        0.1392    0.0000     4.4834 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U333/ZN (LVT_AOI21HDV4)
+                                                        0.0820    0.0736     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n214 (net)
+                                                1                 0.0000     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U334/B (LVT_IAO21HDV4)
+                                                        0.0820    0.0000     4.5570 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U334/ZN (LVT_IAO21HDV4)
+                                                        0.1005    0.0798     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n217 (net)
+                                                1                 0.0000     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U335/A1 (LVT_MOAI22HDV4)
+                                                        0.1005    0.0000     4.6368 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U335/ZN (LVT_MOAI22HDV4)
+                                                        0.0886    0.0625     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n218 (net)
+                                                1                 0.0000     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U119/I (LVT_INHDV4)
+                                                        0.0886    0.0000     4.6994 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U119/ZN (LVT_INHDV4)
+                                                        0.0482    0.0428     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n9 (net)
+                                                1                 0.0000     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U118/A1 (LVT_OAI22HDV4)
+                                                        0.0482    0.0000     4.7422 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U118/ZN (LVT_OAI22HDV4)
+                                                        0.0963    0.0539     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n11 (net)
+                                                1                 0.0000     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U121/A1 (LVT_OAI22HDV4)
+                                                        0.0963    0.0000     4.7960 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U121/ZN (LVT_OAI22HDV4)
+                                                        0.2020    0.0840     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n10 (net)
+                                                1                 0.0000     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U120/A1 (LVT_AOI21HDV4)
+                                                        0.2020    0.0000     4.8800 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U120/ZN (LVT_AOI21HDV4)
+                                                        0.0829    0.0727     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n227 (net)
+                                                1                 0.0000     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U336/B (LVT_AOI21HDV2)
+                                                        0.0829    0.0000     4.9527 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U336/ZN (LVT_AOI21HDV2)
+                                                        0.1195    0.0854     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n229 (net)
+                                                1                 0.0000     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U337/B (LVT_IAO21HDV2)
+                                                        0.1195    0.0000     5.0382 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U337/ZN (LVT_IAO21HDV2)
+                                                        0.0609    0.0480     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n231 (net)
+                                                1                 0.0000     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U338/B (LVT_AOI21HDV2)
+                                                        0.0609    0.0000     5.0862 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U338/ZN (LVT_AOI21HDV2)
+                                                        0.1223    0.0810     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n233 (net)
+                                                1                 0.0000     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U340/A1 (LVT_OAI21HDV2)
+                                                        0.1223    0.0000     5.1672 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U340/ZN (LVT_OAI21HDV2)
+                                                        0.0799    0.0653     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n234 (net)
+                                                1                 0.0000     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U341/A1 (LVT_NAND2HDV2)
+                                                        0.0799    0.0000     5.2325 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U341/ZN (LVT_NAND2HDV2)
+                                                        0.0589    0.0479     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n237 (net)
+                                                1                 0.0000     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U342/A1 (LVT_NAND2HDV2)
+                                                        0.0589    0.0000     5.2804 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U342/ZN (LVT_NAND2HDV2)
+                                                        0.0701    0.0587     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/n575 (net)
+                                                1                 0.0000     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U577/A1 (LVT_AOI21HDV4)
+                                                        0.0701    0.0000     5.3391 f
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/U577/ZN (LVT_AOI21HDV4)
+                                                        0.1099    0.0834     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/o_equ_less (net)
+                                                2                 0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_branch_comp/o_equ_less (ysyx_210555_branch_comp_0)
+                                                                  0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/id_equ_less (net)                        0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/i_equ_less (ysyx_210555_pc_ctrl_transfer_0)
+                                                                  0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/i_equ_less (net)    0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U7/A1 (LVT_NOR2HDV1)
+                                                        0.1099    0.0000     5.4225 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U7/ZN (LVT_NOR2HDV1)
+                                                        0.0699    0.0642     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/n2 (net)
+                                                1                 0.0000     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U6/A2 (LVT_NOR2HDV4)
+                                                        0.0699    0.0000     5.4867 f
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/U6/ZN (LVT_NOR2HDV4)
+                                                        0.0743    0.0653     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/o_pc_ctrf_vld (net)
+                                                2                 0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_pc_ctrl_transfer/o_pc_ctrf_vld (ysyx_210555_pc_ctrl_transfer_0)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/id_pc_ctrf_vld (net)                     0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/i_id_pc_ctrf_vld (ysyx_210555_hazard_detect_0)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/i_id_pc_ctrf_vld (net)
+                                                                  0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/U12/A1 (LVT_AND2HDV2)
+                                                        0.0743    0.0000     5.5520 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/U12/Z (LVT_AND2HDV2)
+                                                        0.0529    0.1048     5.6568 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/o_flush_if_id (net)
+                                                1                 0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/uut_hazard_detect/o_flush_if_id (ysyx_210555_hazard_detect_0)
+                                                                  0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/id_flush_if_id (net)                     0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/U10/A1 (LVT_IOA21HDV4)         0.0529    0.0000     5.6568 r
+  uut_cpu_diff/uut_rvcpu/U10/ZN (LVT_IOA21HDV4)         0.1055    0.1364     5.7932 r
+  uut_cpu_diff/uut_rvcpu/n_1_net_ (net)         4                 0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/i_rst (ysyx_210555_if_id_0)    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/i_rst (net)                    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U4/A1 (LVT_NOR2HDV4)
+                                                        0.1055    0.0000     5.7932 r
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U4/ZN (LVT_NOR2HDV4)
+                                                        0.0952    0.0699     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n109 (net)
+                                                4                 0.0000     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U6/I (LVT_BUFHDV8)   0.0952    0.0000     5.8631 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U6/Z (LVT_BUFHDV8)   0.0650    0.1175     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n2 (net)    22                 0.0000     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U11/A1 (LVT_AO22HDV1)
+                                                        0.0650    0.0000     5.9806 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/U11/Z (LVT_AO22HDV1)
+                                                        0.0735    0.2299     6.2105 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/n91 (net)
+                                                1                 0.0000     6.2105 f
+  uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_55_/D (LVT_DQHDV2)
+                                                        0.0735    0.0000     6.2105 f
+  data arrival time                                                          6.2105
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  uut_cpu_diff/uut_rvcpu/uut_if_id/o_id_pc_reg_55_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1395     6.2105
+  data required time                                                         6.2105
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2105
+  data arrival time                                                         -6.2105
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
