@@ -1,0 +1,958 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Sun_Oct_17_16:24:31_2021_+0800
+top_name: ysyx_210457
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+1. Error: unmapped cell exists
+Warnings
+1. Warning:  Latch inferred in design ysyx_210457_ID_stage read with 'hdlin_check_no_latch' (ELAB-395)
+2. Warning: The register alt847/*cell*7825 is inferred with async set/reset. This register is not mapped because of a lack of compatible library cells. Mapping will introduce priority logic that may result in race conditions. (OPT-1233)
+3. Warning: Target library contains no replacement for register 'error_branch_reg' (**FFGEN**). (TRANS-4)
+4. Warning: Target library contains no replacement for register 'rvcpu/ID_stage/error_branch_reg' (**FFGEN**). (TRANS-4)
+5. Warning: Target library contains no replacement for register 'error_branch_reg' (**FFGEN**). (TRANS-4)
+6. Warning: Target library contains no replacement for register 'rvcpu/ID_stage/error_branch_reg' (**FFGEN**). (TRANS-4)
+****** Message Summary: 1 Error(s), 6 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+466719.6  466719.6  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+39723  39723  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210457
+Date   : Sun Oct 17 16:43:37 2021
+****************************************
+    
+Number of ports:                         9030
+Number of nets:                         48276
+Number of cells:                        39873
+Number of combinational cells:          31686
+Number of sequential cells:              8038
+Number of macros/black boxes:               0
+Number of buf/inv:                       4271
+Number of references:                       5
+Combinational area:             260378.830365
+Buf/Inv area:                    21567.902355
+Noncombinational area:          206340.739065
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                466719.569430
+Total area:                 undefined
+Information: This design contains unmapped logic. (RPT-7)
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------
+ysyx_210457                       466719.5694    100.0     767.8808       0.0000  0.0000  ysyx_210457
+arbiter                             1650.0696      0.4    1624.5184      25.5512  0.0000  ysyx_210457_arbiter_0
+rvcpu                             456641.6382     97.8       5.3792       0.0000  0.0000  ysyx_210457_rvcpu_0
+rvcpu/CSR_reg                      32412.3700      6.9   17549.6399   14862.7301  0.0000  ysyx_210457_CSR_reg_0
+rvcpu/Clint                        11714.5529      2.5    6783.1712    4931.3818  0.0000  ysyx_210457_Clint_0
+rvcpu/EX_stage                     37618.0903      8.1   13402.2768       0.0000  0.0000  ysyx_210457_EX_stage_0
+rvcpu/EX_stage/ALU                 24215.8135      5.2   24215.8135       0.0000  0.0000  ysyx_210457_ALU_0
+rvcpu/ID_stage                     18591.8599      4.0   18088.9047       0.0000  0.0000  ysyx_210457_ID_stage_0
+rvcpu/ID_stage/IMGN                  502.9552      0.1     502.9552       0.0000  0.0000  ysyx_210457_IMGN_0
+rvcpu/IF_stage                    214951.4901     46.1     172.1344       0.0000  0.0000  ysyx_210457_IF_stage_0
+rvcpu/IF_stage/ADD                  1488.6936      0.3    1488.6936       0.0000  0.0000  ysyx_210457_ADD_0
+rvcpu/IF_stage/PC                   2885.9409      0.6    1225.1128    1660.8281  0.0000  ysyx_210457_PC_0
+rvcpu/IF_stage/forecase           210404.7213     45.1  103452.7741  106951.9472  0.0000  ysyx_210457_forecase_0
+rvcpu/MEM_stage                     5614.5400      1.2    5614.5400       0.0000  0.0000  ysyx_210457_MEM_stage_0
+rvcpu/WB_stage                       988.4280      0.2     988.4280       0.0000  0.0000  ysyx_210457_WB_stage_0
+rvcpu/ex_mem                       14466.0139      3.1    4756.5576    9709.4563  0.0000  ysyx_210457_ex_mem_0
+rvcpu/id_ex                        10724.7802      2.3    3481.6872    7243.0930  0.0000  ysyx_210457_id_ex_0
+rvcpu/if_id                         6186.0801      1.3    2050.8200    4135.2601  0.0000  ysyx_210457_if_id_0
+rvcpu/mem_wb                        4767.3161      1.0    1011.2896    3756.0265  0.0000  ysyx_210457_mem_wb_0
+rvcpu/regfile                      98600.7373     21.1   47605.9198   50994.8175  0.0000  ysyx_210457_regfile_0
+u_axi_rw                            7659.9809      1.6    5590.3336    2069.6473  0.0000  ysyx_210457_axi_rw_0
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------
+Total                                                   260378.8304  206340.7391  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210457
+Date   : Sun Oct 17 16:43:32 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: rvcpu/id_ex/ex_reg1_data_reg_16_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: rvcpu/IF_stage/forecase/fore_branch_reg_24__25_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  rvcpu/id_ex/ex_reg1_data_reg_16_/CK (LVT_DQHDV2)      0.0000    0.0000 #   0.0000 r
+  rvcpu/id_ex/ex_reg1_data_reg_16_/Q (LVT_DQHDV2)       0.2033    0.3417     0.3417 f
+  rvcpu/id_ex/ex_reg1_data[16] (net)           14                 0.0000     0.3417 f
+  rvcpu/id_ex/ex_reg1_data[16] (ysyx_210457_id_ex_0)              0.0000     0.3417 f
+  rvcpu/N_ex_reg1_data[16] (net)                                  0.0000     0.3417 f
+  rvcpu/EX_stage/id_reg1_data[16] (ysyx_210457_EX_stage_0)        0.0000     0.3417 f
+  rvcpu/EX_stage/id_reg1_data[16] (net)                           0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/num1[16] (ysyx_210457_ALU_0)                 0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/num1[16] (net)                               0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/U918/A1 (LVT_NAND2HDV1)            0.2033    0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/U918/ZN (LVT_NAND2HDV1)            0.1145    0.0963     0.4380 r
+  rvcpu/EX_stage/ALU/n1686 (net)                2                 0.0000     0.4380 r
+  rvcpu/EX_stage/ALU/U920/A2 (LVT_OAI21HDV2)            0.1145    0.0000     0.4380 r
+  rvcpu/EX_stage/ALU/U920/ZN (LVT_OAI21HDV2)            0.0862    0.0836     0.5216 f
+  rvcpu/EX_stage/ALU/n1728 (net)                2                 0.0000     0.5216 f
+  rvcpu/EX_stage/ALU/U924/A2 (LVT_AOI21HDV2)            0.0862    0.0000     0.5216 f
+  rvcpu/EX_stage/ALU/U924/ZN (LVT_AOI21HDV2)            0.1553    0.1242     0.6458 r
+  rvcpu/EX_stage/ALU/n432 (net)                 2                 0.0000     0.6458 r
+  rvcpu/EX_stage/ALU/U1265/A1 (LVT_OAI21HDV2)           0.1553    0.0000     0.6458 r
+  rvcpu/EX_stage/ALU/U1265/ZN (LVT_OAI21HDV2)           0.1095    0.0952     0.7410 f
+  rvcpu/EX_stage/ALU/n520 (net)                 2                 0.0000     0.7410 f
+  rvcpu/EX_stage/ALU/U3426/A1 (LVT_AOI21HDV4)           0.1095    0.0000     0.7410 f
+  rvcpu/EX_stage/ALU/U3426/ZN (LVT_AOI21HDV4)           0.1116    0.0918     0.8329 r
+  rvcpu/EX_stage/ALU/n521 (net)                 1                 0.0000     0.8329 r
+  rvcpu/EX_stage/ALU/U3479/B (LVT_OAI21HDV4)            0.1116    0.0000     0.8329 r
+  rvcpu/EX_stage/ALU/U3479/ZN (LVT_OAI21HDV4)           0.0864    0.0764     0.9093 f
+  rvcpu/EX_stage/ALU/n3516 (net)                3                 0.0000     0.9093 f
+  rvcpu/EX_stage/ALU/U1938/A1 (LVT_AOI21HDV4)           0.0864    0.0000     0.9093 f
+  rvcpu/EX_stage/ALU/U1938/ZN (LVT_AOI21HDV4)           0.1330    0.1009     1.0101 r
+  rvcpu/EX_stage/ALU/n1059 (net)                2                 0.0000     1.0101 r
+  rvcpu/EX_stage/ALU/U3424/A1 (LVT_NOR2HDV4)            0.1330    0.0000     1.0101 r
+  rvcpu/EX_stage/ALU/U3424/ZN (LVT_NOR2HDV4)            0.0501    0.0340     1.0442 f
+  rvcpu/EX_stage/ALU/n3463 (net)                1                 0.0000     1.0442 f
+  rvcpu/EX_stage/ALU/U3423/A1 (LVT_NOR2HDV2)            0.0501    0.0000     1.0442 f
+  rvcpu/EX_stage/ALU/U3423/ZN (LVT_NOR2HDV2)            0.0967    0.0664     1.1106 r
+  rvcpu/EX_stage/ALU/n1060 (net)                1                 0.0000     1.1106 r
+  rvcpu/EX_stage/ALU/U2710/A2 (LVT_NAND2HDV2)           0.0967    0.0000     1.1106 r
+  rvcpu/EX_stage/ALU/U2710/ZN (LVT_NAND2HDV2)           0.0554    0.0535     1.1641 f
+  rvcpu/EX_stage/ALU/n3451 (net)                1                 0.0000     1.1641 f
+  rvcpu/EX_stage/ALU/U2709/B (LVT_OAI21HDV2)            0.0554    0.0000     1.1641 f
+  rvcpu/EX_stage/ALU/U2709/ZN (LVT_OAI21HDV2)           0.1211    0.0428     1.2069 r
+  rvcpu/EX_stage/ALU/n1064 (net)                1                 0.0000     1.2069 r
+  rvcpu/EX_stage/ALU/U602/A1 (LVT_NAND2HDV1)            0.1211    0.0000     1.2069 r
+  rvcpu/EX_stage/ALU/U602/ZN (LVT_NAND2HDV1)            0.0756    0.0661     1.2730 f
+  rvcpu/EX_stage/ALU/n3483 (net)                1                 0.0000     1.2730 f
+  rvcpu/EX_stage/ALU/U3445/A1 (LVT_NAND3HDV2)           0.0756    0.0000     1.2730 f
+  rvcpu/EX_stage/ALU/U3445/ZN (LVT_NAND3HDV2)           0.1066    0.0724     1.3455 r
+  rvcpu/EX_stage/ALU/out[0] (net)               2                 0.0000     1.3455 r
+  rvcpu/EX_stage/ALU/out[0] (ysyx_210457_ALU_0)                   0.0000     1.3455 r
+  rvcpu/EX_stage/result[0] (net)                                  0.0000     1.3455 r
+  rvcpu/EX_stage/U1874/I (LVT_INHDV4)                   0.1066    0.0000     1.3455 r
+  rvcpu/EX_stage/U1874/ZN (LVT_INHDV4)                  0.0379    0.0333     1.3788 f
+  rvcpu/EX_stage/n1658 (net)                    1                 0.0000     1.3788 f
+  rvcpu/EX_stage/U1872/A1 (LVT_NOR2HDV4)                0.0379    0.0000     1.3788 f
+  rvcpu/EX_stage/U1872/ZN (LVT_NOR2HDV4)                0.1033    0.0650     1.4438 r
+  rvcpu/EX_stage/n11 (net)                      2                 0.0000     1.4438 r
+  rvcpu/EX_stage/U438/A1 (LVT_NAND2HDV4)                0.1033    0.0000     1.4438 r
+  rvcpu/EX_stage/U438/ZN (LVT_NAND2HDV4)                0.0641    0.0582     1.5020 f
+  rvcpu/EX_stage/n1046 (net)                    2                 0.0000     1.5020 f
+  rvcpu/EX_stage/U1869/A2 (LVT_OAI21HDV4)               0.0641    0.0000     1.5020 f
+  rvcpu/EX_stage/U1869/ZN (LVT_OAI21HDV4)               0.1985    0.1383     1.6403 r
+  rvcpu/EX_stage/n216 (net)                     3                 0.0000     1.6403 r
+  rvcpu/EX_stage/U1865/I (LVT_INHDV3)                   0.1985    0.0000     1.6403 r
+  rvcpu/EX_stage/U1865/ZN (LVT_INHDV3)                  0.0597    0.0453     1.6856 f
+  rvcpu/EX_stage/n1053 (net)                    1                 0.0000     1.6856 f
+  rvcpu/EX_stage/U1851/A1 (LVT_XOR2HDV4)                0.0597    0.0000     1.6856 f
+  rvcpu/EX_stage/U1851/Z (LVT_XOR2HDV4)                 0.0538    0.1180     1.8036 f
+  rvcpu/EX_stage/n1642 (net)                    1                 0.0000     1.8036 f
+  rvcpu/EX_stage/U37/A1 (LVT_NAND2HDV2)                 0.0538    0.0000     1.8036 f
+  rvcpu/EX_stage/U37/ZN (LVT_NAND2HDV2)                 0.0823    0.0420     1.8457 r
+  rvcpu/EX_stage/n1641 (net)                    1                 0.0000     1.8457 r
+  rvcpu/EX_stage/U1790/A1 (LVT_NAND2HDV2)               0.0823    0.0000     1.8457 r
+  rvcpu/EX_stage/U1790/ZN (LVT_NAND2HDV2)               0.0997    0.0684     1.9141 f
+  rvcpu/EX_stage/ex_w_data[2] (net)             3                 0.0000     1.9141 f
+  rvcpu/EX_stage/ex_w_data[2] (ysyx_210457_EX_stage_0)            0.0000     1.9141 f
+  rvcpu/N_ex_w_data[2] (net)                                      0.0000     1.9141 f
+  rvcpu/ID_stage/ex_w_data[2] (ysyx_210457_ID_stage_0)            0.0000     1.9141 f
+  rvcpu/ID_stage/ex_w_data[2] (net)                               0.0000     1.9141 f
+  rvcpu/ID_stage/U2236/A1 (LVT_NAND2HDV2)               0.0997    0.0000     1.9141 f
+  rvcpu/ID_stage/U2236/ZN (LVT_NAND2HDV2)               0.0760    0.0627     1.9768 r
+  rvcpu/ID_stage/n3426 (net)                    1                 0.0000     1.9768 r
+  rvcpu/ID_stage/U2218/A1 (LVT_NAND3HDV4)               0.0760    0.0000     1.9768 r
+  rvcpu/ID_stage/U2218/ZN (LVT_NAND3HDV4)               0.1187    0.0802     2.0570 f
+  rvcpu/ID_stage/n3677 (net)                    3                 0.0000     2.0570 f
+  rvcpu/ID_stage/U2258/A1 (LVT_NAND2HDV2)               0.1187    0.0000     2.0570 f
+  rvcpu/ID_stage/U2258/ZN (LVT_NAND2HDV2)               0.0899    0.0502     2.1072 r
+  rvcpu/ID_stage/n3445 (net)                    1                 0.0000     2.1072 r
+  rvcpu/ID_stage/U988/I (LVT_INHDV1)                    0.0899    0.0000     2.1072 r
+  rvcpu/ID_stage/U988/ZN (LVT_INHDV1)                   0.0637    0.0560     2.1633 f
+  rvcpu/ID_stage/n3444 (net)                    1                 0.0000     2.1633 f
+  rvcpu/ID_stage/U2257/A2 (LVT_NOR2HDV4)                0.0637    0.0000     2.1633 f
+  rvcpu/ID_stage/U2257/ZN (LVT_NOR2HDV4)                0.1090    0.0834     2.2467 r
+  rvcpu/ID_stage/n1125 (net)                    2                 0.0000     2.2467 r
+  rvcpu/ID_stage/U2220/A2 (LVT_OAI22HDV4)               0.1090    0.0000     2.2467 r
+  rvcpu/ID_stage/U2220/ZN (LVT_OAI22HDV4)               0.1003    0.0808     2.3275 f
+  rvcpu/ID_stage/n997 (net)                     2                 0.0000     2.3275 f
+  rvcpu/ID_stage/U2241/A1 (LVT_OAI21HDV4)               0.1003    0.0000     2.3275 f
+  rvcpu/ID_stage/U2241/ZN (LVT_OAI21HDV4)               0.1436    0.1076     2.4351 r
+  rvcpu/ID_stage/n873 (net)                     2                 0.0000     2.4351 r
+  rvcpu/ID_stage/U2188/A1 (LVT_AOI21HDV4)               0.1436    0.0000     2.4351 r
+  rvcpu/ID_stage/U2188/ZN (LVT_AOI21HDV4)               0.0797    0.0720     2.5071 f
+  rvcpu/ID_stage/n3383 (net)                    1                 0.0000     2.5071 f
+  rvcpu/ID_stage/U2187/A1 (LVT_NOR2HDV4)                0.0797    0.0000     2.5071 f
+  rvcpu/ID_stage/U2187/ZN (LVT_NOR2HDV4)                0.1067    0.0785     2.5856 r
+  rvcpu/ID_stage/n813 (net)                     2                 0.0000     2.5856 r
+  rvcpu/ID_stage/U2252/A1 (LVT_NAND2HDV4)               0.1067    0.0000     2.5856 r
+  rvcpu/ID_stage/U2252/ZN (LVT_NAND2HDV4)               0.0628    0.0518     2.6374 f
+  rvcpu/ID_stage/n3557 (net)                    1                 0.0000     2.6374 f
+  rvcpu/ID_stage/U1854/B1 (LVT_AOI22HDV4)               0.0628    0.0000     2.6374 f
+  rvcpu/ID_stage/U1854/ZN (LVT_AOI22HDV4)               0.1646    0.0935     2.7309 r
+  rvcpu/ID_stage/n1504 (net)                    2                 0.0000     2.7309 r
+  rvcpu/ID_stage/U1470/A1 (LVT_NAND2HDV4)               0.1646    0.0000     2.7309 r
+  rvcpu/ID_stage/U1470/ZN (LVT_NAND2HDV4)               0.0684    0.0596     2.7905 f
+  rvcpu/ID_stage/n3443 (net)                    1                 0.0000     2.7905 f
+  rvcpu/ID_stage/U2256/B1 (LVT_AOI22HDV4)               0.0684    0.0000     2.7905 f
+  rvcpu/ID_stage/U2256/ZN (LVT_AOI22HDV4)               0.1650    0.0946     2.8850 r
+  rvcpu/ID_stage/n1475 (net)                    2                 0.0000     2.8850 r
+  rvcpu/ID_stage/U2344/A1 (LVT_NAND2HDV4)               0.1650    0.0000     2.8850 r
+  rvcpu/ID_stage/U2344/ZN (LVT_NAND2HDV4)               0.0684    0.0596     2.9447 f
+  rvcpu/ID_stage/n3561 (net)                    1                 0.0000     2.9447 f
+  rvcpu/ID_stage/U2281/B1 (LVT_AOI22HDV4)               0.0684    0.0000     2.9447 f
+  rvcpu/ID_stage/U2281/ZN (LVT_AOI22HDV4)               0.1720    0.0917     3.0364 r
+  rvcpu/ID_stage/n1450 (net)                    2                 0.0000     3.0364 r
+  rvcpu/ID_stage/U2280/A1 (LVT_NAND2HDV4)               0.1720    0.0000     3.0364 r
+  rvcpu/ID_stage/U2280/ZN (LVT_NAND2HDV4)               0.0698    0.0606     3.0970 f
+  rvcpu/ID_stage/n3515 (net)                    1                 0.0000     3.0970 f
+  rvcpu/ID_stage/U2275/B1 (LVT_AOI22HDV4)               0.0698    0.0000     3.0970 f
+  rvcpu/ID_stage/U2275/ZN (LVT_AOI22HDV4)               0.1768    0.0921     3.1891 r
+  rvcpu/ID_stage/n1387 (net)                    2                 0.0000     3.1891 r
+  rvcpu/ID_stage/U1471/A1 (LVT_NAND2HDV4)               0.1768    0.0000     3.1891 r
+  rvcpu/ID_stage/U1471/ZN (LVT_NAND2HDV4)               0.0720    0.0624     3.2515 f
+  rvcpu/ID_stage/n1379 (net)                    1                 0.0000     3.2515 f
+  rvcpu/ID_stage/U2312/A1 (LVT_NAND2HDV4)               0.0720    0.0000     3.2515 f
+  rvcpu/ID_stage/U2312/ZN (LVT_NAND2HDV4)               0.0591    0.0515     3.3030 r
+  rvcpu/ID_stage/n1348 (net)                    2                 0.0000     3.3030 r
+  rvcpu/ID_stage/U2222/A1 (LVT_AOI21HDV4)               0.0591    0.0000     3.3030 r
+  rvcpu/ID_stage/U2222/ZN (LVT_AOI21HDV4)               0.1010    0.0607     3.3637 f
+  rvcpu/ID_stage/n1320 (net)                    2                 0.0000     3.3637 f
+  rvcpu/ID_stage/U2221/A1 (LVT_NOR2HDV4)                0.1010    0.0000     3.3637 f
+  rvcpu/ID_stage/U2221/ZN (LVT_NOR2HDV4)                0.1022    0.0754     3.4391 r
+  rvcpu/ID_stage/n3518 (net)                    1                 0.0000     3.4391 r
+  rvcpu/ID_stage/U2291/A1 (LVT_NOR2HDV4)                0.1022    0.0000     3.4391 r
+  rvcpu/ID_stage/U2291/ZN (LVT_NOR2HDV4)                0.0458    0.0410     3.4801 f
+  rvcpu/ID_stage/n1235 (net)                    2                 0.0000     3.4801 f
+  rvcpu/ID_stage/U2238/A1 (LVT_NOR2HDV4)                0.0458    0.0000     3.4801 f
+  rvcpu/ID_stage/U2238/ZN (LVT_NOR2HDV4)                0.0907    0.0625     3.5426 r
+  rvcpu/ID_stage/n3427 (net)                    1                 0.0000     3.5426 r
+  rvcpu/ID_stage/U2237/A1 (LVT_NOR2HDV4)                0.0907    0.0000     3.5426 r
+  rvcpu/ID_stage/U2237/ZN (LVT_NOR2HDV4)                0.0469    0.0406     3.5831 f
+  rvcpu/ID_stage/n1191 (net)                    2                 0.0000     3.5831 f
+  rvcpu/ID_stage/U2322/A1 (LVT_NAND2HDV4)               0.0469    0.0000     3.5831 f
+  rvcpu/ID_stage/U2322/ZN (LVT_NAND2HDV4)               0.0661    0.0442     3.6273 r
+  rvcpu/ID_stage/n1112 (net)                    2                 0.0000     3.6273 r
+  rvcpu/ID_stage/U2142/B (LVT_OAI21HDV4)                0.0661    0.0000     3.6273 r
+  rvcpu/ID_stage/U2142/ZN (LVT_OAI21HDV4)               0.0851    0.0607     3.6880 f
+  rvcpu/ID_stage/n1060 (net)                    2                 0.0000     3.6880 f
+  rvcpu/ID_stage/U2141/A1 (LVT_NAND2HDV4)               0.0851    0.0000     3.6880 f
+  rvcpu/ID_stage/U2141/ZN (LVT_NAND2HDV4)               0.0664    0.0538     3.7417 r
+  rvcpu/ID_stage/n1030 (net)                    2                 0.0000     3.7417 r
+  rvcpu/ID_stage/U2154/A1 (LVT_NAND2HDV4)               0.0664    0.0000     3.7417 r
+  rvcpu/ID_stage/U2154/ZN (LVT_NAND2HDV4)               0.0968    0.0468     3.7885 f
+  rvcpu/ID_stage/n3405 (net)                    1                 0.0000     3.7885 f
+  rvcpu/ID_stage/U2216/A1 (LVT_NAND2HDV4)               0.0968    0.0000     3.7885 f
+  rvcpu/ID_stage/U2216/ZN (LVT_NAND2HDV4)               0.0667    0.0560     3.8445 r
+  rvcpu/ID_stage/n1007 (net)                    2                 0.0000     3.8445 r
+  rvcpu/ID_stage/U2215/A1 (LVT_NAND2HDV4)               0.0667    0.0000     3.8445 r
+  rvcpu/ID_stage/U2215/ZN (LVT_NAND2HDV4)               0.0778    0.0468     3.8914 f
+  rvcpu/ID_stage/n3433 (net)                    1                 0.0000     3.8914 f
+  rvcpu/ID_stage/U2246/A1 (LVT_NAND2HDV4)               0.0778    0.0000     3.8914 f
+  rvcpu/ID_stage/U2246/ZN (LVT_NAND2HDV4)               0.0552    0.0466     3.9379 r
+  rvcpu/ID_stage/n3473 (net)                    1                 0.0000     3.9379 r
+  rvcpu/ID_stage/U2284/A1 (LVT_NAND2HDV4)               0.0552    0.0000     3.9379 r
+  rvcpu/ID_stage/U2284/ZN (LVT_NAND2HDV4)               0.0693    0.0499     3.9878 f
+  rvcpu/ID_stage/n976 (net)                     2                 0.0000     3.9878 f
+  rvcpu/ID_stage/U2192/I (LVT_INHDV4)                   0.0693    0.0000     3.9878 f
+  rvcpu/ID_stage/U2192/ZN (LVT_INHDV4)                  0.0434    0.0391     4.0269 r
+  rvcpu/ID_stage/n3387 (net)                    1                 0.0000     4.0269 r
+  rvcpu/ID_stage/U2190/A1 (LVT_AOI21HDV4)               0.0434    0.0000     4.0269 r
+  rvcpu/ID_stage/U2190/ZN (LVT_AOI21HDV4)               0.0826    0.0566     4.0835 f
+  rvcpu/ID_stage/n956 (net)                     2                 0.0000     4.0835 f
+  rvcpu/ID_stage/U2274/A1 (LVT_NOR2HDV4)                0.0826    0.0000     4.0835 f
+  rvcpu/ID_stage/U2274/ZN (LVT_NOR2HDV4)                0.0964    0.0715     4.1550 r
+  rvcpu/ID_stage/n3458 (net)                    1                 0.0000     4.1550 r
+  rvcpu/ID_stage/U2272/A1 (LVT_NOR2HDV4)                0.0964    0.0000     4.1550 r
+  rvcpu/ID_stage/U2272/ZN (LVT_NOR2HDV4)                0.0476    0.0435     4.1985 f
+  rvcpu/ID_stage/n922 (net)                     2                 0.0000     4.1985 f
+  rvcpu/ID_stage/U1769/I (LVT_INHDV4)                   0.0476    0.0000     4.1985 f
+  rvcpu/ID_stage/U1769/ZN (LVT_INHDV4)                  0.0384    0.0342     4.2326 r
+  rvcpu/ID_stage/n3298 (net)                    1                 0.0000     4.2326 r
+  rvcpu/ID_stage/U1768/A1 (LVT_AOI21HDV4)               0.0384    0.0000     4.2326 r
+  rvcpu/ID_stage/U1768/ZN (LVT_AOI21HDV4)               0.0743    0.0550     4.2876 f
+  rvcpu/ID_stage/n899 (net)                     2                 0.0000     4.2876 f
+  rvcpu/ID_stage/U2289/A1 (LVT_NOR2HDV4)                0.0743    0.0000     4.2876 f
+  rvcpu/ID_stage/U2289/ZN (LVT_NOR2HDV4)                0.0948    0.0692     4.3568 r
+  rvcpu/ID_stage/n898 (net)                     1                 0.0000     4.3568 r
+  rvcpu/ID_stage/U2196/B1 (LVT_IOA22HDV4)               0.0948    0.0000     4.3568 r
+  rvcpu/ID_stage/U2196/ZN (LVT_IOA22HDV4)               0.0911    0.0664     4.4232 f
+  rvcpu/ID_stage/n890 (net)                     2                 0.0000     4.4232 f
+  rvcpu/ID_stage/U2288/A1 (LVT_OAI22HDV4)               0.0911    0.0000     4.4232 f
+  rvcpu/ID_stage/U2288/ZN (LVT_OAI22HDV4)               0.1978    0.0832     4.5064 r
+  rvcpu/ID_stage/n3560 (net)                    1                 0.0000     4.5064 r
+  rvcpu/ID_stage/U2301/A1 (LVT_NAND2HDV4)               0.1978    0.0000     4.5064 r
+  rvcpu/ID_stage/U2301/ZN (LVT_NAND2HDV4)               0.0850    0.0733     4.5797 f
+  rvcpu/ID_stage/n3520 (net)                    2                 0.0000     4.5797 f
+  rvcpu/ID_stage/U1965/B1 (LVT_AOI22HDV4)               0.0850    0.0000     4.5797 f
+  rvcpu/ID_stage/U1965/ZN (LVT_AOI22HDV4)               0.1984    0.1133     4.6930 r
+  rvcpu/ID_stage/n843 (net)                     2                 0.0000     4.6930 r
+  rvcpu/ID_stage/U1964/A1 (LVT_AOI21HDV4)               0.1984    0.0000     4.6930 r
+  rvcpu/ID_stage/U1964/ZN (LVT_AOI21HDV4)               0.0910    0.0808     4.7738 f
+  rvcpu/ID_stage/n842 (net)                     1                 0.0000     4.7738 f
+  rvcpu/ID_stage/U2145/A1 (LVT_NOR2HDV4)                0.0910    0.0000     4.7738 f
+  rvcpu/ID_stage/U2145/ZN (LVT_NOR2HDV4)                0.1035    0.0781     4.8518 r
+  rvcpu/ID_stage/n835 (net)                     2                 0.0000     4.8518 r
+  rvcpu/ID_stage/U2144/A1 (LVT_NOR2HDV2)                0.1035    0.0000     4.8518 r
+  rvcpu/ID_stage/U2144/ZN (LVT_NOR2HDV2)                0.0590    0.0492     4.9011 f
+  rvcpu/ID_stage/n833 (net)                     1                 0.0000     4.9011 f
+  rvcpu/ID_stage/U2264/A1 (LVT_NOR2HDV4)                0.0590    0.0000     4.9011 f
+  rvcpu/ID_stage/U2264/ZN (LVT_NOR2HDV4)                0.0850    0.0618     4.9628 r
+  rvcpu/ID_stage/n3451 (net)                    1                 0.0000     4.9628 r
+  rvcpu/ID_stage/U2263/A1 (LVT_XNOR2HDV4)               0.0850    0.0000     4.9628 r
+  rvcpu/ID_stage/U2263/ZN (LVT_XNOR2HDV4)               0.0645    0.1463     5.1091 f
+  rvcpu/ID_stage/n1658 (net)                    2                 0.0000     5.1091 f
+  rvcpu/ID_stage/U2342/A1 (LVT_OAI21HDV4)               0.0645    0.0000     5.1091 f
+  rvcpu/ID_stage/U2342/ZN (LVT_OAI21HDV4)               0.1489    0.0933     5.2023 r
+  rvcpu/ID_stage/branch[63] (net)               2                 0.0000     5.2023 r
+  rvcpu/ID_stage/branch[63] (ysyx_210457_ID_stage_0)              0.0000     5.2023 r
+  rvcpu/N_branch[63] (net)                                        0.0000     5.2023 r
+  rvcpu/IF_stage/branch[63] (ysyx_210457_IF_stage_0)              0.0000     5.2023 r
+  rvcpu/IF_stage/branch[63] (net)                                 0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/branch[63] (ysyx_210457_forecase_0)     0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/branch[63] (net)                        0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/U591/A1 (LVT_XNOR2HDV4)       0.1489    0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/U591/ZN (LVT_XNOR2HDV4)       0.0594    0.1602     5.3626 f
+  rvcpu/IF_stage/forecase/n11764 (net)          1                 0.0000     5.3626 f
+  rvcpu/IF_stage/forecase/U615/A1 (LVT_NOR2HDV4)        0.0594    0.0000     5.3626 f
+  rvcpu/IF_stage/forecase/U615/ZN (LVT_NOR2HDV4)        0.0866    0.0633     5.4259 r
+  rvcpu/IF_stage/forecase/n11769 (net)          1                 0.0000     5.4259 r
+  rvcpu/IF_stage/forecase/U613/A1 (LVT_NAND3HDV4)       0.0866    0.0000     5.4259 r
+  rvcpu/IF_stage/forecase/U613/ZN (LVT_NAND3HDV4)       0.1078    0.0839     5.5098 f
+  rvcpu/IF_stage/forecase/n3800 (net)           1                 0.0000     5.5098 f
+  rvcpu/IF_stage/forecase/U673/A1 (LVT_NOR2HDV8)        0.1078    0.0000     5.5098 f
+  rvcpu/IF_stage/forecase/U673/ZN (LVT_NOR2HDV8)        0.1450    0.1039     5.6137 r
+  rvcpu/IF_stage/forecase/n5592 (net)           2                 0.0000     5.6137 r
+  rvcpu/IF_stage/forecase/U755/A1 (LVT_NOR2HDV8)        0.1450    0.0000     5.6137 r
+  rvcpu/IF_stage/forecase/U755/ZN (LVT_NOR2HDV8)        0.0696    0.0606     5.6743 f
+  rvcpu/IF_stage/forecase/n11777 (net)          3                 0.0000     5.6743 f
+  rvcpu/IF_stage/forecase/U609/I (LVT_INHDV16)          0.0696    0.0000     5.6743 f
+  rvcpu/IF_stage/forecase/U609/ZN (LVT_INHDV16)         0.1149    0.0851     5.7594 r
+  rvcpu/IF_stage/forecase/n5796 (net)          18                 0.0000     5.7594 r
+  rvcpu/IF_stage/forecase/U685/A1 (LVT_NOR2HDV8)        0.1149    0.0000     5.7594 r
+  rvcpu/IF_stage/forecase/U685/ZN (LVT_NOR2HDV8)        0.0680    0.0377     5.7971 f
+  rvcpu/IF_stage/forecase/n5857 (net)           2                 0.0000     5.7971 f
+  rvcpu/IF_stage/forecase/U653/A1 (LVT_NOR2HDV4)        0.0680    0.0000     5.7971 f
+  rvcpu/IF_stage/forecase/U653/ZN (LVT_NOR2HDV4)        0.1512    0.0920     5.8891 r
+  rvcpu/IF_stage/forecase/n6164 (net)           5                 0.0000     5.8891 r
+  rvcpu/IF_stage/forecase/U198/I (LVT_BUFHDV4)          0.1512    0.0000     5.8891 r
+  rvcpu/IF_stage/forecase/U198/Z (LVT_BUFHDV4)          0.2541    0.2144     6.1035 r
+  rvcpu/IF_stage/forecase/n6289 (net)          45                 0.0000     6.1035 r
+  rvcpu/IF_stage/forecase/U8232/A1 (LVT_IOA22HDV1)      0.2541    0.0000     6.1035 r
+  rvcpu/IF_stage/forecase/U8232/ZN (LVT_IOA22HDV1)      0.1818    0.1551     6.2586 r
+  rvcpu/IF_stage/forecase/n6781 (net)           1                 0.0000     6.2586 r
+  rvcpu/IF_stage/forecase/fore_branch_reg_24__25_/D (LVT_DQHDV2)
+                                                        0.1818    0.0000     6.2586 r
+  data arrival time                                                          6.2586
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  rvcpu/IF_stage/forecase/fore_branch_reg_24__25_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.0912     6.2588
+  data required time                                                         6.2588
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2588
+  data arrival time                                                         -6.2586
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
+  Startpoint: rvcpu/id_ex/ex_reg1_data_reg_16_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: rvcpu/IF_stage/forecase/fore_branch_reg_24__20_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  rvcpu/id_ex/ex_reg1_data_reg_16_/CK (LVT_DQHDV2)      0.0000    0.0000 #   0.0000 r
+  rvcpu/id_ex/ex_reg1_data_reg_16_/Q (LVT_DQHDV2)       0.2033    0.3417     0.3417 f
+  rvcpu/id_ex/ex_reg1_data[16] (net)           14                 0.0000     0.3417 f
+  rvcpu/id_ex/ex_reg1_data[16] (ysyx_210457_id_ex_0)              0.0000     0.3417 f
+  rvcpu/N_ex_reg1_data[16] (net)                                  0.0000     0.3417 f
+  rvcpu/EX_stage/id_reg1_data[16] (ysyx_210457_EX_stage_0)        0.0000     0.3417 f
+  rvcpu/EX_stage/id_reg1_data[16] (net)                           0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/num1[16] (ysyx_210457_ALU_0)                 0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/num1[16] (net)                               0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/U918/A1 (LVT_NAND2HDV1)            0.2033    0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/U918/ZN (LVT_NAND2HDV1)            0.1145    0.0963     0.4380 r
+  rvcpu/EX_stage/ALU/n1686 (net)                2                 0.0000     0.4380 r
+  rvcpu/EX_stage/ALU/U920/A2 (LVT_OAI21HDV2)            0.1145    0.0000     0.4380 r
+  rvcpu/EX_stage/ALU/U920/ZN (LVT_OAI21HDV2)            0.0862    0.0836     0.5216 f
+  rvcpu/EX_stage/ALU/n1728 (net)                2                 0.0000     0.5216 f
+  rvcpu/EX_stage/ALU/U924/A2 (LVT_AOI21HDV2)            0.0862    0.0000     0.5216 f
+  rvcpu/EX_stage/ALU/U924/ZN (LVT_AOI21HDV2)            0.1553    0.1242     0.6458 r
+  rvcpu/EX_stage/ALU/n432 (net)                 2                 0.0000     0.6458 r
+  rvcpu/EX_stage/ALU/U1265/A1 (LVT_OAI21HDV2)           0.1553    0.0000     0.6458 r
+  rvcpu/EX_stage/ALU/U1265/ZN (LVT_OAI21HDV2)           0.1095    0.0952     0.7410 f
+  rvcpu/EX_stage/ALU/n520 (net)                 2                 0.0000     0.7410 f
+  rvcpu/EX_stage/ALU/U3426/A1 (LVT_AOI21HDV4)           0.1095    0.0000     0.7410 f
+  rvcpu/EX_stage/ALU/U3426/ZN (LVT_AOI21HDV4)           0.1116    0.0918     0.8329 r
+  rvcpu/EX_stage/ALU/n521 (net)                 1                 0.0000     0.8329 r
+  rvcpu/EX_stage/ALU/U3479/B (LVT_OAI21HDV4)            0.1116    0.0000     0.8329 r
+  rvcpu/EX_stage/ALU/U3479/ZN (LVT_OAI21HDV4)           0.0864    0.0764     0.9093 f
+  rvcpu/EX_stage/ALU/n3516 (net)                3                 0.0000     0.9093 f
+  rvcpu/EX_stage/ALU/U1938/A1 (LVT_AOI21HDV4)           0.0864    0.0000     0.9093 f
+  rvcpu/EX_stage/ALU/U1938/ZN (LVT_AOI21HDV4)           0.1330    0.1009     1.0101 r
+  rvcpu/EX_stage/ALU/n1059 (net)                2                 0.0000     1.0101 r
+  rvcpu/EX_stage/ALU/U3424/A1 (LVT_NOR2HDV4)            0.1330    0.0000     1.0101 r
+  rvcpu/EX_stage/ALU/U3424/ZN (LVT_NOR2HDV4)            0.0501    0.0340     1.0442 f
+  rvcpu/EX_stage/ALU/n3463 (net)                1                 0.0000     1.0442 f
+  rvcpu/EX_stage/ALU/U3423/A1 (LVT_NOR2HDV2)            0.0501    0.0000     1.0442 f
+  rvcpu/EX_stage/ALU/U3423/ZN (LVT_NOR2HDV2)            0.0967    0.0664     1.1106 r
+  rvcpu/EX_stage/ALU/n1060 (net)                1                 0.0000     1.1106 r
+  rvcpu/EX_stage/ALU/U2710/A2 (LVT_NAND2HDV2)           0.0967    0.0000     1.1106 r
+  rvcpu/EX_stage/ALU/U2710/ZN (LVT_NAND2HDV2)           0.0554    0.0535     1.1641 f
+  rvcpu/EX_stage/ALU/n3451 (net)                1                 0.0000     1.1641 f
+  rvcpu/EX_stage/ALU/U2709/B (LVT_OAI21HDV2)            0.0554    0.0000     1.1641 f
+  rvcpu/EX_stage/ALU/U2709/ZN (LVT_OAI21HDV2)           0.1211    0.0428     1.2069 r
+  rvcpu/EX_stage/ALU/n1064 (net)                1                 0.0000     1.2069 r
+  rvcpu/EX_stage/ALU/U602/A1 (LVT_NAND2HDV1)            0.1211    0.0000     1.2069 r
+  rvcpu/EX_stage/ALU/U602/ZN (LVT_NAND2HDV1)            0.0756    0.0661     1.2730 f
+  rvcpu/EX_stage/ALU/n3483 (net)                1                 0.0000     1.2730 f
+  rvcpu/EX_stage/ALU/U3445/A1 (LVT_NAND3HDV2)           0.0756    0.0000     1.2730 f
+  rvcpu/EX_stage/ALU/U3445/ZN (LVT_NAND3HDV2)           0.1066    0.0724     1.3455 r
+  rvcpu/EX_stage/ALU/out[0] (net)               2                 0.0000     1.3455 r
+  rvcpu/EX_stage/ALU/out[0] (ysyx_210457_ALU_0)                   0.0000     1.3455 r
+  rvcpu/EX_stage/result[0] (net)                                  0.0000     1.3455 r
+  rvcpu/EX_stage/U1874/I (LVT_INHDV4)                   0.1066    0.0000     1.3455 r
+  rvcpu/EX_stage/U1874/ZN (LVT_INHDV4)                  0.0379    0.0333     1.3788 f
+  rvcpu/EX_stage/n1658 (net)                    1                 0.0000     1.3788 f
+  rvcpu/EX_stage/U1872/A1 (LVT_NOR2HDV4)                0.0379    0.0000     1.3788 f
+  rvcpu/EX_stage/U1872/ZN (LVT_NOR2HDV4)                0.1033    0.0650     1.4438 r
+  rvcpu/EX_stage/n11 (net)                      2                 0.0000     1.4438 r
+  rvcpu/EX_stage/U438/A1 (LVT_NAND2HDV4)                0.1033    0.0000     1.4438 r
+  rvcpu/EX_stage/U438/ZN (LVT_NAND2HDV4)                0.0641    0.0582     1.5020 f
+  rvcpu/EX_stage/n1046 (net)                    2                 0.0000     1.5020 f
+  rvcpu/EX_stage/U1869/A2 (LVT_OAI21HDV4)               0.0641    0.0000     1.5020 f
+  rvcpu/EX_stage/U1869/ZN (LVT_OAI21HDV4)               0.1985    0.1383     1.6403 r
+  rvcpu/EX_stage/n216 (net)                     3                 0.0000     1.6403 r
+  rvcpu/EX_stage/U1865/I (LVT_INHDV3)                   0.1985    0.0000     1.6403 r
+  rvcpu/EX_stage/U1865/ZN (LVT_INHDV3)                  0.0597    0.0453     1.6856 f
+  rvcpu/EX_stage/n1053 (net)                    1                 0.0000     1.6856 f
+  rvcpu/EX_stage/U1851/A1 (LVT_XOR2HDV4)                0.0597    0.0000     1.6856 f
+  rvcpu/EX_stage/U1851/Z (LVT_XOR2HDV4)                 0.0538    0.1180     1.8036 f
+  rvcpu/EX_stage/n1642 (net)                    1                 0.0000     1.8036 f
+  rvcpu/EX_stage/U37/A1 (LVT_NAND2HDV2)                 0.0538    0.0000     1.8036 f
+  rvcpu/EX_stage/U37/ZN (LVT_NAND2HDV2)                 0.0823    0.0420     1.8457 r
+  rvcpu/EX_stage/n1641 (net)                    1                 0.0000     1.8457 r
+  rvcpu/EX_stage/U1790/A1 (LVT_NAND2HDV2)               0.0823    0.0000     1.8457 r
+  rvcpu/EX_stage/U1790/ZN (LVT_NAND2HDV2)               0.0997    0.0684     1.9141 f
+  rvcpu/EX_stage/ex_w_data[2] (net)             3                 0.0000     1.9141 f
+  rvcpu/EX_stage/ex_w_data[2] (ysyx_210457_EX_stage_0)            0.0000     1.9141 f
+  rvcpu/N_ex_w_data[2] (net)                                      0.0000     1.9141 f
+  rvcpu/ID_stage/ex_w_data[2] (ysyx_210457_ID_stage_0)            0.0000     1.9141 f
+  rvcpu/ID_stage/ex_w_data[2] (net)                               0.0000     1.9141 f
+  rvcpu/ID_stage/U2236/A1 (LVT_NAND2HDV2)               0.0997    0.0000     1.9141 f
+  rvcpu/ID_stage/U2236/ZN (LVT_NAND2HDV2)               0.0760    0.0627     1.9768 r
+  rvcpu/ID_stage/n3426 (net)                    1                 0.0000     1.9768 r
+  rvcpu/ID_stage/U2218/A1 (LVT_NAND3HDV4)               0.0760    0.0000     1.9768 r
+  rvcpu/ID_stage/U2218/ZN (LVT_NAND3HDV4)               0.1187    0.0802     2.0570 f
+  rvcpu/ID_stage/n3677 (net)                    3                 0.0000     2.0570 f
+  rvcpu/ID_stage/U2258/A1 (LVT_NAND2HDV2)               0.1187    0.0000     2.0570 f
+  rvcpu/ID_stage/U2258/ZN (LVT_NAND2HDV2)               0.0899    0.0502     2.1072 r
+  rvcpu/ID_stage/n3445 (net)                    1                 0.0000     2.1072 r
+  rvcpu/ID_stage/U988/I (LVT_INHDV1)                    0.0899    0.0000     2.1072 r
+  rvcpu/ID_stage/U988/ZN (LVT_INHDV1)                   0.0637    0.0560     2.1633 f
+  rvcpu/ID_stage/n3444 (net)                    1                 0.0000     2.1633 f
+  rvcpu/ID_stage/U2257/A2 (LVT_NOR2HDV4)                0.0637    0.0000     2.1633 f
+  rvcpu/ID_stage/U2257/ZN (LVT_NOR2HDV4)                0.1090    0.0834     2.2467 r
+  rvcpu/ID_stage/n1125 (net)                    2                 0.0000     2.2467 r
+  rvcpu/ID_stage/U2220/A2 (LVT_OAI22HDV4)               0.1090    0.0000     2.2467 r
+  rvcpu/ID_stage/U2220/ZN (LVT_OAI22HDV4)               0.1003    0.0808     2.3275 f
+  rvcpu/ID_stage/n997 (net)                     2                 0.0000     2.3275 f
+  rvcpu/ID_stage/U2241/A1 (LVT_OAI21HDV4)               0.1003    0.0000     2.3275 f
+  rvcpu/ID_stage/U2241/ZN (LVT_OAI21HDV4)               0.1436    0.1076     2.4351 r
+  rvcpu/ID_stage/n873 (net)                     2                 0.0000     2.4351 r
+  rvcpu/ID_stage/U2188/A1 (LVT_AOI21HDV4)               0.1436    0.0000     2.4351 r
+  rvcpu/ID_stage/U2188/ZN (LVT_AOI21HDV4)               0.0797    0.0720     2.5071 f
+  rvcpu/ID_stage/n3383 (net)                    1                 0.0000     2.5071 f
+  rvcpu/ID_stage/U2187/A1 (LVT_NOR2HDV4)                0.0797    0.0000     2.5071 f
+  rvcpu/ID_stage/U2187/ZN (LVT_NOR2HDV4)                0.1067    0.0785     2.5856 r
+  rvcpu/ID_stage/n813 (net)                     2                 0.0000     2.5856 r
+  rvcpu/ID_stage/U2252/A1 (LVT_NAND2HDV4)               0.1067    0.0000     2.5856 r
+  rvcpu/ID_stage/U2252/ZN (LVT_NAND2HDV4)               0.0628    0.0518     2.6374 f
+  rvcpu/ID_stage/n3557 (net)                    1                 0.0000     2.6374 f
+  rvcpu/ID_stage/U1854/B1 (LVT_AOI22HDV4)               0.0628    0.0000     2.6374 f
+  rvcpu/ID_stage/U1854/ZN (LVT_AOI22HDV4)               0.1646    0.0935     2.7309 r
+  rvcpu/ID_stage/n1504 (net)                    2                 0.0000     2.7309 r
+  rvcpu/ID_stage/U1470/A1 (LVT_NAND2HDV4)               0.1646    0.0000     2.7309 r
+  rvcpu/ID_stage/U1470/ZN (LVT_NAND2HDV4)               0.0684    0.0596     2.7905 f
+  rvcpu/ID_stage/n3443 (net)                    1                 0.0000     2.7905 f
+  rvcpu/ID_stage/U2256/B1 (LVT_AOI22HDV4)               0.0684    0.0000     2.7905 f
+  rvcpu/ID_stage/U2256/ZN (LVT_AOI22HDV4)               0.1650    0.0946     2.8850 r
+  rvcpu/ID_stage/n1475 (net)                    2                 0.0000     2.8850 r
+  rvcpu/ID_stage/U2344/A1 (LVT_NAND2HDV4)               0.1650    0.0000     2.8850 r
+  rvcpu/ID_stage/U2344/ZN (LVT_NAND2HDV4)               0.0684    0.0596     2.9447 f
+  rvcpu/ID_stage/n3561 (net)                    1                 0.0000     2.9447 f
+  rvcpu/ID_stage/U2281/B1 (LVT_AOI22HDV4)               0.0684    0.0000     2.9447 f
+  rvcpu/ID_stage/U2281/ZN (LVT_AOI22HDV4)               0.1720    0.0917     3.0364 r
+  rvcpu/ID_stage/n1450 (net)                    2                 0.0000     3.0364 r
+  rvcpu/ID_stage/U2280/A1 (LVT_NAND2HDV4)               0.1720    0.0000     3.0364 r
+  rvcpu/ID_stage/U2280/ZN (LVT_NAND2HDV4)               0.0698    0.0606     3.0970 f
+  rvcpu/ID_stage/n3515 (net)                    1                 0.0000     3.0970 f
+  rvcpu/ID_stage/U2275/B1 (LVT_AOI22HDV4)               0.0698    0.0000     3.0970 f
+  rvcpu/ID_stage/U2275/ZN (LVT_AOI22HDV4)               0.1768    0.0921     3.1891 r
+  rvcpu/ID_stage/n1387 (net)                    2                 0.0000     3.1891 r
+  rvcpu/ID_stage/U1471/A1 (LVT_NAND2HDV4)               0.1768    0.0000     3.1891 r
+  rvcpu/ID_stage/U1471/ZN (LVT_NAND2HDV4)               0.0720    0.0624     3.2515 f
+  rvcpu/ID_stage/n1379 (net)                    1                 0.0000     3.2515 f
+  rvcpu/ID_stage/U2312/A1 (LVT_NAND2HDV4)               0.0720    0.0000     3.2515 f
+  rvcpu/ID_stage/U2312/ZN (LVT_NAND2HDV4)               0.0591    0.0515     3.3030 r
+  rvcpu/ID_stage/n1348 (net)                    2                 0.0000     3.3030 r
+  rvcpu/ID_stage/U2222/A1 (LVT_AOI21HDV4)               0.0591    0.0000     3.3030 r
+  rvcpu/ID_stage/U2222/ZN (LVT_AOI21HDV4)               0.1010    0.0607     3.3637 f
+  rvcpu/ID_stage/n1320 (net)                    2                 0.0000     3.3637 f
+  rvcpu/ID_stage/U2221/A1 (LVT_NOR2HDV4)                0.1010    0.0000     3.3637 f
+  rvcpu/ID_stage/U2221/ZN (LVT_NOR2HDV4)                0.1022    0.0754     3.4391 r
+  rvcpu/ID_stage/n3518 (net)                    1                 0.0000     3.4391 r
+  rvcpu/ID_stage/U2291/A1 (LVT_NOR2HDV4)                0.1022    0.0000     3.4391 r
+  rvcpu/ID_stage/U2291/ZN (LVT_NOR2HDV4)                0.0458    0.0410     3.4801 f
+  rvcpu/ID_stage/n1235 (net)                    2                 0.0000     3.4801 f
+  rvcpu/ID_stage/U2238/A1 (LVT_NOR2HDV4)                0.0458    0.0000     3.4801 f
+  rvcpu/ID_stage/U2238/ZN (LVT_NOR2HDV4)                0.0907    0.0625     3.5426 r
+  rvcpu/ID_stage/n3427 (net)                    1                 0.0000     3.5426 r
+  rvcpu/ID_stage/U2237/A1 (LVT_NOR2HDV4)                0.0907    0.0000     3.5426 r
+  rvcpu/ID_stage/U2237/ZN (LVT_NOR2HDV4)                0.0469    0.0406     3.5831 f
+  rvcpu/ID_stage/n1191 (net)                    2                 0.0000     3.5831 f
+  rvcpu/ID_stage/U2322/A1 (LVT_NAND2HDV4)               0.0469    0.0000     3.5831 f
+  rvcpu/ID_stage/U2322/ZN (LVT_NAND2HDV4)               0.0661    0.0442     3.6273 r
+  rvcpu/ID_stage/n1112 (net)                    2                 0.0000     3.6273 r
+  rvcpu/ID_stage/U2142/B (LVT_OAI21HDV4)                0.0661    0.0000     3.6273 r
+  rvcpu/ID_stage/U2142/ZN (LVT_OAI21HDV4)               0.0851    0.0607     3.6880 f
+  rvcpu/ID_stage/n1060 (net)                    2                 0.0000     3.6880 f
+  rvcpu/ID_stage/U2141/A1 (LVT_NAND2HDV4)               0.0851    0.0000     3.6880 f
+  rvcpu/ID_stage/U2141/ZN (LVT_NAND2HDV4)               0.0664    0.0538     3.7417 r
+  rvcpu/ID_stage/n1030 (net)                    2                 0.0000     3.7417 r
+  rvcpu/ID_stage/U2154/A1 (LVT_NAND2HDV4)               0.0664    0.0000     3.7417 r
+  rvcpu/ID_stage/U2154/ZN (LVT_NAND2HDV4)               0.0968    0.0468     3.7885 f
+  rvcpu/ID_stage/n3405 (net)                    1                 0.0000     3.7885 f
+  rvcpu/ID_stage/U2216/A1 (LVT_NAND2HDV4)               0.0968    0.0000     3.7885 f
+  rvcpu/ID_stage/U2216/ZN (LVT_NAND2HDV4)               0.0667    0.0560     3.8445 r
+  rvcpu/ID_stage/n1007 (net)                    2                 0.0000     3.8445 r
+  rvcpu/ID_stage/U2215/A1 (LVT_NAND2HDV4)               0.0667    0.0000     3.8445 r
+  rvcpu/ID_stage/U2215/ZN (LVT_NAND2HDV4)               0.0778    0.0468     3.8914 f
+  rvcpu/ID_stage/n3433 (net)                    1                 0.0000     3.8914 f
+  rvcpu/ID_stage/U2246/A1 (LVT_NAND2HDV4)               0.0778    0.0000     3.8914 f
+  rvcpu/ID_stage/U2246/ZN (LVT_NAND2HDV4)               0.0552    0.0466     3.9379 r
+  rvcpu/ID_stage/n3473 (net)                    1                 0.0000     3.9379 r
+  rvcpu/ID_stage/U2284/A1 (LVT_NAND2HDV4)               0.0552    0.0000     3.9379 r
+  rvcpu/ID_stage/U2284/ZN (LVT_NAND2HDV4)               0.0693    0.0499     3.9878 f
+  rvcpu/ID_stage/n976 (net)                     2                 0.0000     3.9878 f
+  rvcpu/ID_stage/U2192/I (LVT_INHDV4)                   0.0693    0.0000     3.9878 f
+  rvcpu/ID_stage/U2192/ZN (LVT_INHDV4)                  0.0434    0.0391     4.0269 r
+  rvcpu/ID_stage/n3387 (net)                    1                 0.0000     4.0269 r
+  rvcpu/ID_stage/U2190/A1 (LVT_AOI21HDV4)               0.0434    0.0000     4.0269 r
+  rvcpu/ID_stage/U2190/ZN (LVT_AOI21HDV4)               0.0826    0.0566     4.0835 f
+  rvcpu/ID_stage/n956 (net)                     2                 0.0000     4.0835 f
+  rvcpu/ID_stage/U2274/A1 (LVT_NOR2HDV4)                0.0826    0.0000     4.0835 f
+  rvcpu/ID_stage/U2274/ZN (LVT_NOR2HDV4)                0.0964    0.0715     4.1550 r
+  rvcpu/ID_stage/n3458 (net)                    1                 0.0000     4.1550 r
+  rvcpu/ID_stage/U2272/A1 (LVT_NOR2HDV4)                0.0964    0.0000     4.1550 r
+  rvcpu/ID_stage/U2272/ZN (LVT_NOR2HDV4)                0.0476    0.0435     4.1985 f
+  rvcpu/ID_stage/n922 (net)                     2                 0.0000     4.1985 f
+  rvcpu/ID_stage/U1769/I (LVT_INHDV4)                   0.0476    0.0000     4.1985 f
+  rvcpu/ID_stage/U1769/ZN (LVT_INHDV4)                  0.0384    0.0342     4.2326 r
+  rvcpu/ID_stage/n3298 (net)                    1                 0.0000     4.2326 r
+  rvcpu/ID_stage/U1768/A1 (LVT_AOI21HDV4)               0.0384    0.0000     4.2326 r
+  rvcpu/ID_stage/U1768/ZN (LVT_AOI21HDV4)               0.0743    0.0550     4.2876 f
+  rvcpu/ID_stage/n899 (net)                     2                 0.0000     4.2876 f
+  rvcpu/ID_stage/U2289/A1 (LVT_NOR2HDV4)                0.0743    0.0000     4.2876 f
+  rvcpu/ID_stage/U2289/ZN (LVT_NOR2HDV4)                0.0948    0.0692     4.3568 r
+  rvcpu/ID_stage/n898 (net)                     1                 0.0000     4.3568 r
+  rvcpu/ID_stage/U2196/B1 (LVT_IOA22HDV4)               0.0948    0.0000     4.3568 r
+  rvcpu/ID_stage/U2196/ZN (LVT_IOA22HDV4)               0.0911    0.0664     4.4232 f
+  rvcpu/ID_stage/n890 (net)                     2                 0.0000     4.4232 f
+  rvcpu/ID_stage/U2288/A1 (LVT_OAI22HDV4)               0.0911    0.0000     4.4232 f
+  rvcpu/ID_stage/U2288/ZN (LVT_OAI22HDV4)               0.1978    0.0832     4.5064 r
+  rvcpu/ID_stage/n3560 (net)                    1                 0.0000     4.5064 r
+  rvcpu/ID_stage/U2301/A1 (LVT_NAND2HDV4)               0.1978    0.0000     4.5064 r
+  rvcpu/ID_stage/U2301/ZN (LVT_NAND2HDV4)               0.0850    0.0733     4.5797 f
+  rvcpu/ID_stage/n3520 (net)                    2                 0.0000     4.5797 f
+  rvcpu/ID_stage/U1965/B1 (LVT_AOI22HDV4)               0.0850    0.0000     4.5797 f
+  rvcpu/ID_stage/U1965/ZN (LVT_AOI22HDV4)               0.1984    0.1133     4.6930 r
+  rvcpu/ID_stage/n843 (net)                     2                 0.0000     4.6930 r
+  rvcpu/ID_stage/U1964/A1 (LVT_AOI21HDV4)               0.1984    0.0000     4.6930 r
+  rvcpu/ID_stage/U1964/ZN (LVT_AOI21HDV4)               0.0910    0.0808     4.7738 f
+  rvcpu/ID_stage/n842 (net)                     1                 0.0000     4.7738 f
+  rvcpu/ID_stage/U2145/A1 (LVT_NOR2HDV4)                0.0910    0.0000     4.7738 f
+  rvcpu/ID_stage/U2145/ZN (LVT_NOR2HDV4)                0.1035    0.0781     4.8518 r
+  rvcpu/ID_stage/n835 (net)                     2                 0.0000     4.8518 r
+  rvcpu/ID_stage/U2144/A1 (LVT_NOR2HDV2)                0.1035    0.0000     4.8518 r
+  rvcpu/ID_stage/U2144/ZN (LVT_NOR2HDV2)                0.0590    0.0492     4.9011 f
+  rvcpu/ID_stage/n833 (net)                     1                 0.0000     4.9011 f
+  rvcpu/ID_stage/U2264/A1 (LVT_NOR2HDV4)                0.0590    0.0000     4.9011 f
+  rvcpu/ID_stage/U2264/ZN (LVT_NOR2HDV4)                0.0850    0.0618     4.9628 r
+  rvcpu/ID_stage/n3451 (net)                    1                 0.0000     4.9628 r
+  rvcpu/ID_stage/U2263/A1 (LVT_XNOR2HDV4)               0.0850    0.0000     4.9628 r
+  rvcpu/ID_stage/U2263/ZN (LVT_XNOR2HDV4)               0.0645    0.1463     5.1091 f
+  rvcpu/ID_stage/n1658 (net)                    2                 0.0000     5.1091 f
+  rvcpu/ID_stage/U2342/A1 (LVT_OAI21HDV4)               0.0645    0.0000     5.1091 f
+  rvcpu/ID_stage/U2342/ZN (LVT_OAI21HDV4)               0.1489    0.0933     5.2023 r
+  rvcpu/ID_stage/branch[63] (net)               2                 0.0000     5.2023 r
+  rvcpu/ID_stage/branch[63] (ysyx_210457_ID_stage_0)              0.0000     5.2023 r
+  rvcpu/N_branch[63] (net)                                        0.0000     5.2023 r
+  rvcpu/IF_stage/branch[63] (ysyx_210457_IF_stage_0)              0.0000     5.2023 r
+  rvcpu/IF_stage/branch[63] (net)                                 0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/branch[63] (ysyx_210457_forecase_0)     0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/branch[63] (net)                        0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/U591/A1 (LVT_XNOR2HDV4)       0.1489    0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/U591/ZN (LVT_XNOR2HDV4)       0.0594    0.1602     5.3626 f
+  rvcpu/IF_stage/forecase/n11764 (net)          1                 0.0000     5.3626 f
+  rvcpu/IF_stage/forecase/U615/A1 (LVT_NOR2HDV4)        0.0594    0.0000     5.3626 f
+  rvcpu/IF_stage/forecase/U615/ZN (LVT_NOR2HDV4)        0.0866    0.0633     5.4259 r
+  rvcpu/IF_stage/forecase/n11769 (net)          1                 0.0000     5.4259 r
+  rvcpu/IF_stage/forecase/U613/A1 (LVT_NAND3HDV4)       0.0866    0.0000     5.4259 r
+  rvcpu/IF_stage/forecase/U613/ZN (LVT_NAND3HDV4)       0.1078    0.0839     5.5098 f
+  rvcpu/IF_stage/forecase/n3800 (net)           1                 0.0000     5.5098 f
+  rvcpu/IF_stage/forecase/U673/A1 (LVT_NOR2HDV8)        0.1078    0.0000     5.5098 f
+  rvcpu/IF_stage/forecase/U673/ZN (LVT_NOR2HDV8)        0.1450    0.1039     5.6137 r
+  rvcpu/IF_stage/forecase/n5592 (net)           2                 0.0000     5.6137 r
+  rvcpu/IF_stage/forecase/U755/A1 (LVT_NOR2HDV8)        0.1450    0.0000     5.6137 r
+  rvcpu/IF_stage/forecase/U755/ZN (LVT_NOR2HDV8)        0.0696    0.0606     5.6743 f
+  rvcpu/IF_stage/forecase/n11777 (net)          3                 0.0000     5.6743 f
+  rvcpu/IF_stage/forecase/U609/I (LVT_INHDV16)          0.0696    0.0000     5.6743 f
+  rvcpu/IF_stage/forecase/U609/ZN (LVT_INHDV16)         0.1149    0.0851     5.7594 r
+  rvcpu/IF_stage/forecase/n5796 (net)          18                 0.0000     5.7594 r
+  rvcpu/IF_stage/forecase/U685/A1 (LVT_NOR2HDV8)        0.1149    0.0000     5.7594 r
+  rvcpu/IF_stage/forecase/U685/ZN (LVT_NOR2HDV8)        0.0680    0.0377     5.7971 f
+  rvcpu/IF_stage/forecase/n5857 (net)           2                 0.0000     5.7971 f
+  rvcpu/IF_stage/forecase/U653/A1 (LVT_NOR2HDV4)        0.0680    0.0000     5.7971 f
+  rvcpu/IF_stage/forecase/U653/ZN (LVT_NOR2HDV4)        0.1512    0.0920     5.8891 r
+  rvcpu/IF_stage/forecase/n6164 (net)           5                 0.0000     5.8891 r
+  rvcpu/IF_stage/forecase/U198/I (LVT_BUFHDV4)          0.1512    0.0000     5.8891 r
+  rvcpu/IF_stage/forecase/U198/Z (LVT_BUFHDV4)          0.2541    0.2144     6.1035 r
+  rvcpu/IF_stage/forecase/n6289 (net)          45                 0.0000     6.1035 r
+  rvcpu/IF_stage/forecase/U8292/A1 (LVT_IOA22HDV1)      0.2541    0.0000     6.1035 r
+  rvcpu/IF_stage/forecase/U8292/ZN (LVT_IOA22HDV1)      0.1818    0.1551     6.2586 r
+  rvcpu/IF_stage/forecase/n6776 (net)           1                 0.0000     6.2586 r
+  rvcpu/IF_stage/forecase/fore_branch_reg_24__20_/D (LVT_DQHDV2)
+                                                        0.1818    0.0000     6.2586 r
+  data arrival time                                                          6.2586
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  rvcpu/IF_stage/forecase/fore_branch_reg_24__20_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.0912     6.2588
+  data required time                                                         6.2588
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2588
+  data arrival time                                                         -6.2586
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
+  Startpoint: rvcpu/id_ex/ex_reg1_data_reg_16_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: rvcpu/IF_stage/forecase/fore_branch_reg_24__41_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  rvcpu/id_ex/ex_reg1_data_reg_16_/CK (LVT_DQHDV2)      0.0000    0.0000 #   0.0000 r
+  rvcpu/id_ex/ex_reg1_data_reg_16_/Q (LVT_DQHDV2)       0.2033    0.3417     0.3417 f
+  rvcpu/id_ex/ex_reg1_data[16] (net)           14                 0.0000     0.3417 f
+  rvcpu/id_ex/ex_reg1_data[16] (ysyx_210457_id_ex_0)              0.0000     0.3417 f
+  rvcpu/N_ex_reg1_data[16] (net)                                  0.0000     0.3417 f
+  rvcpu/EX_stage/id_reg1_data[16] (ysyx_210457_EX_stage_0)        0.0000     0.3417 f
+  rvcpu/EX_stage/id_reg1_data[16] (net)                           0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/num1[16] (ysyx_210457_ALU_0)                 0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/num1[16] (net)                               0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/U918/A1 (LVT_NAND2HDV1)            0.2033    0.0000     0.3417 f
+  rvcpu/EX_stage/ALU/U918/ZN (LVT_NAND2HDV1)            0.1145    0.0963     0.4380 r
+  rvcpu/EX_stage/ALU/n1686 (net)                2                 0.0000     0.4380 r
+  rvcpu/EX_stage/ALU/U920/A2 (LVT_OAI21HDV2)            0.1145    0.0000     0.4380 r
+  rvcpu/EX_stage/ALU/U920/ZN (LVT_OAI21HDV2)            0.0862    0.0836     0.5216 f
+  rvcpu/EX_stage/ALU/n1728 (net)                2                 0.0000     0.5216 f
+  rvcpu/EX_stage/ALU/U924/A2 (LVT_AOI21HDV2)            0.0862    0.0000     0.5216 f
+  rvcpu/EX_stage/ALU/U924/ZN (LVT_AOI21HDV2)            0.1553    0.1242     0.6458 r
+  rvcpu/EX_stage/ALU/n432 (net)                 2                 0.0000     0.6458 r
+  rvcpu/EX_stage/ALU/U1265/A1 (LVT_OAI21HDV2)           0.1553    0.0000     0.6458 r
+  rvcpu/EX_stage/ALU/U1265/ZN (LVT_OAI21HDV2)           0.1095    0.0952     0.7410 f
+  rvcpu/EX_stage/ALU/n520 (net)                 2                 0.0000     0.7410 f
+  rvcpu/EX_stage/ALU/U3426/A1 (LVT_AOI21HDV4)           0.1095    0.0000     0.7410 f
+  rvcpu/EX_stage/ALU/U3426/ZN (LVT_AOI21HDV4)           0.1116    0.0918     0.8329 r
+  rvcpu/EX_stage/ALU/n521 (net)                 1                 0.0000     0.8329 r
+  rvcpu/EX_stage/ALU/U3479/B (LVT_OAI21HDV4)            0.1116    0.0000     0.8329 r
+  rvcpu/EX_stage/ALU/U3479/ZN (LVT_OAI21HDV4)           0.0864    0.0764     0.9093 f
+  rvcpu/EX_stage/ALU/n3516 (net)                3                 0.0000     0.9093 f
+  rvcpu/EX_stage/ALU/U1938/A1 (LVT_AOI21HDV4)           0.0864    0.0000     0.9093 f
+  rvcpu/EX_stage/ALU/U1938/ZN (LVT_AOI21HDV4)           0.1330    0.1009     1.0101 r
+  rvcpu/EX_stage/ALU/n1059 (net)                2                 0.0000     1.0101 r
+  rvcpu/EX_stage/ALU/U3424/A1 (LVT_NOR2HDV4)            0.1330    0.0000     1.0101 r
+  rvcpu/EX_stage/ALU/U3424/ZN (LVT_NOR2HDV4)            0.0501    0.0340     1.0442 f
+  rvcpu/EX_stage/ALU/n3463 (net)                1                 0.0000     1.0442 f
+  rvcpu/EX_stage/ALU/U3423/A1 (LVT_NOR2HDV2)            0.0501    0.0000     1.0442 f
+  rvcpu/EX_stage/ALU/U3423/ZN (LVT_NOR2HDV2)            0.0967    0.0664     1.1106 r
+  rvcpu/EX_stage/ALU/n1060 (net)                1                 0.0000     1.1106 r
+  rvcpu/EX_stage/ALU/U2710/A2 (LVT_NAND2HDV2)           0.0967    0.0000     1.1106 r
+  rvcpu/EX_stage/ALU/U2710/ZN (LVT_NAND2HDV2)           0.0554    0.0535     1.1641 f
+  rvcpu/EX_stage/ALU/n3451 (net)                1                 0.0000     1.1641 f
+  rvcpu/EX_stage/ALU/U2709/B (LVT_OAI21HDV2)            0.0554    0.0000     1.1641 f
+  rvcpu/EX_stage/ALU/U2709/ZN (LVT_OAI21HDV2)           0.1211    0.0428     1.2069 r
+  rvcpu/EX_stage/ALU/n1064 (net)                1                 0.0000     1.2069 r
+  rvcpu/EX_stage/ALU/U602/A1 (LVT_NAND2HDV1)            0.1211    0.0000     1.2069 r
+  rvcpu/EX_stage/ALU/U602/ZN (LVT_NAND2HDV1)            0.0756    0.0661     1.2730 f
+  rvcpu/EX_stage/ALU/n3483 (net)                1                 0.0000     1.2730 f
+  rvcpu/EX_stage/ALU/U3445/A1 (LVT_NAND3HDV2)           0.0756    0.0000     1.2730 f
+  rvcpu/EX_stage/ALU/U3445/ZN (LVT_NAND3HDV2)           0.1066    0.0724     1.3455 r
+  rvcpu/EX_stage/ALU/out[0] (net)               2                 0.0000     1.3455 r
+  rvcpu/EX_stage/ALU/out[0] (ysyx_210457_ALU_0)                   0.0000     1.3455 r
+  rvcpu/EX_stage/result[0] (net)                                  0.0000     1.3455 r
+  rvcpu/EX_stage/U1874/I (LVT_INHDV4)                   0.1066    0.0000     1.3455 r
+  rvcpu/EX_stage/U1874/ZN (LVT_INHDV4)                  0.0379    0.0333     1.3788 f
+  rvcpu/EX_stage/n1658 (net)                    1                 0.0000     1.3788 f
+  rvcpu/EX_stage/U1872/A1 (LVT_NOR2HDV4)                0.0379    0.0000     1.3788 f
+  rvcpu/EX_stage/U1872/ZN (LVT_NOR2HDV4)                0.1033    0.0650     1.4438 r
+  rvcpu/EX_stage/n11 (net)                      2                 0.0000     1.4438 r
+  rvcpu/EX_stage/U438/A1 (LVT_NAND2HDV4)                0.1033    0.0000     1.4438 r
+  rvcpu/EX_stage/U438/ZN (LVT_NAND2HDV4)                0.0641    0.0582     1.5020 f
+  rvcpu/EX_stage/n1046 (net)                    2                 0.0000     1.5020 f
+  rvcpu/EX_stage/U1869/A2 (LVT_OAI21HDV4)               0.0641    0.0000     1.5020 f
+  rvcpu/EX_stage/U1869/ZN (LVT_OAI21HDV4)               0.1985    0.1383     1.6403 r
+  rvcpu/EX_stage/n216 (net)                     3                 0.0000     1.6403 r
+  rvcpu/EX_stage/U1865/I (LVT_INHDV3)                   0.1985    0.0000     1.6403 r
+  rvcpu/EX_stage/U1865/ZN (LVT_INHDV3)                  0.0597    0.0453     1.6856 f
+  rvcpu/EX_stage/n1053 (net)                    1                 0.0000     1.6856 f
+  rvcpu/EX_stage/U1851/A1 (LVT_XOR2HDV4)                0.0597    0.0000     1.6856 f
+  rvcpu/EX_stage/U1851/Z (LVT_XOR2HDV4)                 0.0538    0.1180     1.8036 f
+  rvcpu/EX_stage/n1642 (net)                    1                 0.0000     1.8036 f
+  rvcpu/EX_stage/U37/A1 (LVT_NAND2HDV2)                 0.0538    0.0000     1.8036 f
+  rvcpu/EX_stage/U37/ZN (LVT_NAND2HDV2)                 0.0823    0.0420     1.8457 r
+  rvcpu/EX_stage/n1641 (net)                    1                 0.0000     1.8457 r
+  rvcpu/EX_stage/U1790/A1 (LVT_NAND2HDV2)               0.0823    0.0000     1.8457 r
+  rvcpu/EX_stage/U1790/ZN (LVT_NAND2HDV2)               0.0997    0.0684     1.9141 f
+  rvcpu/EX_stage/ex_w_data[2] (net)             3                 0.0000     1.9141 f
+  rvcpu/EX_stage/ex_w_data[2] (ysyx_210457_EX_stage_0)            0.0000     1.9141 f
+  rvcpu/N_ex_w_data[2] (net)                                      0.0000     1.9141 f
+  rvcpu/ID_stage/ex_w_data[2] (ysyx_210457_ID_stage_0)            0.0000     1.9141 f
+  rvcpu/ID_stage/ex_w_data[2] (net)                               0.0000     1.9141 f
+  rvcpu/ID_stage/U2236/A1 (LVT_NAND2HDV2)               0.0997    0.0000     1.9141 f
+  rvcpu/ID_stage/U2236/ZN (LVT_NAND2HDV2)               0.0760    0.0627     1.9768 r
+  rvcpu/ID_stage/n3426 (net)                    1                 0.0000     1.9768 r
+  rvcpu/ID_stage/U2218/A1 (LVT_NAND3HDV4)               0.0760    0.0000     1.9768 r
+  rvcpu/ID_stage/U2218/ZN (LVT_NAND3HDV4)               0.1187    0.0802     2.0570 f
+  rvcpu/ID_stage/n3677 (net)                    3                 0.0000     2.0570 f
+  rvcpu/ID_stage/U2258/A1 (LVT_NAND2HDV2)               0.1187    0.0000     2.0570 f
+  rvcpu/ID_stage/U2258/ZN (LVT_NAND2HDV2)               0.0899    0.0502     2.1072 r
+  rvcpu/ID_stage/n3445 (net)                    1                 0.0000     2.1072 r
+  rvcpu/ID_stage/U988/I (LVT_INHDV1)                    0.0899    0.0000     2.1072 r
+  rvcpu/ID_stage/U988/ZN (LVT_INHDV1)                   0.0637    0.0560     2.1633 f
+  rvcpu/ID_stage/n3444 (net)                    1                 0.0000     2.1633 f
+  rvcpu/ID_stage/U2257/A2 (LVT_NOR2HDV4)                0.0637    0.0000     2.1633 f
+  rvcpu/ID_stage/U2257/ZN (LVT_NOR2HDV4)                0.1090    0.0834     2.2467 r
+  rvcpu/ID_stage/n1125 (net)                    2                 0.0000     2.2467 r
+  rvcpu/ID_stage/U2220/A2 (LVT_OAI22HDV4)               0.1090    0.0000     2.2467 r
+  rvcpu/ID_stage/U2220/ZN (LVT_OAI22HDV4)               0.1003    0.0808     2.3275 f
+  rvcpu/ID_stage/n997 (net)                     2                 0.0000     2.3275 f
+  rvcpu/ID_stage/U2241/A1 (LVT_OAI21HDV4)               0.1003    0.0000     2.3275 f
+  rvcpu/ID_stage/U2241/ZN (LVT_OAI21HDV4)               0.1436    0.1076     2.4351 r
+  rvcpu/ID_stage/n873 (net)                     2                 0.0000     2.4351 r
+  rvcpu/ID_stage/U2188/A1 (LVT_AOI21HDV4)               0.1436    0.0000     2.4351 r
+  rvcpu/ID_stage/U2188/ZN (LVT_AOI21HDV4)               0.0797    0.0720     2.5071 f
+  rvcpu/ID_stage/n3383 (net)                    1                 0.0000     2.5071 f
+  rvcpu/ID_stage/U2187/A1 (LVT_NOR2HDV4)                0.0797    0.0000     2.5071 f
+  rvcpu/ID_stage/U2187/ZN (LVT_NOR2HDV4)                0.1067    0.0785     2.5856 r
+  rvcpu/ID_stage/n813 (net)                     2                 0.0000     2.5856 r
+  rvcpu/ID_stage/U2252/A1 (LVT_NAND2HDV4)               0.1067    0.0000     2.5856 r
+  rvcpu/ID_stage/U2252/ZN (LVT_NAND2HDV4)               0.0628    0.0518     2.6374 f
+  rvcpu/ID_stage/n3557 (net)                    1                 0.0000     2.6374 f
+  rvcpu/ID_stage/U1854/B1 (LVT_AOI22HDV4)               0.0628    0.0000     2.6374 f
+  rvcpu/ID_stage/U1854/ZN (LVT_AOI22HDV4)               0.1646    0.0935     2.7309 r
+  rvcpu/ID_stage/n1504 (net)                    2                 0.0000     2.7309 r
+  rvcpu/ID_stage/U1470/A1 (LVT_NAND2HDV4)               0.1646    0.0000     2.7309 r
+  rvcpu/ID_stage/U1470/ZN (LVT_NAND2HDV4)               0.0684    0.0596     2.7905 f
+  rvcpu/ID_stage/n3443 (net)                    1                 0.0000     2.7905 f
+  rvcpu/ID_stage/U2256/B1 (LVT_AOI22HDV4)               0.0684    0.0000     2.7905 f
+  rvcpu/ID_stage/U2256/ZN (LVT_AOI22HDV4)               0.1650    0.0946     2.8850 r
+  rvcpu/ID_stage/n1475 (net)                    2                 0.0000     2.8850 r
+  rvcpu/ID_stage/U2344/A1 (LVT_NAND2HDV4)               0.1650    0.0000     2.8850 r
+  rvcpu/ID_stage/U2344/ZN (LVT_NAND2HDV4)               0.0684    0.0596     2.9447 f
+  rvcpu/ID_stage/n3561 (net)                    1                 0.0000     2.9447 f
+  rvcpu/ID_stage/U2281/B1 (LVT_AOI22HDV4)               0.0684    0.0000     2.9447 f
+  rvcpu/ID_stage/U2281/ZN (LVT_AOI22HDV4)               0.1720    0.0917     3.0364 r
+  rvcpu/ID_stage/n1450 (net)                    2                 0.0000     3.0364 r
+  rvcpu/ID_stage/U2280/A1 (LVT_NAND2HDV4)               0.1720    0.0000     3.0364 r
+  rvcpu/ID_stage/U2280/ZN (LVT_NAND2HDV4)               0.0698    0.0606     3.0970 f
+  rvcpu/ID_stage/n3515 (net)                    1                 0.0000     3.0970 f
+  rvcpu/ID_stage/U2275/B1 (LVT_AOI22HDV4)               0.0698    0.0000     3.0970 f
+  rvcpu/ID_stage/U2275/ZN (LVT_AOI22HDV4)               0.1768    0.0921     3.1891 r
+  rvcpu/ID_stage/n1387 (net)                    2                 0.0000     3.1891 r
+  rvcpu/ID_stage/U1471/A1 (LVT_NAND2HDV4)               0.1768    0.0000     3.1891 r
+  rvcpu/ID_stage/U1471/ZN (LVT_NAND2HDV4)               0.0720    0.0624     3.2515 f
+  rvcpu/ID_stage/n1379 (net)                    1                 0.0000     3.2515 f
+  rvcpu/ID_stage/U2312/A1 (LVT_NAND2HDV4)               0.0720    0.0000     3.2515 f
+  rvcpu/ID_stage/U2312/ZN (LVT_NAND2HDV4)               0.0591    0.0515     3.3030 r
+  rvcpu/ID_stage/n1348 (net)                    2                 0.0000     3.3030 r
+  rvcpu/ID_stage/U2222/A1 (LVT_AOI21HDV4)               0.0591    0.0000     3.3030 r
+  rvcpu/ID_stage/U2222/ZN (LVT_AOI21HDV4)               0.1010    0.0607     3.3637 f
+  rvcpu/ID_stage/n1320 (net)                    2                 0.0000     3.3637 f
+  rvcpu/ID_stage/U2221/A1 (LVT_NOR2HDV4)                0.1010    0.0000     3.3637 f
+  rvcpu/ID_stage/U2221/ZN (LVT_NOR2HDV4)                0.1022    0.0754     3.4391 r
+  rvcpu/ID_stage/n3518 (net)                    1                 0.0000     3.4391 r
+  rvcpu/ID_stage/U2291/A1 (LVT_NOR2HDV4)                0.1022    0.0000     3.4391 r
+  rvcpu/ID_stage/U2291/ZN (LVT_NOR2HDV4)                0.0458    0.0410     3.4801 f
+  rvcpu/ID_stage/n1235 (net)                    2                 0.0000     3.4801 f
+  rvcpu/ID_stage/U2238/A1 (LVT_NOR2HDV4)                0.0458    0.0000     3.4801 f
+  rvcpu/ID_stage/U2238/ZN (LVT_NOR2HDV4)                0.0907    0.0625     3.5426 r
+  rvcpu/ID_stage/n3427 (net)                    1                 0.0000     3.5426 r
+  rvcpu/ID_stage/U2237/A1 (LVT_NOR2HDV4)                0.0907    0.0000     3.5426 r
+  rvcpu/ID_stage/U2237/ZN (LVT_NOR2HDV4)                0.0469    0.0406     3.5831 f
+  rvcpu/ID_stage/n1191 (net)                    2                 0.0000     3.5831 f
+  rvcpu/ID_stage/U2322/A1 (LVT_NAND2HDV4)               0.0469    0.0000     3.5831 f
+  rvcpu/ID_stage/U2322/ZN (LVT_NAND2HDV4)               0.0661    0.0442     3.6273 r
+  rvcpu/ID_stage/n1112 (net)                    2                 0.0000     3.6273 r
+  rvcpu/ID_stage/U2142/B (LVT_OAI21HDV4)                0.0661    0.0000     3.6273 r
+  rvcpu/ID_stage/U2142/ZN (LVT_OAI21HDV4)               0.0851    0.0607     3.6880 f
+  rvcpu/ID_stage/n1060 (net)                    2                 0.0000     3.6880 f
+  rvcpu/ID_stage/U2141/A1 (LVT_NAND2HDV4)               0.0851    0.0000     3.6880 f
+  rvcpu/ID_stage/U2141/ZN (LVT_NAND2HDV4)               0.0664    0.0538     3.7417 r
+  rvcpu/ID_stage/n1030 (net)                    2                 0.0000     3.7417 r
+  rvcpu/ID_stage/U2154/A1 (LVT_NAND2HDV4)               0.0664    0.0000     3.7417 r
+  rvcpu/ID_stage/U2154/ZN (LVT_NAND2HDV4)               0.0968    0.0468     3.7885 f
+  rvcpu/ID_stage/n3405 (net)                    1                 0.0000     3.7885 f
+  rvcpu/ID_stage/U2216/A1 (LVT_NAND2HDV4)               0.0968    0.0000     3.7885 f
+  rvcpu/ID_stage/U2216/ZN (LVT_NAND2HDV4)               0.0667    0.0560     3.8445 r
+  rvcpu/ID_stage/n1007 (net)                    2                 0.0000     3.8445 r
+  rvcpu/ID_stage/U2215/A1 (LVT_NAND2HDV4)               0.0667    0.0000     3.8445 r
+  rvcpu/ID_stage/U2215/ZN (LVT_NAND2HDV4)               0.0778    0.0468     3.8914 f
+  rvcpu/ID_stage/n3433 (net)                    1                 0.0000     3.8914 f
+  rvcpu/ID_stage/U2246/A1 (LVT_NAND2HDV4)               0.0778    0.0000     3.8914 f
+  rvcpu/ID_stage/U2246/ZN (LVT_NAND2HDV4)               0.0552    0.0466     3.9379 r
+  rvcpu/ID_stage/n3473 (net)                    1                 0.0000     3.9379 r
+  rvcpu/ID_stage/U2284/A1 (LVT_NAND2HDV4)               0.0552    0.0000     3.9379 r
+  rvcpu/ID_stage/U2284/ZN (LVT_NAND2HDV4)               0.0693    0.0499     3.9878 f
+  rvcpu/ID_stage/n976 (net)                     2                 0.0000     3.9878 f
+  rvcpu/ID_stage/U2192/I (LVT_INHDV4)                   0.0693    0.0000     3.9878 f
+  rvcpu/ID_stage/U2192/ZN (LVT_INHDV4)                  0.0434    0.0391     4.0269 r
+  rvcpu/ID_stage/n3387 (net)                    1                 0.0000     4.0269 r
+  rvcpu/ID_stage/U2190/A1 (LVT_AOI21HDV4)               0.0434    0.0000     4.0269 r
+  rvcpu/ID_stage/U2190/ZN (LVT_AOI21HDV4)               0.0826    0.0566     4.0835 f
+  rvcpu/ID_stage/n956 (net)                     2                 0.0000     4.0835 f
+  rvcpu/ID_stage/U2274/A1 (LVT_NOR2HDV4)                0.0826    0.0000     4.0835 f
+  rvcpu/ID_stage/U2274/ZN (LVT_NOR2HDV4)                0.0964    0.0715     4.1550 r
+  rvcpu/ID_stage/n3458 (net)                    1                 0.0000     4.1550 r
+  rvcpu/ID_stage/U2272/A1 (LVT_NOR2HDV4)                0.0964    0.0000     4.1550 r
+  rvcpu/ID_stage/U2272/ZN (LVT_NOR2HDV4)                0.0476    0.0435     4.1985 f
+  rvcpu/ID_stage/n922 (net)                     2                 0.0000     4.1985 f
+  rvcpu/ID_stage/U1769/I (LVT_INHDV4)                   0.0476    0.0000     4.1985 f
+  rvcpu/ID_stage/U1769/ZN (LVT_INHDV4)                  0.0384    0.0342     4.2326 r
+  rvcpu/ID_stage/n3298 (net)                    1                 0.0000     4.2326 r
+  rvcpu/ID_stage/U1768/A1 (LVT_AOI21HDV4)               0.0384    0.0000     4.2326 r
+  rvcpu/ID_stage/U1768/ZN (LVT_AOI21HDV4)               0.0743    0.0550     4.2876 f
+  rvcpu/ID_stage/n899 (net)                     2                 0.0000     4.2876 f
+  rvcpu/ID_stage/U2289/A1 (LVT_NOR2HDV4)                0.0743    0.0000     4.2876 f
+  rvcpu/ID_stage/U2289/ZN (LVT_NOR2HDV4)                0.0948    0.0692     4.3568 r
+  rvcpu/ID_stage/n898 (net)                     1                 0.0000     4.3568 r
+  rvcpu/ID_stage/U2196/B1 (LVT_IOA22HDV4)               0.0948    0.0000     4.3568 r
+  rvcpu/ID_stage/U2196/ZN (LVT_IOA22HDV4)               0.0911    0.0664     4.4232 f
+  rvcpu/ID_stage/n890 (net)                     2                 0.0000     4.4232 f
+  rvcpu/ID_stage/U2288/A1 (LVT_OAI22HDV4)               0.0911    0.0000     4.4232 f
+  rvcpu/ID_stage/U2288/ZN (LVT_OAI22HDV4)               0.1978    0.0832     4.5064 r
+  rvcpu/ID_stage/n3560 (net)                    1                 0.0000     4.5064 r
+  rvcpu/ID_stage/U2301/A1 (LVT_NAND2HDV4)               0.1978    0.0000     4.5064 r
+  rvcpu/ID_stage/U2301/ZN (LVT_NAND2HDV4)               0.0850    0.0733     4.5797 f
+  rvcpu/ID_stage/n3520 (net)                    2                 0.0000     4.5797 f
+  rvcpu/ID_stage/U1965/B1 (LVT_AOI22HDV4)               0.0850    0.0000     4.5797 f
+  rvcpu/ID_stage/U1965/ZN (LVT_AOI22HDV4)               0.1984    0.1133     4.6930 r
+  rvcpu/ID_stage/n843 (net)                     2                 0.0000     4.6930 r
+  rvcpu/ID_stage/U1964/A1 (LVT_AOI21HDV4)               0.1984    0.0000     4.6930 r
+  rvcpu/ID_stage/U1964/ZN (LVT_AOI21HDV4)               0.0910    0.0808     4.7738 f
+  rvcpu/ID_stage/n842 (net)                     1                 0.0000     4.7738 f
+  rvcpu/ID_stage/U2145/A1 (LVT_NOR2HDV4)                0.0910    0.0000     4.7738 f
+  rvcpu/ID_stage/U2145/ZN (LVT_NOR2HDV4)                0.1035    0.0781     4.8518 r
+  rvcpu/ID_stage/n835 (net)                     2                 0.0000     4.8518 r
+  rvcpu/ID_stage/U2144/A1 (LVT_NOR2HDV2)                0.1035    0.0000     4.8518 r
+  rvcpu/ID_stage/U2144/ZN (LVT_NOR2HDV2)                0.0590    0.0492     4.9011 f
+  rvcpu/ID_stage/n833 (net)                     1                 0.0000     4.9011 f
+  rvcpu/ID_stage/U2264/A1 (LVT_NOR2HDV4)                0.0590    0.0000     4.9011 f
+  rvcpu/ID_stage/U2264/ZN (LVT_NOR2HDV4)                0.0850    0.0618     4.9628 r
+  rvcpu/ID_stage/n3451 (net)                    1                 0.0000     4.9628 r
+  rvcpu/ID_stage/U2263/A1 (LVT_XNOR2HDV4)               0.0850    0.0000     4.9628 r
+  rvcpu/ID_stage/U2263/ZN (LVT_XNOR2HDV4)               0.0645    0.1463     5.1091 f
+  rvcpu/ID_stage/n1658 (net)                    2                 0.0000     5.1091 f
+  rvcpu/ID_stage/U2342/A1 (LVT_OAI21HDV4)               0.0645    0.0000     5.1091 f
+  rvcpu/ID_stage/U2342/ZN (LVT_OAI21HDV4)               0.1489    0.0933     5.2023 r
+  rvcpu/ID_stage/branch[63] (net)               2                 0.0000     5.2023 r
+  rvcpu/ID_stage/branch[63] (ysyx_210457_ID_stage_0)              0.0000     5.2023 r
+  rvcpu/N_branch[63] (net)                                        0.0000     5.2023 r
+  rvcpu/IF_stage/branch[63] (ysyx_210457_IF_stage_0)              0.0000     5.2023 r
+  rvcpu/IF_stage/branch[63] (net)                                 0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/branch[63] (ysyx_210457_forecase_0)     0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/branch[63] (net)                        0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/U591/A1 (LVT_XNOR2HDV4)       0.1489    0.0000     5.2023 r
+  rvcpu/IF_stage/forecase/U591/ZN (LVT_XNOR2HDV4)       0.0594    0.1602     5.3626 f
+  rvcpu/IF_stage/forecase/n11764 (net)          1                 0.0000     5.3626 f
+  rvcpu/IF_stage/forecase/U615/A1 (LVT_NOR2HDV4)        0.0594    0.0000     5.3626 f
+  rvcpu/IF_stage/forecase/U615/ZN (LVT_NOR2HDV4)        0.0866    0.0633     5.4259 r
+  rvcpu/IF_stage/forecase/n11769 (net)          1                 0.0000     5.4259 r
+  rvcpu/IF_stage/forecase/U613/A1 (LVT_NAND3HDV4)       0.0866    0.0000     5.4259 r
+  rvcpu/IF_stage/forecase/U613/ZN (LVT_NAND3HDV4)       0.1078    0.0839     5.5098 f
+  rvcpu/IF_stage/forecase/n3800 (net)           1                 0.0000     5.5098 f
+  rvcpu/IF_stage/forecase/U673/A1 (LVT_NOR2HDV8)        0.1078    0.0000     5.5098 f
+  rvcpu/IF_stage/forecase/U673/ZN (LVT_NOR2HDV8)        0.1450    0.1039     5.6137 r
+  rvcpu/IF_stage/forecase/n5592 (net)           2                 0.0000     5.6137 r
+  rvcpu/IF_stage/forecase/U755/A1 (LVT_NOR2HDV8)        0.1450    0.0000     5.6137 r
+  rvcpu/IF_stage/forecase/U755/ZN (LVT_NOR2HDV8)        0.0696    0.0606     5.6743 f
+  rvcpu/IF_stage/forecase/n11777 (net)          3                 0.0000     5.6743 f
+  rvcpu/IF_stage/forecase/U609/I (LVT_INHDV16)          0.0696    0.0000     5.6743 f
+  rvcpu/IF_stage/forecase/U609/ZN (LVT_INHDV16)         0.1149    0.0851     5.7594 r
+  rvcpu/IF_stage/forecase/n5796 (net)          18                 0.0000     5.7594 r
+  rvcpu/IF_stage/forecase/U685/A1 (LVT_NOR2HDV8)        0.1149    0.0000     5.7594 r
+  rvcpu/IF_stage/forecase/U685/ZN (LVT_NOR2HDV8)        0.0680    0.0377     5.7971 f
+  rvcpu/IF_stage/forecase/n5857 (net)           2                 0.0000     5.7971 f
+  rvcpu/IF_stage/forecase/U653/A1 (LVT_NOR2HDV4)        0.0680    0.0000     5.7971 f
+  rvcpu/IF_stage/forecase/U653/ZN (LVT_NOR2HDV4)        0.1512    0.0920     5.8891 r
+  rvcpu/IF_stage/forecase/n6164 (net)           5                 0.0000     5.8891 r
+  rvcpu/IF_stage/forecase/U198/I (LVT_BUFHDV4)          0.1512    0.0000     5.8891 r
+  rvcpu/IF_stage/forecase/U198/Z (LVT_BUFHDV4)          0.2541    0.2144     6.1035 r
+  rvcpu/IF_stage/forecase/n6289 (net)          45                 0.0000     6.1035 r
+  rvcpu/IF_stage/forecase/U7924/A1 (LVT_IOA22HDV1)      0.2541    0.0000     6.1035 r
+  rvcpu/IF_stage/forecase/U7924/ZN (LVT_IOA22HDV1)      0.1818    0.1551     6.2586 r
+  rvcpu/IF_stage/forecase/n6797 (net)           1                 0.0000     6.2586 r
+  rvcpu/IF_stage/forecase/fore_branch_reg_24__41_/D (LVT_DQHDV2)
+                                                        0.1818    0.0000     6.2586 r
+  data arrival time                                                          6.2586
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  rvcpu/IF_stage/forecase/fore_branch_reg_24__41_/CK (LVT_DQHDV2)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.0912     6.2588
+  data required time                                                         6.2588
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2588
+  data arrival time                                                         -6.2586
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
