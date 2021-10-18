@@ -1,0 +1,806 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Mon_Oct_18_18:37:49_2021_+0800
+top_name: ysyx_210191
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+243808.2  243808.2  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+23499  23499  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210191
+Date   : Mon Oct 18 20:26:20 2021
+****************************************
+    
+Number of ports:                         9062
+Number of nets:                         31049
+Number of cells:                        23706
+Number of combinational cells:          19602
+Number of sequential cells:              3897
+Number of macros/black boxes:               0
+Number of buf/inv:                       2614
+Number of references:                       4
+Combinational area:             144141.042738
+Buf/Inv area:                    12193.301560
+Noncombinational area:           99667.165703
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                243808.208441
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------------
+ysyx_210191                       243808.2084    100.0     219.2024      0.0000  0.0000  ysyx_210191
+AXI                                 6524.9697      2.7    3867.6448   2657.3249  0.0000  ysyx_210191_axi4_crtl_0
+CPU                               237064.0364     97.2       0.0000      0.0000  0.0000  ysyx_210191_mycpu_0
+CPU/CSR                            27787.6028     11.4   14662.3544  13082.2148  0.0000  ysyx_210191_csr_0
+CPU/CSR/POWERGATING_clock_mcycle_0__0
+                                      21.5168      0.0       0.0000     21.5168  0.0000  POWERMODULE_HIGH_ysyx_210191_0_1_0
+CPU/CSR/POWERGATING_clock_mcycle_0__1
+                                      21.5168      0.0       0.0000     21.5168  0.0000  POWERMODULE_HIGH_ysyx_210191_0_0_0
+CPU/CTRL                             902.3608      0.4     876.8096     25.5512  0.0000  ysyx_210191_ctrl_0
+CPU/DECODE                         18758.6152      7.7   15311.8928      0.0000  0.0000  ysyx_210191_decode_0
+CPU/DECODE/mux1                     1733.4472      0.7    1733.4472      0.0000  0.0000  ysyx_210191_mux4x64_2
+CPU/DECODE/mux2                     1713.2752      0.7    1713.2752      0.0000  0.0000  ysyx_210191_mux4x64_3
+CPU/EXE                            29398.6727     12.1    5681.7800      0.0000  0.0000  ysyx_210191_exe_0
+CPU/EXE/alu                        23716.8927      9.7   23716.8927      0.0000  0.0000  ysyx_210191_ALU_0
+CPU/EXE_MEM                        10801.4338      4.4    3543.5480   7257.8858  0.0000  ysyx_210191_exe_mem_0
+CPU/ID_EXE                         14334.2235      5.9    4673.1800   9661.0435  0.0000  ysyx_210191_id_exe_0
+CPU/IF                                 4.0344      0.0       4.0344      0.0000  0.0000  ysyx_210191_If_0
+CPU/IF_ID                           7169.1289      2.9    3039.2480   4129.8809  0.0000  ysyx_210191_if_id_0
+CPU/MEM                             5287.7536      2.2    5287.7536      0.0000  0.0000  ysyx_210191_mem_0
+CPU/MEM_WB                         10648.1266      4.4    3493.7904   7154.3362  0.0000  ysyx_210191_mem_wb_0
+CPU/PC                              4687.9728      1.9    2996.2144   1691.7584  0.0000  ysyx_210191_pc_0
+CPU/Regfile                        98935.5928     40.6   48242.0102  50693.5825  0.0000  ysyx_210191_regfile_0
+CPU/WB                               785.3632      0.3     785.3632      0.0000  0.0000  ysyx_210191_wb_0
+CPU/clint                           7563.1553      3.1    4292.6016   3270.5537  0.0000  ysyx_210191_CLINT_0
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------------
+Total                                                   144141.0427  99667.1657  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210191
+Date   : Mon Oct 18 20:26:18 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: CPU/ID_EXE/o_shift_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: CPU/IF_ID/o_pc_reg_13_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  CPU/ID_EXE/o_shift_reg/CK (LVT_DQHDV1)                0.0000    0.0000 #   0.0000 r
+  CPU/ID_EXE/o_shift_reg/Q (LVT_DQHDV1)                 0.1662    0.3109     0.3109 f
+  CPU/ID_EXE/o_shift (net)                      5                 0.0000     0.3109 f
+  CPU/ID_EXE/o_shift (ysyx_210191_id_exe_0)                       0.0000     0.3109 f
+  CPU/exe_shift (net)                                             0.0000     0.3109 f
+  CPU/EXE/shift (ysyx_210191_exe_0)                               0.0000     0.3109 f
+  CPU/EXE/shift (net)                                             0.0000     0.3109 f
+  CPU/EXE/U21/I (LVT_INHDV2)                            0.1662    0.0000     0.3109 f
+  CPU/EXE/U21/ZN (LVT_INHDV2)                           0.0894    0.0753     0.3862 r
+  CPU/EXE/n91 (net)                             1                 0.0000     0.3862 r
+  CPU/EXE/U20/A1 (LVT_NOR2HDV4)                         0.0894    0.0000     0.3862 r
+  CPU/EXE/U20/ZN (LVT_NOR2HDV4)                         0.0734    0.0485     0.4347 f
+  CPU/EXE/n100 (net)                            6                 0.0000     0.4347 f
+  CPU/EXE/U281/A1 (LVT_IOA21HDV2)                       0.0734    0.0000     0.4347 f
+  CPU/EXE/U281/ZN (LVT_IOA21HDV2)                       0.0824    0.1409     0.5756 f
+  CPU/EXE/n276 (net)                            1                 0.0000     0.5756 f
+  CPU/EXE/alu/data2[1] (ysyx_210191_ALU_0)                        0.0000     0.5756 f
+  CPU/EXE/alu/data2[1] (net)                                      0.0000     0.5756 f
+  CPU/EXE/alu/U802/I (LVT_BUFHDV8)                      0.0824    0.0000     0.5756 f
+  CPU/EXE/alu/U802/Z (LVT_BUFHDV8)                      0.0567    0.1086     0.6842 f
+  CPU/EXE/alu/n2014 (net)                      10                 0.0000     0.6842 f
+  CPU/EXE/alu/U62/I (LVT_INHDV2)                        0.0567    0.0000     0.6842 f
+  CPU/EXE/alu/U62/ZN (LVT_INHDV2)                       0.1100    0.0774     0.7616 r
+  CPU/EXE/alu/n85 (net)                         5                 0.0000     0.7616 r
+  CPU/EXE/alu/U53/A1 (LVT_NOR2HDV2)                     0.1100    0.0000     0.7616 r
+  CPU/EXE/alu/U53/ZN (LVT_NOR2HDV2)                     0.1144    0.0712     0.8328 f
+  CPU/EXE/alu/n70 (net)                         2                 0.0000     0.8328 f
+  CPU/EXE/alu/U760/I (LVT_INHDV4)                       0.1144    0.0000     0.8328 f
+  CPU/EXE/alu/U760/ZN (LVT_INHDV4)                      0.1358    0.1039     0.9366 r
+  CPU/EXE/alu/n71 (net)                         9                 0.0000     0.9366 r
+  CPU/EXE/alu/U12/I (LVT_INHDV4)                        0.1358    0.0000     0.9366 r
+  CPU/EXE/alu/U12/ZN (LVT_INHDV4)                       0.2113    0.1628     1.0994 f
+  CPU/EXE/alu/n3317 (net)                      40                 0.0000     1.0994 f
+  CPU/EXE/alu/U6/B1 (LVT_AOI22HDV1)                     0.2113    0.0000     1.0994 f
+  CPU/EXE/alu/U6/ZN (LVT_AOI22HDV1)                     0.1807    0.1353     1.2347 r
+  CPU/EXE/alu/n269 (net)                        1                 0.0000     1.2347 r
+  CPU/EXE/alu/U1149/A1 (LVT_NAND3HDV2)                  0.1807    0.0000     1.2347 r
+  CPU/EXE/alu/U1149/ZN (LVT_NAND3HDV2)                  0.1795    0.1449     1.3796 f
+  CPU/EXE/alu/n2870 (net)                       5                 0.0000     1.3796 f
+  CPU/EXE/alu/U1447/I (LVT_INHDV1)                      0.1795    0.0000     1.3796 f
+  CPU/EXE/alu/U1447/ZN (LVT_INHDV1)                     0.1172    0.0993     1.4789 r
+  CPU/EXE/alu/n1717 (net)                       3                 0.0000     1.4789 r
+  CPU/EXE/alu/U2436/A1 (LVT_OAI22HDV1)                  0.1172    0.0000     1.4789 r
+  CPU/EXE/alu/U2436/ZN (LVT_OAI22HDV1)                  0.1794    0.1059     1.5849 f
+  CPU/EXE/alu/n3229 (net)                       3                 0.0000     1.5849 f
+  CPU/EXE/alu/U2437/I (LVT_INHDV1)                      0.1794    0.0000     1.5849 f
+  CPU/EXE/alu/U2437/ZN (LVT_INHDV1)                     0.0981    0.0838     1.6686 r
+  CPU/EXE/alu/n2458 (net)                       2                 0.0000     1.6686 r
+  CPU/EXE/alu/U2448/A1 (LVT_OAI211HDV1)                 0.0981    0.0000     1.6686 r
+  CPU/EXE/alu/U2448/ZN (LVT_OAI211HDV1)                 0.1224    0.0949     1.7635 f
+  CPU/EXE/alu/n1726 (net)                       1                 0.0000     1.7635 f
+  CPU/EXE/alu/U2449/B (LVT_AOI21HDV1)                   0.1224    0.0000     1.7635 f
+  CPU/EXE/alu/U2449/ZN (LVT_AOI21HDV1)                  0.1436    0.1004     1.8640 r
+  CPU/EXE/alu/n1734 (net)                       1                 0.0000     1.8640 r
+  CPU/EXE/alu/U2454/B (LVT_OAI211HDV1)                  0.1436    0.0000     1.8640 r
+  CPU/EXE/alu/U2454/ZN (LVT_OAI211HDV1)                 0.1293    0.1021     1.9660 f
+  CPU/EXE/alu/n1735 (net)                       1                 0.0000     1.9660 f
+  CPU/EXE/alu/U2455/B (LVT_AOI21HDV1)                   0.1293    0.0000     1.9660 f
+  CPU/EXE/alu/U2455/ZN (LVT_AOI21HDV1)                  0.1363    0.1039     2.0699 r
+  CPU/EXE/alu/n1736 (net)                       1                 0.0000     2.0699 r
+  CPU/EXE/alu/U2456/B (LVT_OAI21HDV1)                   0.1363    0.0000     2.0699 r
+  CPU/EXE/alu/U2456/ZN (LVT_OAI21HDV1)                  0.0836    0.0737     2.1436 f
+  CPU/EXE/alu/n1737 (net)                       1                 0.0000     2.1436 f
+  CPU/EXE/alu/U2457/B (LVT_AOI21HDV1)                   0.0836    0.0000     2.1436 f
+  CPU/EXE/alu/U2457/ZN (LVT_AOI21HDV1)                  0.1505    0.0926     2.2362 r
+  CPU/EXE/alu/n1739 (net)                       1                 0.0000     2.2362 r
+  CPU/EXE/alu/U2458/B (LVT_IOA21HDV1)                   0.1505    0.0000     2.2362 r
+  CPU/EXE/alu/U2458/ZN (LVT_IOA21HDV1)                  0.0661    0.0562     2.2924 f
+  CPU/EXE/alu/res[7] (net)                      1                 0.0000     2.2924 f
+  CPU/EXE/alu/res[7] (ysyx_210191_ALU_0)                          0.0000     2.2924 f
+  CPU/EXE/res[7] (net)                                            0.0000     2.2924 f
+  CPU/EXE/U414/A1 (LVT_IOA21HDV1)                       0.0661    0.0000     2.2924 f
+  CPU/EXE/U414/ZN (LVT_IOA21HDV1)                       0.1171    0.1697     2.4621 f
+  CPU/EXE/data[7] (net)                         3                 0.0000     2.4621 f
+  CPU/EXE/data[7] (ysyx_210191_exe_0)                             0.0000     2.4621 f
+  CPU/exe_data[7] (net)                                           0.0000     2.4621 f
+  CPU/DECODE/exe_out[7] (ysyx_210191_decode_0)                    0.0000     2.4621 f
+  CPU/DECODE/exe_out[7] (net)                                     0.0000     2.4621 f
+  CPU/DECODE/mux1/a1[7] (ysyx_210191_mux4x64_2)                   0.0000     2.4621 f
+  CPU/DECODE/mux1/a1[7] (net)                                     0.0000     2.4621 f
+  CPU/DECODE/mux1/U82/A1 (LVT_NAND2HDV1)                0.1171    0.0000     2.4621 f
+  CPU/DECODE/mux1/U82/ZN (LVT_NAND2HDV1)                0.1197    0.0803     2.5423 r
+  CPU/DECODE/mux1/n19 (net)                     1                 0.0000     2.5423 r
+  CPU/DECODE/mux1/U250/B (LVT_OAI211HDV4)               0.1197    0.0000     2.5423 r
+  CPU/DECODE/mux1/U250/ZN (LVT_OAI211HDV4)              0.1626    0.1159     2.6582 f
+  CPU/DECODE/mux1/out[7] (net)                  7                 0.0000     2.6582 f
+  CPU/DECODE/mux1/out[7] (ysyx_210191_mux4x64_2)                  0.0000     2.6582 f
+  CPU/DECODE/data1[7] (net)                                       0.0000     2.6582 f
+  CPU/DECODE/U387/I (LVT_INHDV1)                        0.1626    0.0000     2.6582 f
+  CPU/DECODE/U387/ZN (LVT_INHDV1)                       0.0928    0.0791     2.7374 r
+  CPU/DECODE/n62 (net)                          2                 0.0000     2.7374 r
+  CPU/DECODE/U396/A1 (LVT_NAND2HDV1)                    0.0928    0.0000     2.7374 r
+  CPU/DECODE/U396/ZN (LVT_NAND2HDV1)                    0.1310    0.0711     2.8085 f
+  CPU/DECODE/n63 (net)                          2                 0.0000     2.8085 f
+  CPU/DECODE/U212/A2 (LVT_AOI21HDV1)                    0.1310    0.0000     2.8085 f
+  CPU/DECODE/U212/ZN (LVT_AOI21HDV1)                    0.1612    0.1214     2.9299 r
+  CPU/DECODE/n64 (net)                          1                 0.0000     2.9299 r
+  CPU/DECODE/U398/B (LVT_AOI21HDV1)                     0.1612    0.0000     2.9299 r
+  CPU/DECODE/U398/ZN (LVT_AOI21HDV1)                    0.1183    0.0496     2.9795 f
+  CPU/DECODE/n67 (net)                          1                 0.0000     2.9795 f
+  CPU/DECODE/U400/A1 (LVT_NOR3HDV1)                     0.1183    0.0000     2.9795 f
+  CPU/DECODE/U400/ZN (LVT_NOR3HDV1)                     0.2197    0.1390     3.1185 r
+  CPU/DECODE/n76 (net)                          1                 0.0000     3.1185 r
+  CPU/DECODE/U412/A2 (LVT_OAI31HDV2)                    0.2197    0.0000     3.1185 r
+  CPU/DECODE/U412/ZN (LVT_OAI31HDV2)                    0.1070    0.0862     3.2046 f
+  CPU/DECODE/n95 (net)                          1                 0.0000     3.2046 f
+  CPU/DECODE/U431/A1 (LVT_IOA21HDV4)                    0.1070    0.0000     3.2046 f
+  CPU/DECODE/U431/ZN (LVT_IOA21HDV4)                    0.0581    0.1150     3.3196 f
+  CPU/DECODE/n99 (net)                          1                 0.0000     3.3196 f
+  CPU/DECODE/U446/A2 (LVT_AOI21HDV2)                    0.0581    0.0000     3.3196 f
+  CPU/DECODE/U446/ZN (LVT_AOI21HDV2)                    0.1315    0.1003     3.4199 r
+  CPU/DECODE/n120 (net)                         1                 0.0000     3.4199 r
+  CPU/DECODE/U468/A1 (LVT_OAI21HDV2)                    0.1315    0.0000     3.4199 r
+  CPU/DECODE/U468/ZN (LVT_OAI21HDV2)                    0.0829    0.0662     3.4861 f
+  CPU/DECODE/n134 (net)                         1                 0.0000     3.4861 f
+  CPU/DECODE/U491/A1 (LVT_AOI21HDV2)                    0.0829    0.0000     3.4861 f
+  CPU/DECODE/U491/ZN (LVT_AOI21HDV2)                    0.1201    0.0922     3.5784 r
+  CPU/DECODE/n152 (net)                         1                 0.0000     3.5784 r
+  CPU/DECODE/U510/A1 (LVT_OAI21HDV2)                    0.1201    0.0000     3.5784 r
+  CPU/DECODE/U510/ZN (LVT_OAI21HDV2)                    0.0782    0.0650     3.6434 f
+  CPU/DECODE/n163 (net)                         1                 0.0000     3.6434 f
+  CPU/DECODE/U520/A1 (LVT_NAND2HDV2)                    0.0782    0.0000     3.6434 f
+  CPU/DECODE/U520/ZN (LVT_NAND2HDV2)                    0.0547    0.0476     3.6910 r
+  CPU/DECODE/n166 (net)                         1                 0.0000     3.6910 r
+  CPU/DECODE/U523/A1 (LVT_NAND2HDV2)                    0.0547    0.0000     3.6910 r
+  CPU/DECODE/U523/ZN (LVT_NAND2HDV2)                    0.0594    0.0452     3.7362 f
+  CPU/DECODE/n172 (net)                         1                 0.0000     3.7362 f
+  CPU/DECODE/U527/B1 (LVT_IAO22HDV2)                    0.0594    0.0000     3.7362 f
+  CPU/DECODE/U527/ZN (LVT_IAO22HDV2)                    0.1314    0.0907     3.8268 r
+  CPU/DECODE/n173 (net)                         1                 0.0000     3.8268 r
+  CPU/DECODE/U528/B (LVT_AOI21HDV2)                     0.1314    0.0000     3.8268 r
+  CPU/DECODE/U528/ZN (LVT_AOI21HDV2)                    0.1297    0.0438     3.8707 f
+  CPU/DECODE/n178 (net)                         1                 0.0000     3.8707 f
+  CPU/DECODE/U530/A1 (LVT_IAO21HDV4)                    0.1297    0.0000     3.8707 f
+  CPU/DECODE/U530/ZN (LVT_IAO21HDV4)                    0.0776    0.1400     4.0107 f
+  CPU/DECODE/n179 (net)                         1                 0.0000     4.0107 f
+  CPU/DECODE/U531/B (LVT_IAO21HDV2)                     0.0776    0.0000     4.0107 f
+  CPU/DECODE/U531/ZN (LVT_IAO21HDV2)                    0.1021    0.0800     4.0907 r
+  CPU/DECODE/n181 (net)                         1                 0.0000     4.0907 r
+  CPU/DECODE/U333/B (LVT_IAO21HDV2)                     0.1021    0.0000     4.0907 r
+  CPU/DECODE/U333/ZN (LVT_IAO21HDV2)                    0.0630    0.0462     4.1368 f
+  CPU/DECODE/n183 (net)                         1                 0.0000     4.1368 f
+  CPU/DECODE/U532/I (LVT_INHDV2)                        0.0630    0.0000     4.1368 f
+  CPU/DECODE/U532/ZN (LVT_INHDV2)                       0.0458    0.0407     4.1775 r
+  CPU/DECODE/n185 (net)                         1                 0.0000     4.1775 r
+  CPU/DECODE/U122/A1 (LVT_AOI21HDV2)                    0.0458    0.0000     4.1775 r
+  CPU/DECODE/U122/ZN (LVT_AOI21HDV2)                    0.0813    0.0542     4.2317 f
+  CPU/DECODE/n188 (net)                         1                 0.0000     4.2317 f
+  CPU/DECODE/U533/A1 (LVT_IAO21HDV4)                    0.0813    0.0000     4.2317 f
+  CPU/DECODE/U533/ZN (LVT_IAO21HDV4)                    0.0697    0.1269     4.3586 f
+  CPU/DECODE/n191 (net)                         1                 0.0000     4.3586 f
+  CPU/DECODE/U534/A1 (LVT_OAI22HDV2)                    0.0697    0.0000     4.3586 f
+  CPU/DECODE/U534/ZN (LVT_OAI22HDV2)                    0.2132    0.0793     4.4379 r
+  CPU/DECODE/n193 (net)                         1                 0.0000     4.4379 r
+  CPU/DECODE/U535/A1 (LVT_NAND2HDV2)                    0.2132    0.0000     4.4379 r
+  CPU/DECODE/U535/ZN (LVT_NAND2HDV2)                    0.0800    0.0670     4.5049 f
+  CPU/DECODE/n196 (net)                         1                 0.0000     4.5049 f
+  CPU/DECODE/U536/A1 (LVT_NAND2HDV2)                    0.0800    0.0000     4.5049 f
+  CPU/DECODE/U536/ZN (LVT_NAND2HDV2)                    0.0629    0.0479     4.5527 r
+  CPU/DECODE/n198 (net)                         1                 0.0000     4.5527 r
+  CPU/DECODE/U537/A1 (LVT_NAND2HDV2)                    0.0629    0.0000     4.5527 r
+  CPU/DECODE/U537/ZN (LVT_NAND2HDV2)                    0.0589    0.0462     4.5989 f
+  CPU/DECODE/n199 (net)                         1                 0.0000     4.5989 f
+  CPU/DECODE/U538/B (LVT_IOA21HDV2)                     0.0589    0.0000     4.5989 f
+  CPU/DECODE/U538/ZN (LVT_IOA21HDV2)                    0.0700    0.0495     4.6484 r
+  CPU/DECODE/n201 (net)                         1                 0.0000     4.6484 r
+  CPU/DECODE/U539/B (LVT_IOA21HDV2)                     0.0700    0.0000     4.6484 r
+  CPU/DECODE/U539/ZN (LVT_IOA21HDV2)                    0.0671    0.0518     4.7002 f
+  CPU/DECODE/n203 (net)                         1                 0.0000     4.7002 f
+  CPU/DECODE/U540/B (LVT_IOA21HDV2)                     0.0671    0.0000     4.7002 f
+  CPU/DECODE/U540/ZN (LVT_IOA21HDV2)                    0.0700    0.0518     4.7519 r
+  CPU/DECODE/n205 (net)                         1                 0.0000     4.7519 r
+  CPU/DECODE/U541/B (LVT_IOA21HDV2)                     0.0700    0.0000     4.7519 r
+  CPU/DECODE/U541/ZN (LVT_IOA21HDV2)                    0.0668    0.0518     4.8037 f
+  CPU/DECODE/n207 (net)                         1                 0.0000     4.8037 f
+  CPU/DECODE/U542/B (LVT_IOA21HDV2)                     0.0668    0.0000     4.8037 f
+  CPU/DECODE/U542/ZN (LVT_IOA21HDV2)                    0.0700    0.0517     4.8554 r
+  CPU/DECODE/n209 (net)                         1                 0.0000     4.8554 r
+  CPU/DECODE/U543/B (LVT_IOA21HDV2)                     0.0700    0.0000     4.8554 r
+  CPU/DECODE/U543/ZN (LVT_IOA21HDV2)                    0.0671    0.0518     4.9071 f
+  CPU/DECODE/n211 (net)                         1                 0.0000     4.9071 f
+  CPU/DECODE/U544/B (LVT_IOA21HDV2)                     0.0671    0.0000     4.9071 f
+  CPU/DECODE/U544/ZN (LVT_IOA21HDV2)                    0.0694    0.0514     4.9585 r
+  CPU/DECODE/n214 (net)                         1                 0.0000     4.9585 r
+  CPU/DECODE/U545/A1 (LVT_NAND2HDV2)                    0.0694    0.0000     4.9585 r
+  CPU/DECODE/U545/ZN (LVT_NAND2HDV2)                    0.0589    0.0476     5.0061 f
+  CPU/DECODE/n215 (net)                         1                 0.0000     5.0061 f
+  CPU/DECODE/U546/B (LVT_IOA21HDV2)                     0.0589    0.0000     5.0061 f
+  CPU/DECODE/U546/ZN (LVT_IOA21HDV2)                    0.0700    0.0495     5.0556 r
+  CPU/DECODE/n217 (net)                         1                 0.0000     5.0556 r
+  CPU/DECODE/U547/B (LVT_IOA21HDV2)                     0.0700    0.0000     5.0556 r
+  CPU/DECODE/U547/ZN (LVT_IOA21HDV2)                    0.0663    0.0518     5.1074 f
+  CPU/DECODE/n219 (net)                         1                 0.0000     5.1074 f
+  CPU/DECODE/U548/B (LVT_IOA21HDV2)                     0.0663    0.0000     5.1074 f
+  CPU/DECODE/U548/ZN (LVT_IOA21HDV2)                    0.0694    0.0512     5.1586 r
+  CPU/DECODE/n222 (net)                         1                 0.0000     5.1586 r
+  CPU/DECODE/U549/A1 (LVT_NAND2HDV2)                    0.0694    0.0000     5.1586 r
+  CPU/DECODE/U549/ZN (LVT_NAND2HDV2)                    0.0557    0.0476     5.2062 f
+  CPU/DECODE/n223 (net)                         1                 0.0000     5.2062 f
+  CPU/DECODE/U550/B (LVT_IOA21HDV2)                     0.0557    0.0000     5.2062 f
+  CPU/DECODE/U550/ZN (LVT_IOA21HDV2)                    0.0694    0.0483     5.2544 r
+  CPU/DECODE/n226 (net)                         1                 0.0000     5.2544 r
+  CPU/DECODE/U551/A1 (LVT_NAND2HDV2)                    0.0694    0.0000     5.2544 r
+  CPU/DECODE/U551/ZN (LVT_NAND2HDV2)                    0.0564    0.0484     5.3028 f
+  CPU/DECODE/n228 (net)                         1                 0.0000     5.3028 f
+  CPU/DECODE/U102/A1 (LVT_NAND2HDV2)                    0.0564    0.0000     5.3028 f
+  CPU/DECODE/U102/ZN (LVT_NAND2HDV2)                    0.0680    0.0427     5.3455 r
+  CPU/DECODE/n230 (net)                         1                 0.0000     5.3455 r
+  CPU/DECODE/U26/A1 (LVT_NAND2HDV2)                     0.0680    0.0000     5.3455 r
+  CPU/DECODE/U26/ZN (LVT_NAND2HDV2)                     0.0583    0.0481     5.3936 f
+  CPU/DECODE/n233 (net)                         1                 0.0000     5.3936 f
+  CPU/DECODE/U25/A1 (LVT_NAND2HDV2)                     0.0583    0.0000     5.3936 f
+  CPU/DECODE/U25/ZN (LVT_NAND2HDV2)                     0.0629    0.0432     5.4367 r
+  CPU/DECODE/n236 (net)                         1                 0.0000     5.4367 r
+  CPU/DECODE/U24/A1 (LVT_NAND2HDV2)                     0.0629    0.0000     5.4367 r
+  CPU/DECODE/U24/ZN (LVT_NAND2HDV2)                     0.0571    0.0469     5.4837 f
+  CPU/DECODE/n238 (net)                         1                 0.0000     5.4837 f
+  CPU/DECODE/U23/A1 (LVT_NAND2HDV2)                     0.0571    0.0000     5.4837 f
+  CPU/DECODE/U23/ZN (LVT_NAND2HDV2)                     0.0836    0.0538     5.5375 r
+  CPU/DECODE/n344 (net)                         1                 0.0000     5.5375 r
+  CPU/DECODE/U607/A1 (LVT_AOI21HDV4)                    0.0836    0.0000     5.5375 r
+  CPU/DECODE/U607/ZN (LVT_AOI21HDV4)                    0.1202    0.0690     5.6064 f
+  CPU/DECODE/n630 (net)                         2                 0.0000     5.6064 f
+  CPU/DECODE/U806/A1 (LVT_NAND2HDV4)                    0.1202    0.0000     5.6064 f
+  CPU/DECODE/U806/ZN (LVT_NAND2HDV4)                    0.1016    0.0823     5.6887 r
+  CPU/DECODE/flush_if_id (net)                  3                 0.0000     5.6887 r
+  CPU/DECODE/flush_if_id (ysyx_210191_decode_0)                   0.0000     5.6887 r
+  CPU/flush_if_id (net)                                           0.0000     5.6887 r
+  CPU/IF_ID/flush_if_id (ysyx_210191_if_id_0)                     0.0000     5.6887 r
+  CPU/IF_ID/flush_if_id (net)                                     0.0000     5.6887 r
+  CPU/IF_ID/U58/A1 (LVT_NOR2HDV8)                       0.1016    0.0000     5.6887 r
+  CPU/IF_ID/U58/ZN (LVT_NOR2HDV8)                       0.0901    0.0502     5.7389 f
+  CPU/IF_ID/n27 (net)                           4                 0.0000     5.7389 f
+  CPU/IF_ID/U96/I (LVT_INHDV2)                          0.0901    0.0000     5.7389 f
+  CPU/IF_ID/U96/ZN (LVT_INHDV2)                         0.0714    0.0603     5.7992 r
+  CPU/IF_ID/n47 (net)                           1                 0.0000     5.7992 r
+  CPU/IF_ID/U33/I (LVT_INHDV4)                          0.0714    0.0000     5.7992 r
+  CPU/IF_ID/U33/ZN (LVT_INHDV4)                         0.0878    0.0737     5.8729 f
+  CPU/IF_ID/n2 (net)                           18                 0.0000     5.8729 f
+  CPU/IF_ID/U169/B1 (LVT_AO22HDV2)                      0.0878    0.0000     5.8729 f
+  CPU/IF_ID/U169/Z (LVT_AO22HDV2)                       0.0834    0.1944     6.0673 f
+  CPU/IF_ID/n59 (net)                           1                 0.0000     6.0673 f
+  CPU/IF_ID/U170/B (LVT_AOI21HDV4)                      0.0834    0.0000     6.0673 f
+  CPU/IF_ID/U170/ZN (LVT_AOI21HDV4)                     0.1158    0.0801     6.1473 r
+  CPU/IF_ID/n98 (net)                           2                 0.0000     6.1473 r
+  CPU/IF_ID/U102/B (LVT_IOA21HDV1)                      0.1158    0.0000     6.1473 r
+  CPU/IF_ID/U102/ZN (LVT_IOA21HDV1)                     0.0668    0.0551     6.2024 f
+  CPU/IF_ID/n215 (net)                          1                 0.0000     6.2024 f
+  CPU/IF_ID/o_pc_reg_13_/D (LVT_DQHDV1)                 0.0668    0.0000     6.2024 f
+  data arrival time                                                          6.2024
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  CPU/IF_ID/o_pc_reg_13_/CK (LVT_DQHDV1)                          0.0000     6.3500 r
+  library setup time                                             -0.1473     6.2027
+  data required time                                                         6.2027
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2027
+  data arrival time                                                         -6.2024
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0003
+  Startpoint: CPU/IF_ID/o_inst_reg_23_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: CPU/IF_ID/o_inst_addr_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  CPU/IF_ID/o_inst_reg_23_/CK (LVT_DQHDV1)              0.0000    0.0000 #   0.0000 r
+  CPU/IF_ID/o_inst_reg_23_/Q (LVT_DQHDV1)               0.1641    0.2970     0.2970 r
+  CPU/IF_ID/o_inst[23] (net)                    6                 0.0000     0.2970 r
+  CPU/IF_ID/o_inst[23] (ysyx_210191_if_id_0)                      0.0000     0.2970 r
+  CPU/if_id_o_inst[23] (net)                                      0.0000     0.2970 r
+  CPU/DECODE/inst[23] (ysyx_210191_decode_0)                      0.0000     0.2970 r
+  CPU/DECODE/inst[23] (net)                                       0.0000     0.2970 r
+  CPU/DECODE/U287/I (LVT_BUFHDV2)                       0.1641    0.0000     0.2970 r
+  CPU/DECODE/U287/Z (LVT_BUFHDV2)                       0.1618    0.1731     0.4702 r
+  CPU/DECODE/shamt_ext[3] (net)                 9                 0.0000     0.4702 r
+  CPU/DECODE/U1094/A1 (LVT_OR2HDV1)                     0.1618    0.0000     0.4702 r
+  CPU/DECODE/U1094/Z (LVT_OR2HDV1)                      0.0990    0.1381     0.6082 r
+  CPU/DECODE/n865 (net)                         3                 0.0000     0.6082 r
+  CPU/DECODE/U1138/A1 (LVT_NAND2HDV1)                   0.0990    0.0000     0.6082 r
+  CPU/DECODE/U1138/ZN (LVT_NAND2HDV1)                   0.0636    0.0566     0.6649 f
+  CPU/DECODE/n871 (net)                         1                 0.0000     0.6649 f
+  CPU/DECODE/U1141/A2 (LVT_OAI21HDV1)                   0.0636    0.0000     0.6649 f
+  CPU/DECODE/U1141/ZN (LVT_OAI21HDV1)                   0.1915    0.1338     0.7987 r
+  CPU/DECODE/n942 (net)                         2                 0.0000     0.7987 r
+  CPU/DECODE/U1216/A1 (LVT_AOI21HDV1)                   0.1915    0.0000     0.7987 r
+  CPU/DECODE/U1216/ZN (LVT_AOI21HDV1)                   0.1200    0.1058     0.9045 f
+  CPU/DECODE/n1139 (net)                        2                 0.0000     0.9045 f
+  CPU/DECODE/U1423/A1 (LVT_OAI21HDV1)                   0.1200    0.0000     0.9045 f
+  CPU/DECODE/U1423/ZN (LVT_OAI21HDV1)                   0.1948    0.1410     1.0455 r
+  CPU/DECODE/n1351 (net)                        2                 0.0000     1.0455 r
+  CPU/DECODE/U1642/A2 (LVT_AOI21HDV1)                   0.1948    0.0000     1.0455 r
+  CPU/DECODE/U1642/ZN (LVT_AOI21HDV1)                   0.1149    0.1010     1.1465 f
+  CPU/DECODE/n1464 (net)                        2                 0.0000     1.1465 f
+  CPU/DECODE/U1752/A1 (LVT_OAI21HDV1)                   0.1149    0.0000     1.1465 f
+  CPU/DECODE/U1752/ZN (LVT_OAI21HDV1)                   0.2152    0.1513     1.2978 r
+  CPU/DECODE/n1484 (net)                        2                 0.0000     1.2978 r
+  CPU/DECODE/U1772/A1 (LVT_AOI21HDV1)                   0.2152    0.0000     1.2978 r
+  CPU/DECODE/U1772/ZN (LVT_AOI21HDV1)                   0.1346    0.1173     1.4151 f
+  CPU/DECODE/n1506 (net)                        2                 0.0000     1.4151 f
+  CPU/DECODE/U1790/A1 (LVT_OAI21HDV1)                   0.1346    0.0000     1.4151 f
+  CPU/DECODE/U1790/ZN (LVT_OAI21HDV1)                   0.2166    0.1564     1.5715 r
+  CPU/DECODE/n1520 (net)                        2                 0.0000     1.5715 r
+  CPU/DECODE/U1806/A1 (LVT_AOI21HDV1)                   0.2166    0.0000     1.5715 r
+  CPU/DECODE/U1806/ZN (LVT_AOI21HDV1)                   0.1349    0.1175     1.6891 f
+  CPU/DECODE/n1535 (net)                        2                 0.0000     1.6891 f
+  CPU/DECODE/U1825/A1 (LVT_OAI21HDV1)                   0.1349    0.0000     1.6891 f
+  CPU/DECODE/U1825/ZN (LVT_OAI21HDV1)                   0.2166    0.1565     1.8455 r
+  CPU/DECODE/n1550 (net)                        2                 0.0000     1.8455 r
+  CPU/DECODE/U289/A1 (LVT_AOI21HDV1)                    0.2166    0.0000     1.8455 r
+  CPU/DECODE/U289/ZN (LVT_AOI21HDV1)                    0.1349    0.1175     1.9631 f
+  CPU/DECODE/n1571 (net)                        2                 0.0000     1.9631 f
+  CPU/DECODE/U288/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     1.9631 f
+  CPU/DECODE/U288/ZN (LVT_OAI21HDV1)                    0.2166    0.1565     2.1196 r
+  CPU/DECODE/n1586 (net)                        2                 0.0000     2.1196 r
+  CPU/DECODE/U290/A1 (LVT_AOI21HDV1)                    0.2166    0.0000     2.1196 r
+  CPU/DECODE/U290/ZN (LVT_AOI21HDV1)                    0.1349    0.1175     2.2371 f
+  CPU/DECODE/n1605 (net)                        2                 0.0000     2.2371 f
+  CPU/DECODE/U291/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     2.2371 f
+  CPU/DECODE/U291/ZN (LVT_OAI21HDV1)                    0.2168    0.1565     2.3936 r
+  CPU/DECODE/n1620 (net)                        2                 0.0000     2.3936 r
+  CPU/DECODE/U292/A1 (LVT_AOI21HDV1)                    0.2168    0.0000     2.3936 r
+  CPU/DECODE/U292/ZN (LVT_AOI21HDV1)                    0.1349    0.1176     2.5111 f
+  CPU/DECODE/n1646 (net)                        2                 0.0000     2.5111 f
+  CPU/DECODE/U294/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     2.5111 f
+  CPU/DECODE/U294/ZN (LVT_OAI21HDV1)                    0.2168    0.1565     2.6676 r
+  CPU/DECODE/n1660 (net)                        2                 0.0000     2.6676 r
+  CPU/DECODE/U295/A1 (LVT_AOI21HDV1)                    0.2168    0.0000     2.6676 r
+  CPU/DECODE/U295/ZN (LVT_AOI21HDV1)                    0.1349    0.1176     2.7852 f
+  CPU/DECODE/n1676 (net)                        2                 0.0000     2.7852 f
+  CPU/DECODE/U296/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     2.7852 f
+  CPU/DECODE/U296/ZN (LVT_OAI21HDV1)                    0.2168    0.1565     2.9417 r
+  CPU/DECODE/n1691 (net)                        2                 0.0000     2.9417 r
+  CPU/DECODE/U297/A1 (LVT_AOI21HDV1)                    0.2168    0.0000     2.9417 r
+  CPU/DECODE/U297/ZN (LVT_AOI21HDV1)                    0.1349    0.1176     3.0592 f
+  CPU/DECODE/n1712 (net)                        2                 0.0000     3.0592 f
+  CPU/DECODE/U298/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     3.0592 f
+  CPU/DECODE/U298/ZN (LVT_OAI21HDV1)                    0.2168    0.1565     3.2157 r
+  CPU/DECODE/n1732 (net)                        2                 0.0000     3.2157 r
+  CPU/DECODE/U299/A1 (LVT_AOI21HDV1)                    0.2168    0.0000     3.2157 r
+  CPU/DECODE/U299/ZN (LVT_AOI21HDV1)                    0.1349    0.1176     3.3333 f
+  CPU/DECODE/n1750 (net)                        2                 0.0000     3.3333 f
+  CPU/DECODE/U300/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     3.3333 f
+  CPU/DECODE/U300/ZN (LVT_OAI21HDV1)                    0.2168    0.1565     3.4898 r
+  CPU/DECODE/n1765 (net)                        2                 0.0000     3.4898 r
+  CPU/DECODE/U301/A1 (LVT_AOI21HDV1)                    0.2168    0.0000     3.4898 r
+  CPU/DECODE/U301/ZN (LVT_AOI21HDV1)                    0.1349    0.1176     3.6073 f
+  CPU/DECODE/n1780 (net)                        2                 0.0000     3.6073 f
+  CPU/DECODE/U302/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     3.6073 f
+  CPU/DECODE/U302/ZN (LVT_OAI21HDV1)                    0.2168    0.1565     3.7638 r
+  CPU/DECODE/n1795 (net)                        2                 0.0000     3.7638 r
+  CPU/DECODE/U303/A1 (LVT_AOI21HDV1)                    0.2168    0.0000     3.7638 r
+  CPU/DECODE/U303/ZN (LVT_AOI21HDV1)                    0.1349    0.1176     3.8814 f
+  CPU/DECODE/n1810 (net)                        2                 0.0000     3.8814 f
+  CPU/DECODE/U304/A1 (LVT_OAI21HDV1)                    0.1349    0.0000     3.8814 f
+  CPU/DECODE/U304/ZN (LVT_OAI21HDV1)                    0.2308    0.1644     4.0458 r
+  CPU/DECODE/n1825 (net)                        2                 0.0000     4.0458 r
+  CPU/DECODE/U64/A1 (LVT_AOI21HDV2)                     0.2308    0.0000     4.0458 r
+  CPU/DECODE/U64/ZN (LVT_AOI21HDV2)                     0.1222    0.1068     4.1526 f
+  CPU/DECODE/n1841 (net)                        2                 0.0000     4.1526 f
+  CPU/DECODE/U63/A1 (LVT_OAI21HDV2)                     0.1222    0.0000     4.1526 f
+  CPU/DECODE/U63/ZN (LVT_OAI21HDV2)                     0.1863    0.1356     4.2881 r
+  CPU/DECODE/n1856 (net)                        2                 0.0000     4.2881 r
+  CPU/DECODE/U67/A1 (LVT_AOI21HDV2)                     0.1863    0.0000     4.2881 r
+  CPU/DECODE/U67/ZN (LVT_AOI21HDV2)                     0.1283    0.1144     4.4026 f
+  CPU/DECODE/n1871 (net)                        2                 0.0000     4.4026 f
+  CPU/DECODE/U66/A1 (LVT_OAI21HDV4)                     0.1283    0.0000     4.4026 f
+  CPU/DECODE/U66/ZN (LVT_OAI21HDV4)                     0.1391    0.1082     4.5108 r
+  CPU/DECODE/n1886 (net)                        2                 0.0000     4.5108 r
+  CPU/DECODE/U69/A1 (LVT_AOI21HDV2)                     0.1391    0.0000     4.5108 r
+  CPU/DECODE/U69/ZN (LVT_AOI21HDV2)                     0.1208    0.1034     4.6142 f
+  CPU/DECODE/n1902 (net)                        2                 0.0000     4.6142 f
+  CPU/DECODE/U68/A1 (LVT_OAI21HDV4)                     0.1208    0.0000     4.6142 f
+  CPU/DECODE/U68/ZN (LVT_OAI21HDV4)                     0.1391    0.1063     4.7205 r
+  CPU/DECODE/n1918 (net)                        2                 0.0000     4.7205 r
+  CPU/DECODE/U2152/A1 (LVT_AOI21HDV2)                   0.1391    0.0000     4.7205 r
+  CPU/DECODE/U2152/ZN (LVT_AOI21HDV2)                   0.1046    0.0911     4.8116 f
+  CPU/DECODE/n1933 (net)                        2                 0.0000     4.8116 f
+  CPU/DECODE/U2161/A1 (LVT_OAI21HDV2)                   0.1046    0.0000     4.8116 f
+  CPU/DECODE/U2161/ZN (LVT_OAI21HDV2)                   0.1717    0.1226     4.9342 r
+  CPU/DECODE/n1948 (net)                        2                 0.0000     4.9342 r
+  CPU/DECODE/U2174/A1 (LVT_AO21HDV2)                    0.1717    0.0000     4.9342 r
+  CPU/DECODE/U2174/Z (LVT_AO21HDV2)                     0.0670    0.1616     5.0958 r
+  CPU/DECODE/n1960 (net)                        1                 0.0000     5.0958 r
+  CPU/DECODE/U2183/CI (LVT_AD1HDV1)                     0.0670    0.0000     5.0958 r
+  CPU/DECODE/U2183/CO (LVT_AD1HDV1)                     0.1243    0.1849     5.2807 r
+  CPU/DECODE/n1969 (net)                        1                 0.0000     5.2807 r
+  CPU/DECODE/U2188/CI (LVT_AD1HDV1)                     0.1243    0.0000     5.2807 r
+  CPU/DECODE/U2188/CO (LVT_AD1HDV1)                     0.1243    0.1968     5.4775 r
+  CPU/DECODE/n1979 (net)                        1                 0.0000     5.4775 r
+  CPU/DECODE/U2195/CI (LVT_AD1HDV1)                     0.1243    0.0000     5.4775 r
+  CPU/DECODE/U2195/CO (LVT_AD1HDV1)                     0.1214    0.1949     5.6724 r
+  CPU/DECODE/n1981 (net)                        1                 0.0000     5.6724 r
+  CPU/DECODE/U317/A1 (LVT_XOR2HDV1)                     0.1214    0.0000     5.6724 r
+  CPU/DECODE/U317/Z (LVT_XOR2HDV1)                      0.0764    0.1578     5.8303 f
+  CPU/DECODE/n1986 (net)                        1                 0.0000     5.8303 f
+  CPU/DECODE/U9/A2 (LVT_AOI22HDV1)                      0.0764    0.0000     5.8303 f
+  CPU/DECODE/U9/ZN (LVT_AOI22HDV1)                      0.2029    0.1485     5.9787 r
+  CPU/DECODE/n1988 (net)                        1                 0.0000     5.9787 r
+  CPU/DECODE/U2199/B (LVT_IOA21HDV2)                    0.2029    0.0000     5.9787 r
+  CPU/DECODE/U2199/ZN (LVT_IOA21HDV2)                   0.0856    0.0758     6.0545 f
+  CPU/DECODE/b_j_pc[63] (net)                   2                 0.0000     6.0545 f
+  CPU/DECODE/b_j_pc[63] (ysyx_210191_decode_0)                    0.0000     6.0545 f
+  CPU/b_j_pc[63] (net)                                            0.0000     6.0545 f
+  CPU/IF_ID/b_j_pc[63] (ysyx_210191_if_id_0)                      0.0000     6.0545 f
+  CPU/IF_ID/b_j_pc[63] (net)                                      0.0000     6.0545 f
+  CPU/IF_ID/U364/A1 (LVT_NAND2HDV1)                     0.0856    0.0000     6.0545 f
+  CPU/IF_ID/U364/ZN (LVT_NAND2HDV1)                     0.1007    0.0669     6.1215 r
+  CPU/IF_ID/n428 (net)                          2                 0.0000     6.1215 r
+  CPU/IF_ID/U430/B (LVT_OAI211HDV1)                     0.1007    0.0000     6.1215 r
+  CPU/IF_ID/U430/ZN (LVT_OAI211HDV1)                    0.1378    0.0895     6.2109 f
+  CPU/IF_ID/n361 (net)                          1                 0.0000     6.2109 f
+  CPU/IF_ID/o_inst_addr_reg_63_/D (LVT_DQHDV4)          0.1378    0.0000     6.2109 f
+  data arrival time                                                          6.2109
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  CPU/IF_ID/o_inst_addr_reg_63_/CK (LVT_DQHDV4)                   0.0000     6.3500 r
+  library setup time                                             -0.1388     6.2112
+  data required time                                                         6.2112
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2112
+  data arrival time                                                         -6.2109
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0003
+  Startpoint: CPU/ID_EXE/o_shift_reg
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: CPU/IF_ID/o_pc_reg_10_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  CPU/ID_EXE/o_shift_reg/CK (LVT_DQHDV1)                0.0000    0.0000 #   0.0000 r
+  CPU/ID_EXE/o_shift_reg/Q (LVT_DQHDV1)                 0.1662    0.3109     0.3109 f
+  CPU/ID_EXE/o_shift (net)                      5                 0.0000     0.3109 f
+  CPU/ID_EXE/o_shift (ysyx_210191_id_exe_0)                       0.0000     0.3109 f
+  CPU/exe_shift (net)                                             0.0000     0.3109 f
+  CPU/EXE/shift (ysyx_210191_exe_0)                               0.0000     0.3109 f
+  CPU/EXE/shift (net)                                             0.0000     0.3109 f
+  CPU/EXE/U21/I (LVT_INHDV2)                            0.1662    0.0000     0.3109 f
+  CPU/EXE/U21/ZN (LVT_INHDV2)                           0.0894    0.0753     0.3862 r
+  CPU/EXE/n91 (net)                             1                 0.0000     0.3862 r
+  CPU/EXE/U20/A1 (LVT_NOR2HDV4)                         0.0894    0.0000     0.3862 r
+  CPU/EXE/U20/ZN (LVT_NOR2HDV4)                         0.0734    0.0485     0.4347 f
+  CPU/EXE/n100 (net)                            6                 0.0000     0.4347 f
+  CPU/EXE/U281/A1 (LVT_IOA21HDV2)                       0.0734    0.0000     0.4347 f
+  CPU/EXE/U281/ZN (LVT_IOA21HDV2)                       0.0824    0.1409     0.5756 f
+  CPU/EXE/n276 (net)                            1                 0.0000     0.5756 f
+  CPU/EXE/alu/data2[1] (ysyx_210191_ALU_0)                        0.0000     0.5756 f
+  CPU/EXE/alu/data2[1] (net)                                      0.0000     0.5756 f
+  CPU/EXE/alu/U802/I (LVT_BUFHDV8)                      0.0824    0.0000     0.5756 f
+  CPU/EXE/alu/U802/Z (LVT_BUFHDV8)                      0.0567    0.1086     0.6842 f
+  CPU/EXE/alu/n2014 (net)                      10                 0.0000     0.6842 f
+  CPU/EXE/alu/U62/I (LVT_INHDV2)                        0.0567    0.0000     0.6842 f
+  CPU/EXE/alu/U62/ZN (LVT_INHDV2)                       0.1100    0.0774     0.7616 r
+  CPU/EXE/alu/n85 (net)                         5                 0.0000     0.7616 r
+  CPU/EXE/alu/U53/A1 (LVT_NOR2HDV2)                     0.1100    0.0000     0.7616 r
+  CPU/EXE/alu/U53/ZN (LVT_NOR2HDV2)                     0.1144    0.0712     0.8328 f
+  CPU/EXE/alu/n70 (net)                         2                 0.0000     0.8328 f
+  CPU/EXE/alu/U760/I (LVT_INHDV4)                       0.1144    0.0000     0.8328 f
+  CPU/EXE/alu/U760/ZN (LVT_INHDV4)                      0.1358    0.1039     0.9366 r
+  CPU/EXE/alu/n71 (net)                         9                 0.0000     0.9366 r
+  CPU/EXE/alu/U12/I (LVT_INHDV4)                        0.1358    0.0000     0.9366 r
+  CPU/EXE/alu/U12/ZN (LVT_INHDV4)                       0.2113    0.1628     1.0994 f
+  CPU/EXE/alu/n3317 (net)                      40                 0.0000     1.0994 f
+  CPU/EXE/alu/U6/B1 (LVT_AOI22HDV1)                     0.2113    0.0000     1.0994 f
+  CPU/EXE/alu/U6/ZN (LVT_AOI22HDV1)                     0.1807    0.1353     1.2347 r
+  CPU/EXE/alu/n269 (net)                        1                 0.0000     1.2347 r
+  CPU/EXE/alu/U1149/A1 (LVT_NAND3HDV2)                  0.1807    0.0000     1.2347 r
+  CPU/EXE/alu/U1149/ZN (LVT_NAND3HDV2)                  0.1795    0.1449     1.3796 f
+  CPU/EXE/alu/n2870 (net)                       5                 0.0000     1.3796 f
+  CPU/EXE/alu/U1447/I (LVT_INHDV1)                      0.1795    0.0000     1.3796 f
+  CPU/EXE/alu/U1447/ZN (LVT_INHDV1)                     0.1172    0.0993     1.4789 r
+  CPU/EXE/alu/n1717 (net)                       3                 0.0000     1.4789 r
+  CPU/EXE/alu/U2436/A1 (LVT_OAI22HDV1)                  0.1172    0.0000     1.4789 r
+  CPU/EXE/alu/U2436/ZN (LVT_OAI22HDV1)                  0.1794    0.1059     1.5849 f
+  CPU/EXE/alu/n3229 (net)                       3                 0.0000     1.5849 f
+  CPU/EXE/alu/U2437/I (LVT_INHDV1)                      0.1794    0.0000     1.5849 f
+  CPU/EXE/alu/U2437/ZN (LVT_INHDV1)                     0.0981    0.0838     1.6686 r
+  CPU/EXE/alu/n2458 (net)                       2                 0.0000     1.6686 r
+  CPU/EXE/alu/U2448/A1 (LVT_OAI211HDV1)                 0.0981    0.0000     1.6686 r
+  CPU/EXE/alu/U2448/ZN (LVT_OAI211HDV1)                 0.1224    0.0949     1.7635 f
+  CPU/EXE/alu/n1726 (net)                       1                 0.0000     1.7635 f
+  CPU/EXE/alu/U2449/B (LVT_AOI21HDV1)                   0.1224    0.0000     1.7635 f
+  CPU/EXE/alu/U2449/ZN (LVT_AOI21HDV1)                  0.1436    0.1004     1.8640 r
+  CPU/EXE/alu/n1734 (net)                       1                 0.0000     1.8640 r
+  CPU/EXE/alu/U2454/B (LVT_OAI211HDV1)                  0.1436    0.0000     1.8640 r
+  CPU/EXE/alu/U2454/ZN (LVT_OAI211HDV1)                 0.1293    0.1021     1.9660 f
+  CPU/EXE/alu/n1735 (net)                       1                 0.0000     1.9660 f
+  CPU/EXE/alu/U2455/B (LVT_AOI21HDV1)                   0.1293    0.0000     1.9660 f
+  CPU/EXE/alu/U2455/ZN (LVT_AOI21HDV1)                  0.1363    0.1039     2.0699 r
+  CPU/EXE/alu/n1736 (net)                       1                 0.0000     2.0699 r
+  CPU/EXE/alu/U2456/B (LVT_OAI21HDV1)                   0.1363    0.0000     2.0699 r
+  CPU/EXE/alu/U2456/ZN (LVT_OAI21HDV1)                  0.0836    0.0737     2.1436 f
+  CPU/EXE/alu/n1737 (net)                       1                 0.0000     2.1436 f
+  CPU/EXE/alu/U2457/B (LVT_AOI21HDV1)                   0.0836    0.0000     2.1436 f
+  CPU/EXE/alu/U2457/ZN (LVT_AOI21HDV1)                  0.1505    0.0926     2.2362 r
+  CPU/EXE/alu/n1739 (net)                       1                 0.0000     2.2362 r
+  CPU/EXE/alu/U2458/B (LVT_IOA21HDV1)                   0.1505    0.0000     2.2362 r
+  CPU/EXE/alu/U2458/ZN (LVT_IOA21HDV1)                  0.0661    0.0562     2.2924 f
+  CPU/EXE/alu/res[7] (net)                      1                 0.0000     2.2924 f
+  CPU/EXE/alu/res[7] (ysyx_210191_ALU_0)                          0.0000     2.2924 f
+  CPU/EXE/res[7] (net)                                            0.0000     2.2924 f
+  CPU/EXE/U414/A1 (LVT_IOA21HDV1)                       0.0661    0.0000     2.2924 f
+  CPU/EXE/U414/ZN (LVT_IOA21HDV1)                       0.1171    0.1697     2.4621 f
+  CPU/EXE/data[7] (net)                         3                 0.0000     2.4621 f
+  CPU/EXE/data[7] (ysyx_210191_exe_0)                             0.0000     2.4621 f
+  CPU/exe_data[7] (net)                                           0.0000     2.4621 f
+  CPU/DECODE/exe_out[7] (ysyx_210191_decode_0)                    0.0000     2.4621 f
+  CPU/DECODE/exe_out[7] (net)                                     0.0000     2.4621 f
+  CPU/DECODE/mux1/a1[7] (ysyx_210191_mux4x64_2)                   0.0000     2.4621 f
+  CPU/DECODE/mux1/a1[7] (net)                                     0.0000     2.4621 f
+  CPU/DECODE/mux1/U82/A1 (LVT_NAND2HDV1)                0.1171    0.0000     2.4621 f
+  CPU/DECODE/mux1/U82/ZN (LVT_NAND2HDV1)                0.1197    0.0803     2.5423 r
+  CPU/DECODE/mux1/n19 (net)                     1                 0.0000     2.5423 r
+  CPU/DECODE/mux1/U250/B (LVT_OAI211HDV4)               0.1197    0.0000     2.5423 r
+  CPU/DECODE/mux1/U250/ZN (LVT_OAI211HDV4)              0.1626    0.1159     2.6582 f
+  CPU/DECODE/mux1/out[7] (net)                  7                 0.0000     2.6582 f
+  CPU/DECODE/mux1/out[7] (ysyx_210191_mux4x64_2)                  0.0000     2.6582 f
+  CPU/DECODE/data1[7] (net)                                       0.0000     2.6582 f
+  CPU/DECODE/U387/I (LVT_INHDV1)                        0.1626    0.0000     2.6582 f
+  CPU/DECODE/U387/ZN (LVT_INHDV1)                       0.0928    0.0791     2.7374 r
+  CPU/DECODE/n62 (net)                          2                 0.0000     2.7374 r
+  CPU/DECODE/U396/A1 (LVT_NAND2HDV1)                    0.0928    0.0000     2.7374 r
+  CPU/DECODE/U396/ZN (LVT_NAND2HDV1)                    0.1310    0.0711     2.8085 f
+  CPU/DECODE/n63 (net)                          2                 0.0000     2.8085 f
+  CPU/DECODE/U212/A2 (LVT_AOI21HDV1)                    0.1310    0.0000     2.8085 f
+  CPU/DECODE/U212/ZN (LVT_AOI21HDV1)                    0.1612    0.1214     2.9299 r
+  CPU/DECODE/n64 (net)                          1                 0.0000     2.9299 r
+  CPU/DECODE/U398/B (LVT_AOI21HDV1)                     0.1612    0.0000     2.9299 r
+  CPU/DECODE/U398/ZN (LVT_AOI21HDV1)                    0.1183    0.0496     2.9795 f
+  CPU/DECODE/n67 (net)                          1                 0.0000     2.9795 f
+  CPU/DECODE/U400/A1 (LVT_NOR3HDV1)                     0.1183    0.0000     2.9795 f
+  CPU/DECODE/U400/ZN (LVT_NOR3HDV1)                     0.2197    0.1390     3.1185 r
+  CPU/DECODE/n76 (net)                          1                 0.0000     3.1185 r
+  CPU/DECODE/U412/A2 (LVT_OAI31HDV2)                    0.2197    0.0000     3.1185 r
+  CPU/DECODE/U412/ZN (LVT_OAI31HDV2)                    0.1070    0.0862     3.2046 f
+  CPU/DECODE/n95 (net)                          1                 0.0000     3.2046 f
+  CPU/DECODE/U431/A1 (LVT_IOA21HDV4)                    0.1070    0.0000     3.2046 f
+  CPU/DECODE/U431/ZN (LVT_IOA21HDV4)                    0.0581    0.1150     3.3196 f
+  CPU/DECODE/n99 (net)                          1                 0.0000     3.3196 f
+  CPU/DECODE/U446/A2 (LVT_AOI21HDV2)                    0.0581    0.0000     3.3196 f
+  CPU/DECODE/U446/ZN (LVT_AOI21HDV2)                    0.1315    0.1003     3.4199 r
+  CPU/DECODE/n120 (net)                         1                 0.0000     3.4199 r
+  CPU/DECODE/U468/A1 (LVT_OAI21HDV2)                    0.1315    0.0000     3.4199 r
+  CPU/DECODE/U468/ZN (LVT_OAI21HDV2)                    0.0829    0.0662     3.4861 f
+  CPU/DECODE/n134 (net)                         1                 0.0000     3.4861 f
+  CPU/DECODE/U491/A1 (LVT_AOI21HDV2)                    0.0829    0.0000     3.4861 f
+  CPU/DECODE/U491/ZN (LVT_AOI21HDV2)                    0.1201    0.0922     3.5784 r
+  CPU/DECODE/n152 (net)                         1                 0.0000     3.5784 r
+  CPU/DECODE/U510/A1 (LVT_OAI21HDV2)                    0.1201    0.0000     3.5784 r
+  CPU/DECODE/U510/ZN (LVT_OAI21HDV2)                    0.0782    0.0650     3.6434 f
+  CPU/DECODE/n163 (net)                         1                 0.0000     3.6434 f
+  CPU/DECODE/U520/A1 (LVT_NAND2HDV2)                    0.0782    0.0000     3.6434 f
+  CPU/DECODE/U520/ZN (LVT_NAND2HDV2)                    0.0547    0.0476     3.6910 r
+  CPU/DECODE/n166 (net)                         1                 0.0000     3.6910 r
+  CPU/DECODE/U523/A1 (LVT_NAND2HDV2)                    0.0547    0.0000     3.6910 r
+  CPU/DECODE/U523/ZN (LVT_NAND2HDV2)                    0.0594    0.0452     3.7362 f
+  CPU/DECODE/n172 (net)                         1                 0.0000     3.7362 f
+  CPU/DECODE/U527/B1 (LVT_IAO22HDV2)                    0.0594    0.0000     3.7362 f
+  CPU/DECODE/U527/ZN (LVT_IAO22HDV2)                    0.1314    0.0907     3.8268 r
+  CPU/DECODE/n173 (net)                         1                 0.0000     3.8268 r
+  CPU/DECODE/U528/B (LVT_AOI21HDV2)                     0.1314    0.0000     3.8268 r
+  CPU/DECODE/U528/ZN (LVT_AOI21HDV2)                    0.1297    0.0438     3.8707 f
+  CPU/DECODE/n178 (net)                         1                 0.0000     3.8707 f
+  CPU/DECODE/U530/A1 (LVT_IAO21HDV4)                    0.1297    0.0000     3.8707 f
+  CPU/DECODE/U530/ZN (LVT_IAO21HDV4)                    0.0776    0.1400     4.0107 f
+  CPU/DECODE/n179 (net)                         1                 0.0000     4.0107 f
+  CPU/DECODE/U531/B (LVT_IAO21HDV2)                     0.0776    0.0000     4.0107 f
+  CPU/DECODE/U531/ZN (LVT_IAO21HDV2)                    0.1021    0.0800     4.0907 r
+  CPU/DECODE/n181 (net)                         1                 0.0000     4.0907 r
+  CPU/DECODE/U333/B (LVT_IAO21HDV2)                     0.1021    0.0000     4.0907 r
+  CPU/DECODE/U333/ZN (LVT_IAO21HDV2)                    0.0630    0.0462     4.1368 f
+  CPU/DECODE/n183 (net)                         1                 0.0000     4.1368 f
+  CPU/DECODE/U532/I (LVT_INHDV2)                        0.0630    0.0000     4.1368 f
+  CPU/DECODE/U532/ZN (LVT_INHDV2)                       0.0458    0.0407     4.1775 r
+  CPU/DECODE/n185 (net)                         1                 0.0000     4.1775 r
+  CPU/DECODE/U122/A1 (LVT_AOI21HDV2)                    0.0458    0.0000     4.1775 r
+  CPU/DECODE/U122/ZN (LVT_AOI21HDV2)                    0.0813    0.0542     4.2317 f
+  CPU/DECODE/n188 (net)                         1                 0.0000     4.2317 f
+  CPU/DECODE/U533/A1 (LVT_IAO21HDV4)                    0.0813    0.0000     4.2317 f
+  CPU/DECODE/U533/ZN (LVT_IAO21HDV4)                    0.0697    0.1269     4.3586 f
+  CPU/DECODE/n191 (net)                         1                 0.0000     4.3586 f
+  CPU/DECODE/U534/A1 (LVT_OAI22HDV2)                    0.0697    0.0000     4.3586 f
+  CPU/DECODE/U534/ZN (LVT_OAI22HDV2)                    0.2132    0.0793     4.4379 r
+  CPU/DECODE/n193 (net)                         1                 0.0000     4.4379 r
+  CPU/DECODE/U535/A1 (LVT_NAND2HDV2)                    0.2132    0.0000     4.4379 r
+  CPU/DECODE/U535/ZN (LVT_NAND2HDV2)                    0.0800    0.0670     4.5049 f
+  CPU/DECODE/n196 (net)                         1                 0.0000     4.5049 f
+  CPU/DECODE/U536/A1 (LVT_NAND2HDV2)                    0.0800    0.0000     4.5049 f
+  CPU/DECODE/U536/ZN (LVT_NAND2HDV2)                    0.0629    0.0479     4.5527 r
+  CPU/DECODE/n198 (net)                         1                 0.0000     4.5527 r
+  CPU/DECODE/U537/A1 (LVT_NAND2HDV2)                    0.0629    0.0000     4.5527 r
+  CPU/DECODE/U537/ZN (LVT_NAND2HDV2)                    0.0589    0.0462     4.5989 f
+  CPU/DECODE/n199 (net)                         1                 0.0000     4.5989 f
+  CPU/DECODE/U538/B (LVT_IOA21HDV2)                     0.0589    0.0000     4.5989 f
+  CPU/DECODE/U538/ZN (LVT_IOA21HDV2)                    0.0700    0.0495     4.6484 r
+  CPU/DECODE/n201 (net)                         1                 0.0000     4.6484 r
+  CPU/DECODE/U539/B (LVT_IOA21HDV2)                     0.0700    0.0000     4.6484 r
+  CPU/DECODE/U539/ZN (LVT_IOA21HDV2)                    0.0671    0.0518     4.7002 f
+  CPU/DECODE/n203 (net)                         1                 0.0000     4.7002 f
+  CPU/DECODE/U540/B (LVT_IOA21HDV2)                     0.0671    0.0000     4.7002 f
+  CPU/DECODE/U540/ZN (LVT_IOA21HDV2)                    0.0700    0.0518     4.7519 r
+  CPU/DECODE/n205 (net)                         1                 0.0000     4.7519 r
+  CPU/DECODE/U541/B (LVT_IOA21HDV2)                     0.0700    0.0000     4.7519 r
+  CPU/DECODE/U541/ZN (LVT_IOA21HDV2)                    0.0668    0.0518     4.8037 f
+  CPU/DECODE/n207 (net)                         1                 0.0000     4.8037 f
+  CPU/DECODE/U542/B (LVT_IOA21HDV2)                     0.0668    0.0000     4.8037 f
+  CPU/DECODE/U542/ZN (LVT_IOA21HDV2)                    0.0700    0.0517     4.8554 r
+  CPU/DECODE/n209 (net)                         1                 0.0000     4.8554 r
+  CPU/DECODE/U543/B (LVT_IOA21HDV2)                     0.0700    0.0000     4.8554 r
+  CPU/DECODE/U543/ZN (LVT_IOA21HDV2)                    0.0671    0.0518     4.9071 f
+  CPU/DECODE/n211 (net)                         1                 0.0000     4.9071 f
+  CPU/DECODE/U544/B (LVT_IOA21HDV2)                     0.0671    0.0000     4.9071 f
+  CPU/DECODE/U544/ZN (LVT_IOA21HDV2)                    0.0694    0.0514     4.9585 r
+  CPU/DECODE/n214 (net)                         1                 0.0000     4.9585 r
+  CPU/DECODE/U545/A1 (LVT_NAND2HDV2)                    0.0694    0.0000     4.9585 r
+  CPU/DECODE/U545/ZN (LVT_NAND2HDV2)                    0.0589    0.0476     5.0061 f
+  CPU/DECODE/n215 (net)                         1                 0.0000     5.0061 f
+  CPU/DECODE/U546/B (LVT_IOA21HDV2)                     0.0589    0.0000     5.0061 f
+  CPU/DECODE/U546/ZN (LVT_IOA21HDV2)                    0.0700    0.0495     5.0556 r
+  CPU/DECODE/n217 (net)                         1                 0.0000     5.0556 r
+  CPU/DECODE/U547/B (LVT_IOA21HDV2)                     0.0700    0.0000     5.0556 r
+  CPU/DECODE/U547/ZN (LVT_IOA21HDV2)                    0.0663    0.0518     5.1074 f
+  CPU/DECODE/n219 (net)                         1                 0.0000     5.1074 f
+  CPU/DECODE/U548/B (LVT_IOA21HDV2)                     0.0663    0.0000     5.1074 f
+  CPU/DECODE/U548/ZN (LVT_IOA21HDV2)                    0.0694    0.0512     5.1586 r
+  CPU/DECODE/n222 (net)                         1                 0.0000     5.1586 r
+  CPU/DECODE/U549/A1 (LVT_NAND2HDV2)                    0.0694    0.0000     5.1586 r
+  CPU/DECODE/U549/ZN (LVT_NAND2HDV2)                    0.0557    0.0476     5.2062 f
+  CPU/DECODE/n223 (net)                         1                 0.0000     5.2062 f
+  CPU/DECODE/U550/B (LVT_IOA21HDV2)                     0.0557    0.0000     5.2062 f
+  CPU/DECODE/U550/ZN (LVT_IOA21HDV2)                    0.0694    0.0483     5.2544 r
+  CPU/DECODE/n226 (net)                         1                 0.0000     5.2544 r
+  CPU/DECODE/U551/A1 (LVT_NAND2HDV2)                    0.0694    0.0000     5.2544 r
+  CPU/DECODE/U551/ZN (LVT_NAND2HDV2)                    0.0564    0.0484     5.3028 f
+  CPU/DECODE/n228 (net)                         1                 0.0000     5.3028 f
+  CPU/DECODE/U102/A1 (LVT_NAND2HDV2)                    0.0564    0.0000     5.3028 f
+  CPU/DECODE/U102/ZN (LVT_NAND2HDV2)                    0.0680    0.0427     5.3455 r
+  CPU/DECODE/n230 (net)                         1                 0.0000     5.3455 r
+  CPU/DECODE/U26/A1 (LVT_NAND2HDV2)                     0.0680    0.0000     5.3455 r
+  CPU/DECODE/U26/ZN (LVT_NAND2HDV2)                     0.0583    0.0481     5.3936 f
+  CPU/DECODE/n233 (net)                         1                 0.0000     5.3936 f
+  CPU/DECODE/U25/A1 (LVT_NAND2HDV2)                     0.0583    0.0000     5.3936 f
+  CPU/DECODE/U25/ZN (LVT_NAND2HDV2)                     0.0629    0.0432     5.4367 r
+  CPU/DECODE/n236 (net)                         1                 0.0000     5.4367 r
+  CPU/DECODE/U24/A1 (LVT_NAND2HDV2)                     0.0629    0.0000     5.4367 r
+  CPU/DECODE/U24/ZN (LVT_NAND2HDV2)                     0.0571    0.0469     5.4837 f
+  CPU/DECODE/n238 (net)                         1                 0.0000     5.4837 f
+  CPU/DECODE/U23/A1 (LVT_NAND2HDV2)                     0.0571    0.0000     5.4837 f
+  CPU/DECODE/U23/ZN (LVT_NAND2HDV2)                     0.0836    0.0538     5.5375 r
+  CPU/DECODE/n344 (net)                         1                 0.0000     5.5375 r
+  CPU/DECODE/U607/A1 (LVT_AOI21HDV4)                    0.0836    0.0000     5.5375 r
+  CPU/DECODE/U607/ZN (LVT_AOI21HDV4)                    0.1202    0.0690     5.6064 f
+  CPU/DECODE/n630 (net)                         2                 0.0000     5.6064 f
+  CPU/DECODE/U806/A1 (LVT_NAND2HDV4)                    0.1202    0.0000     5.6064 f
+  CPU/DECODE/U806/ZN (LVT_NAND2HDV4)                    0.1016    0.0823     5.6887 r
+  CPU/DECODE/flush_if_id (net)                  3                 0.0000     5.6887 r
+  CPU/DECODE/flush_if_id (ysyx_210191_decode_0)                   0.0000     5.6887 r
+  CPU/flush_if_id (net)                                           0.0000     5.6887 r
+  CPU/IF_ID/flush_if_id (ysyx_210191_if_id_0)                     0.0000     5.6887 r
+  CPU/IF_ID/flush_if_id (net)                                     0.0000     5.6887 r
+  CPU/IF_ID/U58/A1 (LVT_NOR2HDV8)                       0.1016    0.0000     5.6887 r
+  CPU/IF_ID/U58/ZN (LVT_NOR2HDV8)                       0.0901    0.0502     5.7389 f
+  CPU/IF_ID/n27 (net)                           4                 0.0000     5.7389 f
+  CPU/IF_ID/U96/I (LVT_INHDV2)                          0.0901    0.0000     5.7389 f
+  CPU/IF_ID/U96/ZN (LVT_INHDV2)                         0.0714    0.0603     5.7992 r
+  CPU/IF_ID/n47 (net)                           1                 0.0000     5.7992 r
+  CPU/IF_ID/U33/I (LVT_INHDV4)                          0.0714    0.0000     5.7992 r
+  CPU/IF_ID/U33/ZN (LVT_INHDV4)                         0.0878    0.0737     5.8729 f
+  CPU/IF_ID/n2 (net)                           18                 0.0000     5.8729 f
+  CPU/IF_ID/U97/B1 (LVT_AO22HDV2)                       0.0878    0.0000     5.8729 f
+  CPU/IF_ID/U97/Z (LVT_AO22HDV2)                        0.0834    0.1944     6.0673 f
+  CPU/IF_ID/n28 (net)                           1                 0.0000     6.0673 f
+  CPU/IF_ID/U98/B (LVT_AOI21HDV4)                       0.0834    0.0000     6.0673 f
+  CPU/IF_ID/U98/ZN (LVT_AOI21HDV4)                      0.1146    0.0801     6.1473 r
+  CPU/IF_ID/n40 (net)                           2                 0.0000     6.1473 r
+  CPU/IF_ID/U99/B (LVT_IOA21HDV1)                       0.1146    0.0000     6.1473 r
+  CPU/IF_ID/U99/ZN (LVT_IOA21HDV1)                      0.0668    0.0550     6.2023 f
+  CPU/IF_ID/n212 (net)                          1                 0.0000     6.2023 f
+  CPU/IF_ID/o_pc_reg_10_/D (LVT_DQHDV1)                 0.0668    0.0000     6.2023 f
+  data arrival time                                                          6.2023
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  CPU/IF_ID/o_pc_reg_10_/CK (LVT_DQHDV1)                          0.0000     6.3500 r
+  library setup time                                             -0.1473     6.2027
+  data required time                                                         6.2027
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2027
+  data arrival time                                                         -6.2023
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0004
