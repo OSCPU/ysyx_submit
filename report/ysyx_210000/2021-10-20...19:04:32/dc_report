@@ -1,0 +1,1928 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Oct_20_19:02:36_2021_+0800
+top_name: ysyx_210000
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+1. Warning:  /Project/home/CICD/asic_data/ysyx3_test/cpu/ysyx_210000.v:19321: Recommend parentheses when a reduction-and follows bitwise-and. (VER-230)
+****** Message Summary: 0 Error(s), 1 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total      std        mem  ipio  sub_harden
+1658130.2  1658130.2  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+83268  83268  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210000
+Date   : Wed Oct 20 19:16:59 2021
+****************************************
+    
+    
+    S011HD1P_X32Y2D128_BW_SS_1.08_125 (File: /Project/home/fangwenji/prj/coosca/lib_data/ccsdb/S011HD1P_X32Y2D128_BW_SS_1.08_125.db)
+Number of ports:                        37332
+Number of nets:                        118669
+Number of cells:                        84419
+Number of combinational cells:          60569
+Number of sequential cells:             22688
+Number of macros/black boxes:              11
+Number of buf/inv:                      10651
+Number of references:                      15
+Combinational area:             518155.475139
+Buf/Inv area:                    50471.688638
+Noncombinational area:          578231.743975
+Macro/Black Box area:           561742.972656
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:               1658130.191770
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area                  Local cell area
+                                  ---------------------  ------------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes        Design
+--------------------------------  ------------  -------  -----------  -----------  -----------  ---------------------------------------
+ysyx_210000                       1658130.1918    100.0     266.2704      51.1024       0.0000  ysyx_210000
+SimpleBus2AXI4Converter              2170.5072      0.1    2093.8536      76.6536       0.0000  ysyx_210000_SimpleBus2AXI4Converter_0
+SimpleBus2AXI4Converter_1            1027.4272      0.1     950.7736      76.6536       0.0000  ysyx_210000_SimpleBus2AXI4Converter_1_3
+SimpleBus2AXI4Converter_2             734.2608      0.0     657.6072      76.6536       0.0000  ysyx_210000_SimpleBus2AXI4Converter_1_2
+SimpleBusCrossbarNto1                2411.2264      0.1     837.8104      76.6536       0.0000  ysyx_210000_SimpleBusCrossbarNto1_4
+SimpleBusCrossbarNto1/inputArb       1496.7624      0.1    1394.5576     102.2048       0.0000  ysyx_210000_LockingArbiter_5
+axi2sb                               4215.9480      0.3    2938.3880    1277.5600       0.0000  ysyx_210000_AXI42SimpleBusConverter_0
+clint                               15543.1986      0.9    9232.0520    6311.1466       0.0000  ysyx_210000_AXI4CLINT_0
+cohMg                                5275.6505      0.3    2707.0824    2504.0177       0.0000  ysyx_210000_CoherenceManager_0
+cohMg/POWERGATING_clock__T_20_0        21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_870
+cohMg/POWERGATING_clock__T_20_1        21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_871
+cohMg/POWERGATING_clock__T_20_2        21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_0
+memAddrMap                            882.1888      0.1     882.1888       0.0000       0.0000  ysyx_210000_SimpleBusAddressMapper_0
+mmioXbar                             2918.2160      0.2    2816.0112     102.2048       0.0000  ysyx_210000_SimpleBusCrossbar1toN_0
+nutcore                           1615287.5530     97.4   13657.7888   20032.1415       0.0000  ysyx_210000_NutCore_0
+nutcore/Backend_inorder            410080.6286     24.7    7638.4640   15162.6205       0.0000  ysyx_210000_Backend_inorder_0
+nutcore/Backend_inorder/exu        304291.9345     18.4    1783.2048       0.0000       0.0000  ysyx_210000_EXU_0
+nutcore/Backend_inorder/exu/alu     25570.0272      1.5   23244.8679    2325.1593       0.0000  ysyx_210000_ALU_0
+nutcore/Backend_inorder/exu/csr     88378.9126      5.3   41926.8295   46452.0832       0.0000  ysyx_210000_CSR_0
+nutcore/Backend_inorder/exu/lsu     23527.2761      1.4    7128.7848    3347.2073       0.0000  ysyx_210000_UnpipelinedLSU_0
+nutcore/Backend_inorder/exu/lsu/atomALU
+                                     7152.9912      0.4    7152.9912       0.0000       0.0000  ysyx_210000_AtomALU_0
+nutcore/Backend_inorder/exu/lsu/lsExecUnit
+                                     5898.2928      0.4    4135.2600    1763.0329       0.0000  ysyx_210000_LSExecUnit_0
+nutcore/Backend_inorder/exu/mdu    164420.6298      9.9    2421.9848      25.5512       0.0000  ysyx_210000_MDU_0
+nutcore/Backend_inorder/exu/mdu/div
+                                    29390.6042      1.8   22326.3695    6849.0666       0.0000  ysyx_210000_Divider_0
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_n2681_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_397
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_n2681_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_398
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_n2681_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_436
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_n2681_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_440
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_n2681_4
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_441
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_newReq_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_442
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_newReq_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_443
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_newReq_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_444
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_newReq_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_445
+nutcore/Backend_inorder/exu/mdu/div/POWERGATING_clock_newReq_4
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_446
+nutcore/Backend_inorder/exu/mdu/mul
+                                   132582.4896      8.0  119057.8356   13524.6540       0.0000  ysyx_210000_Multiplier_0
+nutcore/Backend_inorder/exu/mou       611.8840      0.0     611.8840       0.0000       0.0000  ysyx_210000_MOU_0
+nutcore/Backend_inorder/isu         81260.8864      4.9   28441.1751   51485.6697       0.0000  ysyx_210000_ISU_0
+nutcore/Backend_inorder/isu/POWERGATING_clock_N100_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_785
+nutcore/Backend_inorder/isu/POWERGATING_clock_N100_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_786
+nutcore/Backend_inorder/isu/POWERGATING_clock_N101_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_787
+nutcore/Backend_inorder/isu/POWERGATING_clock_N101_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_788
+nutcore/Backend_inorder/isu/POWERGATING_clock_N102_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_789
+nutcore/Backend_inorder/isu/POWERGATING_clock_N102_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_790
+nutcore/Backend_inorder/isu/POWERGATING_clock_N103_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_791
+nutcore/Backend_inorder/isu/POWERGATING_clock_N103_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_792
+nutcore/Backend_inorder/isu/POWERGATING_clock_N104_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_793
+nutcore/Backend_inorder/isu/POWERGATING_clock_N104_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_794
+nutcore/Backend_inorder/isu/POWERGATING_clock_N105_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_795
+nutcore/Backend_inorder/isu/POWERGATING_clock_N105_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_796
+nutcore/Backend_inorder/isu/POWERGATING_clock_N106_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_797
+nutcore/Backend_inorder/isu/POWERGATING_clock_N106_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_798
+nutcore/Backend_inorder/isu/POWERGATING_clock_N107_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_799
+nutcore/Backend_inorder/isu/POWERGATING_clock_N107_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_800
+nutcore/Backend_inorder/isu/POWERGATING_clock_N108_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_801
+nutcore/Backend_inorder/isu/POWERGATING_clock_N108_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_802
+nutcore/Backend_inorder/isu/POWERGATING_clock_N109_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_803
+nutcore/Backend_inorder/isu/POWERGATING_clock_N109_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_804
+nutcore/Backend_inorder/isu/POWERGATING_clock_N110_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_805
+nutcore/Backend_inorder/isu/POWERGATING_clock_N110_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_806
+nutcore/Backend_inorder/isu/POWERGATING_clock_N111_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_807
+nutcore/Backend_inorder/isu/POWERGATING_clock_N111_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_808
+nutcore/Backend_inorder/isu/POWERGATING_clock_N112_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_809
+nutcore/Backend_inorder/isu/POWERGATING_clock_N112_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_810
+nutcore/Backend_inorder/isu/POWERGATING_clock_N113_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_811
+nutcore/Backend_inorder/isu/POWERGATING_clock_N113_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_812
+nutcore/Backend_inorder/isu/POWERGATING_clock_N114_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_813
+nutcore/Backend_inorder/isu/POWERGATING_clock_N114_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_814
+nutcore/Backend_inorder/isu/POWERGATING_clock_N115_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_815
+nutcore/Backend_inorder/isu/POWERGATING_clock_N115_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_816
+nutcore/Backend_inorder/isu/POWERGATING_clock_N116_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_817
+nutcore/Backend_inorder/isu/POWERGATING_clock_N116_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_818
+nutcore/Backend_inorder/isu/POWERGATING_clock_N117_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_819
+nutcore/Backend_inorder/isu/POWERGATING_clock_N117_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_820
+nutcore/Backend_inorder/isu/POWERGATING_clock_N118_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_821
+nutcore/Backend_inorder/isu/POWERGATING_clock_N118_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_822
+nutcore/Backend_inorder/isu/POWERGATING_clock_N119_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_823
+nutcore/Backend_inorder/isu/POWERGATING_clock_N119_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_824
+nutcore/Backend_inorder/isu/POWERGATING_clock_N120_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_825
+nutcore/Backend_inorder/isu/POWERGATING_clock_N120_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_826
+nutcore/Backend_inorder/isu/POWERGATING_clock_N121_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_827
+nutcore/Backend_inorder/isu/POWERGATING_clock_N121_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_828
+nutcore/Backend_inorder/isu/POWERGATING_clock_N122_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_829
+nutcore/Backend_inorder/isu/POWERGATING_clock_N122_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_830
+nutcore/Backend_inorder/isu/POWERGATING_clock_N123_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_831
+nutcore/Backend_inorder/isu/POWERGATING_clock_N123_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_832
+nutcore/Backend_inorder/isu/POWERGATING_clock_N93_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_771
+nutcore/Backend_inorder/isu/POWERGATING_clock_N93_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_772
+nutcore/Backend_inorder/isu/POWERGATING_clock_N94_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_773
+nutcore/Backend_inorder/isu/POWERGATING_clock_N94_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_774
+nutcore/Backend_inorder/isu/POWERGATING_clock_N95_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_775
+nutcore/Backend_inorder/isu/POWERGATING_clock_N95_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_776
+nutcore/Backend_inorder/isu/POWERGATING_clock_N96_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_777
+nutcore/Backend_inorder/isu/POWERGATING_clock_N96_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_778
+nutcore/Backend_inorder/isu/POWERGATING_clock_N97_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_779
+nutcore/Backend_inorder/isu/POWERGATING_clock_N97_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_780
+nutcore/Backend_inorder/isu/POWERGATING_clock_N98_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_781
+nutcore/Backend_inorder/isu/POWERGATING_clock_N98_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_782
+nutcore/Backend_inorder/isu/POWERGATING_clock_N99_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_783
+nutcore/Backend_inorder/isu/POWERGATING_clock_N99_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_784
+nutcore/Backend_inorder/wbu          1726.7232      0.1    1726.7232       0.0000       0.0000  ysyx_210000_WBU_0
+nutcore/Cache                      334838.2578     20.2    3489.7560   16534.3166       0.0000  ysyx_210000_Cache_0
+nutcore/Cache/POWERGATING_clock_n389_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_853
+nutcore/Cache/POWERGATING_clock_n389_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_854
+nutcore/Cache/POWERGATING_clock_n389_10
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_863
+nutcore/Cache/POWERGATING_clock_n389_11
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_864
+nutcore/Cache/POWERGATING_clock_n389_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_855
+nutcore/Cache/POWERGATING_clock_n389_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_856
+nutcore/Cache/POWERGATING_clock_n389_4
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_857
+nutcore/Cache/POWERGATING_clock_n389_5
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_858
+nutcore/Cache/POWERGATING_clock_n389_6
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_859
+nutcore/Cache/POWERGATING_clock_n389_7
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_860
+nutcore/Cache/POWERGATING_clock_n389_8
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_861
+nutcore/Cache/POWERGATING_clock_n389_9
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_862
+nutcore/Cache/arb                     607.8496      0.0     607.8496       0.0000       0.0000  ysyx_210000_Arbiter_4_0
+nutcore/Cache/dataArray            230029.8163     13.9   12396.3664   13134.6620       0.0000  ysyx_210000_SRAMTemplateWithArbiter_1_2
+nutcore/Cache/dataArray/ram        204403.3071     12.3     133.1352       0.0000  204270.1719  ysyx_210000_DataSRAMTemplate_2
+nutcore/Cache/dataArray/readArb        95.4808      0.0      95.4808       0.0000       0.0000  ysyx_210000_Arbiter_3_2
+nutcore/Cache/metaArray             56422.5366      3.4    2370.8824    2478.4665       0.0000  ysyx_210000_SRAMTemplateWithArbiter_3
+nutcore/Cache/metaArray/ram         51546.2918      3.1     376.5440     102.2048   51067.5430  ysyx_210000_MetaSRAMTemplate_2
+nutcore/Cache/metaArray/readArb        26.8960      0.0      26.8960       0.0000       0.0000  ysyx_210000_Arbiter_2_2
+nutcore/Cache/s1                      680.4688      0.0     680.4688       0.0000       0.0000  ysyx_210000_CacheStage1_0
+nutcore/Cache/s2                    10693.8497      0.6    6580.1064    4113.7433       0.0000  ysyx_210000_CacheStage2_0
+nutcore/Cache/s3                    16121.4627      1.0    6845.0320    8534.1011       0.0000  ysyx_210000_CacheStage3_0
+nutcore/Cache/s3/POWERGATING_clock_n676_10
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_749
+nutcore/Cache/s3/POWERGATING_clock_n676_11
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_750
+nutcore/Cache/s3/POWERGATING_clock_n676_12
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_751
+nutcore/Cache/s3/POWERGATING_clock_n676_13
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_752
+nutcore/Cache/s3/POWERGATING_clock_n676_14
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_753
+nutcore/Cache/s3/POWERGATING_clock_n676_15
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_754
+nutcore/Cache/s3/POWERGATING_clock_n676_8
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_747
+nutcore/Cache/s3/POWERGATING_clock_n676_9
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_748
+nutcore/Cache/s3/dataWriteArb         403.4400      0.0     403.4400       0.0000       0.0000  ysyx_210000_Arbiter_1_2
+nutcore/Cache/s3/metaWriteArb         166.7552      0.0     166.7552       0.0000       0.0000  ysyx_210000_Arbiter_1
+nutcore/Cache_1                    344040.7242     20.7    8398.2760   16633.8318       0.0000  ysyx_210000_Cache_1_0
+nutcore/Cache_1/arb                  1282.9392      0.1    1282.9392       0.0000       0.0000  ysyx_210000_Arbiter_9_0
+nutcore/Cache_1/dataArray          229976.0243     13.9   12341.2296   13136.0068       0.0000  ysyx_210000_SRAMTemplateWithArbiter_1_3
+nutcore/Cache_1/dataArray/ram      204403.3071     12.3     133.1352       0.0000  204270.1719  ysyx_210000_DataSRAMTemplate_3
+nutcore/Cache_1/dataArray/readArb      95.4808      0.0      95.4808       0.0000       0.0000  ysyx_210000_Arbiter_3_3
+nutcore/Cache_1/metaArray           56643.0838      3.4    2482.5008    2580.6713       0.0000  ysyx_210000_SRAMTemplateWithArbiter_1
+nutcore/Cache_1/metaArray/ram       51553.0158      3.1     383.2680     102.2048   51067.5430  ysyx_210000_MetaSRAMTemplate_3
+nutcore/Cache_1/metaArray/readArb      26.8960      0.0      26.8960       0.0000       0.0000  ysyx_210000_Arbiter_2_3
+nutcore/Cache_1/s1                    680.4688      0.0     680.4688       0.0000       0.0000  ysyx_210000_CacheStage1_1_0
+nutcore/Cache_1/s2                  10200.3081      0.6    6061.0136    4139.2945       0.0000  ysyx_210000_CacheStage2_1_0
+nutcore/Cache_1/s3                  20225.7923      1.2   10090.0344    8764.0619       0.0000  ysyx_210000_CacheStage3_1_0
+nutcore/Cache_1/s3/POWERGATING_clock_n848_10
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_485
+nutcore/Cache_1/s3/POWERGATING_clock_n848_11
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_486
+nutcore/Cache_1/s3/POWERGATING_clock_n848_12
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_487
+nutcore/Cache_1/s3/POWERGATING_clock_n848_13
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_488
+nutcore/Cache_1/s3/POWERGATING_clock_n848_14
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_489
+nutcore/Cache_1/s3/POWERGATING_clock_n848_15
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_490
+nutcore/Cache_1/s3/POWERGATING_clock_n848_8
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_483
+nutcore/Cache_1/s3/POWERGATING_clock_n848_9
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_484
+nutcore/Cache_1/s3/dataWriteArb       866.0512      0.1     866.0512       0.0000       0.0000  ysyx_210000_Arbiter_1_3
+nutcore/Cache_1/s3/metaWriteArb       333.5104      0.0     333.5104       0.0000       0.0000  ysyx_210000_Arbiter_2
+nutcore/EmbeddedTLB                 57939.3643      3.5   10150.5504   15100.7597       0.0000  ysyx_210000_EmbeddedTLB_0
+nutcore/EmbeddedTLB/mdTLB           13274.5212      0.8     844.5344   12085.7180       0.0000  ysyx_210000_EmbeddedTLBMD_0
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N3_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_767
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N3_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_768
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N3_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_769
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N3_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_770
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N4_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_763
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N4_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_764
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N4_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_765
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N4_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_766
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N5_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_759
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N5_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_760
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N5_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_761
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N5_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_762
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N6_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_755
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N6_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_756
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N6_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_757
+nutcore/EmbeddedTLB/mdTLB/POWERGATING_clock_N6_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_758
+nutcore/EmbeddedTLB/tlbExec         19413.5331      1.2   10879.4320    8534.1011       0.0000  ysyx_210000_EmbeddedTLBExec_0
+nutcore/EmbeddedTLB_1              291155.9312     17.6   10310.5816   17783.6358       0.0000  ysyx_210000_EmbeddedTLB_1_0
+nutcore/EmbeddedTLB_1/mdTLB        243441.0816     14.7   44842.3559  193090.4249       0.0000  ysyx_210000_EmbeddedTLBMD_1_0
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N116_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_619
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N116_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_620
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N116_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_621
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N116_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_622
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N118_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_623
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N118_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_624
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N118_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_625
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N118_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_626
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N120_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_627
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N120_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_628
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N120_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_629
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N120_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_630
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N122_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_631
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N122_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_632
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N122_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_633
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N122_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_634
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N124_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_635
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N124_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_636
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N124_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_637
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N124_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_638
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N126_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_639
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N126_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_640
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N126_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_641
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N126_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_642
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N128_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_643
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N128_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_644
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N128_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_645
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N128_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_646
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N130_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_647
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N130_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_648
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N130_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_649
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N130_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_650
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N132_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_651
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N132_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_652
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N132_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_653
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N132_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_654
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N134_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_655
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N134_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_656
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N134_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_657
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N134_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_658
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N136_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_659
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N136_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_660
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N136_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_661
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N136_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_662
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N138_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_663
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N138_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_664
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N138_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_665
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N138_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_666
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N140_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_667
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N140_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_668
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N140_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_669
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N140_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_670
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N142_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_671
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N142_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_672
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N142_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_673
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N142_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_674
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N144_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_675
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N144_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_676
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N144_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_677
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N144_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_678
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N146_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_679
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N146_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_680
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N146_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_681
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N146_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_682
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N166_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_555
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N166_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_556
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N166_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_557
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N166_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_558
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N168_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_559
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N168_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_560
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N168_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_561
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N168_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_562
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N170_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_563
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N170_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_564
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N170_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_565
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N170_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_566
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N172_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_567
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N172_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_568
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N172_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_569
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N172_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_570
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N174_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_571
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N174_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_572
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N174_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_573
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N174_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_574
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N176_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_575
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N176_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_576
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N176_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_577
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N176_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_578
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N178_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_579
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N178_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_580
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N178_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_581
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N178_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_582
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N180_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_583
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N180_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_584
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N180_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_585
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N180_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_586
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N182_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_587
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N182_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_588
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N182_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_589
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N182_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_590
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N184_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_591
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N184_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_592
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N184_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_593
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N184_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_594
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N186_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_595
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N186_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_596
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N186_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_597
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N186_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_598
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N188_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_599
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N188_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_600
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N188_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_601
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N188_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_602
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N190_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_603
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N190_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_604
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N190_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_605
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N190_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_606
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N192_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_607
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N192_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_608
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N192_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_609
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N192_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_610
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N194_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_611
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N194_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_612
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N194_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_613
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N194_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_614
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N196_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_615
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N196_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_616
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N196_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_617
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N196_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_618
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N216_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_491
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N216_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_492
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N216_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_493
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N216_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_494
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N218_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_495
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N218_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_496
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N218_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_497
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N218_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_498
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N220_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_499
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N220_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_500
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N220_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_501
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N220_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_502
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N222_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_503
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N222_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_504
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N222_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_505
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N222_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_506
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N224_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_507
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N224_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_508
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N224_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_509
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N224_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_510
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N226_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_511
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N226_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_512
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N226_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_513
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N226_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_514
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N228_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_515
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N228_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_516
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N228_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_517
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N228_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_518
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N230_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_519
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N230_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_520
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N230_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_521
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N230_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_522
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N232_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_523
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N232_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_524
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N232_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_525
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N232_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_526
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N234_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_527
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N234_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_528
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N234_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_529
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N234_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_530
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N236_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_531
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N236_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_532
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N236_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_533
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N236_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_534
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N238_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_535
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N238_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_536
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N238_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_537
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N238_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_538
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N240_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_539
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N240_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_540
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N240_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_541
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N240_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_542
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N242_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_543
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N242_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_544
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N242_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_545
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N242_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_546
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N244_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_547
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N244_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_548
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N244_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_549
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N244_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_550
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N246_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_551
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N246_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_552
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N246_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_553
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N246_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_554
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N66_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_683
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N66_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_684
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N66_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_685
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N66_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_686
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N68_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_687
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N68_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_688
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N68_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_689
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N68_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_690
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N70_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_691
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N70_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_692
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N70_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_693
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N70_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_694
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N72_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_695
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N72_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_696
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N72_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_697
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N72_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_698
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N74_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_699
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N74_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_700
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N74_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_701
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N74_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_702
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N76_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_703
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N76_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_704
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N76_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_705
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N76_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_706
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N78_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_707
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N78_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_708
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N78_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_709
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N78_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_710
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N80_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_711
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N80_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_712
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N80_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_713
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N80_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_714
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N82_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_715
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N82_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_716
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N82_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_717
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N82_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_718
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N84_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_719
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N84_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_720
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N84_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_721
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N84_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_722
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N86_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_723
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N86_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_724
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N86_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_725
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N86_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_726
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N88_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_727
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N88_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_728
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N88_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_729
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N88_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_730
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N90_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_731
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N90_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_732
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N90_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_733
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N90_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_734
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N92_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_735
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N92_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_736
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N92_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_737
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N92_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_738
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N94_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_739
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N94_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_740
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N94_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_741
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N94_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_742
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N96_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_743
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N96_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_744
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N96_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_745
+nutcore/EmbeddedTLB_1/mdTLB/POWERGATING_clock_N96_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_746
+nutcore/EmbeddedTLB_1/tlbExec       19620.6323      1.2   11086.5312    8534.1011       0.0000  ysyx_210000_EmbeddedTLBExec_1_0
+nutcore/MMIOBridge                   4250.9129      0.3    1776.4808    2452.9153       0.0000  ysyx_210000_MMIOBridge_0
+nutcore/MMIOBridge/POWERGATING_clock__T_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_865
+nutcore/SimpleBusCrossbarNto1        1820.8592      0.1     653.5728      76.6536       0.0000  ysyx_210000_SimpleBusCrossbarNto1_6
+nutcore/SimpleBusCrossbarNto1/inputArb
+                                     1090.6328      0.1    1013.9792      76.6536       0.0000  ysyx_210000_LockingArbiter_6
+nutcore/SimpleBusCrossbarNto1_1      4144.6736      0.2    1494.0728     102.2048       0.0000  ysyx_210000_SimpleBusCrossbarNto1_1_0
+nutcore/SimpleBusCrossbarNto1_1/inputArb
+                                     2548.3960      0.2    2471.7424      76.6536       0.0000  ysyx_210000_LockingArbiter_1_0
+nutcore/frontend                   133326.2709      8.0      24.2064    2914.1817       0.0000  ysyx_210000_Frontend_inorder_0
+nutcore/frontend/FlushableQueue     19023.5413      1.1    3441.3432   15151.8621       0.0000  ysyx_210000_FlushableQueue_0
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N34_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_833
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N34_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_834
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N34_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_835
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N34_8
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_836
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N34_9
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_837
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N35_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_838
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N35_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_839
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N35_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_840
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N35_8
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_841
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N35_9
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_842
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N36_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_843
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N36_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_844
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N36_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_845
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N36_8
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_846
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N36_9
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_847
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N37_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_848
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N37_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_849
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N37_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_850
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N37_8
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_851
+nutcore/frontend/FlushableQueue/POWERGATING_clock_N37_9
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_852
+nutcore/frontend/POWERGATING_clock__T_3_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_866
+nutcore/frontend/POWERGATING_clock__T_3_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_867
+nutcore/frontend/POWERGATING_clock__T_3_2
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_868
+nutcore/frontend/POWERGATING_clock__T_3_3
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_869
+nutcore/frontend/ibf                11690.3465      0.7    9186.3288    2504.0177       0.0000  ysyx_210000_NaiveRVCAlignBuffer_0
+nutcore/frontend/idu                 3746.6128      0.2       0.0000       0.0000       0.0000  ysyx_210000_IDU_0
+nutcore/frontend/idu/decoder1        3746.6128      0.2    3746.6128       0.0000       0.0000  ysyx_210000_Decoder_0
+nutcore/frontend/ifu                95841.3150      5.8    4566.9408    2018.5449       0.0000  ysyx_210000_IFU_inorder_0
+nutcore/frontend/ifu/bp1            89255.8294      5.4   10980.2920   21488.5599       0.0000  ysyx_210000_BPU_inorder_0
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N201_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_451
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N201_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_452
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N202_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_453
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N202_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_454
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N203_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_455
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N203_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_456
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N204_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_457
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N204_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_458
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N205_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_459
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N205_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_460
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N206_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_461
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N206_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_462
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N207_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_463
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N207_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_464
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N208_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_465
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N208_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_466
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N209_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_467
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N209_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_468
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N210_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_469
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N210_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_470
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N211_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_471
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N211_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_472
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N212_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_473
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N212_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_474
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N213_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_475
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N213_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_476
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N214_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_477
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N214_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_478
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N215_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_479
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N215_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_480
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N216_0
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_481
+nutcore/frontend/ifu/bp1/POWERGATING_clock_N216_1
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_482
+nutcore/frontend/ifu/bp1/POWERGATING_clock_pht_MPORT_3_en_4
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_447
+nutcore/frontend/ifu/bp1/POWERGATING_clock_pht_MPORT_3_en_5
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_448
+nutcore/frontend/ifu/bp1/POWERGATING_clock_pht_MPORT_3_en_6
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_449
+nutcore/frontend/ifu/bp1/POWERGATING_clock_pht_MPORT_3_en_7
+                                       21.5168      0.0       0.0000      21.5168       0.0000  POWERMODULE_HIGH_ysyx_210000_0_450
+nutcore/frontend/ifu/bp1/btb        56012.3726      3.4    2797.1840    2147.6457   51067.5430  ysyx_210000_BTBSRAMTemplate_0
+plic                                 5061.8273      0.3    2404.5024    2657.3249       0.0000  ysyx_210000_AXI4PLIC_0
+xbar                                 2284.8152      0.1     818.9832      76.6536       0.0000  ysyx_210000_SimpleBusCrossbarNto1_5
+xbar/inputArb                        1389.1784      0.1    1286.9736     102.2048       0.0000  ysyx_210000_LockingArbiter_4
+--------------------------------  ------------  -------  -----------  -----------  -----------  ---------------------------------------
+Total                                                    518155.4751  578231.7440  561742.9727
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210000
+Date   : Wed Oct 20 19:16:51 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_38_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_/Q (LVT_DQHDV1)
+                                                        0.1841    0.3101     0.3101 r
+  nutcore/Backend_inorder/exu_io__in_bits_ctrl_fuOpType[6] (net)
+                                                7                 0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/io__in_bits_ctrl_fuOpType[6] (ysyx_210000_EXU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/io__in_bits_ctrl_fuOpType[6] (net)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/io__in_bits_func[6] (ysyx_210000_UnpipelinedLSU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/io__in_bits_func[6] (net)       0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_func[6] (ysyx_210000_AtomALU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_func[6] (net)        0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U43/I (LVT_INHDV1)
+                                                        0.1841    0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U43/ZN (LVT_INHDV1)
+                                                        0.1071    0.0938     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n7 (net)
+                                                3                 0.0000     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U1/I (LVT_INHDV4)
+                                                        0.1071    0.0000     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U1/ZN (LVT_INHDV4)
+                                                        0.4427    0.2669     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n3 (net)
+                                               64                 0.0000     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U145/A2 (LVT_XNOR2HDV1)
+                                                        0.4427    0.0000     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U145/ZN (LVT_XNOR2HDV1)
+                                                        0.0970    0.2501     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n9 (net)
+                                                2                 0.0000     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U156/A1 (LVT_NAND2HDV1)
+                                                        0.0970    0.0000     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U156/ZN (LVT_NAND2HDV1)
+                                                        0.1168    0.0879     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n652 (net)
+                                                3                 0.0000     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U158/A2 (LVT_OAI21HDV1)
+                                                        0.1168    0.0000     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U158/ZN (LVT_OAI21HDV1)
+                                                        0.1487    0.1180     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n11 (net)
+                                                1                 0.0000     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U159/B (LVT_AOI21HDV1)
+                                                        0.1487    0.0000     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U159/ZN (LVT_AOI21HDV1)
+                                                        0.1146    0.0618     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n612 (net)
+                                                2                 0.0000     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U180/A1 (LVT_OAI21HDV1)
+                                                        0.1146    0.0000     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U180/ZN (LVT_OAI21HDV1)
+                                                        0.1925    0.1384     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n625 (net)
+                                                2                 0.0000     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U219/A1 (LVT_AOI21HDV1)
+                                                        0.1925    0.0000     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U219/ZN (LVT_AOI21HDV1)
+                                                        0.1202    0.1060     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n152 (net)
+                                                2                 0.0000     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U298/A1 (LVT_OAI21HDV1)
+                                                        0.1202    0.0000     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U298/ZN (LVT_OAI21HDV1)
+                                                        0.1929    0.1399     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n128 (net)
+                                                2                 0.0000     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U89/A1 (LVT_AOI21HDV1)
+                                                        0.1929    0.0000     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U89/ZN (LVT_AOI21HDV1)
+                                                        0.1297    0.1141     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n485 (net)
+                                                2                 0.0000     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U14/A1 (LVT_OAI21HDV1)
+                                                        0.1297    0.0000     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U14/ZN (LVT_OAI21HDV1)
+                                                        0.2158    0.1551     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n339 (net)
+                                                2                 0.0000     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U5/A1 (LVT_AOI21HDV1)
+                                                        0.2158    0.0000     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U5/ZN (LVT_AOI21HDV1)
+                                                        0.1414    0.1233     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n521 (net)
+                                                2                 0.0000     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U13/A1 (LVT_OAI21HDV2)
+                                                        0.1414    0.0000     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U13/ZN (LVT_OAI21HDV2)
+                                                        0.1864    0.1406     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n361 (net)
+                                                2                 0.0000     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U85/A1 (LVT_AOI21HDV2)
+                                                        0.1864    0.0000     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U85/ZN (LVT_AOI21HDV2)
+                                                        0.1132    0.1011     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n461 (net)
+                                                2                 0.0000     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U83/A1 (LVT_OAI21HDV2)
+                                                        0.1132    0.0000     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U83/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1332     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n383 (net)
+                                                2                 0.0000     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U79/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U79/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n395 (net)
+                                                2                 0.0000     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U77/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U77/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n350 (net)
+                                                2                 0.0000     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U73/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U73/ZN (LVT_AOI21HDV2)
+                                                        0.1082    0.0968     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n431 (net)
+                                                2                 0.0000     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U47/A1 (LVT_OAI21HDV1)
+                                                        0.1082    0.0000     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U47/ZN (LVT_OAI21HDV1)
+                                                        0.2291    0.1574     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n372 (net)
+                                                2                 0.0000     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U70/A1 (LVT_AOI21HDV2)
+                                                        0.2291    0.0000     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U70/ZN (LVT_AOI21HDV2)
+                                                        0.1219    0.1066     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n473 (net)
+                                                2                 0.0000     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U68/A1 (LVT_OAI21HDV2)
+                                                        0.1219    0.0000     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U68/ZN (LVT_OAI21HDV2)
+                                                        0.1848    0.1355     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n283 (net)
+                                                2                 0.0000     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U64/A1 (LVT_AOI21HDV2)
+                                                        0.1848    0.0000     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U64/ZN (LVT_AOI21HDV2)
+                                                        0.1129    0.1009     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n328 (net)
+                                                2                 0.0000     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U62/A1 (LVT_OAI21HDV2)
+                                                        0.1129    0.0000     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U62/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n294 (net)
+                                                2                 0.0000     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U58/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U58/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n251 (net)
+                                                2                 0.0000     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U56/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U56/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n227 (net)
+                                                2                 0.0000     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U52/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U52/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n263 (net)
+                                                2                 0.0000     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U50/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U50/ZN (LVT_OAI21HDV2)
+                                                        0.1659    0.1229     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n239 (net)
+                                                2                 0.0000     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U46/A1 (LVT_AO21HDV1)
+                                                        0.1659    0.0000     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U46/Z (LVT_AO21HDV1)
+                                                        0.0818    0.1773     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n271 (net)
+                                                1                 0.0000     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U485/CI (LVT_AD1HDV1)
+                                                        0.0818    0.0000     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U485/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1882     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n590 (net)
+                                                1                 0.0000     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U723/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U723/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1966     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n599 (net)
+                                                1                 0.0000     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U730/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U730/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1966     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n213 (net)
+                                                1                 0.0000     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U444/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U444/CO (LVT_AD1HDV1)
+                                                        0.1660    0.2250     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n121 (net)
+                                                3                 0.0000     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U4/A1 (LVT_XNOR2HDV1)
+                                                        0.1660    0.0000     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U4/ZN (LVT_XNOR2HDV1)
+                                                        0.1059    0.2072     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n139 (net)
+                                                3                 0.0000     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U132/I0 (LVT_MUX2NHDV1)
+                                                        0.1059    0.0000     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U132/ZN (LVT_MUX2NHDV1)
+                                                        0.1819    0.1137     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n132 (net)
+                                                2                 0.0000     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U19/A1 (LVT_NAND2HDV1)
+                                                        0.1819    0.0000     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U19/ZN (LVT_NAND2HDV1)
+                                                        0.0890    0.0760     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n142 (net)
+                                                1                 0.0000     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U16/A1 (LVT_AOI21HDV2)
+                                                        0.0890    0.0000     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U16/ZN (LVT_AOI21HDV2)
+                                                        0.3035    0.1920     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n615 (net)
+                                                7                 0.0000     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U15/B (LVT_OAI211HDV1)
+                                                        0.3035    0.0000     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U15/ZN (LVT_OAI211HDV1)
+                                                        0.1468    0.1283     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n146 (net)
+                                                1                 0.0000     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U99/B1 (LVT_AOI22HDV1)
+                                                        0.1468    0.0000     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U99/ZN (LVT_AOI22HDV1)
+                                                        0.1694    0.1150     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n148 (net)
+                                                1                 0.0000     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U97/B (LVT_OAI21HDV1)
+                                                        0.1694    0.0000     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U97/ZN (LVT_OAI21HDV1)
+                                                        0.1476    0.1255     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[31] (net)
+                                                2                 0.0000     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U442/B1 (LVT_INAND2HDV4)
+                                                        0.1476    0.0000     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U442/ZN (LVT_INAND2HDV4)
+                                                        0.3007    0.2046     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n302 (net)
+                                               32                 0.0000     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U126/B (LVT_OAI211HDV1)
+                                                        0.3007    0.0000     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U126/ZN (LVT_OAI211HDV1)
+                                                        0.1486    0.1297     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[38] (net)
+                                                1                 0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[38] (ysyx_210000_AtomALU_0)
+                                                                  0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU_io_result[38] (net)     0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/U952/A1 (LVT_NAND2HDV1)
+                                                        0.1486    0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/U952/ZN (LVT_NAND2HDV1)
+                                                        0.1078    0.0638     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/n1111 (net)
+                                                1                 0.0000     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/U953/B (LVT_OAI211HDV1)
+                                                        0.1078    0.0000     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/U953/ZN (LVT_OAI211HDV1)
+                                                        0.1306    0.0884     6.1898 f
+  nutcore/Backend_inorder/exu/lsu/n454 (net)
+                                                1                 0.0000     6.1898 f
+  nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_38_/D (LVT_DQHDV1)
+                                                        0.1306    0.0000     6.1898 f
+  data arrival time                                                          6.1898
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_38_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1602     6.1898
+  data required time                                                         6.1898
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1898
+  data arrival time                                                         -6.1898
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
+  Startpoint: nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_53_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_/Q (LVT_DQHDV1)
+                                                        0.1841    0.3101     0.3101 r
+  nutcore/Backend_inorder/exu_io__in_bits_ctrl_fuOpType[6] (net)
+                                                7                 0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/io__in_bits_ctrl_fuOpType[6] (ysyx_210000_EXU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/io__in_bits_ctrl_fuOpType[6] (net)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/io__in_bits_func[6] (ysyx_210000_UnpipelinedLSU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/io__in_bits_func[6] (net)       0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_func[6] (ysyx_210000_AtomALU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_func[6] (net)        0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U43/I (LVT_INHDV1)
+                                                        0.1841    0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U43/ZN (LVT_INHDV1)
+                                                        0.1071    0.0938     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n7 (net)
+                                                3                 0.0000     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U1/I (LVT_INHDV4)
+                                                        0.1071    0.0000     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U1/ZN (LVT_INHDV4)
+                                                        0.4427    0.2669     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n3 (net)
+                                               64                 0.0000     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U145/A2 (LVT_XNOR2HDV1)
+                                                        0.4427    0.0000     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U145/ZN (LVT_XNOR2HDV1)
+                                                        0.0970    0.2501     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n9 (net)
+                                                2                 0.0000     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U156/A1 (LVT_NAND2HDV1)
+                                                        0.0970    0.0000     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U156/ZN (LVT_NAND2HDV1)
+                                                        0.1168    0.0879     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n652 (net)
+                                                3                 0.0000     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U158/A2 (LVT_OAI21HDV1)
+                                                        0.1168    0.0000     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U158/ZN (LVT_OAI21HDV1)
+                                                        0.1487    0.1180     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n11 (net)
+                                                1                 0.0000     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U159/B (LVT_AOI21HDV1)
+                                                        0.1487    0.0000     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U159/ZN (LVT_AOI21HDV1)
+                                                        0.1146    0.0618     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n612 (net)
+                                                2                 0.0000     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U180/A1 (LVT_OAI21HDV1)
+                                                        0.1146    0.0000     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U180/ZN (LVT_OAI21HDV1)
+                                                        0.1925    0.1384     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n625 (net)
+                                                2                 0.0000     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U219/A1 (LVT_AOI21HDV1)
+                                                        0.1925    0.0000     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U219/ZN (LVT_AOI21HDV1)
+                                                        0.1202    0.1060     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n152 (net)
+                                                2                 0.0000     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U298/A1 (LVT_OAI21HDV1)
+                                                        0.1202    0.0000     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U298/ZN (LVT_OAI21HDV1)
+                                                        0.1929    0.1399     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n128 (net)
+                                                2                 0.0000     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U89/A1 (LVT_AOI21HDV1)
+                                                        0.1929    0.0000     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U89/ZN (LVT_AOI21HDV1)
+                                                        0.1297    0.1141     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n485 (net)
+                                                2                 0.0000     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U14/A1 (LVT_OAI21HDV1)
+                                                        0.1297    0.0000     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U14/ZN (LVT_OAI21HDV1)
+                                                        0.2158    0.1551     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n339 (net)
+                                                2                 0.0000     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U5/A1 (LVT_AOI21HDV1)
+                                                        0.2158    0.0000     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U5/ZN (LVT_AOI21HDV1)
+                                                        0.1414    0.1233     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n521 (net)
+                                                2                 0.0000     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U13/A1 (LVT_OAI21HDV2)
+                                                        0.1414    0.0000     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U13/ZN (LVT_OAI21HDV2)
+                                                        0.1864    0.1406     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n361 (net)
+                                                2                 0.0000     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U85/A1 (LVT_AOI21HDV2)
+                                                        0.1864    0.0000     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U85/ZN (LVT_AOI21HDV2)
+                                                        0.1132    0.1011     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n461 (net)
+                                                2                 0.0000     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U83/A1 (LVT_OAI21HDV2)
+                                                        0.1132    0.0000     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U83/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1332     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n383 (net)
+                                                2                 0.0000     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U79/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U79/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n395 (net)
+                                                2                 0.0000     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U77/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U77/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n350 (net)
+                                                2                 0.0000     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U73/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U73/ZN (LVT_AOI21HDV2)
+                                                        0.1082    0.0968     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n431 (net)
+                                                2                 0.0000     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U47/A1 (LVT_OAI21HDV1)
+                                                        0.1082    0.0000     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U47/ZN (LVT_OAI21HDV1)
+                                                        0.2291    0.1574     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n372 (net)
+                                                2                 0.0000     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U70/A1 (LVT_AOI21HDV2)
+                                                        0.2291    0.0000     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U70/ZN (LVT_AOI21HDV2)
+                                                        0.1219    0.1066     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n473 (net)
+                                                2                 0.0000     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U68/A1 (LVT_OAI21HDV2)
+                                                        0.1219    0.0000     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U68/ZN (LVT_OAI21HDV2)
+                                                        0.1848    0.1355     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n283 (net)
+                                                2                 0.0000     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U64/A1 (LVT_AOI21HDV2)
+                                                        0.1848    0.0000     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U64/ZN (LVT_AOI21HDV2)
+                                                        0.1129    0.1009     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n328 (net)
+                                                2                 0.0000     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U62/A1 (LVT_OAI21HDV2)
+                                                        0.1129    0.0000     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U62/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n294 (net)
+                                                2                 0.0000     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U58/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U58/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n251 (net)
+                                                2                 0.0000     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U56/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U56/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n227 (net)
+                                                2                 0.0000     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U52/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U52/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n263 (net)
+                                                2                 0.0000     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U50/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U50/ZN (LVT_OAI21HDV2)
+                                                        0.1659    0.1229     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n239 (net)
+                                                2                 0.0000     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U46/A1 (LVT_AO21HDV1)
+                                                        0.1659    0.0000     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U46/Z (LVT_AO21HDV1)
+                                                        0.0818    0.1773     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n271 (net)
+                                                1                 0.0000     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U485/CI (LVT_AD1HDV1)
+                                                        0.0818    0.0000     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U485/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1882     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n590 (net)
+                                                1                 0.0000     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U723/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U723/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1966     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n599 (net)
+                                                1                 0.0000     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U730/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U730/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1966     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n213 (net)
+                                                1                 0.0000     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U444/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U444/CO (LVT_AD1HDV1)
+                                                        0.1660    0.2250     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n121 (net)
+                                                3                 0.0000     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U4/A1 (LVT_XNOR2HDV1)
+                                                        0.1660    0.0000     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U4/ZN (LVT_XNOR2HDV1)
+                                                        0.1059    0.2072     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n139 (net)
+                                                3                 0.0000     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U132/I0 (LVT_MUX2NHDV1)
+                                                        0.1059    0.0000     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U132/ZN (LVT_MUX2NHDV1)
+                                                        0.1819    0.1137     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n132 (net)
+                                                2                 0.0000     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U19/A1 (LVT_NAND2HDV1)
+                                                        0.1819    0.0000     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U19/ZN (LVT_NAND2HDV1)
+                                                        0.0890    0.0760     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n142 (net)
+                                                1                 0.0000     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U16/A1 (LVT_AOI21HDV2)
+                                                        0.0890    0.0000     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U16/ZN (LVT_AOI21HDV2)
+                                                        0.3035    0.1920     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n615 (net)
+                                                7                 0.0000     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U15/B (LVT_OAI211HDV1)
+                                                        0.3035    0.0000     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U15/ZN (LVT_OAI211HDV1)
+                                                        0.1468    0.1283     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n146 (net)
+                                                1                 0.0000     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U99/B1 (LVT_AOI22HDV1)
+                                                        0.1468    0.0000     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U99/ZN (LVT_AOI22HDV1)
+                                                        0.1694    0.1150     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n148 (net)
+                                                1                 0.0000     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U97/B (LVT_OAI21HDV1)
+                                                        0.1694    0.0000     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U97/ZN (LVT_OAI21HDV1)
+                                                        0.1476    0.1255     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[31] (net)
+                                                2                 0.0000     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U442/B1 (LVT_INAND2HDV4)
+                                                        0.1476    0.0000     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U442/ZN (LVT_INAND2HDV4)
+                                                        0.3007    0.2046     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n302 (net)
+                                               32                 0.0000     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U112/B (LVT_OAI211HDV1)
+                                                        0.3007    0.0000     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U112/ZN (LVT_OAI211HDV1)
+                                                        0.1486    0.1297     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[53] (net)
+                                                1                 0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[53] (ysyx_210000_AtomALU_0)
+                                                                  0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU_io_result[53] (net)     0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/U948/A1 (LVT_NAND2HDV1)
+                                                        0.1486    0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/U948/ZN (LVT_NAND2HDV1)
+                                                        0.1078    0.0638     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/n1105 (net)
+                                                1                 0.0000     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/U949/B (LVT_OAI211HDV1)
+                                                        0.1078    0.0000     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/U949/ZN (LVT_OAI211HDV1)
+                                                        0.1306    0.0884     6.1898 f
+  nutcore/Backend_inorder/exu/lsu/n469 (net)
+                                                1                 0.0000     6.1898 f
+  nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_53_/D (LVT_DQHDV1)
+                                                        0.1306    0.0000     6.1898 f
+  data arrival time                                                          6.1898
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_53_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1602     6.1898
+  data required time                                                         6.1898
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1898
+  data arrival time                                                         -6.1898
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
+  Startpoint: nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_54_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  nutcore/Backend_inorder/REG_1_ctrl_fuOpType_reg_6_/Q (LVT_DQHDV1)
+                                                        0.1841    0.3101     0.3101 r
+  nutcore/Backend_inorder/exu_io__in_bits_ctrl_fuOpType[6] (net)
+                                                7                 0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/io__in_bits_ctrl_fuOpType[6] (ysyx_210000_EXU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/io__in_bits_ctrl_fuOpType[6] (net)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/io__in_bits_func[6] (ysyx_210000_UnpipelinedLSU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/io__in_bits_func[6] (net)       0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_func[6] (ysyx_210000_AtomALU_0)
+                                                                  0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_func[6] (net)        0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U43/I (LVT_INHDV1)
+                                                        0.1841    0.0000     0.3101 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U43/ZN (LVT_INHDV1)
+                                                        0.1071    0.0938     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n7 (net)
+                                                3                 0.0000     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U1/I (LVT_INHDV4)
+                                                        0.1071    0.0000     0.4039 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U1/ZN (LVT_INHDV4)
+                                                        0.4427    0.2669     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n3 (net)
+                                               64                 0.0000     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U145/A2 (LVT_XNOR2HDV1)
+                                                        0.4427    0.0000     0.6708 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U145/ZN (LVT_XNOR2HDV1)
+                                                        0.0970    0.2501     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n9 (net)
+                                                2                 0.0000     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U156/A1 (LVT_NAND2HDV1)
+                                                        0.0970    0.0000     0.9208 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U156/ZN (LVT_NAND2HDV1)
+                                                        0.1168    0.0879     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n652 (net)
+                                                3                 0.0000     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U158/A2 (LVT_OAI21HDV1)
+                                                        0.1168    0.0000     1.0087 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U158/ZN (LVT_OAI21HDV1)
+                                                        0.1487    0.1180     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n11 (net)
+                                                1                 0.0000     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U159/B (LVT_AOI21HDV1)
+                                                        0.1487    0.0000     1.1267 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U159/ZN (LVT_AOI21HDV1)
+                                                        0.1146    0.0618     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n612 (net)
+                                                2                 0.0000     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U180/A1 (LVT_OAI21HDV1)
+                                                        0.1146    0.0000     1.1885 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U180/ZN (LVT_OAI21HDV1)
+                                                        0.1925    0.1384     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n625 (net)
+                                                2                 0.0000     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U219/A1 (LVT_AOI21HDV1)
+                                                        0.1925    0.0000     1.3269 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U219/ZN (LVT_AOI21HDV1)
+                                                        0.1202    0.1060     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n152 (net)
+                                                2                 0.0000     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U298/A1 (LVT_OAI21HDV1)
+                                                        0.1202    0.0000     1.4329 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U298/ZN (LVT_OAI21HDV1)
+                                                        0.1929    0.1399     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n128 (net)
+                                                2                 0.0000     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U89/A1 (LVT_AOI21HDV1)
+                                                        0.1929    0.0000     1.5728 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U89/ZN (LVT_AOI21HDV1)
+                                                        0.1297    0.1141     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n485 (net)
+                                                2                 0.0000     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U14/A1 (LVT_OAI21HDV1)
+                                                        0.1297    0.0000     1.6870 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U14/ZN (LVT_OAI21HDV1)
+                                                        0.2158    0.1551     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n339 (net)
+                                                2                 0.0000     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U5/A1 (LVT_AOI21HDV1)
+                                                        0.2158    0.0000     1.8421 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U5/ZN (LVT_AOI21HDV1)
+                                                        0.1414    0.1233     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n521 (net)
+                                                2                 0.0000     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U13/A1 (LVT_OAI21HDV2)
+                                                        0.1414    0.0000     1.9654 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U13/ZN (LVT_OAI21HDV2)
+                                                        0.1864    0.1406     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n361 (net)
+                                                2                 0.0000     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U85/A1 (LVT_AOI21HDV2)
+                                                        0.1864    0.0000     2.1060 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U85/ZN (LVT_AOI21HDV2)
+                                                        0.1132    0.1011     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n461 (net)
+                                                2                 0.0000     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U83/A1 (LVT_OAI21HDV2)
+                                                        0.1132    0.0000     2.2070 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U83/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1332     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n383 (net)
+                                                2                 0.0000     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U79/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     2.3403 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U79/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n395 (net)
+                                                2                 0.0000     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U77/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     2.4411 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U77/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n350 (net)
+                                                2                 0.0000     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U73/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     2.5741 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U73/ZN (LVT_AOI21HDV2)
+                                                        0.1082    0.0968     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n431 (net)
+                                                2                 0.0000     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U47/A1 (LVT_OAI21HDV1)
+                                                        0.1082    0.0000     2.6710 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U47/ZN (LVT_OAI21HDV1)
+                                                        0.2291    0.1574     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n372 (net)
+                                                2                 0.0000     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U70/A1 (LVT_AOI21HDV2)
+                                                        0.2291    0.0000     2.8284 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U70/ZN (LVT_AOI21HDV2)
+                                                        0.1219    0.1066     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n473 (net)
+                                                2                 0.0000     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U68/A1 (LVT_OAI21HDV2)
+                                                        0.1219    0.0000     2.9350 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U68/ZN (LVT_OAI21HDV2)
+                                                        0.1848    0.1355     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n283 (net)
+                                                2                 0.0000     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U64/A1 (LVT_AOI21HDV2)
+                                                        0.1848    0.0000     3.0704 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U64/ZN (LVT_AOI21HDV2)
+                                                        0.1129    0.1009     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n328 (net)
+                                                2                 0.0000     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U62/A1 (LVT_OAI21HDV2)
+                                                        0.1129    0.0000     3.1713 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U62/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n294 (net)
+                                                2                 0.0000     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U58/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     3.3045 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U58/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n251 (net)
+                                                2                 0.0000     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U56/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     3.4053 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U56/ZN (LVT_OAI21HDV2)
+                                                        0.1841    0.1331     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n227 (net)
+                                                2                 0.0000     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U52/A1 (LVT_AOI21HDV2)
+                                                        0.1841    0.0000     3.5383 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U52/ZN (LVT_AOI21HDV2)
+                                                        0.1127    0.1008     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n263 (net)
+                                                2                 0.0000     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U50/A1 (LVT_OAI21HDV2)
+                                                        0.1127    0.0000     3.6391 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U50/ZN (LVT_OAI21HDV2)
+                                                        0.1659    0.1229     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n239 (net)
+                                                2                 0.0000     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U46/A1 (LVT_AO21HDV1)
+                                                        0.1659    0.0000     3.7620 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U46/Z (LVT_AO21HDV1)
+                                                        0.0818    0.1773     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n271 (net)
+                                                1                 0.0000     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U485/CI (LVT_AD1HDV1)
+                                                        0.0818    0.0000     3.9393 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U485/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1882     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n590 (net)
+                                                1                 0.0000     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U723/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.1275 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U723/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1966     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n599 (net)
+                                                1                 0.0000     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U730/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.3240 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U730/CO (LVT_AD1HDV1)
+                                                        0.1231    0.1966     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n213 (net)
+                                                1                 0.0000     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U444/CI (LVT_AD1HDV1)
+                                                        0.1231    0.0000     4.5206 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U444/CO (LVT_AD1HDV1)
+                                                        0.1660    0.2250     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n121 (net)
+                                                3                 0.0000     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U4/A1 (LVT_XNOR2HDV1)
+                                                        0.1660    0.0000     4.7456 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U4/ZN (LVT_XNOR2HDV1)
+                                                        0.1059    0.2072     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n139 (net)
+                                                3                 0.0000     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U132/I0 (LVT_MUX2NHDV1)
+                                                        0.1059    0.0000     4.9528 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U132/ZN (LVT_MUX2NHDV1)
+                                                        0.1819    0.1137     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n132 (net)
+                                                2                 0.0000     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U19/A1 (LVT_NAND2HDV1)
+                                                        0.1819    0.0000     5.0665 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U19/ZN (LVT_NAND2HDV1)
+                                                        0.0890    0.0760     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n142 (net)
+                                                1                 0.0000     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U16/A1 (LVT_AOI21HDV2)
+                                                        0.0890    0.0000     5.1425 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U16/ZN (LVT_AOI21HDV2)
+                                                        0.3035    0.1920     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n615 (net)
+                                                7                 0.0000     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U15/B (LVT_OAI211HDV1)
+                                                        0.3035    0.0000     5.3345 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U15/ZN (LVT_OAI211HDV1)
+                                                        0.1468    0.1283     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/n146 (net)
+                                                1                 0.0000     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U99/B1 (LVT_AOI22HDV1)
+                                                        0.1468    0.0000     5.4628 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U99/ZN (LVT_AOI22HDV1)
+                                                        0.1694    0.1150     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n148 (net)
+                                                1                 0.0000     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U97/B (LVT_OAI21HDV1)
+                                                        0.1694    0.0000     5.5778 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U97/ZN (LVT_OAI21HDV1)
+                                                        0.1476    0.1255     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[31] (net)
+                                                2                 0.0000     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U442/B1 (LVT_INAND2HDV4)
+                                                        0.1476    0.0000     5.7033 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/U442/ZN (LVT_INAND2HDV4)
+                                                        0.3007    0.2046     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/n302 (net)
+                                               32                 0.0000     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U111/B (LVT_OAI211HDV1)
+                                                        0.3007    0.0000     5.9079 r
+  nutcore/Backend_inorder/exu/lsu/atomALU/U111/ZN (LVT_OAI211HDV1)
+                                                        0.1486    0.1297     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[54] (net)
+                                                1                 0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU/io_result[54] (ysyx_210000_AtomALU_0)
+                                                                  0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/atomALU_io_result[54] (net)     0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/U954/A1 (LVT_NAND2HDV1)
+                                                        0.1486    0.0000     6.0376 f
+  nutcore/Backend_inorder/exu/lsu/U954/ZN (LVT_NAND2HDV1)
+                                                        0.1078    0.0638     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/n1114 (net)
+                                                1                 0.0000     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/U955/B (LVT_OAI211HDV1)
+                                                        0.1078    0.0000     6.1014 r
+  nutcore/Backend_inorder/exu/lsu/U955/ZN (LVT_OAI211HDV1)
+                                                        0.1306    0.0884     6.1898 f
+  nutcore/Backend_inorder/exu/lsu/n470 (net)
+                                                1                 0.0000     6.1898 f
+  nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_54_/D (LVT_DQHDV1)
+                                                        0.1306    0.0000     6.1898 f
+  data arrival time                                                          6.1898
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  nutcore/Backend_inorder/exu/lsu/atomMemReg_reg_54_/CK (LVT_DQHDV1)
+                                                                  0.0000     6.3500 r
+  library setup time                                             -0.1602     6.1898
+  data required time                                                         6.1898
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.1898
+  data arrival time                                                         -6.1898
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
