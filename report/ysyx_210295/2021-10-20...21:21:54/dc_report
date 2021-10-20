@@ -1,0 +1,990 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Oct_20_21:20:06_2021_+0800
+top_name: ysyx_210295
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+246312.2  246312.2  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+23549  23549  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210295
+Date   : Wed Oct 20 21:28:21 2021
+****************************************
+    
+Number of ports:                        13218
+Number of nets:                         34296
+Number of cells:                        23855
+Number of combinational cells:          19631
+Number of sequential cells:              3918
+Number of macros/black boxes:               0
+Number of buf/inv:                       4258
+Number of references:                       7
+Combinational area:             146146.139516
+Buf/Inv area:                    19075.987938
+Noncombinational area:          100166.086561
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                246312.226077
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  -------------------------------
+ysyx_210295                       246312.2261    100.0     962.8768       0.0000  0.0000  ysyx_210295
+ecnurvcore                        206652.7288     83.9       6.7240       0.0000  0.0000  ysyx_210295_core_0
+ecnurvcore/U_reg_csr               33949.4766     13.8    7495.9152       0.0000  0.0000  ysyx_210295_reg_csr_0
+ecnurvcore/U_reg_csr/dff_mcause     2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_23
+ecnurvcore/U_reg_csr/dff_mcycle     2065.6129      0.8     430.3360    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_19
+ecnurvcore/U_reg_csr/dff_mepc       2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_28
+ecnurvcore/U_reg_csr/dff_mhartid    2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_33
+ecnurvcore/U_reg_csr/dff_mie        2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_27
+ecnurvcore/U_reg_csr/dff_mip        2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_21
+ecnurvcore/U_reg_csr/dff_misa       2439.4673      1.0     804.1904    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_31
+ecnurvcore/U_reg_csr/dff_mscratch   2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_32
+ecnurvcore/U_reg_csr/dff_mstatus    2438.1225      1.0     802.8456    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_30
+ecnurvcore/U_reg_csr/dff_mtval      2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_25
+ecnurvcore/U_reg_csr/dff_mtvec      2439.4673      1.0     804.1904    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_18
+ecnurvcore/U_reg_csr/diff_ex_we_ok_r
+                                      32.2752      0.0       6.7240      25.5512  0.0000  ysyx_210295_gnrl_dff_DW1_10
+ecnurvcore/core_clint               6246.5961      2.5    2669.4280    3577.1681  0.0000  ysyx_210295_clint_0
+ecnurvcore/core_ctrl                6879.9968      2.8    6879.9968       0.0000  0.0000  ysyx_210295_ctrl_0
+ecnurvcore/core_ex                 30319.8608     12.3      26.8960       0.0000  0.0000  ysyx_210295_ex_stage_0
+ecnurvcore/core_ex/U_ex_csr         1916.3400      0.8    1916.3400       0.0000  0.0000  ysyx_210295_ex_csr_0
+ecnurvcore/core_ex/core_pipeline_ex_mem
+                                    3764.0953      1.5    1085.2536       0.0000  0.0000  ysyx_210295_ex_mem_0
+ecnurvcore/core_ex/core_pipeline_ex_mem/dff_addr_reg_wr
+                                     200.3752      0.1      72.6192     127.7560  0.0000  ysyx_210295_gnrl_dff_DW5_3
+ecnurvcore/core_ex/core_pipeline_ex_mem/dff_data_alu
+                                    2435.4329      1.0     800.1560    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_17
+ecnurvcore/core_ex/core_pipeline_ex_mem/dff_reg_wr_en
+                                      43.0336      0.0      17.4824      25.5512  0.0000  ysyx_210295_gnrl_dff_DW1_15
+ecnurvcore/core_ex/ex_alu          24612.5295     10.0   24612.5295       0.0000  0.0000  ysyx_210295_ex_0
+ecnurvcore/core_id                 20985.6043      8.5      10.7584       0.0000  0.0000  ysyx_210295_id_stage_0
+ecnurvcore/core_id/id_decoder       7657.2912      3.1    7657.2912       0.0000  0.0000  ysyx_210295_decoder_0
+ecnurvcore/core_id/pipeline_id_ex  13317.5547      5.4       0.0000       0.0000  0.0000  ysyx_210295_id_ex_0
+ecnurvcore/core_id/pipeline_id_ex/dff_add_sub
+                                      43.0336      0.0      17.4824      25.5512  0.0000  ysyx_210295_gnrl_dff_DW1_13
+ecnurvcore/core_id/pipeline_id_ex/dff_addr_rd
+                                     199.0304      0.1      71.2744     127.7560  0.0000  ysyx_210295_gnrl_dff_DW5_2
+ecnurvcore/core_id/pipeline_id_ex/dff_alu_num1
+                                    2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_26
+ecnurvcore/core_id/pipeline_id_ex/dff_alu_num2
+                                    2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_22
+ecnurvcore/core_id/pipeline_id_ex/dff_alu_opcode
+                                     125.0664      0.1      48.4128      76.6536  0.0000  ysyx_210295_gnrl_dff_DW3_7
+ecnurvcore/core_id/pipeline_id_ex/dff_csr_data
+                                    2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_20
+ecnurvcore/core_id/pipeline_id_ex/dff_csr_instr
+                                     125.0664      0.1      48.4128      76.6536  0.0000  ysyx_210295_gnrl_dff_DW3_5
+ecnurvcore/core_id/pipeline_id_ex/dff_data_rs1
+                                    2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_29
+ecnurvcore/core_id/pipeline_id_ex/dff_data_rs2
+                                    2434.0881      1.0     798.8112    1635.2769  0.0000  ysyx_210295_gnrl_dff_DW64_24
+ecnurvcore/core_id/pipeline_id_ex/dff_load_code
+                                     129.1008      0.1      52.4472      76.6536  0.0000  ysyx_210295_gnrl_dff_DW3_6
+ecnurvcore/core_id/pipeline_id_ex/dff_opcode
+                                     274.3392      0.1      95.4808     178.8584  0.0000  ysyx_210295_gnrl_dff_DW7_0
+ecnurvcore/core_id/pipeline_id_ex/dff_shift_l_a
+                                      43.0336      0.0      17.4824      25.5512  0.0000  ysyx_210295_gnrl_dff_DW1_11
+ecnurvcore/core_id/pipeline_id_ex/dff_store_code
+                                     121.0320      0.0      44.3784      76.6536  0.0000  ysyx_210295_gnrl_dff_DW3_4
+ecnurvcore/core_id/pipeline_id_ex/dff_word_intercept
+                                      44.3784      0.0      17.4824      26.8960  0.0000  ysyx_210295_gnrl_dff_DW1_5
+ecnurvcore/core_id/pipeline_id_ex/dff_wr_en
+                                      43.0336      0.0      17.4824      25.5512  0.0000  ysyx_210295_gnrl_dff_DW1_12
+ecnurvcore/core_if                   376.5440      0.2     376.5440       0.0000  0.0000  ysyx_210295_if_stage_0
+ecnurvcore/core_pc                  4628.8016      1.9    2922.2504    1706.5512  0.0000  ysyx_210295_pc_0
+ecnurvcore/diff_except_async_r1       38.9992      0.0      13.4480      25.5512  0.0000  ysyx_210295_gnrl_dff_DW1_6
+ecnurvcore/genral_regs            103220.1255     41.9   52526.5430   50693.5825  0.0000  ysyx_210295_regs_0
+if_interface                        4575.0097      1.9    2037.3720    2537.6377  0.0000  ysyx_210295_if_axi_interface_0
+mem_interface                      11393.1457      4.6    7911.4584    3449.4121  0.0000  ysyx_210295_mem_axi_interface_0
+mem_interface/diff_wr_en_ok           32.2752      0.0       6.7240      25.5512  0.0000  ysyx_210295_gnrl_dff_DW1_14
+u_interconnect                     10067.1729      4.1    6616.4160    3450.7569  0.0000  ysyx_210295_axi_interconnect_0
+u_timer                            12661.2922      5.1    6656.7600    6004.5322  0.0000  ysyx_210295_timer_0
+--------------------------------  -----------  -------  -----------  -----------  ------  -------------------------------
+Total                                                   146146.1395  100166.0866  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210295
+Date   : Wed Oct 20 21:28:18 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: u_interconnect/r_state_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: ecnurvcore/core_pc/addr_instr_reg_28_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_interconnect/r_state_reg_1_/CK (LVT_DQHDV4)         0.0000    0.0000 #   0.0000 r
+  u_interconnect/r_state_reg_1_/Q (LVT_DQHDV4)          0.0764    0.2567     0.2567 r
+  u_interconnect/r_state_1_ (net)               2                 0.0000     0.2567 r
+  u_interconnect/U364/A1 (LVT_NAND2HDV4)                0.0764    0.0000     0.2567 r
+  u_interconnect/U364/ZN (LVT_NAND2HDV4)                0.1053    0.0548     0.3114 f
+  u_interconnect/n418 (net)                     2                 0.0000     0.3114 f
+  u_interconnect/U365/I (LVT_INHDV4)                    0.1053    0.0000     0.3114 f
+  u_interconnect/U365/ZN (LVT_INHDV4)                   0.0706    0.0596     0.3711 r
+  u_interconnect/n415 (net)                     1                 0.0000     0.3711 r
+  u_interconnect/U366/A1 (LVT_NAND2HDV8)                0.0706    0.0000     0.3711 r
+  u_interconnect/U366/ZN (LVT_NAND2HDV8)                0.0944    0.0724     0.4435 f
+  u_interconnect/n491 (net)                     3                 0.0000     0.4435 f
+  u_interconnect/U367/I (LVT_INHDV6)                    0.0944    0.0000     0.4435 f
+  u_interconnect/U367/ZN (LVT_INHDV6)                   0.0876    0.0702     0.5137 r
+  u_interconnect/n736 (net)                     6                 0.0000     0.5137 r
+  u_interconnect/U906/S (LVT_MUX2HDV2)                  0.0876    0.0000     0.5137 r
+  u_interconnect/U906/Z (LVT_MUX2HDV2)                  0.0831    0.1403     0.6540 r
+  u_interconnect/rdata_if[30] (net)             3                 0.0000     0.6540 r
+  u_interconnect/rdata_if[30] (ysyx_210295_axi_interconnect_0)    0.0000     0.6540 r
+  rdata_if[30] (net)                                              0.0000     0.6540 r
+  if_interface/rdata_if[30] (ysyx_210295_if_axi_interface_0)      0.0000     0.6540 r
+  if_interface/rdata_if[30] (net)                                 0.0000     0.6540 r
+  if_interface/U242/A1 (LVT_NAND2HDV2)                  0.0831    0.0000     0.6540 r
+  if_interface/U242/ZN (LVT_NAND2HDV2)                  0.0507    0.0471     0.7011 f
+  if_interface/n174 (net)                       1                 0.0000     0.7011 f
+  if_interface/U109/B (LVT_OAI21HDV1)                   0.0507    0.0000     0.7011 f
+  if_interface/U109/ZN (LVT_OAI21HDV1)                  0.1583    0.0509     0.7520 r
+  if_interface/instr[30] (net)                  1                 0.0000     0.7520 r
+  if_interface/instr[30] (ysyx_210295_if_axi_interface_0)         0.0000     0.7520 r
+  instr[30] (net)                                                 0.0000     0.7520 r
+  ecnurvcore/instr_i[30] (ysyx_210295_core_0)                     0.0000     0.7520 r
+  ecnurvcore/instr_i[30] (net)                                    0.0000     0.7520 r
+  ecnurvcore/core_if/instr_rd_i[30] (ysyx_210295_if_stage_0)      0.0000     0.7520 r
+  ecnurvcore/core_if/instr_rd_i[30] (net)                         0.0000     0.7520 r
+  ecnurvcore/core_if/U48/A1 (LVT_INOR2HDV4)             0.1583    0.0000     0.7520 r
+  ecnurvcore/core_if/U48/ZN (LVT_INOR2HDV4)             0.2038    0.1692     0.9212 r
+  ecnurvcore/core_if/instr_rd_o[30] (net)       7                 0.0000     0.9212 r
+  ecnurvcore/core_if/instr_rd_o[30] (ysyx_210295_if_stage_0)      0.0000     0.9212 r
+  ecnurvcore/instr_id_i[30] (net)                                 0.0000     0.9212 r
+  ecnurvcore/core_id/instr_i[30] (ysyx_210295_id_stage_0)         0.0000     0.9212 r
+  ecnurvcore/core_id/instr_i[30] (net)                            0.0000     0.9212 r
+  ecnurvcore/core_id/id_decoder/instr[30] (ysyx_210295_decoder_0)
+                                                                  0.0000     0.9212 r
+  ecnurvcore/core_id/id_decoder/instr[30] (net)                   0.0000     0.9212 r
+  ecnurvcore/core_id/id_decoder/U177/I (LVT_INHDV4)     0.2038    0.0000     0.9212 r
+  ecnurvcore/core_id/id_decoder/U177/ZN (LVT_INHDV4)    0.0944    0.0809     1.0021 f
+  ecnurvcore/core_id/id_decoder/n18 (net)      10                 0.0000     1.0021 f
+  ecnurvcore/core_id/id_decoder/U204/A1 (LVT_NOR2HDV2)
+                                                        0.0944    0.0000     1.0021 f
+  ecnurvcore/core_id/id_decoder/U204/ZN (LVT_NOR2HDV2)
+                                                        0.1333    0.0948     1.0970 r
+  ecnurvcore/core_id/id_decoder/n199 (net)      2                 0.0000     1.0970 r
+  ecnurvcore/core_id/id_decoder/U205/A1 (LVT_NAND2HDV2)
+                                                        0.1333    0.0000     1.0970 r
+  ecnurvcore/core_id/id_decoder/U205/ZN (LVT_NAND2HDV2)
+                                                        0.0991    0.0717     1.1687 f
+  ecnurvcore/core_id/id_decoder/n193 (net)      3                 0.0000     1.1687 f
+  ecnurvcore/core_id/id_decoder/U20/A1 (LVT_NAND2HDV1)
+                                                        0.0991    0.0000     1.1687 f
+  ecnurvcore/core_id/id_decoder/U20/ZN (LVT_NAND2HDV1)
+                                                        0.0966    0.0713     1.2400 r
+  ecnurvcore/core_id/id_decoder/n20 (net)       2                 0.0000     1.2400 r
+  ecnurvcore/core_id/id_decoder/U113/I (LVT_INHDV1)     0.0966    0.0000     1.2400 r
+  ecnurvcore/core_id/id_decoder/U113/ZN (LVT_INHDV1)    0.0462    0.0420     1.2820 f
+  ecnurvcore/core_id/id_decoder/n12 (net)       1                 0.0000     1.2820 f
+  ecnurvcore/core_id/id_decoder/U112/A2 (LVT_NAND2HDV2)
+                                                        0.0462    0.0000     1.2820 f
+  ecnurvcore/core_id/id_decoder/U112/ZN (LVT_NAND2HDV2)
+                                                        0.0660    0.0529     1.3349 r
+  ecnurvcore/core_id/id_decoder/n122 (net)      2                 0.0000     1.3349 r
+  ecnurvcore/core_id/id_decoder/U215/A1 (LVT_IAO21HDV4)
+                                                        0.0660    0.0000     1.3349 r
+  ecnurvcore/core_id/id_decoder/U215/ZN (LVT_IAO21HDV4)
+                                                        0.2477    0.1958     1.5307 r
+  ecnurvcore/core_id/id_decoder/n397 (net)      8                 0.0000     1.5307 r
+  ecnurvcore/core_id/id_decoder/U226/A1 (LVT_NAND2HDV8)
+                                                        0.2477    0.0000     1.5307 r
+  ecnurvcore/core_id/id_decoder/U226/ZN (LVT_NAND2HDV8)
+                                                        0.1060    0.0887     1.6195 f
+  ecnurvcore/core_id/id_decoder/n67 (net)       5                 0.0000     1.6195 f
+  ecnurvcore/core_id/id_decoder/U294/A1 (LVT_NAND2HDV4)
+                                                        0.1060    0.0000     1.6195 f
+  ecnurvcore/core_id/id_decoder/U294/ZN (LVT_NAND2HDV4)
+                                                        0.0811    0.0591     1.6786 r
+  ecnurvcore/core_id/id_decoder/n583 (net)      3                 0.0000     1.6786 r
+  ecnurvcore/core_id/id_decoder/U1007/I (LVT_INHDV2)    0.0811    0.0000     1.6786 r
+  ecnurvcore/core_id/id_decoder/U1007/ZN (LVT_INHDV2)   0.0842    0.0715     1.7501 f
+  ecnurvcore/core_id/id_decoder/reg_rs2_addr[3] (net)
+                                                6                 0.0000     1.7501 f
+  ecnurvcore/core_id/id_decoder/reg_rs2_addr[3] (ysyx_210295_decoder_0)
+                                                                  0.0000     1.7501 f
+  ecnurvcore/core_id/addr_rs2_o[3] (net)                          0.0000     1.7501 f
+  ecnurvcore/core_id/addr_rs2_o[3] (ysyx_210295_id_stage_0)       0.0000     1.7501 f
+  ecnurvcore/addr_rd2_reg_i[3] (net)                              0.0000     1.7501 f
+  ecnurvcore/genral_regs/addr_rd2[3] (ysyx_210295_regs_0)         0.0000     1.7501 f
+  ecnurvcore/genral_regs/addr_rd2[3] (net)                        0.0000     1.7501 f
+  ecnurvcore/genral_regs/U4/A2 (LVT_AND2HDV1)           0.0842    0.0000     1.7501 f
+  ecnurvcore/genral_regs/U4/Z (LVT_AND2HDV1)            0.0682    0.1504     1.9005 f
+  ecnurvcore/genral_regs/n149 (net)             2                 0.0000     1.9005 f
+  ecnurvcore/genral_regs/U35/A1 (LVT_NAND2HDV1)         0.0682    0.0000     1.9005 f
+  ecnurvcore/genral_regs/U35/ZN (LVT_NAND2HDV1)         0.1426    0.0941     1.9946 r
+  ecnurvcore/genral_regs/n269 (net)             4                 0.0000     1.9946 r
+  ecnurvcore/genral_regs/U631/A1 (LVT_NOR2HDV1)         0.1426    0.0000     1.9946 r
+  ecnurvcore/genral_regs/U631/ZN (LVT_NOR2HDV1)         0.0926    0.0588     2.0534 f
+  ecnurvcore/genral_regs/n2783 (net)            1                 0.0000     2.0534 f
+  ecnurvcore/genral_regs/U11/I (LVT_BUFHDV6)            0.0926    0.0000     2.0534 f
+  ecnurvcore/genral_regs/U11/Z (LVT_BUFHDV6)            0.2406    0.2313     2.2848 f
+  ecnurvcore/genral_regs/n41 (net)             64                 0.0000     2.2848 f
+  ecnurvcore/genral_regs/U801/A1 (LVT_AOI22HDV1)        0.2406    0.0000     2.2848 f
+  ecnurvcore/genral_regs/U801/ZN (LVT_AOI22HDV1)        0.1766    0.1532     2.4380 r
+  ecnurvcore/genral_regs/n444 (net)             1                 0.0000     2.4380 r
+  ecnurvcore/genral_regs/U802/A4 (LVT_NAND4HDV1)        0.1766    0.0000     2.4380 r
+  ecnurvcore/genral_regs/U802/ZN (LVT_NAND4HDV1)        0.1423    0.1254     2.5634 f
+  ecnurvcore/genral_regs/n448 (net)             1                 0.0000     2.5634 f
+  ecnurvcore/genral_regs/U803/B1 (LVT_AOI22HDV1)        0.1423    0.0000     2.5634 f
+  ecnurvcore/genral_regs/U803/ZN (LVT_AOI22HDV1)        0.1688    0.1135     2.6768 r
+  ecnurvcore/genral_regs/n449 (net)             1                 0.0000     2.6768 r
+  ecnurvcore/genral_regs/U265/C (LVT_OAI211HDV1)        0.1688    0.0000     2.6768 r
+  ecnurvcore/genral_regs/U265/ZN (LVT_OAI211HDV1)       0.1298    0.1080     2.7848 f
+  ecnurvcore/genral_regs/n451 (net)             1                 0.0000     2.7848 f
+  ecnurvcore/genral_regs/U804/C (LVT_AOI211HDV1)        0.1298    0.0000     2.7848 f
+  ecnurvcore/genral_regs/U804/ZN (LVT_AOI211HDV1)       0.2383    0.1473     2.9322 r
+  ecnurvcore/genral_regs/n455 (net)             1                 0.0000     2.9322 r
+  ecnurvcore/genral_regs/U807/B1 (LVT_INAND4HDV1)       0.2383    0.0000     2.9322 r
+  ecnurvcore/genral_regs/U807/ZN (LVT_INAND4HDV1)       0.1606    0.1337     3.0659 f
+  ecnurvcore/genral_regs/data_rd2[4] (net)      1                 0.0000     3.0659 f
+  ecnurvcore/genral_regs/data_rd2[4] (ysyx_210295_regs_0)         0.0000     3.0659 f
+  ecnurvcore/data_rs2_id_i[4] (net)                               0.0000     3.0659 f
+  ecnurvcore/core_id/data_rs2_i[4] (ysyx_210295_id_stage_0)       0.0000     3.0659 f
+  ecnurvcore/core_id/data_rs2_i[4] (net)                          0.0000     3.0659 f
+  ecnurvcore/core_id/id_decoder/data_rs2_reg[4] (ysyx_210295_decoder_0)
+                                                                  0.0000     3.0659 f
+  ecnurvcore/core_id/id_decoder/data_rs2_reg[4] (net)             0.0000     3.0659 f
+  ecnurvcore/core_id/id_decoder/U316/I0 (LVT_MUX2HDV4)
+                                                        0.1606    0.0000     3.0659 f
+  ecnurvcore/core_id/id_decoder/U316/Z (LVT_MUX2HDV4)   0.0867    0.1977     3.2636 f
+  ecnurvcore/core_id/id_decoder/data_rs2[4] (net)
+                                                5                 0.0000     3.2636 f
+  ecnurvcore/core_id/id_decoder/data_rs2[4] (ysyx_210295_decoder_0)
+                                                                  0.0000     3.2636 f
+  ecnurvcore/core_id/jmpb_rs2_o[4] (net)                          0.0000     3.2636 f
+  ecnurvcore/core_id/jmpb_rs2_o[4] (ysyx_210295_id_stage_0)       0.0000     3.2636 f
+  ecnurvcore/data_rs2_ctrl_i[4] (net)                             0.0000     3.2636 f
+  ecnurvcore/core_ctrl/data_rs2_i[4] (ysyx_210295_ctrl_0)         0.0000     3.2636 f
+  ecnurvcore/core_ctrl/data_rs2_i[4] (net)                        0.0000     3.2636 f
+  ecnurvcore/core_ctrl/U113/I (LVT_INHDV4)              0.0867    0.0000     3.2636 f
+  ecnurvcore/core_ctrl/U113/ZN (LVT_INHDV4)             0.0460    0.0410     3.3046 r
+  ecnurvcore/core_ctrl/n175 (net)               2                 0.0000     3.3046 r
+  ecnurvcore/core_ctrl/U114/A1 (LVT_NAND2HDV2)          0.0460    0.0000     3.3046 r
+  ecnurvcore/core_ctrl/U114/ZN (LVT_NAND2HDV2)          0.0853    0.0563     3.3609 f
+  ecnurvcore/core_ctrl/n177 (net)               2                 0.0000     3.3609 f
+  ecnurvcore/core_ctrl/U116/A1 (LVT_NAND3HDV2)          0.0853    0.0000     3.3609 f
+  ecnurvcore/core_ctrl/U116/ZN (LVT_NAND3HDV2)          0.0876    0.0533     3.4142 r
+  ecnurvcore/core_ctrl/n174 (net)               1                 0.0000     3.4142 r
+  ecnurvcore/core_ctrl/U117/B (LVT_OAI21HDV1)           0.0876    0.0000     3.4142 r
+  ecnurvcore/core_ctrl/U117/ZN (LVT_OAI21HDV1)          0.0785    0.0693     3.4835 f
+  ecnurvcore/core_ctrl/n176 (net)               1                 0.0000     3.4835 f
+  ecnurvcore/core_ctrl/U118/B (LVT_AOI31HDV2)           0.0785    0.0000     3.4835 f
+  ecnurvcore/core_ctrl/U118/ZN (LVT_AOI31HDV2)          0.1396    0.0971     3.5806 r
+  ecnurvcore/core_ctrl/n191 (net)               1                 0.0000     3.5806 r
+  ecnurvcore/core_ctrl/U128/A1 (LVT_OAI21HDV2)          0.1396    0.0000     3.5806 r
+  ecnurvcore/core_ctrl/U128/ZN (LVT_OAI21HDV2)          0.0802    0.0672     3.6479 f
+  ecnurvcore/core_ctrl/n195 (net)               1                 0.0000     3.6479 f
+  ecnurvcore/core_ctrl/U132/A1 (LVT_NAND2HDV2)          0.0802    0.0000     3.6479 f
+  ecnurvcore/core_ctrl/U132/ZN (LVT_NAND2HDV2)          0.0771    0.0479     3.6958 r
+  ecnurvcore/core_ctrl/n200 (net)               1                 0.0000     3.6958 r
+  ecnurvcore/core_ctrl/U137/A1 (LVT_NAND2HDV2)          0.0771    0.0000     3.6958 r
+  ecnurvcore/core_ctrl/U137/ZN (LVT_NAND2HDV2)          0.0594    0.0496     3.7454 f
+  ecnurvcore/core_ctrl/n206 (net)               1                 0.0000     3.7454 f
+  ecnurvcore/core_ctrl/U143/A1 (LVT_NAND2HDV2)          0.0594    0.0000     3.7454 f
+  ecnurvcore/core_ctrl/U143/ZN (LVT_NAND2HDV2)          0.0548    0.0432     3.7886 r
+  ecnurvcore/core_ctrl/n219 (net)               1                 0.0000     3.7886 r
+  ecnurvcore/core_ctrl/U158/A1 (LVT_AOI21HDV2)          0.0548    0.0000     3.7886 r
+  ecnurvcore/core_ctrl/U158/ZN (LVT_AOI21HDV2)          0.0847    0.0568     3.8454 f
+  ecnurvcore/core_ctrl/n236 (net)               1                 0.0000     3.8454 f
+  ecnurvcore/core_ctrl/U178/A1 (LVT_OAI21HDV2)          0.0847    0.0000     3.8454 f
+  ecnurvcore/core_ctrl/U178/ZN (LVT_OAI21HDV2)          0.1335    0.0987     3.9441 r
+  ecnurvcore/core_ctrl/n259 (net)               1                 0.0000     3.9441 r
+  ecnurvcore/core_ctrl/U198/A1 (LVT_NAND2HDV2)          0.1335    0.0000     3.9441 r
+  ecnurvcore/core_ctrl/U198/ZN (LVT_NAND2HDV2)          0.0650    0.0576     4.0016 f
+  ecnurvcore/core_ctrl/n274 (net)               1                 0.0000     4.0016 f
+  ecnurvcore/core_ctrl/U210/A1 (LVT_NAND2HDV2)          0.0650    0.0000     4.0016 f
+  ecnurvcore/core_ctrl/U210/ZN (LVT_NAND2HDV2)          0.0719    0.0561     4.0578 r
+  ecnurvcore/core_ctrl/n293 (net)               1                 0.0000     4.0578 r
+  ecnurvcore/core_ctrl/U87/A1 (LVT_AOI21HDV4)           0.0719    0.0000     4.0578 r
+  ecnurvcore/core_ctrl/U87/ZN (LVT_AOI21HDV4)           0.0820    0.0583     4.1161 f
+  ecnurvcore/core_ctrl/n156 (net)               1                 0.0000     4.1161 f
+  ecnurvcore/core_ctrl/U86/A1 (LVT_OAI21HDV4)           0.0820    0.0000     4.1161 f
+  ecnurvcore/core_ctrl/U86/ZN (LVT_OAI21HDV4)           0.1106    0.0826     4.1987 r
+  ecnurvcore/core_ctrl/n154 (net)               1                 0.0000     4.1987 r
+  ecnurvcore/core_ctrl/U9/A1 (LVT_NAND2HDV2)            0.1106    0.0000     4.1987 r
+  ecnurvcore/core_ctrl/U9/ZN (LVT_NAND2HDV2)            0.0634    0.0545     4.2532 f
+  ecnurvcore/core_ctrl/n152 (net)               1                 0.0000     4.2532 f
+  ecnurvcore/core_ctrl/U13/A1 (LVT_NAND4HDV2)           0.0634    0.0000     4.2532 f
+  ecnurvcore/core_ctrl/U13/ZN (LVT_NAND4HDV2)           0.0968    0.0542     4.3073 r
+  ecnurvcore/core_ctrl/n367 (net)               1                 0.0000     4.3073 r
+  ecnurvcore/core_ctrl/U296/B1 (LVT_AOI22HDV2)          0.0968    0.0000     4.3073 r
+  ecnurvcore/core_ctrl/U296/ZN (LVT_AOI22HDV2)          0.1074    0.0574     4.3647 f
+  ecnurvcore/core_ctrl/n371 (net)               1                 0.0000     4.3647 f
+  ecnurvcore/core_ctrl/U298/B1 (LVT_IOA22HDV2)          0.1074    0.0000     4.3647 f
+  ecnurvcore/core_ctrl/U298/ZN (LVT_IOA22HDV2)          0.1380    0.1044     4.4691 r
+  ecnurvcore/core_ctrl/n374 (net)               1                 0.0000     4.4691 r
+  ecnurvcore/core_ctrl/U300/B1 (LVT_AOI22HDV2)          0.1380    0.0000     4.4691 r
+  ecnurvcore/core_ctrl/U300/ZN (LVT_AOI22HDV2)          0.1144    0.0638     4.5329 f
+  ecnurvcore/core_ctrl/n378 (net)               1                 0.0000     4.5329 f
+  ecnurvcore/core_ctrl/U301/B1 (LVT_IOA22HDV2)          0.1144    0.0000     4.5329 f
+  ecnurvcore/core_ctrl/U301/ZN (LVT_IOA22HDV2)          0.1389    0.1062     4.6390 r
+  ecnurvcore/core_ctrl/n381 (net)               1                 0.0000     4.6390 r
+  ecnurvcore/core_ctrl/U302/B1 (LVT_AOI22HDV2)          0.1389    0.0000     4.6390 r
+  ecnurvcore/core_ctrl/U302/ZN (LVT_AOI22HDV2)          0.1144    0.0639     4.7029 f
+  ecnurvcore/core_ctrl/n385 (net)               1                 0.0000     4.7029 f
+  ecnurvcore/core_ctrl/U303/B1 (LVT_IOA22HDV2)          0.1144    0.0000     4.7029 f
+  ecnurvcore/core_ctrl/U303/ZN (LVT_IOA22HDV2)          0.1389    0.1062     4.8091 r
+  ecnurvcore/core_ctrl/n388 (net)               1                 0.0000     4.8091 r
+  ecnurvcore/core_ctrl/U304/B1 (LVT_AOI22HDV2)          0.1389    0.0000     4.8091 r
+  ecnurvcore/core_ctrl/U304/ZN (LVT_AOI22HDV2)          0.1090    0.0639     4.8730 f
+  ecnurvcore/core_ctrl/n392 (net)               1                 0.0000     4.8730 f
+  ecnurvcore/core_ctrl/U305/B1 (LVT_IOA22HDV2)          0.1090    0.0000     4.8730 f
+  ecnurvcore/core_ctrl/U305/ZN (LVT_IOA22HDV2)          0.1382    0.1048     4.9778 r
+  ecnurvcore/core_ctrl/n395 (net)               1                 0.0000     4.9778 r
+  ecnurvcore/core_ctrl/U306/B1 (LVT_AOI22HDV2)          0.1382    0.0000     4.9778 r
+  ecnurvcore/core_ctrl/U306/ZN (LVT_AOI22HDV2)          0.1090    0.0638     5.0416 f
+  ecnurvcore/core_ctrl/n399 (net)               1                 0.0000     5.0416 f
+  ecnurvcore/core_ctrl/U307/B1 (LVT_IOA22HDV2)          0.1090    0.0000     5.0416 f
+  ecnurvcore/core_ctrl/U307/ZN (LVT_IOA22HDV2)          0.1382    0.1048     5.1464 r
+  ecnurvcore/core_ctrl/n402 (net)               1                 0.0000     5.1464 r
+  ecnurvcore/core_ctrl/U308/B1 (LVT_AOI22HDV2)          0.1382    0.0000     5.1464 r
+  ecnurvcore/core_ctrl/U308/ZN (LVT_AOI22HDV2)          0.1090    0.0638     5.2102 f
+  ecnurvcore/core_ctrl/n406 (net)               1                 0.0000     5.2102 f
+  ecnurvcore/core_ctrl/U309/B1 (LVT_IOA22HDV2)          0.1090    0.0000     5.2102 f
+  ecnurvcore/core_ctrl/U309/ZN (LVT_IOA22HDV2)          0.1382    0.1048     5.3150 r
+  ecnurvcore/core_ctrl/n409 (net)               1                 0.0000     5.3150 r
+  ecnurvcore/core_ctrl/U310/B1 (LVT_AOI22HDV2)          0.1382    0.0000     5.3150 r
+  ecnurvcore/core_ctrl/U310/ZN (LVT_AOI22HDV2)          0.1065    0.0638     5.3788 f
+  ecnurvcore/core_ctrl/n412 (net)               1                 0.0000     5.3788 f
+  ecnurvcore/core_ctrl/U311/A1 (LVT_OAI22HDV2)          0.1065    0.0000     5.3788 f
+  ecnurvcore/core_ctrl/U311/ZN (LVT_OAI22HDV2)          0.1931    0.0879     5.4667 r
+  ecnurvcore/core_ctrl/n414 (net)               1                 0.0000     5.4667 r
+  ecnurvcore/core_ctrl/U312/A1 (LVT_NAND2HDV2)          0.1931    0.0000     5.4667 r
+  ecnurvcore/core_ctrl/U312/ZN (LVT_NAND2HDV2)          0.1044    0.0895     5.5562 f
+  ecnurvcore/core_ctrl/n520 (net)               2                 0.0000     5.5562 f
+  ecnurvcore/core_ctrl/U396/A1 (LVT_NOR2HDV3)           0.1044    0.0000     5.5562 f
+  ecnurvcore/core_ctrl/U396/ZN (LVT_NOR2HDV3)           0.1302    0.0895     5.6456 r
+  ecnurvcore/core_ctrl/n518 (net)               1                 0.0000     5.6456 r
+  ecnurvcore/core_ctrl/U398/A1 (LVT_NOR2HDV4)           0.1302    0.0000     5.6456 r
+  ecnurvcore/core_ctrl/U398/ZN (LVT_NOR2HDV4)           0.0409    0.0346     5.6802 f
+  ecnurvcore/core_ctrl/n523 (net)               1                 0.0000     5.6802 f
+  ecnurvcore/core_ctrl/U8/A1 (LVT_NAND2HDV2)            0.0409    0.0000     5.6802 f
+  ecnurvcore/core_ctrl/U8/ZN (LVT_NAND2HDV2)            0.0840    0.0493     5.7295 r
+  ecnurvcore/core_ctrl/n525 (net)               1                 0.0000     5.7295 r
+  ecnurvcore/core_ctrl/U400/A1 (LVT_NAND2HDV4)          0.0840    0.0000     5.7295 r
+  ecnurvcore/core_ctrl/U400/ZN (LVT_NAND2HDV4)          0.0734    0.0638     5.7933 f
+  ecnurvcore/core_ctrl/n709 (net)               2                 0.0000     5.7933 f
+  ecnurvcore/core_ctrl/U91/A1 (LVT_NAND2HDV4)           0.0734    0.0000     5.7933 f
+  ecnurvcore/core_ctrl/U91/ZN (LVT_NAND2HDV4)           0.0958    0.0540     5.8473 r
+  ecnurvcore/core_ctrl/jmp_en_o (net)           2                 0.0000     5.8473 r
+  ecnurvcore/core_ctrl/jmp_en_o (ysyx_210295_ctrl_0)              0.0000     5.8473 r
+  ecnurvcore/jmp_en_pc_i (net)                                    0.0000     5.8473 r
+  ecnurvcore/core_pc/jmp_en (ysyx_210295_pc_0)                    0.0000     5.8473 r
+  ecnurvcore/core_pc/jmp_en (net)                                 0.0000     5.8473 r
+  ecnurvcore/core_pc/U78/I (LVT_INHDV4)                 0.0958    0.0000     5.8473 r
+  ecnurvcore/core_pc/U78/ZN (LVT_INHDV4)                0.0497    0.0452     5.8925 f
+  ecnurvcore/core_pc/n56 (net)                  1                 0.0000     5.8925 f
+  ecnurvcore/core_pc/U79/A1 (LVT_NAND2HDV8)             0.0497    0.0000     5.8925 f
+  ecnurvcore/core_pc/U79/ZN (LVT_NAND2HDV8)             0.1014    0.0590     5.9515 r
+  ecnurvcore/core_pc/n157 (net)                 4                 0.0000     5.9515 r
+  ecnurvcore/core_pc/U6/I (LVT_INHDV6)                  0.1014    0.0000     5.9515 r
+  ecnurvcore/core_pc/U6/ZN (LVT_INHDV6)                 0.0473    0.0432     5.9947 f
+  ecnurvcore/core_pc/n4 (net)                   6                 0.0000     5.9947 f
+  ecnurvcore/core_pc/U157/A1 (LVT_AOI211HDV1)           0.0473    0.0000     5.9947 f
+  ecnurvcore/core_pc/U157/ZN (LVT_AOI211HDV1)           0.2479    0.1683     6.1630 r
+  ecnurvcore/core_pc/n124 (net)                 1                 0.0000     6.1630 r
+  ecnurvcore/core_pc/U158/B (LVT_IOA21HDV2)             0.2479    0.0000     6.1630 r
+  ecnurvcore/core_pc/U158/ZN (LVT_IOA21HDV2)            0.0705    0.0591     6.2221 f
+  ecnurvcore/core_pc/N102 (net)                 1                 0.0000     6.2221 f
+  ecnurvcore/core_pc/addr_instr_reg_28_/D (LVT_DQHDV4)
+                                                        0.0705    0.0000     6.2221 f
+  data arrival time                                                          6.2221
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  ecnurvcore/core_pc/addr_instr_reg_28_/CK (LVT_DQHDV4)           0.0000     6.3500 r
+  library setup time                                             -0.1279     6.2221
+  data required time                                                         6.2221
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2221
+  data arrival time                                                         -6.2221
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0001
+  Startpoint: u_interconnect/r_state_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: ecnurvcore/core_pc/addr_instr_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_interconnect/r_state_reg_1_/CK (LVT_DQHDV4)         0.0000    0.0000 #   0.0000 r
+  u_interconnect/r_state_reg_1_/Q (LVT_DQHDV4)          0.0764    0.2567     0.2567 r
+  u_interconnect/r_state_1_ (net)               2                 0.0000     0.2567 r
+  u_interconnect/U364/A1 (LVT_NAND2HDV4)                0.0764    0.0000     0.2567 r
+  u_interconnect/U364/ZN (LVT_NAND2HDV4)                0.1053    0.0548     0.3114 f
+  u_interconnect/n418 (net)                     2                 0.0000     0.3114 f
+  u_interconnect/U365/I (LVT_INHDV4)                    0.1053    0.0000     0.3114 f
+  u_interconnect/U365/ZN (LVT_INHDV4)                   0.0706    0.0596     0.3711 r
+  u_interconnect/n415 (net)                     1                 0.0000     0.3711 r
+  u_interconnect/U366/A1 (LVT_NAND2HDV8)                0.0706    0.0000     0.3711 r
+  u_interconnect/U366/ZN (LVT_NAND2HDV8)                0.0944    0.0724     0.4435 f
+  u_interconnect/n491 (net)                     3                 0.0000     0.4435 f
+  u_interconnect/U367/I (LVT_INHDV6)                    0.0944    0.0000     0.4435 f
+  u_interconnect/U367/ZN (LVT_INHDV6)                   0.0876    0.0702     0.5137 r
+  u_interconnect/n736 (net)                     6                 0.0000     0.5137 r
+  u_interconnect/U373/S (LVT_MUX2HDV4)                  0.0876    0.0000     0.5137 r
+  u_interconnect/U373/Z (LVT_MUX2HDV4)                  0.0617    0.1417     0.6554 f
+  u_interconnect/rdata_if[2] (net)              3                 0.0000     0.6554 f
+  u_interconnect/rdata_if[2] (ysyx_210295_axi_interconnect_0)     0.0000     0.6554 f
+  rdata_if[2] (net)                                               0.0000     0.6554 f
+  if_interface/rdata_if[2] (ysyx_210295_if_axi_interface_0)       0.0000     0.6554 f
+  if_interface/rdata_if[2] (net)                                  0.0000     0.6554 f
+  if_interface/U201/A1 (LVT_NAND2HDV1)                  0.0617    0.0000     0.6554 f
+  if_interface/U201/ZN (LVT_NAND2HDV1)                  0.0633    0.0485     0.7040 r
+  if_interface/n154 (net)                       1                 0.0000     0.7040 r
+  if_interface/U202/B (LVT_OAI21HDV1)                   0.0633    0.0000     0.7040 r
+  if_interface/U202/ZN (LVT_OAI21HDV1)                  0.0759    0.0641     0.7681 f
+  if_interface/instr[2] (net)                   1                 0.0000     0.7681 f
+  if_interface/instr[2] (ysyx_210295_if_axi_interface_0)          0.0000     0.7681 f
+  instr[2] (net)                                                  0.0000     0.7681 f
+  ecnurvcore/instr_i[2] (ysyx_210295_core_0)                      0.0000     0.7681 f
+  ecnurvcore/instr_i[2] (net)                                     0.0000     0.7681 f
+  ecnurvcore/core_if/instr_rd_i[2] (ysyx_210295_if_stage_0)       0.0000     0.7681 f
+  ecnurvcore/core_if/instr_rd_i[2] (net)                          0.0000     0.7681 f
+  ecnurvcore/core_if/U34/A1 (LVT_INOR2HDV4)             0.0759    0.0000     0.7681 f
+  ecnurvcore/core_if/U34/ZN (LVT_INOR2HDV4)             0.0762    0.1066     0.8746 f
+  ecnurvcore/core_if/instr_rd_o[2] (net)        4                 0.0000     0.8746 f
+  ecnurvcore/core_if/instr_rd_o[2] (ysyx_210295_if_stage_0)       0.0000     0.8746 f
+  ecnurvcore/instr_id_i[2] (net)                                  0.0000     0.8746 f
+  ecnurvcore/core_id/instr_i[2] (ysyx_210295_id_stage_0)          0.0000     0.8746 f
+  ecnurvcore/core_id/instr_i[2] (net)                             0.0000     0.8746 f
+  ecnurvcore/core_id/id_decoder/instr[2] (ysyx_210295_decoder_0)
+                                                                  0.0000     0.8746 f
+  ecnurvcore/core_id/id_decoder/instr[2] (net)                    0.0000     0.8746 f
+  ecnurvcore/core_id/id_decoder/U207/I (LVT_BUFHDV1)    0.0762    0.0000     0.8746 f
+  ecnurvcore/core_id/id_decoder/U207/Z (LVT_BUFHDV1)    0.0716    0.1249     0.9995 f
+  ecnurvcore/core_id/id_decoder/operation_code[2] (net)
+                                                3                 0.0000     0.9995 f
+  ecnurvcore/core_id/id_decoder/U220/A2 (LVT_NOR2HDV2)
+                                                        0.0716    0.0000     0.9995 f
+  ecnurvcore/core_id/id_decoder/U220/ZN (LVT_NOR2HDV2)
+                                                        0.2518    0.1624     1.1619 r
+  ecnurvcore/core_id/id_decoder/n535 (net)      6                 0.0000     1.1619 r
+  ecnurvcore/core_id/id_decoder/U265/I (LVT_INHDV1)     0.2518    0.0000     1.1619 r
+  ecnurvcore/core_id/id_decoder/U265/ZN (LVT_INHDV1)    0.1012    0.0816     1.2435 f
+  ecnurvcore/core_id/id_decoder/n152 (net)      3                 0.0000     1.2435 f
+  ecnurvcore/core_id/id_decoder/U266/A2 (LVT_NOR2HDV1)
+                                                        0.1012    0.0000     1.2435 f
+  ecnurvcore/core_id/id_decoder/U266/ZN (LVT_NOR2HDV1)
+                                                        0.1560    0.1148     1.3582 r
+  ecnurvcore/core_id/id_decoder/n134 (net)      2                 0.0000     1.3582 r
+  ecnurvcore/core_id/id_decoder/U267/A1 (LVT_NAND3HDV1)
+                                                        0.1560    0.0000     1.3582 r
+  ecnurvcore/core_id/id_decoder/U267/ZN (LVT_NAND3HDV1)
+                                                        0.1167    0.0963     1.4546 f
+  ecnurvcore/core_id/id_decoder/n45 (net)       1                 0.0000     1.4546 f
+  ecnurvcore/core_id/id_decoder/U268/A2 (LVT_NAND2HDV2)
+                                                        0.1167    0.0000     1.4546 f
+  ecnurvcore/core_id/id_decoder/U268/ZN (LVT_NAND2HDV2)
+                                                        0.0849    0.0734     1.5280 r
+  ecnurvcore/core_id/id_decoder/n118 (net)      2                 0.0000     1.5280 r
+  ecnurvcore/core_id/id_decoder/U270/A1 (LVT_NOR2HDV2)
+                                                        0.0849    0.0000     1.5280 r
+  ecnurvcore/core_id/id_decoder/U270/ZN (LVT_NOR2HDV2)
+                                                        0.0843    0.0488     1.5768 f
+  ecnurvcore/core_id/id_decoder/n48 (net)       1                 0.0000     1.5768 f
+  ecnurvcore/core_id/id_decoder/U76/A2 (LVT_NAND3HDV4)
+                                                        0.0843    0.0000     1.5768 f
+  ecnurvcore/core_id/id_decoder/U76/ZN (LVT_NAND3HDV4)
+                                                        0.1112    0.0835     1.6603 r
+  ecnurvcore/core_id/id_decoder/n51 (net)       4                 0.0000     1.6603 r
+  ecnurvcore/core_id/id_decoder/U7/A1 (LVT_NAND2HDV2)   0.1112    0.0000     1.6603 r
+  ecnurvcore/core_id/id_decoder/U7/ZN (LVT_NAND2HDV2)   0.1053    0.0710     1.7312 f
+  ecnurvcore/core_id/id_decoder/n85 (net)       2                 0.0000     1.7312 f
+  ecnurvcore/core_id/id_decoder/U315/I (LVT_INHDV2)     0.1053    0.0000     1.7312 f
+  ecnurvcore/core_id/id_decoder/U315/ZN (LVT_INHDV2)    0.1197    0.0918     1.8231 r
+  ecnurvcore/core_id/id_decoder/reg_rs1_addr[0] (net)
+                                                5                 0.0000     1.8231 r
+  ecnurvcore/core_id/id_decoder/reg_rs1_addr[0] (ysyx_210295_decoder_0)
+                                                                  0.0000     1.8231 r
+  ecnurvcore/core_id/addr_rs1_o[0] (net)                          0.0000     1.8231 r
+  ecnurvcore/core_id/addr_rs1_o[0] (ysyx_210295_id_stage_0)       0.0000     1.8231 r
+  ecnurvcore/addr_rd1_reg_i[0] (net)                              0.0000     1.8231 r
+  ecnurvcore/genral_regs/addr_rd1[0] (ysyx_210295_regs_0)         0.0000     1.8231 r
+  ecnurvcore/genral_regs/addr_rd1[0] (net)                        0.0000     1.8231 r
+  ecnurvcore/genral_regs/U469/A1 (LVT_XNOR2HDV2)        0.1197    0.0000     1.8231 r
+  ecnurvcore/genral_regs/U469/ZN (LVT_XNOR2HDV2)        0.0845    0.1786     2.0017 f
+  ecnurvcore/genral_regs/n156 (net)             1                 0.0000     2.0017 f
+  ecnurvcore/genral_regs/U80/A2 (LVT_NOR2HDV4)          0.0845    0.0000     2.0017 f
+  ecnurvcore/genral_regs/U80/ZN (LVT_NOR2HDV4)          0.0958    0.0786     2.0803 r
+  ecnurvcore/genral_regs/n147 (net)             1                 0.0000     2.0803 r
+  ecnurvcore/genral_regs/U434/A2 (LVT_NAND2HDV4)        0.0958    0.0000     2.0803 r
+  ecnurvcore/genral_regs/U434/ZN (LVT_NAND2HDV4)        0.1050    0.0854     2.1657 f
+  ecnurvcore/genral_regs/n176 (net)             4                 0.0000     2.1657 f
+  ecnurvcore/genral_regs/U433/A1 (LVT_NAND2HDV4)        0.1050    0.0000     2.1657 f
+  ecnurvcore/genral_regs/U433/ZN (LVT_NAND2HDV4)        0.0965    0.0776     2.2433 r
+  ecnurvcore/genral_regs/n146 (net)             1                 0.0000     2.2433 r
+  ecnurvcore/genral_regs/U423/I (LVT_INHDV12)           0.0965    0.0000     2.2433 r
+  ecnurvcore/genral_regs/U423/ZN (LVT_INHDV12)          0.0696    0.0620     2.3053 f
+  ecnurvcore/genral_regs/n6331 (net)           25                 0.0000     2.3053 f
+  ecnurvcore/genral_regs/U471/A1 (LVT_NAND2HDV8)        0.0696    0.0000     2.3053 f
+  ecnurvcore/genral_regs/U471/ZN (LVT_NAND2HDV8)        0.1251    0.0710     2.3763 r
+  ecnurvcore/genral_regs/n5598 (net)            8                 0.0000     2.3763 r
+  ecnurvcore/genral_regs/U298/A1 (LVT_NOR2HDV4)         0.1251    0.0000     2.3763 r
+  ecnurvcore/genral_regs/U298/ZN (LVT_NOR2HDV4)         0.0632    0.0442     2.4205 f
+  ecnurvcore/genral_regs/n6319 (net)            3                 0.0000     2.4205 f
+  ecnurvcore/genral_regs/U287/I (LVT_INHDV1)            0.0632    0.0000     2.4205 f
+  ecnurvcore/genral_regs/U287/ZN (LVT_INHDV1)           0.0713    0.0579     2.4784 r
+  ecnurvcore/genral_regs/n135 (net)             2                 0.0000     2.4784 r
+  ecnurvcore/genral_regs/U44/I (LVT_INHDV1)             0.0713    0.0000     2.4784 r
+  ecnurvcore/genral_regs/U44/ZN (LVT_INHDV1)            0.1861    0.1308     2.6091 f
+  ecnurvcore/genral_regs/n27 (net)             12                 0.0000     2.6091 f
+  ecnurvcore/genral_regs/U6566/B1 (LVT_AOI22HDV1)       0.1861    0.0000     2.6091 f
+  ecnurvcore/genral_regs/U6566/ZN (LVT_AOI22HDV1)       0.1652    0.1237     2.7328 r
+  ecnurvcore/genral_regs/n6376 (net)            1                 0.0000     2.7328 r
+  ecnurvcore/genral_regs/U6568/B (LVT_OAI211HDV1)       0.1652    0.0000     2.7328 r
+  ecnurvcore/genral_regs/U6568/ZN (LVT_OAI211HDV1)      0.1133    0.0998     2.8326 f
+  ecnurvcore/genral_regs/n6381 (net)            1                 0.0000     2.8326 f
+  ecnurvcore/genral_regs/U6571/A1 (LVT_INAND3HDV1)      0.1133    0.0000     2.8326 f
+  ecnurvcore/genral_regs/U6571/ZN (LVT_INAND3HDV1)      0.0941    0.1470     2.9796 f
+  ecnurvcore/genral_regs/n6400 (net)            1                 0.0000     2.9796 f
+  ecnurvcore/genral_regs/U6586/A1 (LVT_OR3HDV1)         0.0941    0.0000     2.9796 f
+  ecnurvcore/genral_regs/U6586/Z (LVT_OR3HDV1)          0.0903    0.2425     3.2221 f
+  ecnurvcore/genral_regs/data_rd1[12] (net)     1                 0.0000     3.2221 f
+  ecnurvcore/genral_regs/data_rd1[12] (ysyx_210295_regs_0)        0.0000     3.2221 f
+  ecnurvcore/data_rs1_id_i[12] (net)                              0.0000     3.2221 f
+  ecnurvcore/core_id/data_rs1_i[12] (ysyx_210295_id_stage_0)      0.0000     3.2221 f
+  ecnurvcore/core_id/data_rs1_i[12] (net)                         0.0000     3.2221 f
+  ecnurvcore/core_id/id_decoder/data_rs1_reg[12] (ysyx_210295_decoder_0)
+                                                                  0.0000     3.2221 f
+  ecnurvcore/core_id/id_decoder/data_rs1_reg[12] (net)            0.0000     3.2221 f
+  ecnurvcore/core_id/id_decoder/U577/A1 (LVT_NAND2HDV1)
+                                                        0.0903    0.0000     3.2221 f
+  ecnurvcore/core_id/id_decoder/U577/ZN (LVT_NAND2HDV1)
+                                                        0.1365    0.0692     3.2912 r
+  ecnurvcore/core_id/id_decoder/n610 (net)      2                 0.0000     3.2912 r
+  ecnurvcore/core_id/id_decoder/U1030/I (LVT_INHDV1)    0.1365    0.0000     3.2912 r
+  ecnurvcore/core_id/id_decoder/U1030/ZN (LVT_INHDV1)   0.0491    0.0411     3.3323 f
+  ecnurvcore/core_id/id_decoder/n611 (net)      1                 0.0000     3.3323 f
+  ecnurvcore/core_id/id_decoder/U1031/B1 (LVT_AOI22HDV1)
+                                                        0.0491    0.0000     3.3323 f
+  ecnurvcore/core_id/id_decoder/U1031/ZN (LVT_AOI22HDV1)
+                                                        0.2091    0.0895     3.4218 r
+  ecnurvcore/core_id/id_decoder/n612 (net)      1                 0.0000     3.4218 r
+  ecnurvcore/core_id/id_decoder/U1032/B (LVT_OAI21HDV1)
+                                                        0.2091    0.0000     3.4218 r
+  ecnurvcore/core_id/id_decoder/U1032/ZN (LVT_OAI21HDV1)
+                                                        0.1101    0.0980     3.5198 f
+  ecnurvcore/core_id/id_decoder/jmp_op_num1[12] (net)
+                                                2                 0.0000     3.5198 f
+  ecnurvcore/core_id/id_decoder/jmp_op_num1[12] (ysyx_210295_decoder_0)
+                                                                  0.0000     3.5198 f
+  ecnurvcore/core_id/jmp_op_num1_o[12] (net)                      0.0000     3.5198 f
+  ecnurvcore/core_id/jmp_op_num1_o[12] (ysyx_210295_id_stage_0)   0.0000     3.5198 f
+  ecnurvcore/jmp_num1_ctrl_i[12] (net)                            0.0000     3.5198 f
+  ecnurvcore/core_ctrl/jmp_num1_i[12] (ysyx_210295_ctrl_0)        0.0000     3.5198 f
+  ecnurvcore/core_ctrl/jmp_num1_i[12] (net)                       0.0000     3.5198 f
+  ecnurvcore/core_ctrl/U419/A1 (LVT_OR2HDV1)            0.1101    0.0000     3.5198 f
+  ecnurvcore/core_ctrl/U419/Z (LVT_OR2HDV1)             0.0954    0.2005     3.7203 f
+  ecnurvcore/core_ctrl/n766 (net)               3                 0.0000     3.7203 f
+  ecnurvcore/core_ctrl/U472/A2 (LVT_AOI21HDV1)          0.0954    0.0000     3.7203 f
+  ecnurvcore/core_ctrl/U472/ZN (LVT_AOI21HDV1)          0.1798    0.1412     3.8615 r
+  ecnurvcore/core_ctrl/n771 (net)               2                 0.0000     3.8615 r
+  ecnurvcore/core_ctrl/U478/A2 (LVT_OAI21HDV1)          0.1798    0.0000     3.8615 r
+  ecnurvcore/core_ctrl/U478/ZN (LVT_OAI21HDV1)          0.1062    0.1020     3.9634 f
+  ecnurvcore/core_ctrl/n785 (net)               2                 0.0000     3.9634 f
+  ecnurvcore/core_ctrl/U482/A2 (LVT_AOI21HDV1)          0.1062    0.0000     3.9634 f
+  ecnurvcore/core_ctrl/U482/ZN (LVT_AOI21HDV1)          0.1333    0.1169     4.0803 r
+  ecnurvcore/core_ctrl/n546 (net)               1                 0.0000     4.0803 r
+  ecnurvcore/core_ctrl/U483/B (LVT_OAI21HDV1)           0.1333    0.0000     4.0803 r
+  ecnurvcore/core_ctrl/U483/ZN (LVT_OAI21HDV1)          0.1138    0.0955     4.1758 f
+  ecnurvcore/core_ctrl/n800 (net)               2                 0.0000     4.1758 f
+  ecnurvcore/core_ctrl/U499/A2 (LVT_AOI21HDV2)          0.1138    0.0000     4.1758 f
+  ecnurvcore/core_ctrl/U499/ZN (LVT_AOI21HDV2)          0.1578    0.1288     4.3047 r
+  ecnurvcore/core_ctrl/n648 (net)               2                 0.0000     4.3047 r
+  ecnurvcore/core_ctrl/U535/A1 (LVT_OAI21HDV2)          0.1578    0.0000     4.3047 r
+  ecnurvcore/core_ctrl/U535/ZN (LVT_OAI21HDV2)          0.0906    0.0811     4.3857 f
+  ecnurvcore/core_ctrl/n912 (net)               2                 0.0000     4.3857 f
+  ecnurvcore/core_ctrl/U566/A1 (LVT_AOI21HDV2)          0.0906    0.0000     4.3857 f
+  ecnurvcore/core_ctrl/U566/ZN (LVT_AOI21HDV2)          0.1542    0.1124     4.4981 r
+  ecnurvcore/core_ctrl/n666 (net)               2                 0.0000     4.4981 r
+  ecnurvcore/core_ctrl/U96/A1 (LVT_OAI21HDV2)           0.1542    0.0000     4.4981 r
+  ecnurvcore/core_ctrl/U96/ZN (LVT_OAI21HDV2)           0.0976    0.0858     4.5839 f
+  ecnurvcore/core_ctrl/n976 (net)               2                 0.0000     4.5839 f
+  ecnurvcore/core_ctrl/U667/A1 (LVT_AOI21HDV2)          0.0976    0.0000     4.5839 f
+  ecnurvcore/core_ctrl/U667/ZN (LVT_AOI21HDV2)          0.1716    0.1225     4.7064 r
+  ecnurvcore/core_ctrl/n985 (net)               2                 0.0000     4.7064 r
+  ecnurvcore/core_ctrl/U100/A1 (LVT_OAI21HDV2)          0.1716    0.0000     4.7064 r
+  ecnurvcore/core_ctrl/U100/ZN (LVT_OAI21HDV2)          0.1226    0.1031     4.8095 f
+  ecnurvcore/core_ctrl/n987 (net)               2                 0.0000     4.8095 f
+  ecnurvcore/core_ctrl/U673/A1 (LVT_AOI21HDV4)          0.1226    0.0000     4.8095 f
+  ecnurvcore/core_ctrl/U673/ZN (LVT_AOI21HDV4)          0.1397    0.1079     4.9174 r
+  ecnurvcore/core_ctrl/n996 (net)               2                 0.0000     4.9174 r
+  ecnurvcore/core_ctrl/U675/A1 (LVT_OAI21HDV4)          0.1397    0.0000     4.9174 r
+  ecnurvcore/core_ctrl/U675/ZN (LVT_OAI21HDV4)          0.0985    0.0730     4.9905 f
+  ecnurvcore/core_ctrl/n1001 (net)              2                 0.0000     4.9905 f
+  ecnurvcore/core_ctrl/U679/A1 (LVT_AOI21HDV4)          0.0985    0.0000     4.9905 f
+  ecnurvcore/core_ctrl/U679/ZN (LVT_AOI21HDV4)          0.1197    0.0929     5.0834 r
+  ecnurvcore/core_ctrl/n1007 (net)              2                 0.0000     5.0834 r
+  ecnurvcore/core_ctrl/U85/A1 (LVT_OAI21HDV2)           0.1197    0.0000     5.0834 r
+  ecnurvcore/core_ctrl/U85/ZN (LVT_OAI21HDV2)           0.1226    0.0944     5.1778 f
+  ecnurvcore/core_ctrl/n1009 (net)              2                 0.0000     5.1778 f
+  ecnurvcore/core_ctrl/U83/A1 (LVT_AOI21HDV4)           0.1226    0.0000     5.1778 f
+  ecnurvcore/core_ctrl/U83/ZN (LVT_AOI21HDV4)           0.1397    0.1079     5.2857 r
+  ecnurvcore/core_ctrl/n1018 (net)              2                 0.0000     5.2857 r
+  ecnurvcore/core_ctrl/U19/A1 (LVT_OAI21HDV4)           0.1397    0.0000     5.2857 r
+  ecnurvcore/core_ctrl/U19/ZN (LVT_OAI21HDV4)           0.0985    0.0730     5.3588 f
+  ecnurvcore/core_ctrl/n1020 (net)              2                 0.0000     5.3588 f
+  ecnurvcore/core_ctrl/U688/A1 (LVT_AOI21HDV4)          0.0985    0.0000     5.3588 f
+  ecnurvcore/core_ctrl/U688/ZN (LVT_AOI21HDV4)          0.1397    0.1043     5.4631 r
+  ecnurvcore/core_ctrl/n1029 (net)              2                 0.0000     5.4631 r
+  ecnurvcore/core_ctrl/U690/A1 (LVT_OAI21HDV4)          0.1397    0.0000     5.4631 r
+  ecnurvcore/core_ctrl/U690/ZN (LVT_OAI21HDV4)          0.0993    0.0736     5.5367 f
+  ecnurvcore/core_ctrl/n1031 (net)              1                 0.0000     5.5367 f
+  ecnurvcore/core_ctrl/U949/CI (LVT_AD1HDV4)            0.0993    0.0000     5.5367 f
+  ecnurvcore/core_ctrl/U949/CO (LVT_AD1HDV4)            0.0668    0.1305     5.6672 f
+  ecnurvcore/core_ctrl/n705 (net)               1                 0.0000     5.6672 f
+  ecnurvcore/core_ctrl/U717/CI (LVT_AD1HDV1)            0.0668    0.0000     5.6672 f
+  ecnurvcore/core_ctrl/U717/CO (LVT_AD1HDV1)            0.1201    0.1969     5.8641 f
+  ecnurvcore/core_ctrl/n673 (net)               1                 0.0000     5.8641 f
+  ecnurvcore/core_ctrl/U692/A1 (LVT_XOR2HDV2)           0.1201    0.0000     5.8641 f
+  ecnurvcore/core_ctrl/U692/Z (LVT_XOR2HDV2)            0.0682    0.1524     6.0164 f
+  ecnurvcore/core_ctrl/n674 (net)               1                 0.0000     6.0164 f
+  ecnurvcore/core_ctrl/U693/A1 (LVT_NAND2HDV2)          0.0682    0.0000     6.0164 f
+  ecnurvcore/core_ctrl/U693/ZN (LVT_NAND2HDV2)          0.0577    0.0464     6.0628 r
+  ecnurvcore/core_ctrl/n675 (net)               1                 0.0000     6.0628 r
+  ecnurvcore/core_ctrl/U694/B (LVT_OAI21HDV2)           0.0577    0.0000     6.0628 r
+  ecnurvcore/core_ctrl/U694/ZN (LVT_OAI21HDV2)          0.0806    0.0547     6.1175 f
+  ecnurvcore/core_ctrl/jmp_to_o[63] (net)       1                 0.0000     6.1175 f
+  ecnurvcore/core_ctrl/jmp_to_o[63] (ysyx_210295_ctrl_0)          0.0000     6.1175 f
+  ecnurvcore/jmp_to_pc_i[63] (net)                                0.0000     6.1175 f
+  ecnurvcore/core_pc/jmp_to[63] (ysyx_210295_pc_0)                0.0000     6.1175 f
+  ecnurvcore/core_pc/jmp_to[63] (net)                             0.0000     6.1175 f
+  ecnurvcore/core_pc/U161/A1 (LVT_IOA21HDV4)            0.0806    0.0000     6.1175 f
+  ecnurvcore/core_pc/U161/ZN (LVT_IOA21HDV4)            0.0628    0.1052     6.2227 f
+  ecnurvcore/core_pc/N137 (net)                 1                 0.0000     6.2227 f
+  ecnurvcore/core_pc/addr_instr_reg_63_/D (LVT_DQHDV4)
+                                                        0.0628    0.0000     6.2227 f
+  data arrival time                                                          6.2227
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  ecnurvcore/core_pc/addr_instr_reg_63_/CK (LVT_DQHDV4)           0.0000     6.3500 r
+  library setup time                                             -0.1266     6.2234
+  data required time                                                         6.2234
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2234
+  data arrival time                                                         -6.2227
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0007
+  Startpoint: ecnurvcore/core_id/pipeline_id_ex/dff_alu_num2/data_r_reg_1_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: ecnurvcore/core_pc/addr_instr_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  ecnurvcore/core_id/pipeline_id_ex/dff_alu_num2/data_r_reg_1_/CK (LVT_DQHDV2)
+                                                        0.0000    0.0000 #   0.0000 r
+  ecnurvcore/core_id/pipeline_id_ex/dff_alu_num2/data_r_reg_1_/Q (LVT_DQHDV2)
+                                                        0.4188    0.4438     0.4438 r
+  ecnurvcore/core_id/pipeline_id_ex/dff_alu_num2/data_out[1] (net)
+                                               17                 0.0000     0.4438 r
+  ecnurvcore/core_id/pipeline_id_ex/dff_alu_num2/data_out[1] (ysyx_210295_gnrl_dff_DW64_22)
+                                                                  0.0000     0.4438 r
+  ecnurvcore/core_id/pipeline_id_ex/alu_op_num2_o[1] (net)        0.0000     0.4438 r
+  ecnurvcore/core_id/pipeline_id_ex/alu_op_num2_o[1] (ysyx_210295_id_ex_0)
+                                                                  0.0000     0.4438 r
+  ecnurvcore/core_id/alu_op_num2_o[1] (net)                       0.0000     0.4438 r
+  ecnurvcore/core_id/alu_op_num2_o[1] (ysyx_210295_id_stage_0)    0.0000     0.4438 r
+  ecnurvcore/alu_op_num2_ex_i[1] (net)                            0.0000     0.4438 r
+  ecnurvcore/core_ex/alu_op_num2_i[1] (ysyx_210295_ex_stage_0)    0.0000     0.4438 r
+  ecnurvcore/core_ex/alu_op_num2_i[1] (net)                       0.0000     0.4438 r
+  ecnurvcore/core_ex/ex_alu/alu_op_num2[1] (ysyx_210295_ex_0)     0.0000     0.4438 r
+  ecnurvcore/core_ex/ex_alu/alu_op_num2[1] (net)                  0.0000     0.4438 r
+  ecnurvcore/core_ex/ex_alu/U51/I (LVT_INHDV4)          0.4188    0.0000     0.4438 r
+  ecnurvcore/core_ex/ex_alu/U51/ZN (LVT_INHDV4)         0.1152    0.0795     0.5232 f
+  ecnurvcore/core_ex/ex_alu/n9 (net)            5                 0.0000     0.5232 f
+  ecnurvcore/core_ex/ex_alu/U606/A1 (LVT_OR2HDV4)       0.1152    0.0000     0.5232 f
+  ecnurvcore/core_ex/ex_alu/U606/Z (LVT_OR2HDV4)        0.0794    0.1611     0.6843 f
+  ecnurvcore/core_ex/ex_alu/n10 (net)           4                 0.0000     0.6843 f
+  ecnurvcore/core_ex/ex_alu/U14/I (LVT_INHDV4)          0.0794    0.0000     0.6843 f
+  ecnurvcore/core_ex/ex_alu/U14/ZN (LVT_INHDV4)         0.2776    0.1723     0.8566 r
+  ecnurvcore/core_ex/ex_alu/n4 (net)           31                 0.0000     0.8566 r
+  ecnurvcore/core_ex/ex_alu/U1319/A1 (LVT_NAND2HDV1)    0.2776    0.0000     0.8566 r
+  ecnurvcore/core_ex/ex_alu/U1319/ZN (LVT_NAND2HDV1)    0.1056    0.0775     0.9342 f
+  ecnurvcore/core_ex/ex_alu/n496 (net)          1                 0.0000     0.9342 f
+  ecnurvcore/core_ex/ex_alu/U209/C (LVT_OAI211HDV1)     0.1056    0.0000     0.9342 f
+  ecnurvcore/core_ex/ex_alu/U209/ZN (LVT_OAI211HDV1)    0.4488    0.1456     1.0797 r
+  ecnurvcore/core_ex/ex_alu/n3170 (net)         7                 0.0000     1.0797 r
+  ecnurvcore/core_ex/ex_alu/U371/A1 (LVT_IAO21HDV1)     0.4488    0.0000     1.0797 r
+  ecnurvcore/core_ex/ex_alu/U371/ZN (LVT_IAO21HDV1)     0.1197    0.1687     1.2484 r
+  ecnurvcore/core_ex/ex_alu/n498 (net)          1                 0.0000     1.2484 r
+  ecnurvcore/core_ex/ex_alu/U1320/B (LVT_OAI21HDV1)     0.1197    0.0000     1.2484 r
+  ecnurvcore/core_ex/ex_alu/U1320/ZN (LVT_OAI21HDV1)    0.1000    0.0662     1.3147 f
+  ecnurvcore/core_ex/ex_alu/n499 (net)          1                 0.0000     1.3147 f
+  ecnurvcore/core_ex/ex_alu/U255/A1 (LVT_AO21HDV1)      0.1000    0.0000     1.3147 f
+  ecnurvcore/core_ex/ex_alu/U255/Z (LVT_AO21HDV1)       0.0780    0.2088     1.5235 f
+  ecnurvcore/core_ex/ex_alu/n12 (net)           1                 0.0000     1.5235 f
+  ecnurvcore/core_ex/ex_alu/U62/B (LVT_OAI211HDV2)      0.0780    0.0000     1.5235 f
+  ecnurvcore/core_ex/ex_alu/U62/ZN (LVT_OAI211HDV2)     0.2007    0.0660     1.5895 r
+  ecnurvcore/core_ex/ex_alu/n529 (net)          2                 0.0000     1.5895 r
+  ecnurvcore/core_ex/ex_alu/U579/A1 (LVT_OAI21HDV2)     0.2007    0.0000     1.5895 r
+  ecnurvcore/core_ex/ex_alu/U579/ZN (LVT_OAI21HDV2)     0.1212    0.0692     1.6587 f
+  ecnurvcore/core_ex/ex_alu/n511 (net)          1                 0.0000     1.6587 f
+  ecnurvcore/core_ex/ex_alu/U1342/A1 (LVT_NAND2HDV1)    0.1212    0.0000     1.6587 f
+  ecnurvcore/core_ex/ex_alu/U1342/ZN (LVT_NAND2HDV1)    0.0760    0.0660     1.7247 r
+  ecnurvcore/core_ex/ex_alu/n512 (net)          1                 0.0000     1.7247 r
+  ecnurvcore/core_ex/ex_alu/U1343/B (LVT_AOI21HDV2)     0.0760    0.0000     1.7247 r
+  ecnurvcore/core_ex/ex_alu/U1343/ZN (LVT_AOI21HDV2)    0.1768    0.0555     1.7802 f
+  ecnurvcore/core_ex/ex_alu/n3398 (net)         2                 0.0000     1.7802 f
+  ecnurvcore/core_ex/ex_alu/U3692/A1 (LVT_AOI211HDV4)   0.1768    0.0000     1.7802 f
+  ecnurvcore/core_ex/ex_alu/U3692/ZN (LVT_AOI211HDV4)   0.3285    0.2273     2.0075 r
+  ecnurvcore/core_ex/ex_alu/addr_mem_rd[1] (net)
+                                                6                 0.0000     2.0075 r
+  ecnurvcore/core_ex/ex_alu/addr_mem_rd[1] (ysyx_210295_ex_0)     0.0000     2.0075 r
+  ecnurvcore/core_ex/addr_mem_rd_o[1] (net)                       0.0000     2.0075 r
+  ecnurvcore/core_ex/addr_mem_rd_o[1] (ysyx_210295_ex_stage_0)    0.0000     2.0075 r
+  ecnurvcore/addr_mem_rd_o[1] (net)                               0.0000     2.0075 r
+  ecnurvcore/addr_mem_rd_o[1] (ysyx_210295_core_0)                0.0000     2.0075 r
+  addr_mem_rd[1] (net)                                            0.0000     2.0075 r
+  mem_interface/addr_mem_rd[1] (ysyx_210295_mem_axi_interface_0)
+                                                                  0.0000     2.0075 r
+  mem_interface/addr_mem_rd[1] (net)                              0.0000     2.0075 r
+  mem_interface/U35/A1 (LVT_NOR2HDV2)                   0.3285    0.0000     2.0075 r
+  mem_interface/U35/ZN (LVT_NOR2HDV2)                   0.1074    0.0633     2.0708 f
+  mem_interface/n14 (net)                       2                 0.0000     2.0708 f
+  mem_interface/U19/A2 (LVT_AND2HDV4)                   0.1074    0.0000     2.0708 f
+  mem_interface/U19/Z (LVT_AND2HDV4)                    0.1774    0.2147     2.2855 f
+  mem_interface/n851 (net)                     29                 0.0000     2.2855 f
+  mem_interface/U3/I (LVT_INHDV2)                       0.1774    0.0000     2.2855 f
+  mem_interface/U3/ZN (LVT_INHDV2)                      0.2171    0.1668     2.4523 r
+  mem_interface/n542 (net)                     11                 0.0000     2.4523 r
+  mem_interface/U970/A1 (LVT_OAI22HDV1)                 0.2171    0.0000     2.4523 r
+  mem_interface/U970/ZN (LVT_OAI22HDV1)                 0.1693    0.0957     2.5481 f
+  mem_interface/n545 (net)                      1                 0.0000     2.5481 f
+  mem_interface/U37/B (LVT_AOI211HDV2)                  0.1693    0.0000     2.5481 f
+  mem_interface/U37/ZN (LVT_AOI211HDV2)                 0.2130    0.1609     2.7089 r
+  mem_interface/n547 (net)                      1                 0.0000     2.7089 r
+  mem_interface/U102/B (LVT_OAI211HDV2)                 0.2130    0.0000     2.7089 r
+  mem_interface/U102/ZN (LVT_OAI211HDV2)                0.1572    0.1253     2.8343 f
+  mem_interface/data_mem_rd[15] (net)           2                 0.0000     2.8343 f
+  mem_interface/data_mem_rd[15] (ysyx_210295_mem_axi_interface_0)
+                                                                  0.0000     2.8343 f
+  data_mem_rd[15] (net)                                           0.0000     2.8343 f
+  ecnurvcore/data_mem_i[15] (ysyx_210295_core_0)                  0.0000     2.8343 f
+  ecnurvcore/data_mem_i[15] (net)                                 0.0000     2.8343 f
+  ecnurvcore/core_ex/data_mem_i[15] (ysyx_210295_ex_stage_0)      0.0000     2.8343 f
+  ecnurvcore/core_ex/data_mem_i[15] (net)                         0.0000     2.8343 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/data_mem_i[15] (ysyx_210295_ex_mem_0)
+                                                                  0.0000     2.8343 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/data_mem_i[15] (net)    0.0000     2.8343 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U7/A1 (LVT_NAND2HDV2)
+                                                        0.1572    0.0000     2.8343 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U7/ZN (LVT_NAND2HDV2)
+                                                        0.0892    0.0746     2.9089 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/n41 (net)
+                                                1                 0.0000     2.9089 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U47/A1 (LVT_NAND2HDV4)
+                                                        0.0892    0.0000     2.9089 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U47/ZN (LVT_NAND2HDV4)
+                                                        0.0879    0.0618     2.9707 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/n80 (net)
+                                                2                 0.0000     2.9707 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U5/I (LVT_INHDV6)
+                                                        0.0879    0.0000     2.9707 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U5/ZN (LVT_INHDV6)
+                                                        0.1031    0.0790     3.0497 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/n70 (net)
+                                               14                 0.0000     3.0497 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U40/A2 (LVT_AND2HDV4)
+                                                        0.1031    0.0000     3.0497 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U40/Z (LVT_AND2HDV4)
+                                                        0.1329    0.1568     3.2065 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/n35 (net)
+                                                9                 0.0000     3.2065 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U120/I (LVT_INHDV8)
+                                                        0.1329    0.0000     3.2065 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U120/ZN (LVT_INHDV8)
+                                                        0.0604    0.0531     3.2596 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/n97 (net)
+                                               12                 0.0000     3.2596 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U129/B (LVT_AOI21HDV1)
+                                                        0.0604    0.0000     3.2596 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U129/ZN (LVT_AOI21HDV1)
+                                                        0.1428    0.0866     3.3462 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/n90 (net)
+                                                1                 0.0000     3.3462 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U2/B (LVT_IOA21HDV1)
+                                                        0.1428    0.0000     3.3462 r
+  ecnurvcore/core_ex/core_pipeline_ex_mem/U2/ZN (LVT_IOA21HDV1)
+                                                        0.0989    0.0806     3.4269 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/alu_reg_wr_o[42] (net)
+                                                3                 0.0000     3.4269 f
+  ecnurvcore/core_ex/core_pipeline_ex_mem/alu_reg_wr_o[42] (ysyx_210295_ex_mem_0)
+                                                                  0.0000     3.4269 f
+  ecnurvcore/core_ex/alu_result_o[42] (net)                       0.0000     3.4269 f
+  ecnurvcore/core_ex/alu_result_o[42] (ysyx_210295_ex_stage_0)    0.0000     3.4269 f
+  ecnurvcore/data_bypass_id_i[42] (net)                           0.0000     3.4269 f
+  ecnurvcore/core_id/data_bypass_i[42] (ysyx_210295_id_stage_0)   0.0000     3.4269 f
+  ecnurvcore/core_id/data_bypass_i[42] (net)                      0.0000     3.4269 f
+  ecnurvcore/core_id/id_decoder/data_bypass[42] (ysyx_210295_decoder_0)
+                                                                  0.0000     3.4269 f
+  ecnurvcore/core_id/id_decoder/data_bypass[42] (net)             0.0000     3.4269 f
+  ecnurvcore/core_id/id_decoder/U755/I0 (LVT_MUX2HDV2)
+                                                        0.0989    0.0000     3.4269 f
+  ecnurvcore/core_id/id_decoder/U755/Z (LVT_MUX2HDV2)   0.1013    0.2132     3.6400 f
+  ecnurvcore/core_id/id_decoder/data_rs1[42] (net)
+                                                5                 0.0000     3.6400 f
+  ecnurvcore/core_id/id_decoder/data_rs1[42] (ysyx_210295_decoder_0)
+                                                                  0.0000     3.6400 f
+  ecnurvcore/core_id/jmpb_rs1_o[42] (net)                         0.0000     3.6400 f
+  ecnurvcore/core_id/jmpb_rs1_o[42] (ysyx_210295_id_stage_0)      0.0000     3.6400 f
+  ecnurvcore/data_rs1_ctrl_i[42] (net)                            0.0000     3.6400 f
+  ecnurvcore/core_ctrl/data_rs1_i[42] (ysyx_210295_ctrl_0)        0.0000     3.6400 f
+  ecnurvcore/core_ctrl/data_rs1_i[42] (net)                       0.0000     3.6400 f
+  ecnurvcore/core_ctrl/U254/A1 (LVT_INOR2HDV1)          0.1013    0.0000     3.6400 f
+  ecnurvcore/core_ctrl/U254/ZN (LVT_INOR2HDV1)          0.0825    0.1289     3.7689 f
+  ecnurvcore/core_ctrl/n340 (net)               2                 0.0000     3.7689 f
+  ecnurvcore/core_ctrl/U255/I (LVT_INHDV1)              0.0825    0.0000     3.7689 f
+  ecnurvcore/core_ctrl/U255/ZN (LVT_INHDV1)             0.0525    0.0472     3.8161 r
+  ecnurvcore/core_ctrl/n319 (net)               1                 0.0000     3.8161 r
+  ecnurvcore/core_ctrl/U258/A3 (LVT_NAND4HDV1)          0.0525    0.0000     3.8161 r
+  ecnurvcore/core_ctrl/U258/ZN (LVT_NAND4HDV1)          0.1326    0.1094     3.9255 f
+  ecnurvcore/core_ctrl/n323 (net)               1                 0.0000     3.9255 f
+  ecnurvcore/core_ctrl/U263/A2 (LVT_NOR3HDV1)           0.1326    0.0000     3.9255 f
+  ecnurvcore/core_ctrl/U263/ZN (LVT_NOR3HDV1)           0.3116    0.2104     4.1359 r
+  ecnurvcore/core_ctrl/n325 (net)               1                 0.0000     4.1359 r
+  ecnurvcore/core_ctrl/U86/B (LVT_OAI21HDV4)            0.3116    0.0000     4.1359 r
+  ecnurvcore/core_ctrl/U86/ZN (LVT_OAI21HDV4)           0.0922    0.0795     4.2154 f
+  ecnurvcore/core_ctrl/n154 (net)               1                 0.0000     4.2154 f
+  ecnurvcore/core_ctrl/U9/A1 (LVT_NAND2HDV2)            0.0922    0.0000     4.2154 f
+  ecnurvcore/core_ctrl/U9/ZN (LVT_NAND2HDV2)            0.0654    0.0490     4.2643 r
+  ecnurvcore/core_ctrl/n152 (net)               1                 0.0000     4.2643 r
+  ecnurvcore/core_ctrl/U13/A1 (LVT_NAND4HDV2)           0.0654    0.0000     4.2643 r
+  ecnurvcore/core_ctrl/U13/ZN (LVT_NAND4HDV2)           0.1266    0.0822     4.3466 f
+  ecnurvcore/core_ctrl/n367 (net)               1                 0.0000     4.3466 f
+  ecnurvcore/core_ctrl/U296/B1 (LVT_AOI22HDV2)          0.1266    0.0000     4.3466 f
+  ecnurvcore/core_ctrl/U296/ZN (LVT_AOI22HDV2)          0.1538    0.1013     4.4479 r
+  ecnurvcore/core_ctrl/n371 (net)               1                 0.0000     4.4479 r
+  ecnurvcore/core_ctrl/U298/B1 (LVT_IOA22HDV2)          0.1538    0.0000     4.4479 r
+  ecnurvcore/core_ctrl/U298/ZN (LVT_IOA22HDV2)          0.0758    0.0693     4.5172 f
+  ecnurvcore/core_ctrl/n374 (net)               1                 0.0000     4.5172 f
+  ecnurvcore/core_ctrl/U300/B1 (LVT_AOI22HDV2)          0.0758    0.0000     4.5172 f
+  ecnurvcore/core_ctrl/U300/ZN (LVT_AOI22HDV2)          0.1501    0.0883     4.6055 r
+  ecnurvcore/core_ctrl/n378 (net)               1                 0.0000     4.6055 r
+  ecnurvcore/core_ctrl/U301/B1 (LVT_IOA22HDV2)          0.1501    0.0000     4.6055 r
+  ecnurvcore/core_ctrl/U301/ZN (LVT_IOA22HDV2)          0.0758    0.0689     4.6744 f
+  ecnurvcore/core_ctrl/n381 (net)               1                 0.0000     4.6744 f
+  ecnurvcore/core_ctrl/U302/B1 (LVT_AOI22HDV2)          0.0758    0.0000     4.6744 f
+  ecnurvcore/core_ctrl/U302/ZN (LVT_AOI22HDV2)          0.1501    0.0883     4.7627 r
+  ecnurvcore/core_ctrl/n385 (net)               1                 0.0000     4.7627 r
+  ecnurvcore/core_ctrl/U303/B1 (LVT_IOA22HDV2)          0.1501    0.0000     4.7627 r
+  ecnurvcore/core_ctrl/U303/ZN (LVT_IOA22HDV2)          0.0758    0.0689     4.8316 f
+  ecnurvcore/core_ctrl/n388 (net)               1                 0.0000     4.8316 f
+  ecnurvcore/core_ctrl/U304/B1 (LVT_AOI22HDV2)          0.0758    0.0000     4.8316 f
+  ecnurvcore/core_ctrl/U304/ZN (LVT_AOI22HDV2)          0.1539    0.0883     4.9199 r
+  ecnurvcore/core_ctrl/n392 (net)               1                 0.0000     4.9199 r
+  ecnurvcore/core_ctrl/U305/B1 (LVT_IOA22HDV2)          0.1539    0.0000     4.9199 r
+  ecnurvcore/core_ctrl/U305/ZN (LVT_IOA22HDV2)          0.0758    0.0693     4.9893 f
+  ecnurvcore/core_ctrl/n395 (net)               1                 0.0000     4.9893 f
+  ecnurvcore/core_ctrl/U306/B1 (LVT_AOI22HDV2)          0.0758    0.0000     4.9893 f
+  ecnurvcore/core_ctrl/U306/ZN (LVT_AOI22HDV2)          0.1539    0.0883     5.0776 r
+  ecnurvcore/core_ctrl/n399 (net)               1                 0.0000     5.0776 r
+  ecnurvcore/core_ctrl/U307/B1 (LVT_IOA22HDV2)          0.1539    0.0000     5.0776 r
+  ecnurvcore/core_ctrl/U307/ZN (LVT_IOA22HDV2)          0.0758    0.0693     5.1469 f
+  ecnurvcore/core_ctrl/n402 (net)               1                 0.0000     5.1469 f
+  ecnurvcore/core_ctrl/U308/B1 (LVT_AOI22HDV2)          0.0758    0.0000     5.1469 f
+  ecnurvcore/core_ctrl/U308/ZN (LVT_AOI22HDV2)          0.1539    0.0883     5.2352 r
+  ecnurvcore/core_ctrl/n406 (net)               1                 0.0000     5.2352 r
+  ecnurvcore/core_ctrl/U309/B1 (LVT_IOA22HDV2)          0.1539    0.0000     5.2352 r
+  ecnurvcore/core_ctrl/U309/ZN (LVT_IOA22HDV2)          0.0753    0.0693     5.3045 f
+  ecnurvcore/core_ctrl/n409 (net)               1                 0.0000     5.3045 f
+  ecnurvcore/core_ctrl/U310/B1 (LVT_AOI22HDV2)          0.0753    0.0000     5.3045 f
+  ecnurvcore/core_ctrl/U310/ZN (LVT_AOI22HDV2)          0.1484    0.0873     5.3918 r
+  ecnurvcore/core_ctrl/n412 (net)               1                 0.0000     5.3918 r
+  ecnurvcore/core_ctrl/U311/A1 (LVT_OAI22HDV2)          0.1484    0.0000     5.3918 r
+  ecnurvcore/core_ctrl/U311/ZN (LVT_OAI22HDV2)          0.0892    0.0761     5.4679 f
+  ecnurvcore/core_ctrl/n414 (net)               1                 0.0000     5.4679 f
+  ecnurvcore/core_ctrl/U312/A1 (LVT_NAND2HDV2)          0.0892    0.0000     5.4679 f
+  ecnurvcore/core_ctrl/U312/ZN (LVT_NAND2HDV2)          0.0905    0.0695     5.5374 r
+  ecnurvcore/core_ctrl/n520 (net)               2                 0.0000     5.5374 r
+  ecnurvcore/core_ctrl/U396/A1 (LVT_NOR2HDV3)           0.0905    0.0000     5.5374 r
+  ecnurvcore/core_ctrl/U396/ZN (LVT_NOR2HDV3)           0.0609    0.0419     5.5793 f
+  ecnurvcore/core_ctrl/n518 (net)               1                 0.0000     5.5793 f
+  ecnurvcore/core_ctrl/U398/A1 (LVT_NOR2HDV4)           0.0609    0.0000     5.5793 f
+  ecnurvcore/core_ctrl/U398/ZN (LVT_NOR2HDV4)           0.0731    0.0538     5.6332 r
+  ecnurvcore/core_ctrl/n523 (net)               1                 0.0000     5.6332 r
+  ecnurvcore/core_ctrl/U8/A1 (LVT_NAND2HDV2)            0.0731    0.0000     5.6332 r
+  ecnurvcore/core_ctrl/U8/ZN (LVT_NAND2HDV2)            0.0865    0.0620     5.6951 f
+  ecnurvcore/core_ctrl/n525 (net)               1                 0.0000     5.6951 f
+  ecnurvcore/core_ctrl/U400/A1 (LVT_NAND2HDV4)          0.0865    0.0000     5.6951 f
+  ecnurvcore/core_ctrl/U400/ZN (LVT_NAND2HDV4)          0.0797    0.0616     5.7567 r
+  ecnurvcore/core_ctrl/n709 (net)               2                 0.0000     5.7567 r
+  ecnurvcore/core_ctrl/U90/I (LVT_INHDV4)               0.0797    0.0000     5.7567 r
+  ecnurvcore/core_ctrl/U90/ZN (LVT_INHDV4)              0.0465    0.0432     5.7998 f
+  ecnurvcore/core_ctrl/n157 (net)               1                 0.0000     5.7998 f
+  ecnurvcore/core_ctrl/U89/A1 (LVT_NAND2HDV8)           0.0465    0.0000     5.7998 f
+  ecnurvcore/core_ctrl/U89/ZN (LVT_NAND2HDV8)           0.1229    0.0633     5.8632 r
+  ecnurvcore/core_ctrl/n707 (net)               2                 0.0000     5.8632 r
+  ecnurvcore/core_ctrl/U718/I (LVT_INHDV8)              0.1229    0.0000     5.8632 r
+  ecnurvcore/core_ctrl/U718/ZN (LVT_INHDV8)             0.0790    0.0694     5.9326 f
+  ecnurvcore/core_ctrl/n1032 (net)             25                 0.0000     5.9326 f
+  ecnurvcore/core_ctrl/U743/B1 (LVT_AO22HDV2)           0.0790    0.0000     5.9326 f
+  ecnurvcore/core_ctrl/U743/Z (LVT_AO22HDV2)            0.0650    0.1704     6.1029 f
+  ecnurvcore/core_ctrl/jmp_to_o[3] (net)        1                 0.0000     6.1029 f
+  ecnurvcore/core_ctrl/jmp_to_o[3] (ysyx_210295_ctrl_0)           0.0000     6.1029 f
+  ecnurvcore/jmp_to_pc_i[3] (net)                                 0.0000     6.1029 f
+  ecnurvcore/core_pc/jmp_to[3] (ysyx_210295_pc_0)                 0.0000     6.1029 f
+  ecnurvcore/core_pc/jmp_to[3] (net)                              0.0000     6.1029 f
+  ecnurvcore/core_pc/U337/A1 (LVT_IOA21HDV2)            0.0650    0.0000     6.1029 f
+  ecnurvcore/core_pc/U337/ZN (LVT_IOA21HDV2)            0.0623    0.1192     6.2221 f
+  ecnurvcore/core_pc/N77 (net)                  1                 0.0000     6.2221 f
+  ecnurvcore/core_pc/addr_instr_reg_3_/D (LVT_DQHDV4)   0.0623    0.0000     6.2221 f
+  data arrival time                                                          6.2221
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  ecnurvcore/core_pc/addr_instr_reg_3_/CK (LVT_DQHDV4)            0.0000     6.3500 r
+  library setup time                                             -0.1265     6.2235
+  data required time                                                         6.2235
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2235
+  data arrival time                                                         -6.2221
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0014
