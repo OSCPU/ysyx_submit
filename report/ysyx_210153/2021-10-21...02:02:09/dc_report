@@ -1,0 +1,789 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Thu_Oct_21_01:57:09_2021_+0800
+top_name: ysyx_210153
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total      std        mem  ipio  sub_harden
+1560625.1  1560625.1  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total   std     mem  ipio  sub_harden
+101085  101085  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210153
+Date   : Thu Oct 21 02:18:31 2021
+****************************************
+    
+    
+Number of ports:                        22012
+Number of nets:                        122126
+Number of cells:                       101297
+Number of combinational cells:          81968
+Number of sequential cells:             19109
+Number of macros/black boxes:               8
+Number of buf/inv:                      11210
+Number of references:                      19
+Combinational area:             663660.143965
+Buf/Inv area:                    49328.608635
+Noncombinational area:          488424.652443
+Macro/Black Box area:           408540.343750
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:               1560625.140158
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area                  Local cell area
+                                  ---------------------  ------------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes        Design
+--------------------------------  ------------  -------  -----------  -----------  -----------  -------------------------------------
+ysyx_210153                       1560625.1402    100.0     751.7432       0.0000       0.0000  ysyx_210153
+moduleAXIRMux                        1730.7576      0.1    1652.7592      77.9984       0.0000  ysyx_210153_AXIRMux_0
+moduleBypass                         4433.8056      0.3    4433.8056       0.0000       0.0000  ysyx_210153_Bypass_0
+moduleBypassCsr                        75.3088      0.0      75.3088       0.0000       0.0000  ysyx_210153_BypassCsr_0
+moduleCSRs                          45498.6190      2.9   25310.4807   20188.1383       0.0000  ysyx_210153_CSRs_0
+moduleClint                          8862.2321      0.6    5591.6784    3270.5537       0.0000  ysyx_210153_Clint_0
+moduleDCache                       525091.0443     33.6   29468.6023   10641.4027  204270.1719  ysyx_210153_DCache_0
+moduleDCache/rand_prng                 73.9640      0.0      22.8616      51.1024       0.0000  ysyx_210153_MaximalPeriodGaloisLFSR_3
+moduleDCache/sregs                   3626.9256      0.2    1966.0976    1660.8281       0.0000  ysyx_210153_SyncReadReg_20
+moduleDCache/sregs_1                 3626.9256      0.2    1966.0976    1660.8281       0.0000  ysyx_210153_SyncReadReg_17
+moduleDCache/sregs_10               62504.9604      4.0   25966.7431   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_14
+moduleDCache/sregs_11               62503.6156      4.0   25965.3983   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_9
+moduleDCache/sregs_2                 3626.9256      0.2    1966.0976    1660.8281       0.0000  ysyx_210153_SyncReadReg_14
+moduleDCache/sregs_3                 3630.9600      0.2    1970.1320    1660.8281       0.0000  ysyx_210153_SyncReadReg_24
+moduleDCache/sregs_4                 4047.8481      0.3    2387.0200    1660.8281       0.0000  ysyx_210153_SyncReadReg_23
+moduleDCache/sregs_5                 4033.0553      0.3    2372.2272    1660.8281       0.0000  ysyx_210153_SyncReadReg_21
+moduleDCache/sregs_6                 4026.3313      0.3    2365.5032    1660.8281       0.0000  ysyx_210153_SyncReadReg_18
+moduleDCache/sregs_7                 4031.7104      0.3    2370.8824    1660.8281       0.0000  ysyx_210153_SyncReadReg_15
+moduleDCache/sregs_8                62469.9956      4.0   25931.7783   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_13
+moduleDCache/sregs_9                62507.6500      4.0   25969.4327   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_12
+moduleEX                           224849.2170     14.4   14241.4320   14410.8773       0.0000  ysyx_210153_EX_0
+moduleEX/alu                       196196.9078     12.6   27257.7511       0.0000       0.0000  ysyx_210153_ALU_0
+moduleEX/alu/divTop                 33620.0001      2.2   28431.7615    5188.2386       0.0000  ysyx_210153_DivTop_0
+moduleEX/alu/mulTop                135319.1566      8.7   32343.7847   12417.8836       0.0000  ysyx_210153_MulTop_0
+moduleEX/alu/mulTop/boothSext       28750.4791      1.8   28750.4791       0.0000       0.0000  ysyx_210153_BoothSext_0
+moduleEX/alu/mulTop/walTree         61807.0092      4.0       0.0000       0.0000       0.0000  ysyx_210153_WalImproved_0
+moduleEX/alu/mulTop/walTree/CSAs_0
+                                     3684.7521      0.2    3684.7521       0.0000       0.0000  ysyx_210153_CSA_11
+moduleEX/alu/mulTop/walTree/CSAs_1
+                                     3652.4769      0.2    3652.4769       0.0000       0.0000  ysyx_210153_CSA_15
+moduleEX/alu/mulTop/walTree/CSAs_2
+                                     3593.3058      0.2    3593.3058       0.0000       0.0000  ysyx_210153_CSA_12
+moduleEX/alu/mulTop/walTree/CSAs_3
+                                     3552.9618      0.2    3552.9618       0.0000       0.0000  ysyx_210153_CSA_14
+moduleEX/alu/mulTop/walTree/CSAs_4
+                                     3507.2386      0.2    3507.2386       0.0000       0.0000  ysyx_210153_CSA_13
+moduleEX/alu/mulTop/walTree/CSAs_5
+                                     3952.3674      0.3    3952.3674       0.0000       0.0000  ysyx_210153_CSA_9
+moduleEX/alu/mulTop/walTree/CSAs_6
+                                     3760.0610      0.2    3760.0610       0.0000       0.0000  ysyx_210153_CSA_10
+moduleEX/alu/mulTop/walTree/CSAs_7
+                                     4269.7402      0.3    4269.7402       0.0000       0.0000  ysyx_210153_CSA_8
+moduleEX/alu/mulTop/walTree/comp42s_0
+                                     7572.5688      0.5    7572.5688       0.0000       0.0000  ysyx_210153_Compressor_42_4
+moduleEX/alu/mulTop/walTree/comp42s_1
+                                     7448.8472      0.5    7448.8472       0.0000       0.0000  ysyx_210153_Compressor_42_5
+moduleEX/alu/mulTop/walTree/comp42s_2
+                                     7927.5960      0.5    7927.5960       0.0000       0.0000  ysyx_210153_Compressor_42_7
+moduleEX/alu/mulTop/walTree/comp42s_3
+                                     8885.0936      0.6    8885.0936       0.0000       0.0000  ysyx_210153_Compressor_42_6
+moduleGPRs                         112691.5519      7.2   61997.9694   50693.5825       0.0000  ysyx_210153_GPRs_0
+moduleICache                       481551.7992     30.9    8903.9208    4394.8065  204270.1719  ysyx_210153_ICache_0
+moduleICache/rand_prng                 73.9640      0.0      22.8616      51.1024       0.0000  ysyx_210153_MaximalPeriodGaloisLFSR_2
+moduleICache/sregs                   3571.7888      0.2    1910.9608    1660.8281       0.0000  ysyx_210153_SyncReadReg_19
+moduleICache/sregs_1                 3563.7200      0.2    1902.8920    1660.8281       0.0000  ysyx_210153_SyncReadReg_16
+moduleICache/sregs_2                 3535.4792      0.2    1874.6512    1660.8281       0.0000  ysyx_210153_SyncReadReg_13
+moduleICache/sregs_3                 3528.7552      0.2    1867.9272    1660.8281       0.0000  ysyx_210153_SyncReadReg_22
+moduleICache/sregs_4                62435.0308      4.0   25896.8135   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_8
+moduleICache/sregs_5                62424.2724      4.0   25886.0551   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_10
+moduleICache/sregs_6                62414.8588      4.0   25876.6415   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_15
+moduleICache/sregs_7                62435.0308      4.0   25896.8135   36538.2172       0.0000  ysyx_210153_SyncReadReg_4_11
+moduleID                            41869.0034      2.7   30287.5855   11581.4179       0.0000  ysyx_210153_ID_0
+moduleIF                            11664.7953      0.7    6874.6176    4790.1778       0.0000  ysyx_210153_IF_0
+moduleMEM                           26199.3940      1.7   13575.7560   12623.6380       0.0000  ysyx_210153_MEM_0
+moduleMMU                           73327.9103      4.7   47545.4038   25782.5065       0.0000  ysyx_210153_MMU_0
+moduleWB                             2027.9584      0.1    2002.4072      25.5512       0.0000  ysyx_210153_WB_0
+--------------------------------  ------------  -------  -----------  -----------  -----------  -------------------------------------
+Total                                                    663660.1440  488424.6524  408540.3438
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210153
+Date   : Thu Oct 21 02:18:23 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: moduleDCache/state_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: moduleMMU/vaddr_vpn_1_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  moduleDCache/state_reg_2_/CK (LVT_DQHDV4)             0.0000    0.0000 #   0.0000 r
+  moduleDCache/state_reg_2_/Q (LVT_DQHDV4)              0.1081    0.2800     0.2800 r
+  moduleDCache/state[2] (net)                   7                 0.0000     0.2800 r
+  moduleDCache/U567/A2 (LVT_NAND2HDV2)                  0.1081    0.0000     0.2800 r
+  moduleDCache/U567/ZN (LVT_NAND2HDV2)                  0.1124    0.0890     0.3690 f
+  moduleDCache/n3255 (net)                      5                 0.0000     0.3690 f
+  moduleDCache/U104/I (LVT_INHDV2)                      0.1124    0.0000     0.3690 f
+  moduleDCache/U104/ZN (LVT_INHDV2)                     0.0565    0.0493     0.4184 r
+  moduleDCache/n379 (net)                       1                 0.0000     0.4184 r
+  moduleDCache/U103/A1 (LVT_NAND2HDV2)                  0.0565    0.0000     0.4184 r
+  moduleDCache/U103/ZN (LVT_NAND2HDV2)                  0.0913    0.0682     0.4866 f
+  moduleDCache/n519 (net)                       3                 0.0000     0.4866 f
+  moduleDCache/U568/A1 (LVT_NAND2HDV2)                  0.0913    0.0000     0.4866 f
+  moduleDCache/U568/ZN (LVT_NAND2HDV2)                  0.1090    0.0811     0.5677 r
+  moduleDCache/n758 (net)                       3                 0.0000     0.5677 r
+  moduleDCache/U96/A1 (LVT_NAND2HDV4)                   0.1090    0.0000     0.5677 r
+  moduleDCache/U96/ZN (LVT_NAND2HDV4)                   0.1290    0.1016     0.6693 f
+  moduleDCache/io_memIO_arlen[0] (net)         11                 0.0000     0.6693 f
+  moduleDCache/U452/S (LVT_MUX2HDV2)                    0.1290    0.0000     0.6693 f
+  moduleDCache/U452/Z (LVT_MUX2HDV2)                    0.1281    0.2191     0.8884 r
+  moduleDCache/io_memIO_arvalid (net)           4                 0.0000     0.8884 r
+  moduleDCache/io_memIO_arvalid (ysyx_210153_DCache_0)            0.0000     0.8884 r
+  moduleDCache_io_memIO_arvalid (net)                             0.0000     0.8884 r
+  moduleAXIRMux/io_axiRaIn1_valid (ysyx_210153_AXIRMux_0)         0.0000     0.8884 r
+  moduleAXIRMux/io_axiRaIn1_valid (net)                           0.0000     0.8884 r
+  moduleAXIRMux/U101/A1 (LVT_AOI21HDV4)                 0.1281    0.0000     0.8884 r
+  moduleAXIRMux/U101/ZN (LVT_AOI21HDV4)                 0.1141    0.0968     0.9851 f
+  moduleAXIRMux/n94 (net)                       4                 0.0000     0.9851 f
+  moduleAXIRMux/U105/B1 (LVT_INOR2HDV4)                 0.1141    0.0000     0.9851 f
+  moduleAXIRMux/U105/ZN (LVT_INOR2HDV4)                 0.3766    0.2365     1.2216 r
+  moduleAXIRMux/n86 (net)                      29                 0.0000     1.2216 r
+  moduleAXIRMux/U18/I (LVT_BUFHDV8)                     0.3766    0.0000     1.2216 r
+  moduleAXIRMux/U18/Z (LVT_BUFHDV8)                     0.3026    0.2621     1.4838 r
+  moduleAXIRMux/io_axiRaOut_arid_0__BAR (net)
+                                               74                 0.0000     1.4838 r
+  moduleAXIRMux/U144/A1 (LVT_AND2HDV8)                  0.3026    0.0000     1.4838 r
+  moduleAXIRMux/U144/Z (LVT_AND2HDV8)                   0.0512    0.1285     1.6123 r
+  moduleAXIRMux/io_axiRdIn0_valid (net)         3                 0.0000     1.6123 r
+  moduleAXIRMux/io_axiRdIn0_valid (ysyx_210153_AXIRMux_0)         0.0000     1.6123 r
+  moduleAXIRMux_io_axiRdIn0_valid (net)                           0.0000     1.6123 r
+  moduleICache/io_memIO_rvalid (ysyx_210153_ICache_0)             0.0000     1.6123 r
+  moduleICache/io_memIO_rvalid (net)                              0.0000     1.6123 r
+  moduleICache/U29/A1 (LVT_NAND2HDV4)                   0.0512    0.0000     1.6123 r
+  moduleICache/U29/ZN (LVT_NAND2HDV4)                   0.0997    0.0627     1.6749 f
+  moduleICache/n342 (net)                       5                 0.0000     1.6749 f
+  moduleICache/U15/A1 (LVT_NOR2HDV4)                    0.0997    0.0000     1.6749 f
+  moduleICache/U15/ZN (LVT_NOR2HDV4)                    0.1840    0.1108     1.7858 r
+  moduleICache/n299 (net)                       5                 0.0000     1.7858 r
+  moduleICache/U278/A1 (LVT_NAND3HDV4)                  0.1840    0.0000     1.7858 r
+  moduleICache/U278/ZN (LVT_NAND3HDV4)                  0.0861    0.0750     1.8608 f
+  moduleICache/n178 (net)                       1                 0.0000     1.8608 f
+  moduleICache/U307/A1 (LVT_NAND2HDV2)                  0.0861    0.0000     1.8608 f
+  moduleICache/U307/ZN (LVT_NAND2HDV2)                  0.0982    0.0704     1.9312 r
+  moduleICache/io_cpuIO_cpuResult_ready (net)
+                                                3                 0.0000     1.9312 r
+  moduleICache/io_cpuIO_cpuResult_ready (ysyx_210153_ICache_0)    0.0000     1.9312 r
+  moduleICache_io_cpuIO_cpuResult_ready (net)                     0.0000     1.9312 r
+  moduleMMU/io_icacheIO_cpuResult_ready (ysyx_210153_MMU_0)       0.0000     1.9312 r
+  moduleMMU/io_icacheIO_cpuResult_ready (net)                     0.0000     1.9312 r
+  moduleMMU/U66/A1 (LVT_NOR2HDV2)                       0.0982    0.0000     1.9312 r
+  moduleMMU/U66/ZN (LVT_NOR2HDV2)                       0.0720    0.0478     1.9790 f
+  moduleMMU/n6348 (net)                         1                 0.0000     1.9790 f
+  moduleMMU/U6483/C (LVT_AOI211HDV4)                    0.0720    0.0000     1.9790 f
+  moduleMMU/U6483/ZN (LVT_AOI211HDV4)                   0.2762    0.1605     2.1395 r
+  moduleMMU/io_ifIO_pipelineResult_cpuResult_ready (net)
+                                                4                 0.0000     2.1395 r
+  moduleMMU/io_ifIO_pipelineResult_cpuResult_ready (ysyx_210153_MMU_0)
+                                                                  0.0000     2.1395 r
+  moduleMMU_io_ifIO_pipelineResult_cpuResult_ready (net)          0.0000     2.1395 r
+  moduleIF/io_immu_pipelineResult_cpuResult_ready (ysyx_210153_IF_0)
+                                                                  0.0000     2.1395 r
+  moduleIF/io_immu_pipelineResult_cpuResult_ready (net)           0.0000     2.1395 r
+  moduleIF/U121/A2 (LVT_NAND2HDV4)                      0.2762    0.0000     2.1395 r
+  moduleIF/U121/ZN (LVT_NAND2HDV4)                      0.1232    0.1022     2.2417 f
+  moduleIF/n168 (net)                           5                 0.0000     2.2417 f
+  moduleIF/U122/I (LVT_INHDV4)                          0.1232    0.0000     2.2417 f
+  moduleIF/U122/ZN (LVT_INHDV4)                         0.0530    0.0461     2.2878 r
+  moduleIF/n170 (net)                           2                 0.0000     2.2878 r
+  moduleIF/U6/A1 (LVT_AND2HDV4)                         0.0530    0.0000     2.2878 r
+  moduleIF/U6/Z (LVT_AND2HDV4)                          0.0835    0.1129     2.4007 r
+  moduleIF/n747 (net)                           4                 0.0000     2.4007 r
+  moduleIF/U50/I (LVT_INHDV2)                           0.0835    0.0000     2.4007 r
+  moduleIF/U50/ZN (LVT_INHDV2)                          0.1525    0.1138     2.5145 f
+  moduleIF/n1 (net)                             7                 0.0000     2.5145 f
+  moduleIF/U38/A1 (LVT_OAI21HDV2)                       0.1525    0.0000     2.5145 f
+  moduleIF/U38/ZN (LVT_OAI21HDV2)                       0.1808    0.1397     2.6542 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[21] (net)
+                                                2                 0.0000     2.6542 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[21] (ysyx_210153_IF_0)
+                                                                  0.0000     2.6542 r
+  moduleIF_io_immu_pipelineReq_cpuReq_addr[21] (net)              0.0000     2.6542 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[21] (ysyx_210153_MMU_0)
+                                                                  0.0000     2.6542 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[21] (net)             0.0000     2.6542 r
+  moduleMMU/U305/I (LVT_BUFHDV4)                        0.1808    0.0000     2.6542 r
+  moduleMMU/U305/Z (LVT_BUFHDV4)                        0.1154    0.1456     2.7998 r
+  moduleMMU/n28 (net)                           9                 0.0000     2.7998 r
+  moduleMMU/U1990/A3 (LVT_NAND3HDV2)                    0.1154    0.0000     2.7998 r
+  moduleMMU/U1990/ZN (LVT_NAND3HDV2)                    0.1554    0.1103     2.9101 f
+  moduleMMU/n1128 (net)                         2                 0.0000     2.9101 f
+  moduleMMU/U1991/A1 (LVT_OR2HDV2)                      0.1554    0.0000     2.9101 f
+  moduleMMU/U1991/Z (LVT_OR2HDV2)                       0.0969    0.1994     3.1095 f
+  moduleMMU/n2179 (net)                         2                 0.0000     3.1095 f
+  moduleMMU/U284/I (LVT_INHDV6)                         0.0969    0.0000     3.1095 f
+  moduleMMU/U284/ZN (LVT_INHDV6)                        0.1448    0.1065     3.2159 r
+  moduleMMU/n3245 (net)                        23                 0.0000     3.2159 r
+  moduleMMU/U2070/A1 (LVT_AOI22HDV1)                    0.1448    0.0000     3.2159 r
+  moduleMMU/U2070/ZN (LVT_AOI22HDV1)                    0.1490    0.0982     3.3141 f
+  moduleMMU/n1178 (net)                         1                 0.0000     3.3141 f
+  moduleMMU/U2071/C (LVT_OAI211HDV1)                    0.1490    0.0000     3.3141 f
+  moduleMMU/U2071/ZN (LVT_OAI211HDV1)                   0.2148    0.0936     3.4078 r
+  moduleMMU/n1333 (net)                         2                 0.0000     3.4078 r
+  moduleMMU/U2075/A1 (LVT_OR3HDV1)                      0.2148    0.0000     3.4078 r
+  moduleMMU/U2075/Z (LVT_OR3HDV1)                       0.0599    0.1276     3.5354 r
+  moduleMMU/n1181 (net)                         1                 0.0000     3.5354 r
+  moduleMMU/U2076/B (LVT_OAI21HDV1)                     0.0599    0.0000     3.5354 r
+  moduleMMU/U2076/ZN (LVT_OAI21HDV1)                    0.0930    0.0592     3.5946 f
+  moduleMMU/n1183 (net)                         1                 0.0000     3.5946 f
+  moduleMMU/U2077/A2 (LVT_NOR2HDV1)                     0.0930    0.0000     3.5946 f
+  moduleMMU/U2077/ZN (LVT_NOR2HDV1)                     0.1048    0.0839     3.6785 r
+  moduleMMU/n1198 (net)                         1                 0.0000     3.6785 r
+  moduleMMU/U414/A1 (LVT_NAND4HDV1)                     0.1048    0.0000     3.6785 r
+  moduleMMU/U414/ZN (LVT_NAND4HDV1)                     0.1474    0.1052     3.7837 f
+  moduleMMU/n1284 (net)                         1                 0.0000     3.7837 f
+  moduleMMU/U2199/A2 (LVT_OAI22HDV2)                    0.1474    0.0000     3.7837 f
+  moduleMMU/U2199/ZN (LVT_OAI22HDV2)                    0.1939    0.0973     3.8810 r
+  moduleMMU/n1317 (net)                         1                 0.0000     3.8810 r
+  moduleMMU/U2224/A1 (LVT_NAND4HDV2)                    0.1939    0.0000     3.8810 r
+  moduleMMU/U2224/ZN (LVT_NAND4HDV2)                    0.1332    0.1095     3.9905 f
+  moduleMMU/n1332 (net)                         1                 0.0000     3.9905 f
+  moduleMMU/U2229/A1 (LVT_NOR2HDV2)                     0.1332    0.0000     3.9905 f
+  moduleMMU/U2229/ZN (LVT_NOR2HDV2)                     0.1054    0.0838     4.0743 r
+  moduleMMU/n1430 (net)                         1                 0.0000     4.0743 r
+  moduleMMU/U2276/A1 (LVT_NAND3HDV2)                    0.1054    0.0000     4.0743 r
+  moduleMMU/U2276/ZN (LVT_NAND3HDV2)                    0.1163    0.0898     4.1641 f
+  moduleMMU/n1459 (net)                         1                 0.0000     4.1641 f
+  moduleMMU/U2294/B1 (LVT_AOI22HDV4)                    0.1163    0.0000     4.1641 f
+  moduleMMU/U2294/ZN (LVT_AOI22HDV4)                    0.2118    0.1321     4.2962 r
+  moduleMMU/n2799 (net)                         2                 0.0000     4.2962 r
+  moduleMMU/U2295/A1 (LVT_NAND2HDV8)                    0.2118    0.0000     4.2962 r
+  moduleMMU/U2295/ZN (LVT_NAND2HDV8)                    0.1195    0.0953     4.3915 f
+  moduleMMU/n3019 (net)                        10                 0.0000     4.3915 f
+  moduleMMU/U2722/A1 (LVT_OAI22HDV2)                    0.1195    0.0000     4.3915 f
+  moduleMMU/U2722/ZN (LVT_OAI22HDV2)                    0.4665    0.2409     4.6324 r
+  moduleMMU/n1940 (net)                         9                 0.0000     4.6324 r
+  moduleMMU/U143/A2 (LVT_AOI21HDV1)                     0.4665    0.0000     4.6324 r
+  moduleMMU/U143/ZN (LVT_AOI21HDV1)                     0.1459    0.1108     4.7432 f
+  moduleMMU/n2779 (net)                         1                 0.0000     4.7432 f
+  moduleMMU/U3525/A1 (LVT_NAND4HDV2)                    0.1459    0.0000     4.7432 f
+  moduleMMU/U3525/ZN (LVT_NAND4HDV2)                    0.1453    0.1058     4.8490 r
+  moduleMMU/io_icacheIO_cpuReq_addr[26] (net)
+                                                4                 0.0000     4.8490 r
+  moduleMMU/U281/I (LVT_INHDV1)                         0.1453    0.0000     4.8490 r
+  moduleMMU/U281/ZN (LVT_INHDV1)                        0.0561    0.0473     4.8963 f
+  moduleMMU/n3334 (net)                         1                 0.0000     4.8963 f
+  moduleMMU/U3964/B1 (LVT_INAND3HDV2)                   0.0561    0.0000     4.8963 f
+  moduleMMU/U3964/ZN (LVT_INAND3HDV2)                   0.0902    0.0635     4.9597 r
+  moduleMMU/n3354 (net)                         2                 0.0000     4.9597 r
+  moduleMMU/U3976/A1 (LVT_NAND2HDV2)                    0.0902    0.0000     4.9597 r
+  moduleMMU/U3976/ZN (LVT_NAND2HDV2)                    0.0599    0.0501     5.0098 f
+  moduleMMU/n3350 (net)                         1                 0.0000     5.0098 f
+  moduleMMU/U3978/A1 (LVT_NOR2HDV2)                     0.0599    0.0000     5.0098 f
+  moduleMMU/U3978/ZN (LVT_NOR2HDV2)                     0.1122    0.0699     5.0798 r
+  moduleMMU/n3351 (net)                         1                 0.0000     5.0798 r
+  moduleMMU/U3979/I0 (LVT_MUX2NHDV2)                    0.1122    0.0000     5.0798 r
+  moduleMMU/U3979/ZN (LVT_MUX2NHDV2)                    0.0800    0.0743     5.1541 f
+  moduleMMU/n3352 (net)                         1                 0.0000     5.1541 f
+  moduleMMU/U3980/A1 (LVT_NOR2HDV2)                     0.0800    0.0000     5.1541 f
+  moduleMMU/U3980/ZN (LVT_NOR2HDV2)                     0.1628    0.0994     5.2535 r
+  moduleMMU/n3362 (net)                         1                 0.0000     5.2535 r
+  moduleMMU/U3982/I0 (LVT_MUX2NHDV4)                    0.1628    0.0000     5.2535 r
+  moduleMMU/U3982/ZN (LVT_MUX2NHDV4)                    0.1053    0.0966     5.3502 f
+  moduleMMU/n6387 (net)                         3                 0.0000     5.3502 f
+  moduleMMU/U4223/A1 (LVT_NAND3HDV2)                    0.1053    0.0000     5.3502 f
+  moduleMMU/U4223/ZN (LVT_NAND3HDV2)                    0.0997    0.0690     5.4191 r
+  moduleMMU/n6169 (net)                         2                 0.0000     5.4191 r
+  moduleMMU/U4224/A1 (LVT_NAND2HDV2)                    0.0997    0.0000     5.4191 r
+  moduleMMU/U4224/ZN (LVT_NAND2HDV2)                    0.1052    0.0832     5.5024 f
+  moduleMMU/n6281 (net)                         4                 0.0000     5.5024 f
+  moduleMMU/U4225/A1 (LVT_NOR2HDV2)                     0.1052    0.0000     5.5024 f
+  moduleMMU/U4225/ZN (LVT_NOR2HDV2)                     0.2641    0.1700     5.6724 r
+  moduleMMU/n6409 (net)                         6                 0.0000     5.6724 r
+  moduleMMU/U6381/A1 (LVT_NAND2HDV2)                    0.2641    0.0000     5.6724 r
+  moduleMMU/U6381/ZN (LVT_NAND2HDV2)                    0.1013    0.0835     5.7558 f
+  moduleMMU/n6234 (net)                         2                 0.0000     5.7558 f
+  moduleMMU/U5/A2 (LVT_NOR2HDV2)                        0.1013    0.0000     5.7558 f
+  moduleMMU/U5/ZN (LVT_NOR2HDV2)                        0.1477    0.1054     5.8613 r
+  moduleMMU/n6278 (net)                         2                 0.0000     5.8613 r
+  moduleMMU/U2318/A1 (LVT_NAND2HDV3)                    0.1477    0.0000     5.8613 r
+  moduleMMU/U2318/ZN (LVT_NAND2HDV3)                    0.3697    0.2521     6.1134 f
+  moduleMMU/n6338 (net)                        27                 0.0000     6.1134 f
+  moduleMMU/U935/A2 (LVT_OAI21HDV1)                     0.3697    0.0000     6.1134 f
+  moduleMMU/U935/ZN (LVT_OAI21HDV1)                     0.1688    0.1418     6.2551 r
+  moduleMMU/n5073 (net)                         1                 0.0000     6.2551 r
+  moduleMMU/vaddr_vpn_1_reg_3_/D (LVT_DQHDV1)           0.1688    0.0000     6.2551 r
+  data arrival time                                                          6.2551
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  moduleMMU/vaddr_vpn_1_reg_3_/CK (LVT_DQHDV1)                    0.0000     6.3500 r
+  library setup time                                             -0.0948     6.2552
+  data required time                                                         6.2552
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2552
+  data arrival time                                                         -6.2551
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
+  Startpoint: moduleDCache/state_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: moduleMMU/vaddr_vpn_0_reg_1_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  moduleDCache/state_reg_2_/CK (LVT_DQHDV4)             0.0000    0.0000 #   0.0000 r
+  moduleDCache/state_reg_2_/Q (LVT_DQHDV4)              0.1081    0.2800     0.2800 r
+  moduleDCache/state[2] (net)                   7                 0.0000     0.2800 r
+  moduleDCache/U567/A2 (LVT_NAND2HDV2)                  0.1081    0.0000     0.2800 r
+  moduleDCache/U567/ZN (LVT_NAND2HDV2)                  0.1124    0.0890     0.3690 f
+  moduleDCache/n3255 (net)                      5                 0.0000     0.3690 f
+  moduleDCache/U104/I (LVT_INHDV2)                      0.1124    0.0000     0.3690 f
+  moduleDCache/U104/ZN (LVT_INHDV2)                     0.0565    0.0493     0.4184 r
+  moduleDCache/n379 (net)                       1                 0.0000     0.4184 r
+  moduleDCache/U103/A1 (LVT_NAND2HDV2)                  0.0565    0.0000     0.4184 r
+  moduleDCache/U103/ZN (LVT_NAND2HDV2)                  0.0913    0.0682     0.4866 f
+  moduleDCache/n519 (net)                       3                 0.0000     0.4866 f
+  moduleDCache/U568/A1 (LVT_NAND2HDV2)                  0.0913    0.0000     0.4866 f
+  moduleDCache/U568/ZN (LVT_NAND2HDV2)                  0.1090    0.0811     0.5677 r
+  moduleDCache/n758 (net)                       3                 0.0000     0.5677 r
+  moduleDCache/U96/A1 (LVT_NAND2HDV4)                   0.1090    0.0000     0.5677 r
+  moduleDCache/U96/ZN (LVT_NAND2HDV4)                   0.1290    0.1016     0.6693 f
+  moduleDCache/io_memIO_arlen[0] (net)         11                 0.0000     0.6693 f
+  moduleDCache/U452/S (LVT_MUX2HDV2)                    0.1290    0.0000     0.6693 f
+  moduleDCache/U452/Z (LVT_MUX2HDV2)                    0.1281    0.2191     0.8884 r
+  moduleDCache/io_memIO_arvalid (net)           4                 0.0000     0.8884 r
+  moduleDCache/io_memIO_arvalid (ysyx_210153_DCache_0)            0.0000     0.8884 r
+  moduleDCache_io_memIO_arvalid (net)                             0.0000     0.8884 r
+  moduleAXIRMux/io_axiRaIn1_valid (ysyx_210153_AXIRMux_0)         0.0000     0.8884 r
+  moduleAXIRMux/io_axiRaIn1_valid (net)                           0.0000     0.8884 r
+  moduleAXIRMux/U101/A1 (LVT_AOI21HDV4)                 0.1281    0.0000     0.8884 r
+  moduleAXIRMux/U101/ZN (LVT_AOI21HDV4)                 0.1141    0.0968     0.9851 f
+  moduleAXIRMux/n94 (net)                       4                 0.0000     0.9851 f
+  moduleAXIRMux/U105/B1 (LVT_INOR2HDV4)                 0.1141    0.0000     0.9851 f
+  moduleAXIRMux/U105/ZN (LVT_INOR2HDV4)                 0.3766    0.2365     1.2216 r
+  moduleAXIRMux/n86 (net)                      29                 0.0000     1.2216 r
+  moduleAXIRMux/U18/I (LVT_BUFHDV8)                     0.3766    0.0000     1.2216 r
+  moduleAXIRMux/U18/Z (LVT_BUFHDV8)                     0.3026    0.2621     1.4838 r
+  moduleAXIRMux/io_axiRaOut_arid_0__BAR (net)
+                                               74                 0.0000     1.4838 r
+  moduleAXIRMux/U144/A1 (LVT_AND2HDV8)                  0.3026    0.0000     1.4838 r
+  moduleAXIRMux/U144/Z (LVT_AND2HDV8)                   0.0512    0.1285     1.6123 r
+  moduleAXIRMux/io_axiRdIn0_valid (net)         3                 0.0000     1.6123 r
+  moduleAXIRMux/io_axiRdIn0_valid (ysyx_210153_AXIRMux_0)         0.0000     1.6123 r
+  moduleAXIRMux_io_axiRdIn0_valid (net)                           0.0000     1.6123 r
+  moduleICache/io_memIO_rvalid (ysyx_210153_ICache_0)             0.0000     1.6123 r
+  moduleICache/io_memIO_rvalid (net)                              0.0000     1.6123 r
+  moduleICache/U29/A1 (LVT_NAND2HDV4)                   0.0512    0.0000     1.6123 r
+  moduleICache/U29/ZN (LVT_NAND2HDV4)                   0.0997    0.0627     1.6749 f
+  moduleICache/n342 (net)                       5                 0.0000     1.6749 f
+  moduleICache/U15/A1 (LVT_NOR2HDV4)                    0.0997    0.0000     1.6749 f
+  moduleICache/U15/ZN (LVT_NOR2HDV4)                    0.1840    0.1108     1.7858 r
+  moduleICache/n299 (net)                       5                 0.0000     1.7858 r
+  moduleICache/U278/A1 (LVT_NAND3HDV4)                  0.1840    0.0000     1.7858 r
+  moduleICache/U278/ZN (LVT_NAND3HDV4)                  0.0861    0.0750     1.8608 f
+  moduleICache/n178 (net)                       1                 0.0000     1.8608 f
+  moduleICache/U307/A1 (LVT_NAND2HDV2)                  0.0861    0.0000     1.8608 f
+  moduleICache/U307/ZN (LVT_NAND2HDV2)                  0.0982    0.0704     1.9312 r
+  moduleICache/io_cpuIO_cpuResult_ready (net)
+                                                3                 0.0000     1.9312 r
+  moduleICache/io_cpuIO_cpuResult_ready (ysyx_210153_ICache_0)    0.0000     1.9312 r
+  moduleICache_io_cpuIO_cpuResult_ready (net)                     0.0000     1.9312 r
+  moduleMMU/io_icacheIO_cpuResult_ready (ysyx_210153_MMU_0)       0.0000     1.9312 r
+  moduleMMU/io_icacheIO_cpuResult_ready (net)                     0.0000     1.9312 r
+  moduleMMU/U66/A1 (LVT_NOR2HDV2)                       0.0982    0.0000     1.9312 r
+  moduleMMU/U66/ZN (LVT_NOR2HDV2)                       0.0720    0.0478     1.9790 f
+  moduleMMU/n6348 (net)                         1                 0.0000     1.9790 f
+  moduleMMU/U6483/C (LVT_AOI211HDV4)                    0.0720    0.0000     1.9790 f
+  moduleMMU/U6483/ZN (LVT_AOI211HDV4)                   0.2762    0.1605     2.1395 r
+  moduleMMU/io_ifIO_pipelineResult_cpuResult_ready (net)
+                                                4                 0.0000     2.1395 r
+  moduleMMU/io_ifIO_pipelineResult_cpuResult_ready (ysyx_210153_MMU_0)
+                                                                  0.0000     2.1395 r
+  moduleMMU_io_ifIO_pipelineResult_cpuResult_ready (net)          0.0000     2.1395 r
+  moduleIF/io_immu_pipelineResult_cpuResult_ready (ysyx_210153_IF_0)
+                                                                  0.0000     2.1395 r
+  moduleIF/io_immu_pipelineResult_cpuResult_ready (net)           0.0000     2.1395 r
+  moduleIF/U121/A2 (LVT_NAND2HDV4)                      0.2762    0.0000     2.1395 r
+  moduleIF/U121/ZN (LVT_NAND2HDV4)                      0.1232    0.1022     2.2417 f
+  moduleIF/n168 (net)                           5                 0.0000     2.2417 f
+  moduleIF/U122/I (LVT_INHDV4)                          0.1232    0.0000     2.2417 f
+  moduleIF/U122/ZN (LVT_INHDV4)                         0.0530    0.0461     2.2878 r
+  moduleIF/n170 (net)                           2                 0.0000     2.2878 r
+  moduleIF/U6/A1 (LVT_AND2HDV4)                         0.0530    0.0000     2.2878 r
+  moduleIF/U6/Z (LVT_AND2HDV4)                          0.0835    0.1129     2.4007 r
+  moduleIF/n747 (net)                           4                 0.0000     2.4007 r
+  moduleIF/U50/I (LVT_INHDV2)                           0.0835    0.0000     2.4007 r
+  moduleIF/U50/ZN (LVT_INHDV2)                          0.1525    0.1138     2.5145 f
+  moduleIF/n1 (net)                             7                 0.0000     2.5145 f
+  moduleIF/U38/A1 (LVT_OAI21HDV2)                       0.1525    0.0000     2.5145 f
+  moduleIF/U38/ZN (LVT_OAI21HDV2)                       0.1808    0.1397     2.6542 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[21] (net)
+                                                2                 0.0000     2.6542 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[21] (ysyx_210153_IF_0)
+                                                                  0.0000     2.6542 r
+  moduleIF_io_immu_pipelineReq_cpuReq_addr[21] (net)              0.0000     2.6542 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[21] (ysyx_210153_MMU_0)
+                                                                  0.0000     2.6542 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[21] (net)             0.0000     2.6542 r
+  moduleMMU/U305/I (LVT_BUFHDV4)                        0.1808    0.0000     2.6542 r
+  moduleMMU/U305/Z (LVT_BUFHDV4)                        0.1154    0.1456     2.7998 r
+  moduleMMU/n28 (net)                           9                 0.0000     2.7998 r
+  moduleMMU/U1990/A3 (LVT_NAND3HDV2)                    0.1154    0.0000     2.7998 r
+  moduleMMU/U1990/ZN (LVT_NAND3HDV2)                    0.1554    0.1103     2.9101 f
+  moduleMMU/n1128 (net)                         2                 0.0000     2.9101 f
+  moduleMMU/U1991/A1 (LVT_OR2HDV2)                      0.1554    0.0000     2.9101 f
+  moduleMMU/U1991/Z (LVT_OR2HDV2)                       0.0969    0.1994     3.1095 f
+  moduleMMU/n2179 (net)                         2                 0.0000     3.1095 f
+  moduleMMU/U284/I (LVT_INHDV6)                         0.0969    0.0000     3.1095 f
+  moduleMMU/U284/ZN (LVT_INHDV6)                        0.1448    0.1065     3.2159 r
+  moduleMMU/n3245 (net)                        23                 0.0000     3.2159 r
+  moduleMMU/U2070/A1 (LVT_AOI22HDV1)                    0.1448    0.0000     3.2159 r
+  moduleMMU/U2070/ZN (LVT_AOI22HDV1)                    0.1490    0.0982     3.3141 f
+  moduleMMU/n1178 (net)                         1                 0.0000     3.3141 f
+  moduleMMU/U2071/C (LVT_OAI211HDV1)                    0.1490    0.0000     3.3141 f
+  moduleMMU/U2071/ZN (LVT_OAI211HDV1)                   0.2148    0.0936     3.4078 r
+  moduleMMU/n1333 (net)                         2                 0.0000     3.4078 r
+  moduleMMU/U2075/A1 (LVT_OR3HDV1)                      0.2148    0.0000     3.4078 r
+  moduleMMU/U2075/Z (LVT_OR3HDV1)                       0.0599    0.1276     3.5354 r
+  moduleMMU/n1181 (net)                         1                 0.0000     3.5354 r
+  moduleMMU/U2076/B (LVT_OAI21HDV1)                     0.0599    0.0000     3.5354 r
+  moduleMMU/U2076/ZN (LVT_OAI21HDV1)                    0.0930    0.0592     3.5946 f
+  moduleMMU/n1183 (net)                         1                 0.0000     3.5946 f
+  moduleMMU/U2077/A2 (LVT_NOR2HDV1)                     0.0930    0.0000     3.5946 f
+  moduleMMU/U2077/ZN (LVT_NOR2HDV1)                     0.1048    0.0839     3.6785 r
+  moduleMMU/n1198 (net)                         1                 0.0000     3.6785 r
+  moduleMMU/U414/A1 (LVT_NAND4HDV1)                     0.1048    0.0000     3.6785 r
+  moduleMMU/U414/ZN (LVT_NAND4HDV1)                     0.1474    0.1052     3.7837 f
+  moduleMMU/n1284 (net)                         1                 0.0000     3.7837 f
+  moduleMMU/U2199/A2 (LVT_OAI22HDV2)                    0.1474    0.0000     3.7837 f
+  moduleMMU/U2199/ZN (LVT_OAI22HDV2)                    0.1939    0.0973     3.8810 r
+  moduleMMU/n1317 (net)                         1                 0.0000     3.8810 r
+  moduleMMU/U2224/A1 (LVT_NAND4HDV2)                    0.1939    0.0000     3.8810 r
+  moduleMMU/U2224/ZN (LVT_NAND4HDV2)                    0.1332    0.1095     3.9905 f
+  moduleMMU/n1332 (net)                         1                 0.0000     3.9905 f
+  moduleMMU/U2229/A1 (LVT_NOR2HDV2)                     0.1332    0.0000     3.9905 f
+  moduleMMU/U2229/ZN (LVT_NOR2HDV2)                     0.1054    0.0838     4.0743 r
+  moduleMMU/n1430 (net)                         1                 0.0000     4.0743 r
+  moduleMMU/U2276/A1 (LVT_NAND3HDV2)                    0.1054    0.0000     4.0743 r
+  moduleMMU/U2276/ZN (LVT_NAND3HDV2)                    0.1163    0.0898     4.1641 f
+  moduleMMU/n1459 (net)                         1                 0.0000     4.1641 f
+  moduleMMU/U2294/B1 (LVT_AOI22HDV4)                    0.1163    0.0000     4.1641 f
+  moduleMMU/U2294/ZN (LVT_AOI22HDV4)                    0.2118    0.1321     4.2962 r
+  moduleMMU/n2799 (net)                         2                 0.0000     4.2962 r
+  moduleMMU/U2295/A1 (LVT_NAND2HDV8)                    0.2118    0.0000     4.2962 r
+  moduleMMU/U2295/ZN (LVT_NAND2HDV8)                    0.1195    0.0953     4.3915 f
+  moduleMMU/n3019 (net)                        10                 0.0000     4.3915 f
+  moduleMMU/U2722/A1 (LVT_OAI22HDV2)                    0.1195    0.0000     4.3915 f
+  moduleMMU/U2722/ZN (LVT_OAI22HDV2)                    0.4665    0.2409     4.6324 r
+  moduleMMU/n1940 (net)                         9                 0.0000     4.6324 r
+  moduleMMU/U143/A2 (LVT_AOI21HDV1)                     0.4665    0.0000     4.6324 r
+  moduleMMU/U143/ZN (LVT_AOI21HDV1)                     0.1459    0.1108     4.7432 f
+  moduleMMU/n2779 (net)                         1                 0.0000     4.7432 f
+  moduleMMU/U3525/A1 (LVT_NAND4HDV2)                    0.1459    0.0000     4.7432 f
+  moduleMMU/U3525/ZN (LVT_NAND4HDV2)                    0.1453    0.1058     4.8490 r
+  moduleMMU/io_icacheIO_cpuReq_addr[26] (net)
+                                                4                 0.0000     4.8490 r
+  moduleMMU/U281/I (LVT_INHDV1)                         0.1453    0.0000     4.8490 r
+  moduleMMU/U281/ZN (LVT_INHDV1)                        0.0561    0.0473     4.8963 f
+  moduleMMU/n3334 (net)                         1                 0.0000     4.8963 f
+  moduleMMU/U3964/B1 (LVT_INAND3HDV2)                   0.0561    0.0000     4.8963 f
+  moduleMMU/U3964/ZN (LVT_INAND3HDV2)                   0.0902    0.0635     4.9597 r
+  moduleMMU/n3354 (net)                         2                 0.0000     4.9597 r
+  moduleMMU/U3976/A1 (LVT_NAND2HDV2)                    0.0902    0.0000     4.9597 r
+  moduleMMU/U3976/ZN (LVT_NAND2HDV2)                    0.0599    0.0501     5.0098 f
+  moduleMMU/n3350 (net)                         1                 0.0000     5.0098 f
+  moduleMMU/U3978/A1 (LVT_NOR2HDV2)                     0.0599    0.0000     5.0098 f
+  moduleMMU/U3978/ZN (LVT_NOR2HDV2)                     0.1122    0.0699     5.0798 r
+  moduleMMU/n3351 (net)                         1                 0.0000     5.0798 r
+  moduleMMU/U3979/I0 (LVT_MUX2NHDV2)                    0.1122    0.0000     5.0798 r
+  moduleMMU/U3979/ZN (LVT_MUX2NHDV2)                    0.0800    0.0743     5.1541 f
+  moduleMMU/n3352 (net)                         1                 0.0000     5.1541 f
+  moduleMMU/U3980/A1 (LVT_NOR2HDV2)                     0.0800    0.0000     5.1541 f
+  moduleMMU/U3980/ZN (LVT_NOR2HDV2)                     0.1628    0.0994     5.2535 r
+  moduleMMU/n3362 (net)                         1                 0.0000     5.2535 r
+  moduleMMU/U3982/I0 (LVT_MUX2NHDV4)                    0.1628    0.0000     5.2535 r
+  moduleMMU/U3982/ZN (LVT_MUX2NHDV4)                    0.1053    0.0966     5.3502 f
+  moduleMMU/n6387 (net)                         3                 0.0000     5.3502 f
+  moduleMMU/U4223/A1 (LVT_NAND3HDV2)                    0.1053    0.0000     5.3502 f
+  moduleMMU/U4223/ZN (LVT_NAND3HDV2)                    0.0997    0.0690     5.4191 r
+  moduleMMU/n6169 (net)                         2                 0.0000     5.4191 r
+  moduleMMU/U4224/A1 (LVT_NAND2HDV2)                    0.0997    0.0000     5.4191 r
+  moduleMMU/U4224/ZN (LVT_NAND2HDV2)                    0.1052    0.0832     5.5024 f
+  moduleMMU/n6281 (net)                         4                 0.0000     5.5024 f
+  moduleMMU/U4225/A1 (LVT_NOR2HDV2)                     0.1052    0.0000     5.5024 f
+  moduleMMU/U4225/ZN (LVT_NOR2HDV2)                     0.2641    0.1700     5.6724 r
+  moduleMMU/n6409 (net)                         6                 0.0000     5.6724 r
+  moduleMMU/U6381/A1 (LVT_NAND2HDV2)                    0.2641    0.0000     5.6724 r
+  moduleMMU/U6381/ZN (LVT_NAND2HDV2)                    0.1013    0.0835     5.7558 f
+  moduleMMU/n6234 (net)                         2                 0.0000     5.7558 f
+  moduleMMU/U5/A2 (LVT_NOR2HDV2)                        0.1013    0.0000     5.7558 f
+  moduleMMU/U5/ZN (LVT_NOR2HDV2)                        0.1477    0.1054     5.8613 r
+  moduleMMU/n6278 (net)                         2                 0.0000     5.8613 r
+  moduleMMU/U2318/A1 (LVT_NAND2HDV3)                    0.1477    0.0000     5.8613 r
+  moduleMMU/U2318/ZN (LVT_NAND2HDV3)                    0.3697    0.2521     6.1134 f
+  moduleMMU/n6338 (net)                        27                 0.0000     6.1134 f
+  moduleMMU/U6467/A2 (LVT_OAI21HDV1)                    0.3697    0.0000     6.1134 f
+  moduleMMU/U6467/ZN (LVT_OAI21HDV1)                    0.1688    0.1418     6.2551 r
+  moduleMMU/n5110 (net)                         1                 0.0000     6.2551 r
+  moduleMMU/vaddr_vpn_0_reg_1_/D (LVT_DQHDV1)           0.1688    0.0000     6.2551 r
+  data arrival time                                                          6.2551
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  moduleMMU/vaddr_vpn_0_reg_1_/CK (LVT_DQHDV1)                    0.0000     6.3500 r
+  library setup time                                             -0.0948     6.2552
+  data required time                                                         6.2552
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2552
+  data arrival time                                                         -6.2551
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000
+  Startpoint: moduleDCache/state_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: moduleMMU/vaddr_vpn_0_reg_8_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  moduleDCache/state_reg_2_/CK (LVT_DQHDV4)             0.0000    0.0000 #   0.0000 r
+  moduleDCache/state_reg_2_/Q (LVT_DQHDV4)              0.1081    0.2800     0.2800 r
+  moduleDCache/state[2] (net)                   7                 0.0000     0.2800 r
+  moduleDCache/U567/A2 (LVT_NAND2HDV2)                  0.1081    0.0000     0.2800 r
+  moduleDCache/U567/ZN (LVT_NAND2HDV2)                  0.1124    0.0890     0.3690 f
+  moduleDCache/n3255 (net)                      5                 0.0000     0.3690 f
+  moduleDCache/U104/I (LVT_INHDV2)                      0.1124    0.0000     0.3690 f
+  moduleDCache/U104/ZN (LVT_INHDV2)                     0.0565    0.0493     0.4184 r
+  moduleDCache/n379 (net)                       1                 0.0000     0.4184 r
+  moduleDCache/U103/A1 (LVT_NAND2HDV2)                  0.0565    0.0000     0.4184 r
+  moduleDCache/U103/ZN (LVT_NAND2HDV2)                  0.0913    0.0682     0.4866 f
+  moduleDCache/n519 (net)                       3                 0.0000     0.4866 f
+  moduleDCache/U568/A1 (LVT_NAND2HDV2)                  0.0913    0.0000     0.4866 f
+  moduleDCache/U568/ZN (LVT_NAND2HDV2)                  0.1090    0.0811     0.5677 r
+  moduleDCache/n758 (net)                       3                 0.0000     0.5677 r
+  moduleDCache/U96/A1 (LVT_NAND2HDV4)                   0.1090    0.0000     0.5677 r
+  moduleDCache/U96/ZN (LVT_NAND2HDV4)                   0.1290    0.1016     0.6693 f
+  moduleDCache/io_memIO_arlen[0] (net)         11                 0.0000     0.6693 f
+  moduleDCache/U452/S (LVT_MUX2HDV2)                    0.1290    0.0000     0.6693 f
+  moduleDCache/U452/Z (LVT_MUX2HDV2)                    0.1281    0.2191     0.8884 r
+  moduleDCache/io_memIO_arvalid (net)           4                 0.0000     0.8884 r
+  moduleDCache/io_memIO_arvalid (ysyx_210153_DCache_0)            0.0000     0.8884 r
+  moduleDCache_io_memIO_arvalid (net)                             0.0000     0.8884 r
+  moduleAXIRMux/io_axiRaIn1_valid (ysyx_210153_AXIRMux_0)         0.0000     0.8884 r
+  moduleAXIRMux/io_axiRaIn1_valid (net)                           0.0000     0.8884 r
+  moduleAXIRMux/U101/A1 (LVT_AOI21HDV4)                 0.1281    0.0000     0.8884 r
+  moduleAXIRMux/U101/ZN (LVT_AOI21HDV4)                 0.1141    0.0968     0.9851 f
+  moduleAXIRMux/n94 (net)                       4                 0.0000     0.9851 f
+  moduleAXIRMux/U105/B1 (LVT_INOR2HDV4)                 0.1141    0.0000     0.9851 f
+  moduleAXIRMux/U105/ZN (LVT_INOR2HDV4)                 0.3766    0.2365     1.2216 r
+  moduleAXIRMux/n86 (net)                      29                 0.0000     1.2216 r
+  moduleAXIRMux/U18/I (LVT_BUFHDV8)                     0.3766    0.0000     1.2216 r
+  moduleAXIRMux/U18/Z (LVT_BUFHDV8)                     0.3026    0.2621     1.4838 r
+  moduleAXIRMux/io_axiRaOut_arid_0__BAR (net)
+                                               74                 0.0000     1.4838 r
+  moduleAXIRMux/U144/A1 (LVT_AND2HDV8)                  0.3026    0.0000     1.4838 r
+  moduleAXIRMux/U144/Z (LVT_AND2HDV8)                   0.0512    0.1285     1.6123 r
+  moduleAXIRMux/io_axiRdIn0_valid (net)         3                 0.0000     1.6123 r
+  moduleAXIRMux/io_axiRdIn0_valid (ysyx_210153_AXIRMux_0)         0.0000     1.6123 r
+  moduleAXIRMux_io_axiRdIn0_valid (net)                           0.0000     1.6123 r
+  moduleICache/io_memIO_rvalid (ysyx_210153_ICache_0)             0.0000     1.6123 r
+  moduleICache/io_memIO_rvalid (net)                              0.0000     1.6123 r
+  moduleICache/U29/A1 (LVT_NAND2HDV4)                   0.0512    0.0000     1.6123 r
+  moduleICache/U29/ZN (LVT_NAND2HDV4)                   0.0997    0.0627     1.6749 f
+  moduleICache/n342 (net)                       5                 0.0000     1.6749 f
+  moduleICache/U15/A1 (LVT_NOR2HDV4)                    0.0997    0.0000     1.6749 f
+  moduleICache/U15/ZN (LVT_NOR2HDV4)                    0.1840    0.1108     1.7858 r
+  moduleICache/n299 (net)                       5                 0.0000     1.7858 r
+  moduleICache/U278/A1 (LVT_NAND3HDV4)                  0.1840    0.0000     1.7858 r
+  moduleICache/U278/ZN (LVT_NAND3HDV4)                  0.0861    0.0750     1.8608 f
+  moduleICache/n178 (net)                       1                 0.0000     1.8608 f
+  moduleICache/U307/A1 (LVT_NAND2HDV2)                  0.0861    0.0000     1.8608 f
+  moduleICache/U307/ZN (LVT_NAND2HDV2)                  0.0982    0.0704     1.9312 r
+  moduleICache/io_cpuIO_cpuResult_ready (net)
+                                                3                 0.0000     1.9312 r
+  moduleICache/io_cpuIO_cpuResult_ready (ysyx_210153_ICache_0)    0.0000     1.9312 r
+  moduleICache_io_cpuIO_cpuResult_ready (net)                     0.0000     1.9312 r
+  moduleMMU/io_icacheIO_cpuResult_ready (ysyx_210153_MMU_0)       0.0000     1.9312 r
+  moduleMMU/io_icacheIO_cpuResult_ready (net)                     0.0000     1.9312 r
+  moduleMMU/U66/A1 (LVT_NOR2HDV2)                       0.0982    0.0000     1.9312 r
+  moduleMMU/U66/ZN (LVT_NOR2HDV2)                       0.0720    0.0478     1.9790 f
+  moduleMMU/n6348 (net)                         1                 0.0000     1.9790 f
+  moduleMMU/U6483/C (LVT_AOI211HDV4)                    0.0720    0.0000     1.9790 f
+  moduleMMU/U6483/ZN (LVT_AOI211HDV4)                   0.2762    0.1605     2.1395 r
+  moduleMMU/io_ifIO_pipelineResult_cpuResult_ready (net)
+                                                4                 0.0000     2.1395 r
+  moduleMMU/io_ifIO_pipelineResult_cpuResult_ready (ysyx_210153_MMU_0)
+                                                                  0.0000     2.1395 r
+  moduleMMU_io_ifIO_pipelineResult_cpuResult_ready (net)          0.0000     2.1395 r
+  moduleIF/io_immu_pipelineResult_cpuResult_ready (ysyx_210153_IF_0)
+                                                                  0.0000     2.1395 r
+  moduleIF/io_immu_pipelineResult_cpuResult_ready (net)           0.0000     2.1395 r
+  moduleIF/U121/A2 (LVT_NAND2HDV4)                      0.2762    0.0000     2.1395 r
+  moduleIF/U121/ZN (LVT_NAND2HDV4)                      0.1232    0.1022     2.2417 f
+  moduleIF/n168 (net)                           5                 0.0000     2.2417 f
+  moduleIF/U122/I (LVT_INHDV4)                          0.1232    0.0000     2.2417 f
+  moduleIF/U122/ZN (LVT_INHDV4)                         0.0530    0.0461     2.2878 r
+  moduleIF/n170 (net)                           2                 0.0000     2.2878 r
+  moduleIF/U6/A1 (LVT_AND2HDV4)                         0.0530    0.0000     2.2878 r
+  moduleIF/U6/Z (LVT_AND2HDV4)                          0.0835    0.1129     2.4007 r
+  moduleIF/n747 (net)                           4                 0.0000     2.4007 r
+  moduleIF/U50/I (LVT_INHDV2)                           0.0835    0.0000     2.4007 r
+  moduleIF/U50/ZN (LVT_INHDV2)                          0.1525    0.1138     2.5145 f
+  moduleIF/n1 (net)                             7                 0.0000     2.5145 f
+  moduleIF/U38/A1 (LVT_OAI21HDV2)                       0.1525    0.0000     2.5145 f
+  moduleIF/U38/ZN (LVT_OAI21HDV2)                       0.1808    0.1397     2.6542 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[21] (net)
+                                                2                 0.0000     2.6542 r
+  moduleIF/io_immu_pipelineReq_cpuReq_addr[21] (ysyx_210153_IF_0)
+                                                                  0.0000     2.6542 r
+  moduleIF_io_immu_pipelineReq_cpuReq_addr[21] (net)              0.0000     2.6542 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[21] (ysyx_210153_MMU_0)
+                                                                  0.0000     2.6542 r
+  moduleMMU/io_ifIO_pipelineReq_cpuReq_addr[21] (net)             0.0000     2.6542 r
+  moduleMMU/U305/I (LVT_BUFHDV4)                        0.1808    0.0000     2.6542 r
+  moduleMMU/U305/Z (LVT_BUFHDV4)                        0.1154    0.1456     2.7998 r
+  moduleMMU/n28 (net)                           9                 0.0000     2.7998 r
+  moduleMMU/U1990/A3 (LVT_NAND3HDV2)                    0.1154    0.0000     2.7998 r
+  moduleMMU/U1990/ZN (LVT_NAND3HDV2)                    0.1554    0.1103     2.9101 f
+  moduleMMU/n1128 (net)                         2                 0.0000     2.9101 f
+  moduleMMU/U1991/A1 (LVT_OR2HDV2)                      0.1554    0.0000     2.9101 f
+  moduleMMU/U1991/Z (LVT_OR2HDV2)                       0.0969    0.1994     3.1095 f
+  moduleMMU/n2179 (net)                         2                 0.0000     3.1095 f
+  moduleMMU/U284/I (LVT_INHDV6)                         0.0969    0.0000     3.1095 f
+  moduleMMU/U284/ZN (LVT_INHDV6)                        0.1448    0.1065     3.2159 r
+  moduleMMU/n3245 (net)                        23                 0.0000     3.2159 r
+  moduleMMU/U2070/A1 (LVT_AOI22HDV1)                    0.1448    0.0000     3.2159 r
+  moduleMMU/U2070/ZN (LVT_AOI22HDV1)                    0.1490    0.0982     3.3141 f
+  moduleMMU/n1178 (net)                         1                 0.0000     3.3141 f
+  moduleMMU/U2071/C (LVT_OAI211HDV1)                    0.1490    0.0000     3.3141 f
+  moduleMMU/U2071/ZN (LVT_OAI211HDV1)                   0.2148    0.0936     3.4078 r
+  moduleMMU/n1333 (net)                         2                 0.0000     3.4078 r
+  moduleMMU/U2075/A1 (LVT_OR3HDV1)                      0.2148    0.0000     3.4078 r
+  moduleMMU/U2075/Z (LVT_OR3HDV1)                       0.0599    0.1276     3.5354 r
+  moduleMMU/n1181 (net)                         1                 0.0000     3.5354 r
+  moduleMMU/U2076/B (LVT_OAI21HDV1)                     0.0599    0.0000     3.5354 r
+  moduleMMU/U2076/ZN (LVT_OAI21HDV1)                    0.0930    0.0592     3.5946 f
+  moduleMMU/n1183 (net)                         1                 0.0000     3.5946 f
+  moduleMMU/U2077/A2 (LVT_NOR2HDV1)                     0.0930    0.0000     3.5946 f
+  moduleMMU/U2077/ZN (LVT_NOR2HDV1)                     0.1048    0.0839     3.6785 r
+  moduleMMU/n1198 (net)                         1                 0.0000     3.6785 r
+  moduleMMU/U414/A1 (LVT_NAND4HDV1)                     0.1048    0.0000     3.6785 r
+  moduleMMU/U414/ZN (LVT_NAND4HDV1)                     0.1474    0.1052     3.7837 f
+  moduleMMU/n1284 (net)                         1                 0.0000     3.7837 f
+  moduleMMU/U2199/A2 (LVT_OAI22HDV2)                    0.1474    0.0000     3.7837 f
+  moduleMMU/U2199/ZN (LVT_OAI22HDV2)                    0.1939    0.0973     3.8810 r
+  moduleMMU/n1317 (net)                         1                 0.0000     3.8810 r
+  moduleMMU/U2224/A1 (LVT_NAND4HDV2)                    0.1939    0.0000     3.8810 r
+  moduleMMU/U2224/ZN (LVT_NAND4HDV2)                    0.1332    0.1095     3.9905 f
+  moduleMMU/n1332 (net)                         1                 0.0000     3.9905 f
+  moduleMMU/U2229/A1 (LVT_NOR2HDV2)                     0.1332    0.0000     3.9905 f
+  moduleMMU/U2229/ZN (LVT_NOR2HDV2)                     0.1054    0.0838     4.0743 r
+  moduleMMU/n1430 (net)                         1                 0.0000     4.0743 r
+  moduleMMU/U2276/A1 (LVT_NAND3HDV2)                    0.1054    0.0000     4.0743 r
+  moduleMMU/U2276/ZN (LVT_NAND3HDV2)                    0.1163    0.0898     4.1641 f
+  moduleMMU/n1459 (net)                         1                 0.0000     4.1641 f
+  moduleMMU/U2294/B1 (LVT_AOI22HDV4)                    0.1163    0.0000     4.1641 f
+  moduleMMU/U2294/ZN (LVT_AOI22HDV4)                    0.2118    0.1321     4.2962 r
+  moduleMMU/n2799 (net)                         2                 0.0000     4.2962 r
+  moduleMMU/U2295/A1 (LVT_NAND2HDV8)                    0.2118    0.0000     4.2962 r
+  moduleMMU/U2295/ZN (LVT_NAND2HDV8)                    0.1195    0.0953     4.3915 f
+  moduleMMU/n3019 (net)                        10                 0.0000     4.3915 f
+  moduleMMU/U2722/A1 (LVT_OAI22HDV2)                    0.1195    0.0000     4.3915 f
+  moduleMMU/U2722/ZN (LVT_OAI22HDV2)                    0.4665    0.2409     4.6324 r
+  moduleMMU/n1940 (net)                         9                 0.0000     4.6324 r
+  moduleMMU/U143/A2 (LVT_AOI21HDV1)                     0.4665    0.0000     4.6324 r
+  moduleMMU/U143/ZN (LVT_AOI21HDV1)                     0.1459    0.1108     4.7432 f
+  moduleMMU/n2779 (net)                         1                 0.0000     4.7432 f
+  moduleMMU/U3525/A1 (LVT_NAND4HDV2)                    0.1459    0.0000     4.7432 f
+  moduleMMU/U3525/ZN (LVT_NAND4HDV2)                    0.1453    0.1058     4.8490 r
+  moduleMMU/io_icacheIO_cpuReq_addr[26] (net)
+                                                4                 0.0000     4.8490 r
+  moduleMMU/U281/I (LVT_INHDV1)                         0.1453    0.0000     4.8490 r
+  moduleMMU/U281/ZN (LVT_INHDV1)                        0.0561    0.0473     4.8963 f
+  moduleMMU/n3334 (net)                         1                 0.0000     4.8963 f
+  moduleMMU/U3964/B1 (LVT_INAND3HDV2)                   0.0561    0.0000     4.8963 f
+  moduleMMU/U3964/ZN (LVT_INAND3HDV2)                   0.0902    0.0635     4.9597 r
+  moduleMMU/n3354 (net)                         2                 0.0000     4.9597 r
+  moduleMMU/U3976/A1 (LVT_NAND2HDV2)                    0.0902    0.0000     4.9597 r
+  moduleMMU/U3976/ZN (LVT_NAND2HDV2)                    0.0599    0.0501     5.0098 f
+  moduleMMU/n3350 (net)                         1                 0.0000     5.0098 f
+  moduleMMU/U3978/A1 (LVT_NOR2HDV2)                     0.0599    0.0000     5.0098 f
+  moduleMMU/U3978/ZN (LVT_NOR2HDV2)                     0.1122    0.0699     5.0798 r
+  moduleMMU/n3351 (net)                         1                 0.0000     5.0798 r
+  moduleMMU/U3979/I0 (LVT_MUX2NHDV2)                    0.1122    0.0000     5.0798 r
+  moduleMMU/U3979/ZN (LVT_MUX2NHDV2)                    0.0800    0.0743     5.1541 f
+  moduleMMU/n3352 (net)                         1                 0.0000     5.1541 f
+  moduleMMU/U3980/A1 (LVT_NOR2HDV2)                     0.0800    0.0000     5.1541 f
+  moduleMMU/U3980/ZN (LVT_NOR2HDV2)                     0.1628    0.0994     5.2535 r
+  moduleMMU/n3362 (net)                         1                 0.0000     5.2535 r
+  moduleMMU/U3982/I0 (LVT_MUX2NHDV4)                    0.1628    0.0000     5.2535 r
+  moduleMMU/U3982/ZN (LVT_MUX2NHDV4)                    0.1053    0.0966     5.3502 f
+  moduleMMU/n6387 (net)                         3                 0.0000     5.3502 f
+  moduleMMU/U4223/A1 (LVT_NAND3HDV2)                    0.1053    0.0000     5.3502 f
+  moduleMMU/U4223/ZN (LVT_NAND3HDV2)                    0.0997    0.0690     5.4191 r
+  moduleMMU/n6169 (net)                         2                 0.0000     5.4191 r
+  moduleMMU/U4224/A1 (LVT_NAND2HDV2)                    0.0997    0.0000     5.4191 r
+  moduleMMU/U4224/ZN (LVT_NAND2HDV2)                    0.1052    0.0832     5.5024 f
+  moduleMMU/n6281 (net)                         4                 0.0000     5.5024 f
+  moduleMMU/U4225/A1 (LVT_NOR2HDV2)                     0.1052    0.0000     5.5024 f
+  moduleMMU/U4225/ZN (LVT_NOR2HDV2)                     0.2641    0.1700     5.6724 r
+  moduleMMU/n6409 (net)                         6                 0.0000     5.6724 r
+  moduleMMU/U6381/A1 (LVT_NAND2HDV2)                    0.2641    0.0000     5.6724 r
+  moduleMMU/U6381/ZN (LVT_NAND2HDV2)                    0.1013    0.0835     5.7558 f
+  moduleMMU/n6234 (net)                         2                 0.0000     5.7558 f
+  moduleMMU/U5/A2 (LVT_NOR2HDV2)                        0.1013    0.0000     5.7558 f
+  moduleMMU/U5/ZN (LVT_NOR2HDV2)                        0.1477    0.1054     5.8613 r
+  moduleMMU/n6278 (net)                         2                 0.0000     5.8613 r
+  moduleMMU/U2318/A1 (LVT_NAND2HDV3)                    0.1477    0.0000     5.8613 r
+  moduleMMU/U2318/ZN (LVT_NAND2HDV3)                    0.3697    0.2521     6.1134 f
+  moduleMMU/n6338 (net)                        27                 0.0000     6.1134 f
+  moduleMMU/U6442/A2 (LVT_OAI21HDV1)                    0.3697    0.0000     6.1134 f
+  moduleMMU/U6442/ZN (LVT_OAI21HDV1)                    0.1688    0.1418     6.2551 r
+  moduleMMU/n5096 (net)                         1                 0.0000     6.2551 r
+  moduleMMU/vaddr_vpn_0_reg_8_/D (LVT_DQHDV1)           0.1688    0.0000     6.2551 r
+  data arrival time                                                          6.2551
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  moduleMMU/vaddr_vpn_0_reg_8_/CK (LVT_DQHDV1)                    0.0000     6.3500 r
+  library setup time                                             -0.0948     6.2552
+  data required time                                                         6.2552
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2552
+  data arrival time                                                         -6.2551
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0000

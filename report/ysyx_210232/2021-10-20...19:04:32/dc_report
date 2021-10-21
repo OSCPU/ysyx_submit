@@ -1,0 +1,640 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Oct_20_19:03:00_2021_+0800
+top_name: ysyx_210232
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+205047.0  205047.0  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+18558  18558  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210232
+Date   : Wed Oct 20 19:22:12 2021
+****************************************
+    
+Number of ports:                         6497
+Number of nets:                         24585
+Number of cells:                        18743
+Number of combinational cells:          15283
+Number of sequential cells:              3275
+Number of macros/black boxes:               0
+Number of buf/inv:                       2219
+Number of references:                       3
+Combinational area:             121365.510004
+Buf/Inv area:                    11393.145563
+Noncombinational area:           83681.527637
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                205047.037642
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------
+ysyx_210232                       205047.0376    100.0     770.5704      0.0000  0.0000  ysyx_210232
+core                              204276.4672     99.6    1978.2008      0.0000  0.0000  ysyx_210232_Core_0
+core/Ex                            76895.6645     37.5    5700.6072     25.5512  0.0000  ysyx_210232_EXU_0
+core/Ex/alu                        18365.9335      9.0   18365.9335      0.0000  0.0000  ysyx_210232_ALU_0
+core/Ex/csr                        25912.9515     12.6   14312.7064  11600.2452  0.0000  ysyx_210232_CSR_0
+core/Ex/jmp                         5809.5360      2.8    5809.5360      0.0000  0.0000  ysyx_210232_JMP_0
+core/Ex/lsu                        21081.0850     10.3    5317.3392   4471.4602  0.0000  ysyx_210232_LSUwithUserBus_0
+core/Ex/lsu/clint                   8699.5113      4.2    5428.9576   3270.5537  0.0000  ysyx_210232_Clint_0
+core/Ex/lsu/proxy                   2592.7744      1.3    2592.7744      0.0000  0.0000  ysyx_210232_MemProxy_0
+core/ExReg                          5993.7737      2.9    1955.3392   4038.4345  0.0000  ysyx_210232_PipelineReg_1_0
+core/Id                             1765.7224      0.9    1765.7224      0.0000  0.0000  ysyx_210232_IDU_0
+core/IdReg                          2513.4313      1.2     827.0520   1686.3793  0.0000  ysyx_210232_PipelineReg_0
+core/If                             4427.0817      2.2    2587.3952   1839.6865  0.0000  ysyx_210232_IFU_0
+core/Rf                            96279.6128     47.0   45586.0302  50693.5825  0.0000  ysyx_210232_regfile_0
+core/Wb                             1311.1800      0.6    1311.1800      0.0000  0.0000  ysyx_210232_WBU_0
+core/WbReg                          8901.2314      4.3    2922.2504   5978.9810  0.0000  ysyx_210232_PipelineReg_2_0
+core/crb                            2109.9912      1.0     264.9256      0.0000  0.0000  ysyx_210232_Crossbar_0
+core/crb/arb                         505.6448      0.2     480.0936     25.5512  0.0000  ysyx_210232_RRArbiter_0
+core/crb/dispute                    1339.4208      0.7    1339.4208      0.0000  0.0000  ysyx_210232_UserBusDispute_0
+core/u2i                            2100.5776      1.0    2049.4752     51.1024  0.0000  ysyx_210232_User2AXI_0
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------
+Total                                                   121365.5100  83681.5276  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210232
+Date   : Wed Oct 20 19:22:10 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: core/ExReg/reg_issue_opsrc2_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: core/WbReg/reg_alu_out_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  core/ExReg/reg_issue_opsrc2_reg_0_/CK (LVT_DQHDV1)    0.0000    0.0000 #   0.0000 r
+  core/ExReg/reg_issue_opsrc2_reg_0_/Q (LVT_DQHDV1)     0.1269    0.2720     0.2720 r
+  core/ExReg/io_out_issue_opsrc2[0] (net)       4                 0.0000     0.2720 r
+  core/ExReg/io_out_issue_opsrc2[0] (ysyx_210232_PipelineReg_1_0)
+                                                                  0.0000     0.2720 r
+  core/ExReg_io_out_issue_opsrc2[0] (net)                         0.0000     0.2720 r
+  core/Ex/io_issue_opsrc2[0] (ysyx_210232_EXU_0)                  0.0000     0.2720 r
+  core/Ex/io_issue_opsrc2[0] (net)                                0.0000     0.2720 r
+  core/Ex/U291/A1 (LVT_INOR2HDV2)                       0.1269    0.0000     0.2720 r
+  core/Ex/U291/ZN (LVT_INOR2HDV2)                       0.2428    0.2032     0.4752 r
+  core/Ex/io_rf_ren2 (net)                      6                 0.0000     0.4752 r
+  core/Ex/io_rf_ren2 (ysyx_210232_EXU_0)                          0.0000     0.4752 r
+  core/Ex_io_rf_ren2 (net)                                        0.0000     0.4752 r
+  core/Rf/io_ren2 (ysyx_210232_regfile_0)                         0.0000     0.4752 r
+  core/Rf/io_ren2 (net)                                           0.0000     0.4752 r
+  core/Rf/U279/A1 (LVT_NAND2HDV2)                       0.2428    0.0000     0.4752 r
+  core/Rf/U279/ZN (LVT_NAND2HDV2)                       0.1046    0.0874     0.5626 f
+  core/Rf/n73 (net)                             2                 0.0000     0.5626 f
+  core/Rf/U386/I (LVT_INHDV2)                           0.1046    0.0000     0.5626 f
+  core/Rf/U386/ZN (LVT_INHDV2)                          0.0897    0.0726     0.6351 r
+  core/Rf/n83 (net)                             3                 0.0000     0.6351 r
+  core/Rf/U289/A1 (LVT_NAND2HDV1)                       0.0897    0.0000     0.6351 r
+  core/Rf/U289/ZN (LVT_NAND2HDV1)                       0.1382    0.0999     0.7350 f
+  core/Rf/n91 (net)                             4                 0.0000     0.7350 f
+  core/Rf/U18/A1 (LVT_NOR2HDV2)                         0.1382    0.0000     0.7350 f
+  core/Rf/U18/ZN (LVT_NOR2HDV2)                         0.4566    0.2797     1.0148 r
+  core/Rf/n1900 (net)                          12                 0.0000     1.0148 r
+  core/Rf/U14/I (LVT_BUFHDV4)                           0.4566    0.0000     1.0148 r
+  core/Rf/U14/Z (LVT_BUFHDV4)                           0.4509    0.3516     1.3664 r
+  core/Rf/n16 (net)                            53                 0.0000     1.3664 r
+  core/Rf/U2668/A1 (LVT_AOI22HDV1)                      0.4509    0.0000     1.3664 r
+  core/Rf/U2668/ZN (LVT_AOI22HDV1)                      0.1871    0.1401     1.5065 f
+  core/Rf/n2347 (net)                           1                 0.0000     1.5065 f
+  core/Rf/U2670/A3 (LVT_NAND4HDV1)                      0.1871    0.0000     1.5065 f
+  core/Rf/U2670/ZN (LVT_NAND4HDV1)                      0.1165    0.0974     1.6039 r
+  core/Rf/n2360 (net)                           1                 0.0000     1.6039 r
+  core/Rf/U2680/A2 (LVT_OR4HDV2)                        0.1165    0.0000     1.6039 r
+  core/Rf/U2680/Z (LVT_OR4HDV2)                         0.0468    0.1182     1.7221 r
+  core/Rf/io_rdata2[0] (net)                    1                 0.0000     1.7221 r
+  core/Rf/io_rdata2[0] (ysyx_210232_regfile_0)                    0.0000     1.7221 r
+  core/Rf_io_rdata2[0] (net)                                      0.0000     1.7221 r
+  core/U32/I1 (LVT_MUX2HDV1)                            0.0468    0.0000     1.7221 r
+  core/U32/Z (LVT_MUX2HDV1)                             0.0683    0.1410     1.8631 r
+  core/Ex_io_rf_rdata2[0] (net)                 1                 0.0000     1.8631 r
+  core/Ex/io_rf_rdata2[0] (ysyx_210232_EXU_0)                     0.0000     1.8631 r
+  core/Ex/io_rf_rdata2[0] (net)                                   0.0000     1.8631 r
+  core/Ex/U147/A1 (LVT_AOI21HDV1)                       0.0683    0.0000     1.8631 r
+  core/Ex/U147/ZN (LVT_AOI21HDV1)                       0.1726    0.0919     1.9550 f
+  core/Ex/n278 (net)                            3                 0.0000     1.9550 f
+  core/Ex/U843/A1 (LVT_NOR2HDV1)                        0.1726    0.0000     1.9550 f
+  core/Ex/U843/ZN (LVT_NOR2HDV1)                        0.1168    0.0913     2.0463 r
+  core/Ex/alu_io_op2[0] (net)                   1                 0.0000     2.0463 r
+  core/Ex/alu/io_op2[0] (ysyx_210232_ALU_0)                       0.0000     2.0463 r
+  core/Ex/alu/io_op2[0] (net)                                     0.0000     2.0463 r
+  core/Ex/alu/U88/I (LVT_BUFHDV1)                       0.1168    0.0000     2.0463 r
+  core/Ex/alu/U88/Z (LVT_BUFHDV1)                       0.4208    0.2950     2.3413 r
+  core/Ex/alu/n1474 (net)                      16                 0.0000     2.3413 r
+  core/Ex/alu/U144/A1 (LVT_XOR2HDV1)                    0.4208    0.0000     2.3413 r
+  core/Ex/alu/U144/Z (LVT_XOR2HDV1)                     0.0926    0.1734     2.5147 r
+  core/Ex/alu/n1472 (net)                       2                 0.0000     2.5147 r
+  core/Ex/alu/U148/A1 (LVT_AOI21HDV1)                   0.0926    0.0000     2.5147 r
+  core/Ex/alu/U148/ZN (LVT_AOI21HDV1)                   0.0971    0.0811     2.5958 f
+  core/Ex/alu/n730 (net)                        2                 0.0000     2.5958 f
+  core/Ex/alu/U151/A1 (LVT_OAI21HDV1)                   0.0971    0.0000     2.5958 f
+  core/Ex/alu/U151/ZN (LVT_OAI21HDV1)                   0.1956    0.1350     2.7308 r
+  core/Ex/alu/n598 (net)                        2                 0.0000     2.7308 r
+  core/Ex/alu/U155/A2 (LVT_AOI21HDV1)                   0.1956    0.0000     2.7308 r
+  core/Ex/alu/U155/ZN (LVT_AOI21HDV1)                   0.1220    0.1065     2.8373 f
+  core/Ex/alu/n360 (net)                        2                 0.0000     2.8373 f
+  core/Ex/alu/U172/A1 (LVT_OAI21HDV2)                   0.1220    0.0000     2.8373 f
+  core/Ex/alu/U172/ZN (LVT_OAI21HDV2)                   0.1692    0.1266     2.9639 r
+  core/Ex/alu/n229 (net)                        2                 0.0000     2.9639 r
+  core/Ex/alu/U194/A1 (LVT_AOI21HDV2)                   0.1692    0.0000     2.9639 r
+  core/Ex/alu/U194/ZN (LVT_AOI21HDV2)                   0.1189    0.1051     3.0690 f
+  core/Ex/alu/n152 (net)                        2                 0.0000     3.0690 f
+  core/Ex/alu/U428/A1 (LVT_OAI21HDV4)                   0.1189    0.0000     3.0690 f
+  core/Ex/alu/U428/ZN (LVT_OAI21HDV4)                   0.1266    0.1013     3.1703 r
+  core/Ex/alu/n1730 (net)                       2                 0.0000     3.1703 r
+  core/Ex/alu/U473/A1 (LVT_AOI21HDV2)                   0.1266    0.0000     3.1703 r
+  core/Ex/alu/U473/ZN (LVT_AOI21HDV2)                   0.1189    0.1004     3.2708 f
+  core/Ex/alu/n2030 (net)                       2                 0.0000     3.2708 f
+  core/Ex/alu/U477/A1 (LVT_OAI21HDV4)                   0.1189    0.0000     3.2708 f
+  core/Ex/alu/U477/ZN (LVT_OAI21HDV4)                   0.1533    0.1166     3.3874 r
+  core/Ex/alu/n2053 (net)                       2                 0.0000     3.3874 r
+  core/Ex/alu/U482/A1 (LVT_AOI21HDV4)                   0.1533    0.0000     3.3874 r
+  core/Ex/alu/U482/ZN (LVT_AOI21HDV4)                   0.0843    0.0758     3.4632 f
+  core/Ex/alu/n2107 (net)                       2                 0.0000     3.4632 f
+  core/Ex/alu/U134/A1 (LVT_OAI21HDV2)                   0.0843    0.0000     3.4632 f
+  core/Ex/alu/U134/ZN (LVT_OAI21HDV2)                   0.1855    0.1257     3.5888 r
+  core/Ex/alu/n529 (net)                        2                 0.0000     3.5888 r
+  core/Ex/alu/U14/A1 (LVT_AOI21HDV2)                    0.1855    0.0000     3.5888 r
+  core/Ex/alu/U14/ZN (LVT_AOI21HDV2)                    0.1130    0.1010     3.6898 f
+  core/Ex/alu/n2117 (net)                       2                 0.0000     3.6898 f
+  core/Ex/alu/U133/A1 (LVT_OAI21HDV2)                   0.1130    0.0000     3.6898 f
+  core/Ex/alu/U133/ZN (LVT_OAI21HDV2)                   0.1868    0.1332     3.8230 r
+  core/Ex/alu/n571 (net)                        2                 0.0000     3.8230 r
+  core/Ex/alu/U13/A1 (LVT_AOI21HDV2)                    0.1868    0.0000     3.8230 r
+  core/Ex/alu/U13/ZN (LVT_AOI21HDV2)                    0.1133    0.1011     3.9241 f
+  core/Ex/alu/n2140 (net)                       2                 0.0000     3.9241 f
+  core/Ex/alu/U1105/A1 (LVT_OAI21HDV2)                  0.1133    0.0000     3.9241 f
+  core/Ex/alu/U1105/ZN (LVT_OAI21HDV2)                  0.1613    0.1186     4.0427 r
+  core/Ex/alu/n2163 (net)                       2                 0.0000     4.0427 r
+  core/Ex/alu/U135/A1 (LVT_AOI21HDV2)                   0.1613    0.0000     4.0427 r
+  core/Ex/alu/U135/ZN (LVT_AOI21HDV2)                   0.1086    0.0959     4.1387 f
+  core/Ex/alu/n1218 (net)                       2                 0.0000     4.1387 f
+  core/Ex/alu/U132/A1 (LVT_OAI21HDV2)                   0.1086    0.0000     4.1387 f
+  core/Ex/alu/U132/ZN (LVT_OAI21HDV2)                   0.1838    0.1320     4.2707 r
+  core/Ex/alu/n2186 (net)                       2                 0.0000     4.2707 r
+  core/Ex/alu/U136/A1 (LVT_AOI21HDV2)                   0.1838    0.0000     4.2707 r
+  core/Ex/alu/U136/ZN (LVT_AOI21HDV2)                   0.1126    0.1008     4.3714 f
+  core/Ex/alu/n2220 (net)                       2                 0.0000     4.3714 f
+  core/Ex/alu/U1721/A1 (LVT_OAI21HDV2)                  0.1126    0.0000     4.3714 f
+  core/Ex/alu/U1721/ZN (LVT_OAI21HDV2)                  0.1861    0.1331     4.5045 r
+  core/Ex/alu/n2247 (net)                       2                 0.0000     4.5045 r
+  core/Ex/alu/U31/A1 (LVT_AOI21HDV2)                    0.1861    0.0000     4.5045 r
+  core/Ex/alu/U31/ZN (LVT_AOI21HDV2)                    0.1283    0.1144     4.6189 f
+  core/Ex/alu/n2274 (net)                       2                 0.0000     4.6189 f
+  core/Ex/alu/U1716/A1 (LVT_OAI21HDV4)                  0.1283    0.0000     4.6189 f
+  core/Ex/alu/U1716/ZN (LVT_OAI21HDV4)                  0.1572    0.1190     4.7379 r
+  core/Ex/alu/n2302 (net)                       2                 0.0000     4.7379 r
+  core/Ex/alu/U204/A1 (LVT_AOI21HDV4)                   0.1572    0.0000     4.7379 r
+  core/Ex/alu/U204/ZN (LVT_AOI21HDV4)                   0.0932    0.0830     4.8209 f
+  core/Ex/alu/n2333 (net)                       2                 0.0000     4.8209 f
+  core/Ex/alu/U162/A1 (LVT_OAI21HDV4)                   0.0932    0.0000     4.8209 f
+  core/Ex/alu/U162/ZN (LVT_OAI21HDV4)                   0.1396    0.0993     4.9201 r
+  core/Ex/alu/n1237 (net)                       2                 0.0000     4.9201 r
+  core/Ex/alu/U8/A1 (LVT_AOI21HDV2)                     0.1396    0.0000     4.9201 r
+  core/Ex/alu/U8/ZN (LVT_AOI21HDV2)                     0.1047    0.0912     5.0113 f
+  core/Ex/alu/n2361 (net)                       2                 0.0000     5.0113 f
+  core/Ex/alu/U1737/A1 (LVT_OAI21HDV2)                  0.1047    0.0000     5.0113 f
+  core/Ex/alu/U1737/ZN (LVT_OAI21HDV2)                  0.1485    0.1101     5.1214 r
+  core/Ex/alu/n2390 (net)                       1                 0.0000     5.1214 r
+  core/Ex/alu/U2583/CI (LVT_AD1HDV1)                    0.1485    0.0000     5.1214 r
+  core/Ex/alu/U2583/CO (LVT_AD1HDV1)                    0.1267    0.2017     5.3231 r
+  core/Ex/alu/n2428 (net)                       1                 0.0000     5.3231 r
+  core/Ex/alu/U2601/CI (LVT_AD1HDV1)                    0.1267    0.0000     5.3231 r
+  core/Ex/alu/U2601/CO (LVT_AD1HDV1)                    0.1266    0.1973     5.5204 r
+  core/Ex/alu/n2462 (net)                       1                 0.0000     5.5204 r
+  core/Ex/alu/U2615/CI (LVT_AD1HDV1)                    0.1266    0.0000     5.5204 r
+  core/Ex/alu/U2615/CO (LVT_AD1HDV1)                    0.1339    0.1998     5.7202 r
+  core/Ex/alu/n2466 (net)                       1                 0.0000     5.7202 r
+  core/Ex/alu/U2618/A1 (LVT_XOR2HDV2)                   0.1339    0.0000     5.7202 r
+  core/Ex/alu/U2618/Z (LVT_XOR2HDV2)                    0.0681    0.1505     5.8707 f
+  core/Ex/alu/n2500 (net)                       1                 0.0000     5.8707 f
+  core/Ex/alu/U2629/A1 (LVT_AOI21HDV2)                  0.0681    0.0000     5.8707 f
+  core/Ex/alu/U2629/ZN (LVT_AOI21HDV2)                  0.1497    0.0889     5.9596 r
+  core/Ex/alu/n2506 (net)                       1                 0.0000     5.9596 r
+  core/Ex/alu/U160/A1 (LVT_OAI211HDV2)                  0.1497    0.0000     5.9596 r
+  core/Ex/alu/U160/ZN (LVT_OAI211HDV2)                  0.1338    0.0952     6.0548 f
+  core/Ex/alu/io_out[63] (net)                  1                 0.0000     6.0548 f
+  core/Ex/alu/io_out[63] (ysyx_210232_ALU_0)                      0.0000     6.0548 f
+  core/Ex/io_alu_out[63] (net)                                    0.0000     6.0548 f
+  core/Ex/io_alu_out[63] (ysyx_210232_EXU_0)                      0.0000     6.0548 f
+  core/Ex_io_alu_out[63] (net)                                    0.0000     6.0548 f
+  core/WbReg/io_in_alu_out[63] (ysyx_210232_PipelineReg_2_0)      0.0000     6.0548 f
+  core/WbReg/io_in_alu_out[63] (net)                              0.0000     6.0548 f
+  core/WbReg/U113/B1 (LVT_AO22HDV4)                     0.1338    0.0000     6.0548 f
+  core/WbReg/U113/Z (LVT_AO22HDV4)                      0.0508    0.1578     6.2126 f
+  core/WbReg/n195 (net)                         1                 0.0000     6.2126 f
+  core/WbReg/reg_alu_out_reg_63_/D (LVT_DQHDV2)         0.0508    0.0000     6.2126 f
+  data arrival time                                                          6.2126
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  core/WbReg/reg_alu_out_reg_63_/CK (LVT_DQHDV2)                  0.0000     6.3500 r
+  library setup time                                             -0.1357     6.2143
+  data required time                                                         6.2143
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2143
+  data arrival time                                                         -6.2126
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0017
+  Startpoint: core/ExReg/reg_issue_opsrc2_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: core/WbReg/reg_alu_out_reg_62_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  core/ExReg/reg_issue_opsrc2_reg_0_/CK (LVT_DQHDV1)    0.0000    0.0000 #   0.0000 r
+  core/ExReg/reg_issue_opsrc2_reg_0_/Q (LVT_DQHDV1)     0.1269    0.2720     0.2720 r
+  core/ExReg/io_out_issue_opsrc2[0] (net)       4                 0.0000     0.2720 r
+  core/ExReg/io_out_issue_opsrc2[0] (ysyx_210232_PipelineReg_1_0)
+                                                                  0.0000     0.2720 r
+  core/ExReg_io_out_issue_opsrc2[0] (net)                         0.0000     0.2720 r
+  core/Ex/io_issue_opsrc2[0] (ysyx_210232_EXU_0)                  0.0000     0.2720 r
+  core/Ex/io_issue_opsrc2[0] (net)                                0.0000     0.2720 r
+  core/Ex/U291/A1 (LVT_INOR2HDV2)                       0.1269    0.0000     0.2720 r
+  core/Ex/U291/ZN (LVT_INOR2HDV2)                       0.2428    0.2032     0.4752 r
+  core/Ex/io_rf_ren2 (net)                      6                 0.0000     0.4752 r
+  core/Ex/io_rf_ren2 (ysyx_210232_EXU_0)                          0.0000     0.4752 r
+  core/Ex_io_rf_ren2 (net)                                        0.0000     0.4752 r
+  core/Rf/io_ren2 (ysyx_210232_regfile_0)                         0.0000     0.4752 r
+  core/Rf/io_ren2 (net)                                           0.0000     0.4752 r
+  core/Rf/U279/A1 (LVT_NAND2HDV2)                       0.2428    0.0000     0.4752 r
+  core/Rf/U279/ZN (LVT_NAND2HDV2)                       0.1046    0.0874     0.5626 f
+  core/Rf/n73 (net)                             2                 0.0000     0.5626 f
+  core/Rf/U386/I (LVT_INHDV2)                           0.1046    0.0000     0.5626 f
+  core/Rf/U386/ZN (LVT_INHDV2)                          0.0897    0.0726     0.6351 r
+  core/Rf/n83 (net)                             3                 0.0000     0.6351 r
+  core/Rf/U289/A1 (LVT_NAND2HDV1)                       0.0897    0.0000     0.6351 r
+  core/Rf/U289/ZN (LVT_NAND2HDV1)                       0.1382    0.0999     0.7350 f
+  core/Rf/n91 (net)                             4                 0.0000     0.7350 f
+  core/Rf/U18/A1 (LVT_NOR2HDV2)                         0.1382    0.0000     0.7350 f
+  core/Rf/U18/ZN (LVT_NOR2HDV2)                         0.4566    0.2797     1.0148 r
+  core/Rf/n1900 (net)                          12                 0.0000     1.0148 r
+  core/Rf/U14/I (LVT_BUFHDV4)                           0.4566    0.0000     1.0148 r
+  core/Rf/U14/Z (LVT_BUFHDV4)                           0.4509    0.3516     1.3664 r
+  core/Rf/n16 (net)                            53                 0.0000     1.3664 r
+  core/Rf/U2668/A1 (LVT_AOI22HDV1)                      0.4509    0.0000     1.3664 r
+  core/Rf/U2668/ZN (LVT_AOI22HDV1)                      0.1871    0.1401     1.5065 f
+  core/Rf/n2347 (net)                           1                 0.0000     1.5065 f
+  core/Rf/U2670/A3 (LVT_NAND4HDV1)                      0.1871    0.0000     1.5065 f
+  core/Rf/U2670/ZN (LVT_NAND4HDV1)                      0.1165    0.0974     1.6039 r
+  core/Rf/n2360 (net)                           1                 0.0000     1.6039 r
+  core/Rf/U2680/A2 (LVT_OR4HDV2)                        0.1165    0.0000     1.6039 r
+  core/Rf/U2680/Z (LVT_OR4HDV2)                         0.0468    0.1182     1.7221 r
+  core/Rf/io_rdata2[0] (net)                    1                 0.0000     1.7221 r
+  core/Rf/io_rdata2[0] (ysyx_210232_regfile_0)                    0.0000     1.7221 r
+  core/Rf_io_rdata2[0] (net)                                      0.0000     1.7221 r
+  core/U32/I1 (LVT_MUX2HDV1)                            0.0468    0.0000     1.7221 r
+  core/U32/Z (LVT_MUX2HDV1)                             0.0683    0.1410     1.8631 r
+  core/Ex_io_rf_rdata2[0] (net)                 1                 0.0000     1.8631 r
+  core/Ex/io_rf_rdata2[0] (ysyx_210232_EXU_0)                     0.0000     1.8631 r
+  core/Ex/io_rf_rdata2[0] (net)                                   0.0000     1.8631 r
+  core/Ex/U147/A1 (LVT_AOI21HDV1)                       0.0683    0.0000     1.8631 r
+  core/Ex/U147/ZN (LVT_AOI21HDV1)                       0.1726    0.0919     1.9550 f
+  core/Ex/n278 (net)                            3                 0.0000     1.9550 f
+  core/Ex/U843/A1 (LVT_NOR2HDV1)                        0.1726    0.0000     1.9550 f
+  core/Ex/U843/ZN (LVT_NOR2HDV1)                        0.1168    0.0913     2.0463 r
+  core/Ex/alu_io_op2[0] (net)                   1                 0.0000     2.0463 r
+  core/Ex/alu/io_op2[0] (ysyx_210232_ALU_0)                       0.0000     2.0463 r
+  core/Ex/alu/io_op2[0] (net)                                     0.0000     2.0463 r
+  core/Ex/alu/U88/I (LVT_BUFHDV1)                       0.1168    0.0000     2.0463 r
+  core/Ex/alu/U88/Z (LVT_BUFHDV1)                       0.4208    0.2950     2.3413 r
+  core/Ex/alu/n1474 (net)                      16                 0.0000     2.3413 r
+  core/Ex/alu/U144/A1 (LVT_XOR2HDV1)                    0.4208    0.0000     2.3413 r
+  core/Ex/alu/U144/Z (LVT_XOR2HDV1)                     0.0926    0.1734     2.5147 r
+  core/Ex/alu/n1472 (net)                       2                 0.0000     2.5147 r
+  core/Ex/alu/U148/A1 (LVT_AOI21HDV1)                   0.0926    0.0000     2.5147 r
+  core/Ex/alu/U148/ZN (LVT_AOI21HDV1)                   0.0971    0.0811     2.5958 f
+  core/Ex/alu/n730 (net)                        2                 0.0000     2.5958 f
+  core/Ex/alu/U151/A1 (LVT_OAI21HDV1)                   0.0971    0.0000     2.5958 f
+  core/Ex/alu/U151/ZN (LVT_OAI21HDV1)                   0.1956    0.1350     2.7308 r
+  core/Ex/alu/n598 (net)                        2                 0.0000     2.7308 r
+  core/Ex/alu/U155/A2 (LVT_AOI21HDV1)                   0.1956    0.0000     2.7308 r
+  core/Ex/alu/U155/ZN (LVT_AOI21HDV1)                   0.1220    0.1065     2.8373 f
+  core/Ex/alu/n360 (net)                        2                 0.0000     2.8373 f
+  core/Ex/alu/U172/A1 (LVT_OAI21HDV2)                   0.1220    0.0000     2.8373 f
+  core/Ex/alu/U172/ZN (LVT_OAI21HDV2)                   0.1692    0.1266     2.9639 r
+  core/Ex/alu/n229 (net)                        2                 0.0000     2.9639 r
+  core/Ex/alu/U194/A1 (LVT_AOI21HDV2)                   0.1692    0.0000     2.9639 r
+  core/Ex/alu/U194/ZN (LVT_AOI21HDV2)                   0.1189    0.1051     3.0690 f
+  core/Ex/alu/n152 (net)                        2                 0.0000     3.0690 f
+  core/Ex/alu/U428/A1 (LVT_OAI21HDV4)                   0.1189    0.0000     3.0690 f
+  core/Ex/alu/U428/ZN (LVT_OAI21HDV4)                   0.1266    0.1013     3.1703 r
+  core/Ex/alu/n1730 (net)                       2                 0.0000     3.1703 r
+  core/Ex/alu/U473/A1 (LVT_AOI21HDV2)                   0.1266    0.0000     3.1703 r
+  core/Ex/alu/U473/ZN (LVT_AOI21HDV2)                   0.1189    0.1004     3.2708 f
+  core/Ex/alu/n2030 (net)                       2                 0.0000     3.2708 f
+  core/Ex/alu/U477/A1 (LVT_OAI21HDV4)                   0.1189    0.0000     3.2708 f
+  core/Ex/alu/U477/ZN (LVT_OAI21HDV4)                   0.1533    0.1166     3.3874 r
+  core/Ex/alu/n2053 (net)                       2                 0.0000     3.3874 r
+  core/Ex/alu/U482/A1 (LVT_AOI21HDV4)                   0.1533    0.0000     3.3874 r
+  core/Ex/alu/U482/ZN (LVT_AOI21HDV4)                   0.0843    0.0758     3.4632 f
+  core/Ex/alu/n2107 (net)                       2                 0.0000     3.4632 f
+  core/Ex/alu/U134/A1 (LVT_OAI21HDV2)                   0.0843    0.0000     3.4632 f
+  core/Ex/alu/U134/ZN (LVT_OAI21HDV2)                   0.1855    0.1257     3.5888 r
+  core/Ex/alu/n529 (net)                        2                 0.0000     3.5888 r
+  core/Ex/alu/U14/A1 (LVT_AOI21HDV2)                    0.1855    0.0000     3.5888 r
+  core/Ex/alu/U14/ZN (LVT_AOI21HDV2)                    0.1130    0.1010     3.6898 f
+  core/Ex/alu/n2117 (net)                       2                 0.0000     3.6898 f
+  core/Ex/alu/U133/A1 (LVT_OAI21HDV2)                   0.1130    0.0000     3.6898 f
+  core/Ex/alu/U133/ZN (LVT_OAI21HDV2)                   0.1868    0.1332     3.8230 r
+  core/Ex/alu/n571 (net)                        2                 0.0000     3.8230 r
+  core/Ex/alu/U13/A1 (LVT_AOI21HDV2)                    0.1868    0.0000     3.8230 r
+  core/Ex/alu/U13/ZN (LVT_AOI21HDV2)                    0.1133    0.1011     3.9241 f
+  core/Ex/alu/n2140 (net)                       2                 0.0000     3.9241 f
+  core/Ex/alu/U1105/A1 (LVT_OAI21HDV2)                  0.1133    0.0000     3.9241 f
+  core/Ex/alu/U1105/ZN (LVT_OAI21HDV2)                  0.1613    0.1186     4.0427 r
+  core/Ex/alu/n2163 (net)                       2                 0.0000     4.0427 r
+  core/Ex/alu/U135/A1 (LVT_AOI21HDV2)                   0.1613    0.0000     4.0427 r
+  core/Ex/alu/U135/ZN (LVT_AOI21HDV2)                   0.1086    0.0959     4.1387 f
+  core/Ex/alu/n1218 (net)                       2                 0.0000     4.1387 f
+  core/Ex/alu/U132/A1 (LVT_OAI21HDV2)                   0.1086    0.0000     4.1387 f
+  core/Ex/alu/U132/ZN (LVT_OAI21HDV2)                   0.1838    0.1320     4.2707 r
+  core/Ex/alu/n2186 (net)                       2                 0.0000     4.2707 r
+  core/Ex/alu/U136/A1 (LVT_AOI21HDV2)                   0.1838    0.0000     4.2707 r
+  core/Ex/alu/U136/ZN (LVT_AOI21HDV2)                   0.1126    0.1008     4.3714 f
+  core/Ex/alu/n2220 (net)                       2                 0.0000     4.3714 f
+  core/Ex/alu/U1721/A1 (LVT_OAI21HDV2)                  0.1126    0.0000     4.3714 f
+  core/Ex/alu/U1721/ZN (LVT_OAI21HDV2)                  0.1861    0.1331     4.5045 r
+  core/Ex/alu/n2247 (net)                       2                 0.0000     4.5045 r
+  core/Ex/alu/U31/A1 (LVT_AOI21HDV2)                    0.1861    0.0000     4.5045 r
+  core/Ex/alu/U31/ZN (LVT_AOI21HDV2)                    0.1283    0.1144     4.6189 f
+  core/Ex/alu/n2274 (net)                       2                 0.0000     4.6189 f
+  core/Ex/alu/U1716/A1 (LVT_OAI21HDV4)                  0.1283    0.0000     4.6189 f
+  core/Ex/alu/U1716/ZN (LVT_OAI21HDV4)                  0.1572    0.1190     4.7379 r
+  core/Ex/alu/n2302 (net)                       2                 0.0000     4.7379 r
+  core/Ex/alu/U204/A1 (LVT_AOI21HDV4)                   0.1572    0.0000     4.7379 r
+  core/Ex/alu/U204/ZN (LVT_AOI21HDV4)                   0.0932    0.0830     4.8209 f
+  core/Ex/alu/n2333 (net)                       2                 0.0000     4.8209 f
+  core/Ex/alu/U162/A1 (LVT_OAI21HDV4)                   0.0932    0.0000     4.8209 f
+  core/Ex/alu/U162/ZN (LVT_OAI21HDV4)                   0.1396    0.0993     4.9201 r
+  core/Ex/alu/n1237 (net)                       2                 0.0000     4.9201 r
+  core/Ex/alu/U8/A1 (LVT_AOI21HDV2)                     0.1396    0.0000     4.9201 r
+  core/Ex/alu/U8/ZN (LVT_AOI21HDV2)                     0.1047    0.0912     5.0113 f
+  core/Ex/alu/n2361 (net)                       2                 0.0000     5.0113 f
+  core/Ex/alu/U1737/A1 (LVT_OAI21HDV2)                  0.1047    0.0000     5.0113 f
+  core/Ex/alu/U1737/ZN (LVT_OAI21HDV2)                  0.1485    0.1101     5.1214 r
+  core/Ex/alu/n2390 (net)                       1                 0.0000     5.1214 r
+  core/Ex/alu/U2583/CI (LVT_AD1HDV1)                    0.1485    0.0000     5.1214 r
+  core/Ex/alu/U2583/CO (LVT_AD1HDV1)                    0.1267    0.2017     5.3231 r
+  core/Ex/alu/n2428 (net)                       1                 0.0000     5.3231 r
+  core/Ex/alu/U2601/CI (LVT_AD1HDV1)                    0.1267    0.0000     5.3231 r
+  core/Ex/alu/U2601/CO (LVT_AD1HDV1)                    0.1266    0.1973     5.5204 r
+  core/Ex/alu/n2462 (net)                       1                 0.0000     5.5204 r
+  core/Ex/alu/U2615/CI (LVT_AD1HDV1)                    0.1266    0.0000     5.5204 r
+  core/Ex/alu/U2615/S (LVT_AD1HDV1)                     0.1180    0.1845     5.7049 f
+  core/Ex/alu/n1261 (net)                       1                 0.0000     5.7049 f
+  core/Ex/alu/U131/A1 (LVT_IOA21HDV1)                   0.1180    0.0000     5.7049 f
+  core/Ex/alu/U131/ZN (LVT_IOA21HDV1)                   0.0845    0.1568     5.8617 f
+  core/Ex/alu/n1263 (net)                       1                 0.0000     5.8617 f
+  core/Ex/alu/U130/A1 (LVT_NAND2HDV1)                   0.0845    0.0000     5.8617 f
+  core/Ex/alu/U130/ZN (LVT_NAND2HDV1)                   0.0863    0.0526     5.9143 r
+  core/Ex/alu/n1264 (net)                       1                 0.0000     5.9143 r
+  core/Ex/alu/U129/B (LVT_OAI211HDV1)                   0.0863    0.0000     5.9143 r
+  core/Ex/alu/U129/ZN (LVT_OAI211HDV1)                  0.1124    0.0828     5.9971 f
+  core/Ex/alu/io_out[62] (net)                  1                 0.0000     5.9971 f
+  core/Ex/alu/io_out[62] (ysyx_210232_ALU_0)                      0.0000     5.9971 f
+  core/Ex/io_alu_out[62] (net)                                    0.0000     5.9971 f
+  core/Ex/io_alu_out[62] (ysyx_210232_EXU_0)                      0.0000     5.9971 f
+  core/Ex_io_alu_out[62] (net)                                    0.0000     5.9971 f
+  core/WbReg/io_in_alu_out[62] (ysyx_210232_PipelineReg_2_0)      0.0000     5.9971 f
+  core/WbReg/io_in_alu_out[62] (net)                              0.0000     5.9971 f
+  core/WbReg/U91/B1 (LVT_AO22HDV1)                      0.1124    0.0000     5.9971 f
+  core/WbReg/U91/Z (LVT_AO22HDV1)                       0.0746    0.2022     6.1993 f
+  core/WbReg/n194 (net)                         1                 0.0000     6.1993 f
+  core/WbReg/reg_alu_out_reg_62_/D (LVT_DQHDV1)         0.0746    0.0000     6.1993 f
+  data arrival time                                                          6.1993
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  core/WbReg/reg_alu_out_reg_62_/CK (LVT_DQHDV1)                  0.0000     6.3500 r
+  library setup time                                             -0.1489     6.2011
+  data required time                                                         6.2011
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2011
+  data arrival time                                                         -6.1993
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0018
+  Startpoint: core/ExReg/reg_issue_opsrc1_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: core/If/PC_reg_31_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  core/ExReg/reg_issue_opsrc1_reg_0_/CK (LVT_DQHDV2)    0.0000    0.0000 #   0.0000 r
+  core/ExReg/reg_issue_opsrc1_reg_0_/Q (LVT_DQHDV2)     0.1108    0.2631     0.2631 r
+  core/ExReg/io_out_issue_opsrc1[0] (net)       4                 0.0000     0.2631 r
+  core/ExReg/io_out_issue_opsrc1[0] (ysyx_210232_PipelineReg_1_0)
+                                                                  0.0000     0.2631 r
+  core/ExReg_io_out_issue_opsrc1[0] (net)                         0.0000     0.2631 r
+  core/Ex/io_issue_opsrc1[0] (ysyx_210232_EXU_0)                  0.0000     0.2631 r
+  core/Ex/io_issue_opsrc1[0] (net)                                0.0000     0.2631 r
+  core/Ex/U301/A1 (LVT_INOR2HDV4)                       0.1108    0.0000     0.2631 r
+  core/Ex/U301/ZN (LVT_INOR2HDV4)                       0.1466    0.1337     0.3969 r
+  core/Ex/n37 (net)                             2                 0.0000     0.3969 r
+  core/Ex/U302/I (LVT_BUFHDV16)                         0.1466    0.0000     0.3969 r
+  core/Ex/U302/Z (LVT_BUFHDV16)                         0.0985    0.1265     0.5234 r
+  core/Ex/io_rf_ren1 (net)                     29                 0.0000     0.5234 r
+  core/Ex/io_rf_ren1 (ysyx_210232_EXU_0)                          0.0000     0.5234 r
+  core/Ex_io_rf_ren1 (net)                                        0.0000     0.5234 r
+  core/Rf/io_ren1 (ysyx_210232_regfile_0)                         0.0000     0.5234 r
+  core/Rf/io_ren1 (net)                                           0.0000     0.5234 r
+  core/Rf/U471/A1 (LVT_NAND2HDV4)                       0.0985    0.0000     0.5234 r
+  core/Rf/U471/ZN (LVT_NAND2HDV4)                       0.0767    0.0651     0.5885 f
+  core/Rf/n146 (net)                            2                 0.0000     0.5885 f
+  core/Rf/U480/A1 (LVT_OR2HDV8)                         0.0767    0.0000     0.5885 f
+  core/Rf/U480/Z (LVT_OR2HDV8)                          0.0614    0.1362     0.7247 f
+  core/Rf/n161 (net)                            4                 0.0000     0.7247 f
+  core/Rf/U332/A1 (LVT_NOR2HDV4)                        0.0614    0.0000     0.7247 f
+  core/Rf/U332/ZN (LVT_NOR2HDV4)                        0.2559    0.1505     0.8753 r
+  core/Rf/n916 (net)                           12                 0.0000     0.8753 r
+  core/Rf/U231/I (LVT_BUFHDV4)                          0.2559    0.0000     0.8753 r
+  core/Rf/U231/Z (LVT_BUFHDV4)                          0.4508    0.3313     1.2066 r
+  core/Rf/n61 (net)                            53                 0.0000     1.2066 r
+  core/Rf/U1667/A1 (LVT_AOI22HDV1)                      0.4508    0.0000     1.2066 r
+  core/Rf/U1667/ZN (LVT_AOI22HDV1)                      0.1867    0.1397     1.3463 f
+  core/Rf/n1353 (net)                           1                 0.0000     1.3463 f
+  core/Rf/U1670/A2 (LVT_NAND4HDV1)                      0.1867    0.0000     1.3463 f
+  core/Rf/U1670/ZN (LVT_NAND4HDV1)                      0.1165    0.0899     1.4362 r
+  core/Rf/n1365 (net)                           1                 0.0000     1.4362 r
+  core/Rf/U1681/A2 (LVT_OR4HDV2)                        0.1165    0.0000     1.4362 r
+  core/Rf/U1681/Z (LVT_OR4HDV2)                         0.0467    0.1182     1.5544 r
+  core/Rf/io_rdata1[3] (net)                    1                 0.0000     1.5544 r
+  core/Rf/io_rdata1[3] (ysyx_210232_regfile_0)                    0.0000     1.5544 r
+  core/Rf_io_rdata1[3] (net)                                      0.0000     1.5544 r
+  core/U20/I1 (LVT_MUX2HDV1)                            0.0467    0.0000     1.5544 r
+  core/U20/Z (LVT_MUX2HDV1)                             0.0796    0.1467     1.7011 r
+  core/Ex_io_rf_rdata1[3] (net)                 1                 0.0000     1.7011 r
+  core/Ex/io_rf_rdata1[3] (ysyx_210232_EXU_0)                     0.0000     1.7011 r
+  core/Ex/io_rf_rdata1[3] (net)                                   0.0000     1.7011 r
+  core/Ex/U25/A1 (LVT_AOI21HDV2)                        0.0796    0.0000     1.7011 r
+  core/Ex/U25/ZN (LVT_AOI21HDV2)                        0.1134    0.0888     1.7899 f
+  core/Ex/n217 (net)                            4                 0.0000     1.7899 f
+  core/Ex/U323/A1 (LVT_NOR2HDV1)                        0.1134    0.0000     1.7899 f
+  core/Ex/U323/ZN (LVT_NOR2HDV1)                        0.2972    0.1807     1.9706 r
+  core/Ex/jmp_io_op1[3] (net)                   4                 0.0000     1.9706 r
+  core/Ex/jmp/io_op1[3] (ysyx_210232_JMP_0)                       0.0000     1.9706 r
+  core/Ex/jmp/io_op1[3] (net)                                     0.0000     1.9706 r
+  core/Ex/jmp/U592/I (LVT_INHDV1)                       0.2972    0.0000     1.9706 r
+  core/Ex/jmp/U592/ZN (LVT_INHDV1)                      0.0745    0.0492     2.0197 f
+  core/Ex/jmp/n499 (net)                        1                 0.0000     2.0197 f
+  core/Ex/jmp/U593/B1 (LVT_IOA22HDV1)                   0.0745    0.0000     2.0197 f
+  core/Ex/jmp/U593/ZN (LVT_IOA22HDV1)                   0.2128    0.1304     2.1501 r
+  core/Ex/jmp/n500 (net)                        2                 0.0000     2.1501 r
+  core/Ex/jmp/U594/A1 (LVT_NOR2HDV1)                    0.2128    0.0000     2.1501 r
+  core/Ex/jmp/U594/ZN (LVT_NOR2HDV1)                    0.0990    0.0832     2.2333 f
+  core/Ex/jmp/n509 (net)                        3                 0.0000     2.2333 f
+  core/Ex/jmp/U600/A2 (LVT_NOR2HDV1)                    0.0990    0.0000     2.2333 f
+  core/Ex/jmp/U600/ZN (LVT_NOR2HDV1)                    0.1208    0.0944     2.3278 r
+  core/Ex/jmp/n512 (net)                        1                 0.0000     2.3278 r
+  core/Ex/jmp/U27/A1 (LVT_AOI21HDV2)                    0.1208    0.0000     2.3278 r
+  core/Ex/jmp/U27/ZN (LVT_AOI21HDV2)                    0.1048    0.0820     2.4097 f
+  core/Ex/jmp/n545 (net)                        2                 0.0000     2.4097 f
+  core/Ex/jmp/U48/A1 (LVT_OAI21HDV2)                    0.1048    0.0000     2.4097 f
+  core/Ex/jmp/U48/ZN (LVT_OAI21HDV2)                    0.1736    0.1255     2.5352 r
+  core/Ex/jmp/n555 (net)                        2                 0.0000     2.5352 r
+  core/Ex/jmp/U642/A1 (LVT_AOI21HDV1)                   0.1736    0.0000     2.5352 r
+  core/Ex/jmp/U642/ZN (LVT_AOI21HDV1)                   0.1261    0.1105     2.6458 f
+  core/Ex/jmp/n564 (net)                        2                 0.0000     2.6458 f
+  core/Ex/jmp/U60/A1 (LVT_OAI21HDV1)                    0.1261    0.0000     2.6458 f
+  core/Ex/jmp/U60/ZN (LVT_OAI21HDV1)                    0.2156    0.1542     2.8000 r
+  core/Ex/jmp/n574 (net)                        2                 0.0000     2.8000 r
+  core/Ex/jmp/U659/A1 (LVT_AOI21HDV1)                   0.2156    0.0000     2.8000 r
+  core/Ex/jmp/U659/ZN (LVT_AOI21HDV1)                   0.1346    0.1174     2.9174 f
+  core/Ex/jmp/n583 (net)                        2                 0.0000     2.9174 f
+  core/Ex/jmp/U668/A1 (LVT_OAI21HDV1)                   0.1346    0.0000     2.9174 f
+  core/Ex/jmp/U668/ZN (LVT_OAI21HDV1)                   0.2159    0.1564     3.0738 r
+  core/Ex/jmp/n593 (net)                        2                 0.0000     3.0738 r
+  core/Ex/jmp/U62/A1 (LVT_AOI21HDV1)                    0.2159    0.0000     3.0738 r
+  core/Ex/jmp/U62/ZN (LVT_AOI21HDV1)                    0.1414    0.1233     3.1971 f
+  core/Ex/jmp/n602 (net)                        2                 0.0000     3.1971 f
+  core/Ex/jmp/U685/A1 (LVT_OAI21HDV2)                   0.1414    0.0000     3.1971 f
+  core/Ex/jmp/U685/ZN (LVT_OAI21HDV2)                   0.1769    0.1350     3.3321 r
+  core/Ex/jmp/n612 (net)                        2                 0.0000     3.3321 r
+  core/Ex/jmp/U694/A1 (LVT_AOI21HDV1)                   0.1769    0.0000     3.3321 r
+  core/Ex/jmp/U694/ZN (LVT_AOI21HDV1)                   0.1331    0.1169     3.4490 f
+  core/Ex/jmp/n621 (net)                        2                 0.0000     3.4490 f
+  core/Ex/jmp/U703/A1 (LVT_OAI21HDV2)                   0.1331    0.0000     3.4490 f
+  core/Ex/jmp/U703/ZN (LVT_OAI21HDV2)                   0.1857    0.1384     3.5874 r
+  core/Ex/jmp/n631 (net)                        2                 0.0000     3.5874 r
+  core/Ex/jmp/U11/A1 (LVT_AOI21HDV2)                    0.1857    0.0000     3.5874 r
+  core/Ex/jmp/U11/ZN (LVT_AOI21HDV2)                    0.1282    0.1143     3.7018 f
+  core/Ex/jmp/n640 (net)                        2                 0.0000     3.7018 f
+  core/Ex/jmp/U13/A1 (LVT_OAI21HDV4)                    0.1282    0.0000     3.7018 f
+  core/Ex/jmp/U13/ZN (LVT_OAI21HDV4)                    0.1544    0.1190     3.8207 r
+  core/Ex/jmp/n651 (net)                        2                 0.0000     3.8207 r
+  core/Ex/jmp/U12/A1 (LVT_AOI21HDV4)                    0.1544    0.0000     3.8207 r
+  core/Ex/jmp/U12/ZN (LVT_AOI21HDV4)                    0.0846    0.0760     3.8968 f
+  core/Ex/jmp/n660 (net)                        2                 0.0000     3.8968 f
+  core/Ex/jmp/U54/A1 (LVT_OAI21HDV2)                    0.0846    0.0000     3.8968 f
+  core/Ex/jmp/U54/ZN (LVT_OAI21HDV2)                    0.1721    0.1202     4.0170 r
+  core/Ex/jmp/n669 (net)                        2                 0.0000     4.0170 r
+  core/Ex/jmp/U744/A1 (LVT_AOI21HDV1)                   0.1721    0.0000     4.0170 r
+  core/Ex/jmp/U744/ZN (LVT_AOI21HDV1)                   0.1324    0.1157     4.1327 f
+  core/Ex/jmp/n678 (net)                        2                 0.0000     4.1327 f
+  core/Ex/jmp/U58/A1 (LVT_OAI21HDV2)                    0.1324    0.0000     4.1327 f
+  core/Ex/jmp/U58/ZN (LVT_OAI21HDV2)                    0.1761    0.1327     4.2654 r
+  core/Ex/jmp/n687 (net)                        2                 0.0000     4.2654 r
+  core/Ex/jmp/U761/A1 (LVT_AOI21HDV1)                   0.1761    0.0000     4.2654 r
+  core/Ex/jmp/U761/ZN (LVT_AOI21HDV1)                   0.1330    0.1167     4.3821 f
+  core/Ex/jmp/n696 (net)                        2                 0.0000     4.3821 f
+  core/Ex/jmp/U57/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     4.3821 f
+  core/Ex/jmp/U57/ZN (LVT_OAI21HDV2)                    0.1761    0.1328     4.5149 r
+  core/Ex/jmp/n705 (net)                        2                 0.0000     4.5149 r
+  core/Ex/jmp/U778/A1 (LVT_AOI21HDV1)                   0.1761    0.0000     4.5149 r
+  core/Ex/jmp/U778/ZN (LVT_AOI21HDV1)                   0.1330    0.1167     4.6316 f
+  core/Ex/jmp/n714 (net)                        2                 0.0000     4.6316 f
+  core/Ex/jmp/U56/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     4.6316 f
+  core/Ex/jmp/U56/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     4.7645 r
+  core/Ex/jmp/n723 (net)                        2                 0.0000     4.7645 r
+  core/Ex/jmp/U795/A1 (LVT_AOI21HDV1)                   0.1761    0.0000     4.7645 r
+  core/Ex/jmp/U795/ZN (LVT_AOI21HDV1)                   0.1330    0.1167     4.8812 f
+  core/Ex/jmp/n732 (net)                        2                 0.0000     4.8812 f
+  core/Ex/jmp/U55/A1 (LVT_OAI21HDV2)                    0.1330    0.0000     4.8812 f
+  core/Ex/jmp/U55/ZN (LVT_OAI21HDV2)                    0.1761    0.1329     5.0140 r
+  core/Ex/jmp/n741 (net)                        2                 0.0000     5.0140 r
+  core/Ex/jmp/U812/A1 (LVT_AOI21HDV1)                   0.1761    0.0000     5.0140 r
+  core/Ex/jmp/U812/ZN (LVT_AOI21HDV1)                   0.1330    0.1167     5.1307 f
+  core/Ex/jmp/n751 (net)                        2                 0.0000     5.1307 f
+  core/Ex/jmp/U823/A1 (LVT_OAI21HDV2)                   0.1330    0.0000     5.1307 f
+  core/Ex/jmp/U823/ZN (LVT_OAI21HDV2)                   0.1493    0.1174     5.2480 r
+  core/Ex/jmp/n755 (net)                        1                 0.0000     5.2480 r
+  core/Ex/jmp/U827/CI (LVT_AD1HDV1)                     0.1493    0.0000     5.2480 r
+  core/Ex/jmp/U827/CO (LVT_AD1HDV1)                     0.1234    0.2019     5.4500 r
+  core/Ex/jmp/n759 (net)                        1                 0.0000     5.4500 r
+  core/Ex/jmp/U829/CI (LVT_AD1HDV1)                     0.1234    0.0000     5.4500 r
+  core/Ex/jmp/U829/CO (LVT_AD1HDV1)                     0.1203    0.1947     5.6447 r
+  core/Ex/jmp/n765 (net)                        1                 0.0000     5.6447 r
+  core/Ex/jmp/U833/A1 (LVT_XOR2HDV1)                    0.1203    0.0000     5.6447 r
+  core/Ex/jmp/U833/Z (LVT_XOR2HDV1)                     0.0699    0.1515     5.7962 f
+  core/Ex/jmp/n766 (net)                        1                 0.0000     5.7962 f
+  core/Ex/jmp/U834/A1 (LVT_IOA22HDV1)                   0.0699    0.0000     5.7962 f
+  core/Ex/jmp/U834/ZN (LVT_IOA22HDV1)                   0.1084    0.1480     5.9442 f
+  core/Ex/jmp/io_jumpPC[31] (net)               1                 0.0000     5.9442 f
+  core/Ex/jmp/io_jumpPC[31] (ysyx_210232_JMP_0)                   0.0000     5.9442 f
+  core/Ex/jmp_io_jumpPC[31] (net)                                 0.0000     5.9442 f
+  core/Ex/U311/A1 (LVT_IOA21HDV1)                       0.1084    0.0000     5.9442 f
+  core/Ex/U311/ZN (LVT_IOA21HDV1)                       0.0679    0.1479     6.0921 f
+  core/Ex/io_jumpPC[31] (net)                   1                 0.0000     6.0921 f
+  core/Ex/io_jumpPC[31] (ysyx_210232_EXU_0)                       0.0000     6.0921 f
+  core/Ex_io_jumpPC[31] (net)                                     0.0000     6.0921 f
+  core/If/io_jumpPC[31] (ysyx_210232_IFU_0)                       0.0000     6.0921 f
+  core/If/io_jumpPC[31] (net)                                     0.0000     6.0921 f
+  core/If/U213/A1 (LVT_IOA21HDV2)                       0.0679    0.0000     6.0921 f
+  core/If/U213/ZN (LVT_IOA21HDV2)                       0.0581    0.1190     6.2111 f
+  core/If/n120 (net)                            1                 0.0000     6.2111 f
+  core/If/PC_reg_31_/D (LVT_DQHDV2)                     0.0581    0.0000     6.2111 f
+  data arrival time                                                          6.2111
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  core/If/PC_reg_31_/CK (LVT_DQHDV2)                              0.0000     6.3500 r
+  library setup time                                             -0.1369     6.2131
+  data required time                                                         6.2131
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2131
+  data arrival time                                                         -6.2111
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0020
