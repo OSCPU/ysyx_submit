@@ -1,0 +1,694 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Fri_Oct_22_10:40:12_2021_+0800
+top_name: ysyx_210134
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+468020.0  468020.0  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+45787  45788  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210134
+Date   : Fri Oct 22 12:02:42 2021
+****************************************
+    
+Number of ports:                        11762
+Number of nets:                         52713
+Number of cells:                        46071
+Number of combinational cells:          38856
+Number of sequential cells:              6932
+Number of macros/black boxes:               0
+Number of buf/inv:                       5637
+Number of references:                       2
+Combinational area:             290823.757439
+Buf/Inv area:                    25704.507117
+Noncombinational area:          177196.233156
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                468019.990595
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------------
+ysyx_210134                       468019.9906    100.0     800.1560       0.0000  0.0000  ysyx_210134
+tile                              467219.8346     99.8       0.0000       0.0000  0.0000  ysyx_210134_Tile_0
+tile/core                         438895.6566     93.8       5.3792       0.0000  0.0000  ysyx_210134_Core_0
+tile/core/be                      418757.2764     89.5   65186.4902   40388.3797  0.0000  ysyx_210134_Backend_0
+tile/core/be/alu                   22220.1303      4.7   22220.1303       0.0000  0.0000  ysyx_210134_ALU_3
+tile/core/be/csr                   62358.3770     13.3   30342.7223   32015.6547  0.0000  ysyx_210134_CSR_0
+tile/core/be/issueArbiter          11270.7688      2.4   11270.7688       0.0000  0.0000  ysyx_210134_IssueArbiter_0
+tile/core/be/issueQueue            69372.8539     14.8   34648.7719   34724.0820  0.0000  ysyx_210134_FIFO_0
+tile/core/be/mdu                   18765.3391      4.0   18765.3391       0.0000  0.0000  ysyx_210134_ALU_2
+tile/core/be/regFile              129194.9375     27.6   78501.3549   50693.5825  0.0000  ysyx_210134_RegFile_0
+tile/core/fe                       20133.0010      4.3    6477.9016    4241.4993  0.0000  ysyx_210134_Frontend_0
+tile/core/fe/Dec                    1886.7544      0.4    1886.7544       0.0000  0.0000  ysyx_210134_Dec_2
+tile/core/fe/Dec_1                  1888.0992      0.4    1888.0992       0.0000  0.0000  ysyx_210134_Dec_3
+tile/core/fe/pc_gen                 5638.7465      1.2    2895.3544    1635.2769  0.0000  ysyx_210134_PCGen_0
+tile/core/fe/pc_gen/bpu             1108.1152      0.2     657.6072     102.2048  0.0000  ysyx_210134_BPU_0
+tile/core/fe/pc_gen/bpu/history      348.3032      0.1       0.0000       0.0000  0.0000  ysyx_210134_DualPortBRAM_0
+tile/core/fe/pc_gen/bpu/history/sim_dual_port_bram
+                                     348.3032      0.1     143.8936     204.4096  0.0000  ysyx_210134_SimDualPortBRAM_0
+tile/dcache                        11753.5521      2.5    7107.2680    4646.2842  0.0000  ysyx_210134_DcacheDP_0
+tile/icache                         5559.4033      1.2    2257.9192    3301.4841  0.0000  ysyx_210134_ICache_0
+tile/xbar                          11011.2226      2.4    5742.2960    5217.8242  0.0000  ysyx_210134_AXI4Server_0
+tile/xbar/r_arbiter                   51.1024      0.0      25.5512      25.5512  0.0000  ysyx_210134_CacheArbiter_0
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------------
+Total                                                   290823.7574  177196.2332  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210134
+Date   : Fri Oct 22 12:02:38 2021
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: tile/core/be/exInsts_2_imm_reg_19_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: tile/core/be/reBranchPC_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  tile/core/be/exInsts_2_imm_reg_19_/CK (LVT_DQHDV2)    0.0000    0.0000 #   0.0000 r
+  tile/core/be/exInsts_2_imm_reg_19_/Q (LVT_DQHDV2)     0.0967    0.2476     0.2476 f
+  tile/core/be/exInsts_2_imm[19] (net)          3                 0.0000     0.2476 f
+  tile/core/be/U1570/A2 (LVT_NOR2HDV2)                  0.0967    0.0000     0.2476 f
+  tile/core/be/U1570/ZN (LVT_NOR2HDV2)                  0.1682    0.1204     0.3680 r
+  tile/core/be/n337 (net)                       3                 0.0000     0.3680 r
+  tile/core/be/U1583/A1 (LVT_OAI21HDV1)                 0.1682    0.0000     0.3680 r
+  tile/core/be/U1583/ZN (LVT_OAI21HDV1)                 0.1085    0.0979     0.4659 f
+  tile/core/be/n240 (net)                       1                 0.0000     0.4659 f
+  tile/core/be/U1584/B (LVT_AOI21HDV4)                  0.1085    0.0000     0.4659 f
+  tile/core/be/U1584/ZN (LVT_AOI21HDV4)                 0.1482    0.1071     0.5730 r
+  tile/core/be/n280 (net)                       3                 0.0000     0.5730 r
+  tile/core/be/U1585/I (LVT_INHDV1)                     0.1482    0.0000     0.5730 r
+  tile/core/be/U1585/ZN (LVT_INHDV1)                    0.0702    0.0601     0.6331 f
+  tile/core/be/n254 (net)                       2                 0.0000     0.6331 f
+  tile/core/be/U1589/A1 (LVT_AOI21HDV1)                 0.0702    0.0000     0.6331 f
+  tile/core/be/U1589/ZN (LVT_AOI21HDV1)                 0.1806    0.1247     0.7578 r
+  tile/core/be/n248 (net)                       2                 0.0000     0.7578 r
+  tile/core/be/U1598/A1 (LVT_OAI21HDV1)                 0.1806    0.0000     0.7578 r
+  tile/core/be/U1598/ZN (LVT_OAI21HDV1)                 0.0920    0.0798     0.8375 f
+  tile/core/be/n249 (net)                       1                 0.0000     0.8375 f
+  tile/core/be/U1599/B (LVT_AOI21HDV2)                  0.0920    0.0000     0.8375 f
+  tile/core/be/U1599/ZN (LVT_AOI21HDV2)                 0.1340    0.0962     0.9337 r
+  tile/core/be/n253 (net)                       1                 0.0000     0.9337 r
+  tile/core/be/U1604/A1 (LVT_XOR2HDV2)                  0.1340    0.0000     0.9337 r
+  tile/core/be/U1604/Z (LVT_XOR2HDV2)                   0.0805    0.1619     1.0956 f
+  tile/core/be/n1591 (net)                      2                 0.0000     1.0956 f
+  tile/core/be/U1605/A2 (LVT_NOR2HDV2)                  0.0805    0.0000     1.0956 f
+  tile/core/be/U1605/ZN (LVT_NOR2HDV2)                  0.0944    0.0777     1.1733 r
+  tile/core/be/n314 (net)                       1                 0.0000     1.1733 r
+  tile/core/be/U1657/A1 (LVT_NAND4HDV2)                 0.0944    0.0000     1.1733 r
+  tile/core/be/U1657/ZN (LVT_NAND4HDV2)                 0.1247    0.0905     1.2638 f
+  tile/core/be/n315 (net)                       1                 0.0000     1.2638 f
+  tile/core/be/U1658/A2 (LVT_NOR2HDV2)                  0.1247    0.0000     1.2638 f
+  tile/core/be/U1658/ZN (LVT_NOR2HDV2)                  0.1017    0.0836     1.3475 r
+  tile/core/be/n423 (net)                       1                 0.0000     1.3475 r
+  tile/core/be/U1727/A1 (LVT_NAND4HDV2)                 0.1017    0.0000     1.3475 r
+  tile/core/be/U1727/ZN (LVT_NAND4HDV2)                 0.1255    0.0898     1.4373 f
+  tile/core/be/n444 (net)                       1                 0.0000     1.4373 f
+  tile/core/be/U1738/A1 (LVT_NOR2HDV2)                  0.1255    0.0000     1.4373 f
+  tile/core/be/U1738/ZN (LVT_NOR2HDV2)                  0.1040    0.0821     1.5194 r
+  tile/core/be/n574 (net)                       1                 0.0000     1.5194 r
+  tile/core/be/U1802/A1 (LVT_NAND3HDV2)                 0.1040    0.0000     1.5194 r
+  tile/core/be/U1802/ZN (LVT_NAND3HDV2)                 0.1167    0.0906     1.6100 f
+  tile/core/be/n694 (net)                       2                 0.0000     1.6100 f
+  tile/core/be/U1846/A1 (LVT_NOR2HDV2)                  0.1167    0.0000     1.6100 f
+  tile/core/be/U1846/ZN (LVT_NOR2HDV2)                  0.1421    0.1018     1.7118 r
+  tile/core/be/n1210 (net)                      2                 0.0000     1.7118 r
+  tile/core/be/U1363/A1 (LVT_NOR2HDV2)                  0.1421    0.0000     1.7118 r
+  tile/core/be/U1363/ZN (LVT_NOR2HDV2)                  0.0818    0.0719     1.7837 f
+  tile/core/be/n1505 (net)                      3                 0.0000     1.7837 f
+  tile/core/be/U1855/A1 (LVT_NOR2HDV4)                  0.0818    0.0000     1.7837 f
+  tile/core/be/U1855/ZN (LVT_NOR2HDV4)                  0.1191    0.0831     1.8669 r
+  tile/core/be/n1209 (net)                      2                 0.0000     1.8669 r
+  tile/core/be/U1362/I (LVT_INHDV2)                     0.1191    0.0000     1.8669 r
+  tile/core/be/U1362/ZN (LVT_INHDV2)                    0.0730    0.0639     1.9308 f
+  tile/core/be/n1211 (net)                      3                 0.0000     1.9308 f
+  tile/core/be/U2614/S (LVT_MUX2NHDV1)                  0.0730    0.0000     1.9308 f
+  tile/core/be/U2614/ZN (LVT_MUX2NHDV1)                 0.1140    0.0902     2.0210 f
+  tile/core/be/n1216 (net)                      1                 0.0000     2.0210 f
+  tile/core/be/U2615/A1 (LVT_OAI211HDV4)                0.1140    0.0000     2.0210 f
+  tile/core/be/U2615/ZN (LVT_OAI211HDV4)                0.1969    0.1399     2.1609 r
+  tile/core/be/n_csr_io_common_io_num_T_4[0] (net)
+                                                3                 0.0000     2.1609 r
+  tile/core/be/csr/io_common_io_num[0] (ysyx_210134_CSR_0)        0.0000     2.1609 r
+  tile/core/be/csr/io_common_io_num[0] (net)                      0.0000     2.1609 r
+  tile/core/be/csr/U472/I (LVT_INHDV4)                  0.1969    0.0000     2.1609 r
+  tile/core/be/csr/U472/ZN (LVT_INHDV4)                 0.0730    0.0602     2.2211 f
+  tile/core/be/csr/n444 (net)                   4                 0.0000     2.2211 f
+  tile/core/be/csr/U37/A2 (LVT_NAND2HDV2)               0.0730    0.0000     2.2211 f
+  tile/core/be/csr/U37/ZN (LVT_NAND2HDV2)               0.1233    0.0880     2.3091 r
+  tile/core/be/csr/n88 (net)                    3                 0.0000     2.3091 r
+  tile/core/be/csr/U502/A1 (LVT_NOR2HDV1)               0.1233    0.0000     2.3091 r
+  tile/core/be/csr/U502/ZN (LVT_NOR2HDV1)               0.1028    0.0792     2.3883 f
+  tile/core/be/csr/n89 (net)                    2                 0.0000     2.3883 f
+  tile/core/be/csr/U503/A2 (LVT_NAND2HDV4)              0.1028    0.0000     2.3883 f
+  tile/core/be/csr/U503/ZN (LVT_NAND2HDV4)              0.1023    0.0826     2.4709 r
+  tile/core/be/csr/n3206 (net)                  6                 0.0000     2.4709 r
+  tile/core/be/csr/U87/I (LVT_INHDV4)                   0.1023    0.0000     2.4709 r
+  tile/core/be/csr/U87/ZN (LVT_INHDV4)                  0.0877    0.0757     2.5466 f
+  tile/core/be/csr/n3179 (net)                 11                 0.0000     2.5466 f
+  tile/core/be/csr/U30/I (LVT_BUFHDV8)                  0.0877    0.0000     2.5466 f
+  tile/core/be/csr/U30/Z (LVT_BUFHDV8)                  0.0789    0.1259     2.6724 f
+  tile/core/be/csr/n2929 (net)                 21                 0.0000     2.6724 f
+  tile/core/be/csr/U2283/A1 (LVT_AOI22HDV1)             0.0789    0.0000     2.6724 f
+  tile/core/be/csr/U2283/ZN (LVT_AOI22HDV1)             0.1673    0.1262     2.7986 r
+  tile/core/be/csr/n1380 (net)                  1                 0.0000     2.7986 r
+  tile/core/be/csr/U2285/B (LVT_OAI211HDV1)             0.1673    0.0000     2.7986 r
+  tile/core/be/csr/U2285/ZN (LVT_OAI211HDV1)            0.1153    0.1014     2.9001 f
+  tile/core/be/csr/n1384 (net)                  1                 0.0000     2.9001 f
+  tile/core/be/csr/U313/A1 (LVT_INAND4HDV1)             0.1153    0.0000     2.9001 f
+  tile/core/be/csr/U313/ZN (LVT_INAND4HDV1)             0.1530    0.1840     3.0841 f
+  tile/core/be/csr/n1393 (net)                  1                 0.0000     3.0841 f
+  tile/core/be/csr/U2296/A1 (LVT_OR2HDV4)               0.1530    0.0000     3.0841 f
+  tile/core/be/csr/U2296/Z (LVT_OR2HDV4)                0.0487    0.1455     3.2295 f
+  tile/core/be/csr/io_common_io_out[3] (net)
+                                                3                 0.0000     3.2295 f
+  tile/core/be/csr/io_common_io_out[3] (ysyx_210134_CSR_0)        0.0000     3.2295 f
+  tile/core/be/csr_io_common_io_out[3] (net)                      0.0000     3.2295 f
+  tile/core/be/U1860/I (LVT_INHDV1)                     0.0487    0.0000     3.2295 f
+  tile/core/be/U1860/ZN (LVT_INHDV1)                    0.0823    0.0608     3.2903 r
+  tile/core/be/n698 (net)                       1                 0.0000     3.2903 r
+  tile/core/be/U1862/A1 (LVT_OAI21HDV4)                 0.0823    0.0000     3.2903 r
+  tile/core/be/U1862/ZN (LVT_OAI21HDV4)                 0.1212    0.0728     3.3631 f
+  tile/core/be/alu_io_b[3] (net)                2                 0.0000     3.3631 f
+  tile/core/be/alu/io_b[3] (ysyx_210134_ALU_3)                    0.0000     3.3631 f
+  tile/core/be/alu/io_b[3] (net)                                  0.0000     3.3631 f
+  tile/core/be/alu/U478/I (LVT_INHDV6)                  0.1212    0.0000     3.3631 f
+  tile/core/be/alu/U478/ZN (LVT_INHDV6)                 0.1239    0.0972     3.4603 r
+  tile/core/be/alu/n103 (net)                  15                 0.0000     3.4603 r
+  tile/core/be/alu/U504/I (LVT_INHDV2)                  0.1239    0.0000     3.4603 r
+  tile/core/be/alu/U504/ZN (LVT_INHDV2)                 0.2038    0.1543     3.6146 f
+  tile/core/be/alu/n1894 (net)                 12                 0.0000     3.6146 f
+  tile/core/be/alu/U2532/I (LVT_INHDV2)                 0.2038    0.0000     3.6146 f
+  tile/core/be/alu/U2532/ZN (LVT_INHDV2)                0.4805    0.3156     3.9302 r
+  tile/core/be/alu/n1896 (net)                 24                 0.0000     3.9302 r
+  tile/core/be/alu/U2533/A1 (LVT_NOR2HDV1)              0.4805    0.0000     3.9302 r
+  tile/core/be/alu/U2533/ZN (LVT_NOR2HDV1)              0.1259    0.0773     4.0075 f
+  tile/core/be/alu/n1899 (net)                  2                 0.0000     4.0075 f
+  tile/core/be/alu/U2538/A1 (LVT_OAI21HDV1)             0.1259    0.0000     4.0075 f
+  tile/core/be/alu/U2538/ZN (LVT_OAI21HDV1)             0.1503    0.1169     4.1244 r
+  tile/core/be/alu/n1900 (net)                  1                 0.0000     4.1244 r
+  tile/core/be/alu/U2539/B (LVT_AOI21HDV1)              0.1503    0.0000     4.1244 r
+  tile/core/be/alu/U2539/ZN (LVT_AOI21HDV1)             0.0891    0.0486     4.1730 f
+  tile/core/be/alu/n1920 (net)                  1                 0.0000     4.1730 f
+  tile/core/be/alu/U2556/A1 (LVT_OAI21HDV1)             0.0891    0.0000     4.1730 f
+  tile/core/be/alu/U2556/ZN (LVT_OAI21HDV1)             0.1414    0.1049     4.2779 r
+  tile/core/be/alu/n1961 (net)                  1                 0.0000     4.2779 r
+  tile/core/be/alu/U61/A1 (LVT_AOI21HDV1)               0.1414    0.0000     4.2779 r
+  tile/core/be/alu/U61/ZN (LVT_AOI21HDV1)               0.0954    0.0837     4.3616 f
+  tile/core/be/alu/n2065 (net)                  1                 0.0000     4.3616 f
+  tile/core/be/alu/U2661/A1 (LVT_OAI21HDV2)             0.0954    0.0000     4.3616 f
+  tile/core/be/alu/U2661/ZN (LVT_OAI21HDV2)             0.1647    0.1186     4.4802 r
+  tile/core/be/alu/n2211 (net)                  2                 0.0000     4.4802 r
+  tile/core/be/alu/U2759/A1 (LVT_AOI21HDV2)             0.1647    0.0000     4.4802 r
+  tile/core/be/alu/U2759/ZN (LVT_AOI21HDV2)             0.0787    0.0713     4.5515 f
+  tile/core/be/alu/n2212 (net)                  1                 0.0000     4.5515 f
+  tile/core/be/alu/U2760/A1 (LVT_INAND2HDV2)            0.0787    0.0000     4.5515 f
+  tile/core/be/alu/U2760/ZN (LVT_INAND2HDV2)            0.1060    0.1247     4.6763 f
+  tile/core/be/alu/n2221 (net)                  1                 0.0000     4.6763 f
+  tile/core/be/alu/U2763/B (LVT_OAI211HDV2)             0.1060    0.0000     4.6763 f
+  tile/core/be/alu/U2763/ZN (LVT_OAI211HDV2)            0.1827    0.0610     4.7372 r
+  tile/core/be/alu/n2227 (net)                  1                 0.0000     4.7372 r
+  tile/core/be/alu/U2767/A1 (LVT_AOI21HDV2)             0.1827    0.0000     4.7372 r
+  tile/core/be/alu/U2767/ZN (LVT_AOI21HDV2)             0.1123    0.0779     4.8151 f
+  tile/core/be/alu/n2232 (net)                  1                 0.0000     4.8151 f
+  tile/core/be/alu/U477/A1 (LVT_OAI21HDV1)              0.1123    0.0000     4.8151 f
+  tile/core/be/alu/U477/ZN (LVT_OAI21HDV1)              0.1602    0.1198     4.9350 r
+  tile/core/be/alu/n2236 (net)                  1                 0.0000     4.9350 r
+  tile/core/be/alu/U2769/B (LVT_OAI211HDV2)             0.1602    0.0000     4.9350 r
+  tile/core/be/alu/U2769/ZN (LVT_OAI211HDV2)            0.1767    0.1422     5.0772 f
+  tile/core/be/alu/io_r[0] (net)                4                 0.0000     5.0772 f
+  tile/core/be/alu/U3394/I (LVT_INHDV1)                 0.1767    0.0000     5.0772 f
+  tile/core/be/alu/U3394/ZN (LVT_INHDV1)                0.0732    0.0632     5.1404 r
+  tile/core/be/alu/n3313 (net)                  1                 0.0000     5.1404 r
+  tile/core/be/alu/U497/A1 (LVT_NAND2HDV1)              0.0732    0.0000     5.1404 r
+  tile/core/be/alu/U497/ZN (LVT_NAND2HDV1)              0.0816    0.0563     5.1967 f
+  tile/core/be/alu/n30 (net)                    1                 0.0000     5.1967 f
+  tile/core/be/alu/U135/A1 (LVT_NOR2HDV2)               0.0816    0.0000     5.1967 f
+  tile/core/be/alu/U135/ZN (LVT_NOR2HDV2)               0.1367    0.0954     5.2920 r
+  tile/core/be/alu/n3326 (net)                  1                 0.0000     5.2920 r
+  tile/core/be/alu/U96/B2 (LVT_I2NAND4HDV4)             0.1367    0.0000     5.2920 r
+  tile/core/be/alu/U96/ZN (LVT_I2NAND4HDV4)             0.1203    0.1155     5.4075 f
+  tile/core/be/alu/n3329 (net)                  1                 0.0000     5.4075 f
+  tile/core/be/alu/U3408/C (LVT_AOI211HDV4)             0.1203    0.0000     5.4075 f
+  tile/core/be/alu/U3408/ZN (LVT_AOI211HDV4)            0.2091    0.1360     5.5435 r
+  tile/core/be/alu/io_zero[0] (net)             2                 0.0000     5.5435 r
+  tile/core/be/alu/io_zero[0] (ysyx_210134_ALU_3)                 0.0000     5.5435 r
+  tile/core/be/alu_io_zero_0_ (net)                               0.0000     5.5435 r
+  tile/core/be/U1897/A1 (LVT_OAI21HDV2)                 0.2091    0.0000     5.5435 r
+  tile/core/be/U1897/ZN (LVT_OAI21HDV2)                 0.0810    0.0739     5.6174 f
+  tile/core/be/n721 (net)                       1                 0.0000     5.6174 f
+  tile/core/be/U1899/B (LVT_OAI211HDV2)                 0.0810    0.0000     5.6174 f
+  tile/core/be/U1899/ZN (LVT_OAI211HDV2)                0.2033    0.0672     5.6845 r
+  tile/core/be/n734 (net)                       1                 0.0000     5.6845 r
+  tile/core/be/U1909/A1 (LVT_AOI21HDV4)                 0.2033    0.0000     5.6845 r
+  tile/core/be/U1909/ZN (LVT_AOI21HDV4)                 0.0987    0.0871     5.7717 f
+  tile/core/be/n738 (net)                       2                 0.0000     5.7717 f
+  tile/core/be/U1914/A1 (LVT_NAND2HDV4)                 0.0987    0.0000     5.7717 f
+  tile/core/be/U1914/ZN (LVT_NAND2HDV4)                 0.0681    0.0507     5.8224 r
+  tile/core/be/n5987 (net)                      2                 0.0000     5.8224 r
+  tile/core/be/U1351/A1 (LVT_AO21HDV4)                  0.0681    0.0000     5.8224 r
+  tile/core/be/U1351/Z (LVT_AO21HDV4)                   0.1193    0.1599     5.9823 r
+  tile/core/be/n109 (net)                       5                 0.0000     5.9823 r
+  tile/core/be/U6367/I (LVT_INHDV4)                     0.1193    0.0000     5.9823 r
+  tile/core/be/U6367/ZN (LVT_INHDV4)                    0.1119    0.0955     6.0777 f
+  tile/core/be/n7121 (net)                     17                 0.0000     6.0777 f
+  tile/core/be/U8167/A1 (LVT_NAND2HDV1)                 0.1119    0.0000     6.0777 f
+  tile/core/be/U8167/ZN (LVT_NAND2HDV1)                 0.0720    0.0630     6.1407 r
+  tile/core/be/n6985 (net)                      1                 0.0000     6.1407 r
+  tile/core/be/U43/B (LVT_OAI211HDV2)                   0.0720    0.0000     6.1407 r
+  tile/core/be/U43/ZN (LVT_OAI211HDV2)                  0.1105    0.0741     6.2148 f
+  tile/core/be/n4809 (net)                      1                 0.0000     6.2148 f
+  tile/core/be/reBranchPC_reg_3_/D (LVT_DQHDV4)         0.1105    0.0000     6.2148 f
+  data arrival time                                                          6.2148
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  tile/core/be/reBranchPC_reg_3_/CK (LVT_DQHDV4)                  0.0000     6.3500 r
+  library setup time                                             -0.1344     6.2156
+  data required time                                                         6.2156
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2156
+  data arrival time                                                         -6.2148
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0008
+  Startpoint: tile/core/be/exInsts_0_pc_reg_2_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: tile/core/be/exFwdRsData_2_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  tile/core/be/exInsts_0_pc_reg_2_/CK (LVT_DQHDV1)      0.0000    0.0000 #   0.0000 r
+  tile/core/be/exInsts_0_pc_reg_2_/Q (LVT_DQHDV1)       0.2617    0.3541     0.3541 r
+  tile/core/be/wbBpuPCBr_hi[0] (net)           10                 0.0000     0.3541 r
+  tile/core/be/U346/A2 (LVT_NAND2HDV1)                  0.2617    0.0000     0.3541 r
+  tile/core/be/U346/ZN (LVT_NAND2HDV1)                  0.1095    0.0913     0.4454 f
+  tile/core/be/n2370 (net)                      2                 0.0000     0.4454 f
+  tile/core/be/U899/A2 (LVT_NOR2HDV1)                   0.1095    0.0000     0.4454 f
+  tile/core/be/U899/ZN (LVT_NOR2HDV1)                   0.1588    0.1173     0.5627 r
+  tile/core/be/n863 (net)                       2                 0.0000     0.5627 r
+  tile/core/be/U160/A2 (LVT_NAND2HDV1)                  0.1588    0.0000     0.5627 r
+  tile/core/be/U160/ZN (LVT_NAND2HDV1)                  0.0933    0.0818     0.6445 f
+  tile/core/be/n792 (net)                       2                 0.0000     0.6445 f
+  tile/core/be/U350/A2 (LVT_NOR2HDV1)                   0.0933    0.0000     0.6445 f
+  tile/core/be/U350/ZN (LVT_NOR2HDV1)                   0.1374    0.1036     0.7481 r
+  tile/core/be/n1090 (net)                      2                 0.0000     0.7481 r
+  tile/core/be/U952/A2 (LVT_AND2HDV1)                   0.1374    0.0000     0.7481 r
+  tile/core/be/U952/Z (LVT_AND2HDV1)                    0.0929    0.1513     0.8995 r
+  tile/core/be/n2939 (net)                      1                 0.0000     0.8995 r
+  tile/core/be/U4932/B (LVT_ADH1HDV1)                   0.0929    0.0000     0.8995 r
+  tile/core/be/U4932/CO (LVT_ADH1HDV1)                  0.0920    0.1394     1.0389 r
+  tile/core/be/n2901 (net)                      1                 0.0000     1.0389 r
+  tile/core/be/U4891/B (LVT_ADH1HDV1)                   0.0920    0.0000     1.0389 r
+  tile/core/be/U4891/CO (LVT_ADH1HDV1)                  0.0923    0.1393     1.1782 r
+  tile/core/be/n2923 (net)                      1                 0.0000     1.1782 r
+  tile/core/be/U4913/B (LVT_ADH1HDV1)                   0.0923    0.0000     1.1782 r
+  tile/core/be/U4913/CO (LVT_ADH1HDV1)                  0.0920    0.1393     1.3175 r
+  tile/core/be/n2935 (net)                      1                 0.0000     1.3175 r
+  tile/core/be/U4928/B (LVT_ADH1HDV1)                   0.0920    0.0000     1.3175 r
+  tile/core/be/U4928/CO (LVT_ADH1HDV1)                  0.0923    0.1393     1.4568 r
+  tile/core/be/n2919 (net)                      1                 0.0000     1.4568 r
+  tile/core/be/U4908/B (LVT_ADH1HDV1)                   0.0923    0.0000     1.4568 r
+  tile/core/be/U4908/CO (LVT_ADH1HDV1)                  0.0920    0.1393     1.5961 r
+  tile/core/be/n4979 (net)                      1                 0.0000     1.5961 r
+  tile/core/be/U5434/B (LVT_ADH1HDV1)                   0.0920    0.0000     1.5961 r
+  tile/core/be/U5434/CO (LVT_ADH1HDV1)                  0.0923    0.1393     1.7354 r
+  tile/core/be/n2952 (net)                      1                 0.0000     1.7354 r
+  tile/core/be/U4947/B (LVT_ADH1HDV1)                   0.0923    0.0000     1.7354 r
+  tile/core/be/U4947/CO (LVT_ADH1HDV1)                  0.0920    0.1393     1.8747 r
+  tile/core/be/n4956 (net)                      1                 0.0000     1.8747 r
+  tile/core/be/U5411/B (LVT_ADH1HDV1)                   0.0920    0.0000     1.8747 r
+  tile/core/be/U5411/CO (LVT_ADH1HDV1)                  0.0923    0.1393     2.0140 r
+  tile/core/be/n4975 (net)                      1                 0.0000     2.0140 r
+  tile/core/be/U5429/B (LVT_ADH1HDV1)                   0.0923    0.0000     2.0140 r
+  tile/core/be/U5429/CO (LVT_ADH1HDV1)                  0.0920    0.1393     2.1533 r
+  tile/core/be/n2927 (net)                      1                 0.0000     2.1533 r
+  tile/core/be/U4918/B (LVT_ADH1HDV1)                   0.0920    0.0000     2.1533 r
+  tile/core/be/U4918/CO (LVT_ADH1HDV1)                  0.0923    0.1393     2.2926 r
+  tile/core/be/n5014 (net)                      1                 0.0000     2.2926 r
+  tile/core/be/U5459/B (LVT_ADH1HDV1)                   0.0923    0.0000     2.2926 r
+  tile/core/be/U5459/CO (LVT_ADH1HDV1)                  0.0920    0.1393     2.4319 r
+  tile/core/be/n2915 (net)                      1                 0.0000     2.4319 r
+  tile/core/be/U4902/B (LVT_ADH1HDV1)                   0.0920    0.0000     2.4319 r
+  tile/core/be/U4902/CO (LVT_ADH1HDV1)                  0.0923    0.1393     2.5711 r
+  tile/core/be/n4970 (net)                      1                 0.0000     2.5711 r
+  tile/core/be/U5424/B (LVT_ADH1HDV1)                   0.0923    0.0000     2.5711 r
+  tile/core/be/U5424/CO (LVT_ADH1HDV1)                  0.0920    0.1393     2.7105 r
+  tile/core/be/n4983 (net)                      1                 0.0000     2.7105 r
+  tile/core/be/U5439/B (LVT_ADH1HDV1)                   0.0920    0.0000     2.7105 r
+  tile/core/be/U5439/CO (LVT_ADH1HDV1)                  0.0923    0.1393     2.8497 r
+  tile/core/be/n2948 (net)                      1                 0.0000     2.8497 r
+  tile/core/be/U4942/B (LVT_ADH1HDV1)                   0.0923    0.0000     2.8497 r
+  tile/core/be/U4942/CO (LVT_ADH1HDV1)                  0.0920    0.1393     2.9891 r
+  tile/core/be/n2944 (net)                      1                 0.0000     2.9891 r
+  tile/core/be/U4937/B (LVT_ADH1HDV1)                   0.0920    0.0000     2.9891 r
+  tile/core/be/U4937/CO (LVT_ADH1HDV1)                  0.0922    0.1393     3.1283 r
+  tile/core/be/n5085 (net)                      1                 0.0000     3.1283 r
+  tile/core/be/U5505/B (LVT_ADH1HDV1)                   0.0922    0.0000     3.1283 r
+  tile/core/be/U5505/CO (LVT_ADH1HDV1)                  0.0920    0.1393     3.2676 r
+  tile/core/be/n5080 (net)                      1                 0.0000     3.2676 r
+  tile/core/be/U5501/B (LVT_ADH1HDV1)                   0.0920    0.0000     3.2676 r
+  tile/core/be/U5501/CO (LVT_ADH1HDV1)                  0.0923    0.1393     3.4069 r
+  tile/core/be/n2931 (net)                      1                 0.0000     3.4069 r
+  tile/core/be/U4923/B (LVT_ADH1HDV1)                   0.0923    0.0000     3.4069 r
+  tile/core/be/U4923/CO (LVT_ADH1HDV1)                  0.0920    0.1393     3.5462 r
+  tile/core/be/n2961 (net)                      1                 0.0000     3.5462 r
+  tile/core/be/U4954/B (LVT_ADH1HDV1)                   0.0920    0.0000     3.5462 r
+  tile/core/be/U4954/CO (LVT_ADH1HDV1)                  0.0922    0.1393     3.6855 r
+  tile/core/be/n2906 (net)                      1                 0.0000     3.6855 r
+  tile/core/be/U4896/B (LVT_ADH1HDV1)                   0.0922    0.0000     3.6855 r
+  tile/core/be/U4896/CO (LVT_ADH1HDV1)                  0.0920    0.1393     3.8248 r
+  tile/core/be/n5055 (net)                      1                 0.0000     3.8248 r
+  tile/core/be/U5485/B (LVT_ADH1HDV1)                   0.0920    0.0000     3.8248 r
+  tile/core/be/U5485/CO (LVT_ADH1HDV1)                  0.0922    0.1393     3.9641 r
+  tile/core/be/n2893 (net)                      1                 0.0000     3.9641 r
+  tile/core/be/U4888/B (LVT_ADH1HDV1)                   0.0922    0.0000     3.9641 r
+  tile/core/be/U4888/CO (LVT_ADH1HDV1)                  0.0920    0.1393     4.1034 r
+  tile/core/be/n1165 (net)                      1                 0.0000     4.1034 r
+  tile/core/be/U2574/B (LVT_ADH1HDV1)                   0.0920    0.0000     4.1034 r
+  tile/core/be/U2574/CO (LVT_ADH1HDV1)                  0.0923    0.1393     4.2427 r
+  tile/core/be/n5070 (net)                      1                 0.0000     4.2427 r
+  tile/core/be/U5494/B (LVT_ADH1HDV1)                   0.0923    0.0000     4.2427 r
+  tile/core/be/U5494/CO (LVT_ADH1HDV1)                  0.0920    0.1393     4.3820 r
+  tile/core/be/n1184 (net)                      1                 0.0000     4.3820 r
+  tile/core/be/U2594/B (LVT_ADH1HDV1)                   0.0920    0.0000     4.3820 r
+  tile/core/be/U2594/CO (LVT_ADH1HDV1)                  0.0923    0.1393     4.5213 r
+  tile/core/be/n5092 (net)                      1                 0.0000     4.5213 r
+  tile/core/be/U5509/B (LVT_ADH1HDV1)                   0.0923    0.0000     4.5213 r
+  tile/core/be/U5509/CO (LVT_ADH1HDV1)                  0.0920    0.1393     4.6606 r
+  tile/core/be/n2910 (net)                      1                 0.0000     4.6606 r
+  tile/core/be/U4899/B (LVT_ADH1HDV1)                   0.0920    0.0000     4.6606 r
+  tile/core/be/U4899/CO (LVT_ADH1HDV1)                  0.0916    0.1393     4.7999 r
+  tile/core/be/n1198 (net)                      1                 0.0000     4.7999 r
+  tile/core/be/U2604/B (LVT_ADH1HDV1)                   0.0916    0.0000     4.7999 r
+  tile/core/be/U2604/CO (LVT_ADH1HDV1)                  0.0916    0.1392     4.9391 r
+  tile/core/be/n2956 (net)                      1                 0.0000     4.9391 r
+  tile/core/be/U4951/B (LVT_ADH1HDV1)                   0.0916    0.0000     4.9391 r
+  tile/core/be/U4951/CO (LVT_ADH1HDV1)                  0.0916    0.1392     5.0782 r
+  tile/core/be/n5075 (net)                      1                 0.0000     5.0782 r
+  tile/core/be/U5497/B (LVT_ADH1HDV1)                   0.0916    0.0000     5.0782 r
+  tile/core/be/U5497/CO (LVT_ADH1HDV1)                  0.0724    0.1272     5.2054 r
+  tile/core/be/n1199 (net)                      1                 0.0000     5.2054 r
+  tile/core/be/U1096/A1 (LVT_XNOR2HDV1)                 0.0724    0.0000     5.2054 r
+  tile/core/be/U1096/ZN (LVT_XNOR2HDV1)                 0.0965    0.1407     5.3461 r
+  tile/core/be/n2898 (net)                      2                 0.0000     5.3461 r
+  tile/core/be/U1254/A1 (LVT_OAI22HDV1)                 0.0965    0.0000     5.3461 r
+  tile/core/be/U1254/ZN (LVT_OAI22HDV1)                 0.1320    0.0697     5.4158 f
+  tile/core/be/n2899 (net)                      1                 0.0000     5.4158 f
+  tile/core/be/U1253/B (LVT_AOI21HDV1)                  0.1320    0.0000     5.4158 f
+  tile/core/be/U1253/ZN (LVT_AOI21HDV1)                 0.3368    0.2105     5.6263 r
+  tile/core/be/n5455 (net)                      5                 0.0000     5.6263 r
+  tile/core/be/U1051/A1 (LVT_NAND2HDV1)                 0.3368    0.0000     5.6263 r
+  tile/core/be/U1051/ZN (LVT_NAND2HDV1)                 0.1115    0.0828     5.7091 f
+  tile/core/be/n5453 (net)                      1                 0.0000     5.7091 f
+  tile/core/be/U787/B (LVT_OAI211HDV1)                  0.1115    0.0000     5.7091 f
+  tile/core/be/U787/ZN (LVT_OAI211HDV1)                 0.2032    0.0674     5.7765 r
+  tile/core/be/n5454 (net)                      1                 0.0000     5.7765 r
+  tile/core/be/U1712/B (LVT_OAI21HDV1)                  0.2032    0.0000     5.7765 r
+  tile/core/be/U1712/ZN (LVT_OAI21HDV1)                 0.1165    0.0908     5.8673 f
+  tile/core/be/issueArbiter_io_rss_in_0[63] (net)
+                                                1                 0.0000     5.8673 f
+  tile/core/be/issueArbiter/io_rss_in_0[63] (ysyx_210134_IssueArbiter_0)
+                                                                  0.0000     5.8673 f
+  tile/core/be/issueArbiter/io_rss_in_0[63] (net)                 0.0000     5.8673 f
+  tile/core/be/issueArbiter/U1190/I (LVT_INHDV2)        0.1165    0.0000     5.8673 f
+  tile/core/be/issueArbiter/U1190/ZN (LVT_INHDV2)       0.0925    0.0754     5.9427 r
+  tile/core/be/issueArbiter/n505 (net)          3                 0.0000     5.9427 r
+  tile/core/be/issueArbiter/U1194/B2 (LVT_OAI22HDV2)    0.0925    0.0000     5.9427 r
+  tile/core/be/issueArbiter/U1194/ZN (LVT_OAI22HDV2)    0.1427    0.0809     6.0235 f
+  tile/core/be/issueArbiter/io_rss_out_2[63] (net)
+                                                1                 0.0000     6.0235 f
+  tile/core/be/issueArbiter/io_rss_out_2[63] (ysyx_210134_IssueArbiter_0)
+                                                                  0.0000     6.0235 f
+  tile/core/be/issueRss_2[63] (net)                               0.0000     6.0235 f
+  tile/core/be/U6505/B1 (LVT_AO22HDV2)                  0.1427    0.0000     6.0235 f
+  tile/core/be/U6505/Z (LVT_AO22HDV2)                   0.0634    0.1879     6.2114 f
+  tile/core/be/n4556 (net)                      1                 0.0000     6.2114 f
+  tile/core/be/exFwdRsData_2_reg_63_/D (LVT_DQHDV2)     0.0634    0.0000     6.2114 f
+  data arrival time                                                          6.2114
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  tile/core/be/exFwdRsData_2_reg_63_/CK (LVT_DQHDV2)              0.0000     6.3500 r
+  library setup time                                             -0.1378     6.2122
+  data required time                                                         6.2122
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2122
+  data arrival time                                                         -6.2114
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0008
+  Startpoint: tile/core/be/exInsts_2_imm_reg_19_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: tile/core/be/reBranchPC_reg_25_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  tile/core/be/exInsts_2_imm_reg_19_/CK (LVT_DQHDV2)    0.0000    0.0000 #   0.0000 r
+  tile/core/be/exInsts_2_imm_reg_19_/Q (LVT_DQHDV2)     0.0967    0.2476     0.2476 f
+  tile/core/be/exInsts_2_imm[19] (net)          3                 0.0000     0.2476 f
+  tile/core/be/U1570/A2 (LVT_NOR2HDV2)                  0.0967    0.0000     0.2476 f
+  tile/core/be/U1570/ZN (LVT_NOR2HDV2)                  0.1682    0.1204     0.3680 r
+  tile/core/be/n337 (net)                       3                 0.0000     0.3680 r
+  tile/core/be/U1583/A1 (LVT_OAI21HDV1)                 0.1682    0.0000     0.3680 r
+  tile/core/be/U1583/ZN (LVT_OAI21HDV1)                 0.1085    0.0979     0.4659 f
+  tile/core/be/n240 (net)                       1                 0.0000     0.4659 f
+  tile/core/be/U1584/B (LVT_AOI21HDV4)                  0.1085    0.0000     0.4659 f
+  tile/core/be/U1584/ZN (LVT_AOI21HDV4)                 0.1482    0.1071     0.5730 r
+  tile/core/be/n280 (net)                       3                 0.0000     0.5730 r
+  tile/core/be/U1585/I (LVT_INHDV1)                     0.1482    0.0000     0.5730 r
+  tile/core/be/U1585/ZN (LVT_INHDV1)                    0.0702    0.0601     0.6331 f
+  tile/core/be/n254 (net)                       2                 0.0000     0.6331 f
+  tile/core/be/U1589/A1 (LVT_AOI21HDV1)                 0.0702    0.0000     0.6331 f
+  tile/core/be/U1589/ZN (LVT_AOI21HDV1)                 0.1806    0.1247     0.7578 r
+  tile/core/be/n248 (net)                       2                 0.0000     0.7578 r
+  tile/core/be/U1598/A1 (LVT_OAI21HDV1)                 0.1806    0.0000     0.7578 r
+  tile/core/be/U1598/ZN (LVT_OAI21HDV1)                 0.0920    0.0798     0.8375 f
+  tile/core/be/n249 (net)                       1                 0.0000     0.8375 f
+  tile/core/be/U1599/B (LVT_AOI21HDV2)                  0.0920    0.0000     0.8375 f
+  tile/core/be/U1599/ZN (LVT_AOI21HDV2)                 0.1340    0.0962     0.9337 r
+  tile/core/be/n253 (net)                       1                 0.0000     0.9337 r
+  tile/core/be/U1604/A1 (LVT_XOR2HDV2)                  0.1340    0.0000     0.9337 r
+  tile/core/be/U1604/Z (LVT_XOR2HDV2)                   0.0805    0.1619     1.0956 f
+  tile/core/be/n1591 (net)                      2                 0.0000     1.0956 f
+  tile/core/be/U1605/A2 (LVT_NOR2HDV2)                  0.0805    0.0000     1.0956 f
+  tile/core/be/U1605/ZN (LVT_NOR2HDV2)                  0.0944    0.0777     1.1733 r
+  tile/core/be/n314 (net)                       1                 0.0000     1.1733 r
+  tile/core/be/U1657/A1 (LVT_NAND4HDV2)                 0.0944    0.0000     1.1733 r
+  tile/core/be/U1657/ZN (LVT_NAND4HDV2)                 0.1247    0.0905     1.2638 f
+  tile/core/be/n315 (net)                       1                 0.0000     1.2638 f
+  tile/core/be/U1658/A2 (LVT_NOR2HDV2)                  0.1247    0.0000     1.2638 f
+  tile/core/be/U1658/ZN (LVT_NOR2HDV2)                  0.1017    0.0836     1.3475 r
+  tile/core/be/n423 (net)                       1                 0.0000     1.3475 r
+  tile/core/be/U1727/A1 (LVT_NAND4HDV2)                 0.1017    0.0000     1.3475 r
+  tile/core/be/U1727/ZN (LVT_NAND4HDV2)                 0.1255    0.0898     1.4373 f
+  tile/core/be/n444 (net)                       1                 0.0000     1.4373 f
+  tile/core/be/U1738/A1 (LVT_NOR2HDV2)                  0.1255    0.0000     1.4373 f
+  tile/core/be/U1738/ZN (LVT_NOR2HDV2)                  0.1040    0.0821     1.5194 r
+  tile/core/be/n574 (net)                       1                 0.0000     1.5194 r
+  tile/core/be/U1802/A1 (LVT_NAND3HDV2)                 0.1040    0.0000     1.5194 r
+  tile/core/be/U1802/ZN (LVT_NAND3HDV2)                 0.1167    0.0906     1.6100 f
+  tile/core/be/n694 (net)                       2                 0.0000     1.6100 f
+  tile/core/be/U1846/A1 (LVT_NOR2HDV2)                  0.1167    0.0000     1.6100 f
+  tile/core/be/U1846/ZN (LVT_NOR2HDV2)                  0.1421    0.1018     1.7118 r
+  tile/core/be/n1210 (net)                      2                 0.0000     1.7118 r
+  tile/core/be/U1363/A1 (LVT_NOR2HDV2)                  0.1421    0.0000     1.7118 r
+  tile/core/be/U1363/ZN (LVT_NOR2HDV2)                  0.0818    0.0719     1.7837 f
+  tile/core/be/n1505 (net)                      3                 0.0000     1.7837 f
+  tile/core/be/U1855/A1 (LVT_NOR2HDV4)                  0.0818    0.0000     1.7837 f
+  tile/core/be/U1855/ZN (LVT_NOR2HDV4)                  0.1191    0.0831     1.8669 r
+  tile/core/be/n1209 (net)                      2                 0.0000     1.8669 r
+  tile/core/be/U1362/I (LVT_INHDV2)                     0.1191    0.0000     1.8669 r
+  tile/core/be/U1362/ZN (LVT_INHDV2)                    0.0730    0.0639     1.9308 f
+  tile/core/be/n1211 (net)                      3                 0.0000     1.9308 f
+  tile/core/be/U2614/S (LVT_MUX2NHDV1)                  0.0730    0.0000     1.9308 f
+  tile/core/be/U2614/ZN (LVT_MUX2NHDV1)                 0.1140    0.0902     2.0210 f
+  tile/core/be/n1216 (net)                      1                 0.0000     2.0210 f
+  tile/core/be/U2615/A1 (LVT_OAI211HDV4)                0.1140    0.0000     2.0210 f
+  tile/core/be/U2615/ZN (LVT_OAI211HDV4)                0.1969    0.1399     2.1609 r
+  tile/core/be/n_csr_io_common_io_num_T_4[0] (net)
+                                                3                 0.0000     2.1609 r
+  tile/core/be/csr/io_common_io_num[0] (ysyx_210134_CSR_0)        0.0000     2.1609 r
+  tile/core/be/csr/io_common_io_num[0] (net)                      0.0000     2.1609 r
+  tile/core/be/csr/U472/I (LVT_INHDV4)                  0.1969    0.0000     2.1609 r
+  tile/core/be/csr/U472/ZN (LVT_INHDV4)                 0.0730    0.0602     2.2211 f
+  tile/core/be/csr/n444 (net)                   4                 0.0000     2.2211 f
+  tile/core/be/csr/U37/A2 (LVT_NAND2HDV2)               0.0730    0.0000     2.2211 f
+  tile/core/be/csr/U37/ZN (LVT_NAND2HDV2)               0.1233    0.0880     2.3091 r
+  tile/core/be/csr/n88 (net)                    3                 0.0000     2.3091 r
+  tile/core/be/csr/U502/A1 (LVT_NOR2HDV1)               0.1233    0.0000     2.3091 r
+  tile/core/be/csr/U502/ZN (LVT_NOR2HDV1)               0.1028    0.0792     2.3883 f
+  tile/core/be/csr/n89 (net)                    2                 0.0000     2.3883 f
+  tile/core/be/csr/U503/A2 (LVT_NAND2HDV4)              0.1028    0.0000     2.3883 f
+  tile/core/be/csr/U503/ZN (LVT_NAND2HDV4)              0.1023    0.0826     2.4709 r
+  tile/core/be/csr/n3206 (net)                  6                 0.0000     2.4709 r
+  tile/core/be/csr/U87/I (LVT_INHDV4)                   0.1023    0.0000     2.4709 r
+  tile/core/be/csr/U87/ZN (LVT_INHDV4)                  0.0877    0.0757     2.5466 f
+  tile/core/be/csr/n3179 (net)                 11                 0.0000     2.5466 f
+  tile/core/be/csr/U30/I (LVT_BUFHDV8)                  0.0877    0.0000     2.5466 f
+  tile/core/be/csr/U30/Z (LVT_BUFHDV8)                  0.0789    0.1259     2.6724 f
+  tile/core/be/csr/n2929 (net)                 21                 0.0000     2.6724 f
+  tile/core/be/csr/U2283/A1 (LVT_AOI22HDV1)             0.0789    0.0000     2.6724 f
+  tile/core/be/csr/U2283/ZN (LVT_AOI22HDV1)             0.1673    0.1262     2.7986 r
+  tile/core/be/csr/n1380 (net)                  1                 0.0000     2.7986 r
+  tile/core/be/csr/U2285/B (LVT_OAI211HDV1)             0.1673    0.0000     2.7986 r
+  tile/core/be/csr/U2285/ZN (LVT_OAI211HDV1)            0.1153    0.1014     2.9001 f
+  tile/core/be/csr/n1384 (net)                  1                 0.0000     2.9001 f
+  tile/core/be/csr/U313/A1 (LVT_INAND4HDV1)             0.1153    0.0000     2.9001 f
+  tile/core/be/csr/U313/ZN (LVT_INAND4HDV1)             0.1530    0.1840     3.0841 f
+  tile/core/be/csr/n1393 (net)                  1                 0.0000     3.0841 f
+  tile/core/be/csr/U2296/A1 (LVT_OR2HDV4)               0.1530    0.0000     3.0841 f
+  tile/core/be/csr/U2296/Z (LVT_OR2HDV4)                0.0487    0.1455     3.2295 f
+  tile/core/be/csr/io_common_io_out[3] (net)
+                                                3                 0.0000     3.2295 f
+  tile/core/be/csr/io_common_io_out[3] (ysyx_210134_CSR_0)        0.0000     3.2295 f
+  tile/core/be/csr_io_common_io_out[3] (net)                      0.0000     3.2295 f
+  tile/core/be/U1860/I (LVT_INHDV1)                     0.0487    0.0000     3.2295 f
+  tile/core/be/U1860/ZN (LVT_INHDV1)                    0.0823    0.0608     3.2903 r
+  tile/core/be/n698 (net)                       1                 0.0000     3.2903 r
+  tile/core/be/U1862/A1 (LVT_OAI21HDV4)                 0.0823    0.0000     3.2903 r
+  tile/core/be/U1862/ZN (LVT_OAI21HDV4)                 0.1212    0.0728     3.3631 f
+  tile/core/be/alu_io_b[3] (net)                2                 0.0000     3.3631 f
+  tile/core/be/alu/io_b[3] (ysyx_210134_ALU_3)                    0.0000     3.3631 f
+  tile/core/be/alu/io_b[3] (net)                                  0.0000     3.3631 f
+  tile/core/be/alu/U478/I (LVT_INHDV6)                  0.1212    0.0000     3.3631 f
+  tile/core/be/alu/U478/ZN (LVT_INHDV6)                 0.1239    0.0972     3.4603 r
+  tile/core/be/alu/n103 (net)                  15                 0.0000     3.4603 r
+  tile/core/be/alu/U504/I (LVT_INHDV2)                  0.1239    0.0000     3.4603 r
+  tile/core/be/alu/U504/ZN (LVT_INHDV2)                 0.2038    0.1543     3.6146 f
+  tile/core/be/alu/n1894 (net)                 12                 0.0000     3.6146 f
+  tile/core/be/alu/U2532/I (LVT_INHDV2)                 0.2038    0.0000     3.6146 f
+  tile/core/be/alu/U2532/ZN (LVT_INHDV2)                0.4805    0.3156     3.9302 r
+  tile/core/be/alu/n1896 (net)                 24                 0.0000     3.9302 r
+  tile/core/be/alu/U2533/A1 (LVT_NOR2HDV1)              0.4805    0.0000     3.9302 r
+  tile/core/be/alu/U2533/ZN (LVT_NOR2HDV1)              0.1259    0.0773     4.0075 f
+  tile/core/be/alu/n1899 (net)                  2                 0.0000     4.0075 f
+  tile/core/be/alu/U2538/A1 (LVT_OAI21HDV1)             0.1259    0.0000     4.0075 f
+  tile/core/be/alu/U2538/ZN (LVT_OAI21HDV1)             0.1503    0.1169     4.1244 r
+  tile/core/be/alu/n1900 (net)                  1                 0.0000     4.1244 r
+  tile/core/be/alu/U2539/B (LVT_AOI21HDV1)              0.1503    0.0000     4.1244 r
+  tile/core/be/alu/U2539/ZN (LVT_AOI21HDV1)             0.0891    0.0486     4.1730 f
+  tile/core/be/alu/n1920 (net)                  1                 0.0000     4.1730 f
+  tile/core/be/alu/U2556/A1 (LVT_OAI21HDV1)             0.0891    0.0000     4.1730 f
+  tile/core/be/alu/U2556/ZN (LVT_OAI21HDV1)             0.1414    0.1049     4.2779 r
+  tile/core/be/alu/n1961 (net)                  1                 0.0000     4.2779 r
+  tile/core/be/alu/U61/A1 (LVT_AOI21HDV1)               0.1414    0.0000     4.2779 r
+  tile/core/be/alu/U61/ZN (LVT_AOI21HDV1)               0.0954    0.0837     4.3616 f
+  tile/core/be/alu/n2065 (net)                  1                 0.0000     4.3616 f
+  tile/core/be/alu/U2661/A1 (LVT_OAI21HDV2)             0.0954    0.0000     4.3616 f
+  tile/core/be/alu/U2661/ZN (LVT_OAI21HDV2)             0.1647    0.1186     4.4802 r
+  tile/core/be/alu/n2211 (net)                  2                 0.0000     4.4802 r
+  tile/core/be/alu/U2759/A1 (LVT_AOI21HDV2)             0.1647    0.0000     4.4802 r
+  tile/core/be/alu/U2759/ZN (LVT_AOI21HDV2)             0.0787    0.0713     4.5515 f
+  tile/core/be/alu/n2212 (net)                  1                 0.0000     4.5515 f
+  tile/core/be/alu/U2760/A1 (LVT_INAND2HDV2)            0.0787    0.0000     4.5515 f
+  tile/core/be/alu/U2760/ZN (LVT_INAND2HDV2)            0.1060    0.1247     4.6763 f
+  tile/core/be/alu/n2221 (net)                  1                 0.0000     4.6763 f
+  tile/core/be/alu/U2763/B (LVT_OAI211HDV2)             0.1060    0.0000     4.6763 f
+  tile/core/be/alu/U2763/ZN (LVT_OAI211HDV2)            0.1827    0.0610     4.7372 r
+  tile/core/be/alu/n2227 (net)                  1                 0.0000     4.7372 r
+  tile/core/be/alu/U2767/A1 (LVT_AOI21HDV2)             0.1827    0.0000     4.7372 r
+  tile/core/be/alu/U2767/ZN (LVT_AOI21HDV2)             0.1123    0.0779     4.8151 f
+  tile/core/be/alu/n2232 (net)                  1                 0.0000     4.8151 f
+  tile/core/be/alu/U477/A1 (LVT_OAI21HDV1)              0.1123    0.0000     4.8151 f
+  tile/core/be/alu/U477/ZN (LVT_OAI21HDV1)              0.1602    0.1198     4.9350 r
+  tile/core/be/alu/n2236 (net)                  1                 0.0000     4.9350 r
+  tile/core/be/alu/U2769/B (LVT_OAI211HDV2)             0.1602    0.0000     4.9350 r
+  tile/core/be/alu/U2769/ZN (LVT_OAI211HDV2)            0.1767    0.1422     5.0772 f
+  tile/core/be/alu/io_r[0] (net)                4                 0.0000     5.0772 f
+  tile/core/be/alu/U3394/I (LVT_INHDV1)                 0.1767    0.0000     5.0772 f
+  tile/core/be/alu/U3394/ZN (LVT_INHDV1)                0.0732    0.0632     5.1404 r
+  tile/core/be/alu/n3313 (net)                  1                 0.0000     5.1404 r
+  tile/core/be/alu/U497/A1 (LVT_NAND2HDV1)              0.0732    0.0000     5.1404 r
+  tile/core/be/alu/U497/ZN (LVT_NAND2HDV1)              0.0816    0.0563     5.1967 f
+  tile/core/be/alu/n30 (net)                    1                 0.0000     5.1967 f
+  tile/core/be/alu/U135/A1 (LVT_NOR2HDV2)               0.0816    0.0000     5.1967 f
+  tile/core/be/alu/U135/ZN (LVT_NOR2HDV2)               0.1367    0.0954     5.2920 r
+  tile/core/be/alu/n3326 (net)                  1                 0.0000     5.2920 r
+  tile/core/be/alu/U96/B2 (LVT_I2NAND4HDV4)             0.1367    0.0000     5.2920 r
+  tile/core/be/alu/U96/ZN (LVT_I2NAND4HDV4)             0.1203    0.1155     5.4075 f
+  tile/core/be/alu/n3329 (net)                  1                 0.0000     5.4075 f
+  tile/core/be/alu/U3408/C (LVT_AOI211HDV4)             0.1203    0.0000     5.4075 f
+  tile/core/be/alu/U3408/ZN (LVT_AOI211HDV4)            0.2091    0.1360     5.5435 r
+  tile/core/be/alu/io_zero[0] (net)             2                 0.0000     5.5435 r
+  tile/core/be/alu/io_zero[0] (ysyx_210134_ALU_3)                 0.0000     5.5435 r
+  tile/core/be/alu_io_zero_0_ (net)                               0.0000     5.5435 r
+  tile/core/be/U1897/A1 (LVT_OAI21HDV2)                 0.2091    0.0000     5.5435 r
+  tile/core/be/U1897/ZN (LVT_OAI21HDV2)                 0.0810    0.0739     5.6174 f
+  tile/core/be/n721 (net)                       1                 0.0000     5.6174 f
+  tile/core/be/U1899/B (LVT_OAI211HDV2)                 0.0810    0.0000     5.6174 f
+  tile/core/be/U1899/ZN (LVT_OAI211HDV2)                0.2033    0.0672     5.6845 r
+  tile/core/be/n734 (net)                       1                 0.0000     5.6845 r
+  tile/core/be/U1909/A1 (LVT_AOI21HDV4)                 0.2033    0.0000     5.6845 r
+  tile/core/be/U1909/ZN (LVT_AOI21HDV4)                 0.0987    0.0871     5.7717 f
+  tile/core/be/n738 (net)                       2                 0.0000     5.7717 f
+  tile/core/be/U1914/A1 (LVT_NAND2HDV4)                 0.0987    0.0000     5.7717 f
+  tile/core/be/U1914/ZN (LVT_NAND2HDV4)                 0.0681    0.0507     5.8224 r
+  tile/core/be/n5987 (net)                      2                 0.0000     5.8224 r
+  tile/core/be/U1351/A1 (LVT_AO21HDV4)                  0.0681    0.0000     5.8224 r
+  tile/core/be/U1351/Z (LVT_AO21HDV4)                   0.1193    0.1599     5.9823 r
+  tile/core/be/n109 (net)                       5                 0.0000     5.9823 r
+  tile/core/be/U6367/I (LVT_INHDV4)                     0.1193    0.0000     5.9823 r
+  tile/core/be/U6367/ZN (LVT_INHDV4)                    0.1119    0.0955     6.0777 f
+  tile/core/be/n7121 (net)                     17                 0.0000     6.0777 f
+  tile/core/be/U2145/A1 (LVT_NAND2HDV1)                 0.1119    0.0000     6.0777 f
+  tile/core/be/U2145/ZN (LVT_NAND2HDV1)                 0.0720    0.0630     6.1407 r
+  tile/core/be/n859 (net)                       1                 0.0000     6.1407 r
+  tile/core/be/U2178/B (LVT_OAI211HDV2)                 0.0720    0.0000     6.1407 r
+  tile/core/be/U2178/ZN (LVT_OAI211HDV2)                0.1094    0.0741     6.2148 f
+  tile/core/be/n4787 (net)                      1                 0.0000     6.2148 f
+  tile/core/be/reBranchPC_reg_25_/D (LVT_DQHDV4)        0.1094    0.0000     6.2148 f
+  data arrival time                                                          6.2148
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  tile/core/be/reBranchPC_reg_25_/CK (LVT_DQHDV4)                 0.0000     6.3500 r
+  library setup time                                             -0.1343     6.2157
+  data required time                                                         6.2157
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2157
+  data arrival time                                                         -6.2148
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0009
