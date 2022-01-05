@@ -1,0 +1,1686 @@
+                   SYNTHESIS REPORT
+====================Information====================
+commit date: Wed_Jan_5_20:28:59_2022_+0800
+top_name: ysyx_210340
+foundry: SMIC (110nm)
+corner: MAX
+track: 8T
+voltage channel: LVT40
+====================ERROR & WARNING====================
+Errors
+Warnings
+****** Message Summary: 0 Error(s), 0 Warning(s) ******
+#========================================================================
+# Area
+#========================================================================
+total     std       mem  ipio  sub_harden
+240171.9  240171.9  0.0  0.0   0.0 
+#========================================================================
+# Cell Count
+#========================================================================
+total  std    mem  ipio  sub_harden
+22836  22836  0    0     0 
+#========================================================================
+f=100MHz PASS!!!
+======================AREA REPORT======================
+ 
+****************************************
+Report : area
+Design : ysyx_210340
+Date   : Wed Jan  5 21:01:27 2022
+****************************************
+    
+Number of ports:                         9384
+Number of nets:                         30850
+Number of cells:                        23009
+Number of combinational cells:          19010
+Number of sequential cells:              3826
+Number of macros/black boxes:               0
+Number of buf/inv:                       2199
+Number of references:                       5
+Combinational area:             141315.617954
+Buf/Inv area:                    10762.434374
+Noncombinational area:           98856.251310
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+Total cell area:                240171.869265
+Total area:                 undefined
+Hierarchical area distribution
+------------------------------
+                                  Global cell area              Local cell area
+                                  --------------------  ------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-   Black-
+                                  Total        Total    national     national    boxes   Design
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------
+ysyx_210340                       240171.8693    100.0     790.7424      0.0000  0.0000  ysyx_210340
+Arbiter                             1948.6152      0.8    1750.9296     79.3432  0.0000  ysyx_210340_arbiter_0
+Arbiter/fetched_dffr                  32.2752      0.0       4.0344     28.2408  0.0000  ysyx_210340_gnrl_dffr_1_0
+Arbiter/reg_dffr                      86.0672      0.0       4.0344     82.0328  0.0000  ysyx_210340_gnrl_dffr_3_0
+Axi_rw                             11118.8064      4.6    9100.2616   2018.5449  0.0000  ysyx_210340_axi_rw_0
+u_cpu                             226313.7052     94.2     907.7400      0.0000  0.0000  ysyx_210340_cpu_0
+u_cpu/Branch_ctrl                   7604.8440      3.2    7604.8440      0.0000  0.0000  ysyx_210340_branch_ctrl_0
+u_cpu/Clint                        10422.2001      4.3    5516.3696   4905.8306  0.0000  ysyx_210340_clint_0
+u_cpu/Clint_ctrl                    1568.0368      0.7    1568.0368      0.0000  0.0000  ysyx_210340_clint_ctrl_0
+u_cpu/Csr                          36639.0766     15.3   12740.6352      0.0000  0.0000  ysyx_210340_csr_0
+u_cpu/Csr/cause_dfflr                236.6848      0.1      83.3776    153.3072  0.0000  ysyx_210340_gnrl_dfflr_1
+u_cpu/Csr/epc_dfflr                 1187.4584      0.5     395.3712    792.0872  0.0000  ysyx_210340_gnrl_dfflr_32_0
+u_cpu/Csr/mcycle_dffr               2065.6129      0.9     430.3360   1635.2769  0.0000  ysyx_210340_gnrl_dffr_1
+u_cpu/Csr/mie_dfflr                   43.0336      0.0      17.4824     25.5512  0.0000  ysyx_210340_gnrl_dfflr_14
+u_cpu/Csr/minstret_dfflr            2434.0881      1.0     798.8112   1635.2769  0.0000  ysyx_210340_gnrl_dfflr_12
+u_cpu/Csr/mscratch_dfflr            2434.0881      1.0     798.8112   1635.2769  0.0000  ysyx_210340_gnrl_dfflr_10
+u_cpu/Csr/mtval_dfflr               2434.0881      1.0     798.8112   1635.2769  0.0000  ysyx_210340_gnrl_dfflr_11
+u_cpu/Csr/mtvec_dfflr               2358.7793      1.0     774.6048   1584.1745  0.0000  ysyx_210340_gnrl_dfflr_13
+u_cpu/Csr/rd_mcause_dfflr            173.4792      0.1       4.0344    169.4448  0.0000  ysyx_210340_gnrl_dffr_23
+u_cpu/Csr/rd_mcycle_dfflr           1819.5145      0.8      12.1032   1807.4113  0.0000  ysyx_210340_gnrl_dffr_16
+u_cpu/Csr/rd_mepc_dfflr              883.5336      0.4       8.0688    875.4648  0.0000  ysyx_210340_gnrl_dffr_15
+u_cpu/Csr/rd_mie_dfflr                43.0336      0.0      17.4824     25.5512  0.0000  ysyx_210340_gnrl_dfflr_9
+u_cpu/Csr/rd_minstret_dfflr         1819.5145      0.8      12.1032   1807.4113  0.0000  ysyx_210340_gnrl_dffr_19
+u_cpu/Csr/rd_mscratch_dfflr         1812.7905      0.8       5.3792   1807.4113  0.0000  ysyx_210340_gnrl_dffr_7
+u_cpu/Csr/rd_mstatus_dfflr           258.2016      0.1       4.0344    254.1672  0.0000  ysyx_210340_gnrl_dffr_18
+u_cpu/Csr/rd_mtval_dfflr            1819.5145      0.8      12.1032   1807.4113  0.0000  ysyx_210340_gnrl_dffr_17
+u_cpu/Csr/rd_mtvec_dfflr            1756.3089      0.7       5.3792   1750.9297  0.0000  ysyx_210340_gnrl_dffr_21
+u_cpu/Csr/status_fs_dfflr             86.0672      0.0      34.9648     51.1024  0.0000  ysyx_210340_gnrl_dfflr_2_2
+u_cpu/Csr/status_mie_dfflr            43.0336      0.0      17.4824     25.5512  0.0000  ysyx_210340_gnrl_dfflr_1_3
+u_cpu/Csr/status_mpie_dfflr           43.0336      0.0      17.4824     25.5512  0.0000  ysyx_210340_gnrl_dfflr_1_2
+u_cpu/Csr/status_mpp_dffr             64.5504      0.0      13.4480     51.1024  0.0000  ysyx_210340_gnrl_dffr_2_0
+u_cpu/Csr/status_xs_dfflr             82.0328      0.0      30.9304     51.1024  0.0000  ysyx_210340_gnrl_dfflr_2_3
+u_cpu/Csr_exe                       1757.6536      0.7    1757.6536      0.0000  0.0000  ysyx_210340_csr_exe_0
+u_cpu/Ex_mem                        9554.8042      4.0    3141.4528   6413.3514  0.0000  ysyx_210340_ex_mem_0
+u_cpu/Exe_stage                    22468.9183      9.4   22468.9183      0.0000  0.0000  ysyx_210340_exe_stage_0
+u_cpu/Id_ex                        11285.5619      4.7    2382.9856   4752.5234  0.0000  ysyx_210340_id_ex_0
+u_cpu/Id_ex/id_op1_dffr             2072.3369      0.9     437.0600   1635.2769  0.0000  ysyx_210340_gnrl_dffr_22
+u_cpu/Id_ex/id_op2_dffr             2077.7161      0.9     442.4392   1635.2769  0.0000  ysyx_210340_gnrl_dffr_20
+u_cpu/Id_stage                      6077.1512      2.5    6077.1512      0.0000  0.0000  ysyx_210340_id_stage_0
+u_cpu/If_id                         2495.9489      1.0     859.3272   1636.6217  0.0000  ysyx_210340_if_id_0
+u_cpu/If_stage                      8446.6889      3.5    5056.4480   2482.5009  0.0000  ysyx_210340_if_stage_0
+u_cpu/If_stage/if_data_read_dffr     907.7400      0.4       4.0344    903.7056  0.0000  ysyx_210340_gnrl_dffr_32_0
+u_cpu/Mem_load_store                2248.5056      0.9    2248.5056      0.0000  0.0000  ysyx_210340_mem_load_store_0
+u_cpu/Mem_stage                      767.8808      0.3     767.8808      0.0000  0.0000  ysyx_210340_mem_stage_0
+u_cpu/Mem_wb                        2660.0145      1.1     871.4304   1788.5841  0.0000  ysyx_210340_mem_wb_0
+u_cpu/Mux2                          1156.5280      0.5    1156.5280      0.0000  0.0000  ysyx_210340_Mux_0
+u_cpu/Mux_2                          619.9528      0.3     619.9528      0.0000  0.0000  ysyx_210340_Mux2_0
+u_cpu/Pipe_ctrl                       68.5848      0.0      14.7928     53.7920  0.0000  ysyx_210340_pipe_ctrl_0
+u_cpu/Regfile                      99402.2384     41.4   48708.6558  50693.5825  0.0000  ysyx_210340_regfile_0
+u_cpu/cmt_if_hs_dffr                  32.2752      0.0       4.0344     28.2408  0.0000  ysyx_210340_gnrl_dffr_1_11
+u_cpu/ex_if_hs_dffr                   32.2752      0.0       4.0344     28.2408  0.0000  ysyx_210340_gnrl_dffr_1_9
+u_cpu/id_if_hs_dffr                   32.2752      0.0       4.0344     28.2408  0.0000  ysyx_210340_gnrl_dffr_1_10
+u_cpu/mem_if_hs_dffr                  32.2752      0.0       4.0344     28.2408  0.0000  ysyx_210340_gnrl_dffr_1_7
+u_cpu/ram_wena_dffr                   32.2752      0.0       4.0344     28.2408  0.0000  ysyx_210340_gnrl_dffr_1_8
+--------------------------------  -----------  -------  -----------  ----------  ------  ----------------------------
+Total                                                   141315.6180  98856.2513  0.0000
+=====================TIMING REPORT====================
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 3
+        -transition_time
+Design : ysyx_210340
+Date   : Wed Jan  5 21:01:25 2022
+****************************************
+ # A fanout number of 1000 was used for high fanout net computations.
+ scc011ums_hd_lvt_ss_v1p08_125c_ccs
+  Startpoint: u_cpu/If_id/id_inst_reg_12_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: u_cpu/If_stage/pc_next_reg_31_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_cpu/If_id/id_inst_reg_12_/CK (LVT_DQHDV4)           0.0000    0.0000 #   0.0000 r
+  u_cpu/If_id/id_inst_reg_12_/Q (LVT_DQHDV4)            0.1154    0.2863     0.2863 f
+  u_cpu/If_id/id_inst[12] (net)                 8                 0.0000     0.2863 f
+  u_cpu/If_id/id_inst[12] (ysyx_210340_if_id_0)                   0.0000     0.2863 f
+  u_cpu/id_inst[12] (net)                                         0.0000     0.2863 f
+  u_cpu/Id_stage/inst[12] (ysyx_210340_id_stage_0)                0.0000     0.2863 f
+  u_cpu/Id_stage/inst[12] (net)                                   0.0000     0.2863 f
+  u_cpu/Id_stage/U4/I (LVT_INHDV1)                      0.1154    0.0000     0.2863 f
+  u_cpu/Id_stage/U4/ZN (LVT_INHDV1)                     0.1407    0.1075     0.3938 r
+  u_cpu/Id_stage/n488 (net)                     3                 0.0000     0.3938 r
+  u_cpu/Id_stage/U392/A2 (LVT_NAND2HDV4)                0.1407    0.0000     0.3938 r
+  u_cpu/Id_stage/U392/ZN (LVT_NAND2HDV4)                0.0930    0.0805     0.4743 f
+  u_cpu/Id_stage/n158 (net)                     5                 0.0000     0.4743 f
+  u_cpu/Id_stage/U265/A1 (LVT_NAND4HDV2)                0.0930    0.0000     0.4743 f
+  u_cpu/Id_stage/U265/ZN (LVT_NAND4HDV2)                0.1213    0.0803     0.5546 r
+  u_cpu/Id_stage/n199 (net)                     3                 0.0000     0.5546 r
+  u_cpu/Id_stage/U416/A1 (LVT_NAND2HDV2)                0.1213    0.0000     0.5546 r
+  u_cpu/Id_stage/U416/ZN (LVT_NAND2HDV2)                0.0926    0.0676     0.6222 f
+  u_cpu/Id_stage/n746 (net)                     2                 0.0000     0.6222 f
+  u_cpu/Id_stage/U366/I (LVT_INHDV2)                    0.0926    0.0000     0.6222 f
+  u_cpu/Id_stage/U366/ZN (LVT_INHDV2)                   0.0882    0.0707     0.6929 r
+  u_cpu/Id_stage/n102 (net)                     2                 0.0000     0.6929 r
+  u_cpu/Id_stage/U418/A1 (LVT_NAND2HDV4)                0.0882    0.0000     0.6929 r
+  u_cpu/Id_stage/U418/ZN (LVT_NAND2HDV4)                0.1221    0.0927     0.7856 f
+  u_cpu/Id_stage/n75 (net)                      5                 0.0000     0.7856 f
+  u_cpu/Id_stage/U363/A1 (LVT_NOR2HDV2)                 0.1221    0.0000     0.7856 f
+  u_cpu/Id_stage/U363/ZN (LVT_NOR2HDV2)                 0.3117    0.1997     0.9853 r
+  u_cpu/Id_stage/rs1_r_addr[1] (net)            6                 0.0000     0.9853 r
+  u_cpu/Id_stage/rs1_r_addr[1] (ysyx_210340_id_stage_0)           0.0000     0.9853 r
+  u_cpu/id_rs1_r_addr[1] (net)                                    0.0000     0.9853 r
+  u_cpu/Regfile/r_addr1[1] (ysyx_210340_regfile_0)                0.0000     0.9853 r
+  u_cpu/Regfile/r_addr1[1] (net)                                  0.0000     0.9853 r
+  u_cpu/Regfile/U517/A1 (LVT_AND2HDV2)                  0.3117    0.0000     0.9853 r
+  u_cpu/Regfile/U517/Z (LVT_AND2HDV2)                   0.0978    0.1677     1.1530 r
+  u_cpu/Regfile/n274 (net)                      2                 0.0000     1.1530 r
+  u_cpu/Regfile/U567/A1 (LVT_NAND2HDV4)                 0.0978    0.0000     1.1530 r
+  u_cpu/Regfile/U567/ZN (LVT_NAND2HDV4)                 0.1362    0.1040     1.2570 f
+  u_cpu/Regfile/n310 (net)                      8                 0.0000     1.2570 f
+  u_cpu/Regfile/U603/A2 (LVT_NOR2HDV2)                  0.1362    0.0000     1.2570 f
+  u_cpu/Regfile/U603/ZN (LVT_NOR2HDV2)                  0.4579    0.2825     1.5395 r
+  u_cpu/Regfile/n399 (net)                     12                 0.0000     1.5395 r
+  u_cpu/Regfile/U312/I (LVT_INHDV2)                     0.4579    0.0000     1.5395 r
+  u_cpu/Regfile/U312/ZN (LVT_INHDV2)                    0.1158    0.0758     1.6153 f
+  u_cpu/Regfile/n97 (net)                       2                 0.0000     1.6153 f
+  u_cpu/Regfile/U370/I (LVT_INHDV2)                     0.1158    0.0000     1.6153 f
+  u_cpu/Regfile/U370/ZN (LVT_INHDV2)                    0.4754    0.2871     1.9024 r
+  u_cpu/Regfile/n84 (net)                      28                 0.0000     1.9024 r
+  u_cpu/Regfile/U4972/A1 (LVT_AOI22HDV1)                0.4754    0.0000     1.9024 r
+  u_cpu/Regfile/U4972/ZN (LVT_AOI22HDV1)                0.1916    0.1419     2.0443 f
+  u_cpu/Regfile/n4821 (net)                     1                 0.0000     2.0443 f
+  u_cpu/Regfile/U4976/A1 (LVT_NAND4HDV1)                0.1916    0.0000     2.0443 f
+  u_cpu/Regfile/U4976/ZN (LVT_NAND4HDV1)                0.1125    0.0873     2.1316 r
+  u_cpu/Regfile/n4822 (net)                     1                 0.0000     2.1316 r
+  u_cpu/Regfile/U4977/A4 (LVT_OR4HDV4)                  0.1125    0.0000     2.1316 r
+  u_cpu/Regfile/U4977/Z (LVT_OR4HDV4)                   0.0738    0.1369     2.2685 r
+  u_cpu/Regfile/r_data1[2] (net)                5                 0.0000     2.2685 r
+  u_cpu/Regfile/r_data1[2] (ysyx_210340_regfile_0)                0.0000     2.2685 r
+  u_cpu/id_r_data1[2] (net)                                       0.0000     2.2685 r
+  u_cpu/Id_stage/rs1_data[2] (ysyx_210340_id_stage_0)             0.0000     2.2685 r
+  u_cpu/Id_stage/rs1_data[2] (net)                                0.0000     2.2685 r
+  u_cpu/Id_stage/U25/A1 (LVT_NAND2HDV1)                 0.0738    0.0000     2.2685 r
+  u_cpu/Id_stage/U25/ZN (LVT_NAND2HDV1)                 0.0806    0.0525     2.3209 f
+  u_cpu/Id_stage/n674 (net)                     1                 0.0000     2.3209 f
+  u_cpu/Id_stage/U200/A1 (LVT_NAND4HDV1)                0.0806    0.0000     2.3209 f
+  u_cpu/Id_stage/U200/ZN (LVT_NAND4HDV1)                0.1494    0.0918     2.4128 r
+  u_cpu/Id_stage/op1[2] (net)                   4                 0.0000     2.4128 r
+  u_cpu/Id_stage/op1[2] (ysyx_210340_id_stage_0)                  0.0000     2.4128 r
+  u_cpu/op1_addr[2] (net)                                         0.0000     2.4128 r
+  u_cpu/Branch_ctrl/op1[2] (ysyx_210340_branch_ctrl_0)            0.0000     2.4128 r
+  u_cpu/Branch_ctrl/op1[2] (net)                                  0.0000     2.4128 r
+  u_cpu/Branch_ctrl/U895/A1 (LVT_IOA22HDV2)             0.1494    0.0000     2.4128 r
+  u_cpu/Branch_ctrl/U895/ZN (LVT_IOA22HDV2)             0.1560    0.1386     2.5513 r
+  u_cpu/Branch_ctrl/n821 (net)                  2                 0.0000     2.5513 r
+  u_cpu/Branch_ctrl/U896/A1 (LVT_OR2HDV2)               0.1560    0.0000     2.5513 r
+  u_cpu/Branch_ctrl/U896/Z (LVT_OR2HDV2)                0.0849    0.1302     2.6815 r
+  u_cpu/Branch_ctrl/n944 (net)                  3                 0.0000     2.6815 r
+  u_cpu/Branch_ctrl/U898/A1 (LVT_NAND2HDV1)             0.0849    0.0000     2.6815 r
+  u_cpu/Branch_ctrl/U898/ZN (LVT_NAND2HDV1)             0.0668    0.0597     2.7412 f
+  u_cpu/Branch_ctrl/n825 (net)                  1                 0.0000     2.7412 f
+  u_cpu/Branch_ctrl/U903/A2 (LVT_OAI21HDV2)             0.0668    0.0000     2.7412 f
+  u_cpu/Branch_ctrl/U903/ZN (LVT_OAI21HDV2)             0.1684    0.1214     2.8626 r
+  u_cpu/Branch_ctrl/n951 (net)                  2                 0.0000     2.8626 r
+  u_cpu/Branch_ctrl/U21/A2 (LVT_AOI21HDV2)              0.1684    0.0000     2.8626 r
+  u_cpu/Branch_ctrl/U21/ZN (LVT_AOI21HDV2)              0.0935    0.0843     2.9469 f
+  u_cpu/Branch_ctrl/n971 (net)                  2                 0.0000     2.9469 f
+  u_cpu/Branch_ctrl/U930/A1 (LVT_OAI21HDV1)             0.0935    0.0000     2.9469 f
+  u_cpu/Branch_ctrl/U930/ZN (LVT_OAI21HDV1)             0.2287    0.1535     3.1004 r
+  u_cpu/Branch_ctrl/n1005 (net)                 2                 0.0000     3.1004 r
+  u_cpu/Branch_ctrl/U935/A1 (LVT_AOI21HDV2)             0.2287    0.0000     3.1004 r
+  u_cpu/Branch_ctrl/U935/ZN (LVT_AOI21HDV2)             0.1218    0.1065     3.2070 f
+  u_cpu/Branch_ctrl/n1012 (net)                 2                 0.0000     3.2070 f
+  u_cpu/Branch_ctrl/U6/A1 (LVT_OAI21HDV2)               0.1218    0.0000     3.2070 f
+  u_cpu/Branch_ctrl/U6/ZN (LVT_OAI21HDV2)               0.2230    0.1568     3.3638 r
+  u_cpu/Branch_ctrl/n1018 (net)                 2                 0.0000     3.3638 r
+  u_cpu/Branch_ctrl/U941/A1 (LVT_AOI21HDV4)             0.2230    0.0000     3.3638 r
+  u_cpu/Branch_ctrl/U941/ZN (LVT_AOI21HDV4)             0.1061    0.0925     3.4563 f
+  u_cpu/Branch_ctrl/n1025 (net)                 2                 0.0000     3.4563 f
+  u_cpu/Branch_ctrl/U942/A1 (LVT_OAI21HDV4)             0.1061    0.0000     3.4563 f
+  u_cpu/Branch_ctrl/U942/ZN (LVT_OAI21HDV4)             0.1375    0.1026     3.5588 r
+  u_cpu/Branch_ctrl/n1031 (net)                 2                 0.0000     3.5588 r
+  u_cpu/Branch_ctrl/U52/A1 (LVT_AOI21HDV2)              0.1375    0.0000     3.5588 r
+  u_cpu/Branch_ctrl/U52/ZN (LVT_AOI21HDV2)              0.1043    0.0907     3.6495 f
+  u_cpu/Branch_ctrl/n1039 (net)                 2                 0.0000     3.6495 f
+  u_cpu/Branch_ctrl/U943/A1 (LVT_OAI21HDV2)             0.1043    0.0000     3.6495 f
+  u_cpu/Branch_ctrl/U943/ZN (LVT_OAI21HDV2)             0.1851    0.1309     3.7804 r
+  u_cpu/Branch_ctrl/n1045 (net)                 2                 0.0000     3.7804 r
+  u_cpu/Branch_ctrl/U944/A1 (LVT_AOI21HDV2)             0.1851    0.0000     3.7804 r
+  u_cpu/Branch_ctrl/U944/ZN (LVT_AOI21HDV2)             0.1129    0.1009     3.8814 f
+  u_cpu/Branch_ctrl/n1052 (net)                 2                 0.0000     3.8814 f
+  u_cpu/Branch_ctrl/U54/A1 (LVT_OAI21HDV2)              0.1129    0.0000     3.8814 f
+  u_cpu/Branch_ctrl/U54/ZN (LVT_OAI21HDV2)              0.1851    0.1331     4.0145 r
+  u_cpu/Branch_ctrl/n1058 (net)                 2                 0.0000     4.0145 r
+  u_cpu/Branch_ctrl/U16/A1 (LVT_AOI21HDV2)              0.1851    0.0000     4.0145 r
+  u_cpu/Branch_ctrl/U16/ZN (LVT_AOI21HDV2)              0.1129    0.1009     4.1154 f
+  u_cpu/Branch_ctrl/n1065 (net)                 2                 0.0000     4.1154 f
+  u_cpu/Branch_ctrl/U331/A1 (LVT_OAI21HDV2)             0.1129    0.0000     4.1154 f
+  u_cpu/Branch_ctrl/U331/ZN (LVT_OAI21HDV2)             0.2230    0.1545     4.2699 r
+  u_cpu/Branch_ctrl/n1071 (net)                 2                 0.0000     4.2699 r
+  u_cpu/Branch_ctrl/U945/A1 (LVT_AOI21HDV4)             0.2230    0.0000     4.2699 r
+  u_cpu/Branch_ctrl/U945/ZN (LVT_AOI21HDV4)             0.1061    0.0925     4.3624 f
+  u_cpu/Branch_ctrl/n1078 (net)                 2                 0.0000     4.3624 f
+  u_cpu/Branch_ctrl/U946/A1 (LVT_OAI21HDV4)             0.1061    0.0000     4.3624 f
+  u_cpu/Branch_ctrl/U946/ZN (LVT_OAI21HDV4)             0.1561    0.1133     4.4757 r
+  u_cpu/Branch_ctrl/n1084 (net)                 2                 0.0000     4.4757 r
+  u_cpu/Branch_ctrl/U947/A1 (LVT_AOI21HDV4)             0.1561    0.0000     4.4757 r
+  u_cpu/Branch_ctrl/U947/ZN (LVT_AOI21HDV4)             0.0930    0.0828     4.5585 f
+  u_cpu/Branch_ctrl/n1091 (net)                 2                 0.0000     4.5585 f
+  u_cpu/Branch_ctrl/U948/A1 (LVT_OAI21HDV4)             0.0930    0.0000     4.5585 f
+  u_cpu/Branch_ctrl/U948/ZN (LVT_OAI21HDV4)             0.1375    0.0992     4.6577 r
+  u_cpu/Branch_ctrl/n1097 (net)                 2                 0.0000     4.6577 r
+  u_cpu/Branch_ctrl/U89/A1 (LVT_AOI21HDV2)              0.1375    0.0000     4.6577 r
+  u_cpu/Branch_ctrl/U89/ZN (LVT_AOI21HDV2)              0.1043    0.0907     4.7484 f
+  u_cpu/Branch_ctrl/n1105 (net)                 2                 0.0000     4.7484 f
+  u_cpu/Branch_ctrl/U56/A1 (LVT_OAI21HDV2)              0.1043    0.0000     4.7484 f
+  u_cpu/Branch_ctrl/U56/ZN (LVT_OAI21HDV2)              0.1853    0.1309     4.8793 r
+  u_cpu/Branch_ctrl/n1111 (net)                 2                 0.0000     4.8793 r
+  u_cpu/Branch_ctrl/U332/A1 (LVT_AOI21HDV2)             0.1853    0.0000     4.8793 r
+  u_cpu/Branch_ctrl/U332/ZN (LVT_AOI21HDV2)             0.1130    0.1010     4.9802 f
+  u_cpu/Branch_ctrl/n1116 (net)                 2                 0.0000     4.9802 f
+  u_cpu/Branch_ctrl/U92/A1 (LVT_OAI21HDV2)              0.1130    0.0000     4.9802 f
+  u_cpu/Branch_ctrl/U92/ZN (LVT_OAI21HDV2)              0.1481    0.1122     5.0924 r
+  u_cpu/Branch_ctrl/n1122 (net)                 1                 0.0000     5.0924 r
+  u_cpu/Branch_ctrl/U1128/CI (LVT_AD1HDV1)              0.1481    0.0000     5.0924 r
+  u_cpu/Branch_ctrl/U1128/CO (LVT_AD1HDV1)              0.1236    0.2017     5.2941 r
+  u_cpu/Branch_ctrl/n1126 (net)                 1                 0.0000     5.2941 r
+  u_cpu/Branch_ctrl/U1130/CI (LVT_AD1HDV1)              0.1236    0.0000     5.2941 r
+  u_cpu/Branch_ctrl/U1130/CO (LVT_AD1HDV1)              0.1274    0.1991     5.4932 r
+  u_cpu/Branch_ctrl/n1130 (net)                 1                 0.0000     5.4932 r
+  u_cpu/Branch_ctrl/U1133/A1 (LVT_XOR2HDV2)             0.1274    0.0000     5.4932 r
+  u_cpu/Branch_ctrl/U1133/Z (LVT_XOR2HDV2)              0.0604    0.1415     5.6347 f
+  u_cpu/Branch_ctrl/n1134 (net)                 1                 0.0000     5.6347 f
+  u_cpu/Branch_ctrl/U1135/A1 (LVT_IOA21HDV2)            0.0604    0.0000     5.6347 f
+  u_cpu/Branch_ctrl/U1135/ZN (LVT_IOA21HDV2)            0.0613    0.1158     5.7505 f
+  u_cpu/Branch_ctrl/br_addr[31] (net)           1                 0.0000     5.7505 f
+  u_cpu/Branch_ctrl/br_addr[31] (ysyx_210340_branch_ctrl_0)       0.0000     5.7505 f
+  u_cpu/id_br_addr[31] (net)                                      0.0000     5.7505 f
+  u_cpu/If_stage/br_addr[31] (ysyx_210340_if_stage_0)             0.0000     5.7505 f
+  u_cpu/If_stage/br_addr[31] (net)                                0.0000     5.7505 f
+  u_cpu/If_stage/U154/I0 (LVT_MUX2HDV2)                 0.0613    0.0000     5.7505 f
+  u_cpu/If_stage/U154/Z (LVT_MUX2HDV2)                  0.0782    0.1811     5.9316 f
+  u_cpu/If_stage/n206 (net)                     2                 0.0000     5.9316 f
+  u_cpu/If_stage/U443/A2 (LVT_XOR2HDV2)                 0.0782    0.0000     5.9316 f
+  u_cpu/If_stage/U443/Z (LVT_XOR2HDV2)                  0.0605    0.1731     6.1047 f
+  u_cpu/If_stage/n214 (net)                     1                 0.0000     6.1047 f
+  u_cpu/If_stage/U445/A1 (LVT_IOA21HDV2)                0.0605    0.0000     6.1047 f
+  u_cpu/If_stage/U445/ZN (LVT_IOA21HDV2)                0.0623    0.1178     6.2225 f
+  u_cpu/If_stage/n284 (net)                     1                 0.0000     6.2225 f
+  u_cpu/If_stage/pc_next_reg_31_/D (LVT_DQHDV4)         0.0623    0.0000     6.2225 f
+  data arrival time                                                          6.2225
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  u_cpu/If_stage/pc_next_reg_31_/CK (LVT_DQHDV4)                  0.0000     6.3500 r
+  library setup time                                             -0.1265     6.2235
+  data required time                                                         6.2235
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2235
+  data arrival time                                                         -6.2225
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0010
+  Startpoint: u_cpu/Id_ex/id_op2_dffr/qout_r_reg_5_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: u_cpu/Ex_mem/mem_rd_data_reg_63_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_cpu/Id_ex/id_op2_dffr/qout_r_reg_5_/CK (LVT_DQHDV1)
+                                                        0.0000    0.0000 #   0.0000 r
+  u_cpu/Id_ex/id_op2_dffr/qout_r_reg_5_/Q (LVT_DQHDV1)
+                                                        0.0780    0.2275     0.2275 f
+  u_cpu/Id_ex/id_op2_dffr/qout[5] (net)         1                 0.0000     0.2275 f
+  u_cpu/Id_ex/id_op2_dffr/qout[5] (ysyx_210340_gnrl_dffr_20)      0.0000     0.2275 f
+  u_cpu/Id_ex/ex_op2[5] (net)                                     0.0000     0.2275 f
+  u_cpu/Id_ex/ex_op2[5] (ysyx_210340_id_ex_0)                     0.0000     0.2275 f
+  u_cpu/ex_op2[5] (net)                                           0.0000     0.2275 f
+  u_cpu/U3/I (LVT_INHDV1)                               0.0780    0.0000     0.2275 f
+  u_cpu/U3/ZN (LVT_INHDV1)                              0.0866    0.0689     0.2964 r
+  u_cpu/n187 (net)                              1                 0.0000     0.2964 r
+  u_cpu/U5/I (LVT_INHDV4)                               0.0866    0.0000     0.2964 r
+  u_cpu/U5/ZN (LVT_INHDV4)                              0.1213    0.0964     0.3928 f
+  u_cpu/n188 (net)                             19                 0.0000     0.3928 f
+  u_cpu/Exe_stage/op2[5] (ysyx_210340_exe_stage_0)                0.0000     0.3928 f
+  u_cpu/Exe_stage/op2[5] (net)                                    0.0000     0.3928 f
+  u_cpu/Exe_stage/U511/I (LVT_INHDV1)                   0.1213    0.0000     0.3928 f
+  u_cpu/Exe_stage/U511/ZN (LVT_INHDV1)                  0.1720    0.1281     0.5209 r
+  u_cpu/Exe_stage/n2542 (net)                   6                 0.0000     0.5209 r
+  u_cpu/Exe_stage/U646/A1 (LVT_NOR2HDV1)                0.1720    0.0000     0.5209 r
+  u_cpu/Exe_stage/U646/ZN (LVT_NOR2HDV1)                0.1050    0.0639     0.5848 f
+  u_cpu/Exe_stage/n103 (net)                    2                 0.0000     0.5848 f
+  u_cpu/Exe_stage/U647/A2 (LVT_NOR2HDV1)                0.1050    0.0000     0.5848 f
+  u_cpu/Exe_stage/U647/ZN (LVT_NOR2HDV1)                0.2047    0.1428     0.7276 r
+  u_cpu/Exe_stage/n2609 (net)                   3                 0.0000     0.7276 r
+  u_cpu/Exe_stage/U761/A1 (LVT_NAND2HDV1)               0.2047    0.0000     0.7276 r
+  u_cpu/Exe_stage/U761/ZN (LVT_NAND2HDV1)               0.0849    0.0709     0.7986 f
+  u_cpu/Exe_stage/n168 (net)                    1                 0.0000     0.7986 f
+  u_cpu/Exe_stage/U196/A2 (LVT_OAI21HDV1)               0.0849    0.0000     0.7986 f
+  u_cpu/Exe_stage/U196/ZN (LVT_OAI21HDV1)               0.1925    0.1375     0.9360 r
+  u_cpu/Exe_stage/n1496 (net)                   2                 0.0000     0.9360 r
+  u_cpu/Exe_stage/U108/A1 (LVT_AOI21HDV1)               0.1925    0.0000     0.9360 r
+  u_cpu/Exe_stage/U108/ZN (LVT_AOI21HDV1)               0.1268    0.1116     1.0477 f
+  u_cpu/Exe_stage/n356 (net)                    2                 0.0000     1.0477 f
+  u_cpu/Exe_stage/U879/A1 (LVT_OAI21HDV2)               0.1268    0.0000     1.0477 f
+  u_cpu/Exe_stage/U879/ZN (LVT_OAI21HDV2)               0.2222    0.1580     1.2057 r
+  u_cpu/Exe_stage/n3008 (net)                   4                 0.0000     1.2057 r
+  u_cpu/Exe_stage/U306/A1 (LVT_AOI21HDV1)               0.2222    0.0000     1.2057 r
+  u_cpu/Exe_stage/U306/ZN (LVT_AOI21HDV1)               0.1361    0.1183     1.3240 f
+  u_cpu/Exe_stage/n3083 (net)                   2                 0.0000     1.3240 f
+  u_cpu/Exe_stage/U308/A1 (LVT_OAI21HDV1)               0.1361    0.0000     1.3240 f
+  u_cpu/Exe_stage/U308/ZN (LVT_OAI21HDV1)               0.2160    0.1568     1.4808 r
+  u_cpu/Exe_stage/n3114 (net)                   2                 0.0000     1.4808 r
+  u_cpu/Exe_stage/U118/A1 (LVT_AOI21HDV1)               0.2160    0.0000     1.4808 r
+  u_cpu/Exe_stage/U118/ZN (LVT_AOI21HDV1)               0.1347    0.1174     1.5983 f
+  u_cpu/Exe_stage/n3146 (net)                   2                 0.0000     1.5983 f
+  u_cpu/Exe_stage/U120/A1 (LVT_OAI21HDV1)               0.1347    0.0000     1.5983 f
+  u_cpu/Exe_stage/U120/ZN (LVT_OAI21HDV1)               0.2159    0.1565     1.7547 r
+  u_cpu/Exe_stage/n3176 (net)                   2                 0.0000     1.7547 r
+  u_cpu/Exe_stage/U314/A1 (LVT_AOI21HDV1)               0.2159    0.0000     1.7547 r
+  u_cpu/Exe_stage/U314/ZN (LVT_AOI21HDV1)               0.1347    0.1174     1.8721 f
+  u_cpu/Exe_stage/n3203 (net)                   2                 0.0000     1.8721 f
+  u_cpu/Exe_stage/U317/A1 (LVT_OAI21HDV1)               0.1347    0.0000     1.8721 f
+  u_cpu/Exe_stage/U317/ZN (LVT_OAI21HDV1)               0.2159    0.1564     2.0286 r
+  u_cpu/Exe_stage/n3237 (net)                   2                 0.0000     2.0286 r
+  u_cpu/Exe_stage/U122/A1 (LVT_AOI21HDV1)               0.2159    0.0000     2.0286 r
+  u_cpu/Exe_stage/U122/ZN (LVT_AOI21HDV1)               0.1347    0.1174     2.1460 f
+  u_cpu/Exe_stage/n3272 (net)                   2                 0.0000     2.1460 f
+  u_cpu/Exe_stage/U124/A1 (LVT_OAI21HDV1)               0.1347    0.0000     2.1460 f
+  u_cpu/Exe_stage/U124/ZN (LVT_OAI21HDV1)               0.2159    0.1564     2.3025 r
+  u_cpu/Exe_stage/n543 (net)                    2                 0.0000     2.3025 r
+  u_cpu/Exe_stage/U323/A1 (LVT_AOI21HDV1)               0.2159    0.0000     2.3025 r
+  u_cpu/Exe_stage/U323/ZN (LVT_AOI21HDV1)               0.1347    0.1174     2.4199 f
+  u_cpu/Exe_stage/n491 (net)                    2                 0.0000     2.4199 f
+  u_cpu/Exe_stage/U326/A1 (LVT_OAI21HDV1)               0.1347    0.0000     2.4199 f
+  u_cpu/Exe_stage/U326/ZN (LVT_OAI21HDV1)               0.2159    0.1564     2.5764 r
+  u_cpu/Exe_stage/n625 (net)                    2                 0.0000     2.5764 r
+  u_cpu/Exe_stage/U286/A1 (LVT_AOI21HDV1)               0.2159    0.0000     2.5764 r
+  u_cpu/Exe_stage/U286/ZN (LVT_AOI21HDV1)               0.1347    0.1174     2.6938 f
+  u_cpu/Exe_stage/n616 (net)                    2                 0.0000     2.6938 f
+  u_cpu/Exe_stage/U328/A1 (LVT_OAI21HDV1)               0.1347    0.0000     2.6938 f
+  u_cpu/Exe_stage/U328/ZN (LVT_OAI21HDV1)               0.2159    0.1564     2.8502 r
+  u_cpu/Exe_stage/n701 (net)                    2                 0.0000     2.8502 r
+  u_cpu/Exe_stage/U125/A1 (LVT_AOI21HDV1)               0.2159    0.0000     2.8502 r
+  u_cpu/Exe_stage/U125/ZN (LVT_AOI21HDV1)               0.1347    0.1174     2.9677 f
+  u_cpu/Exe_stage/n738 (net)                    2                 0.0000     2.9677 f
+  u_cpu/Exe_stage/U127/A1 (LVT_OAI21HDV1)               0.1347    0.0000     2.9677 f
+  u_cpu/Exe_stage/U127/ZN (LVT_OAI21HDV1)               0.2159    0.1564     3.1241 r
+  u_cpu/Exe_stage/n790 (net)                    2                 0.0000     3.1241 r
+  u_cpu/Exe_stage/U333/A1 (LVT_AOI21HDV1)               0.2159    0.0000     3.1241 r
+  u_cpu/Exe_stage/U333/ZN (LVT_AOI21HDV1)               0.1414    0.1233     3.2474 f
+  u_cpu/Exe_stage/n781 (net)                    2                 0.0000     3.2474 f
+  u_cpu/Exe_stage/U899/A1 (LVT_OAI21HDV2)               0.1414    0.0000     3.2474 f
+  u_cpu/Exe_stage/U899/ZN (LVT_OAI21HDV2)               0.1769    0.1350     3.3825 r
+  u_cpu/Exe_stage/n843 (net)                    2                 0.0000     3.3825 r
+  u_cpu/Exe_stage/U149/A1 (LVT_AOI21HDV1)               0.1769    0.0000     3.3825 r
+  u_cpu/Exe_stage/U149/ZN (LVT_AOI21HDV1)               0.1266    0.1113     3.4938 f
+  u_cpu/Exe_stage/n3283 (net)                   2                 0.0000     3.4938 f
+  u_cpu/Exe_stage/U151/A1 (LVT_OAI21HDV1)               0.1266    0.0000     3.4938 f
+  u_cpu/Exe_stage/U151/ZN (LVT_OAI21HDV1)               0.2298    0.1622     3.6560 r
+  u_cpu/Exe_stage/n890 (net)                    2                 0.0000     3.6560 r
+  u_cpu/Exe_stage/U906/A1 (LVT_AOI21HDV2)               0.2298    0.0000     3.6560 r
+  u_cpu/Exe_stage/U906/ZN (LVT_AOI21HDV2)               0.1219    0.1066     3.7626 f
+  u_cpu/Exe_stage/n969 (net)                    2                 0.0000     3.7626 f
+  u_cpu/Exe_stage/U908/A1 (LVT_OAI21HDV2)               0.1219    0.0000     3.7626 f
+  u_cpu/Exe_stage/U908/ZN (LVT_OAI21HDV2)               0.1751    0.1300     3.8925 r
+  u_cpu/Exe_stage/n1001 (net)                   2                 0.0000     3.8925 r
+  u_cpu/Exe_stage/U357/A1 (LVT_AOI21HDV1)               0.1751    0.0000     3.8925 r
+  u_cpu/Exe_stage/U357/ZN (LVT_AOI21HDV1)               0.1262    0.1108     4.0033 f
+  u_cpu/Exe_stage/n1047 (net)                   2                 0.0000     4.0033 f
+  u_cpu/Exe_stage/U121/A1 (LVT_OAI21HDV1)               0.1262    0.0000     4.0033 f
+  u_cpu/Exe_stage/U121/ZN (LVT_OAI21HDV1)               0.2156    0.1542     4.1576 r
+  u_cpu/Exe_stage/n1082 (net)                   2                 0.0000     4.1576 r
+  u_cpu/Exe_stage/U134/A1 (LVT_AOI21HDV1)               0.2156    0.0000     4.1576 r
+  u_cpu/Exe_stage/U134/ZN (LVT_AOI21HDV1)               0.1414    0.1233     4.2808 f
+  u_cpu/Exe_stage/n1129 (net)                   2                 0.0000     4.2808 f
+  u_cpu/Exe_stage/U918/A1 (LVT_OAI21HDV2)               0.1414    0.0000     4.2808 f
+  u_cpu/Exe_stage/U918/ZN (LVT_OAI21HDV2)               0.1864    0.1406     4.4214 r
+  u_cpu/Exe_stage/n1173 (net)                   2                 0.0000     4.4214 r
+  u_cpu/Exe_stage/U923/A1 (LVT_AOI21HDV2)               0.1864    0.0000     4.4214 r
+  u_cpu/Exe_stage/U923/ZN (LVT_AOI21HDV2)               0.1087    0.0971     4.5185 f
+  u_cpu/Exe_stage/n1205 (net)                   2                 0.0000     4.5185 f
+  u_cpu/Exe_stage/U350/A1 (LVT_OAI21HDV1)               0.1087    0.0000     4.5185 f
+  u_cpu/Exe_stage/U350/ZN (LVT_OAI21HDV1)               0.2080    0.1456     4.6641 r
+  u_cpu/Exe_stage/n1236 (net)                   2                 0.0000     4.6641 r
+  u_cpu/Exe_stage/U930/A1 (LVT_AO21HDV2)                0.2080    0.0000     4.6641 r
+  u_cpu/Exe_stage/U930/Z (LVT_AO21HDV2)                 0.0678    0.1681     4.8322 r
+  u_cpu/Exe_stage/n1261 (net)                   1                 0.0000     4.8322 r
+  u_cpu/Exe_stage/U1997/CI (LVT_AD1HDV1)                0.0678    0.0000     4.8322 r
+  u_cpu/Exe_stage/U1997/CO (LVT_AD1HDV1)                0.1225    0.1851     5.0173 r
+  u_cpu/Exe_stage/n1297 (net)                   1                 0.0000     5.0173 r
+  u_cpu/Exe_stage/U2021/CI (LVT_AD1HDV1)                0.1225    0.0000     5.0173 r
+  u_cpu/Exe_stage/U2021/CO (LVT_AD1HDV1)                0.1236    0.1965     5.2138 r
+  u_cpu/Exe_stage/n1796 (net)                   1                 0.0000     5.2138 r
+  u_cpu/Exe_stage/U2424/CI (LVT_AD1HDV1)                0.1236    0.0000     5.2138 r
+  u_cpu/Exe_stage/U2424/CO (LVT_AD1HDV1)                0.1207    0.1948     5.4086 r
+  u_cpu/Exe_stage/n288 (net)                    1                 0.0000     5.4086 r
+  u_cpu/Exe_stage/U373/A1 (LVT_XOR2HDV1)                0.1207    0.0000     5.4086 r
+  u_cpu/Exe_stage/U373/Z (LVT_XOR2HDV1)                 0.0777    0.1591     5.5676 f
+  u_cpu/Exe_stage/n289 (net)                    1                 0.0000     5.5676 f
+  u_cpu/Exe_stage/U372/A1 (LVT_NAND2HDV1)               0.0777    0.0000     5.5676 f
+  u_cpu/Exe_stage/U372/ZN (LVT_NAND2HDV1)               0.0856    0.0514     5.6190 r
+  u_cpu/Exe_stage/n338 (net)                    1                 0.0000     5.6190 r
+  u_cpu/Exe_stage/U2/A3 (LVT_NAND4HDV1)                 0.0856    0.0000     5.6190 r
+  u_cpu/Exe_stage/U2/ZN (LVT_NAND4HDV1)                 0.1586    0.1239     5.7429 f
+  u_cpu/Exe_stage/n427 (net)                    1                 0.0000     5.7429 f
+  u_cpu/Exe_stage/U1174/A1 (LVT_AO21HDV4)               0.1586    0.0000     5.7429 f
+  u_cpu/Exe_stage/U1174/Z (LVT_AO21HDV4)                0.0504    0.1586     5.9015 f
+  u_cpu/Exe_stage/rd_data[63] (net)             2                 0.0000     5.9015 f
+  u_cpu/Exe_stage/rd_data[63] (ysyx_210340_exe_stage_0)           0.0000     5.9015 f
+  u_cpu/ex_rd_data[63] (net)                                      0.0000     5.9015 f
+  u_cpu/Mux_2/data_1[63] (ysyx_210340_Mux2_0)                     0.0000     5.9015 f
+  u_cpu/Mux_2/data_1[63] (net)                                    0.0000     5.9015 f
+  u_cpu/Mux_2/U12/A1 (LVT_INOR2HDV1)                    0.0504    0.0000     5.9015 f
+  u_cpu/Mux_2/U12/ZN (LVT_INOR2HDV1)                    0.0970    0.0983     5.9998 f
+  u_cpu/Mux_2/data_out[63] (net)                1                 0.0000     5.9998 f
+  u_cpu/Mux_2/data_out[63] (ysyx_210340_Mux2_0)                   0.0000     5.9998 f
+  u_cpu/ex_rd_data_reg[63] (net)                                  0.0000     5.9998 f
+  u_cpu/Ex_mem/ex_rd_data[63] (ysyx_210340_ex_mem_0)              0.0000     5.9998 f
+  u_cpu/Ex_mem/ex_rd_data[63] (net)                               0.0000     5.9998 f
+  u_cpu/Ex_mem/U13/B1 (LVT_AO22HDV1)                    0.0970    0.0000     5.9998 f
+  u_cpu/Ex_mem/U13/Z (LVT_AO22HDV1)                     0.0741    0.1980     6.1978 f
+  u_cpu/Ex_mem/n251 (net)                       1                 0.0000     6.1978 f
+  u_cpu/Ex_mem/mem_rd_data_reg_63_/D (LVT_DQHDV1)       0.0741    0.0000     6.1978 f
+  data arrival time                                                          6.1978
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  u_cpu/Ex_mem/mem_rd_data_reg_63_/CK (LVT_DQHDV1)                0.0000     6.3500 r
+  library setup time                                             -0.1488     6.2012
+  data required time                                                         6.2012
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2012
+  data arrival time                                                         -6.1978
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0034
+  Startpoint: u_cpu/If_id/id_inst_reg_5_
+              (rising edge-triggered flip-flop clocked by CLK_clock)
+  Endpoint: Axi_rw/data_read_o_reg_10_
+            (rising edge-triggered flip-flop clocked by CLK_clock)
+  Path Group: CLK_clock
+  Path Type: max
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK_clock (rise edge)                                     0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_cpu/If_id/id_inst_reg_5_/CK (LVT_DQHDV2)            0.0000    0.0000 #   0.0000 r
+  u_cpu/If_id/id_inst_reg_5_/Q (LVT_DQHDV2)             0.2030    0.3235     0.3235 r
+  u_cpu/If_id/id_inst[5] (net)                 10                 0.0000     0.3235 r
+  u_cpu/If_id/id_inst[5] (ysyx_210340_if_id_0)                    0.0000     0.3235 r
+  u_cpu/id_inst[5] (net)                                          0.0000     0.3235 r
+  u_cpu/Id_stage/inst[5] (ysyx_210340_id_stage_0)                 0.0000     0.3235 r
+  u_cpu/Id_stage/inst[5] (net)                                    0.0000     0.3235 r
+  u_cpu/Id_stage/U365/A2 (LVT_NAND2HDV2)                0.2030    0.0000     0.3235 r
+  u_cpu/Id_stage/U365/ZN (LVT_NAND2HDV2)                0.1046    0.0887     0.4122 f
+  u_cpu/Id_stage/n18 (net)                      2                 0.0000     0.4122 f
+  u_cpu/Id_stage/U370/A1 (LVT_NOR2HDV4)                 0.1046    0.0000     0.4122 f
+  u_cpu/Id_stage/U370/ZN (LVT_NOR2HDV4)                 0.1021    0.0732     0.4854 r
+  u_cpu/Id_stage/n22 (net)                      2                 0.0000     0.4854 r
+  u_cpu/Id_stage/U371/A1 (LVT_AND2HDV4)                 0.1021    0.0000     0.4854 r
+  u_cpu/Id_stage/U371/Z (LVT_AND2HDV4)                  0.0490    0.1025     0.5879 r
+  u_cpu/Id_stage/n141 (net)                     2                 0.0000     0.5879 r
+  u_cpu/Id_stage/U361/A1 (LVT_NAND2HDV2)                0.0490    0.0000     0.5879 r
+  u_cpu/Id_stage/U361/ZN (LVT_NAND2HDV2)                0.1297    0.0897     0.6775 f
+  u_cpu/Id_stage/n25 (net)                      5                 0.0000     0.6775 f
+  u_cpu/Id_stage/U379/A1 (LVT_NAND3HDV3)                0.1297    0.0000     0.6775 f
+  u_cpu/Id_stage/U379/ZN (LVT_NAND3HDV3)                0.1285    0.0947     0.7723 r
+  u_cpu/Id_stage/rs2_r_ena (net)                2                 0.0000     0.7723 r
+  u_cpu/Id_stage/U380/A1 (LVT_NAND2HDV8)                0.1285    0.0000     0.7723 r
+  u_cpu/Id_stage/U380/ZN (LVT_NAND2HDV8)                0.1023    0.0764     0.8487 f
+  u_cpu/Id_stage/n8 (net)                       5                 0.0000     0.8487 f
+  u_cpu/Id_stage/U113/A1 (LVT_NOR2HDV4)                 0.1023    0.0000     0.8487 f
+  u_cpu/Id_stage/U113/ZN (LVT_NOR2HDV4)                 0.2052    0.1369     0.9856 r
+  u_cpu/Id_stage/rs2_r_addr[0] (net)            7                 0.0000     0.9856 r
+  u_cpu/Id_stage/rs2_r_addr[0] (ysyx_210340_id_stage_0)           0.0000     0.9856 r
+  u_cpu/id_rs2_r_addr[0] (net)                                    0.0000     0.9856 r
+  u_cpu/Regfile/r_addr2[0] (ysyx_210340_regfile_0)                0.0000     0.9856 r
+  u_cpu/Regfile/r_addr2[0] (net)                                  0.0000     0.9856 r
+  u_cpu/Regfile/U709/I (LVT_INHDV1)                     0.2052    0.0000     0.9856 r
+  u_cpu/Regfile/U709/ZN (LVT_INHDV1)                    0.0855    0.0707     1.0563 f
+  u_cpu/Regfile/n413 (net)                      2                 0.0000     1.0563 f
+  u_cpu/Regfile/U92/A2 (LVT_NAND2HDV2)                  0.0855    0.0000     1.0563 f
+  u_cpu/Regfile/U92/ZN (LVT_NAND2HDV2)                  0.1819    0.1250     1.1814 r
+  u_cpu/Regfile/n443 (net)                      8                 0.0000     1.1814 r
+  u_cpu/Regfile/U186/A1 (LVT_NOR2HDV2)                  0.1819    0.0000     1.1814 r
+  u_cpu/Regfile/U186/ZN (LVT_NOR2HDV2)                  0.1333    0.1193     1.3006 f
+  u_cpu/Regfile/n6797 (net)                     9                 0.0000     1.3006 f
+  u_cpu/Regfile/U446/I (LVT_BUFHDV4)                    0.1333    0.0000     1.3006 f
+  u_cpu/Regfile/U446/Z (LVT_BUFHDV4)                    0.3107    0.2848     1.5854 f
+  u_cpu/Regfile/n90 (net)                      56                 0.0000     1.5854 f
+  u_cpu/Regfile/U4910/A1 (LVT_AOI22HDV1)                0.3107    0.0000     1.5854 f
+  u_cpu/Regfile/U4910/ZN (LVT_AOI22HDV1)                0.1723    0.1616     1.7470 r
+  u_cpu/Regfile/n2770 (net)                     1                 0.0000     1.7470 r
+  u_cpu/Regfile/U478/A4 (LVT_NAND4HDV1)                 0.1723    0.0000     1.7470 r
+  u_cpu/Regfile/U478/ZN (LVT_NAND4HDV1)                 0.1331    0.1198     1.8668 f
+  u_cpu/Regfile/n4763 (net)                     1                 0.0000     1.8668 f
+  u_cpu/Regfile/U59/A3 (LVT_OR4HDV2)                    0.1331    0.0000     1.8668 f
+  u_cpu/Regfile/U59/Z (LVT_OR4HDV2)                     0.1622    0.3950     2.2618 f
+  u_cpu/Regfile/r_data2[62] (net)               7                 0.0000     2.2618 f
+  u_cpu/Regfile/r_data2[62] (ysyx_210340_regfile_0)               0.0000     2.2618 f
+  u_cpu/id_r_data2[62] (net)                                      0.0000     2.2618 f
+  u_cpu/Branch_ctrl/rs2_data[62] (ysyx_210340_branch_ctrl_0)      0.0000     2.2618 f
+  u_cpu/Branch_ctrl/rs2_data[62] (net)                            0.0000     2.2618 f
+  u_cpu/Branch_ctrl/U605/A1 (LVT_XOR2HDV1)              0.1622    0.0000     2.2618 f
+  u_cpu/Branch_ctrl/U605/Z (LVT_XOR2HDV1)               0.0813    0.1842     2.4459 f
+  u_cpu/Branch_ctrl/n463 (net)                  1                 0.0000     2.4459 f
+  u_cpu/Branch_ctrl/U30/A2 (LVT_NOR3HDV2)               0.0813    0.0000     2.4459 f
+  u_cpu/Branch_ctrl/U30/ZN (LVT_NOR3HDV2)               0.1943    0.1175     2.5634 r
+  u_cpu/Branch_ctrl/n467 (net)                  1                 0.0000     2.5634 r
+  u_cpu/Branch_ctrl/U29/A1 (LVT_NAND3HDV1)              0.1943    0.0000     2.5634 r
+  u_cpu/Branch_ctrl/U29/ZN (LVT_NAND3HDV1)              0.1219    0.1022     2.6656 f
+  u_cpu/Branch_ctrl/n468 (net)                  1                 0.0000     2.6656 f
+  u_cpu/Branch_ctrl/U608/A4 (LVT_OR4HDV4)               0.1219    0.0000     2.6656 f
+  u_cpu/Branch_ctrl/U608/Z (LVT_OR4HDV4)                0.0755    0.2851     2.9507 f
+  u_cpu/Branch_ctrl/n472 (net)                  1                 0.0000     2.9507 f
+  u_cpu/Branch_ctrl/U609/A4 (LVT_OR4HDV4)               0.0755    0.0000     2.9507 f
+  u_cpu/Branch_ctrl/U609/Z (LVT_OR4HDV4)                0.0839    0.2897     3.2403 f
+  u_cpu/Branch_ctrl/n778 (net)                  2                 0.0000     3.2403 f
+  u_cpu/Branch_ctrl/U7/B (LVT_OAI211HDV1)               0.0839    0.0000     3.2403 f
+  u_cpu/Branch_ctrl/U7/ZN (LVT_OAI211HDV1)              0.1942    0.0651     3.3054 r
+  u_cpu/Branch_ctrl/n806 (net)                  1                 0.0000     3.3054 r
+  u_cpu/Branch_ctrl/U18/A1 (LVT_NAND2HDV2)              0.1942    0.0000     3.3054 r
+  u_cpu/Branch_ctrl/U18/ZN (LVT_NAND2HDV2)              0.0768    0.0653     3.3707 f
+  u_cpu/Branch_ctrl/n809 (net)                  1                 0.0000     3.3707 f
+  u_cpu/Branch_ctrl/U322/A1 (LVT_AOI21HDV2)             0.0768    0.0000     3.3707 f
+  u_cpu/Branch_ctrl/U322/ZN (LVT_AOI21HDV2)             0.1572    0.0849     3.4556 r
+  u_cpu/Branch_ctrl/n810 (net)                  1                 0.0000     3.4556 r
+  u_cpu/Branch_ctrl/U604/B (LVT_OAI21HDV1)              0.1572    0.0000     3.4556 r
+  u_cpu/Branch_ctrl/U604/ZN (LVT_OAI21HDV1)             0.0906    0.0818     3.5373 f
+  u_cpu/Branch_ctrl/n813 (net)                  1                 0.0000     3.5373 f
+  u_cpu/Branch_ctrl/U880/A1 (LVT_IOA21HDV4)             0.0906    0.0000     3.5373 f
+  u_cpu/Branch_ctrl/U880/ZN (LVT_IOA21HDV4)             0.0542    0.1154     3.6528 f
+  u_cpu/Branch_ctrl/br_mux (net)                2                 0.0000     3.6528 f
+  u_cpu/Branch_ctrl/br_mux (ysyx_210340_branch_ctrl_0)            0.0000     3.6528 f
+  u_cpu/id_br_mux (net)                                           0.0000     3.6528 f
+  u_cpu/If_stage/br_ena (ysyx_210340_if_stage_0)                  0.0000     3.6528 f
+  u_cpu/If_stage/br_ena (net)                                     0.0000     3.6528 f
+  u_cpu/If_stage/U163/I (LVT_INHDV2)                    0.0542    0.0000     3.6528 f
+  u_cpu/If_stage/U163/ZN (LVT_INHDV2)                   0.0591    0.0490     3.7018 r
+  u_cpu/If_stage/n98 (net)                      2                 0.0000     3.7018 r
+  u_cpu/If_stage/U156/A1 (LVT_AND2HDV4)                 0.0591    0.0000     3.7018 r
+  u_cpu/If_stage/U156/Z (LVT_AND2HDV4)                  0.0850    0.1156     3.8175 r
+  u_cpu/If_stage/n373 (net)                     3                 0.0000     3.8175 r
+  u_cpu/If_stage/U14/A1 (LVT_NAND2HDV2)                 0.0850    0.0000     3.8175 r
+  u_cpu/If_stage/U14/ZN (LVT_NAND2HDV2)                 0.1868    0.1326     3.9501 f
+  u_cpu/If_stage/n437 (net)                     9                 0.0000     3.9501 f
+  u_cpu/If_stage/U9/A1 (LVT_OAI21HDV2)                  0.1868    0.0000     3.9501 f
+  u_cpu/If_stage/U9/ZN (LVT_OAI21HDV2)                  0.1489    0.1265     4.0766 r
+  u_cpu/If_stage/if_addr[0] (net)               1                 0.0000     4.0766 r
+  u_cpu/If_stage/if_addr[0] (ysyx_210340_if_stage_0)              0.0000     4.0766 r
+  u_cpu/if_addr[0] (net)                                          0.0000     4.0766 r
+  u_cpu/if_addr[0] (ysyx_210340_cpu_0)                            0.0000     4.0766 r
+  if_addr[0] (net)                                                0.0000     4.0766 r
+  Arbiter/m0_addr[0] (ysyx_210340_arbiter_0)                      0.0000     4.0766 r
+  Arbiter/m0_addr[0] (net)                                        0.0000     4.0766 r
+  Arbiter/U140/B1 (LVT_AO22HDV4)                        0.1489    0.0000     4.0766 r
+  Arbiter/U140/Z (LVT_AO22HDV4)                         0.0818    0.1431     4.2197 r
+  Arbiter/s0_rw_addr[0] (net)                   2                 0.0000     4.2197 r
+  Arbiter/s0_rw_addr[0] (ysyx_210340_arbiter_0)                   0.0000     4.2197 r
+  rw_addr[0] (net)                                                0.0000     4.2197 r
+  Axi_rw/rw_addr_i_r[0] (ysyx_210340_axi_rw_0)                    0.0000     4.2197 r
+  Axi_rw/rw_addr_i_r[0] (net)                                     0.0000     4.2197 r
+  Axi_rw/U94/I (LVT_INHDV6)                             0.0818    0.0000     4.2197 r
+  Axi_rw/U94/ZN (LVT_INHDV6)                            0.1155    0.0925     4.3122 f
+  Axi_rw/n634 (net)                            22                 0.0000     4.3122 f
+  Axi_rw/U95/I (LVT_INHDV12)                            0.1155    0.0000     4.3122 f
+  Axi_rw/U95/ZN (LVT_INHDV12)                           0.2819    0.1860     4.4982 r
+  Axi_rw/axi_ar_addr_o[0] (net)                21                 0.0000     4.4982 r
+  Axi_rw/U629/A1 (LVT_NAND2HDV1)                        0.2819    0.0000     4.4982 r
+  Axi_rw/U629/ZN (LVT_NAND2HDV1)                        0.1065    0.0857     4.5839 f
+  Axi_rw/n124 (net)                             1                 0.0000     4.5839 f
+  Axi_rw/U57/A1 (LVT_NAND2HDV2)                         0.1065    0.0000     4.5839 f
+  Axi_rw/U57/ZN (LVT_NAND2HDV2)                         0.1182    0.0863     4.6703 r
+  Axi_rw/n291 (net)                             3                 0.0000     4.6703 r
+  Axi_rw/U630/A2 (LVT_AOI31HDV4)                        0.1182    0.0000     4.6703 r
+  Axi_rw/U630/ZN (LVT_AOI31HDV4)                        0.1947    0.1424     4.8127 f
+  Axi_rw/axi_ar_len_o_0__BAR (net)              6                 0.0000     4.8127 f
+  Axi_rw/U623/A1 (LVT_NOR2HDV2)                         0.1947    0.0000     4.8127 f
+  Axi_rw/U623/ZN (LVT_NOR2HDV2)                         0.1782    0.1403     4.9530 r
+  Axi_rw/n535 (net)                             3                 0.0000     4.9530 r
+  Axi_rw/U1057/A1 (LVT_IAO21HDV4)                       0.1782    0.0000     4.9530 r
+  Axi_rw/U1057/ZN (LVT_IAO21HDV4)                       0.1069    0.1420     5.0949 r
+  Axi_rw/n779 (net)                             3                 0.0000     5.0949 r
+  Axi_rw/U47/A1 (LVT_NAND2HDV2)                         0.1069    0.0000     5.0949 r
+  Axi_rw/U47/ZN (LVT_NAND2HDV2)                         0.1307    0.1002     5.1951 f
+  Axi_rw/n1117 (net)                            3                 0.0000     5.1951 f
+  Axi_rw/U199/A1 (LVT_NOR2HDV4)                         0.1307    0.0000     5.1951 f
+  Axi_rw/U199/ZN (LVT_NOR2HDV4)                         0.4085    0.2522     5.4473 r
+  Axi_rw/n834 (net)                            19                 0.0000     5.4473 r
+  Axi_rw/U1063/I (LVT_INHDV6)                           0.4085    0.0000     5.4473 r
+  Axi_rw/U1063/ZN (LVT_INHDV6)                          0.1605    0.1286     5.5760 f
+  Axi_rw/n1131 (net)                           25                 0.0000     5.5760 f
+  Axi_rw/U156/A1 (LVT_NOR2HDV2)                         0.1605    0.0000     5.5760 f
+  Axi_rw/U156/ZN (LVT_NOR2HDV2)                         0.3878    0.2499     5.8259 r
+  Axi_rw/n650 (net)                            10                 0.0000     5.8259 r
+  Axi_rw/U159/A1 (LVT_NAND2HDV1)                        0.3878    0.0000     5.8259 r
+  Axi_rw/U159/ZN (LVT_NAND2HDV1)                        0.1649    0.1321     5.9580 f
+  Axi_rw/n937 (net)                             3                 0.0000     5.9580 f
+  Axi_rw/U160/I (LVT_INHDV1)                            0.1649    0.0000     5.9580 f
+  Axi_rw/U160/ZN (LVT_INHDV1)                           0.1727    0.1396     6.0976 r
+  Axi_rw/n1058 (net)                            6                 0.0000     6.0976 r
+  Axi_rw/U1223/B1 (LVT_AOI22HDV1)                       0.1727    0.0000     6.0976 r
+  Axi_rw/U1223/ZN (LVT_AOI22HDV1)                       0.1854    0.0760     6.1736 f
+  Axi_rw/n1056 (net)                            1                 0.0000     6.1736 f
+  Axi_rw/U388/B (LVT_OAI211HDV1)                        0.1854    0.0000     6.1736 f
+  Axi_rw/U388/ZN (LVT_OAI211HDV1)                       0.1748    0.0760     6.2496 r
+  Axi_rw/n995 (net)                             1                 0.0000     6.2496 r
+  Axi_rw/data_read_o_reg_10_/D (LVT_DQHDV1)             0.1748    0.0000     6.2496 r
+  data arrival time                                                          6.2496
+  clock CLK_clock (rise edge)                                     6.5000     6.5000
+  clock network delay (ideal)                                     0.0000     6.5000
+  clock uncertainty                                              -0.1500     6.3500
+  Axi_rw/data_read_o_reg_10_/CK (LVT_DQHDV1)                      0.0000     6.3500 r
+  library setup time                                             -0.0954     6.2546
+  data required time                                                         6.2546
+  ------------------------------------------------------------------------------------
+  data required time                                                         6.2546
+  data arrival time                                                         -6.2496
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                0.0050
+=====================CHECK DESIGN REPORT====================
+ 
+****************************************
+****************************************
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                    719
+    Unconnected ports (LINT-28)                                   296
+    Feedthrough (LINT-29)                                          97
+    Shorted outputs (LINT-31)                                     176
+    Constant outputs (LINT-52)                                    150
+Cells                                                             146
+    Cells do not drive (LINT-1)                                    18
+    Connected to power or ground (LINT-32)                        125
+    Nets connected to multiple pins on same cell (LINT-33)          3
+--------------------------------------------------------------------------------
+Warning: In design 'ysyx_210340_axi_rw', cell 'C1159' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_axi_rw', cell 'B_26' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_axi_rw', cell 'B_27' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_if_stage', cell 'C719' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_if_stage', cell 'C720' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C412' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C413' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C414' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C415' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C416' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C417' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C418' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_branch_ctrl', cell 'C419' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_mem_load_store', cell 'C752' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_exe_stage', cell 'C1364' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_csr', cell 'B_39' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_csr', cell 'B_45' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340_clint', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'ysyx_210340', port 'io_interrupt' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awvalid' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awaddr[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awid[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awid[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awid[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awid[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awlen[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awsize[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awsize[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awsize[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awburst[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_awburst[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wvalid' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[49]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[47]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[46]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[45]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[44]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[43]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[42]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[41]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[35]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[34]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[33]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wdata[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wstrb[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_wlast' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_bready' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arvalid' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_araddr[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arid[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arid[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arid[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arid[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arlen[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arsize[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arsize[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arsize[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arburst[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_arburst[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340', port 'io_slave_rready' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_cpu', port 'ram_resp[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_cpu', port 'ram_resp[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_b_id_i[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_b_id_i[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_b_id_i[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_b_id_i[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_r_id_i[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_r_id_i[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_r_id_i[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', port 'axi_r_id_i[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[49]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[47]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[46]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[45]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[44]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[43]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[42]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[41]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[35]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[34]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[33]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_data_read[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_resp[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_if_stage', port 'if_resp[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_id_stage', port 'ex_inst[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[63]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[62]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[61]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[60]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[59]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[58]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[57]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[56]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[55]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[54]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[53]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[52]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[51]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[50]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[49]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[48]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[47]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[46]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[45]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[44]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[43]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[42]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[41]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[40]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[39]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[38]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[37]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[36]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[35]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[34]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[33]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'csr_addr[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_csr', port 'cmt_epc[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[31]' is connected directly to output port 'axi_ar_addr_o[31]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[31]' is connected directly to output port 'axi_aw_addr_o[31]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[30]' is connected directly to output port 'axi_ar_addr_o[30]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[30]' is connected directly to output port 'axi_aw_addr_o[30]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[29]' is connected directly to output port 'axi_ar_addr_o[29]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[29]' is connected directly to output port 'axi_aw_addr_o[29]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[28]' is connected directly to output port 'axi_ar_addr_o[28]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[28]' is connected directly to output port 'axi_aw_addr_o[28]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[27]' is connected directly to output port 'axi_ar_addr_o[27]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[27]' is connected directly to output port 'axi_aw_addr_o[27]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[26]' is connected directly to output port 'axi_ar_addr_o[26]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[26]' is connected directly to output port 'axi_aw_addr_o[26]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[25]' is connected directly to output port 'axi_ar_addr_o[25]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[25]' is connected directly to output port 'axi_aw_addr_o[25]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[24]' is connected directly to output port 'axi_ar_addr_o[24]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[24]' is connected directly to output port 'axi_aw_addr_o[24]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[23]' is connected directly to output port 'axi_ar_addr_o[23]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[23]' is connected directly to output port 'axi_aw_addr_o[23]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[22]' is connected directly to output port 'axi_ar_addr_o[22]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[22]' is connected directly to output port 'axi_aw_addr_o[22]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[21]' is connected directly to output port 'axi_ar_addr_o[21]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[21]' is connected directly to output port 'axi_aw_addr_o[21]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[20]' is connected directly to output port 'axi_ar_addr_o[20]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[20]' is connected directly to output port 'axi_aw_addr_o[20]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[19]' is connected directly to output port 'axi_ar_addr_o[19]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[19]' is connected directly to output port 'axi_aw_addr_o[19]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[18]' is connected directly to output port 'axi_ar_addr_o[18]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[18]' is connected directly to output port 'axi_aw_addr_o[18]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[17]' is connected directly to output port 'axi_ar_addr_o[17]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[17]' is connected directly to output port 'axi_aw_addr_o[17]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[16]' is connected directly to output port 'axi_ar_addr_o[16]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[16]' is connected directly to output port 'axi_aw_addr_o[16]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[15]' is connected directly to output port 'axi_ar_addr_o[15]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[15]' is connected directly to output port 'axi_aw_addr_o[15]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[14]' is connected directly to output port 'axi_ar_addr_o[14]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[14]' is connected directly to output port 'axi_aw_addr_o[14]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[13]' is connected directly to output port 'axi_ar_addr_o[13]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[13]' is connected directly to output port 'axi_aw_addr_o[13]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[12]' is connected directly to output port 'axi_ar_addr_o[12]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[12]' is connected directly to output port 'axi_aw_addr_o[12]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[11]' is connected directly to output port 'axi_ar_addr_o[11]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[11]' is connected directly to output port 'axi_aw_addr_o[11]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[10]' is connected directly to output port 'axi_ar_addr_o[10]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[10]' is connected directly to output port 'axi_aw_addr_o[10]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[9]' is connected directly to output port 'axi_ar_addr_o[9]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[9]' is connected directly to output port 'axi_aw_addr_o[9]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[8]' is connected directly to output port 'axi_ar_addr_o[8]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[8]' is connected directly to output port 'axi_aw_addr_o[8]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[7]' is connected directly to output port 'axi_ar_addr_o[7]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[7]' is connected directly to output port 'axi_aw_addr_o[7]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[6]' is connected directly to output port 'axi_ar_addr_o[6]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[6]' is connected directly to output port 'axi_aw_addr_o[6]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[5]' is connected directly to output port 'axi_ar_addr_o[5]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[5]' is connected directly to output port 'axi_aw_addr_o[5]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[4]' is connected directly to output port 'axi_ar_addr_o[4]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[4]' is connected directly to output port 'axi_aw_addr_o[4]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[3]' is connected directly to output port 'axi_ar_addr_o[3]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[3]' is connected directly to output port 'axi_aw_addr_o[3]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[2]' is connected directly to output port 'axi_ar_addr_o[2]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[2]' is connected directly to output port 'axi_aw_addr_o[2]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[1]' is connected directly to output port 'axi_ar_addr_o[1]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[1]' is connected directly to output port 'axi_aw_addr_o[1]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[0]' is connected directly to output port 'axi_ar_addr_o[0]'. (LINT-29)
+Warning: In design 'ysyx_210340_axi_rw', input port 'rw_addr_i_r[0]' is connected directly to output port 'axi_aw_addr_o[0]'. (LINT-29)
+Warning: In design 'ysyx_210340_arbiter', input port 'm0_valid' is connected directly to output port 'req[2]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[31]' is connected directly to output port 'clint_addr[31]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[30]' is connected directly to output port 'clint_addr[30]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[29]' is connected directly to output port 'clint_addr[29]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[28]' is connected directly to output port 'clint_addr[28]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[27]' is connected directly to output port 'clint_addr[27]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[26]' is connected directly to output port 'clint_addr[26]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[25]' is connected directly to output port 'clint_addr[25]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[24]' is connected directly to output port 'clint_addr[24]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[23]' is connected directly to output port 'clint_addr[23]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[22]' is connected directly to output port 'clint_addr[22]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[21]' is connected directly to output port 'clint_addr[21]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[20]' is connected directly to output port 'clint_addr[20]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[19]' is connected directly to output port 'clint_addr[19]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[18]' is connected directly to output port 'clint_addr[18]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[17]' is connected directly to output port 'clint_addr[17]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[16]' is connected directly to output port 'clint_addr[16]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[15]' is connected directly to output port 'clint_addr[15]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[14]' is connected directly to output port 'clint_addr[14]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[13]' is connected directly to output port 'clint_addr[13]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[12]' is connected directly to output port 'clint_addr[12]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[11]' is connected directly to output port 'clint_addr[11]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[10]' is connected directly to output port 'clint_addr[10]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[9]' is connected directly to output port 'clint_addr[9]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[8]' is connected directly to output port 'clint_addr[8]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[7]' is connected directly to output port 'clint_addr[7]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[6]' is connected directly to output port 'clint_addr[6]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[5]' is connected directly to output port 'clint_addr[5]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[4]' is connected directly to output port 'clint_addr[4]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[3]' is connected directly to output port 'clint_addr[3]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[2]' is connected directly to output port 'clint_addr[2]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[1]' is connected directly to output port 'clint_addr[1]'. (LINT-29)
+Warning: In design 'ysyx_210340_clint_ctrl', input port 'mem_rw_addr[0]' is connected directly to output port 'clint_addr[0]'. (LINT-29)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rid[0]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rid[1]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rid[2]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rid[3]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rlast'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[0]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[1]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[2]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[3]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[4]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[5]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[6]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[7]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[8]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[9]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[10]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[11]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[12]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[13]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[14]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[15]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[16]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[17]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[18]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[19]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[20]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[21]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[22]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[23]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[24]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[25]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[26]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[27]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[28]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[29]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[30]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[31]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[32]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[33]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[34]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[35]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[36]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[37]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[38]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[39]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[40]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[41]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[42]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[43]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[44]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[45]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[46]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[47]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[48]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[49]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[50]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[51]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[52]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[53]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[54]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[55]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[56]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[57]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[58]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[59]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[60]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[61]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[62]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rdata[63]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rresp[0]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rresp[1]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_rvalid'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_arready'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_bid[0]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_bid[1]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_bid[2]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_bid[3]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_bresp[0]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_bresp[1]'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_bvalid'. (LINT-31)
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to output port 'io_slave_wready'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[31]' is connected directly to output port 'axi_ar_addr_o[31]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[30]' is connected directly to output port 'axi_ar_addr_o[30]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[29]' is connected directly to output port 'axi_ar_addr_o[29]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[28]' is connected directly to output port 'axi_ar_addr_o[28]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[27]' is connected directly to output port 'axi_ar_addr_o[27]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[26]' is connected directly to output port 'axi_ar_addr_o[26]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[25]' is connected directly to output port 'axi_ar_addr_o[25]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[24]' is connected directly to output port 'axi_ar_addr_o[24]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[23]' is connected directly to output port 'axi_ar_addr_o[23]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[22]' is connected directly to output port 'axi_ar_addr_o[22]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[21]' is connected directly to output port 'axi_ar_addr_o[21]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[20]' is connected directly to output port 'axi_ar_addr_o[20]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[19]' is connected directly to output port 'axi_ar_addr_o[19]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[18]' is connected directly to output port 'axi_ar_addr_o[18]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[17]' is connected directly to output port 'axi_ar_addr_o[17]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[16]' is connected directly to output port 'axi_ar_addr_o[16]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[15]' is connected directly to output port 'axi_ar_addr_o[15]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[14]' is connected directly to output port 'axi_ar_addr_o[14]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[13]' is connected directly to output port 'axi_ar_addr_o[13]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[12]' is connected directly to output port 'axi_ar_addr_o[12]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[11]' is connected directly to output port 'axi_ar_addr_o[11]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[10]' is connected directly to output port 'axi_ar_addr_o[10]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[9]' is connected directly to output port 'axi_ar_addr_o[9]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[8]' is connected directly to output port 'axi_ar_addr_o[8]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[7]' is connected directly to output port 'axi_ar_addr_o[7]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[6]' is connected directly to output port 'axi_ar_addr_o[6]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[5]' is connected directly to output port 'axi_ar_addr_o[5]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[4]' is connected directly to output port 'axi_ar_addr_o[4]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[3]' is connected directly to output port 'axi_ar_addr_o[3]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[2]' is connected directly to output port 'axi_ar_addr_o[2]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[1]' is connected directly to output port 'axi_ar_addr_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_addr_o[0]' is connected directly to output port 'axi_ar_addr_o[0]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_size_o[2]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_size_o[2]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_burst_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_len_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_len_o[2]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_len_o[3]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_len_o[4]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_len_o[5]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_len_o[6]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_len_o[7]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_id_o[0]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_id_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_id_o[2]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_ar_id_o[3]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_burst_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_len_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_len_o[2]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_len_o[3]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_len_o[4]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_len_o[5]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_len_o[6]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_len_o[7]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_id_o[0]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_id_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to output port 'axi_aw_id_o[2]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[0]' is connected directly to output port 'axi_ar_len_o[0]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_size_o[1]' is connected directly to output port 'axi_ar_size_o[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_size_o[1]' is connected directly to output port 'axi_ar_burst_o[0]'. (LINT-31)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_size_o[1]' is connected directly to output port 'axi_aw_burst_o[0]'. (LINT-31)
+Warning: In design 'ysyx_210340_if_stage', output port 'if_valid' is connected directly to output port 'if_size[1]'. (LINT-31)
+Warning: In design 'ysyx_210340_if_stage', output port 'if_size[0]' is connected directly to output port 'if_req'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[32]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[33]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[34]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[35]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[36]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[37]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[38]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[39]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[40]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[41]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[42]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[43]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[44]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[45]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[46]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[47]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[48]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[49]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[50]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[51]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[52]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[53]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[54]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[55]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[56]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[57]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[58]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[59]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[60]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[61]'. (LINT-31)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to output port 'rd_data[62]'. (LINT-31)
+Warning: In design 'ysyx_210340_id_stage', output port 'inst_opcode[7]' is connected directly to output port 'inst_opcode[6]'. (LINT-31)
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[63]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[62]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[61]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[60]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[59]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[58]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[57]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[56]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[55]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[54]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[53]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[52]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[51]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[50]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[49]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[48]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[47]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[46]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[45]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[44]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[43]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[42]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[41]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[40]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[39]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[38]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[37]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[36]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[35]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[34]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[33]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[32]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[31]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[30]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[29]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[28]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[27]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[26]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[25]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[24]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[23]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[22]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[21]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[20]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[19]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[18]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[17]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[16]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[15]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[14]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[13]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[12]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[11]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[10]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[9]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[8]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[6]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[5]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[4]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[3]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[2]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[1]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mie_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[0]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mip_dffr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mtvec_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[1]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'mtvec_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[0]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'epc_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[0]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[62]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[61]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[60]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[59]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[58]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[57]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[56]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[55]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[54]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[53]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[52]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[51]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[50]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[49]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[48]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[47]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[46]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[45]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[44]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[43]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[42]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[41]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[40]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[39]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[38]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[37]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[36]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[35]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[34]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[33]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[32]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[31]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[30]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[29]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[28]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[27]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[26]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[25]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[24]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[23]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[22]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[21]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[20]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[19]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[18]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[17]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[16]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[15]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[14]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[13]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[12]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[11]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[10]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[9]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[8]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[7]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[6]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', a pin on submodule 'cause_dfflr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dnxt[5]' is connected to logic 0. 
+Warning: In design 'ysyx_210340_csr', the same net is connected to more than one pin on submodule 'mie_dfflr'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'dnxt[63]', 'dnxt[62]'', 'dnxt[61]', 'dnxt[60]', 'dnxt[59]', 'dnxt[58]', 'dnxt[57]', 'dnxt[56]', 'dnxt[55]', 'dnxt[54]', 'dnxt[53]', 'dnxt[52]', 'dnxt[51]', 'dnxt[50]', 'dnxt[49]', 'dnxt[48]', 'dnxt[47]', 'dnxt[46]', 'dnxt[45]', 'dnxt[44]', 'dnxt[43]', 'dnxt[42]', 'dnxt[41]', 'dnxt[40]', 'dnxt[39]', 'dnxt[38]', 'dnxt[37]', 'dnxt[36]', 'dnxt[35]', 'dnxt[34]', 'dnxt[33]', 'dnxt[32]', 'dnxt[31]', 'dnxt[30]', 'dnxt[29]', 'dnxt[28]', 'dnxt[27]', 'dnxt[26]', 'dnxt[25]', 'dnxt[24]', 'dnxt[23]', 'dnxt[22]', 'dnxt[21]', 'dnxt[20]', 'dnxt[19]', 'dnxt[18]', 'dnxt[17]', 'dnxt[16]', 'dnxt[15]', 'dnxt[14]', 'dnxt[13]', 'dnxt[12]', 'dnxt[11]', 'dnxt[10]', 'dnxt[9]', 'dnxt[8]', 'dnxt[6]', 'dnxt[5]', 'dnxt[4]', 'dnxt[3]', 'dnxt[2]', 'dnxt[1]', 'dnxt[0]'.
+Warning: In design 'ysyx_210340_csr', the same net is connected to more than one pin on submodule 'mtvec_dfflr'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'dnxt[1]', 'dnxt[0]''.
+Warning: In design 'ysyx_210340_csr', the same net is connected to more than one pin on submodule 'cause_dfflr'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'dnxt[62]', 'dnxt[61]'', 'dnxt[60]', 'dnxt[59]', 'dnxt[58]', 'dnxt[57]', 'dnxt[56]', 'dnxt[55]', 'dnxt[54]', 'dnxt[53]', 'dnxt[52]', 'dnxt[51]', 'dnxt[50]', 'dnxt[49]', 'dnxt[48]', 'dnxt[47]', 'dnxt[46]', 'dnxt[45]', 'dnxt[44]', 'dnxt[43]', 'dnxt[42]', 'dnxt[41]', 'dnxt[40]', 'dnxt[39]', 'dnxt[38]', 'dnxt[37]', 'dnxt[36]', 'dnxt[35]', 'dnxt[34]', 'dnxt[33]', 'dnxt[32]', 'dnxt[31]', 'dnxt[30]', 'dnxt[29]', 'dnxt[28]', 'dnxt[27]', 'dnxt[26]', 'dnxt[25]', 'dnxt[24]', 'dnxt[23]', 'dnxt[22]', 'dnxt[21]', 'dnxt[20]', 'dnxt[19]', 'dnxt[18]', 'dnxt[17]', 'dnxt[16]', 'dnxt[15]', 'dnxt[14]', 'dnxt[13]', 'dnxt[12]', 'dnxt[11]', 'dnxt[10]', 'dnxt[9]', 'dnxt[8]', 'dnxt[7]', 'dnxt[6]', 'dnxt[5]'.
+Warning: In design 'ysyx_210340', output port 'io_slave_awready' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_wready' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_bvalid' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_bresp[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_bresp[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_bid[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_bid[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_bid[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_bid[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_arready' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rvalid' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rresp[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rresp[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[63]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[62]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[61]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[60]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[59]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[58]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[57]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[56]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[55]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[54]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[53]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[52]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[51]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[50]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[49]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[48]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[47]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[46]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[45]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[44]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[43]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[42]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[41]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[40]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[39]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[38]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[37]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[36]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[35]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[34]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[33]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[32]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[31]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[30]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[29]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[28]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[27]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[26]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[25]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[24]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[23]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[22]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[21]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[20]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[19]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[18]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[17]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[16]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[15]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[14]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[13]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[12]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[11]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[10]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[9]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[8]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rdata[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rlast' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rid[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rid[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rid[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340', output port 'io_slave_rid[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_id_o[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_len_o[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_size_o[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_size_o[1]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_burst_o[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_aw_burst_o[0]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_id_o[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_id_o[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_id_o[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_id_o[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_len_o[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_len_o[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_len_o[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_len_o[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_len_o[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_len_o[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_len_o[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_size_o[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_size_o[1]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_burst_o[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_axi_rw', output port 'axi_ar_burst_o[0]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'ysyx_210340_if_stage', output port 'if_valid' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'ysyx_210340_if_stage', output port 'if_size[1]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'ysyx_210340_if_stage', output port 'if_size[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_if_stage', output port 'if_req' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[63]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[62]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[61]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[60]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[59]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[58]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[57]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[56]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[55]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[54]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[53]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[52]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[51]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[50]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[49]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[48]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[47]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[46]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[45]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[44]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[43]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[42]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[41]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[40]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[39]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[38]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[37]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[36]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[35]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[34]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[33]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_branch_ctrl', output port 'rd_data[32]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_id_stage', output port 'inst_opcode[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'ysyx_210340_id_stage', output port 'inst_opcode[6]' is connected directly to 'logic 0'. (LINT-52)
+1
