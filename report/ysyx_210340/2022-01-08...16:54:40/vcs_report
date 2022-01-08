@@ -1,0 +1,78 @@
+
+core:  ysyx_210340
+
+#####################
+#vcs compile log
+#####################
+Lint-[TFIPC-L] Too few instance port connections
+../cpu/ysyx_210340.v, 18185
+ysyx_210340_Core, "ysyx_210340_CacheController_1 dcache( .clock (dcache_clock),  .reset (dcache_reset),  .io_sram4_cen (dcache_io_sram4_cen),  .io_sram4_wen (dcache_io_sram4_wen),  .io_sram4_addr (dcache_io_sram4_addr),  .io_sram4_wdata (dcache_io_sram4_wdata),  .io_sram4_rdata (dcache_io_sram4_rdata),  .io_sram5_cen (dcache_io_sram5_cen),  .io_sram5_wen (dcache_io_sram5_wen),  .io_sram5_addr (dcache_io_sram5_addr),  .io_sram5_wdata (dcache_io_sram5_wdata),  .io_sram5_rdata (dcache_io_sram5_rdata),  .io_sram6_cen (dcache_io_sram6_cen),  .io_sram6_wen (dcache_io_sram6_wen),  .io_sram6_addr (dcache_io_sram6_addr),  .io_sram6_wdata (dcache_io_sram6_wdata),  .io_sram6_rdata (dcache_io_sram6_rdata),  .io_sram7_cen (dcache_io_sram7_cen),  .io_sram7_wen (dcache_io_sram7_wen),  . ... "
+  The above instance has fewer port connections than the module definition,
+  There are 62 port(s) in module "ysyx_210340_CacheController_1" definition, 
+  but only 58 port connect(s) in the instance.
+  output port 'io_sram4_wmask' is not connected,
+  output port 'io_sram5_wmask' is not connected,
+  output port 'io_sram6_wmask' is not connected,
+  output port 'io_sram7_wmask' is not connected.
+
+
+Lint-[TFIPC-L] Too few instance port connections
+../top/soc_top.v, 658
+soc_top, "ysyx_210340 u0_ysyx_210340( .clock (clk_core),  .reset ((~rst_core_n)),  .io_interrupt (interrupt),  .io_master_awready (io_master_awready_210340),  .io_master_awvalid (io_master_awvalid_210340),  .io_master_awaddr (io_master_awaddr_210340),  .io_master_awid (io_master_awid_210340),  .io_master_awlen (io_master_awlen_210340),  .io_master_awsize (io_master_awsize_210340),  .io_master_awburst (io_master_awburst_210340),  .io_master_wready (io_master_wready_210340),  .io_master_wvalid (io_master_wvalid_210340),  .io_master_wdata (io_master_wdata_210340),  .io_master_wstrb (io_master_wstrb_210340),  .io_master_wlast (io_master_wlast_210340),  .io_master_bready (io_master_bready_210340),  .io_master_bvalid (io_master_bvalid_210340),  .io_master_bresp (io_mas ... "
+  The above instance has fewer port connections than the module definition,
+  There are 109 port(s) in module "ysyx_210340" definition, but at most 79 
+  port connect(s) in the instance.
+  output port 'io_sram0_addr' is not connected,
+  output port 'io_sram0_cen' is not connected,
+  output port 'io_sram0_wen' is not connected,
+  output port 'io_sram0_wmask' is not connected,
+  output port 'io_sram0_wdata' is not connected,
+  input port 'io_sram0_rdata' is not connected,
+  output port 'io_sram1_addr' is not connected,
+  output port 'io_sram1_cen' is not connected,
+  output port 'io_sram1_wen' is not connected,
+  output port 'io_sram1_wmask' is not connected,
+  output port 'io_sram1_wdata' is not connected,
+  input port 'io_sram1_rdata' is not connected,
+  output port 'io_sram2_addr' is not connected,
+  output port 'io_sram2_cen' is not connected,
+  output port 'io_sram2_wen' is not connected,
+  output port 'io_sram2_wmask' is not connected,
+  output port 'io_sram2_wdata' is not connected,
+  input port 'io_sram2_rdata' is not connected,
+  output port 'io_sram3_addr' is not connected,
+  output port 'io_sram3_cen' is not connected,
+  output port 'io_sram3_wen' is not connected,
+  output port 'io_sram3_wmask' is not connected,
+  output port 'io_sram3_wdata' is not connected,
+  input port 'io_sram3_rdata' is not connected,
+  output port 'io_sram4_addr' is not connected,
+  output port 'io_sram4_cen' is not connected,
+  output port 'io_sram4_wen' is not connected,
+  output port 'io_sram4_wmask' is not connected,
+  output port 'io_sram4_wdata' is not connected,
+  input port 'io_sram4_rdata' is not connected,
+  ... ...
+
+
+
+#####################
+#vcs system test
+#####################
+!!!!Hello test fail!!!!
+!!!!Mem test fail!!!!
+!!!!rtthread test fail!!!!
+
+
+程序未跑通，可能是由于某些寄存器控制信号未初始化，或是某些逻辑错误,请自行检查修正后再次提交测试
+
+以下为未复位的寄存器:
+
+ 248) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.dcache.cache.meta_0.tags[0:63] 
+ 380) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.dcache.cache.meta_1.tags[0:63] 
+ 512) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.dcache.cache.meta_2.tags[0:63] 
+ 644) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.dcache.cache.meta_3.tags[0:63] 
+1001) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.icache.cache.meta_0.tags[0:63] 
+1133) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.icache.cache.meta_1.tags[0:63] 
+1265) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.icache.cache.meta_2.tags[0:63] 
+1397) asic_system.u0_asic_top.u0_soc_top.u0_ysyx_210340.core.icache.cache.meta_3.tags[0:63] 
